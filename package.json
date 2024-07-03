@@ -1,0 +1,36 @@
+{
+  "name": "corpus-building",
+  "version": "0.0.1",
+  "description": "A monorepo for the CROSSREADS Corpus Building project.",
+  "workspaces": [
+    "packages/*",
+    "frontend"
+  ],
+  "scripts": {
+    "etl": "npm run -w packages/etl etl -- ",
+    "frontend:dev": "npm run -w frontend dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-submodules": "git submodule update --remote --merge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingsdigitallab/corpus-building.git"
+  },
+  "keywords": [
+    "epidoc",
+    "incriptions",
+    "tei",
+    "xml",
+    "digital-humanities",
+    "svelte",
+    "sveltekit",
+    "static-site",
+    "monorepo"
+  ],
+  "author": "King's Digital Lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kingsdigitallab/corpus-building/issues"
+  },
+  "homepage": "https://github.com/kingsdigitallab/corpus-building#readme"
+}
