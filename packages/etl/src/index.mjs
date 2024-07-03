@@ -128,7 +128,7 @@ async function processFile(filePath, outputPath, options = {}) {
     const htmlOutputFile = path.join(htmlOutputPath, `${baseName}.json`);
     await fs.writeFile(htmlOutputFile, JSON.stringify(html, null, 2));
 
-    result.htmlPath = path.relative(outputPath, ihtmlOutputFile);
+    result.htmlPath = path.relative(outputPath, htmlOutputFile);
   }
 
   return result;
