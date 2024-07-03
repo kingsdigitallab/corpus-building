@@ -6,14 +6,14 @@
 </script>
 
 <hgroup>
-	<h1>{data.metadata.length} Inscriptions over x years across x locations</h1>
+	<h1>{data.corpus.length} Inscriptions over x years across x locations</h1>
 	<p>{config.description}</p>
 </hgroup>
 
 <section>
 	<h2>Inscriptions</h2>
 	<ol>
-		{#each data.metadata as inscription}
+		{#each data.corpus as inscription}
 			<li>
 				<a href="inscription/{inscription.file}">{inscription.metadata.title}</a>
 			</li>
