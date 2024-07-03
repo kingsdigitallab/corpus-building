@@ -1,7 +1,11 @@
-/** @type {import('./$types').PageServerLoad} */
-export async function load({ fetch }) {
-	const response = await fetch('/src/data/corpus.json');
-	const metadata = await response.json();
+import { error } from '@sveltejs/kit';
+import corpus from '../data/corpus.json';
 
-	return { metadata };
+/** @type {import('./$types').PageServerLoad} */
+export async function load() {
+	try {
+		return { corpus };
+	} catch (e) {
+		error(404, 'Could not load corpus data');
+	}
 }
