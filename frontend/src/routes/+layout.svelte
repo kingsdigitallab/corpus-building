@@ -4,10 +4,20 @@
 
 	import 'open-props/style';
 	import 'open-props/normalize';
+
+	/** @type {import('./$types').LayoutData} */
+	export let data;
 </script>
 
 <div class="layout">
-	<header><p><BaseLink href="/">{config.title}</BaseLink></p></header>
+	<header>
+		<ul>
+			<li><BaseLink href="/">{config.title}</BaseLink></li>
+			{#if data.debug}
+				<li><BaseLink href="/_qa">QA</BaseLink></li>
+			{/if}
+		</ul>
+	</header>
 	<main>
 		<slot />
 	</main>
