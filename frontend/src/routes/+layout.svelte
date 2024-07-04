@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import BaseLink from '$lib/components/BaseLink.svelte';
 	import * as config from '$lib/config';
 
@@ -8,6 +9,14 @@
 	/** @type {import('./$types').LayoutData} */
 	export let data;
 </script>
+
+<svelte:head>
+	{#if $page.data.title}
+		<title>{config.title} | {$page.data.title}</title>
+	{:else}
+		<title>{config.title}</title>
+	{/if}
+</svelte:head>
 
 <div class="layout">
 	<header>

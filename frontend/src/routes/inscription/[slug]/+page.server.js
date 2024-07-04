@@ -14,7 +14,7 @@ export async function load({ params }) {
 			html: div.html.replace(/(href|src)="\/(?!\/)/g, `$1="${base}/`)
 		}));
 
-		return { inscription, license };
+		return { inscription, license, title: inscription.title };
 	} catch (e) {
 		error(404, `Could not find data for ${params.slug}`);
 	}
