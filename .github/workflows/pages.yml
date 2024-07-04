@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies and build
         run: |
           npm ci
-          npm run build
+          npm run -w frontend build
 
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
