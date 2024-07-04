@@ -1,4 +1,6 @@
 <script>
+	import BaseLink from '$lib/components/BaseLink.svelte';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
@@ -25,7 +27,7 @@
 					<tr>
 						<td>{error.timestamp}</td>
 						<td>{error.path}</td>
-						<td><a href={error.referrer}>{error.referrer}</a></td>
+						<td><BaseLink href={error.referrer}>{error.referrer}</BaseLink></td>
 						<td>{error.message}</td>
 					</tr>
 				{/each}

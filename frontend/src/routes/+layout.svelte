@@ -1,4 +1,5 @@
 <script>
+	import BaseLink from '$lib/components/BaseLink.svelte';
 	import * as config from '$lib/config';
 
 	import 'open-props/style';
@@ -6,7 +7,7 @@
 </script>
 
 <div class="layout">
-	<header><p><a href="/">{config.title}</a></p></header>
+	<header><p><BaseLink href="/">{config.title}</BaseLink></p></header>
 	<main>
 		<slot />
 	</main>

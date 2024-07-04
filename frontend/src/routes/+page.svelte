@@ -1,4 +1,5 @@
 <script>
+	import BaseLink from '$lib/components/BaseLink.svelte';
 	import * as config from '$lib/config';
 
 	/** @type {import('./$types').PageData} */
@@ -15,7 +16,7 @@
 	<ol>
 		{#each data.corpus as inscription}
 			<li>
-				<a href="inscription/{inscription.file}">{inscription.metadata.title}</a>
+				<BaseLink href="inscription/{inscription.file}">{inscription.metadata.title}</BaseLink>
 			</li>
 		{/each}
 	</ol>
