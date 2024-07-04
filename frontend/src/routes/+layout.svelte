@@ -11,12 +11,14 @@
 
 <div class="layout">
 	<header>
-		<ul>
-			<li><BaseLink href="/">{config.title}</BaseLink></li>
-			{#if data.debug}
-				<li><BaseLink href="/_qa">QA</BaseLink></li>
-			{/if}
-		</ul>
+		<nav>
+			<ul>
+				<li><BaseLink href="/">{config.title}</BaseLink></li>
+				{#if data.debug}
+					<li><BaseLink href="/_qa">QA</BaseLink></li>
+				{/if}
+			</ul>
+		</nav>
 	</header>
 	<main>
 		<slot />
