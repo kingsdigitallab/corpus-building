@@ -20,6 +20,9 @@ if (!existsSync(errorFilePath)) {
 const config = {
 	kit: {
 		adapter: adapter(),
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/corpus-building' : ''
+		},
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
 				// don't throw errors in debug mode, just log them
