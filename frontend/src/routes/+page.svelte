@@ -7,7 +7,7 @@
 </script>
 
 <hgroup>
-	<h1>{data.corpus.length} Inscriptions over x years across x locations</h1>
+	<h1>{data.corpus.length.toLocaleString()} Inscriptions over x years across x locations</h1>
 	<p>{config.description}</p>
 </hgroup>
 
