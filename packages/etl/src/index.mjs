@@ -34,7 +34,7 @@ async function extractMetadata(xmlString) {
     const msContents =
       result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents;
 
-    return {
+    const metadata = {
       uri,
       title: result.TEI.teiHeader.fileDesc.titleStmt.title,
       country: msIdentifier.country,
@@ -43,6 +43,19 @@ async function extractMetadata(xmlString) {
       repository: msIdentifier.repository,
       textLang: msContents.textLang,
     };
+
+    metadata.keywords = [
+      metadata.country,
+      metadata.region,
+      metadata.settlement,
+      metadata.repository?._,
+      metadata.textLang?._,
+      metadata.textLang?.mainLang,
+    ]
+      .filter((keyword) => keyword)
+      .map((keyword) => keyword.trim().toLowerCase());
+
+    return metadata;
   } catch (error) {
     console.error("Error parsing XML:", error);
     return {};
