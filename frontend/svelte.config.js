@@ -1,13 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
-import { config as dotenv } from 'dotenv';
+import dotenv from 'dotenv';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { dirname, join } from 'path';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
-dotenv({ path: join(__dirname, '.env') });
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const debug = process.env.DEBUG === 'true';
 
