@@ -45,6 +45,8 @@ async function extractMetadata(xmlString) {
     };
 
     metadata.keywords = [
+      metadata.uri,
+      metadata.title,
       metadata.country,
       metadata.region,
       metadata.settlement,
