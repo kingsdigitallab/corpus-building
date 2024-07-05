@@ -1,5 +1,18 @@
 
 
+# [0.2.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.1.0...v0.2.0) (2024-07-05)
+
+
+### Features
+
+* **etl:** add inscription uri and title to the keywords ([e05630a](https://github.com/kingsdigitallab/corpus-building/commit/e05630a750f29ac3b2d3d6ad20044a46ece1d98a))
+* **etl:** add inscription uri and title to the keywords ([c63bbf2](https://github.com/kingsdigitallab/corpus-building/commit/c63bbf213e17be425259bc11e7306bb5ba7e54c3))
+* **etl:** add keywords field to the metadata ([6dbcd21](https://github.com/kingsdigitallab/corpus-building/commit/6dbcd2192d907900c00351a6310d341c0ac05821))
+* **frontend:** add error page ([5ad65cc](https://github.com/kingsdigitallab/corpus-building/commit/5ad65cc16f4d39c3b828f26c70c518852af93d37))
+* **frontend:** add simple search and display basic metadata for the inscriptions ([c1f33e6](https://github.com/kingsdigitallab/corpus-building/commit/c1f33e651b6b5012b481916955d96a9fa242aa38))
+* **frontend:** implement load more to progressively load the inscriptions ([12fc7b9](https://github.com/kingsdigitallab/corpus-building/commit/12fc7b96ee5b482c1f726b1164a66fb6e10a70a0))
+* **frontend:** import open props buttons ([dda4a04](https://github.com/kingsdigitallab/corpus-building/commit/dda4a0401462a0950390d60afc39a215fae70f3c))
+
 # 0.1.0 (2024-07-04)
 
 
