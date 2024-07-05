@@ -1,22 +1,35 @@
 import { DEBUG } from '$env/static/private';
 import { error } from '@sveltejs/kit';
-import { existsSync, readFileSync } from 'fs';
+import fs from 'fs';
+import path from 'path';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
 	if (DEBUG !== 'true') {
-		return { prerender: [] };
+		return { prerender: {}, axe: [] };
 	}
 
-	const errorFilePath = 'src/lib/prerender-errors.json';
+	const prerenderFilePath = 'src/lib/prerender-errors.json';
+	let prerender = {};
 
-	if (!existsSync(errorFilePath)) {
-		return { prerender: [] };
-	}
+	const axeDirPath = 'test-results';
+	let axe = [];
 
 	try {
-		const prerender = JSON.parse(readFileSync(errorFilePath, 'utf-8'));
-		return { prerender: Object.values(prerender) };
+		if (fs.existsSync(prerenderFilePath)) {
+			prerender = JSON.parse(fs.readFileSync(prerenderFilePath, 'utf-8'));
+		}
+
+		if (fs.existsSync(axeDirPath)) {
+			for (const file of fs.readdirSync(axeDirPath)) {
+				if (file.endsWith('.axe.json')) {
+					const filePath = path.join(axeDirPath, file);
+					axe = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+				}
+			}
+		}
+
+		return { prerender: Object.values(prerender), axe };
 	} catch (e) {
 		error(404, 'Could not load prerender-errors.json');
 	}
