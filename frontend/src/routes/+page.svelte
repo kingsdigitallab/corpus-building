@@ -89,11 +89,11 @@
 		<ol>
 			{#each displayedInscriptions as inscription}
 				<li>
-					<h4>
+					<p class="title">
 						<BaseLink href="inscription/{inscription.file}"
 							>{inscription.metadata.title} <small>{inscription.file}</small></BaseLink
 						>
-					</h4>
+					</p>
 					<dl>
 						<dt>Settlement</dt>
 						<dd>{inscription.metadata.settlement}</dd>
@@ -114,6 +114,10 @@
 </article>
 
 <style>
+	.title {
+		font-weight: bolder;
+	}
+
 	dt {
 		margin-block-start: unset;
 	}
