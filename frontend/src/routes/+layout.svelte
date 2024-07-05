@@ -5,6 +5,7 @@
 
 	import 'open-props/style';
 	import 'open-props/normalize';
+	import 'open-props/buttons';
 
 	/** @type {import('./$types').LayoutData} */
 	export let data;
