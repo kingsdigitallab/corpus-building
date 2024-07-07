@@ -7,6 +7,8 @@
 	import 'open-props/normalize';
 	import 'open-props/buttons';
 
+	import '../app.css';
+
 	/** @type {import('./$types').LayoutData} */
 	export let data;
 </script>
