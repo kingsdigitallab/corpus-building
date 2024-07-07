@@ -37,6 +37,7 @@ async function extractMetadata(xmlString) {
     const metadata = {
       uri,
       title: result.TEI.teiHeader.fileDesc.titleStmt.title,
+      status: result.TEI.teiHeader.revisionDesc.status,
       country: msIdentifier.country,
       region: msIdentifier.region,
       settlement: msIdentifier.settlement,
@@ -47,6 +48,7 @@ async function extractMetadata(xmlString) {
     metadata.keywords = [
       metadata.uri,
       metadata.title,
+      metadata.status,
       metadata.country,
       metadata.region,
       metadata.settlement,
@@ -89,7 +91,7 @@ async function transformToHtml(xmlString) {
 
   const $ = cheerio.load(result.principalResult);
 
-  const divs = $("body > div")
+  const divs = $("body > div:not(#facsimile-images)")
     .map((i, div) => ({
       id: $(div).attr("id"),
       cls: $(div).attr("class"),
@@ -97,10 +99,19 @@ async function transformToHtml(xmlString) {
     }))
     .get();
 
+  const images = $("div#facsimile-images > a")
+    .map((i, a) => ({
+      image: $(a).attr("href"),
+      thumb: $(a).find("img").attr("src"),
+      title: $(a).find("img").attr("title"),
+    }))
+    .get();
+
   return {
     title: $("title").text(),
     body: $("body").html(),
     divs,
+    images,
   };
 }
 
