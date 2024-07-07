@@ -90,9 +90,11 @@
 			{#each displayedInscriptions as inscription}
 				<li>
 					<p class="title">
-						<BaseLink href="inscription/{inscription.file}"
-							>{inscription.metadata.title} <small>{inscription.file}</small></BaseLink
-						>
+						<BaseLink href="inscription/{inscription.file}">
+							<small>{inscription.file}</small>
+							<span>{inscription.metadata.title}</span>
+							<small>{inscription.metadata.status}</small>
+						</BaseLink>
 					</p>
 					<dl>
 						<dt>Settlement</dt>
