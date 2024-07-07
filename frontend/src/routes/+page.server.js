@@ -6,6 +6,6 @@ export async function load() {
 	try {
 		return { corpus };
 	} catch (e) {
-		error(404, 'Could not load corpus data');
+		error(404, `Could not load corpus data ${e.message}`);
 	}
 }
