@@ -1,5 +1,24 @@
 
 
+# [0.3.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.2.0...v0.3.0) (2024-07-07)
+
+
+### Bug Fixes
+
+* **frontend:** do not use a header for the inscription title ([1da3c94](https://github.com/kingsdigitallab/corpus-building/commit/1da3c94b28a8dd3588b109bebbf1a37d04974436))
+
+
+### Features
+
+* **etl:** add status to the metadata ([fe50ae5](https://github.com/kingsdigitallab/corpus-building/commit/fe50ae5e52babf4cf6fd3f5b964790be101dd861))
+* **frontend:** add image server setting ([81f5d75](https://github.com/kingsdigitallab/corpus-building/commit/81f5d756ed2baafebfcfc78520c953761e14aa98))
+* **frontend:** add openseadragon image viewer to render inscription images ([0f40dd4](https://github.com/kingsdigitallab/corpus-building/commit/0f40dd495bd133ec284220a2d7d5949f9b5aa398))
+* **frontend:** add placeholder file for global css ([1bc5152](https://github.com/kingsdigitallab/corpus-building/commit/1bc5152e6cad28427ce5fd326016dddcddf75263))
+* **frontend:** display more details on error ([c8589da](https://github.com/kingsdigitallab/corpus-building/commit/c8589dae01093a5d979be2b3f5c70c37eafed492))
+* **frontend:** display the inscription status ([a06e07e](https://github.com/kingsdigitallab/corpus-building/commit/a06e07e94278a0bafc55d6d9797b5e32b5db8e8a))
+* **frontend:** load and display accessibility issues ([9d8dcdc](https://github.com/kingsdigitallab/corpus-building/commit/9d8dcdc6a2daae9b718f065f879cf3804ad4391d))
+* **frontend:** load inscription metadata ([cf9ac53](https://github.com/kingsdigitallab/corpus-building/commit/cf9ac533793a4f26de721cb76867a561888f668a))
+
 # [0.2.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.1.0...v0.2.0) (2024-07-05)
 
 
