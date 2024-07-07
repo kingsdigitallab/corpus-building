@@ -1,0 +1,1 @@
+const i="http://sicily.classics.ox.ac.uk/",s="ISicily",c="Brief description or overview of the ISicily publication.",t="https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=/inscription_images/";export{c as d,t as i,i as p,s as t};
