@@ -11,6 +11,8 @@
 
 	/** @type {import('./$types').LayoutData} */
 	export let data;
+
+	const version = import.meta.env.APP_VERSION;
 </script>
 
 <svelte:head>
@@ -24,8 +26,8 @@
 <div class="layout">
 	<header>
 		<nav>
+			<BaseLink href="/" class="title">{config.title}</BaseLink>
 			<ul>
-				<li><BaseLink href="/">{config.title}</BaseLink></li>
 				{#if data.debug}
 					<li><BaseLink href="/_qa">QA</BaseLink></li>
 				{/if}
@@ -35,21 +37,40 @@
 	<main>
 		<slot />
 	</main>
-	<footer>---</footer>
+	<footer>
+		<p>{config.title} v{version}</p>
+	</footer>
 </div>
 
 <style>
 	.layout {
-		height: 100%;
-		max-inline-size: 1280px;
 		display: grid;
 		grid-template-rows: auto 1fr auto;
+		height: 100%;
 		margin-inline: auto;
-		padding-inline: var(--size-7);
+		max-inline-size: 1280px;
+		padding-inline: var(--size-8);
+	}
+
+	nav {
+		align-items: center;
+		border-bottom: var(--border-size-1) solid var(--gray-2);
+		display: flex;
+		justify-content: space-between;
+		padding-block: var(--size-2);
+
+		& ul {
+			list-style: none;
+		}
 	}
 
 	main {
 		padding-block: var(--size-9);
+	}
+
+	footer {
+		border-top: var(--border-size-1) solid var(--gray-2);
+		padding-block: var(--size-4);
 	}
 
 	@media (min-width: 1280px) {
