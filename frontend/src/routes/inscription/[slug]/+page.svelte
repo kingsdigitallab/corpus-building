@@ -9,7 +9,7 @@
 		.filter((/** @type Object<String, string> */ image) => image.image.endsWith('.tif'))
 		.map(
 			(/** @type Object<String, string> */ image) =>
-				`${config.imageServer}${data.slug}/${image.image}`
+				`${config.imageServer}${data.slug}/${image.image}/info.json`
 		);
 
 	let OpenSeaDragon;
@@ -23,9 +23,6 @@
 			prefixUrl: '/openseadragon/images/',
 			tileSources,
 			sequenceMode: true
-		});
-		viewer.addHandler('open', () => {
-			viewer.viewport.fit(true);
 		});
 	});
 </script>
