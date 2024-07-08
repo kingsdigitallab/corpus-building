@@ -28,6 +28,8 @@
 		<nav>
 			<BaseLink href="/" class="title">{config.title}</BaseLink>
 			<ul>
+				<li>About</li>
+				<li>Guide</li>
 				{#if data.debug}
 					<li><BaseLink href="/_qa">QA</BaseLink></li>
 				{/if}
@@ -66,6 +68,10 @@
 
 		& ul {
 			list-style: none;
+
+			& li {
+				display: inline-flex;
+			}
 		}
 	}
 
