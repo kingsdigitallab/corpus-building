@@ -139,22 +139,33 @@ async function processFile(filePath, outputPath, options = {}) {
   } = options;
   const baseName = path.basename(filePath, ".xml");
   const xmlString = await fs.readFile(filePath, "utf-8");
-  const result = { file: baseName };
+
+  const metaOutputPath = path.join(outputPath, "metadata");
+  const metaOutputFile = path.join(metaOutputPath, `${baseName}.json`);
+
+  const htmlOutputPath = path.join(outputPath, "html");
+  const htmlOutputFile = path.join(htmlOutputPath, `${baseName}.json`);
+
+  let result = {
+    file: baseName,
+    metadataFile: path.relative(outputPath, metaOutputFile),
+    htmlFile: path.relative(outputPath, htmlOutputFile),
+  };
 
   if (shouldExtractMetadata) {
-    result.metadata = await extractMetadata(xmlString);
+    const metadata = await extractMetadata(xmlString);
+
+    result = { ...result, ...metadata };
+
+    await fs.mkdir(metaOutputPath, { recursive: true });
+    await fs.writeFile(metaOutputFile, JSON.stringify(result, null, 2));
   }
 
   if (shouldTransformToHtml) {
     const html = await transformToHtml(xmlString);
 
-    const htmlOutputPath = path.join(outputPath, "html");
     await fs.mkdir(htmlOutputPath, { recursive: true });
-
-    const htmlOutputFile = path.join(htmlOutputPath, `${baseName}.json`);
     await fs.writeFile(htmlOutputFile, JSON.stringify(html, null, 2));
-
-    result.htmlPath = path.relative(outputPath, htmlOutputFile);
   }
 
   return result;
