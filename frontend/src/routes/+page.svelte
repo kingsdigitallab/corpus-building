@@ -62,15 +62,22 @@
 </script>
 
 <article>
-	<hgroup>
-		<h1>{data.corpus.length.toLocaleString()} Inscriptions over x years across x locations</h1>
+	<hgroup class="hero">
+		<h1>
+			{data.corpus.length.toLocaleString()} Inscriptions over x years across x locations
+		</h1>
 		<p>{config.description}</p>
 	</hgroup>
 
 	<section>
 		<form on:submit={handleSearch} on:reset={handleReset}>
-			<label for="keywords">Keywords</label>
-			<input type="text" name="keywords" id="keywords" bind:value={keywords} />
+			<input
+				type="text"
+				name="keywords"
+				id="keywords"
+				placeholder="Search inscriptions metadata"
+				bind:value={keywords}
+			/>
 			<button type="submit" value="Search" disabled={!keywords}>Search</button>
 			<button type="reset" value="Reset" disabled={!keywords}>Reset</button>
 		</form>
@@ -114,6 +121,34 @@
 </article>
 
 <style>
+	.hero {
+		display: grid;
+		place-items: center;
+
+		& h1 {
+			text-align: center;
+		}
+	}
+
+	section {
+		margin-block: var(--size-8);
+	}
+
+	form {
+		display: flex;
+		gap: var(--size-2);
+		margin-inline: var(--size-12);
+
+		& input {
+			flex-grow: 1;
+
+			&::placeholder {
+				color: var(--gray-8);
+				font-style: italic;
+			}
+		}
+	}
+
 	.title {
 		font-weight: bolder;
 	}
