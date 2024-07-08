@@ -38,7 +38,12 @@
 		<slot />
 	</main>
 	<footer>
-		<p>{config.title} v{version}</p>
+		<p>
+			{config.title}
+			<a href="https://github.com/kingsdigitallab/corpus-building/blob/v{version}/CHANGELOG.md"
+				>v{version}</a
+			>
+		</p>
 	</footer>
 </div>
 
