@@ -2,7 +2,7 @@ import { dev } from '$app/environment';
 
 export const publicUrl = 'http://sicily.classics.ox.ac.uk/';
 
-export const title = 'ISicily';
+export const title = 'I.Sicily';
 export const description = 'Brief description or overview of the ISicily publication.';
 export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
