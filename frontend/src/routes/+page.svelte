@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import BaseLink from '$lib/components/BaseLink.svelte';
 	import * as config from '$lib/config';
@@ -21,11 +22,15 @@
 		finishedSearch = false;
 		keywords = '';
 
+		goto(`?keywords=${encodeURIComponent(keywords)}`, { replaceState: true });
+
 		loadMoreCount = 50;
 		loadMoreIncrement = loadMoreCount;
 	}
 
 	function handleSearch() {
+		goto(`?keywords=${encodeURIComponent(keywords)}`, { replaceState: true });
+
 		finishedSearch = true;
 
 		loadMoreCount = 50;
@@ -55,19 +60,23 @@
 
 	$: displayedInscriptions = inscriptions.slice(0, loadMoreCount);
 	$: hasMoreToLoad = inscriptions.length > loadMoreCount;
+	$: numberOfLocations = new Set(inscriptions.map((inscription) => inscription.settlement)).size;
 
 	onMount(() => {
 		keywords = $page.url.searchParams.get('keywords') || '';
+
+		if (keywords) {
+			handleSearch();
+		}
 	});
 </script>
 
 <article>
-	<hgroup class="hero">
+	<section class="hero">
 		<h1>
-			{data.corpus.length.toLocaleString()} Inscriptions over x years across x locations
+			{config.description}
 		</h1>
-		<p>{config.description}</p>
-	</hgroup>
+	</section>
 
 	<section>
 		<form on:submit={handleSearch} on:reset={handleReset}>
@@ -83,23 +92,21 @@
 		</form>
 	</section>
 
-	<section>
-		<hgroup>
-			<h2>Inscriptions</h2>
-			{#if finishedSearch}
-				<h3>
-					Displaying <em>{inscriptions.length}</em> inscriptions matching
-					<em>{keywords.split(' ').join(', ')}</em>
-				</h3>
+	<section class="inscriptions">
+		<h2>
+			<em>{inscriptions.length.toLocaleString()}</em> Inscriptions over x years across
+			<em>{numberOfLocations.toLocaleString()}</em>
+			locations{#if keywords && finishedSearch}, matching
+				<em>{keywords.split(' ').join(', ')}</em>
 			{/if}
-		</hgroup>
+		</h2>
 		<ol>
 			{#each displayedInscriptions as inscription}
 				<li>
 					<p class="title">
 						<BaseLink href="inscription/{inscription.file}">
-							<small>{inscription.file}</small>
 							<span>{inscription.title}</span>
+							<small>{inscription.file}</small>
 							<small>{inscription.status}</small>
 						</BaseLink>
 					</p>
@@ -121,13 +128,21 @@
 </article>
 
 <style>
-	.hero {
+	.hero,
+	.inscriptions {
 		display: grid;
 		place-items: center;
+	}
 
-		& h1 {
-			text-align: center;
-		}
+	.hero h1 {
+		font-size: var(--font-size-4);
+		max-inline-size: var(--header-size-4);
+		text-align: center;
+	}
+	.inscriptions h2 {
+		max-inline-size: var(--header-size-6);
+		margin-block: var(--size-4);
+		text-align: center;
 	}
 
 	section {
@@ -146,6 +161,17 @@
 				color: var(--gray-8);
 				font-style: italic;
 			}
+		}
+	}
+
+	ol {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--size-8);
+
+		& li {
+			flex-basis: 30%;
 		}
 	}
 
