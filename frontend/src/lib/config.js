@@ -3,7 +3,7 @@ import { dev } from '$app/environment';
 export const publicUrl = 'http://sicily.classics.ox.ac.uk/';
 
 export const title = 'I.Sicily';
-export const description = `Brief description or overview of the ${title} publication.`;
+export const description = `${title} is dedicated to the inscribed texts from ancient Sicily, combining an open access digital corpus with news, blogs and other resources.`;
 export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
 export const imageServer =
