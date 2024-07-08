@@ -1,6 +1,7 @@
 import { base } from '$app/paths';
 import { error } from '@sveltejs/kit';
 import fs from 'fs/promises';
+import corpus from '../../../data/corpus.json';
 
 /** @type {import('../$types').PageServerLoad} */
 export async function load({ params }) {
@@ -26,4 +27,15 @@ export async function load({ params }) {
 	} catch (e) {
 		error(404, `Error loading ${params.slug}: ${e.message}`);
 	}
+}
+
+/**
+ * Returns an array of slugs derived from the corpus data.
+ * Each slug corresponds to a unique inscription file in the project.
+ *
+ * @returns {Array<{ slug: string }>} An array of objects, each containing a unique slug.
+ * @type {import('./$types').EntryGenerator}
+ */
+export function entries() {
+	return corpus.map(({ file: slug }) => ({ slug }));
 }
