@@ -43,7 +43,7 @@
 					.split(' ')
 					.map((keyword) => keyword.toLowerCase())
 					.every((keyword) =>
-						inscription.metadata.keywords.some((/** @type string */ k) => k.includes(keyword))
+						inscription.keywords.some((/** @type string */ k) => k.includes(keyword))
 					)
 			);
 		});
@@ -92,17 +92,15 @@
 					<p class="title">
 						<BaseLink href="inscription/{inscription.file}">
 							<small>{inscription.file}</small>
-							<span>{inscription.metadata.title}</span>
-							<small>{inscription.metadata.status}</small>
+							<span>{inscription.title}</span>
+							<small>{inscription.status}</small>
 						</BaseLink>
 					</p>
 					<dl>
 						<dt>Settlement</dt>
-						<dd>{inscription.metadata.settlement}</dd>
-						<dt>Repository</dt>
-						<dd>{inscription.metadata.repository?._ || 'N/A'}</dd>
+						<dd>{inscription.repository?._ || 'N/A'}</dd>
 						<dt>Language</dt>
-						<dd>{inscription.metadata.textLang?._ || 'N/A'}</dd>
+						<dd>{inscription.textLang?._ || 'N/A'}</dd>
 					</dl>
 				</li>
 			{/each}
