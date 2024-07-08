@@ -1,5 +1,20 @@
 
 
+## [0.3.2](https://github.com/kingsdigitallab/corpus-building/compare/v0.3.1...v0.3.2) (2024-07-08)
+
+
+### Bug Fixes
+
+* **frontend:** remove extra / from links to current live site ([d9aaf4a](https://github.com/kingsdigitallab/corpus-building/commit/d9aaf4aa3d30f9a3b30ca6d44ae20f3110fdd79e))
+
+
+### Features
+
+* **frontend:** add link from the version number to the changelog ([689d180](https://github.com/kingsdigitallab/corpus-building/commit/689d180110a234e987b3fcd27e2e954e148d592e))
+* **frontend:** add style for title links ([ecda638](https://github.com/kingsdigitallab/corpus-building/commit/ecda63889e81df1b5ca4d565e631d02e2722b90f))
+* **frontend:** display current version ([ec175c1](https://github.com/kingsdigitallab/corpus-building/commit/ec175c11a95f51b2cb832c1a18454ec58cd40f86))
+* **vite:** define project version ([ad53d1d](https://github.com/kingsdigitallab/corpus-building/commit/ad53d1d521b10fe660fafb517d91331f5341a4ac))
+
 ## [0.3.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.3.0...v0.3.1) (2024-07-08)
 
 
