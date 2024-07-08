@@ -1,15 +1,19 @@
 import { base } from '$app/paths';
 import { error } from '@sveltejs/kit';
-import corpus from '../../../data/corpus.json';
+import fs from 'fs/promises';
 
 /** @type {import('../$types').PageServerLoad} */
-export async function load({ params, parent }) {
+export async function load({ params }) {
 	try {
 		const slug = params.slug;
-		const metadata = corpus.find((/** @type {{ file: string; }} */ entry) => entry.file === slug);
 
-		const module = await import(`../../../data/html/${slug}.json`);
-		const inscription = module.default;
+		const metadataFilePath = `src/data/metadata/${slug}.json`;
+		const metadataFileContent = await fs.readFile(metadataFilePath, 'utf8');
+		const metadata = JSON.parse(metadataFileContent);
+
+		const inscriptionFilePath = `src/data/html/${slug}.json`;
+		const inscriptionFileContent = await fs.readFile(inscriptionFilePath, 'utf8');
+		const inscription = JSON.parse(inscriptionFileContent);
 
 		const license = inscription.divs.at(-1);
 

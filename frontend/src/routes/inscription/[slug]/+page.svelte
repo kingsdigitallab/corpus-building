@@ -32,7 +32,7 @@
 
 <article>
 	<hgroup>
-		<h1>{data.inscription.title} <small>{data.metadata.metadata.status}</small></h1>
+		<h1>{data.inscription.title} <small>{data.metadata.status}</small></h1>
 		<p>
 			<a href="{config.publicUrl}/inscription/{data.slug}" target="inscription"
 				>View in current site</a
