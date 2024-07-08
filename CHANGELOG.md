@@ -1,5 +1,18 @@
 
 
+## [0.3.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.3.0...v0.3.1) (2024-07-08)
+
+
+### Features
+
+* **frontend:** update metadata fields after metadata restructure ([e0a6229](https://github.com/kingsdigitallab/corpus-building/commit/e0a6229a449db38e7315b8441e2dfd4e63b68017))
+
+
+### Performance Improvements
+
+* **etl:** simplify the metadata structure ([bcfd80d](https://github.com/kingsdigitallab/corpus-building/commit/bcfd80df3142b71ecfd465bcda8dd43aa4648377))
+* **frontend:** load individual inscription metadata file ([a7d1bc3](https://github.com/kingsdigitallab/corpus-building/commit/a7d1bc3e3c3c6fc2add66403ec90dd460b114d41))
+
 # [0.3.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.2.0...v0.3.0) (2024-07-07)
 
 
