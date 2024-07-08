@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 
@@ -19,8 +20,7 @@
 
 		const viewer = OpenSeaDragon({
 			id: 'facsimile-images',
-			insecureRequestsAllowed: true,
-			prefixUrl: '/openseadragon/images/',
+			prefixUrl: `${base}/openseadragon/images/`,
 			tileSources,
 			sequenceMode: true
 		});
