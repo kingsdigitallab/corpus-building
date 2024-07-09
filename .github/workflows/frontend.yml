@@ -30,6 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+          npx playwright install --with-deps
 
       - name: Test
         continue-on-error: true
