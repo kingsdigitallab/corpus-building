@@ -60,6 +60,19 @@
 
 	$: displayedInscriptions = inscriptions.slice(0, loadMoreCount);
 	$: hasMoreToLoad = inscriptions.length > loadMoreCount;
+	$: yearSpan = (() => {
+		const minYear = Math.min(
+			...inscriptions
+				.filter((inscription) => inscription.notBefore)
+				.map((inscription) => inscription.notBefore)
+		);
+		const maxYear = Math.max(
+			...inscriptions
+				.filter((inscription) => inscription.notAfter)
+				.map((inscription) => inscription.notAfter)
+		);
+		return maxYear - minYear;
+	})();
 	$: numberOfLocations = new Set(inscriptions.map((inscription) => inscription.settlement)).size;
 
 	onMount(() => {
@@ -94,7 +107,9 @@
 
 	<section class="inscriptions">
 		<h2>
-			<em>{inscriptions.length.toLocaleString()}</em> Inscriptions over x years across
+			<em>{inscriptions.length.toLocaleString()}</em> Inscriptions over
+			<em>{yearSpan.toLocaleString()}</em>
+			years across
 			<em>{numberOfLocations.toLocaleString()}</em>
 			locations{#if keywords && finishedSearch}, matching
 				<em>{keywords.split(' ').join(', ')}</em>
@@ -103,12 +118,31 @@
 		<ol>
 			{#each displayedInscriptions as inscription}
 				<li>
+					{#if inscription.facsimile}
+						<img
+							src="{config.imageServer}{inscription.file}/{inscription.facsimile
+								.url}/full/400,/0/default.jpg"
+							alt={inscription.facsimile.desc}
+							loading="lazy"
+						/>
+					{/if}
 					<p class="title">
 						<BaseLink href="inscription/{inscription.file}">
 							<span>{inscription.title}</span>
 							<small>{inscription.file}</small>
 							<small>{inscription.status}</small>
 						</BaseLink>
+					</p>
+					<p>
+						{inscription.notBefore != null
+							? inscription.notBefore < 0
+								? `${Math.abs(inscription.notBefore)} BC`
+								: `AD ${inscription.notBefore}`
+							: 'Unknown'} – {inscription.notAfter != null
+							? inscription.notAfter < 0
+								? `${Math.abs(inscription.notAfter)} BC`
+								: `AD ${inscription.notAfter}`
+							: 'Unknown'}
 					</p>
 					<dl>
 						<dt>Settlement</dt>
@@ -169,14 +203,42 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: var(--size-8);
+		list-style: none;
 
 		& li {
-			flex-basis: 30%;
+			border-radius: var(--radius-2);
+			box-shadow: var(--shadow-2);
+			flex-basis: 95%;
+			padding: var(--size-fluid-3);
+
+			&:hover {
+				box-shadow: var(--shadow-3);
+			}
+
+			@media (--motionOK) {
+				animation: var(--animation-fade-in);
+			}
+
+			@media (min-width: 640px) {
+				flex-basis: 45%;
+			}
+
+			@media (min-width: 1024px) {
+				flex-basis: 30%;
+			}
+
+			& img {
+				/* the height should be 200 */
+				height: 200px;
+				object-fit: cover;
+				width: 100%;
+			}
 		}
 	}
 
 	.title {
 		font-weight: bolder;
+		margin-block: var(--size-2);
 	}
 
 	dt {
