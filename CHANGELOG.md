@@ -1,5 +1,25 @@
 
 
+# [0.4.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.3.2...v0.4.0) (2024-07-09)
+
+
+### Bug Fixes
+
+* **frontend:** add base path to openseadragon prefix url ([002610e](https://github.com/kingsdigitallab/corpus-building/commit/002610ecec58eb3e78ab6511030273b913d094d7))
+* **frontend:** typo ([fbe69a7](https://github.com/kingsdigitallab/corpus-building/commit/fbe69a71cec5c590d1a05750898bb7a3035fdadf))
+* **frontend:** update path to load iiif images ([510de6a](https://github.com/kingsdigitallab/corpus-building/commit/510de6a64bbf23a881c0cfd8dbc3e435c92992b1))
+
+
+### Features
+
+* **etl:** extract dates and the first image ([88798f9](https://github.com/kingsdigitallab/corpus-building/commit/88798f9212af0d108c1c21b13d78c49364a1de24))
+* **frontend:** add a bit more style to match the designs ([c42f4e7](https://github.com/kingsdigitallab/corpus-building/commit/c42f4e7dd31ae7818bb4f33d12d40a840d4cdd24))
+* **frontend:** add entries function ([1993e86](https://github.com/kingsdigitallab/corpus-building/commit/1993e8648d307a20bb1edd9323940ce2cf2783c4))
+* **frontend:** add link to the image ([ab719a1](https://github.com/kingsdigitallab/corpus-building/commit/ab719a1bebc5981a921e709fe43e14f743e23f99))
+* **frontend:** add placeholder items to nav ([c7bd5ff](https://github.com/kingsdigitallab/corpus-building/commit/c7bd5ffb702a8b68727d3f21397a5abdb3e8f817))
+* **frontend:** update the layout to match the mockups ([7e066c2](https://github.com/kingsdigitallab/corpus-building/commit/7e066c2871849f1b4dabcf7abcf0a18877cbe2f3))
+* **frontend:** update the list layout to match the mockups ([0146052](https://github.com/kingsdigitallab/corpus-building/commit/01460529567e04dc207f8215b27b05381c47a175))
+
 ## [0.3.2](https://github.com/kingsdigitallab/corpus-building/compare/v0.3.1...v0.3.2) (2024-07-08)
 
 
