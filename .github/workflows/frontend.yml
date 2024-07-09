@@ -22,15 +22,28 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: create env file
+      - name: Create .env file
         run: |
           touch .env
           echo DEBUG=true >> ./frontend/.env
 
-      - name: Install dependencies and build
+      - name: Install dependencies
         run: |
           npm ci
-          npm run -w frontend build
+
+      - name: Test
+        continue-on-error: true
+        run: |
+          npm run -w frontend test
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci(frontend): update test results"
+          file_pattern: "frontend/test-results/*.json"
+
+      - name: Build
+        run: |
+          npm run frontend:build
 
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
