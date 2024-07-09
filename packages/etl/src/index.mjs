@@ -33,11 +33,21 @@ async function extractMetadata(xmlString) {
       result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msIdentifier;
     const msContents =
       result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents;
+    const origDate =
+      result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.history.origin.origDate;
+    const facsimile = result.TEI.facsimile?.surface?.graphic?.find((g) =>
+      g.url.endsWith(".tif")
+    );
 
     const metadata = {
       uri,
       title: result.TEI.teiHeader.fileDesc.titleStmt.title,
       status: result.TEI.teiHeader.revisionDesc.status,
+      notBefore: origDate ? parseInt(origDate["notBefore-custom"]) : null,
+      notAfter: origDate ? parseInt(origDate["notAfter-custom"]) : null,
+      facsimile: facsimile
+        ? { url: facsimile.url, desc: facsimile.desc }
+        : null,
       country: msIdentifier.country,
       region: msIdentifier.region,
       settlement: msIdentifier.settlement,
@@ -49,6 +59,8 @@ async function extractMetadata(xmlString) {
       metadata.uri,
       metadata.title,
       metadata.status,
+      metadata.notBefore,
+      metadata.notAfter,
       metadata.country,
       metadata.region,
       metadata.settlement,
@@ -57,7 +69,9 @@ async function extractMetadata(xmlString) {
       metadata.textLang?.mainLang,
     ]
       .filter((keyword) => keyword)
-      .map((keyword) => keyword.trim().toLowerCase());
+      .map((keyword) =>
+        keyword instanceof String ? keyword.trim().toLowerCase() : keyword
+      );
 
     return metadata;
   } catch (error) {
