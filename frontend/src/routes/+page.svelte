@@ -119,12 +119,14 @@
 			{#each displayedInscriptions as inscription}
 				<li>
 					{#if inscription.facsimile}
-						<img
-							src="{config.imageServer}{inscription.file}/{inscription.facsimile
-								.url}/full/400,/0/default.jpg"
-							alt={inscription.facsimile.desc}
-							loading="lazy"
-						/>
+						<BaseLink href="inscription/{inscription.file}">
+							<img
+								src="{config.imageServer}{inscription.file}/{inscription.facsimile
+									.url}/full/400,/0/default.jpg"
+								alt={inscription.facsimile.desc}
+								loading="lazy"
+							/>
+						</BaseLink>
 					{/if}
 					<p class="title">
 						<BaseLink href="inscription/{inscription.file}">
