@@ -148,6 +148,8 @@
 					</p>
 					<dl>
 						<dt>Settlement</dt>
+						<dd>{inscription.settlement || 'N/A'}</dd>
+						<dt>Repository</dt>
 						<dd>{inscription.repository?._ || 'N/A'}</dd>
 						<dt>Language</dt>
 						<dd>{inscription.textLang?._ || 'N/A'}</dd>
