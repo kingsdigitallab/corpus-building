@@ -72,7 +72,7 @@ async function extractMetadata(xmlString) {
     ]
       .filter((keyword) => keyword)
       .map((keyword) =>
-        keyword instanceof String ? keyword.trim().toLowerCase() : keyword
+        typeof keyword === "string" ? keyword.trim().toLowerCase() : keyword
       );
 
     return metadata;
