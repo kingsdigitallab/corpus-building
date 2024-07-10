@@ -39,6 +39,8 @@ async function extractMetadata(xmlString) {
       g.url.endsWith(".tif")
     );
 
+    // TODO extract provenance origPlace modern has priority over ancient
+
     const metadata = {
       uri,
       title: result.TEI.teiHeader.fileDesc.titleStmt.title,
@@ -59,8 +61,8 @@ async function extractMetadata(xmlString) {
       metadata.uri,
       metadata.title,
       metadata.status,
-      metadata.notBefore,
-      metadata.notAfter,
+      metadata.notBefore && metadata.notBefore.toString(),
+      metadata.notAfter && metadata.notAfter.toString(),
       metadata.country,
       metadata.region,
       metadata.settlement,
