@@ -41,17 +41,14 @@
 			return;
 		}
 
-		inscriptions = data.corpus.filter((inscription) => {
-			return (
-				!keywords ||
-				keywords
-					.split(' ')
-					.map((keyword) => keyword.toLowerCase())
-					.every((keyword) =>
-						inscription.keywords.some((/** @type string */ k) => k.includes(keyword))
-					)
-			);
-		});
+		inscriptions = data.corpus.filter((inscription) =>
+			keywords
+				.split(' ')
+				.map((keyword) => keyword.toLowerCase())
+				.every((keyword) =>
+					inscription.keywords.some((/** @type string */ k) => k.includes(keyword))
+				)
+		);
 	}
 
 	function loadMore() {
