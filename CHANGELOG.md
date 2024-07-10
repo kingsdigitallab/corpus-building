@@ -1,5 +1,13 @@
 
 
+## [0.4.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.4.0...v0.4.1) (2024-07-10)
+
+
+### Bug Fixes
+
+* **etl:** convert dates in keywords to string ([2c03c14](https://github.com/kingsdigitallab/corpus-building/commit/2c03c14084049528f906b8f6ae10f7e28e8897d2))
+* **frontend:** type in field name ([2cde63e](https://github.com/kingsdigitallab/corpus-building/commit/2cde63e908f919b079332486c69e71d38b8c5030))
+
 # [0.4.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.3.2...v0.4.0) (2024-07-09)
 
 
