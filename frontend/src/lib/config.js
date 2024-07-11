@@ -8,3 +8,4 @@ export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
 export const imageServer =
 	'https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=inscription_images/';
+export const imageThumbParams = 'full/400,/0/default.jpg';

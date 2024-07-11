@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import BaseLink from '$lib/components/BaseLink.svelte';
 	import * as config from '$lib/config';
+	import { Image } from '@unpic/svelte';
 	import { onMount } from 'svelte';
 
 	/** @type {import('./$types').PageData} */
@@ -117,11 +118,12 @@
 				<li>
 					{#if inscription.facsimile}
 						<BaseLink href="inscription/{inscription.file}">
-							<img
+							<Image
 								src="{config.imageServer}{inscription.file}/{inscription.facsimile
-									.url}/full/400,/0/default.jpg"
+									.url}/{config.imageThumbParams}"
 								alt={inscription.facsimile.desc}
-								loading="lazy"
+								width={400}
+								height={200}
 							/>
 						</BaseLink>
 					{/if}
@@ -237,10 +239,8 @@
 			}
 
 			& img {
-				/* the height should be 200 */
-				height: 200px;
-				object-fit: cover;
-				width: 100%;
+				font-size: var(--font-size-1);
+				text-align: center;
 			}
 		}
 	}
