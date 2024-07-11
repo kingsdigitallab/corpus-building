@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import path from "path";
+import { exit } from "process";
 import SaxonJS from "saxon-js";
 import { fileURLToPath } from "url";
 import xml2js from "xml2js";
@@ -35,9 +36,38 @@ async function extractMetadata(xmlString) {
       result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents;
     const origDate =
       result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.history.origin.origDate;
-    const facsimile = result.TEI.facsimile?.surface?.graphic?.find((g) =>
-      g.url.endsWith(".tif")
-    );
+
+    const origPlace =
+      result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.history.origin.origPlace;
+
+    const places = [];
+    for (const placeType of ["modern", "ancient"]) {
+      let place;
+
+      if (Array.isArray(origPlace.placeName)) {
+        place = origPlace.placeName.find((p) => p.type === placeType);
+      } else if (origPlace.placeName?.type === placeType) {
+        place = origPlace.placeName;
+      } else if (
+        origPlace.offset &&
+        origPlace.offset.placeName?.type === placeType
+      ) {
+        place = origPlace.offset.placeName;
+        place.offset = origPlace.offset._.trim();
+      }
+
+      if (place) {
+        places.push(place);
+      }
+    }
+
+    let surface = result.TEI.facsimile?.surface;
+
+    if (surface && Array.isArray(surface)) {
+      surface = surface[0];
+    }
+
+    const facsimile = surface?.graphic?.find((g) => g.url.endsWith(".tif"));
 
     // TODO extract provenance origPlace modern has priority over ancient
 
@@ -47,6 +77,9 @@ async function extractMetadata(xmlString) {
       status: result.TEI.teiHeader.revisionDesc.status,
       notBefore: origDate ? parseInt(origDate["notBefore-custom"]) : null,
       notAfter: origDate ? parseInt(origDate["notAfter-custom"]) : null,
+      place: places[0],
+      placeName: places[0]?._,
+      geo: origPlace.geo,
       facsimile: facsimile
         ? { url: facsimile.url, desc: facsimile.desc }
         : null,
@@ -63,6 +96,8 @@ async function extractMetadata(xmlString) {
       metadata.status,
       metadata.notBefore && metadata.notBefore.toString(),
       metadata.notAfter && metadata.notAfter.toString(),
+      places[0]?._,
+      places[1]?._,
       metadata.country,
       metadata.region,
       metadata.settlement,
