@@ -70,7 +70,7 @@
 		);
 		return maxYear - minYear;
 	})();
-	$: numberOfLocations = new Set(inscriptions.map((inscription) => inscription.settlement)).size;
+	$: numberOfLocations = new Set(inscriptions.map((inscription) => inscription.placeName)).size;
 
 	onMount(() => {
 		keywords = $page.url.searchParams.get('keywords') || '';
@@ -141,7 +141,15 @@
 							? inscription.notAfter < 0
 								? `${Math.abs(inscription.notAfter)} BC`
 								: `AD ${inscription.notAfter}`
-							: 'Unknown'}
+							: 'Unknown'}{#if inscription.place},
+							{@const place = inscription.place}
+							{#if place.offset}<em>{place.offset}</em>{/if}
+							{#if place.ref}
+								<a href={place.ref}>{place._}</a>
+							{:else}
+								{place._}
+							{/if}
+						{/if}
 					</p>
 					<dl>
 						<dt>Settlement</dt>
