@@ -3,9 +3,10 @@
   "version": "0.4.1",
   "description": "An ETL (Extract, Transform, Load) package for processing TEI XML files. It extracts data from TEI XML documents, transforms them using XSLT stylesheets, and generates JSON and HTML outputs for use in the web application.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "etl": "node src/index.mjs",
-    "test": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js"
+    "etl": "node src/index.js",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   },
   "homepage": "https://github.com/kingsdigitallab/corpus-building#readme",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@vitest/coverage-v8": "^2.0.2",
+    "vitest": "^2.0.2"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
