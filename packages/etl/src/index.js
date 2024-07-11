@@ -1,121 +1,15 @@
 import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import path from "path";
-import { exit } from "process";
 import SaxonJS from "saxon-js";
 import { fileURLToPath } from "url";
 import xml2js from "xml2js";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+import { extractMetadata } from "./metadata.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-/**
- * Extracts metadata from an XML string.
- *
- * @async
- * @function extractMetadata
- * @param {string} xmlString - The XML content as a string.
- * @returns {Promise<Object>} A promise that resolves to an object containing the extracted metadata.
- * @property {string} title - The title extracted from the XML.
- * @throws {Error} If there's an error parsing the XML.
- */
-async function extractMetadata(xmlString) {
-  const parser = new xml2js.Parser({ explicitArray: false, mergeAttrs: true });
-  try {
-    const result = await parser.parseStringPromise(xmlString);
-
-    const uri = result.TEI.teiHeader.fileDesc.publicationStmt.idno.filter(
-      (idno) => idno.type === "URI"
-    )[0]._;
-
-    const msIdentifier =
-      result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msIdentifier;
-    const msContents =
-      result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents;
-    const origDate =
-      result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.history.origin.origDate;
-
-    const origPlace =
-      result.TEI.teiHeader.fileDesc.sourceDesc.msDesc.history.origin.origPlace;
-
-    const places = [];
-    for (const placeType of ["modern", "ancient"]) {
-      let place;
-
-      if (Array.isArray(origPlace.placeName)) {
-        place = origPlace.placeName.find((p) => p.type === placeType);
-      } else if (origPlace.placeName?.type === placeType) {
-        place = origPlace.placeName;
-      } else if (
-        origPlace.offset &&
-        origPlace.offset.placeName?.type === placeType
-      ) {
-        place = origPlace.offset.placeName;
-        place.offset = origPlace.offset._.trim();
-      }
-
-      if (place) {
-        places.push(place);
-      }
-    }
-
-    let surface = result.TEI.facsimile?.surface;
-
-    if (surface && Array.isArray(surface)) {
-      surface = surface[0];
-    }
-
-    const facsimile = surface?.graphic?.find((g) => g.url.endsWith(".tif"));
-
-    // TODO extract provenance origPlace modern has priority over ancient
-
-    const metadata = {
-      uri,
-      title: result.TEI.teiHeader.fileDesc.titleStmt.title,
-      status: result.TEI.teiHeader.revisionDesc.status,
-      notBefore: origDate ? parseInt(origDate["notBefore-custom"]) : null,
-      notAfter: origDate ? parseInt(origDate["notAfter-custom"]) : null,
-      place: places[0],
-      placeName: places[0]?._,
-      geo: origPlace.geo,
-      facsimile: facsimile
-        ? { url: facsimile.url, desc: facsimile.desc }
-        : null,
-      country: msIdentifier.country,
-      region: msIdentifier.region,
-      settlement: msIdentifier.settlement,
-      repository: msIdentifier.repository,
-      textLang: msContents.textLang,
-    };
-
-    metadata.keywords = [
-      metadata.uri,
-      metadata.title,
-      metadata.status,
-      metadata.notBefore && metadata.notBefore.toString(),
-      metadata.notAfter && metadata.notAfter.toString(),
-      places[0]?._,
-      places[1]?._,
-      metadata.country,
-      metadata.region,
-      metadata.settlement,
-      metadata.repository?._,
-      metadata.textLang?._,
-      metadata.textLang?.mainLang,
-    ]
-      .filter((keyword) => keyword)
-      .map((keyword) =>
-        typeof keyword === "string" ? keyword.trim().toLowerCase() : keyword
-      );
-
-    return metadata;
-  } catch (error) {
-    console.error("Error parsing XML:", error);
-    return {};
-  }
-}
 
 /**
  * Transforms an XML string to HTML using an XSLT stylesheet.
