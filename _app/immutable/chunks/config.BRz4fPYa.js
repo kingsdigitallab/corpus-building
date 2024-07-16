@@ -1,0 +1,1 @@
+const i="http://sicily.classics.ox.ac.uk/",s="I.Sicily",c=`${s} is dedicated to the inscribed texts from ancient Sicily, combining an open access digital corpus with news, blogs and other resources.`,t={limit:20},a="https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=inscription_images/",e="full/400,/0/default.jpg";export{e as a,c as d,a as i,i as p,t as s,s as t};
