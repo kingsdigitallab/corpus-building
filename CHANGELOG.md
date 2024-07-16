@@ -1,5 +1,31 @@
 
 
+# [0.5.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.4.1...v0.5.0) (2024-07-16)
+
+
+### Bug Fixes
+
+* **etl:** ensure keywords are converted to lowercase for search ([17ee131](https://github.com/kingsdigitallab/corpus-building/commit/17ee131ead6394c80e561281425e285d464ca2eb))
+
+
+### Features
+
+* **etl:** extract place of origin data ([101ec76](https://github.com/kingsdigitallab/corpus-building/commit/101ec767880bdc1990c635d6e20a293d8a6bcc02))
+* **etl:** extraxt the inscription type ([4dcc835](https://github.com/kingsdigitallab/corpus-building/commit/4dcc83583fc7d604333ec29a707ef24e3d0d225d))
+* **etl:** move the metadata extraction into it's own file ([def1ce1](https://github.com/kingsdigitallab/corpus-building/commit/def1ce1305c08016365a07dcd37fe4f5dedd2140))
+* **frontend:** add base styles ([658fc98](https://github.com/kingsdigitallab/corpus-building/commit/658fc98fd76ba51a4a17a99c554637ee9cdaf108))
+* **frontend:** add config params for search ([45b8789](https://github.com/kingsdigitallab/corpus-building/commit/45b878970b60bb0d29c10d42129d53d3d55e93cd))
+* **frontend:** add lib with functions to get inscriptions ([ae07ce8](https://github.com/kingsdigitallab/corpus-building/commit/ae07ce83f9b95c869b756b355500c6e1dac08fa4))
+* **frontend:** add pagination component ([30d72ad](https://github.com/kingsdigitallab/corpus-building/commit/30d72ad4cd61256b65202806b45bb64eda7579b3))
+* **frontend:** add unpic-img for image optimisation ([c0b2136](https://github.com/kingsdigitallab/corpus-building/commit/c0b21366b2eaf3caa4b8680edd630e7a50c5adbf))
+* **frontend:** display place of origin ([4d16ce2](https://github.com/kingsdigitallab/corpus-building/commit/4d16ce2cc32444f7d2da12c063f2b5dd8311aade))
+* **frontend:** use inscriptions helper functions ([615b693](https://github.com/kingsdigitallab/corpus-building/commit/615b693825bd4c0b5ff675a45ba459db2750a0df))
+
+
+### Performance Improvements
+
+* **frontend:** simplify the search by keyword ([94b4a09](https://github.com/kingsdigitallab/corpus-building/commit/94b4a0983f4c1970e8749002ef2ceed703906aff))
+
 ## [0.4.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.4.0...v0.4.1) (2024-07-10)
 
 
