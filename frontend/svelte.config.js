@@ -20,6 +20,9 @@ if (!existsSync(errorFilePath)) {
 const config = {
 	kit: {
 		adapter: adapter(),
+		alias: {
+			$data: 'src/data'
+		},
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/corpus-building' : ''
 		},
