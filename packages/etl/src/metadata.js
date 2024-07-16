@@ -18,6 +18,7 @@ export async function extractMetadata(xmlString) {
     uri: getURI(xml),
     title: getTitle(xml),
     status: getStatus(xml),
+    type: getType(xml),
     ...getDates(xml),
     ...getPlaces(xml),
     facsimile: getFacsimile(xml),
@@ -30,6 +31,7 @@ export async function extractMetadata(xmlString) {
   metadata.keywords = getKeywords(metadata);
 
   delete metadata.places;
+  delete metadata.repository;
 
   return metadata;
 }
@@ -58,6 +60,10 @@ function getStatus(xml) {
   return xml.TEI.teiHeader.revisionDesc.status;
 }
 
+function getType(xml) {
+  return xml.TEI.teiHeader.profileDesc.textClass?.keywords?.term;
+}
+
 function getDates(xml) {
   const origDate =
     xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.history.origin.origDate;
@@ -82,7 +88,7 @@ function getPlaces(xml) {
 
   const places = [];
 
-  for (const placeType of ["modern", "ancient"]) {
+  for (const placeType of ["ancient", "modern"]) {
     let place;
 
     if (Array.isArray(origPlace.placeName)) {
@@ -96,14 +102,17 @@ function getPlaces(xml) {
       place = origPlace.offset.placeName;
       place.offset = origPlace.offset._.trim();
     }
-    if (place) {
+    if (place && place._) {
       places.push(place);
     }
   }
 
   return {
     places,
-    geo: origPlace.geo,
+    geo: origPlace.geo
+      ?.split(",")
+      .map((g) => g.trim())
+      .map((g) => parseInt(g)),
   };
 }
 
@@ -165,6 +174,7 @@ export const metadataExtractors = {
   getURI,
   getTitle,
   getStatus,
+  getType,
   getDates,
   getPlaces,
   getFacsimile,

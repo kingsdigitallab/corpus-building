@@ -182,6 +182,44 @@ describe("getStatus function", () => {
     expect(metadataExtractors.getStatus(xml)).toBe(undefined);
   });
 
+  describe("getType function", () => {
+    it("should return the type", async () => {
+      const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <term>funerary</term>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+      expect(metadataExtractors.getType(xml)).toBe("funerary");
+    });
+
+    it("should return undefined when the term element is missing", async () => {
+      const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <profileDesc>
+            <textClass>
+              <keywords>
+                <otherElement>TestType</otherElement>
+              </keywords>
+            </textClass>
+          </profileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+      expect(metadataExtractors.getType(xml)).toBeUndefined();
+    });
+  });
+
   describe("getDates function", () => {
     it("should return correct notBefore and notAfter dates when origDate is present", async () => {
       const xml = await createXmlObject(`
@@ -340,7 +378,7 @@ describe("getStatus function", () => {
       });
     });
 
-    it("should return correct places when origin has both modern and ancient placeName", async () => {
+    it("should return correct places when origin has both ancient and modern placeName", async () => {
       const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -350,8 +388,8 @@ describe("getStatus function", () => {
                 <history>
                   <origin>
                     <origPlace>
-                      <placeName type="modern">Syracuse</placeName>
                       <placeName type="ancient">Syracusae</placeName>
+                      <placeName type="modern">Syracuse</placeName>
                       <geo>1, 1</geo>
                     </origPlace>
                   </origin>
@@ -366,8 +404,8 @@ describe("getStatus function", () => {
       const result = metadataExtractors.getPlaces(xml);
       expect(result.places).toHaveLength(2);
       expect(result.geo).toEqual("1, 1");
-      expect(result.places[0]).toEqual({ type: "modern", _: "Syracuse" });
-      expect(result.places[1]).toEqual({ type: "ancient", _: "Syracusae" });
+      expect(result.places[0]).toEqual({ type: "ancient", _: "Syracusae" });
+      expect(result.places[1]).toEqual({ type: "modern", _: "Syracuse" });
     });
 
     it("should return empty places array when no origPlace is present", async () => {
