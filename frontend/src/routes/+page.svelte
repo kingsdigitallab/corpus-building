@@ -1,83 +1,54 @@
 <script>
-	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
 	import BaseLink from '$lib/components/BaseLink.svelte';
+	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import * as config from '$lib/config';
+	import { getInscriptions } from '$lib/inscriptions';
 	import { Image } from '@unpic/svelte';
 	import { onMount } from 'svelte';
+	import { queryParam, ssp } from 'sveltekit-search-params';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	let inscriptions = data.corpus;
+	let { query, limit, total, results } = data;
 
-	let finishedSearch = false;
-	let keywords = '';
+	let isLoading = false;
 
-	let loadMoreCount = 50;
-	let loadMoreIncrement = loadMoreCount;
+	const searchQuery = queryParam('q', ssp.string(''));
+	const searchPage = queryParam('page', ssp.number(1));
+	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
 
-	function handleReset() {
-		inscriptions = data.corpus;
+	async function search() {
+		isLoading = true;
 
-		finishedSearch = false;
-		keywords = '';
+		({ query, limit, total, results } = await getInscriptions(
+			$searchQuery,
+			$searchPage,
+			$searchLimit
+		));
 
-		goto(`?keywords=${encodeURIComponent(keywords)}`, { replaceState: true });
-
-		loadMoreCount = 50;
-		loadMoreIncrement = loadMoreCount;
+		isLoading = false;
 	}
 
-	function handleSearch() {
-		goto(`?keywords=${encodeURIComponent(keywords)}`, { replaceState: true });
+	async function reset() {
+		$searchQuery = '';
+		$searchPage = 1;
+		$searchLimit = config.search.limit;
 
-		finishedSearch = true;
-
-		loadMoreCount = 50;
-		loadMoreIncrement = loadMoreCount;
-
-		if (!keywords) {
-			inscriptions = data.corpus;
-			return;
-		}
-
-		inscriptions = data.corpus.filter((inscription) =>
-			keywords
-				.split(' ')
-				.map((keyword) => keyword.toLowerCase())
-				.every((keyword) =>
-					inscription.keywords.some((/** @type string */ k) => k.includes(keyword))
-				)
-		);
+		search();
 	}
 
-	function loadMore() {
-		loadMoreCount = Math.min(inscriptions.length, loadMoreCount + loadMoreIncrement);
+	/**
+	 * @param {number | null} page
+	 */
+	async function handlePageChange(page) {
+		$searchPage = page;
+		search();
 	}
-
-	$: displayedInscriptions = inscriptions.slice(0, loadMoreCount);
-	$: hasMoreToLoad = inscriptions.length > loadMoreCount;
-	$: yearSpan = (() => {
-		const minYear = Math.min(
-			...inscriptions
-				.filter((inscription) => inscription.notBefore)
-				.map((inscription) => inscription.notBefore)
-		);
-		const maxYear = Math.max(
-			...inscriptions
-				.filter((inscription) => inscription.notAfter)
-				.map((inscription) => inscription.notAfter)
-		);
-		return maxYear - minYear;
-	})();
-	$: numberOfLocations = new Set(inscriptions.map((inscription) => inscription.placeName)).size;
 
 	onMount(() => {
-		keywords = $page.url.searchParams.get('keywords') || '';
-
-		if (keywords) {
-			handleSearch();
+		if ($searchQuery || $searchPage || $searchLimit) {
+			search();
 		}
 	});
 </script>
@@ -90,31 +61,38 @@
 	</section>
 
 	<section>
-		<form on:submit={handleSearch} on:reset={handleReset}>
+		<form on:submit={search} on:reset={reset}>
 			<input
 				type="text"
-				name="keywords"
-				id="keywords"
+				name="q"
+				id="q"
 				placeholder="Search inscriptions metadata"
-				bind:value={keywords}
+				bind:value={$searchQuery}
 			/>
-			<button type="submit" value="Search" disabled={!keywords}>Search</button>
-			<button type="reset" value="Reset" disabled={!keywords}>Reset</button>
+			<button type="submit" value="Search" disabled={!$searchQuery}>Search</button>
+			<button type="reset" value="Reset" disabled={!$searchQuery}>Reset</button>
 		</form>
 	</section>
 
 	<section class="inscriptions">
 		<h2>
-			<em>{inscriptions.length.toLocaleString()}</em> Inscriptions over
-			<em>{yearSpan.toLocaleString()}</em>
+			<em>{total.toLocaleString()}</em> Inscriptions over
+			<em>{results.yearSpan.toLocaleString()}</em>
 			years across
-			<em>{numberOfLocations.toLocaleString()}</em>
-			locations{#if keywords && finishedSearch}, matching
-				<em>{keywords.split(' ').join(', ')}</em>
+			<em>{results.numberOfLocations.toLocaleString()}</em>
+			locations{#if query}, matching
+				<em>{query.split(' ').join(', ')}</em>
 			{/if}
 		</h2>
+		{#if isLoading}Loading...{/if}
+		<InscriptionPagination
+			page={$searchPage}
+			count={total}
+			perPage={limit}
+			onPageChange={handlePageChange}
+		/>
 		<ol>
-			{#each displayedInscriptions as inscription}
+			{#each results.inscriptions as inscription}
 				<li>
 					{#if inscription.facsimile}
 						<BaseLink href="inscription/{inscription.file}">
@@ -128,11 +106,7 @@
 						</BaseLink>
 					{/if}
 					<p class="title">
-						<BaseLink href="inscription/{inscription.file}">
-							<span>{inscription.title}</span>
-							<small>{inscription.file}</small>
-							<small>{inscription.status}</small>
-						</BaseLink>
+						<BaseLink href="inscription/{inscription.file}">{inscription.title}</BaseLink>
 					</p>
 					<p>
 						{inscription.notBefore != null
@@ -154,21 +128,32 @@
 						{/if}
 					</p>
 					<dl>
-						<dt>Settlement</dt>
-						<dd>{inscription.settlement || 'N/A'}</dd>
-						<dt>Repository</dt>
-						<dd>{inscription.repository?._ || 'N/A'}</dd>
+						<dt>ID</dt>
+						<dd>
+							<BaseLink href="inscription/{inscription.file}">
+								<small>{inscription.file}</small>
+							</BaseLink>
+						</dd>
+						<dt>Status</dt>
+						<dd>{inscription.status}</dd>
+						<dt>Type</dt>
+						{#if inscription.type.ref}
+							<dd><a href={inscription.type.ref}>{inscription.type?._}</a></dd>
+						{:else}
+							<dd>{inscription.type?._ || 'N/A'}</dd>
+						{/if}
 						<dt>Language</dt>
 						<dd>{inscription.textLang?._ || 'N/A'}</dd>
 					</dl>
 				</li>
 			{/each}
 		</ol>
-	</section>
-	<section>
-		{#if hasMoreToLoad}
-			<button on:click={loadMore}>Load More Inscriptions</button>
-		{/if}
+		<InscriptionPagination
+			page={$searchPage}
+			count={total}
+			perPage={limit}
+			onPageChange={handlePageChange}
+		/>
 	</section>
 </article>
 
@@ -248,6 +233,12 @@
 	.title {
 		font-weight: bolder;
 		margin-block: var(--size-2);
+	}
+
+	dl {
+		display: grid;
+		grid-template-columns: auto auto;
+		margin-block-start: var(--size-2);
 	}
 
 	dt {
