@@ -1,0 +1,73 @@
+<script>
+	import * as config from '$lib/config.js';
+	import { Image } from '@unpic/svelte';
+	import BaseLink from './BaseLink.svelte';
+	import InscriptionDate from './InscriptionDate.svelte';
+	import InscriptionPlace from './InscriptionPlace.svelte';
+
+	export let inscription;
+</script>
+
+<div class="inscription-card">
+	{#if inscription.facsimile}
+		<BaseLink href="inscription/{inscription.file}">
+			<Image
+				src="{config.imageServer}{inscription.file}/{inscription.facsimile
+					.url}/{config.imageThumbParams}"
+				alt={inscription.facsimile.desc}
+				width={400}
+				height={200}
+			/>
+		</BaseLink>
+	{/if}
+	<p class="inscription-title">
+		<BaseLink href="inscription/{inscription.file}">{inscription.title}</BaseLink>
+	</p>
+	<p class="inscription-date-place">
+		<InscriptionDate {inscription} />
+		<InscriptionPlace {inscription} />
+	</p>
+	<dl>
+		<dt>ID</dt>
+		<dd>
+			<BaseLink href="inscription/{inscription.file}">
+				<small>{inscription.file}</small>
+			</BaseLink>
+		</dd>
+		<dt>Status</dt>
+		<dd>{inscription.status}</dd>
+		<dt>Type</dt>
+		{#if inscription.type.ref}
+			<dd><a href={inscription.type.ref}>{inscription.type?._}</a></dd>
+		{:else}
+			<dd>{inscription.type?._ || 'N/A'}</dd>
+		{/if}
+		<dt>Language</dt>
+		<dd>{inscription.textLang?._ || 'N/A'}</dd>
+	</dl>
+</div>
+
+<style>
+	.inscription-title {
+		font-weight: bolder;
+		margin-block: var(--size-2);
+	}
+
+	.inscription-date-place {
+		display: flex;
+
+		& div + div::before {
+			content: ', ';
+		}
+	}
+
+	dl {
+		display: grid;
+		grid-template-columns: auto auto;
+		margin-block-start: var(--size-2);
+	}
+
+	dt {
+		margin-block-start: unset;
+	}
+</style>
