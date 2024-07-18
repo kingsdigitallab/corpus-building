@@ -17,8 +17,10 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--size-8);
+		gap: var(--size-4);
+		justify-content: space-between;
 		list-style: none;
+		padding-inline-start: 0;
 
 		& li {
 			border-radius: var(--radius-2);
