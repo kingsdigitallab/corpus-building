@@ -1,854 +1,162 @@
 {
-	"/": [
-		{
-			"id": "link-in-text-block",
-			"impact": "serious",
-			"tags": ["cat.color", "wcag2a", "wcag141", "TTv5", "TT13.a", "EN-301-549", "EN-9.1.4.1"],
-			"description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
-			"help": "Links must be distinguishable without relying on color",
-			"helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=playwright",
-			"nodes": [
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 50 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://sws.geonames.org/2525448\">Caltanissetta</a></p>",
-									"target": ["li:nth-child(1) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 50 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://sws.geonames.org/2525448\">Caltanissetta</a></p>",
-									"target": ["li:nth-child(1) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://sws.geonames.org/2525448\">Caltanissetta</a>",
-					"target": ["li:nth-child(1) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 201 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462270\">Catina</a></p>",
-									"target": ["li:nth-child(2) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 201 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462270\">Catina</a></p>",
-									"target": ["li:nth-child(2) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462270\">Catina</a>",
-					"target": ["li:nth-child(2) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>Unknown – Unknown,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462270\">Catina</a></p>",
-									"target": ["li:nth-child(3) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>Unknown – Unknown,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462270\">Catina</a></p>",
-									"target": ["li:nth-child(3) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462270\">Catina</a>",
-					"target": ["li:nth-child(3) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 100 – AD 150,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462153\">Centuripae</a></p>",
-									"target": ["li:nth-child(4) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 100 – AD 150,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462153\">Centuripae</a></p>",
-									"target": ["li:nth-child(4) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462153\">Centuripae</a>",
-					"target": ["li:nth-child(4) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462153\">Centuripae</a></p>",
-									"target": ["li:nth-child(5) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462153\">Centuripae</a></p>",
-									"target": ["li:nth-child(5) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462153\">Centuripae</a>",
-					"target": ["li:nth-child(5) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 200,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462168\">Cossura</a></p>",
-									"target": ["li:nth-child(6) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 200,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462168\">Cossura</a></p>",
-									"target": ["li:nth-child(6) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462168\">Cossura</a>",
-					"target": ["li:nth-child(6) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>39 BC – 36 BC,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462281\">Lilybaeum</a></p>",
-									"target": ["li:nth-child(7) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>39 BC – 36 BC,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462281\">Lilybaeum</a></p>",
-									"target": ["li:nth-child(7) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462281\">Lilybaeum</a>",
-					"target": ["li:nth-child(7) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462283\">Lipara</a></p>",
-									"target": ["li:nth-child(8) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 300,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462283\">Lipara</a></p>",
-									"target": ["li:nth-child(8) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462283\">Lipara</a>",
-					"target": ["li:nth-child(8) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 50 – AD 100,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(9) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 50 – AD 100,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(9) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(9) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 100,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(10) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 1 – AD 100,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(10) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(10) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 162 – AD 163,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(11) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 162 – AD 163,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(11) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(11) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 195 – AD 211,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(12) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 195 – AD 211,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(12) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(12) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 195 – AD 196,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(13) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 195 – AD 196,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(13) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(13) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 195 – AD 211,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(14) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 195 – AD 211,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(14) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(14) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 196 – AD 197,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(15) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 196 – AD 197,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(15) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(15) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 198 – AD 198,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(16) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 198 – AD 198,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(16) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(16) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 198 – AD 199,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(17) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 198 – AD 199,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(17) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(17) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>Unknown – Unknown,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(18) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>Unknown – Unknown,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(18) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(18) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 218 – AD 222,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(19) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 218 – AD 222,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(19) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(19) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>AD 218 – AD 235,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(20) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>AD 218 – AD 235,\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t <a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a></p>",
-									"target": ["li:nth-child(20) > p:nth-child(3)"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"http://pleiades.stoa.org/places/462410\">Panhormus</a>",
-					"target": ["li:nth-child(20) > p:nth-child(3) > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				},
-				{
-					"any": [
-						{
-							"id": "link-in-text-block",
-							"data": {
-								"messageKey": "fgContrast",
-								"contrastRatio": 2.16,
-								"requiredContrastRatio": 3,
-								"nodeColor": "#bf400d",
-								"parentColor": "#343a40"
-							},
-							"relatedNodes": [
-								{
-									"html": "<p>I.Sicily <a href=\"https://github.com/kingsdigitallab/corpus-building/blob/v0.5.0/CHANGELOG.md\">v0.5.0</a></p>",
-									"target": ["footer > p"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)"
-						},
-						{
-							"id": "link-in-text-block-style",
-							"data": null,
-							"relatedNodes": [
-								{
-									"html": "<p>I.Sicily <a href=\"https://github.com/kingsdigitallab/corpus-building/blob/v0.5.0/CHANGELOG.md\">v0.5.0</a></p>",
-									"target": ["footer > p"]
-								}
-							],
-							"impact": "serious",
-							"message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
-						}
-					],
-					"all": [],
-					"none": [],
-					"impact": "serious",
-					"html": "<a href=\"https://github.com/kingsdigitallab/corpus-building/blob/v0.5.0/CHANGELOG.md\">v0.5.0</a>",
-					"target": ["footer > p > a"],
-					"failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 2.16:1 with the surrounding text. (Minimum contrast is 3:1, link text: #bf400d, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
-				}
-			]
-		}
-	]
+  "/": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag412",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensures ARIA attributes are not prohibited for an element's role",
+      "help": "Elements must only use permitted ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/aria-prohibited-attr?application=playwright",
+      "nodes": [
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute cannot be used on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"marker maplibregl-marker maplibregl-marker-anchor-center\" tabindex=\"0\" aria-label=\"Map marker\" style=\"width: 8px; height: 8px; line-height: 8px; transform: translate(-50%, -50%) translate(272px, 563px) rotateX(0deg) rotateZ(0deg); opacity: 1;\"></div>",
+          "target": [
+            ".marker.maplibregl-marker.maplibregl-marker-anchor-center:nth-child(4)"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute cannot be used on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"marker maplibregl-marker maplibregl-marker-anchor-center\" tabindex=\"0\" aria-label=\"Map marker\" style=\"width: 8px; height: 8px; line-height: 8px; transform: translate(-50%, -50%) translate(272px, 336px) rotateX(0deg) rotateZ(0deg); opacity: 1;\"></div>",
+          "target": [
+            ".marker.maplibregl-marker.maplibregl-marker-anchor-center:nth-child(5)"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+        },
+        {
+          "any": [],
+          "all": [],
+          "none": [
+            {
+              "id": "aria-prohibited-attr",
+              "data": {
+                "role": null,
+                "nodeName": "div",
+                "messageKey": "noRoleSingular",
+                "prohibited": [
+                  "aria-label"
+                ]
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "aria-label attribute cannot be used on a div with no valid role attribute."
+            }
+          ],
+          "impact": "serious",
+          "html": "<div class=\"marker maplibregl-marker maplibregl-marker-anchor-center\" tabindex=\"0\" aria-label=\"Map marker\" style=\"width: 8px; height: 8px; line-height: 8px; transform: translate(-50%, -50%) translate(636px, 107px) rotateX(0deg) rotateZ(0deg); opacity: 1;\"></div>",
+          "target": [
+            ".marker.maplibregl-marker.maplibregl-marker-anchor-center:nth-child(6)"
+          ],
+          "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+        }
+      ]
+    },
+    {
+      "id": "link-in-text-block",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2a",
+        "wcag141",
+        "TTv5",
+        "TT13.a",
+        "EN-301-549",
+        "EN-9.1.4.1"
+      ],
+      "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+      "help": "Links must be distinguishable without relying on color",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.9/link-in-text-block?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "link-in-text-block",
+              "data": {
+                "messageKey": "fgContrast",
+                "contrastRatio": 1.24,
+                "requiredContrastRatio": 3,
+                "nodeColor": "#802b09",
+                "parentColor": "#343a40"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<p>I.Sicily <a href=\"https://github.com/kingsdigitallab/corpus-building/blob/v0.6.0/CHANGELOG.md\">v0.6.0</a></p>",
+                  "target": [
+                    "footer > p"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "The link has insufficient color contrast of 1.24:1 with the surrounding text. (Minimum contrast is 3:1, link text: #802b09, surrounding text: #343a40)"
+            },
+            {
+              "id": "link-in-text-block-style",
+              "data": null,
+              "relatedNodes": [
+                {
+                  "html": "<p>I.Sicily <a href=\"https://github.com/kingsdigitallab/corpus-building/blob/v0.6.0/CHANGELOG.md\">v0.6.0</a></p>",
+                  "target": [
+                    "footer > p"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "The link has no styling (such as underline) to distinguish it from the surrounding text"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a href=\"https://github.com/kingsdigitallab/corpus-building/blob/v0.6.0/CHANGELOG.md\">v0.6.0</a>",
+          "target": [
+            "footer > p > a"
+          ],
+          "failureSummary": "Fix any of the following:\n  The link has insufficient color contrast of 1.24:1 with the surrounding text. (Minimum contrast is 3:1, link text: #802b09, surrounding text: #343a40)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+        }
+      ]
+    }
+  ]
 }
