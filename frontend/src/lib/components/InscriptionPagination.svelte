@@ -32,8 +32,17 @@
 {/if}
 
 <style>
+	:global([data-pagination-root]) {
+		margin-block: var(--size-2);
+	}
+
+	:global([data-selected]) {
+		background: var(--surface-4) !important;
+		color: var(--text-1);
+	}
+
 	.pagination {
-		margin-block: var(--size-4);
+		margin-block: var(--size-2);
 	}
 
 	.pagination,
@@ -51,7 +60,7 @@
 			text-shadow: none;
 
 			&:hover {
-				background: var(--surface-3);
+				background: var(--surface-2);
 			}
 		}
 	}
