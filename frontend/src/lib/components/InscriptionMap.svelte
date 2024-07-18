@@ -96,10 +96,6 @@
 <div class="inscription-map" class:hidden={!show} bind:this={mapContainer}></div>
 
 <style>
-	section {
-		width: 100%;
-	}
-
 	.inscription-map {
 		border: var(--border-size-1) solid var(--text-1);
 		height: 400px;
