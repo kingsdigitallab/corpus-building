@@ -1,5 +1,27 @@
 
 
+# [0.6.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.5.0...v0.6.0) (2024-07-18)
+
+
+### Bug Fixes
+
+* **frontend:** change list to cards ([f41161f](https://github.com/kingsdigitallab/corpus-building/commit/f41161f6f16998a6f00c53226611d5e90f63837a))
+* **frontend:** left align the cards with the rest of the page ([1e06f6d](https://github.com/kingsdigitallab/corpus-building/commit/1e06f6d1f21ac5196cc4d0e85296de7f8e468761))
+* **frontend:** move component specific styles to the component ([876761c](https://github.com/kingsdigitallab/corpus-building/commit/876761c9a0277b29c093c1147d020fd5b13f66aa))
+* **frontend:** reduce the padding around main ([128cec3](https://github.com/kingsdigitallab/corpus-building/commit/128cec36b44440f173181c6da67714f3970bd6a3))
+* **frontend:** remove unused css selector ([4d0a246](https://github.com/kingsdigitallab/corpus-building/commit/4d0a246c5f097efe9f6ddebf8f763522d429ecc9))
+
+
+### Features
+
+* **frontend:** add component to render a link to an inscription ([0574cb7](https://github.com/kingsdigitallab/corpus-building/commit/0574cb738e4ac6fcefaa92c4e62c85cecd964acd))
+* **frontend:** add custom components to render the incriptions ([f2fbfe3](https://github.com/kingsdigitallab/corpus-building/commit/f2fbfe3eca807b9ba52f6e374568710c4e65a71a))
+* **frontend:** add font family ([f52c4ae](https://github.com/kingsdigitallab/corpus-building/commit/f52c4ae3b603eaed13e7e0e2ab4d437569dba395))
+* **frontend:** add map component ([4366696](https://github.com/kingsdigitallab/corpus-building/commit/43666967e06c15f204ffce3821c98c140ce51b13))
+* **frontend:** add table view ([7aef6da](https://github.com/kingsdigitallab/corpus-building/commit/7aef6da478830d5c75d061277b2975d0d8071d6d))
+* **frontend:** add toggle to show/hide the map ([cff2a47](https://github.com/kingsdigitallab/corpus-building/commit/cff2a476f3efc5e225ccfeb9e232933f001bb2b9))
+* **frontend:** style adjustments to better align with the mockups ([2e92d51](https://github.com/kingsdigitallab/corpus-building/commit/2e92d510a346ce075797cf094d55ae90a322a342))
+
 # [0.5.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.4.1...v0.5.0) (2024-07-16)
 
 
