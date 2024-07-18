@@ -8,7 +8,8 @@
 	import { Button } from 'bits-ui';
 	import {
 		List as ListIcon,
-		LoaderCircle,
+		LayoutGrid as LayoutGridIcon,
+		LoaderCircle as LoaderCircleIcon,
 		Map as MapIcon,
 		Table as TableIcon
 	} from 'lucide-svelte';
@@ -21,7 +22,7 @@
 	let { query, limit, total, results } = data;
 
 	let isLoading = false;
-	let showList = true;
+	let showCards = true;
 	let showMap = true;
 
 	const searchQuery = queryParam('q', ssp.string(''));
@@ -100,11 +101,11 @@
 		<InscriptionMap inscriptions={results.inscriptions} show={showMap} />
 		<section class="controls">
 			<div class="info">
-				{#if showList}List{:else}Table{/if} view
+				{#if showCards}<LayoutGridIcon />&#160;Card{:else}<TableIcon />&#160;Table{/if} view
 			</div>
 			<div class="toggles">
-				<Button.Root class="surface-4" on:click={() => (showList = !showList)}
-					>{#if showList}<TableIcon />View table{:else}<ListIcon />View list{/if}</Button.Root
+				<Button.Root class="surface-4" on:click={() => (showCards = !showCards)}
+					>{#if showCards}<TableIcon />View table{:else}<LayoutGridIcon />View cards{/if}</Button.Root
 				>
 				<Button.Root on:click={() => (showMap = !showMap)}
 					><MapIcon />{#if showMap}Hide map{:else}Show map{/if}</Button.Root
@@ -112,7 +113,7 @@
 			</div>
 		</section>
 		{#if isLoading}
-			<LoaderCircle />
+			<LoaderCircleIcon />
 		{:else}
 			<InscriptionPagination
 				page={$searchPage}
@@ -120,7 +121,7 @@
 				perPage={limit}
 				onPageChange={handlePageChange}
 			/>
-			{#if showList}
+			{#if showCards}
 				<InscriptionList inscriptions={results.inscriptions} />
 			{:else}
 				<InscriptionTable inscriptions={results.inscriptions} />
@@ -179,8 +180,8 @@
 		width: 100%;
 
 		& .info {
-			/* align to the bottom of the controls */
-			align-self: flex-middle;
+			align-items: center;
+			display: flex;
 			font-weight: var(--font-weight-6);
 		}
 
