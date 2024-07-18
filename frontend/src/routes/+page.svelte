@@ -2,6 +2,7 @@
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
 	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
+	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
 	import { getInscriptions } from '$lib/inscriptions';
 	import { Button } from 'bits-ui';
@@ -15,6 +16,7 @@
 	let { query, limit, total, results } = data;
 
 	let isLoading = false;
+	let showList = true;
 	let showMap = true;
 
 	const searchQuery = queryParam('q', ssp.string(''));
@@ -92,9 +94,14 @@
 		</h2>
 		<InscriptionMap inscriptions={results.inscriptions} show={showMap} />
 		<section class="controls">
-			<Button.Root on:click={() => (showMap = !showMap)}
-				>{#if showMap}Hide map{:else}Show map{/if}</Button.Root
-			>
+			<div class="toggles">
+				<Button.Root on:click={() => (showList = !showList)}
+					>{#if showList}View table{:else}View list{/if}</Button.Root
+				>
+				<Button.Root on:click={() => (showMap = !showMap)}
+					>{#if showMap}Hide map{:else}Show map{/if}</Button.Root
+				>
+			</div>
 		</section>
 		{#if isLoading}
 			<LoaderCircle />
@@ -105,7 +112,11 @@
 				perPage={limit}
 				onPageChange={handlePageChange}
 			/>
-			<InscriptionList inscriptions={results.inscriptions} />
+			{#if showList}
+				<InscriptionList inscriptions={results.inscriptions} />
+			{:else}
+				<InscriptionTable inscriptions={results.inscriptions} />
+			{/if}
 			<InscriptionPagination
 				page={$searchPage}
 				count={total}
@@ -159,7 +170,7 @@
 		margin-block: var(--size-4);
 		width: 100%;
 
-		& button {
+		& .toggles {
 			margin-block-end: var(--size-2);
 			margin-left: auto;
 		}
