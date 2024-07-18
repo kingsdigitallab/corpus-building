@@ -76,7 +76,7 @@
 	}
 
 	main {
-		padding-block: var(--size-9);
+		padding-block: var(--size-4);
 	}
 
 	footer {
