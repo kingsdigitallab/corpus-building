@@ -1,16 +1,16 @@
 <script>
 	import * as config from '$lib/config.js';
 	import { Image } from '@unpic/svelte';
-	import BaseLink from './BaseLink.svelte';
 	import InscriptionDate from './InscriptionDate.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
+	import InscriptionLink from './InscriptionLink.svelte';
 
 	export let inscription;
 </script>
 
 <div class="inscription-card">
 	{#if inscription.facsimile}
-		<BaseLink href="inscription/{inscription.file}">
+		<InscriptionLink id={inscription.file} title={inscription.title}>
 			<Image
 				src="{config.imageServer}{inscription.file}/{inscription.facsimile
 					.url}/{config.imageThumbParams}"
@@ -18,10 +18,12 @@
 				width={400}
 				height={200}
 			/>
-		</BaseLink>
+		</InscriptionLink>
 	{/if}
 	<p class="inscription-title">
-		<BaseLink href="inscription/{inscription.file}">{inscription.title}</BaseLink>
+		<InscriptionLink id={inscription.file} title={inscription.title}
+			>{inscription.title}</InscriptionLink
+		>
 	</p>
 	<p class="inscription-date-place">
 		<InscriptionDate {inscription} />
@@ -30,9 +32,9 @@
 	<dl>
 		<dt>ID</dt>
 		<dd>
-			<BaseLink href="inscription/{inscription.file}">
-				<small>{inscription.file}</small>
-			</BaseLink>
+			<small>
+				<InscriptionLink id={inscription.file}>{inscription.file}</InscriptionLink>
+			</small>
 		</dd>
 		<dt>Status</dt>
 		<dd>{inscription.status}</dd>
