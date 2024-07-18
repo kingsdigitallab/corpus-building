@@ -4,6 +4,7 @@
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import * as config from '$lib/config';
 	import { getInscriptions } from '$lib/inscriptions';
+	import { Button } from 'bits-ui';
 	import { LoaderCircle } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { queryParam, ssp } from 'sveltekit-search-params';
@@ -14,6 +15,7 @@
 	let { query, limit, total, results } = data;
 
 	let isLoading = false;
+	let showMap = true;
 
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
@@ -88,7 +90,12 @@
 				<em>{query.split(' ').join(', ')}</em>
 			{/if}
 		</h2>
-		<InscriptionMap inscriptions={results.inscriptions} />
+		<InscriptionMap inscriptions={results.inscriptions} show={showMap} />
+		<section class="controls">
+			<Button.Root on:click={() => (showMap = !showMap)}
+				>{#if showMap}Hide map{:else}Show map{/if}</Button.Root
+			>
+		</section>
 		{#if isLoading}
 			<LoaderCircle />
 		{:else}
@@ -143,6 +150,18 @@
 				color: var(--gray-8);
 				font-style: italic;
 			}
+		}
+	}
+
+	.controls {
+		border-bottom: var(--border-size-1) solid var(--gray-4);
+		display: flex;
+		margin-block: var(--size-4);
+		width: 100%;
+
+		& button {
+			margin-block-end: var(--size-2);
+			margin-left: auto;
 		}
 	}
 </style>

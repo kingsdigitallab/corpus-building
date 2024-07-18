@@ -7,6 +7,7 @@
 	const { Map, Marker, NavigationControl, Popup } = maplibregl;
 
 	export let inscriptions;
+	export let show = true;
 
 	let map;
 	let markers = [];
@@ -88,11 +89,17 @@
 	afterUpdate(() => {
 		addMarkers();
 	});
+
+	onDestroy(() => map?.remove());
 </script>
 
-<div class="inscription-map" bind:this={mapContainer}></div>
+<div class="inscription-map" class:hidden={!show} bind:this={mapContainer}></div>
 
 <style>
+	section {
+		width: 100%;
+	}
+
 	.inscription-map {
 		border: var(--border-size-1) solid var(--text-1);
 		height: 400px;
@@ -132,5 +139,9 @@
 				padding-inline: 0;
 			}
 		}
+	}
+
+	.hidden {
+		display: none;
 	}
 </style>
