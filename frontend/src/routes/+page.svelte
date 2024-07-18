@@ -1,5 +1,6 @@
 <script>
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
+	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import * as config from '$lib/config';
 	import { getInscriptions } from '$lib/inscriptions';
@@ -47,9 +48,13 @@
 	}
 
 	onMount(() => {
+		isLoading = true;
+
 		if ($searchQuery || $searchPage || $searchLimit) {
 			search();
 		}
+
+		isLoading = false;
 	});
 </script>
 
@@ -83,6 +88,7 @@
 				<em>{query.split(' ').join(', ')}</em>
 			{/if}
 		</h2>
+		<InscriptionMap inscriptions={results.inscriptions} />
 		{#if isLoading}
 			<LoaderCircle />
 		{:else}
