@@ -6,7 +6,12 @@
 	import * as config from '$lib/config';
 	import { getInscriptions } from '$lib/inscriptions';
 	import { Button } from 'bits-ui';
-	import { LoaderCircle } from 'lucide-svelte';
+	import {
+		List as ListIcon,
+		LoaderCircle,
+		Map as MapIcon,
+		Table as TableIcon
+	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 
@@ -77,8 +82,8 @@
 				placeholder="Search inscriptions metadata"
 				bind:value={$searchQuery}
 			/>
-			<button type="submit" value="Search" disabled={!$searchQuery}>Search</button>
-			<button type="reset" value="Reset" disabled={!$searchQuery}>Reset</button>
+			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
+			<Button.Root class="surface-1" type="reset" disabled={!$searchQuery}>Reset</Button.Root>
 		</form>
 	</section>
 
@@ -94,12 +99,15 @@
 		</h2>
 		<InscriptionMap inscriptions={results.inscriptions} show={showMap} />
 		<section class="controls">
+			<div class="info">
+				{#if showList}List{:else}Table{/if} view
+			</div>
 			<div class="toggles">
-				<Button.Root on:click={() => (showList = !showList)}
-					>{#if showList}View table{:else}View list{/if}</Button.Root
+				<Button.Root class="surface-4" on:click={() => (showList = !showList)}
+					>{#if showList}<TableIcon />View table{:else}<ListIcon />View list{/if}</Button.Root
 				>
 				<Button.Root on:click={() => (showMap = !showMap)}
-					>{#if showMap}Hide map{:else}Show map{/if}</Button.Root
+					><MapIcon />{#if showMap}Hide map{:else}Show map{/if}</Button.Root
 				>
 			</div>
 		</section>
@@ -169,6 +177,12 @@
 		display: flex;
 		margin-block: var(--size-4);
 		width: 100%;
+
+		& .info {
+			/* align to the bottom of the controls */
+			align-self: flex-middle;
+			font-weight: var(--font-weight-6);
+		}
 
 		& .toggles {
 			margin-block-end: var(--size-2);
