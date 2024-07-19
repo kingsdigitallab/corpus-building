@@ -3,16 +3,65 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
+
+	/**
+	 * @param {string} text
+	 */
+	function copyTargetToClipboard(text) {
+		navigator.clipboard.writeText(`inspect($$("${text}")[0])`);
+		alert('Copied to clipboard!');
+	}
 </script>
 
 <article>
 	<h1>QA</h1>
 
+	{#if Object.keys(data.axe).length > 0}
+		<section id="axe">
+			<h2>Accessibility issues</h2>
+			{#each Object.keys(data.axe) as page}
+				<h3>
+					<BaseLink href={page}>{page}</BaseLink>
+					<small>{data.axe[page].length.toLocaleString()} accessibility issues found!</small>
+				</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Impact</th>
+							<th>Description</th>
+							<th>Target</th>
+							<th>Help</th>
+						</tr>
+					</thead>
+					<tbody>
+						{#each data.axe[page] as violation}
+							<tr>
+								<td>{violation.id}</td>
+								<td>{violation.impact}</td>
+								<td>{violation.description}</td>
+								<td>
+									<a
+										href="#"
+										class="copy-to-clipboard"
+										on:click|preventDefault={copyTargetToClipboard(violation.nodes[0].target)}
+										>{violation.nodes[0].target}</a
+									>
+								</td>
+								<td><a href={violation.helpUrl}>{violation.help}</a></td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			{/each}
+		</section>
+	{/if}
+
 	{#if data.prerender}
 		<section id="qa">
 			<hgroup>
 				<h2>Build errors</h2>
-				<p><strong>{data.prerender.length}</strong> build errors found!</p>
+				<h3><small>{data.prerender.length} build errors found!</small></h3>
 			</hgroup>
 			<table>
 				<thead>
@@ -36,38 +85,14 @@
 			</table>
 		</section>
 	{/if}
-
-	{#if Object.keys(data.axe).length > 0}
-		<section id="axe">
-			<h2>Accessibility issues</h2>
-			{#each Object.keys(data.axe) as page}
-				<hgroup>
-					<h3><BaseLink href={page}>{page}</BaseLink></h3>
-					<p><strong>{data.axe[page].length}</strong> accessibility issues found!</p>
-				</hgroup>
-				<table>
-					<thead>
-						<tr>
-							<th>ID</th>
-							<th>Impact</th>
-							<th>Description</th>
-							<th>Target</th>
-							<th>Help</th>
-						</tr>
-					</thead>
-					<tbody>
-						{#each data.axe[page] as violation}
-							<tr>
-								<td>{violation.id}</td>
-								<td>{violation.impact}</td>
-								<td>{violation.description}</td>
-								<td>{violation.nodes[0].target}</td>
-								<td><a href={violation.helpUrl}>{violation.help}</a></td>
-							</tr>
-						{/each}
-					</tbody>
-				</table>
-			{/each}
-		</section>
-	{/if}
 </article>
+
+<style>
+	table {
+		width: 100%;
+	}
+
+	.copy-to-clipboard {
+		cursor: copy;
+	}
+</style>
