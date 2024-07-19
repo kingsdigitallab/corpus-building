@@ -1,7 +1,6 @@
 <script>
 	import maplibregl from 'maplibre-gl';
 	import { afterUpdate, onDestroy, onMount } from 'svelte';
-
 	import 'maplibre-gl/dist/maplibre-gl.css';
 
 	const { Map, Marker, NavigationControl, Popup } = maplibregl;
@@ -26,15 +25,12 @@
 				if (!acc[key]) {
 					acc[key] = [];
 				}
-
 				acc[key].push(curr);
-
 				return acc;
 			}, {});
 
 		Object.entries(inscriptionsByGeo).forEach(([_, inscriptions]) => {
 			const numberInscriptions = inscriptions.length;
-
 			let markerSize = '8px';
 			if (numberInscriptions > 15) {
 				markerSize = '48px';
@@ -44,35 +40,43 @@
 				markerSize = '16px';
 			}
 
-			const el = document.createElement('div');
-			el.className = 'marker';
-			el.style.width = markerSize;
-			el.style.height = markerSize;
-			el.style.lineHeight = markerSize;
-
-			if (numberInscriptions > 1) {
-				el.innerHTML = numberInscriptions.toString();
-			}
-
+			const el = createMarkerElement(markerSize, numberInscriptions);
 			const geo = inscriptions[0].geo;
-			const place = inscriptions[0].place._;
-
-			let html = `<div class="tooltip"><h3>${place}</h3>`;
-			const linkItems = inscriptions
-				.map(
-					(inscription) =>
-						`<li><a href="inscription/${inscription.file}">${inscription.title}</a></li>`
-				)
-				.join('');
-			html = `${html}<ul>${linkItems}</ul></div>`;
+			const popupContent = createPopupContent(inscriptions);
 
 			const marker = new Marker({ element: el })
 				.setLngLat([geo[1], geo[0]])
-				.setPopup(new Popup().setHTML(html))
+				.setPopup(new Popup().setHTML(popupContent))
 				.addTo(map);
 
 			markers.push(marker);
 		});
+	}
+
+	function createMarkerElement(size, numberInscriptions) {
+		const el = document.createElement('div');
+		el.className = 'marker';
+		el.style.width = size;
+		el.style.height = size;
+		el.style.lineHeight = size;
+
+		if (numberInscriptions > 1) {
+			el.innerHTML = numberInscriptions.toString();
+		}
+
+		return el;
+	}
+
+	function createPopupContent(inscriptions) {
+		const place = inscriptions[0].place._;
+		let html = `<div class="tooltip"><h3>${place}</h3>`;
+		const linkItems = inscriptions
+			.map(
+				(inscription) =>
+					`<li><a href="inscription/${inscription.file}">${inscription.title}</a></li>`
+			)
+			.join('');
+		return `${html}<ul>${linkItems}</ul></div>`;
 	}
 
 	onMount(() => {
@@ -115,7 +119,7 @@
 			padding: 0;
 			text-align: center;
 
-			&:hover {
+			& :hover {
 				filter: brightness(90%);
 				box-shadow: var(--shadow-4);
 			}
