@@ -181,10 +181,11 @@ describe("getStatus function", () => {
 
     expect(metadataExtractors.getStatus(xml)).toBe(undefined);
   });
+});
 
-  describe("getType function", () => {
-    it("should return the type", async () => {
-      const xml = await createXmlObject(`
+describe("getType function", () => {
+  it("should return the type", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <profileDesc>
@@ -198,11 +199,11 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getType(xml)).toBe("funerary");
-    });
+    expect(metadataExtractors.getType(xml)).toBe("funerary");
+  });
 
-    it("should return undefined when the term element is missing", async () => {
-      const xml = await createXmlObject(`
+  it("should return undefined when the term element is missing", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <profileDesc>
@@ -216,13 +217,101 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getType(xml)).toBeUndefined();
-    });
+    expect(metadataExtractors.getType(xml)).toBeUndefined();
+  });
+});
+
+describe("getObjectType function", () => {
+  it("should return the object type when it exists", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <objectType>stone</objectType>
+                      </support>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getObjectType(xml)).toBe("stone");
   });
 
-  describe("getDates function", () => {
-    it("should return correct notBefore and notAfter dates when origDate is present", async () => {
-      const xml = await createXmlObject(`
+  it("should return undefined when objectType is missing", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support></support>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getObjectType(xml)).toBeUndefined();
+  });
+
+  it("should return undefined when the XML structure is incomplete", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc></objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getObjectType(xml)).toBeUndefined();
+  });
+
+  it("should return undefined when the entire physDesc section is missing", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc></msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getObjectType(xml)).toBeUndefined();
+  });
+});
+
+describe("getDates function", () => {
+  it("should return correct notBefore and notAfter dates when origDate is present", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -240,14 +329,14 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getDates(xml)).toEqual({
-        notBefore: 100,
-        notAfter: 200,
-      });
+    expect(metadataExtractors.getDates(xml)).toEqual({
+      notBefore: 100,
+      notAfter: 200,
     });
+  });
 
-    it("should return null for notBefore and notAfter when origDate is not present", async () => {
-      const xml = await createXmlObject(`
+  it("should return null for notBefore and notAfter when origDate is not present", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -263,14 +352,14 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getDates(xml)).toEqual({
-        notBefore: null,
-        notAfter: null,
-      });
+    expect(metadataExtractors.getDates(xml)).toEqual({
+      notBefore: null,
+      notAfter: null,
     });
+  });
 
-    it("should return null for missing notBefore-custom or notAfter-custom", async () => {
-      const xml = await createXmlObject(`
+  it("should return null for missing notBefore-custom or notAfter-custom", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -288,14 +377,14 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getDates(xml)).toEqual({
-        notBefore: 100,
-        notAfter: null,
-      });
+    expect(metadataExtractors.getDates(xml)).toEqual({
+      notBefore: 100,
+      notAfter: null,
     });
+  });
 
-    it("should handle non-numeric values for notBefore-custom and notAfter-custom", async () => {
-      const xml = await createXmlObject(`
+  it("should handle non-numeric values for notBefore-custom and notAfter-custom", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -313,14 +402,14 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getDates(xml)).toEqual({
-        notBefore: NaN,
-        notAfter: NaN,
-      });
+    expect(metadataExtractors.getDates(xml)).toEqual({
+      notBefore: NaN,
+      notAfter: NaN,
     });
+  });
 
-    it("should handle empty string values for notBefore-custom and notAfter-custom", async () => {
-      const xml = await createXmlObject(`
+  it("should handle empty string values for notBefore-custom and notAfter-custom", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -338,16 +427,16 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getDates(xml)).toEqual({
-        notBefore: null,
-        notAfter: null,
-      });
+    expect(metadataExtractors.getDates(xml)).toEqual({
+      notBefore: null,
+      notAfter: null,
     });
   });
+});
 
-  describe("getPlaces function", () => {
-    it("should return correct places when origin has offset with modern placeName", async () => {
-      const xml = await createXmlObject(`
+describe("getPlaces function", () => {
+  it("should return correct places when origin has offset with modern placeName", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -368,18 +457,18 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      const result = metadataExtractors.getPlaces(xml);
-      expect(result.places).toHaveLength(1);
-      expect(result.geo).toEqual("1, 1");
-      expect(result.places[0]).toEqual({
-        type: "modern",
-        _: "Syracuse",
-        offset: "near",
-      });
+    const result = metadataExtractors.getPlaces(xml);
+    expect(result.places).toHaveLength(1);
+    expect(result.geo).toEqual([1, 1]);
+    expect(result.places[0]).toEqual({
+      type: "modern",
+      _: "Syracuse",
+      offset: "near",
     });
+  });
 
-    it("should return correct places when origin has both ancient and modern placeName", async () => {
-      const xml = await createXmlObject(`
+  it("should return correct places when origin has both ancient and modern placeName", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -401,15 +490,15 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      const result = metadataExtractors.getPlaces(xml);
-      expect(result.places).toHaveLength(2);
-      expect(result.geo).toEqual("1, 1");
-      expect(result.places[0]).toEqual({ type: "ancient", _: "Syracusae" });
-      expect(result.places[1]).toEqual({ type: "modern", _: "Syracuse" });
-    });
+    const result = metadataExtractors.getPlaces(xml);
+    expect(result.places).toHaveLength(2);
+    expect(result.geo).toEqual([1, 1]);
+    expect(result.places[0]).toEqual({ type: "ancient", _: "Syracusae" });
+    expect(result.places[1]).toEqual({ type: "modern", _: "Syracuse" });
+  });
 
-    it("should return empty places array when no origPlace is present", async () => {
-      const xml = await createXmlObject(`
+  it("should return empty places array when no origPlace is present", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -426,24 +515,24 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      const result = metadataExtractors.getPlaces(xml);
-      expect(result.places).toHaveLength(0);
-      expect(result.geo).toBeNull();
-    });
+    const result = metadataExtractors.getPlaces(xml);
+    expect(result.places).toHaveLength(0);
+    expect(result.geo).toBeNull();
   });
+});
 
-  describe("getFacsimile function", () => {
-    it("should return null when facsimile is not present", async () => {
-      const xml = await createXmlObject(`
+describe("getFacsimile function", () => {
+  it("should return null when facsimile is not present", async () => {
+    const xml = await createXmlObject(`
       <TEI>
       </TEI>
     `);
 
-      expect(metadataExtractors.getFacsimile(xml)).toBeNull();
-    });
+    expect(metadataExtractors.getFacsimile(xml)).toBeNull();
+  });
 
-    it("should return facsimile data when surface is not an array", async () => {
-      const xml = await createXmlObject(`
+  it("should return facsimile data when surface is not an array", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <facsimile>
           <surface>
@@ -454,14 +543,14 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getFacsimile(xml)).toEqual({
-        url: "image.tif",
-        desc: "Sample description",
-      });
+    expect(metadataExtractors.getFacsimile(xml)).toEqual({
+      url: "image.tif",
+      desc: "Sample description",
     });
+  });
 
-    it("should return null when no .tif file is found", async () => {
-      const xml = await createXmlObject(`
+  it("should return null when no .tif file is found", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <facsimile>
           <surface>
@@ -472,11 +561,11 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getFacsimile(xml)).toBeNull();
-    });
+    expect(metadataExtractors.getFacsimile(xml)).toBeNull();
+  });
 
-    it("should return first .tif file when multiple are present", async () => {
-      const xml = await createXmlObject(`
+  it("should return first .tif file when multiple are present", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <facsimile>
           <surface>
@@ -487,16 +576,16 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getFacsimile(xml)).toEqual({
-        url: "image1.tif",
-        desc: "TIF 1",
-      });
+    expect(metadataExtractors.getFacsimile(xml)).toEqual({
+      url: "image1.tif",
+      desc: "TIF 1",
     });
   });
+});
 
-  describe("getMsIdentifier function", () => {
-    it("should handle empty strings for all properties", async () => {
-      const xml = await createXmlObject(`
+describe("getMsIdentifier function", () => {
+  it("should handle empty strings for all properties", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -515,16 +604,16 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getMsIdentifier(xml)).toEqual({
-        country: "",
-        region: "",
-        settlement: "",
-        repository: "",
-      });
+    expect(metadataExtractors.getMsIdentifier(xml)).toEqual({
+      country: "",
+      region: "",
+      settlement: "",
+      repository: "",
     });
+  });
 
-    it("should handle missing properties", async () => {
-      const xml = await createXmlObject(`
+  it("should handle missing properties", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -541,16 +630,16 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getMsIdentifier(xml)).toEqual({
-        country: "Italy",
-        region: undefined,
-        settlement: "Rome",
-        repository: undefined,
-      });
+    expect(metadataExtractors.getMsIdentifier(xml)).toEqual({
+      country: "Italy",
+      region: undefined,
+      settlement: "Rome",
+      repository: undefined,
     });
+  });
 
-    it("should handle completely empty msIdentifier", async () => {
-      const xml = await createXmlObject(`
+  it("should handle completely empty msIdentifier", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -565,18 +654,18 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-      expect(metadataExtractors.getMsIdentifier(xml)).toEqual({
-        country: undefined,
-        region: undefined,
-        settlement: undefined,
-        repository: undefined,
-      });
+    expect(metadataExtractors.getMsIdentifier(xml)).toEqual({
+      country: undefined,
+      region: undefined,
+      settlement: undefined,
+      repository: undefined,
     });
   });
+});
 
-  describe("getTextLang function", () => {
-    it("should return the textLang object when it exists", async () => {
-      const xml = await createXmlObject(`
+describe("getTextLang function", () => {
+  it("should return the textLang object when it exists", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -591,14 +680,14 @@ describe("getStatus function", () => {
         </teiHeader>
       </TEI>
     `);
-      expect(metadataExtractors.getTextLang(xml)).toEqual({
-        _: "Latin",
-        mainLang: "la",
-      });
+    expect(metadataExtractors.getTextLang(xml)).toEqual({
+      _: "Latin",
+      mainLang: "la",
     });
+  });
 
-    it("should return undefined when textLang doesn't exist", async () => {
-      const xml = await createXmlObject(`
+  it("should return undefined when textLang doesn't exist", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -612,11 +701,11 @@ describe("getStatus function", () => {
         </teiHeader>
       </TEI>
     `);
-      expect(metadataExtractors.getTextLang(xml)).toBeUndefined();
-    });
+    expect(metadataExtractors.getTextLang(xml)).toBeUndefined();
+  });
 
-    it("should return the textLang object with only mainLang", async () => {
-      const xml = await createXmlObject(`
+  it("should return the textLang object with only mainLang", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -631,11 +720,11 @@ describe("getStatus function", () => {
         </teiHeader>
       </TEI>
     `);
-      expect(metadataExtractors.getTextLang(xml)).toEqual({ mainLang: "gr" });
-    });
+    expect(metadataExtractors.getTextLang(xml)).toEqual({ mainLang: "gr" });
+  });
 
-    it("should return an empty object when textLang is present but empty", async () => {
-      const xml = await createXmlObject(`
+  it("should return an empty object when textLang is present but empty", async () => {
+    const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
           <fileDesc>
@@ -650,59 +739,58 @@ describe("getStatus function", () => {
         </teiHeader>
       </TEI>
     `);
-      expect(metadataExtractors.getTextLang(xml)).toEqual("");
-    });
+    expect(metadataExtractors.getTextLang(xml)).toEqual("");
+  });
+});
+
+describe("getKeywords function", () => {
+  it("should handle null values by filtering them out", () => {
+    const metadata = {
+      uri: null,
+      title: "Test Title",
+    };
+    const keywords = metadataExtractors.getKeywords(metadata);
+    expect(keywords).not.toContain(null);
+    expect(keywords).toContain("test title");
   });
 
-  describe("getKeywords function", () => {
-    it("should handle null values by filtering them out", () => {
-      const metadata = {
-        uri: null,
-        title: "Test Title",
-      };
-      const keywords = metadataExtractors.getKeywords(metadata);
-      expect(keywords).not.toContain(null);
-      expect(keywords).toContain("test title");
-    });
+  it("should handle undefined values by filtering them out", () => {
+    const metadata = {
+      uri: undefined,
+      title: "Test Title",
+    };
+    const keywords = metadataExtractors.getKeywords(metadata);
+    expect(keywords).not.toContain(undefined);
+    expect(keywords).toContain("test title");
+  });
 
-    it("should handle undefined values by filtering them out", () => {
-      const metadata = {
-        uri: undefined,
-        title: "Test Title",
-      };
-      const keywords = metadataExtractors.getKeywords(metadata);
-      expect(keywords).not.toContain(undefined);
-      expect(keywords).toContain("test title");
-    });
-
-    it("should handle a mix of string and non-string values correctly", () => {
-      const metadata = {
-        uri: "http://example.com",
-        title: "Test Title",
-        status: "draft",
-        notBefore: 100,
-        notAfter: 200,
-        places: [{ _: "Place1" }, { _: "Place2" }],
-        country: "Country",
-        region: null,
-        settlement: undefined,
-        repository: { _: "Repository" },
-        textLang: { _: "Language", mainLang: "lang" },
-      };
-      const keywords = metadataExtractors.getKeywords(metadata);
-      expect(keywords).toEqual([
-        "http://example.com",
-        "test title",
-        "draft",
-        "100",
-        "200",
-        "place1",
-        "place2",
-        "country",
-        "repository",
-        "language",
-        "lang",
-      ]);
-    });
+  it("should handle a mix of string and non-string values correctly", () => {
+    const metadata = {
+      uri: "http://example.com",
+      title: "Test Title",
+      status: "draft",
+      notBefore: 100,
+      notAfter: 200,
+      places: [{ _: "Place1" }, { _: "Place2" }],
+      country: "Country",
+      region: null,
+      settlement: undefined,
+      repository: { _: "Repository" },
+      textLang: { _: "Language", mainLang: "lang" },
+    };
+    const keywords = metadataExtractors.getKeywords(metadata);
+    expect(keywords).toEqual([
+      "http://example.com",
+      "test title",
+      "draft",
+      "100",
+      "200",
+      "place1",
+      "place2",
+      "country",
+      "repository",
+      "language",
+      "lang",
+    ]);
   });
 });
