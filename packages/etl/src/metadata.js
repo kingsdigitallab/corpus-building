@@ -158,6 +158,8 @@ function getKeywords(metadata) {
     metadata.uri,
     metadata.title,
     metadata.status,
+    metadata.type?._,
+    metadata.objectType?._,
     metadata.notBefore && metadata.notBefore.toString(),
     metadata.notAfter && metadata.notAfter.toString(),
     metadata.places && metadata.places[0]?._,
