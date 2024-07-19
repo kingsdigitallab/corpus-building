@@ -154,10 +154,6 @@
 		text-align: center;
 	}
 
-	section {
-		margin-block: var(--size-8);
-	}
-
 	form {
 		display: flex;
 		gap: var(--size-2);
@@ -167,7 +163,7 @@
 			flex-grow: 1;
 
 			&::placeholder {
-				color: var(--gray-8);
+				color: var(--text-1);
 				font-style: italic;
 			}
 		}
