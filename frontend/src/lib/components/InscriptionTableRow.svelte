@@ -20,7 +20,7 @@
 		{/if}
 	</td>
 	<td>
-		{#if inscription.objectType.ref}
+		{#if inscription.objectType?.ref}
 			<a href={inscription.objectType.ref}>{inscription.objectType?._}</a>
 		{:else}
 			{inscription.objectType?._ || 'N/A'}
