@@ -68,15 +68,30 @@
 	}
 
 	function createPopupContent(inscriptions) {
-		const place = inscriptions[0].place._;
-		let html = `<div class="tooltip"><h3>${place}</h3>`;
-		const linkItems = inscriptions
-			.map(
-				(inscription) =>
-					`<li><a href="inscription/${inscription.file}">${inscription.title}</a></li>`
-			)
+		const inscriptionsByPlace = inscriptions.reduce((acc, curr) => {
+			if (!acc[curr.place._]) {
+				acc[curr.place._] = [];
+			}
+			acc[curr.place._].push(curr);
+			return acc;
+		}, {});
+
+		let html = `<div class="tooltip">`;
+		const items = Object.entries(inscriptionsByPlace)
+			.map(([place, inscriptions]) => {
+				let dt = `<dt>${place}</dt>`;
+				let dd = inscriptions
+					.map(
+						(inscription) =>
+							`<dd><a href="inscription/${inscription.file}">${inscription.title}</a></dd>`
+					)
+					.join('');
+
+				return `${dt}${dd}`;
+			})
 			.join('');
-		return `${html}<ul>${linkItems}</ul></div>`;
+
+		return `${html}<dl>${items}</dl></div>`;
 	}
 
 	onMount(() => {
