@@ -12,10 +12,19 @@
 	<td><InscriptionDate {inscription} /></td>
 	<td><InscriptionPlace {inscription} /></td>
 	<td>{inscription.status}</td>
-	{#if inscription.type.ref}
-		<td><a href={inscription.type.ref}>{inscription.type?._}</a></td>
-	{:else}
-		<td>{inscription.type?._ || 'N/A'}</td>
-	{/if}
+	<td>
+		{#if inscription.type.ref}
+			<a href={inscription.type.ref}>{inscription.type?._}</a>
+		{:else}
+			{inscription.type?._ || 'N/A'}
+		{/if}
+	</td>
+	<td>
+		{#if inscription.objectType.ref}
+			<a href={inscription.objectType.ref}>{inscription.objectType?._}</a>
+		{:else}
+			{inscription.objectType?._ || 'N/A'}
+		{/if}
+	</td>
 	<td>{inscription.textLang?._ || 'N/A'}</td>
 </tr>

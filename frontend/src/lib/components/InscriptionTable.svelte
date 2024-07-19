@@ -16,6 +16,7 @@
 			<th>Place</th>
 			<th>Status</th>
 			<th>Type</th>
+			<th>Object type</th>
 			<th>Language</th>
 		</tr>
 	</thead>

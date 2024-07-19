@@ -44,6 +44,12 @@
 		{:else}
 			<dd>{inscription.type?._ || 'N/A'}</dd>
 		{/if}
+		<dt>Object type</dt>
+		{#if inscription.objectType.ref}
+			<dd><a href={inscription.objectType.ref}>{inscription.objectType?._}</a></dd>
+		{:else}
+			<dd>{inscription.objectType?._ || 'N/A'}</dd>
+		{/if}
 		<dt>Language</dt>
 		<dd>{inscription.textLang?._ || 'N/A'}</dd>
 	</dl>
