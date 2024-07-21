@@ -309,6 +309,94 @@ describe("getObjectType function", () => {
   });
 });
 
+describe("getMaterial function", () => {
+  it("should return the material when it exists", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <material>stone</material>
+                      </support>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getMaterial(xml)).toBe("stone");
+  });
+
+  it("should return undefined when material is missing", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support></support>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getMaterial(xml)).toBeUndefined();
+  });
+
+  it("should return undefined when the XML structure is incomplete", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc></objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getMaterial(xml)).toBeUndefined();
+  });
+
+  it("should return undefined when the entire physDesc section is missing", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc></msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getMaterial(xml)).toBeUndefined();
+  });
+});
+
 describe("getDates function", () => {
   it("should return correct notBefore and notAfter dates when origDate is present", async () => {
     const xml = await createXmlObject(`

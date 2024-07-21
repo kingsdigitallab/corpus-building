@@ -20,6 +20,7 @@ export async function extractMetadata(xmlString) {
     status: getStatus(xml),
     type: getType(xml),
     objectType: getObjectType(xml),
+    material: getMaterial(xml),
     ...getDates(xml),
     ...getPlaces(xml),
     facsimile: getFacsimile(xml),
@@ -68,6 +69,11 @@ function getType(xml) {
 function getObjectType(xml) {
   return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
     ?.supportDesc?.support?.objectType;
+}
+
+function getMaterial(xml) {
+  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+    ?.supportDesc?.support?.material;
 }
 
 function getDates(xml) {
@@ -160,6 +166,7 @@ function getKeywords(metadata) {
     metadata.status,
     metadata.type?._,
     metadata.objectType?._,
+    metadata.material?._,
     metadata.notBefore && metadata.notBefore.toString(),
     metadata.notAfter && metadata.notAfter.toString(),
     metadata.places && metadata.places[0]?._,
@@ -184,6 +191,7 @@ export const metadataExtractors = {
   getStatus,
   getType,
   getObjectType,
+  getMaterial,
   getDates,
   getPlaces,
   getFacsimile,
