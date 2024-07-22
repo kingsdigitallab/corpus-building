@@ -39,7 +39,7 @@
 		<dt>Status</dt>
 		<dd>{inscription.status}</dd>
 		<dt>Type</dt>
-		{#if inscription.type.ref}
+		{#if inscription.type?.ref}
 			<dd><a href={inscription.type.ref}>{inscription.type?._}</a></dd>
 		{:else}
 			<dd>{inscription.type?._ || 'N/A'}</dd>
@@ -59,14 +59,6 @@
 	.inscription-title {
 		font-weight: bolder;
 		margin-block: var(--size-2);
-	}
-
-	.inscription-date-place {
-		display: flex;
-
-		& div + div::before {
-			content: ', ';
-		}
 	}
 
 	dl {
