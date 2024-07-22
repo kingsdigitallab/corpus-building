@@ -69,10 +69,10 @@
 
 	function createPopupContent(inscriptions) {
 		const inscriptionsByPlace = inscriptions.reduce((acc, curr) => {
-			if (!acc[curr.place._]) {
-				acc[curr.place._] = [];
+			if (!acc[curr.places[0]._]) {
+				acc[curr.places[0]._] = [];
 			}
-			acc[curr.place._].push(curr);
+			acc[curr.places[0]._].push(curr);
 			return acc;
 		}, {});
 
