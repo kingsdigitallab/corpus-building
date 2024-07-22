@@ -21,6 +21,7 @@ export async function extractMetadata(xmlString) {
     type: getType(xml),
     objectType: getObjectType(xml),
     material: getMaterial(xml),
+    layoutDesc: getLayoutDesc(xml),
     ...getDates(xml),
     ...getPlaces(xml),
     facsimile: getFacsimile(xml),
@@ -28,11 +29,9 @@ export async function extractMetadata(xmlString) {
     textLang: getTextLang(xml),
   };
 
-  metadata.place = metadata.places[0];
   metadata.placeName = metadata.places[0]?._;
   metadata.keywords = getKeywords(metadata);
 
-  delete metadata.places;
   delete metadata.repository;
 
   return metadata;
@@ -74,6 +73,12 @@ function getObjectType(xml) {
 function getMaterial(xml) {
   return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
     ?.supportDesc?.support?.material;
+}
+
+function getLayoutDesc(xml) {
+    return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+    ?.layoutDesc?.layout?.rs;
+
 }
 
 function getDates(xml) {
