@@ -50,23 +50,25 @@
 		align-items: center;
 		display: flex;
 		gap: var(--size-2);
+		height: 100%;
 		justify-content: center;
 
 		& button {
 			background: none;
 			border: none;
 			box-shadow: none;
-			height: var(--size-8);
+			font-weight: inherit;
+			height: 100%;
 			text-shadow: none;
 
 			&:hover {
-				background: var(--surface-2);
+				background: var(--surface-4);
 			}
 		}
 	}
 
 	p {
-		color: var(--gray-8);
+		color: var(--text-1);
 		text-align: center;
 		font-size: var(--font-size-0);
 		margin-block: var(--size-2);
