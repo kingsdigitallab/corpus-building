@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import BaseLink from '$lib/components/BaseLink.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import * as config from '$lib/config';
 
 	import 'open-props/style';
@@ -24,18 +24,7 @@
 </svelte:head>
 
 <div class="layout">
-	<header>
-		<nav>
-			<BaseLink href="/" class="title">{config.title}</BaseLink>
-			<ul>
-				<li>About</li>
-				<li>Guide</li>
-				{#if data.debug}
-					<li><BaseLink href="/_qa">QA</BaseLink></li>
-				{/if}
-			</ul>
-		</nav>
-	</header>
+	<Header debug={data.debug} />
 	<main>
 		<slot />
 	</main>
@@ -57,22 +46,10 @@
 		margin-inline: auto;
 		max-inline-size: 1280px;
 		padding-inline: var(--size-8);
-	}
 
-	nav {
-		align-items: center;
-		border-bottom: var(--border-size-1) solid var(--gray-2);
-		display: flex;
-		justify-content: space-between;
-		padding-block: var(--size-2);
-
-		& ul {
-			list-style: none;
-
-			& li {
-				display: inline-flex;
-			}
-		}
+		transition:
+			background-color 0.25s ease-in-out,
+			color 0.25s ease-in-out;
 	}
 
 	main {
