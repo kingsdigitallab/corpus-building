@@ -1,5 +1,37 @@
 
 
+# [0.7.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.6.1...v0.7.0) (2024-07-23)
+
+
+### Bug Fixes
+
+* **frontend:** check object type exists ([b119c4c](https://github.com/kingsdigitallab/corpus-building/commit/b119c4c2b627436be8f3fbfb9b119cf68b5486ee))
+* **frontend:** ensure type exists before accessing the value ([839b732](https://github.com/kingsdigitallab/corpus-building/commit/839b732146c2bfa2e4e9ef1a4d8fae6797242eb8))
+* **frontend:** move section base style to app css ([93af00b](https://github.com/kingsdigitallab/corpus-building/commit/93af00b8c1203695f9a1ec9cf871491ead299d06))
+* **frontend:** update to match changes in the data ([135334e](https://github.com/kingsdigitallab/corpus-building/commit/135334e6d67146232e494a5ad1459eedee9261a1))
+* **frontend:** use accessible colour for paginations results ([779dd51](https://github.com/kingsdigitallab/corpus-building/commit/779dd51b730170699127e92b4694fbd8c282f7f6))
+
+
+### Features
+
+* **etl:** add inscription type and object type to the keywords ([25a3a05](https://github.com/kingsdigitallab/corpus-building/commit/25a3a05ef5f0ee94f32dd61a3ce408c1f1e87d72))
+* **etl:** extract layout description ([4b3c97b](https://github.com/kingsdigitallab/corpus-building/commit/4b3c97b7f95306899358bc4c6e2eb449df9527e7))
+* **etl:** extract layout description ([a95357e](https://github.com/kingsdigitallab/corpus-building/commit/a95357e805ee0d555cc59a55f0181864f93d60f6))
+* **etl:** extract letter height ([e43a7d7](https://github.com/kingsdigitallab/corpus-building/commit/e43a7d760a045130895328634c4d4ee60393d1b5))
+* **etl:** extract material ([cc50646](https://github.com/kingsdigitallab/corpus-building/commit/cc50646e8b74d1e28e197717a39e948f9aabd4b2))
+* **etl:** extract object type ([dbe8568](https://github.com/kingsdigitallab/corpus-building/commit/dbe8568dfa84177d8b8c31488e54ba7d6c7a3323))
+* **frontend:** add component to change colour scheme ([b8df4ad](https://github.com/kingsdigitallab/corpus-building/commit/b8df4ad666344e9526956c6ba17cd8243777c467))
+* **frontend:** add header component ([adfb8b5](https://github.com/kingsdigitallab/corpus-building/commit/adfb8b5b1fc1402195d73f8685dc98e1905757ce))
+* **frontend:** diplay multiple place names in the map tooltip ([245caa0](https://github.com/kingsdigitallab/corpus-building/commit/245caa0de0efaf7fab36241060c72afea578f329))
+* **frontend:** display accessibility issues on top ([6fc8cb9](https://github.com/kingsdigitallab/corpus-building/commit/6fc8cb9e32fd1eadc07afa7886433462f3a52a9c))
+* **frontend:** display both place types ([1c460c5](https://github.com/kingsdigitallab/corpus-building/commit/1c460c53dddf7b4e0e3892a492849bde29b4b0b3))
+* **frontend:** display object type ([b80f7aa](https://github.com/kingsdigitallab/corpus-building/commit/b80f7aa3c9f19ae712b8e56032632ee46d2b4933))
+
+
+### Performance Improvements
+
+* **frontend:** split long block into functions ([726467c](https://github.com/kingsdigitallab/corpus-building/commit/726467ce3b4840b77f7b7feab966af4569e574ac))
+
 ## [0.6.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.6.0...v0.6.1) (2024-07-22)
 
 # [0.6.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.5.0...v0.6.0) (2024-07-18)
