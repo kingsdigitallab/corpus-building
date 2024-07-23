@@ -22,6 +22,7 @@ export async function extractMetadata(xmlString) {
     objectType: getObjectType(xml),
     material: getMaterial(xml),
     layoutDesc: getLayoutDesc(xml),
+    letterHeight: getLetterHeight(xml),
     ...getDates(xml),
     ...getPlaces(xml),
     facsimile: getFacsimile(xml),
@@ -76,9 +77,34 @@ function getMaterial(xml) {
 }
 
 function getLayoutDesc(xml) {
-    return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
     ?.layoutDesc?.layout?.rs;
+}
 
+function getLetterHeight(xml) {
+  let dimensions =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.handDesc?.handNote
+      ?.dimensions;
+  let locus =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.handDesc?.handNote
+      ?.locus;
+
+  if (dimensions && !Array.isArray(dimensions)) {
+    dimensions = [dimensions];
+    locus = [locus];
+  }
+
+  if (!dimensions || dimensions.length === 0) return undefined;
+
+  return dimensions
+    ?.map((dim, idx) => ({ ...dim, locus: locus[idx] }))
+    .filter((dim) => dim.type === "letterHeight")
+    .map((dim) => {
+      const { _: heightText, ...height } = dim?.height || {};
+      const { _: locusText, ...locus } = dim?.locus || {};
+
+      return { l: locusText, ...locus, h: heightText, ...height };
+    });
 }
 
 function getDates(xml) {
@@ -197,6 +223,7 @@ export const metadataExtractors = {
   getType,
   getObjectType,
   getMaterial,
+  getLetterHeight,
   getDates,
   getPlaces,
   getFacsimile,

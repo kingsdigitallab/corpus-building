@@ -397,6 +397,113 @@ describe("getMaterial function", () => {
   });
 });
 
+describe("getLetterHeight function", () => {
+  it("should return undefined when dimensions is null", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <handDesc>
+                    <handNote>
+                      <dimensions/>
+                      <locus>line 1</locus>
+                    </handNote>
+                  </handDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getLetterHeight(xml)).toBeUndefined();
+  });
+
+  it("should return undefined when dimensions is undefined", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <handDesc>
+                    <handNote>
+                      <locus>line 1</locus>
+                    </handNote>
+                  </handDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getLetterHeight(xml)).toBeUndefined();
+  });
+  it("should handle null locus gracefully", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <handDesc>
+                    <handNote>
+                      <dimensions type="letterHeight">
+                        <height unit="cm">1-2</height>
+                      </dimensions>
+                    </handNote>
+                  </handDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getLetterHeight(xml)).toEqual([
+      { h: "1-2", unit: "cm" },
+    ]);
+  });
+
+  it("should return height and locus", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <handDesc>
+                    <handNote>
+                      <locus from="line1" to="line1">Line 1</locus>
+                      <dimensions type="letterHeight">
+                        <height unit="cm">1-2</height>
+                      </dimensions>
+                    </handNote>
+                  </handDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getLetterHeight(xml)).toEqual([
+      { h: "1-2", unit: "cm", l: "Line 1", from: "line1", to: "line1" },
+    ]);
+  });
+});
+
 describe("getDates function", () => {
   it("should return correct notBefore and notAfter dates when origDate is present", async () => {
     const xml = await createXmlObject(`
