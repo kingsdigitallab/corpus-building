@@ -1,5 +1,18 @@
 
 
+# [0.8.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.7.1...v0.8.0) (2024-07-24)
+
+
+### Bug Fixes
+
+* **etl:** parse coordinates as float ([b8354e1](https://github.com/kingsdigitallab/corpus-building/commit/b8354e16db2a026f882e4850256f231736fe5cf4))
+
+
+### Features
+
+* **frontend:** display all places in the map ([59d8d3e](https://github.com/kingsdigitallab/corpus-building/commit/59d8d3e74c5a506674d4f87ba53fa0927bd41efe))
+* **frontend:** return geo information for all inscriptions ([b70ae21](https://github.com/kingsdigitallab/corpus-building/commit/b70ae21659762742ca19a82ee6dbb95f7e4ad5de))
+
 ## [0.7.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.7.0...v0.7.1) (2024-07-24)
 
 
