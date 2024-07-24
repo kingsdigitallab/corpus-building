@@ -155,7 +155,7 @@ function getPlaces(xml) {
     geo: origPlace?.geo
       ?.split(",")
       .map((g) => g.trim())
-      .map((g) => parseInt(g)),
+      .map((g) => parseFloat(g)),
   };
 }
 
