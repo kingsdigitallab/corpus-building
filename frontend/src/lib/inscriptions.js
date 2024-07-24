@@ -30,7 +30,17 @@ export async function getInscriptions(query, page = 1, limit = config.search.lim
 	const yearSpan = getYearSpan(inscriptions);
 	const numberOfLocations = getNumberOfLocations(inscriptions);
 
-	const results = { yearSpan, numberOfLocations, inscriptions: inscriptions.slice(start, end) };
+	const results = {
+		yearSpan,
+		numberOfLocations,
+		inscriptions: inscriptions.slice(start, end),
+		geo: inscriptions.map((inscription) => ({
+			file: inscription.file,
+			title: inscription.title,
+			places: inscription.places,
+			geo: inscription.geo
+		}))
+	};
 
 	return {
 		query,
