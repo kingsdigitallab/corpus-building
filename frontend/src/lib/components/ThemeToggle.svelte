@@ -64,11 +64,11 @@
 <style>
 	.theme-toggle {
 		& button {
+			aspect-ratio: var(--ratio-square);
 			background: none;
 			border: none;
 			box-shadow: none;
 			font-weight: inherit;
-			height: 100%;
 			text-shadow: none;
 
 			&:hover {

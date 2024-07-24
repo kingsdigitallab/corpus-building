@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-	import Header from '$lib/components/Header.svelte';
+	import BaseLink from '$lib/components/BaseLink.svelte';
+	import Header from '$lib/components/PageHeader.svelte';
+	import Transition from '$lib/components/PageTransition.svelte';
 	import * as config from '$lib/config';
 
 	import 'open-props/style';
@@ -13,6 +15,8 @@
 	export let data;
 
 	const version = import.meta.env.APP_VERSION;
+
+	$: ({ url } = data);
 </script>
 
 <svelte:head>
@@ -25,16 +29,20 @@
 
 <div class="layout">
 	<Header debug={data.debug} />
+
 	<main>
-		<slot />
+		<Transition {url}>
+			<slot />
+		</Transition>
 	</main>
+
 	<footer>
-		<p>
-			{config.title}
+		<BaseLink href="/">{config.title}</BaseLink>
+		<code class="version">
 			<a href="https://github.com/kingsdigitallab/corpus-building/blob/v{version}/CHANGELOG.md"
 				>v{version}</a
 			>
-		</p>
+		</code>
 	</footer>
 </div>
 
@@ -58,7 +66,13 @@
 
 	footer {
 		border-top: var(--border-size-1) solid var(--gray-2);
+		display: flex;
+		justify-content: space-between;
 		padding-block: var(--size-4);
+	}
+
+	.version {
+		font-size: var(--font-size-0);
 	}
 
 	@media (min-width: 1280px) {
