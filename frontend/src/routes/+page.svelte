@@ -7,11 +7,10 @@
 	import { getInscriptions } from '$lib/inscriptions';
 	import { Button } from 'bits-ui';
 	import {
-		List as ListIcon,
-		LayoutGrid as LayoutGridIcon,
-		LoaderCircle as LoaderCircleIcon,
-		Map as MapIcon,
-		Table as TableIcon
+		LayoutGridIcon,
+		LoaderCircleIcon,
+		MapIcon,
+		TableIcon
 	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { queryParam, ssp } from 'sveltekit-search-params';
