@@ -1,5 +1,18 @@
 
 
+## [0.7.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.7.0...v0.7.1) (2024-07-24)
+
+
+### Bug Fixes
+
+* **frontend:** distinguish link from normal text ([a5efbdf](https://github.com/kingsdigitallab/corpus-building/commit/a5efbdf7a4875736ae2ca8965c3e419c5955892e))
+* **frontend:** remove unused icons ([f05eeb2](https://github.com/kingsdigitallab/corpus-building/commit/f05eeb2a4176a57133a0d43f63d64587c46a38e7))
+
+
+### Features
+
+* **frontend:** add transition on page change ([3e99b8b](https://github.com/kingsdigitallab/corpus-building/commit/3e99b8be1eb05fe3f0e69fd9f0ef3ce57318bfd7))
+
 # [0.7.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.6.1...v0.7.0) (2024-07-23)
 
 
