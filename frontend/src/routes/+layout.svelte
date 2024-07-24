@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
-	import Header from '$lib/components/Header.svelte';
+	import Header from '$lib/components/PageHeader.svelte';
+	import Transition from '$lib/components/PageTransition.svelte';
 	import * as config from '$lib/config';
 
 	import 'open-props/style';
@@ -13,6 +14,8 @@
 	export let data;
 
 	const version = import.meta.env.APP_VERSION;
+
+	$: ({ url } = data);
 </script>
 
 <svelte:head>
@@ -25,9 +28,13 @@
 
 <div class="layout">
 	<Header debug={data.debug} />
+
 	<main>
-		<slot />
+		<Transition {url}>
+			<slot />
+		</Transition>
 	</main>
+
 	<footer>
 		<p>
 			{config.title}
