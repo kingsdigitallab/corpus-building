@@ -6,12 +6,7 @@
 	import * as config from '$lib/config';
 	import { getInscriptions } from '$lib/inscriptions';
 	import { Button } from 'bits-ui';
-	import {
-		LayoutGridIcon,
-		LoaderCircleIcon,
-		MapIcon,
-		TableIcon
-	} from 'lucide-svelte';
+	import { LayoutGridIcon, LoaderCircleIcon, MapIcon, TableIcon } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 
@@ -97,7 +92,7 @@
 				<em>{query.split(' ').join(', ')}</em>
 			{/if}
 		</h2>
-		<InscriptionMap inscriptions={results.inscriptions} show={showMap} />
+		<InscriptionMap inscriptions={results.geo} show={showMap} />
 		<section class="controls">
 			<div class="info">
 				{#if showCards}<LayoutGridIcon />&#160;Card{:else}<TableIcon />&#160;Table{/if} view
