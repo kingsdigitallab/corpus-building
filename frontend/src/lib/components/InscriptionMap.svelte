@@ -30,32 +30,39 @@
 			}, {});
 
 		Object.entries(inscriptionsByGeo).forEach(([_, inscriptions]) => {
-			const numberInscriptions = inscriptions.length;
-			let markerSize = '8px';
-			if (numberInscriptions > 15) {
-				markerSize = '48px';
-			} else if (numberInscriptions > 10) {
-				markerSize = '32px';
-			} else if (numberInscriptions > 1) {
-				markerSize = '16px';
-			}
-
-			const el = createMarkerElement(markerSize, numberInscriptions);
 			const geo = inscriptions[0].geo;
-			const popupContent = createPopupContent(inscriptions);
+			if (geo && geo.length === 2) {
+				const numberInscriptions = inscriptions.length;
+				let markerSize = '8px';
+				let groupSize = 'single';
 
-			const marker = new Marker({ element: el })
-				.setLngLat([geo[1], geo[0]])
-				.setPopup(new Popup().setHTML(popupContent))
-				.addTo(map);
+				if (numberInscriptions > 100) {
+					markerSize = '48px';
+					groupSize = 'lg';
+				} else if (numberInscriptions > 25) {
+					markerSize = '32px';
+					groupSize = 'md';
+				} else if (numberInscriptions > 1) {
+					markerSize = '16px';
+					groupSize = 'sm';
+				}
 
-			markers.push(marker);
+				const el = createMarkerElement(markerSize, groupSize, numberInscriptions);
+				const popupContent = createPopupContent(inscriptions);
+
+				const marker = new Marker({ element: el })
+					.setLngLat([geo[1], geo[0]])
+					.setPopup(new Popup().setHTML(popupContent))
+					.addTo(map);
+
+				markers.push(marker);
+			}
 		});
 	}
 
-	function createMarkerElement(size, numberInscriptions) {
+	function createMarkerElement(size, groupSize, numberInscriptions) {
 		const el = document.createElement('div');
-		el.className = 'marker';
+		el.className = `marker ${groupSize}`;
 		el.style.width = size;
 		el.style.height = size;
 		el.style.lineHeight = size;
@@ -69,10 +76,15 @@
 
 	function createPopupContent(inscriptions) {
 		const inscriptionsByPlace = inscriptions.reduce((acc, curr) => {
+			if (!curr.places[0]) {
+				return acc;
+			}
+
 			if (!acc[curr.places[0]._]) {
 				acc[curr.places[0]._] = [];
 			}
 			acc[curr.places[0]._].push(curr);
+
 			return acc;
 		}, {});
 
@@ -121,7 +133,7 @@
 		width: 100%;
 
 		& .marker {
-			background-color: var(--blue-4);
+			background-color: var(--teal-4);
 			border-radius: 50%;
 			border: none;
 			box-shadow: var(--shadow-1);
@@ -134,10 +146,27 @@
 			padding: 0;
 			text-align: center;
 
+			&.sm {
+				background-color: var(--blue-4);
+			}
+
+			&.md {
+				background-color: var(--yellow-4);
+			}
+
+			&.lg {
+				background-color: var(--red-4);
+			}
+
 			& :hover {
 				filter: brightness(90%);
 				box-shadow: var(--shadow-4);
 			}
+		}
+
+		& .maplibregl-popup-content {
+			height: 200px;
+			overflow: scroll;
 		}
 
 		& button {
