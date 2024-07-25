@@ -22,9 +22,7 @@ describe("getURI function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getURI(xml)).toBe(
-      "http://sicily.classics.ox.ac.uk/inscription/ISic000612"
-    );
+    expect(metadataExtractors.getURI(xml)).toBe("ISic000612");
   });
 
   it("should return undefined when no URI is present", async () => {
@@ -58,9 +56,7 @@ describe("getURI function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getURI(xml)).toBe(
-      "http://sicily.classics.ox.ac.uk/inscription/ISic000612"
-    );
+    expect(metadataExtractors.getURI(xml)).toBe("ISic000612");
   });
 
   it("should return undefined when publicationStmt is empty", async () => {
