@@ -49,9 +49,10 @@ async function parseXML(xmlString) {
 }
 
 function getURI(xml) {
-  return xml.TEI.teiHeader.fileDesc?.publicationStmt?.idno?.filter(
-    (idno) => idno.type === "URI"
-  )[0]?._;
+  return xml.TEI.teiHeader.fileDesc?.publicationStmt?.idno
+    ?.filter((idno) => idno.type === "URI")[0]
+    ?._.split("/")
+    .at(-1);
 }
 
 function getTitle(xml) {
