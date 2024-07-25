@@ -93,8 +93,6 @@ async function processFile(filePath, outputPath, options = {}) {
 
   let result = {
     file: baseName,
-    metadataFile: path.relative(outputPath, metaOutputFile),
-    htmlFile: path.relative(outputPath, htmlOutputFile),
   };
 
   if (shouldExtractMetadata) {
