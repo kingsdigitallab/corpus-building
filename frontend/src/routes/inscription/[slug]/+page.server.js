@@ -20,7 +20,9 @@ export async function load({ params }) {
 
 		inscription.divs = inscription.divs.map((/** @type {{ html: string; }} */ div) => ({
 			...div,
-			html: div.html.replace(/(href|src)="\/(?!\/)/g, `$1="${base}/`)
+			html: div.html
+				.replaceAll(/http:\/\/sicily\.classics\.ox\.ac\.uk\/inscription\/(ISic\d{6})/g, '$1')
+				.replace(/(href|src)="\/(?!\/)/g, `$1="${base}/`)
 		}));
 
 		return { slug, metadata, inscription, license, title: inscription.title };
