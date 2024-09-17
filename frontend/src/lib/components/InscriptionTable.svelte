@@ -18,6 +18,7 @@
 			<th>Type</th>
 			<th>Object type</th>
 			<th>Language</th>
+			<th>Settlement</th>
 		</tr>
 	</thead>
 	{#each inscriptions as inscription}

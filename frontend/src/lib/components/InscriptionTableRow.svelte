@@ -27,4 +27,5 @@
 		{/if}
 	</td>
 	<td>{inscription.textLang?._ || 'N/A'}</td>
+	<td>{inscription.settlement || 'N/A'}</td>
 </tr>
