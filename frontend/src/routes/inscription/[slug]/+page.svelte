@@ -6,11 +6,14 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	let tileSources = data.inscription.images
+	let { slug, metadata, inscription, license, title } = data;
+	let curImageTitle = inscription.images[0].title;
+
+	let tileSources = inscription.images
 		.filter((/** @type Object<String, string> */ image) => image.image.endsWith('.tif'))
 		.map(
 			(/** @type Object<String, string> */ image) =>
-				`${config.imageServer}${data.slug}/${image.image}/info.json`
+				`${config.imageServer}${slug}/${image.image}/info.json`
 		);
 
 	let OpenSeaDragon;
@@ -19,26 +22,38 @@
 		OpenSeaDragon = (await import('openseadragon')).default;
 
 		const viewer = OpenSeaDragon({
-			id: 'facsimile-images',
+			id: 'image-viewer',
 			prefixUrl: `${base}/openseadragon/images/`,
 			tileSources,
-			sequenceMode: true
+			sequenceMode: true,
+			showReferenceStrip: true,
+			preserveViewport: true
+		});
+
+		viewer.addHandler('page', function (/** @type {{ page: number; }} */ event) {
+			curImageTitle = inscription.images[event.page - 1].title;
 		});
 	});
 </script>
 
 <article>
 	<hgroup>
-		<h1>{data.inscription.title} <small>{data.metadata.status}</small></h1>
+		<h1>{title}</h1>
 		<p>
-			<a href="{config.publicUrl}inscription/{data.slug}" target="inscription"
-				>View in current site</a
-			>
+			{metadata.textLang._}, <a href={metadata.type.ref}>{metadata.type._}</a>,
+			<a href={metadata.objectType.ref}>{metadata.objectType._}</a>
+		</p>
+		<p>
+			{metadata.status},
+			<a href="{config.publicUrl}inscription/{slug}" target="inscription">View in current site</a>
 		</p>
 	</hgroup>
 	<div class="sections">
-		<section id="facsimile-images" style="height: 50vh;"></section>
-		{#each data.inscription.divs as div}
+		<figure id="facsimile-images">
+			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
+			<figcaption>{curImageTitle}</figcaption>
+		</figure>
+		{#each inscription.divs as div}
 			<section id={div.id} class={div.cls}>
 				{@html div.html}
 			</section>
@@ -79,6 +94,10 @@
 
 	section {
 		margin-block: var(--size-4);
+	}
+
+	figcaption {
+		max-inline-size: none;
 	}
 
 	@media (max-width: 768px) {
