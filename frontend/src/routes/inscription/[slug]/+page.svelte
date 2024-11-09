@@ -1,20 +1,25 @@
 <script>
 	import { base } from '$app/paths';
+	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	let { slug, metadata, inscription, license, title } = data;
-	let curImageTitle = inscription.images[0].title;
+	let { slug, metadata, images, html } = data;
+	let curImageTitle = images[0].desc;
 
-	let tileSources = inscription.images
-		.filter((/** @type Object<String, string> */ image) => image.image.endsWith('.tif'))
-		.map(
-			(/** @type Object<String, string> */ image) =>
-				`${config.imageServer}${slug}/${image.image}/info.json`
-		);
+	const edition = html.divs.find((div) => div.id === 'edition');
+	const apparatus = html.divs.find((div) => div.id === 'apparatus');
+	const translations = html.divs.filter((div) => div.id === 'translation');
+	const commentary = html.divs.find((div) => div.id === 'commentary');
+	const bibliography = html.divs.filter((div) => div.id === 'bibliography');
+
+	let tileSources = images.map(
+		(/** @type Object<String, string> */ image) =>
+			`${config.imageServer}${slug}/${image.url}/info.json`
+	);
 
 	let OpenSeaDragon;
 
@@ -31,17 +36,19 @@
 		});
 
 		viewer.addHandler('page', function (/** @type {{ page: number; }} */ event) {
-			curImageTitle = inscription.images[event.page - 1].title;
+			const image = images[event.page];
+			curImageTitle = `${image.surfaceType}, ${image.desc}`;
 		});
 	});
 </script>
 
 <article>
 	<hgroup>
-		<h1>{title}</h1>
+		<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
 		<p>
-			{metadata.textLang._}, <a href={metadata.type.ref}>{metadata.type._}</a>,
-			<a href={metadata.objectType.ref}>{metadata.objectType._}</a>
+			{metadata.textLang._},
+			<a href={metadata.type.ref}>{metadata.type._}</a>{#if metadata.objectType},
+				<a href={metadata.objectType.ref}>{metadata.objectType._}</a>{/if}
 		</p>
 		<p>
 			{metadata.status},
@@ -53,15 +60,147 @@
 			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
 			<figcaption>{curImageTitle}</figcaption>
 		</figure>
-		{#each inscription.divs as div}
-			<section id={div.id} class={div.cls}>
-				{@html div.html}
+
+		<section id="edition">{@html edition.html}</section>
+
+		<section id="apparatus">{@html apparatus.html}</section>
+
+		{#if translations.length}
+			<section id="translations">
+				{#each translations as translation}
+					{@html translation.html}
+				{/each}
 			</section>
-		{/each}
+		{/if}
+
+		<section id="physical-description">
+			<h2>Physical description</h2>
+			<section>
+				<h3>Support</h3>
+				<dl>
+					<dt>Description</dt>
+					<dd>{metadata.support}</dd>
+					{#if metadata.objectType}
+						<dt>Object type</dt>
+						<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+					{/if}
+					<dt>Material</dt>
+					<dd><a href={metadata.material.ref}>{metadata.material._}</a></dd>
+					<dt>Condition</dt>
+					<dd>TODO: add condition</dd>
+					<dt>Dimensions</dt>
+					<dd>
+						{#each metadata.dimensions as dimension, index}
+							{dimension.dimension}: {dimension._}
+							{dimension.unit}{#if index < metadata.dimensions.length - 1},&#160;{/if}
+						{/each}
+					</dd>
+				</dl>
+			</section>
+			<section>
+				<h3>Inscription</h3>
+				<dl>
+					<dt>Layout</dt>
+					<dd>{metadata.layoutDesc.layout.p}</dd>
+					<dt>Text condition</dt>
+					<dd>{metadata.layoutDesc.layout.damage || config.EMPTY_PLACEHOLDER}</dd>
+					<dt>Lettering</dt>
+					<dd>{metadata.handNote.lettering}</dd>
+					<dt>Letter heights</dt>
+					{#each metadata.handNote.dimensions.filter((dim) => dim.type === 'letterHeight') as dimension}
+						<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
+					{/each}
+					<dt>Interlinear heights</dt>
+					{#each metadata.handNote.dimensions.filter((dim) => dim.type === 'interlinear') as dimension}
+						<dd>
+							{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
+						</dd>
+					{/each}
+				</dl>
+			</section>
+		</section>
+
+		<section id="provenance">
+			<h2>Provenance</h2>
+			<dl>
+				<dt>Place of origin</dt>
+				<dd>
+					{metadata.places[0].offset || ''}
+					<a href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+				</dd>
+				<dt>Provenance found</dt>
+				<dd>{metadata.provenanceFound._}</dd>
+				{#if metadata.provenanceFound.geo}
+					<dt>Geographical coordinates</dt>
+					<dd>{metadata.provenanceFound.geo}</dd>
+					<dd>TODO: add map</dd>
+				{/if}
+			</dl>
+		</section>
+
+		<section id="current-location">
+			<h2>Current location</h2>
+			{#if metadata.provenanceLost}
+				<p>{metadata.provenanceLost._}</p>
+			{:else}
+				<dl>
+					<dt>Place</dt>
+					<dd>{metadata.settlement}, {metadata.country}</dd>
+					<dt>Repository</dt>
+					<dd>
+						<a href={metadata.repository.ref}>{metadata.repository._}</a>{#if metadata.idno},
+							{metadata.idno._}{/if}
+					</dd>
+					<dt>Autopsy</dt>
+					<dd>{metadata.provenanceObserved._}</dd>
+					<dt>Map</dt>
+					<dd>TODO: add map</dd>
+				</dl>
+			{/if}
+		</section>
+
+		<section id="date">
+			<h2>Date</h2>
+			<InscriptionDate inscription={metadata} />
+			<dl>
+				<dt>Evidence</dt>
+				<dd>{metadata.evidence}</dd>
+			</dl>
+		</section>
+
+		<section id="text-type">
+			<h2>Text type</h2>
+			<p><a href={metadata.type.ref}>{metadata.type._}</a></p>
+		</section>
+
+		<section id="commentary">
+			{@html commentary.html}
+		</section>
+
+		{#if bibliography.length}
+			<section id="bibliography">
+				{#each bibliography as bib}
+					{@html bib.html}
+				{/each}
+			</section>
+		{/if}
+
+		<section id="citation-and-status">
+			<h2>Citation and editorial status</h2>
+			<dl>
+				<dt>Citation</dt>
+				<dd>{metadata.citation}</dd>
+			</dl>
+		</section>
 	</div>
 </article>
 
 <style>
+	h1 {
+		font-size: var(--font-size-fluid-1);
+		max-inline-size: none;
+	}
+
 	div.sections {
 		display: grid;
 		gap: var(--size-8);
@@ -100,6 +239,11 @@
 		max-inline-size: none;
 	}
 
+	:global(.map) {
+		height: 200px;
+		width: 100%;
+	}
+
 	@media (max-width: 768px) {
 		div.sections {
 			grid-template-columns: 1fr;
@@ -117,5 +261,10 @@
 		section {
 			margin-block: var(--size-2);
 		}
+	}
+
+	/* Epidoc styles */
+	:global(.linenumber) {
+		margin-right: var(--size-4);
 	}
 </style>
