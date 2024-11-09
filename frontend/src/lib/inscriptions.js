@@ -38,7 +38,7 @@ export async function getInscriptions(query, page = 1, limit = config.search.lim
 			file: inscription.file,
 			title: inscription.title,
 			places: inscription.places,
-			geo: inscription.geo
+			geo: inscription.geo[0]
 		}))
 	};
 
