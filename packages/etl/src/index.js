@@ -137,6 +137,17 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
       const filePath = path.join(inputPath, file);
       try {
         const result = await processFile(filePath, outputPath, options);
+
+        delete result.editions;
+        delete result.support;
+        delete result.dimensions;
+        delete result.layoutDesc;
+        delete result.handNote;
+        delete result.provenanceFound;
+        delete result.provenanceObserved;
+        delete result.provenanceLost;
+        delete result.repository;
+
         results.push(result);
 
         console.log(`Processed ${filePath} successfully.`);
