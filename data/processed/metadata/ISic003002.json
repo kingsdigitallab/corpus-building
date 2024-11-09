@@ -3,11 +3,32 @@
   "uri": "ISic003002",
   "title": "I.Sicily inscription 003002",
   "status": "edited",
+  "editions": [
+    {
+      "_": "645352",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101985",
+      "type": "EDCS"
+    },
+    {
+      "_": "140306",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A block of a variegated and reasonably compact light pink coloured stone (described as 'pietra di Taormina'). The upper and middle parts of the face are heavily damaged. The base is intact, but some loss to both the left and right sides, as well as along the upper edge, although the original upper face appears largely to be preserved; the rear is broken. The base and other faces are roughly finished, only the front face is finished smooth. It seems likely therefore that the block was one of several in a larger monument or wall. The original depth is unknown.",
   "objectType": {
     "_": "base",
     "ana": "#object.base",
@@ -18,22 +39,60 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "24-25",
-      "unit": "mm"
+      "_": "21",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "44",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "23",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of four lines of Greek text, of which the preserved traces suggest that lines 1-3 filled the width of the stone, but line 4 is more widely spaced and has a vacat at the right, and below.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Regular widely spaced, finely incised letters, of consistent height throughout. Letters have basic triangular terminations to the strokes. Alpha is broken-bar; epsilon has short middle stroke (whether detached or not is unclear); kappa has equal length short arms; sigma has parallel top and bottom strokes, with the middle strokes extending half-width.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "24-25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 4",
+        "from": "line1",
+        "to": "line4",
+        "h": "14-15",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -47,9 +106,24 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in June 1886, recovered during the demolition of the 16th century fortifications at the entrance to Ortygia.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1886-06",
+    "geo": "37.064543, 15.291693"
+  },
+  "provenanceObserved": {
+    "_": "Currently in the entry corridor to magazzino B, Museo archeologico regionale Paolo Orsi, Siracusa.",
+    "type": "observed",
+    "subtype": "seen",
+    "when": "2022-10-22"
+  },
   "facsimile": {
     "url": "ISic003002_tiled.tif",
     "desc": "Photo J. Prag, 12-09-2014"
@@ -57,6 +131,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "6189",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

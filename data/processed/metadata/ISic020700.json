@@ -3,11 +3,29 @@
   "uri": "ISic020700",
   "title": "ISic020700",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.production-ownership",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Ionic cup Type B.",
   "objectType": {
     "_": "cup",
     "ana": "#object.vessel.cup",
@@ -18,21 +36,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription is placed on the bottom of the interior of the cup.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -575,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Castiglione di Ragusa",
@@ -41,9 +92,20 @@
     }
   ],
   "geo": [
-    36.950799,
-    14.650095
+    [
+      36.950799,
+      14.650095
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020700_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +113,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx",

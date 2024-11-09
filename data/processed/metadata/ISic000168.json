@@ -3,11 +3,32 @@
   "uri": "ISic000168",
   "title": "Fragmentary funerary epitaph for Dionysius",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175738",
+      "type": "TM"
+    },
+    {
+      "_": "076866",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900652",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Brown/white fragmentary stone. Bottom and right edges are original, with breaks on top and left edges. The rear is relatively flat, but with a straight, diagonal step. The surface is extremely abraded. Traces of modern red paint and modern mortar along edges. The measurements recorded by Ferrua (1941) are significantly different: 49cm high, 19cm wide, 19cm deep (perhaps a transcription error?).",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,41 +39,78 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "irrecoverable on the basis of the bottoms of letter forms alone",
-      "unit": "mm"
+      "_": "19",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "29-41",
-      "unit": "mm"
+      "_": "16-19",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "26-29 (excluding the possible small 'I')",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "27-29",
-      "unit": "mm"
+      "_": "4",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": " Four lines of Latin text, all incomplete. Line 1 is almost impossible to recover. Block-shaped interpuncts",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Text is extremely ill-defined and shallowly inscribed into stone. Letters are irregular in height, consistency and lean in different directions, although the final line is less irregular than the rest. Serifs evident on some letters.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "irrecoverable on the basis of the bottoms of letter forms alone",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "29-41",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "26-29 (excluding the possible small 'I')",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "27-29",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -69,9 +127,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The place, date, and circumstances of the discovery are unknown, but the inscription is assumed to come from Termini Imerese, and is one of a number first recorded by Ferrua in 1941, said to have been found in recent years during construction work in the city.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1941"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 4",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000168_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05"
@@ -79,6 +152,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "36",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

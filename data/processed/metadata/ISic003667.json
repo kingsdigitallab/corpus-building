@@ -3,6 +3,24 @@
   "uri": "ISic003667",
   "title": "I.Sicily inscription 003667",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "_": "122921",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +36,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 250,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -46,9 +94,19 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Sala VII.131, mag. sup.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003667_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +114,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di\n                            Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "487",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

@@ -3,6 +3,24 @@
   "uri": "ISic000078",
   "title": "I.Sicily inscription 000078",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "644813",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -14,21 +32,51 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Selinus",
@@ -42,9 +90,26 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Possibly lost.",
+    "type": "not-observed",
+    "subtype": "lost",
+    "cert": "low"
+  },
   "facsimile": {
     "url": "ISic000078_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +117,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
   "textLang": {
     "_": "Punic",
     "mainLang": "xpu"

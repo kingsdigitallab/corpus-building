@@ -3,11 +3,35 @@
   "uri": "ISic030084",
   "title": "Greek defixio naming Baleria Arsinoe",
   "status": "draft",
+  "editions": [
+    {
+      "_": "875109",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "313643",
+      "type": "PHI"
+    },
+    {
+      "_": "329610",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "Lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,21 +42,47 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "2.6",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "16.0",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Messana",
@@ -46,13 +96,40 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the Necropolis of S. Placido (excavations of P. Orsi, 1914), in burial no. 48, a tomb 'a cappuccina' in 'recinto F', which was covered by a pile of stones; the lamina was found inside the burial, directly beneath the ceramic tube provided for libations.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1914",
+    "geo": "38.199534,15.5551296"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Currently unlocated in either Messina or Siracusa museums, no autopsy since Orsi/Comparetti",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

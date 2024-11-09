@@ -3,11 +3,32 @@
   "uri": "ISic001085",
   "title": "I.Sicily inscription 001085",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492714",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102243",
+      "type": "EDCS"
+    },
+    {
+      "_": "140568",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Described by Crispi as 'una lapide sepolcrale di pietra dura', of oblong shape, seemingly intact but with some damage to the upper left corner and left edge of the text depicted in the published drawing, which latter suggests some form of stele. Described by Crispi as 5.5 palms tall, 2 palms wide, and more than 1 palm deep. A Sicilian palm in the earlier 19th century was approximately 24.2 cm in length.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,21 +39,56 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "133.1",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "48.4",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "25",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Greek letters seemingly aligned to the left edge of the stone, at the very top of one of the wider faces of the stele.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Very open four-bar sigma, and alpha with a right descending oblique bar that reaches to the foot of the right stroke. The letters appear archaic from the drawing.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Hippana",
@@ -46,9 +102,27 @@
     }
   ],
   "geo": [
-    37.701564,
-    13.436825
+    [
+      37.701564,
+      13.436825
+    ]
   ],
+  "provenanceFound": {
+    "_": "Described as coming from the necropolis on the north side of the ancient site on Montagna dei Cavalli, by Crispi 1831, without further details.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1831"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001085_tiled.tif",
     "desc": "Crispi 1831 fig.1"
@@ -56,6 +130,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,29 @@
   "uri": "ISic004420",
   "title": "Epitaph for Aristokrates",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Plinth (support for a stele) with moulding around the top and bottom. The upper moulding of the plinth is partly lost, but the inscribed face is almost completely intact (although lightly scored across the surface). The plinth is the right one of a pair mounted on a single base, classified as an epitymbion of type C.",
   "objectType": {
     "_": "plinth",
     "ana": "#object.arch_element.plinth",
@@ -18,22 +36,58 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "49",
-      "unit": "mm"
+      "_": "31",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "51.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "52.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Greek letters rather irregularly laid out (not strictly observing the horizontal) and not strictly centred; the single word is split across two lines",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat irregular plainly cut, widely spaced letters, poorly laid out. Alpha is broad with straight bar; rho has closed eye, somewhat angular in the first instance, more curved in the second; sigma has horizontal top and bottom strokes, angular mid-strokes, very crudely done in the first instance; omicron is very small and mid-line; kappa has short equal bars joined to the vertical; epsilon has shorter middle bar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "49",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Abacaenum",
@@ -49,9 +103,23 @@
     }
   ],
   "geo": [
-    38.05191,
-    15.10158
+    [
+      38.05191,
+      15.10158
+    ]
   ],
+  "provenanceFound": {
+    "_": "Tomb 105 of the necropolis in contrada Cardusa, where it remains in situ",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": "38.065190, 15.114380"
+  },
+  "provenanceObserved": {
+    "_": "Metcalfe 2016 visited site",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004420_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,6 +127,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
+  "repository": {
+    "_": "Necropoli di Abakainon",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/186"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

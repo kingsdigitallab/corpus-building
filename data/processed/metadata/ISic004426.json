@@ -3,11 +3,29 @@
   "uri": "ISic004426",
   "title": "Inscribed boundary stone",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "terminus",
     "ana": "#function.terminus",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/96.html"
   },
+  "support": "Not directly described by Marini, but the use of 'item' after an initial description of a quadrangular column of volcanic stone, with reference to ISic004425, suggests the same form",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,21 +36,53 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is recorded split over two lines",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "No information is preserved",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 700,
+  "precision": "low",
   "places": [
     {
       "_": "Paternò",
@@ -41,9 +91,27 @@
     }
   ],
   "geo": [
-    37.56675,
-    14.90254
+    [
+      37.56675,
+      14.90254
+    ]
   ],
+  "provenanceFound": {
+    "_": "The only record is in the manuscript collection of Gaetano Marini, whence later editions. Marini records it as being found in the 'ager Catinensis', in the locale known as 'le Timpe', and in his time preserved in front of the church of the village of Sferri",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.501100, 14.796780"
+  },
+  "provenanceObserved": {
+    "_": "none",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic004426_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +119,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "lost",
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

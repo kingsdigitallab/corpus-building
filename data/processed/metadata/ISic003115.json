@@ -3,6 +3,27 @@
   "uri": "ISic003115",
   "title": "I.Sicily inscription 003115",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "284801",
+      "type": "TM"
+    },
+    {
+      "_": "105958",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800020",
+      "type": "EDCS"
+    },
+    {
+      "_": "330070",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +39,51 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Lilybaeum",
@@ -46,9 +97,20 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavations 1974, via del Fante, adjoining Cooperativa S. Francesco",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003115_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +118,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico\n                            regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

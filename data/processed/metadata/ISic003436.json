@@ -3,11 +3,30 @@
   "uri": "ISic003436",
   "title": "I.Sicily inscription 003436",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644915",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A sandstone block, one of several forming part of a tomb, which Orsi notes (second hand report) seems to have been set in the interior of the tomb.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,19 +37,51 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "102",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "51",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "32",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": 100,
   "places": [
@@ -47,9 +98,28 @@
     }
   ],
   "geo": [
-    37.26494,
-    14.69381
+    [
+      37.26494,
+      14.69381
+    ]
   ],
+  "provenanceFound": {
+    "_": "One of several tombs found 'in un campicello vicino l'antica porta Udienza', not later than 1901.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1901"
+  },
+  "provenanceObserved": {
+    "_": "Reported by Orsi, at second hand, and checked by him against 'un cattivo apografo cartaceo'",
+    "type": "observed",
+    "subtype": "reported",
+    "when": "1901"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic003436_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +127,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mineo",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

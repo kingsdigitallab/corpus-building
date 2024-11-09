@@ -3,11 +3,32 @@
   "uri": "ISic000946",
   "title": "I.Sicily inscription 000946",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492576",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102103",
+      "type": "EDCS"
+    },
+    {
+      "_": "140427",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Inscised in the mortar at the head of the sarcophagus.",
   "objectType": {
     "_": "funerary monument",
     "ana": "#object.funerary_monument",
@@ -18,19 +39,49 @@
     "ana": "#material.mortar",
     "ref": "http://www.eagle-network.eu/voc/material/lod/128.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Large crude letters traced in the mortar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 275,
   "notAfter": 400,
   "places": [
@@ -46,9 +97,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "In situ in the mortar above the head of a sarcophagus in Vigna Cassia",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1893"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000946_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +120,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": "Vigna Cassia catacomb, in situ",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

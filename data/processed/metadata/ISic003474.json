@@ -3,11 +3,32 @@
   "uri": "ISic003474",
   "title": "I.Sicily inscription 003474",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645095",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900798",
+      "type": "EDCS"
+    },
+    {
+      "_": "336067",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "The monument on which the inscription is placed is a slab of local limestone decorated with bas-relief and figures in the round. \n                                        The representation on the front face is obtained by the superimposition of a circular shield, a groom's left leg seen in profile and \n                                        a horse moving towards the left. The monument is carved on three sides, measuring 125 cm wide, 70 cm high and 70 cm deep.",
   "objectType": {
     "_": "funerary monument",
     "ana": "#object.funerary_monument",
@@ -18,21 +39,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "The inscription is inscribed in a frame carved on the left of the monument, under the head of a horse facing left.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -580,
+  "evidence": "material-context lettering",
+  "precision": "medium",
   "places": [
     {
       "_": "Castiglione di Ragusa",
@@ -41,9 +96,19 @@
     }
   ],
   "geo": [
-    36.950799,
-    14.650095
+    [
+      36.950799,
+      14.650095
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003474_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +116,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

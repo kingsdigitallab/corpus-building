@@ -3,11 +3,29 @@
   "uri": "ISic030314",
   "title": "ISic030314",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "tessera (civic)",
     "ana": "#function.tessera.civic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/130.html"
   },
+  "support": "Tessera.",
   "objectType": {
     "_": "tessera",
     "ana": "#object.tessera",
@@ -18,21 +36,57 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "3.5-2",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "2",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "0.2-0.3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The fragment does not show signs of writing.",
+      "damage": {
+        "ana": "#text_condition.lost"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -480,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -46,9 +100,23 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found on the 5th of September 1990 in the archaeological area of Kamarina, from an excavation survey conducted north of the temple of Athena («Vicino alla stradella che portava ai motori, da G. Gurrieri», G. Di Stefano; see Cordano, Di Stefano 2017 fig. 9).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1990-09-05",
+    "geo": "36.87316, 14.4415"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030314_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +124,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
+  "idno": {
+    "_": "776",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

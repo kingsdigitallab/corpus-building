@@ -3,6 +3,24 @@
   "uri": "ISic003388",
   "title": "I.Sicily inscription 003388",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645659",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -19,19 +37,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
   "places": [
@@ -47,9 +94,19 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "(?)",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "basement corridor",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003388_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +114,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

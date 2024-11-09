@@ -3,11 +3,29 @@
   "uri": "ISic020808",
   "title": "ISic020808",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership (?)",
     "ana": "#function.production-ownership",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "",
   "objectType": {
     "ana": "#object.vessel",
     "ref": "http://kerameikos.org/id/..."
@@ -17,21 +35,60 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "type": "diameter",
+        "subtype": "base",
+        "unit": "cm"
+      },
+      "1": {
+        "type": "diameter",
+        "subtype": "foot",
+        "unit": "cm"
+      },
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Herbessus (?)",
@@ -45,9 +102,21 @@
     }
   ],
   "geo": [
-    37.42658,
-    14.30061
+    [
+      37.42658,
+      14.30061
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (Soprintendenza alle Antichità di Siracusa, 1966—1968) in the area of the archaic necropolis.",
+    "type": "found",
+    "geo": "37.42658, 14.30061"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020808_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +124,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

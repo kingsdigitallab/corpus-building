@@ -3,6 +3,26 @@
   "uri": "ISic001434",
   "title": "I.Sicily inscription 001434",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644977",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800229",
+      "type": "EDCS"
+    },
+    {
+      "_": "330078",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +38,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
+  "precision": "medium",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -46,9 +96,20 @@
     }
   ],
   "geo": [
-    37.2038,
-    15.18274
+    [
+      37.2038,
+      15.18274
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001434_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +117,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
+  "repository": {
+    "_": "Antiquarium di Megara\n                            Hyblaia",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/104"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

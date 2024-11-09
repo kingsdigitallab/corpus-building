@@ -3,11 +3,30 @@
   "uri": "ISic001620",
   "title": "I.Sicily inscription 001620",
   "status": "draft",
+  "editions": [
+    {
+      "_": "171040",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Large irregular limestone block, cut and smoothed on the front face for an inscription, top and bottom smooth, with the back surface left irregular. There is later recutting of the stone on the left and right-hand sides, see history of the inscription's discovery below.",
   "objectType": {
     "_": "Block",
     "ana": "#object.block",
@@ -18,22 +37,59 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "50-60",
-      "unit": "mm"
+      "_": "50",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "125",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "45",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The inscription has five lines of text, damaged on both the left-hand and right-hand sides. Line 3 has no damage to the right-hand side and appears to have only one letter missing from the left-hand side, suggesting that the text was centred on the field.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The inscription is written in the adapted Ionic Greek alphabet which was usually employed to write Oscan in Lucania and Bruttium from around the fourth to the first centuries BC.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "50-60",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -47,9 +103,28 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "The inscription was originally found in 1612 or 1613 near an old tower in the Giudecca area of Messina, and was recorded by G. Buonfiglio Costanzo. By 1624, when it was recorded by G. Gualtherus, the front left-hand corner of the stone had been cut away. The right-hand edge of the stone was cut away at some later date. The inscription was rediscovered in 1755 and mentioned by Caio Domenico Gallo. It was found again at the beginning of the twentieth century, built into a wall at Via Cárdines 152, and was moved to the Museo Regionale di Messina in 1909. For more information on the history of the discovery of the inscription, see Crawford (2011) and Crawford ().",
+    "type": "found",
+    "subtype": "discovered",
+    "notBefore": "1612",
+    "notAfter": "1613",
+    "ref": {
+      "_": "2006",
+      "target": "http://zotero.org/groups/382445/items/G82KT6YE"
+    }
+  },
+  "provenanceObserved": {
+    "_": "MacDonald 2014-09-20",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2014-09-20"
+  },
   "facsimile": {
     "url": "ISic001620_tiled.tif",
     "desc": "Photograph J. Prag, 2019-05-02"
@@ -57,6 +132,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A2030",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Oscan",
     "mainLang": "osc"

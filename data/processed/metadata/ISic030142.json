@@ -3,11 +3,30 @@
   "uri": "ISic030142",
   "title": "ISic030142",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "175256",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A small rectangular lamina of lead, intact on the left side but somewhat damaged on the others, and found folded.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,20 +37,48 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "9.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "6.3",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The text is set over 9 lines on one side.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -480,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -45,9 +92,22 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found 26 March 1987 in the archaeological area of Kamarina, in the sanctuary of Athena, in contrada Cammarana, but outside the immediate context of the tesserae, in a large circular ditch full of fragments of stone blocks.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "36.87316, 14.4415"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030142_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +115,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

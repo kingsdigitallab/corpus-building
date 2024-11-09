@@ -3,11 +3,31 @@
   "uri": "ISic003640",
   "title": "I.Sicily inscription 003640",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645706",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900998",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A 'horned' funerary altar, in local limestone.",
   "objectType": {
     "_": "funerary altar\n                                    ",
     "ana": "#object.funerary_monument.altar",
@@ -18,21 +38,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "81",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "38",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "16",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text on the front face.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Described Manganaro as lunate letters of the imperial period, with hederae distinguentes, to date between C2 and C3 CE.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 300,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Ispica",
@@ -41,9 +97,22 @@
     }
   ],
   "geo": [
-    36.78622,
-    14.9053
+    [
+      36.78622,
+      14.9053
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contrada Carrubba (), proprieta Fidelio, at km 8 on the Ispica-Pachino road",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "36.760765, 14.965952"
+  },
+  "provenanceObserved": {
+    "_": "Seen on display (on the stairs) in the museum, 2015.01.13.",
+    "type": "observed",
+    "subtype": "seen"
+  },
   "facsimile": {
     "url": "ISic003640_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +120,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

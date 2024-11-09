@@ -3,6 +3,26 @@
   "uri": "ISic001192",
   "title": "I.Sicily inscription 001192",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492797",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101556",
+      "type": "EDCS"
+    },
+    {
+      "_": "140676",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -13,21 +33,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Haluntium",
@@ -41,13 +91,31 @@
     }
   ],
   "geo": [
-    38.07261,
-    14.70093
+    [
+      38.07261,
+      14.70093
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Gualtherus, not seen by Salinas in 1880.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

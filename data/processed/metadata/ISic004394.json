@@ -3,6 +3,23 @@
   "uri": "ISic004394",
   "title": "Sikel inscription",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
@@ -18,21 +35,52 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "_": "boustrophedon\n                                    \n                                \t\n\t\t\t",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
+  "precision": "low",
   "places": [
     {
       "_": "Palikè",
@@ -45,9 +93,28 @@
     }
   ],
   "geo": [
-    37.329954,
-    14.697361
+    [
+      37.329954,
+      14.697361
+    ]
   ],
+  "provenanceFound": {
+    "_": "Orsi 1900 reports that it was found c.1878 on the rock outcrop of ancient Palike; Orsi only saw a drawing",
+    "type": "found",
+    "subtype": "recorded",
+    "when": "1878",
+    "cert": "low"
+  },
+  "provenanceObserved": {
+    "_": "none",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic004394_Orsi_tiled.tif",
     "desc": "Drawing of P.Orsi"
@@ -55,6 +122,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "lost",
+  "repository": "",
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

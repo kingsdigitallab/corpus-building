@@ -3,12 +3,30 @@
   "uri": "ISic004484",
   "title": "ISic004484",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "commercial (?)",
     "ana": "#function.commercial",
     "cert": "low",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/126"
   },
+  "support": "Pebble (rock).",
   "objectType": {
     "_": "pebble (rock)",
     "ana": "#object.pebble-stone",
@@ -19,21 +37,63 @@
     "ana": "#material.stone.basalt",
     "ref": "http://www.eagle-network.eu/voc/material/lod/16.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -400,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Adranon",
@@ -47,9 +107,22 @@
     }
   ],
   "geo": [
-    37.66358,
-    14.83283
+    [
+      37.66358,
+      14.83283
+    ]
   ],
+  "provenanceFound": {
+    "_": "Described by Manganaro (1961) as coming from the area near the Greek settlement of Adrano (contrada Cartalemmi, \"vicino ad un tratto delle mura cosiddette dionigiane\") and after attributed by the same editor to the Mendolito area on the basis of the palaeography (the arrow-shaped alpha)..",
+    "type": "found",
+    "subtype": "first-recorded",
+    "geo": "37.66358, 14.83283"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004484_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +130,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Adrano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/021"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx",

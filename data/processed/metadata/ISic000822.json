@@ -3,11 +3,56 @@
   "uri": "ISic000822",
   "title": "I.Sicily inscription 000822",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492448",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101970",
+      "type": "EDCS"
+    },
+    {
+      "_": "140290",
+      "type": "PHI"
+    },
+    {
+      "_": "329568",
+      "type": "PHI"
+    },
+    {
+      "_": "329694",
+      "type": "PHI"
+    },
+    {
+      "_": "330110",
+      "type": "PHI"
+    },
+    {
+      "_": "333377",
+      "type": "PHI"
+    },
+    {
+      "_": "333763",
+      "type": "PHI"
+    },
+    {
+      "_": "333764",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication; building",
     "ana": "#function.dedication #function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "The text runs in a single line acros the vertical face of the highest step of the crepidoma at the east end of the temple of Apollo on Ortygia.",
   "objectType": {
     "_": "crepidoma",
     "ana": "#object.arch_element.crepidoma",
@@ -18,22 +63,53 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "200",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "800",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "200",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -550,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -48,9 +124,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Temple of Apollo, Ortygia",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ on stylobate",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
   "facsimile": {
     "url": "ISic000822_reconstruct_tiled.tif",
     "desc": "Photograph reconstructed from plates in Oliverio 1933 'L'iscrizione dell'Apollonion di Siracusa'"
@@ -58,6 +147,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Tempio di Apollo",
+    "role": "site"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

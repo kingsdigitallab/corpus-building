@@ -3,11 +3,31 @@
   "uri": "ISic000004",
   "title": "Inscription recording construction of a sphaeristrium by a father and son",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491500",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900323",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Substantial marble slab, damaged on all sides, and with the upper edge and upper front face chiselled (for re-use?) such that traces of large letters can be seen in several places but no more.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,19 +38,48 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 150,
   "places": [
@@ -46,9 +95,23 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "contrada Gelofia",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.617060, 14.740071"
+  },
+  "provenanceObserved": {
+    "_": "2017-07-21 (observed in courtyard)",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic000004_tiled.tif",
     "desc": "Photo J.Prag, 2022-05-23, courtesy Museo Archeologico Regionale Antonino Salinas"
@@ -56,6 +119,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "3504",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

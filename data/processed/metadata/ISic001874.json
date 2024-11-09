@@ -3,11 +3,29 @@
   "uri": "ISic001874",
   "title": "Pavement with opus signinum greeting",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/386.html"
   },
+  "support": "white tesserae set into a cocciopesto pavement in both maeander patterns and black-and-white tesserae rosettes, with the inscription set in a rounded tabula ansata form.",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -18,21 +36,47 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "inlaid",
-    "ana": "#execution.inlaid",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is placed inside a rounded tabula ansata.",
+      "rs": {
+        "_": "inlaid",
+        "ana": "#execution.inlaid",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -200,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Adranon",
@@ -46,9 +90,23 @@
     }
   ],
   "geo": [
-    37.66358,
-    14.83283
+    [
+      37.66358,
+      14.83283
+    ]
   ],
+  "provenanceFound": {
+    "_": "Recovered in 1980 as a result of illegal excavation on via Grosseto immediately to the south-east of  archaeologically investigated hellenistic housing in an insula on 'strada 1', proprieta Lazzaro-Di Guardia.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1980",
+    "geo": "37.6601158,14.8270854"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001874_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R. Wilson 2022-05-23."
@@ -56,6 +114,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Adrano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/21"
+  },
+  "idno": {
+    "_": "11602",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

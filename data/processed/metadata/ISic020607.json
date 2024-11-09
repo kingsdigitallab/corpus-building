@@ -3,12 +3,30 @@
   "uri": "ISic020607",
   "title": "ISic020607",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "production or ownership (?)",
     "ana": "#function.production-ownership",
     "cert": "low",
     "ref": "http://vocab.getty.edu/page/aat/300256090"
   },
+  "support": "Fragment of tile. The portion preserved belongs to the right edge of the tile, near the lower corner.",
   "objectType": {
     "_": "tile",
     "ana": "#object.tile",
@@ -19,21 +37,55 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched (before firing)",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "9.1",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "_": "13.8",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.5-4.3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched (before firing)",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription runs slightly below the protruding edge of the tile, on the front of it (the exposed part).",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Centuripae",
@@ -47,9 +99,21 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the settlement of Monte Ficarazza, an Iron Age village (Finocchito facies) in the area of Centuripe.",
+    "type": "found",
+    "geo": "37.62356111, 14.72153056"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020607_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +121,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Centuripe",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/002"
+  },
+  "idno": {
+    "_": "no inventory number",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

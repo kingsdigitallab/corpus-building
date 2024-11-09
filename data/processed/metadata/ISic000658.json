@@ -3,11 +3,31 @@
   "uri": "ISic000658",
   "title": "I.Sicily inscription 000658",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491378",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "3700331",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of a marble funerary plaque; lower left corner survives, including part of left and bottom margin.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +38,59 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "line 1 to 3",
-      "from": "line1",
-      "to": "line3",
-      "h": "25",
-      "unit": "mm"
+      "_": "16",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "17",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of three lines of Latin, with a rigid left margin.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Moderately regular letters, with extended I in line 3, and a B in form of lower case b with extended upper stroke (cursive?); use of crude interpuncts.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "line 1 to 3",
+        "from": "line1",
+        "to": "line3",
+        "h": "25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Leontini",
@@ -47,9 +104,22 @@
     }
   ],
   "geo": [
-    37.28556,
-    14.99737
+    [
+      37.28556,
+      14.99737
+    ]
   ],
+  "provenanceFound": {
+    "_": "Manganaro records as found by the late avv. Alfio Sgalambro 'in zona Catalicciardo, tenere di Lentini'; current location not noted.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1993"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000658_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +127,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lentini",
+  "repository": "private collection?",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

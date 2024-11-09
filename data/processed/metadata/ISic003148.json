@@ -3,11 +3,32 @@
   "uri": "ISic003148",
   "title": "I.Sicily inscription 003148",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645489",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800158",
+      "type": "EDCS"
+    },
+    {
+      "_": "329695",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Fluted base of a louterion, of Parian marble, with text incised on the upper surface, around a square hole for the insertion of upper part of the louterion.",
   "objectType": {
     "_": "louterion",
     "ana": "#object.vessel.louterion",
@@ -18,19 +39,50 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "62",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "47",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -475,
   "notAfter": -425,
   "places": [
@@ -46,9 +98,22 @@
     }
   ],
   "geo": [
-    37.07381,
-    14.24038
+    [
+      37.07381,
+      14.24038
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found shortly before 1900 in an ancient well found in the courtyard of 'casa Giuffre', central Gela.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1900"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003148_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/010"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

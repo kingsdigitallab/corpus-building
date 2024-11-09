@@ -3,11 +3,31 @@
   "uri": "ISic004343",
   "title": "I.Sicily inscription 004343",
   "status": "draft",
+  "editions": [
+    {
+      "_": "572408",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "19100115",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A plaque carved in the form of a tabula ansata",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,19 +38,49 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "tabula ansata",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -46,9 +96,22 @@
     }
   ],
   "geo": [
-    41.891775,
-    12.486136
+    [
+      41.891775,
+      12.486136
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Autopsy Prag 01-07-15",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2015-07-01",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic004343_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +119,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "239",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

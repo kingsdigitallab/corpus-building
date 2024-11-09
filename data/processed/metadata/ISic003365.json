@@ -3,12 +3,31 @@
   "uri": "ISic003365",
   "title": "I.Sicily inscription 003365",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644870",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html",
     "cert": "low"
   },
+  "support": "A large rectangular block of stone, intact above, and possibly below, but broken on right; perhaps only lightly damaged on left. Previously broken into three pieces, but reconnected. The front face is made up of three horizontal bands, of approximately equal height. The uppermost (18.5-19.5 cm high) is rough finished and uneven, and in places overhangs the middle field, while at other points is shallower; the middle band (17 cm high) is smooth finished and mostly proud of both the upper and lower field, and carries the inscription; the lower band (16.5 cm high) is recessed in relation to the middle band, smooth at the left and right ends, but heavily eroded across much of the width of the stone. The overall thickness of the stone is somewhat variable.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -21,22 +40,59 @@
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
     "cert": "low"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "90-100",
-      "unit": "mm"
+      "_": "52-53",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "191",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "13-14",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text extends across the full surviving width of the middle band of the front face.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Slightly unevenly spaced deeply v-cut letters. Delta has a slight apex; Mu has vertical first and last, middle strokes only descend half-way; Nu has lower right angle slightly above the line; omicron is full size; rhos has small closed, curved eye; sigma has prallel top and bottom strokes, with relatively shallow mid-strokes; phi has large rhomboid body, traversed by the vertical which is extended (120 mm); omega is open, rounded, with long horizontal tails, and is slightly smaller than the full line-height (75-85 mm).",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "90-100",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Euboia",
@@ -50,9 +106,22 @@
     }
   ],
   "geo": [
-    37.15674,
-    14.70555
+    [
+      37.15674,
+      14.70555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in February 1903 during building works on Via V. Cordova, in reuse in late antique tombs.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1903-02",
+    "geo": "37.1558337,14.7006416"
+  },
+  "provenanceObserved": {
+    "_": "Depositi, Mag C",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003365_tiled.tif",
     "desc": "Photo J. Prag 26.04.2022: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -60,6 +129,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "22729",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

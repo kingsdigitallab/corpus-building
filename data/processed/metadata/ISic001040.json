@@ -3,6 +3,35 @@
   "uri": "ISic001040",
   "title": "I.Sicily inscription 001040",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492667",
+      "type": "TM"
+    },
+    {
+      "_": "136341",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102193",
+      "type": "EDCS"
+    },
+    {
+      "_": "140518",
+      "type": "PHI"
+    },
+    {
+      "_": "175429",
+      "type": "PHI"
+    },
+    {
+      "_": "333747",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "epigram",
     "ana": "#function.epigram",
@@ -18,21 +47,53 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Acrae",
@@ -47,9 +108,22 @@
     }
   ],
   "geo": [
-    37.0578,
-    14.89346
+    [
+      37.0578,
+      14.89346
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1873 in the course of surface survey",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1873"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001040_tiled.tif",
     "desc": "Photo J. Prag, courtesy of  Museo Archeologico Regionale Antonino Salinas, Palermo"
@@ -57,6 +131,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "65724",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

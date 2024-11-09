@@ -3,6 +3,26 @@
   "uri": "ISic003014",
   "title": "I.Sicily inscription 003014",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645362",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70901005",
+      "type": "EDCS"
+    },
+    {
+      "_": "331257",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -18,21 +38,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Tyndaris",
@@ -46,9 +96,21 @@
     }
   ],
   "geo": [
-    38.14227,
-    15.04385
+    [
+      38.14227,
+      15.04385
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "2006.04",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic003014_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +118,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari",
+  "repository": {
+    "_": "Antiquarium di\n                            Tindari",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/052"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

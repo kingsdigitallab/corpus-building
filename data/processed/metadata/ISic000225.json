@@ -3,58 +3,117 @@
   "uri": "ISic000225",
   "title": "Funerary epitaph for a certain Dionysius and Cn. Terentius Rufus, by the wife of the latter, Vibia Ammia",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285233",
+      "type": "TM"
+    },
+    {
+      "_": "127460",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100143",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Block of dirty yellow stone. Break along top, obscuring line 1, and break along left side. Bottom and right sides complete. Modern plaster and paint on top break.",
   "material": {
     "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "irrecoverable, as only the bottom of two letters survive.",
-      "unit": "mm"
+      "_": "27",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "27-29",
-      "unit": "mm"
+      "_": "39",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "36-38 (first T=45 mm, last O=20mm)",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "35-38",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "24-29 (Ts 29-31mm)",
-      "unit": "mm"
+      "_": "14",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Five lines of Latin text, although first line is completely obscured. Likely only 1-2 letters are missing on the left side. Use of comma-shaped interpuncts in line 1 and the beginning of line 2, becoming more irregular after the deeply incised, perfectly rounded, dot-shaped interpunct before 'Rufo' at the end of line 2.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are deeply carved, with small serifs. The letters are incredibly regular, in shape and spacing, although 'T's are rendered tall, but not consistently. The end of line 3 has a small 'o', presumably to fit the final word 'Rufo' onto the stone. Use of incised guidelines is visible at both the top and bottom of each line. Guidelines are largely followed, except for the tall 'T's and the occasional seriffed foot.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "irrecoverable, as only the bottom of two letters survive.",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "27-29",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "36-38 (first T=45 mm, last O=20mm)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "35-38",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "24-29 (Ts 29-31mm)",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -70,9 +129,23 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found outside the Palermo Gate, \"stuck in a small wall of a modern nursery\", from which Palmieri had it placed \"in the House of the Civic Magistrate\". Afterwards transferred to Museo Civio Baldassare Romano.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 4",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000225_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -80,6 +153,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

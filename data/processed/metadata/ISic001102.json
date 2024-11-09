@@ -3,6 +3,30 @@
   "uri": "ISic001102",
   "title": "I.Sicily inscription 001102",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284825",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102260",
+      "type": "EDCS"
+    },
+    {
+      "_": "140586",
+      "type": "PHI"
+    },
+    {
+      "_": "331120",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -18,21 +42,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
+  "precision": "medium",
   "places": [
     {
       "_": "Drepanum",
@@ -46,9 +100,22 @@
     }
   ],
   "geo": [
-    38.0176,
-    12.53617
+    [
+      38.0176,
+      12.53617
+    ]
   ],
+  "provenanceFound": {
+    "_": "Said to come from the Chiesa di San Andrea Apostolo, Bonagia",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "38.0490478,12.6126099"
+  },
+  "provenanceObserved": {
+    "_": "See December 2018 (Metcalfe)",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001102_tiled.tif",
     "desc": "Photo M. Metcalfe"
@@ -56,6 +123,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Erice",
+  "repository": {
+    "_": "Biblioteca Civica \"Vito Carvini\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/168"
+  },
+  "idno": {
+    "_": "212",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

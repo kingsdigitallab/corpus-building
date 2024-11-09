@@ -3,11 +3,32 @@
   "uri": "ISic000137",
   "title": "Funerary inscription for Lucius Aurelius Negro",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284844",
+      "type": "TM"
+    },
+    {
+      "_": "111018",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100081",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Limestone plaque, preserving upper and left edges (and probably upper right corner also), but broken lower left, right and below. The reverse is very uneven, with a projection in the centre.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,27 +39,61 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "61-66",
-      "unit": "mm"
+      "_": "19.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "37",
-      "unit": "mm"
+      "_": "30",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "4.6-7.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Latin, centred on the stone.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "61-66",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "37",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -54,9 +109,23 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Piazza Duomo in 1879 ",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1879",
+    "geo": "37.9871871,13.6960213"
+  },
+  "provenanceObserved": {
+    "_": "Alex Antoniou 2023-07-07",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000137_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana: photo J. Prag 07-07-2023"
@@ -64,6 +133,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "93",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

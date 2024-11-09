@@ -3,11 +3,31 @@
   "uri": "ISic001666",
   "title": "I.Sicily inscription 003338",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492382",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "34700070",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A white limestone ash chest (no lid preserved), plain on all sides except the front, which has an incised border and incised diagonals crossing the face (and which appear to precede the inscribed letters which they traverse).",
   "objectType": {
     "_": "ash chest",
     "ana": "#object.ash_chest",
@@ -18,21 +38,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "25",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "43",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "41",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Latin text, aligned to the left margin over two lines, with guidelines (no interlinear spacing)",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat irregularly spaced tall letters, with thin strokes but pronounced terminations to the strokes.  A has a detached downward descending middle-bar; E is tall thin, with shorter top bar; G is formed as a C with the tail a second short curving stroke; P is closed; R has small eye, slightly open; S leans forward slightly. The use of interpuncts is erractic and seemingly not linked to sense, with a triangular punct after the initial A and at the end of line 2; a large reversed comma-shape midline after the R of line 1; and a smaller comma-shape mid-line between V and R in line 2.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "0",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -46,9 +102,20 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Orsi in 1889, among material of uncertain provenance located in the museum stores and not recorded in CIL",
+    "type": "found",
+    "subtype": "first-recorded"
+  },
+  "provenanceObserved": {
+    "_": "Entry corridor by Magazzino B",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001666_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -56,6 +123,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "50198",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

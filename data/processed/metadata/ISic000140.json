@@ -3,11 +3,32 @@
   "uri": "ISic000140",
   "title": "Funerary inscription for a woman (Caninia?)",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175705",
+      "type": "TM"
+    },
+    {
+      "_": "077927",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "8900405",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Two joining fragments of an offwhite marble plaque, preserving the left edge, and the upper left and lower left corners, but broken on the right; a small piece is missing from the left side, but the start of each line is preserved. The rear is finished smooth, but cut back along the upper edge, to a height of 22mm.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,43 +39,81 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "incomplete",
-      "unit": "mm"
+      "_": "29",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "35-37",
-      "unit": "mm"
+      "_": "13",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "36",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "33-38",
-      "unit": "mm"
+      "_": "2.5-2.9 (top to bottom)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin letters, the first line centred, lines 2-4 maintaining a consistent left margin; vacats at top and bottom of the stone. Double guidelines are present above and below lines 2 and 3, but not closely observed (contra Bivona), and seemingly not present for lines 1 and 4.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Large neatly carved letters with simple serifs; a very neat hedera at the start of line 1.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "incomplete",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "35-37",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "36",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "33-38",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 50,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -69,9 +128,22 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "From Termini Imerese, and first seen in the Museo Civico by Bivona in 1974, but exact provenance not recorded.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1974"
+  },
+  "provenanceObserved": {
+    "_": "Alex Antoniou 2023-07-07 in the storeroom of the Museo Civico, Termini Imerese.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000140_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07."
@@ -79,6 +151,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "23ab",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

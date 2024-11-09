@@ -3,6 +3,30 @@
   "uri": "ISic001231",
   "title": "I.Sicily inscription 001231",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492836",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "38200020",
+      "type": "EDCS"
+    },
+    {
+      "_": "140716",
+      "type": "PHI"
+    },
+    {
+      "_": "313661",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,50 +42,87 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "45",
-      "unit": "mm"
+      "_": "30.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "35",
-      "unit": "mm"
+      "_": "36.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Lines 3-4",
-      "from": "line3",
-      "to": "line4",
-      "h": "30",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "23",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 6",
-      "from": "line6",
-      "to": "line6",
-      "h": "15-20",
-      "unit": "mm"
+      "_": "5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "35",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "23",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 6",
+        "from": "line6",
+        "to": "line6",
+        "h": "15-20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -75,9 +136,22 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Largo di Chiesa di San Giovanni Gerosolimitano Di Malta\n                        ",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "38.199072, 15.556499"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001231_tiled.tif",
     "desc": "Photo M. Metcalfe, 2016-12-11, courtesy Museo regionale interdisciplinare di Messina"
@@ -85,6 +159,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A3556",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

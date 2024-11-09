@@ -3,11 +3,36 @@
   "uri": "ISic003010",
   "title": "I.Sicily inscription 003010",
   "status": "edited",
+  "editions": [
+    {
+      "_": "645358",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101975",
+      "type": "EDCS"
+    },
+    {
+      "_": "140295",
+      "type": "PHI"
+    },
+    {
+      "_": "331256",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A block of compact limestone (colour not reported), described as 'pietra di Taormina'. Intact above, to right and below (although with some chipping to the edges, and with the upper right corner of the face lost; broken approximately in half (?) on the left side. The measurements reported by Orsi (W 29, H 32, D 26) differ slightly from those reported by Cavallari and repeated by Manganaro.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,21 +43,58 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "28",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "23",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Greek letters; the text appears to be centred on the stone, with slight vacat below.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": ". Based upon the single published photograph: regularly and neatly carved fine lettters without serfis or significant terminations. Alpha has straight bar; Mu has vertical first and last, with midstrokes descending halfway; omicron is small and mid-line; sigma has diverging top and bottom strokes, the mid-strokes meeting at half width; omega is nearly full height, slightly ovoid, open with short horizontal tails. No editor records the size of the letters.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -46,9 +108,23 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in November 1886, during the demolition of 16th cent. fortifications at the entrance to Ortygia.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1886-11",
+    "geo": "37.064543, 15.291693"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003010_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +132,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "6288",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

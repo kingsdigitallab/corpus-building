@@ -3,11 +3,37 @@
   "uri": "ISic030088",
   "title": "ISic030088",
   "status": "draft",
+  "editions": [
+    {
+      "_": "699106",
+      "type": "TM"
+    },
+    {
+      "_": "155792",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900060",
+      "type": "EDCS"
+    },
+    {
+      "_": "70900069",
+      "type": "EDCS"
+    },
+    {
+      "_": "340317",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "Rectangular lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,21 +44,51 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "6",
+      "unit": "cm",
+      "atMost": "6",
+      "dimension": "height"
+    },
+    {
+      "_": "2.5",
+      "unit": "cm",
+      "atMost": "2.5",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "Right to left writing.",
+      "damage": {
+        "ana": "#text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -470,
   "notAfter": -430,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Selinus",
@@ -46,9 +102,22 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the deposits of Selinunte.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.58337, 12.82522"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030088_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +125,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonio Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/isicily/museums/064"
+  },
+  "idno": {
+    "_": "42571",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

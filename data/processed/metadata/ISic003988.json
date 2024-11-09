@@ -3,11 +3,41 @@
   "uri": "ISic003988",
   "title": "I.Sicily inscription 003988",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "334476",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": [
+    "Large stele with poorly polished surfaces, rougher on the back; missing corner on the left",
+    "The slab bears two distinct inscriptions on the front, relating to two different phases of use: the first (a) placed in the upper part, the second (b) on a projecting band at the base of the same face. Here is the text of (a)",
+    "The surface of the upper part of the front face shows clear traces of gradine work and seems to have been lowered with respect to the original surface, probably to erase an older text and to engrave the inscription (a). This could therefore be attributed to the reused of the slab as a funerary stele. The inscription (b) should instead belong to a first use of the stone; the position at the lower end of the forehead leads us to believe that the slab was originally not a stele – in which case the base would have been buried – but a slab covering an unidentifiable struture (funerary monument? enclosure?)",
+    {
+      "_": "On same support as ",
+      "ref": {
+        "_": "ISic004283",
+        "sameAs": "ISic004283"
+      }
+    }
+  ],
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,20 +48,54 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "35-70",
-      "unit": "mm"
+      "_": "108",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "42.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "14",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "35-70",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -47,9 +111,23 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered in 1971 during the excavation of trench XXXI, face O (Bishop's property). It was reused in masonry tomb no. 1225 (dated to the 2nd century CE)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1971",
+    "geo": "38.467130, 14.953871"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003988_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +135,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": {
+    "_": "Museo Archeologico Regionale Eoliano \"Luigi Bernabò Brea\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/048"
+  },
+  "idno": {
+    "_": "11632",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

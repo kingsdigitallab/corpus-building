@@ -3,11 +3,29 @@
   "uri": "ISic020604",
   "title": "ISic020604",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Two contiguous fragments of tile.",
   "objectType": {
     "_": "tile",
     "ana": "#object.tile",
@@ -18,22 +36,65 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "scratched (before firing)",
-    "type": "graffito",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "7",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched (before firing)",
+        "type": "graffito",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription runs on the two contiguous fragments: on the first fragment one letter and part of a second one is legible;\n                                    on the second one only part of a letter is visible.",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "7",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -400,
+  "evidence": "archaeological-context material-context lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Mendolito",
@@ -42,9 +103,22 @@
     }
   ],
   "geo": [
-    37.69904,
-    14.808181
+    [
+      37.69904,
+      14.808181
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contrada Ardichella, North of the Mendolito settlement area.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.699040, 14.808181"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020604_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +126,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Adrano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/021"
+  },
+  "idno": {
+    "_": "434",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

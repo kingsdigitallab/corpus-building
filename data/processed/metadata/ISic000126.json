@@ -3,11 +3,32 @@
   "uri": "ISic000126",
   "title": "Funerary epitaph for P. Alfesius Salvus",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285264",
+      "type": "TM"
+    },
+    {
+      "_": "127480",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100076",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectangular grey plaque, very well squared, all sides original. Rear is flat. Traces of modern red paint. There is a thin horizontal crack in the upper part of the stone.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,43 +39,81 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "29-33",
-      "unit": "mm"
+      "_": "23.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "26-32",
-      "unit": "mm"
+      "_": "28.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "42-47",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "40-42",
-      "unit": "mm"
+      "_": "8.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin text. First two lines are roughly centred, but final two are right-aligned on stone leaving a large vacat on left.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Carving of letters is rough, getting rougher and more inconsistent. Text is angular and haphazard, more pronounced in line 4. Letter heights and depths are inconsistent. Use of serifs and the apex on the 'A' in line 4 is particularly pronounced. Triangular interpuncts of different shapes: lines 1-2, interpuncts are outline triangles, line 4, interpuncts are hollowed out.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "29-33",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "26-32",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "42-47",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "40-42",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": 50,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -68,9 +127,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Termini Imerese outside the porta di Caccamo (= Porta di Girgenti), in a burial ground.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.9834352,13.6923962"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000126_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05."
@@ -78,6 +152,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "105",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

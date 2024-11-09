@@ -3,11 +3,29 @@
   "uri": "ISic001830",
   "title": "Building inscription of Martinianos",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/.html"
   },
+  "support": "9 fragments of a white marble plaque. The fragments consist of two joining sets, with an unquantifiable gap between them. Two fragments join to preserve part of the left margin; seven fragments join to preserve part of the upper and right margin, including the upper right corner; the lower margin is not preserved. The total width of the preserved fragments is 86cm, therefore the original total width was greater; the maximum preserved height is 35cm (so the total height was greater); thickness is 3 cm.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +36,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "110",
-      "unit": "mm"
+      "_": "35 (preserved minimum)",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "86 (preserved minimum)",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Traces of three lines of ancient Greek are preserved, with guidelines above and below; upper, left and right margins are partially preserved. The text appears to maintain a consistent margin on the left, but not on the right.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Tall, regular, narrow letters, v-cut, with small serifs on the termination of strokes. Small deep triangular interpuncts. Alpha has broken bar; epsilon tall, narrow, with equal short horizontals; theta and omicron are rhomboid; mu has vertical first and last, with the diagonals starting below the top and only desencing to the mid-point; nu is similar; rho has small curved, closed loop; sigma is lunate but rectilinear, with very short horizontals.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "110",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "20",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 352,
   "notAfter": 358,
+  "evidence": "prosopography",
   "places": [
     {
       "_": "Agrigentum",
@@ -47,9 +101,23 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "The principal fragment was found during excavation of a lime kiln in room d1 of casa IIC of the quartiere ellenistico romano of Agrigento; it was subsequently reconnected with fragments found in the same approximate location in the 1950s.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "2013",
+    "geo": "37.297649, 13.591579"
+  },
+  "provenanceObserved": {
+    "_": "no",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001830_tiled.tif",
     "desc": ""
@@ -57,6 +125,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Parco Archeologico Valle dei Templi",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/200"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

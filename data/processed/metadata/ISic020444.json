@@ -3,11 +3,29 @@
   "uri": "ISic020444",
   "title": "ISic020444",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "artist inscription",
     "ana": "#function.signature",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/105.html"
   },
+  "support": "Rim sherd of a Corinthian plate of local manufacture.",
   "objectType": {
     "_": "plate",
     "ana": "#object.vessel.plate",
@@ -18,21 +36,45 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -625,
   "notAfter": -600,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -45,9 +87,21 @@
     }
   ],
   "geo": [
-    37.2038011298,
-    15.1822845784
+    [
+      37.2038011298,
+      15.1822845784
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations in Megara Iblea.",
+    "type": "found",
+    "geo": "37.2038011298, 15.1822845784"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020444_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +109,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/97"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

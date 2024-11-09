@@ -3,6 +3,25 @@
   "uri": "ISic002994",
   "title": "I.Sicily inscription 002994",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645344",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900784",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -13,19 +32,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -41,9 +89,26 @@
     }
   ],
   "geo": [
-    37.60182,
-    14.90788
+    [
+      37.60182,
+      14.90788
+    ]
   ],
+  "provenanceFound": {
+    "_": "'nel casino dei Signori Ardizzone' (cda Civita is at 37.60182,\n                            14.90788; Casino Ardizzone is at 37.587167, 14.924129",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic002994_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +116,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

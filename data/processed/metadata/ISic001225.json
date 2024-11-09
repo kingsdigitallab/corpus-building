@@ -3,11 +3,36 @@
   "uri": "ISic001225",
   "title": "I.Sicily inscription 001225",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492831",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101591",
+      "type": "EDCS"
+    },
+    {
+      "_": "140711",
+      "type": "PHI"
+    },
+    {
+      "_": "334479",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Small rectangular slab, with irregular upper and lower margins, broken on the right and left sides",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,27 +43,63 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "12-14",
-      "unit": "mm"
+      "_": "22.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Lines 2-7",
-      "from": "line2",
-      "to": "line7",
-      "h": "11-13",
-      "unit": "mm"
+      "_": "40",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.1",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Phi: 22-24mm",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "12-14",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 2-7",
+        "from": "line2",
+        "to": "line7",
+        "h": "11-13",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -54,9 +115,20 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Lipari, but the exact plce, circumstances and date of discovery are unknown. Taken to the Archaeological Museum of Palermo",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001225_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,6 +136,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": {
+    "_": "Museo Archeologico Regionale Eoliano \"Luigi Bernabò Brea\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/048"
+  },
+  "idno": {
+    "_": "12339",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

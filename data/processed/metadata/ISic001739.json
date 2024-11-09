@@ -3,11 +3,29 @@
   "uri": "ISic001739",
   "title": "I.Sicily inscription 001739",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Small marble tablet with crude letters retaining paint.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,25 +36,60 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "12",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication",
-      "ana": "#execution.rubrication"
-    }
-  ],
-  "letterHeight": [
+      "_": "20",
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication",
+          "ana": "#execution.rubrication"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters with rubrication.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 275,
   "notAfter": 400,
   "places": [
@@ -52,9 +105,21 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Vigna Cassia",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001739_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -62,6 +127,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "13003",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

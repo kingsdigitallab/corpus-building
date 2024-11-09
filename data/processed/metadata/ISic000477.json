@@ -3,6 +3,25 @@
   "uri": "ISic000477",
   "title": "Epitaph for Placida",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491702",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900537",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,19 +37,52 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "45",
+      "unit": "cm",
+      "precision": "low",
+      "dimension": "height"
+    },
+    {
+      "_": "50",
+      "unit": "cm",
+      "precision": "low",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -41,9 +93,15 @@
     }
   ],
   "geo": [
-    37.67894,
-    13.60346
+    [
+      37.67894,
+      13.60346
+    ]
   ],
+  "provenanceObserved": {
+    "_": "Known since the 17th century; previously in the church of S. Maria\n                            dell'Udienza on Colle S. Vitale.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic000477_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +109,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Castronuovo di Sicilia",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

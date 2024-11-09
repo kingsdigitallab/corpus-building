@@ -3,11 +3,30 @@
   "uri": "ISic003426",
   "title": "Fragmentary monumental Greek inscription",
   "status": "edited",
+  "editions": [
+    {
+      "_": "644821",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A large rectangular block of the local limestone, similar to that used in the construction of the fortress generally. the front face is mostly preserved, if rather eroded. The right edge appears clearly cut and probably original; the left edge is cut back from the front face over a length of c.20cm, but the original left end of the block is preserved towards the rear. The rear of the block is intact, except at the right corner.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,22 +37,52 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "175-200",
-      "unit": "mm"
+      "_": "44",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "143",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "63",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Large letters centrally placed on the stone in a single line. The text is incomplete at start and finish.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Regularly spaced letters of even height, neatly cut (a broad v-cut) with minimal terminations to the strokes. Alpha has straight bar; Kappa has short arms, centrally placed; Omicron is very small (105 mm) and midline; sigma has horizontal top and bottom strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "175-200",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -47,9 +96,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found c.1961 below the Euryelos fortifications, in the 'Dionysian walls', from the slope below the\n                            fortifications by the city gate crossed by the modern 'via Epipole', in the direction of the castello Eurialo",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1961"
+  },
+  "provenanceObserved": {
+    "_": "Currently located beside the path between ticket office and public toilets near the entrance to the site",
+    "type": "observed",
+    "when": "2015-03-28"
+  },
   "facsimile": {
     "url": "ISic003426_tiled.tif",
     "desc": "Photo J. Prag, 2015"
@@ -57,6 +119,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Area archeologica Castello Eurialo",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/191"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,29 @@
   "uri": "ISic020545",
   "title": "ISic020545",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "gift, private document",
     "ana": "#function.dedication",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/359.html"
   },
+  "support": "Fragment of rim and wall of a black-glazed krater (Laconian type).",
   "objectType": {
     "_": "krater",
     "ana": "#object.vessel.krater",
@@ -18,21 +36,47 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the wall of the vessel, right below the rim.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -500,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Gela",
@@ -46,9 +90,22 @@
     }
   ],
   "geo": [
-    37.0630925,
-    14.2584705
+    [
+      37.0630925,
+      14.2584705
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Gela.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.0630925, 14.2584705"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020545_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +113,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/10"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

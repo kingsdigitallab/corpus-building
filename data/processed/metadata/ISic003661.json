@@ -3,6 +3,24 @@
   "uri": "ISic003661",
   "title": "I.Sicily inscription 003661",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "_": "108287",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -17,21 +35,54 @@
     "_": "Plaster on stone",
     "ana": "#material.plaster"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "25.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "20",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Lilybaeum",
@@ -45,9 +96,26 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavation 1974, via del Fante, proprieta Rallo Lidia",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1974",
+    "geo": {
+      "_": "37.806588, 12.439299",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003661_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +123,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

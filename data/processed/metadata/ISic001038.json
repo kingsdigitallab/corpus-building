@@ -3,11 +3,40 @@
   "uri": "ISic001038",
   "title": "Inscription listing allotments",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492665",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "71000452",
+      "type": "EDCS"
+    },
+    {
+      "_": "140516",
+      "type": "PHI"
+    },
+    {
+      "_": "175411",
+      "type": "PHI"
+    },
+    {
+      "_": "337360",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "cadastral",
     "ana": "#function.cadastral",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/48.html"
   },
+  "support": "A stele of pale white local limestone, broken into three blocks that have been mounted on a modern base and reconnected with modern mortar. There are gaps in the text between each block, and it seems certain that more was preserved at the breaks when the stone was transcribed by Judica than is preserved today. Block 1 (the top block) is intact at the top, front and on both sides, but is broken or cut back at the rear (width 39.5 cm, max height 41.2 cm, max depth 29.5 cm). There is a deep rectangular hole (4x10cm and 10cm deep) at the middle rear of the top surface, perhaps for a clamp? The top is finished, but not smooth. The Sides and front are finished smooth. The front edges on left and right sides are cut back at an angle. Block 2 (middle block) is intact at the front and sides, but sawn straight at the back, proabbly not original; the lower edge is uneven and broken (width 40cm, max height 28 cm, depth 34.2 cm). Block 3 (lowest) is intact on the fornt and sides, broken across the top, at the rear and below (width 41 cm, max Height 46.5 cm, max depth 27.5 cm)",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,22 +47,59 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-49",
-      "from": "line1",
-      "to": "line49",
-      "h": "8-19 (but phi up to 27)",
-      "unit": "mm"
+      "_": "at least 115.7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "39.5-41",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "at least 34.2",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is laid out in a single column, with a consistent left margin, with every second line indented by c.1 letter; the right margin is irregular.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are plainly cut with minimal serifs and a square module. Alpha has straight bar; beta has equal closed loops; epsilon sometimes has equal length strokes, sometimes shorter middle bar; theta is full size, slightly elliptical, with plain cross-bar; kappa has full length arms; mu has vertical first and last, with middle strokes only half-descending; pi has overlapping horizontal, equal length vertical strokes; rho has closed eye of moderate size; sigma has horizontal upper and lower strokes; phi has an ovoid eye of varying size and extended vertical; omega varies between teardrop, rhomboid and small circle, always closed with horizontal baseline.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-49",
+        "from": "line1",
+        "to": "line49",
+        "h": "8-19 (but phi up to 27)",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Acrae",
@@ -47,9 +113,22 @@
     }
   ],
   "geo": [
-    37.0578,
-    14.89346
+    [
+      37.0578,
+      14.89346
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "2015.01.17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic001038_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-10."
@@ -57,6 +136,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palazzolo Acreide",
+  "repository": {
+    "_": "Museo Archeologico Gabriele Judica",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/102"
+  },
+  "idno": {
+    "_": "2236",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

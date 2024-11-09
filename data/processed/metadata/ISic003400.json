@@ -3,11 +3,30 @@
   "uri": "ISic003400",
   "title": "I.Sicily inscription 003400",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645618",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "A partially surviving pavement text, originally of inlaid metal letters, but now with only the letters carved in the stone which would have hosted the metal letters surviving; parts of the two rows of text survive in the pavement of the decumanus.",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -18,19 +37,50 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "Litterae alveolatae",
-    "ana": "#execution.alveolatae",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/36"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "Litterae alveolatae",
+        "ana": "#execution.alveolatae",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/36"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -50,
   "notAfter": -1,
   "places": [
@@ -46,9 +96,22 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavation of the 'decumanus maximus' across multiple excavation seasons in 2002, 2004, 2008",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.802821, 12.429325"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003400_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +119,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Parco archeologico di Lilibeo-Marsala",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/199"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

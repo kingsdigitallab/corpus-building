@@ -3,11 +3,32 @@
   "uri": "ISic000165",
   "title": "Funerary inscription for Lucius Cornificius Philargyrus and Cornificia Nicarin",
   "status": "edited",
+  "editions": [
+    {
+      "_": "284853",
+      "type": "TM"
+    },
+    {
+      "_": "111310",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900651",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Right side of a grey stone marble plaque, squared but irregularly broken across the left side; lower right corner preserved, but most of the lower edge is lost (The stone was however apparently intact when first discovered). Large chip missing in top right. Rear flat. Sides polished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,43 +39,81 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "48",
-      "unit": "mm"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "39",
-      "unit": "mm"
+      "_": "23.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "45-47",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "Unmeasurable on basis of a single broken letter",
-      "unit": "mm"
+      "_": "3.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin text, all incomplete due to break on left side. Text contained within faint guidelines top and bottom of each line, still visible on stone.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Text neatly and carefully incised. Simple serifs. Lines extremely straight and letters all upright. Large whorl at the end of 'G' in line 2. 'Y' in line 2 not symmetrically curved. 'V's in line 1 and 2 not symmetrical.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "48",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "39",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "45-47",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "Unmeasurable on basis of a single broken letter",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 300,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -68,9 +127,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found outside Termini Imerese near the Barratina stream during the excavation for the foundations of the mill owned by Pusateri, well outside the town. The plaque still lay intact in the garden adjacent to the church of S. Giacomo in 1974, until it was transferred to the Museo Civico Baldassare Romano in 1994.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1974"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 5, shelf 4.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-04",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000165_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-08"
@@ -78,6 +152,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

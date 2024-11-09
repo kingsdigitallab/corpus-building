@@ -3,11 +3,29 @@
   "uri": "ISic001875",
   "title": "Pavement with opus signinum greeting",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/386.html"
   },
+  "support": "white tesserae set into a cocciopesto pavement, with maeander border surrounding a floor area with regular white inlay; at the northern edge, the remains of an inscription set in a rounded tabula ansata form.",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -18,21 +36,47 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "inlaid",
-    "ana": "#execution.inlaid",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is placed inside a rounded tabula ansata; only the right hand end of the text/tabula is preserved.",
+      "rs": {
+        "_": "inlaid",
+        "ana": "#execution.inlaid",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -180,
   "notAfter": -100,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Hybla Gereatis",
@@ -46,13 +90,29 @@
     }
   ],
   "geo": [
-    37.56675,
-    14.90254
+    [
+      37.56675,
+      14.90254
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated (removed and consolidated) in 2004 in excavation imediately to the north of the chiesa di Cristo al Monte on the acropolis of Paternò, found above three brick arches, and the strata below included amphora stamps datable to 220-180 BCE, providing a terminus post quem",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "2004",
+    "geo": "37.5645621,14.893223"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Paterno",
+  "repository": "",
+  "idno": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,32 @@
   "uri": "ISic003530",
   "title": "I.Sicily inscription 003530",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493862",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "38200016",
+      "type": "EDCS"
+    },
+    {
+      "_": "313652",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Marble plaque, broken into fragments, of which five survive, which join. The upper and lower left corners are lost, but a small part of the left margin is preserved. A small part of the right margin and the lower right corner also lost.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +39,67 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "15",
-      "unit": "mm"
+      "_": "17.7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "21",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text is centred, with a straight left margin and an irregular right margin.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "V-cut lunate Greek letters, slightly irregular: lunate sigma and epsilon, cursive omega, regular mu with short middle strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "15",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 5",
+        "from": "line2",
+        "to": "line5",
+        "h": "15",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -47,9 +113,21 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Necropolis at the Orti della Maddalena",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003530_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +135,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A4950",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

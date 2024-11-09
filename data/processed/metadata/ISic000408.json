@@ -3,11 +3,31 @@
   "uri": "ISic000408",
   "title": "Monumental Latin fragment",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491619",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900450",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Large triangular shaped fragment of a thin marble plaque. Broken on all sides, smooth on the reverse.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,34 +38,79 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "incomplete",
-      "unit": "mm"
+      "_": "29.1",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "58-63",
-      "unit": "mm"
+      "_": "30.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "50-53",
-      "unit": "mm"
+      "_": "2.1",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Traces of three lines of Latin letters, with a vacat below.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Elegant v-cut letters with large, square modules and pronounced serifs. Triangular interpuncts",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "incomplete",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "58-63",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "50-53",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "38",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "43",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
   "places": [
@@ -61,9 +126,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "The piece is one of several first reported by Schubring 1865 as coming from the Roman site at Contrada Bufardeci, traditionally known as the , and the museum inventory record reads 'Bagno Romano', which refers to the same place. Schubring's autopsy notes from 1865 also attribute this piece to 'Bufardeci'. However, at least one of the pieces so attributed by Schubring is originally from Rome, so this attribution cannot be considered entirely certain. CIL appears to have a typo, describing the provenance as 'Rufardeci'.",
+    "type": "found",
+    "subtype": "discovered",
+    "placeName": {
+      "_": "'Roman gymnasium'",
+      "ref": "https://pleiades.stoa.org/places/649857187"
+    },
+    "geo": "37.0673281, 15.2804126"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2014-09-10, MARPO, Magazzino B, cassette 7",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic000408_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10."
@@ -71,6 +154,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "253",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

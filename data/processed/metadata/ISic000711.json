@@ -3,6 +3,25 @@
   "uri": "ISic000711",
   "title": "I.Sicily inscription 000711",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493947",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "32701134",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary; honorific",
     "ana": "#function.funerary #function.honorific",
@@ -13,21 +32,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line\n                                    1\n                                ",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line\n                                    1\n                                ",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to\n                                    2\n                                ",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 300,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Catina",
@@ -41,9 +90,22 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the necropolis found c.1960 on via Dottor Consoli / via Androne ",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "2015.20.10",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic000711_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +113,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

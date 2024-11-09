@@ -3,11 +3,29 @@
   "uri": "ISic004403",
   "title": "I.Sicily inscription 004403",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "A somewhat damaged block with triglyphs on four sides, with a single line of text running below the triglyphs on one side",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -18,19 +36,53 @@
     "ana": "#material.stone.limestone_tufa",
     "ref": "http://www.eagle-network.eu/voc/material/lod/64.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "46",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "65",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "23",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "single incomplete line of Greek letters immediately below the triglyphs",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "it appears from the photograph that the text employs standard four-bar sigma",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -46,9 +98,22 @@
     }
   ],
   "geo": [
-    37.82199,
-    12.80506
+    [
+      37.82199,
+      12.80506
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found by Pace in re-use in the early Christian basilica outside Salemi",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.833019, 12.808066"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004403_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Salemi",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

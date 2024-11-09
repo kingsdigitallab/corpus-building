@@ -3,11 +3,32 @@
   "uri": "ISic003114",
   "title": "I.Sicily inscription 003114",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284790",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900329",
+      "type": "EDCS"
+    },
+    {
+      "_": "331222",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A funerary stele in the form of a fluted column supporting a rectangular block bearing the inscribed field (the block is 26cm high by 57 cm wide)",
   "objectType": {
     "_": "column",
     "ana": "#object.column",
@@ -18,27 +39,61 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "75",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
-    }
-  ],
-  "letterHeight": [
+      "_": "37",
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Greek text, engraved in stucco and painted in red, across the full width of the rectangular block, with a vacat below.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -150,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Lilybaeum",
@@ -52,9 +107,19 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003114_tiled.tif",
     "desc": "Photo R.J.A. Wilson"
@@ -62,6 +127,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,6 +3,26 @@
   "uri": "ISic001365",
   "title": "I.Sicily inscription 001365",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492979",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101745",
+      "type": "EDCS"
+    },
+    {
+      "_": "140870",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,19 +38,49 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "lunate sigma and epsilon",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 600,
   "places": [
@@ -46,9 +96,26 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1740 in the area of piazza Stesicoro",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1740",
+    "geo": {
+      "_": "37.507432, 15.085686",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Described by Le Blant 1856 as in the possession of 'M. l'abbé Lefebvre, curé d'Attichy, pres de Pierrefonds; elle provient du cabinet de M. Provost,  de Bresles (Oise.)'; IG notes at one point in the collection of M. Leon Dufourny (cf. ISic000394).",
+    "type": "observed",
+    "subtype": "reported"
+  },
   "facsimile": {
     "url": "ISic001365_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +123,7 @@
   "country": "France",
   "region": "Oise",
   "settlement": "Attichy",
+  "repository": "private collection?",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

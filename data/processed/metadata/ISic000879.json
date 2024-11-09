@@ -3,11 +3,32 @@
   "uri": "ISic000879",
   "title": "Epitaph for Agathe",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492509",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102036",
+      "type": "EDCS"
+    },
+    {
+      "_": "140360",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A marble plaque, intact on the left margin and above (although with an uneven edge), broken on the right and below; the text however appears to be complete and to follow the shape of the stone on the right margin.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,27 +39,63 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "18",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
-    }
-  ],
-  "letterHeight": [
+      "_": "15",
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text appears to observes the shape of the stone, with a fixed left margin and the lines fitting to the line of breakage on the right, and a staurogram centrally filling the space below. The letters retain traces of red paint throughout.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Slightly irregular but neatly carved plain letters without serifs. Alpha has straight bar; Epsilon is rectilinear, with mostly equal length bars; Theta is large and voice, with a full width horizontal bar; Kappa generally has short arms; Lamda has a slight extension at the top; Mu (in ligature) has vertical virst and last, with diagonals extending only half-way down;' rho has small head, closed; sigma is lunate but rectilinear; omega is lunate. Interpuncts are used around numerals.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 300,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -52,9 +109,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the , seemingly from the explorations of c.1874 by Cavallari.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1875",
+    "placeName": {
+      "_": "catacomb of S. Giovanni",
+      "ref": "https://pleiades.stoa.org/places/560149180"
+    },
+    "geo": "37.0767995, 15.2848558"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000879_tiled.tif",
     "desc": "Photo Museo Arch. Reg. P. Orsi (2012), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -62,6 +137,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "28",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

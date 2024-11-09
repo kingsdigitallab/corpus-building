@@ -3,10 +3,35 @@
   "uri": "ISic003677",
   "title": "I.Sicily inscription 003677",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
+  "support": {
+    "_": "Fragment of a plaque of Greek marble (so Carettoni). Carettoni suggests that may be part of same support as ",
+    "ref": {
+      "_": "ISic003675",
+      "sameAs": "ISic003675.xml",
+      "cert": "low"
+    }
   },
   "objectType": {
     "_": "plaque",
@@ -18,21 +43,53 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "traces of a single line of Latin letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Halaesa",
@@ -47,9 +104,27 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "From excavations between 1952 and 1956 along the base of the 'east portico', the so-called 'muro a bugnato', primarily on the east side.",
+    "type": "found",
+    "subtype": "discovered",
+    "from": "1952",
+    "to": "1956",
+    "geo": {
+      "_": "37.998169, 14.263039",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003677_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +132,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
+  "repository": {
+    "_": "Antiquarium e sito archeologico di Halaesa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/053"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

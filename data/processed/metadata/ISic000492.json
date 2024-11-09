@@ -3,6 +3,25 @@
   "uri": "ISic000492",
   "title": "Honours for Rubellinus",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491718",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22000798",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -18,21 +37,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 175,
   "notAfter": 225,
+  "evidence": "lettering textual-context",
   "places": [
     {
       "_": "Mazara",
@@ -46,9 +95,22 @@
     }
   ],
   "geo": [
-    37.65418,
-    12.59304
+    [
+      37.65418,
+      12.59304
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded in the area of the Palazzo Vescovile, in the courtyard of which it is currently located",
+    "type": "found",
+    "subtype": "first-recorded",
+    "geo": "37.651862, 12.590205"
+  },
+  "provenanceObserved": {
+    "_": "Seen by Metcalfe in 2018",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000492_tiled.tif",
     "desc": "Photo courtesy of M. Silvestrini"
@@ -56,6 +118,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mazara del Vallo",
+  "repository": "Palazzo Vescovile (courtyard)",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

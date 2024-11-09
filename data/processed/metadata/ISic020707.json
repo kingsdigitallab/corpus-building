@@ -3,10 +3,28 @@
   "uri": "ISic020707",
   "title": "ISic020707",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "ana": "#function....",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "",
   "objectType": {
     "ana": "#object.vessel",
     "ref": "http://kerameikos.org/id/..."
@@ -16,21 +34,60 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "type": "diameter",
+        "subtype": "base",
+        "unit": "cm"
+      },
+      "1": {
+        "type": "diameter",
+        "subtype": "foot",
+        "unit": "cm"
+      },
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Terravecchia di Grammichele",
@@ -39,9 +96,22 @@
     }
   ],
   "geo": [
-    37.214706,
-    14.636362
+    [
+      37.214706,
+      14.636362
+    ]
   ],
+  "provenanceFound": {
+    "_": ".",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.214706, 14.636362"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020707_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -49,6 +119,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "",
+  "repository": "",
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

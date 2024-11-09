@@ -3,6 +3,26 @@
   "uri": "ISic000671",
   "title": "I.Sicily inscription 000671",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175740",
+      "type": "TM"
+    },
+    {
+      "_": "081483",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "6100248",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -18,19 +38,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 100,
   "places": [
@@ -46,9 +95,19 @@
     }
   ],
   "geo": [
-    38.14227,
-    15.04385
+    [
+      38.14227,
+      15.04385
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "walled in",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic000671_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +115,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari",
+  "repository": {
+    "_": "Area archeologica di Tindari",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/189"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

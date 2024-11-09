@@ -3,11 +3,33 @@
   "uri": "ISic001084",
   "title": "I.Sicily inscription 001084",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492713",
+      "type": "TM"
+    },
+    {
+      "_": "136235",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102242",
+      "type": "EDCS"
+    },
+    {
+      "_": "140567",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Described by Picone as fragment of a small marble funerary stone, 10 cm wide, of which the final line is clear. It is unclear exactly which parts of the stone are broken, but Kaibel implies that the left and upper parts of the text are broken, with the right margin preserved for lines 3-6.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,19 +40,50 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "10",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Picone claims to try to reproduce the letter forms, explicitly noting lunate sigma and lunate epsilon, while also representing what looks like cursive mu.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 500,
   "places": [
@@ -46,13 +99,32 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Said by Picone to have been found 'vicinissimo al sepolcro detto di Terone'. Subsequently said by Kaibel to be in the museum at Agrigento, where he saw it, but it does not seem to have been observed subsequently.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1866",
+    "geo": "37.288916, 13.585988"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,32 @@
   "uri": "ISic000170",
   "title": "Dedication of funerary plot for the parents of Cn. Domitius Piso",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285126",
+      "type": "TM"
+    },
+    {
+      "_": "111315",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100101",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Large fragment of thick plaque of hard brown/grey limestone, all sides broken and heavily abraded. Face is polished. Rear has deep, but intentional, step cut out of right hand side (thus stone is deeper on left hand side). More of the stone was preserved below when it was first seen in the early 1600s.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,36 +39,73 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "59-62",
-      "unit": "mm"
+      "_": "26.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "55-6",
-      "unit": "mm"
+      "_": "43",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Lines 3-4",
-      "from": "line3",
-      "to": "line4",
-      "h": "Irrecoverable height, only seen by Gualtherus",
-      "unit": "mm"
+      "_": "16 (with protrusion), 9.5 (without)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Only two lines of Latin text are preserved (two more below were previously observed). There is a large vacat (at least 47mm) above line 1, so it seems likely that there is no missing text above. Neat comma-shaped interpunct line 2.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Monumental letters, very straight and neatly carved, almost without serifs. Letters are widely spaced.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "59-62",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "55-6",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "Irrecoverable height, only seen by Gualtherus",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 100,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -62,9 +120,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The inscription was seen by Gualtherus (no later than 1624) on the wall of the town hall ('in foro superiori, in pariete praetorii'). Subsequent records are derivative of Gualtherus, and only the upper part has since been found in the stores of the Museo Civico.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1624"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-06, upper part only, in the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-06",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000170_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06"
@@ -72,6 +145,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

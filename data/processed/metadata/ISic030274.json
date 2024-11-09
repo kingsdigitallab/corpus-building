@@ -3,11 +3,33 @@
   "uri": "ISic030274",
   "title": "I.Sicily inscription 030274",
   "status": "draft",
+  "editions": [
+    {
+      "_": "698380",
+      "type": "TM"
+    },
+    {
+      "_": "150089",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900980",
+      "type": "EDCS"
+    },
+    {
+      "_": "336166",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "list",
     "ana": "#function.list",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/108.html"
   },
+  "support": "Fragment of a thin bronze sheet, intact on the left side, possibly re-cut along the lower edge, broken above and to the right. Transformed into a grater at some point in the past.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,19 +40,53 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "6.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "4.6",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Single column of text with a regular left margin.",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -200,
   "places": [
@@ -46,9 +102,23 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found at the site of Morgantina, and acquired by Orsi for the museum in June 1898",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1898-06",
+    "geo": "37.430596, 14.479485"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030274_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +126,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "18621",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

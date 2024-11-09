@@ -3,6 +3,26 @@
   "uri": "ISic000825",
   "title": "I.Sicily inscription 000825",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492449",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101973",
+      "type": "EDCS"
+    },
+    {
+      "_": "140293",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -18,19 +38,48 @@
     "ana": "#material.rock",
     "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
   "places": [
@@ -47,9 +96,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "cave wall, Sella, 8 miles west of Siracusa",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
   "facsimile": {
     "url": "ISic000825_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +119,9 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa, Sella",
+  "repository": {
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,32 @@
   "uri": "ISic003475",
   "title": "I.Sicily inscription 003475",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645096",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64500536",
+      "type": "EDCS"
+    },
+    {
+      "_": "336069",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Limestone funerary altar",
   "objectType": {
     "_": "altar",
     "ana": "#object.altar",
@@ -18,22 +39,59 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "20",
-      "unit": "mm"
+      "_": "44",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "78",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "34-42",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Single line of text, centred, on the front face, 11 cm up from the lower edge.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters hard to discern in photograph: Mu is large and wide of equal length sloping strokes; zeta formed with vertical upright stroke; omega small and widely open.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Centuripae",
@@ -47,9 +105,20 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, but well before 1999.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Seen by Manganaro in the house of dott. Prospero Cacia prior to 1999",
+    "type": "observed",
+    "subtype": "recorded"
+  },
   "facsimile": {
     "url": "ISic003475_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +126,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": {
+    "_": "private collection (P. Cacia)",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,29 @@
   "uri": "ISic020735",
   "title": "ISic020735",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "private (graffito), label indicating the content of the vessel (?)",
     "ana": "#function.label",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/109.html"
   },
+  "support": "Oinochoe partially painted in red, from the upper part of the body to the lower part of the handle.",
   "objectType": {
     "_": "oinochoe (local manufacture)",
     "ana": "#object.vessel.oinochoe",
@@ -18,22 +36,55 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "3-5",
-      "unit": "mm"
+      "_": "6.4",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "8.5",
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is scratched on the underside of the vessel.",
+      "damage": {
+        "ana": "#text_condition.complete text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "3-5",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Herbessus (?)",
@@ -47,9 +98,21 @@
     }
   ],
   "geo": [
-    37.42658,
-    14.30061
+    [
+      37.42658,
+      14.30061
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (Soprintendenza alle Antichità di Siracusa, 1966—1968) in the East archaic necropolis of Montagna di Marzo, on the bottom niche, East grave 31.",
+    "type": "found",
+    "geo": "37.42658, 14.30061"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020735_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +120,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
+  "idno": {
+    "_": "65677, n. sc. 49B",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

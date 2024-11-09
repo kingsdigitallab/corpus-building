@@ -3,11 +3,36 @@
   "uri": "ISic020596",
   "title": "ISic020596",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696280",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900808",
+      "type": "EDCS"
+    },
+    {
+      "_": "195337",
+      "type": "PHI"
+    },
+    {
+      "_": "331819",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.ownership",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/104.html"
   },
+  "support": "Sling bullet.",
   "objectType": {
     "_": "sling bullet",
     "ana": "#object.sling_bullet",
@@ -18,21 +43,61 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "incised",
-    "ana": "#execution.incised",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "2.8",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "_": "2.8",
+        "type": "diameter",
+        "unit": "cm"
+      },
+      "1": {
+        "_": "20.15",
+        "type": "weight",
+        "unit": "g"
+      },
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "incised",
+        "ana": "#execution.incised",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
+      },
+      "p": "Text over three lines, to the left of which is incised (pre-firing) a vertical line.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -420,
   "notAfter": -400,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Naxos",
@@ -46,9 +111,23 @@
     }
   ],
   "geo": [
-    37.82226,
-    15.26749
+    [
+      37.82226,
+      15.26749
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Giardini Naxos, near the 'Fortino' (sector C, layer 2nd) during the Pelagatti and Lissi excavations in 1953.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1953",
+    "geo": "37.82226, 15.26749"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020596_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +135,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Giardini Naxos",
+  "repository": {
+    "_": "Museo Archeologico di Giardini Naxos",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/047"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

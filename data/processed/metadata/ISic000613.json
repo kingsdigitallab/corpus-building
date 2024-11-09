@@ -3,6 +3,30 @@
   "uri": "ISic000613",
   "title": "Fragments of a painted library catalogue",
   "status": "draft",
+  "editions": [
+    {
+      "_": "494031",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "55702035",
+      "type": "EDCS"
+    },
+    {
+      "_": "330113",
+      "type": "PHI"
+    },
+    {
+      "_": "340077",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "library catalogue/inventory",
     "ana": "#function.list.inventory"
@@ -17,22 +41,52 @@
     "ana": "#material.plaster",
     "ref": "http://www.eagle-network.eu/voc/material/lod/126.html"
   },
-  "layoutDesc": {
-    "_": "Painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "3-8",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "Painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "3-8",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Tauromenium",
@@ -46,9 +100,21 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "The fragments were found in 1969, without clear dating evidence, in the fill of a large cistern within an ancient building containing a small peristyle courtyard - most likely a rich private house - on the slopes below the theatre (adjoining via Bagnoli Croci, next to the modern Hotel Taormina Park)",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.850795, 15.291562"
+  },
+  "provenanceObserved": {
+    "_": "On display as no.18 in the Antiquarium of the Teatro antico",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic000613_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +122,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": {
+    "_": "Antiquarium del Teatro Antico",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/062"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

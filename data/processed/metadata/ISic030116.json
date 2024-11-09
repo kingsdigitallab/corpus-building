@@ -3,11 +3,33 @@
   "uri": "ISic030116",
   "title": "Caduceus from the city of Longane",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493029",
+      "type": "TM"
+    },
+    {
+      "_": "149520",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101541",
+      "type": "EDCS"
+    },
+    {
+      "_": "140921",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "public document",
     "ana": "#function.document.public",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/360.html"
   },
+  "support": "Bronze caduceus",
   "objectType": {
     "_": "caduceus",
     "ana": "#object.caduceus",
@@ -18,21 +40,51 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "45.7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "7.6",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is arranged down the cylindrical handle in a single line, running from top to bottom.",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -401,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Longane",
@@ -46,15 +98,37 @@
     }
   ],
   "geo": [
-    38.091842,
-    15.158206
+    [
+      38.091842,
+      15.158206
+    ]
   ],
+  "provenanceFound": {
+    "_": "Exact provenance is not recorded; said to come from a Sicilian tomb, acquired subsequently  by the British Museum",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1875"
+  },
+  "provenanceObserved": {
+    "_": "none",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030116_tiled.tif",
     "desc": "Image from https://www.britishmuseum.org/collection/image/256673001 (c) The Trustees of the British Museum, under a CC-BY-NC-SA 4.0 licence."
   },
   "country": "United Kingdom",
   "settlement": "London",
+  "repository": {
+    "_": "The British Museum",
+    "role": "museum",
+    "ref": "https://www.britishmuseum.org/"
+  },
+  "idno": {
+    "_": "GR 1875.810.3",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

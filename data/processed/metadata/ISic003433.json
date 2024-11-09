@@ -3,11 +3,33 @@
   "uri": "ISic003433",
   "title": "Epitaph for Belleia Vesonia",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284771",
+      "type": "TM"
+    },
+    {
+      "_": "033611",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "14805792",
+      "type": "EDCS"
+    },
+    {
+      "_": "313624",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A rectangular tablet of white marble with dark veining; slight chipping to the edges.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,29 +40,66 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "27",
-      "unit": "mm"
+      "_": "19.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Lines 2-4",
-      "from": "line2",
-      "to": "line4",
-      "h": "30",
-      "unit": "mm"
+      "_": "35",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Latin text laid out neatly over four lines, neatly filling the available space (regular left margin, irregular right margin). Line 1 has large hedera at each end.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Neatly v-cut letters, with faint traces of guidelines. The letters have deep serifs at the end of strokes: E is often very narrow, with the horizontal bars angled upwards; M and A in the final line have extended upper strokes, tending towards cursive; interpuncts are variable in form.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "27",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 2-4",
+        "from": "line2",
+        "to": "line4",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation lines 1 to 4",
+        "from": "line1",
+        "to": "line4",
+        "h": "8-11",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -54,9 +113,27 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found within a funerary building within the area designated 'recinto B' by Paolo Orsi during excavation in 1914 of the ",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1914",
+    "placeName": {
+      "_": "Necropolis of San Placido",
+      "type": "ancient",
+      "ref": "https://pleiades.stoa.org/places/888447551"
+    },
+    "geo": "38.1992517, 15.5566385"
+  },
+  "provenanceObserved": {
+    "_": "Currently on display",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003433_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,6 +141,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A3554",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

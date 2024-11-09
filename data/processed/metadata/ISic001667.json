@@ -3,11 +3,29 @@
   "uri": "ISic001667",
   "title": "A fragmentary Latin inscription",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "A large irregular block of marble, damaged on all sides",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,21 +36,56 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two lines of Latin letters, damaged at both ends; whether more missing from above and below is unknown",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The L in line two appears tall and narrow with a downward sloping second stroke, more typical of later Roman texts",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Syracusae",
@@ -46,9 +99,23 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Observed by Orsi 1888-09-09, 'presso il pozzo dell'Ingegnere', Piazza d'Armi, the site of the Roman forum",
+    "type": "found",
+    "subtype": "first-recorded",
+    "when": "1888-09-09",
+    "geo": "37.066339, 15.284319"
+  },
+  "provenanceLost": {
+    "_": "lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001667_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +123,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

@@ -3,11 +3,33 @@
   "uri": "ISic001112",
   "title": "I.Sicily inscription 001112",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492728",
+      "type": "TM"
+    },
+    {
+      "_": "105569",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102269",
+      "type": "EDCS"
+    },
+    {
+      "_": "140595",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A block of stone, rounded and chipped on the left side, broken on the right side, probably originally in form of a rounded tabula ansata.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,22 +40,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-6",
-      "from": "line1",
-      "to": "line6",
-      "h": "30-35",
-      "unit": "mm"
+      "_": "39",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "74",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "27",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-6",
+        "from": "line1",
+        "to": "line6",
+        "h": "30-35",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -100,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Segesta",
@@ -47,9 +104,22 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found c.1810 in the ruins of ancient Segesta (precise findspot not documented).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1810"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001112_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +127,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Calatafimi",
+  "repository": {
+    "_": "Biblioteca comunale Calatafimi Segesta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/195"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

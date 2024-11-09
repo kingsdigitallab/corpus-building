@@ -3,11 +3,29 @@
   "uri": "ISic003655",
   "title": "I.Sicily inscription 003655",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A large stone/boulder of conglomerate, of roughly ovoid shape.",
   "objectType": {
     "_": "stone",
     "ana": "#material.stone",
@@ -18,22 +36,54 @@
     "ana": "#material.stone.conglomerate",
     "ref": "http://www.eagle-network.eu/voc/material/lod/74.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "100-110",
-      "unit": "mm"
+      "_": "80",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "120",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "100-110",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Monte Alburchia di Gangi",
@@ -42,9 +92,22 @@
     }
   ],
   "geo": [
-    37.7569858,
-    14.1735113
+    [
+      37.7569858,
+      14.1735113
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found not far from the fattoria of P. Glorioso (so Manganaro (1965), where it was subsequently preserved",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1965"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003655_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +115,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gangi",
+  "repository": {
+    "_": "private property",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

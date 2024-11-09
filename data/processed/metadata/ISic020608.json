@@ -3,12 +3,30 @@
   "uri": "ISic020608",
   "title": "ISic020608",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership (?)",
     "ana": "#function.production-ownership",
     "cert": "low",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Oinochoe.",
   "objectType": {
     "_": "oinochoe",
     "ana": "#object.vessel.oinochoe",
@@ -19,21 +37,63 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "type": "graffito",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "type": "graffito",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -530,
   "notAfter": -500,
+  "evidence": "archaeological-context material-context",
   "places": [
     {
       "_": "Inessa (?)",
@@ -47,9 +107,23 @@
     }
   ],
   "geo": [
-    37.563161,
-    14.81975
+    [
+      37.563161,
+      14.81975
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered in a grave during an episodic excavation carried out in the 1960s by the Soprintendenza di Siracusa in the area of the settlement of Poira, located on the hill that leads from the Fiume dei Margi to the Simeto valley.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1960",
+    "geo": "37.563161, 14.819750"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020608_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +131,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Adrano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/021"
+  },
+  "idno": {
+    "_": "63523",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

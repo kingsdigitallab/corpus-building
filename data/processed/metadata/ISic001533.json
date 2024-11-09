@@ -3,6 +3,24 @@
   "uri": "ISic001533",
   "title": "I.Sicily inscription 001533",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645032",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,19 +36,48 @@
     "ana": "#material.rock",
     "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
   },
-  "layoutDesc": {
-    "_": "Painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "Painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 600,
   "places": [
@@ -47,9 +94,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Catacomb of Vigna Cassia",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
   "facsimile": {
     "url": "ISic001533_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +117,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Catacomba di Vigna Cassia",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

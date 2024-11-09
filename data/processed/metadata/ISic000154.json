@@ -3,11 +3,32 @@
   "uri": "ISic000154",
   "title": "Epitaph of Clodia Thalia",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285124",
+      "type": "TM"
+    },
+    {
+      "_": "111300",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100093",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A very thick plaque of compact grey limestone, with the upper edge cut to a triangular form (more crudely finished than the other edges). Intact on all four sides, with the edges covered in modern red paint. The rear is pecked. The surface shows some signs of damage and wear.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,34 +39,70 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "38-48",
-      "unit": "mm"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "36-38",
-      "unit": "mm"
+      "_": "27",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "20-23",
-      "unit": "mm"
+      "_": "10.4-9.4 (left to right)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is carefully centred (note use of ligature in line 2 to support this?), the final line much smaller.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deeply carved, fairly broad letters with pronounced serifs. Use of ligature in line 2 (intentional, to make the cognomen shorter than the nomen above?). Use of hederae in line 3.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "38-48",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "36-38",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "20-23",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 250,
   "places": [
@@ -61,9 +118,22 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1878 in piazza Duomo, during the excavation of ditches for the planting of trees.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1878"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-13, in the storeroom of the Museo Civico.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000154_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-13."
@@ -71,6 +141,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "104",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

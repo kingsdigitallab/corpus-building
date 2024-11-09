@@ -3,11 +3,29 @@
   "uri": "ISic004369",
   "title": "Inscription recording an architect called Proxenos",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "A block originally from the border of an ancient road, regular in front but\n                                        angular on the reverse. Subsequently reused and cut along the lower edge and\n                                        some damage to the right side.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,22 +36,58 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "24-48",
-      "unit": "mm"
+      "_": "26",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "41",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "28",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "Four lines of Greek letters filling the surviving face, with a regular left\n                                        margin, uneven right margin",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deep, square cut, regular letters showing features of both middle and later\n                                    Hellenistic texts: alpha with broken bar; mu and sigma with parallel bars; pi with\n                                    equal vertical strokes; omega closed as circle on the horizontal bar in line 3,\n                                    above the bar in line 1; episoli and xsi with short middle bar; omicron smaller and\n                                    above the line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "24-48",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "Not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Monte Riparato",
@@ -42,13 +96,26 @@
     }
   ],
   "geo": [
-    37.8497898,
-    13.882395
+    [
+      37.8497898,
+      13.882395
+    ]
   ],
+  "provenanceObserved": {
+    "_": "Identified following earlier excavations (prior to 1992) of a section\n                            of ancient road on the north-west slopes of Pizzo S. Angelo on Monte Riparato",
+    "type": "observed",
+    "subtype": "identofied",
+    "geo": "37.849150, 13.883873"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Caltavuturo",
+  "repository": {
+    "_": "Museo Civico \"Don G.\n                            Guarneri\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/166"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

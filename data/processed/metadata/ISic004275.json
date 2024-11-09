@@ -3,6 +3,28 @@
   "uri": "ISic004275",
   "title": "Epitaph of Caius Clodius Capito",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493816",
+      "type": "TM"
+    },
+    {
+      "_": "159450",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "25601309",
+      "type": "EDCS"
+    },
+    {
+      "_": "334873",
+      "type": "PHI"
+    }
+  ],
+  "support": "Stele of volcanic stone (pietra di Fuardo), missing the lower right corner.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -13,20 +35,56 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1 to 2",
-      "from": "line1",
-      "to": "line2",
-      "h": "90-100",
-      "unit": "mm"
+      "_": "100",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "30-40",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "13",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of deeply cut, somewhat irregular letters, on the upper part of the front face of the stele, with the second line somewhat compressed at the end.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat irregular plain letters, with the T of line 2 extended (120mm), the penultimate I in ligature, and the final S small to fit in.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "90-100",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": 100,
   "places": [
@@ -42,9 +100,22 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1981 in the Castle, in an accumulation of stones at the base of the cathedral bell tower; currently in the cloister of the cathedral.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1981"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004275_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +123,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": "In the cloister of the Basilica Concattedrale di San Bartolomeo, Lipari",
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

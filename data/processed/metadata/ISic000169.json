@@ -3,11 +3,32 @@
   "uri": "ISic000169",
   "title": "Epitaph for Domitius Himeraeus, his sister Domitia and his wife Alfia Zotica",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285244",
+      "type": "TM"
+    },
+    {
+      "_": "111313",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100099",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A thick rectangular plaque of grey limestone, slightly damaged on the left edge, but intact on the other three sides, with rectangular recesses for clamps in each preserved edge (two each on the upper and lower edges (middle and right), with possibly a third lost from the left end on each of the upper and lower edges; one on the right edge).",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,36 +39,73 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "45-50",
-      "unit": "mm"
+      "_": "28.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "43-48 (T = 58)",
-      "unit": "mm"
+      "_": "69",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "45-50",
-      "unit": "mm"
+      "_": "10",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of roughly equal and centred latin letters filling the face of the stone, words separated by lightly carved interpuncts.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Simply cut reasonably regular letters, with one instance of ligature and an extended T in line 2.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "45-50",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "43-48 (T = 58)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "45-50",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 50,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -62,9 +120,22 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Torremuzza in the inscriptions of Palermo (1769). The attribution to Termini is based upon the cognomen / ethnic Himeraeus rather than any other evidence.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1762"
+  },
+  "provenanceObserved": {
+    "_": "Photographed 2021-09-27 in Palermo museum, but no formal autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000169_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27"
@@ -72,6 +143,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "3577",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

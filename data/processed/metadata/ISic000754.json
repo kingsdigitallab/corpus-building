@@ -3,6 +3,25 @@
   "uri": "ISic000754",
   "title": "I.Sicily inscription 000754",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175792",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "6100285",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -18,19 +37,48 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line\n                                    1\n                                ",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line\n                                    1\n                                ",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to\n                                    2\n                                ",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 250,
   "places": [
@@ -41,9 +89,20 @@
     }
   ],
   "geo": [
-    36.788724,
-    14.507514
+    [
+      36.788724,
+      14.507514
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the sea in the area of S. Nicola, near Caucana",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic000754_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +110,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo\n                            Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

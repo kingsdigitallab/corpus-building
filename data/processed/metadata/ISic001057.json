@@ -3,6 +3,34 @@
   "uri": "ISic001057",
   "title": "I.Sicily inscription 001057",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492685",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "41300118",
+      "type": "EDCS"
+    },
+    {
+      "_": "39102212",
+      "type": "EDCS"
+    },
+    {
+      "_": "140537",
+      "type": "PHI"
+    },
+    {
+      "_": "175475",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -13,21 +41,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Acrae",
@@ -42,9 +100,21 @@
     }
   ],
   "geo": [
-    37.0578,
-    14.89346
+    [
+      37.0578,
+      14.89346
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "2015.01.17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic001057_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +122,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palazzolo Acreide",
+  "repository": {
+    "_": "Museo Archeologico\n                            Gabriele Judica",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/102"
+  },
+  "idno": {
+    "_": "2254",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

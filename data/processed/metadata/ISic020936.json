@@ -3,11 +3,29 @@
   "uri": "ISic020936",
   "title": "ISic020936",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A cylindrical altar of fired clay, recomposed from multiple fragments, not complete.",
   "objectType": {
     "_": "altar",
     "ana": "#object.altar",
@@ -18,22 +36,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "20",
-      "unit": "mm"
+      "_": "24.3",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
+    },
+    {
+      "_": "26",
+      "type": "diameter",
+      "dimension": "dim"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription is incised in a plain area of the body of the altar, approximately half-way up, next to the remains of a handle. It is unclear whether the text was incised before or after firing (no statement in publication, and photograph not sufficient.",
+      "damage": {
+        "ana": "#text-condition.damaged"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "20",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "evidence": "material-context",
   "places": [
     {
       "_": "Helorus",
@@ -47,9 +97,22 @@
     }
   ],
   "geo": [
-    36.84044,
-    15.10414
+    [
+      36.84044,
+      15.10414
+    ]
   ],
+  "provenanceFound": {
+    "_": "From room 4 of the 'urban sanctuary of Demeter', excavated in 1970.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "36.841331, 15.106162"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020936_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +120,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

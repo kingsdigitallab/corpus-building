@@ -3,6 +3,26 @@
   "uri": "ISic001486",
   "title": "I.Sicily inscription 001486",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493905",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "41300034",
+      "type": "EDCS"
+    },
+    {
+      "_": "175632",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication; funerary",
     "ana": "#function.dedication #function.funerary",
@@ -13,21 +33,51 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -450,
+  "precision": "low",
   "places": [
     {
       "_": "Kakyron",
@@ -41,9 +91,19 @@
     }
   ],
   "geo": [
-    37.2581981,
-    13.9836298
+    [
+      37.2581981,
+      13.9836298
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001486_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +111,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ravanusa",
+  "repository": {
+    "_": "Museo Archeologico Salvatore Lauricella",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/142"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

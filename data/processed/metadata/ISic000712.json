@@ -3,11 +3,31 @@
   "uri": "ISic000712",
   "title": "I.Sicily inscription 000712",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493948",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "32701135",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of stone, possibly broken in half vertically, for which no measurements are recorded.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,19 +38,52 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The fragment preserves a single line of numerals of varying size.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The text appears to combine Greek and earlier Latin numerals; the initial Greek numeral is the red 'chi'.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -46,9 +99,21 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "From material recovered from the necropolis uncovered c.1960 on via Dottor Consoli / via Androne, Catania; according to Manganaro it was subsequently moved to the Museo Civico, but has not been located there.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000712_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

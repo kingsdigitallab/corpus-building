@@ -3,10 +3,35 @@
   "uri": "ISic030033",
   "title": "ISic030033",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696257",
+      "type": "TM"
+    },
+    {
+      "_": "152730",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800217",
+      "type": "EDCS"
+    },
+    {
+      "_": "329536",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
+  },
+  "support": {
+    "_": "Rectangular lamina.",
+    "ana": "#shape.rectangular"
   },
   "objectType": {
     "_": "lamina",
@@ -18,21 +43,49 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "unit": "mm"
+      "_": "1.3",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "8.0",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "Opistographic.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -460,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -46,9 +99,21 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the necropolis of Passo Marinaro (Camarina).",
+    "type": "found",
+    "geo": "36.85957, 14.46436"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030033_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "19438",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

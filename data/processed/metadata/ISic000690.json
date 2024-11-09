@@ -3,6 +3,25 @@
   "uri": "ISic000690",
   "title": "I.Sicily inscription 000690",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493941",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "32701131",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -14,19 +33,48 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -42,9 +90,22 @@
     }
   ],
   "geo": [
-    38.14227,
-    15.04385
+    [
+      38.14227,
+      15.04385
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavations by T. Sidoti in Contrada Scozia (or Scrozzo), in front of the 'porta a tenaglia', in the area of a necropolis",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1970"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-14, in the depositi at the archaeological site.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000690_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +113,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari",
+  "repository": {
+    "_": "Area archeologica di Tindari",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/189"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

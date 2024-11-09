@@ -3,11 +3,32 @@
   "uri": "ISic000236",
   "title": "Funerary inscription for Marcus Voluscius Felix",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285269",
+      "type": "TM"
+    },
+    {
+      "_": "127488",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100150",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Grey-stone marble plaque, sides rough but not broken. Rear is flat. Front surface is smooth and polished. Modern red paint on sides.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,27 +39,62 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "59-63",
-      "unit": "mm"
+      "_": "31",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "48-52",
-      "unit": "mm"
+      "_": "36.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "8.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Latin text, not centred on stone. Three different interpuncts used: L1 triangular, L2 comma and dash.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Text is straight and well-carved. Serifs used on most letters, pronounced tails on most letters. Letters are not evenly spaced. Cs are distinctive in shape, with a high rounded bulge. Whilst Bivona (1994) attested that the text is included within guidelines, no traces of these were apparent on the stone in autopsy.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "59-63",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "48-52",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -55,9 +111,25 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found between 1784 and 1829 in Termini Imerese (exact provenance unknown), and in the local civic collection by 1829 (Romano).",
+    "type": "found",
+    "subtype": "discovered",
+    "notBefore": "1784",
+    "notAfter": "1829"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 4, shelf 3.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-04",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000236_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -65,6 +137,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

@@ -3,11 +3,32 @@
   "uri": "ISic000353",
   "title": "I.Sicily inscription 000353",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491562",
+      "type": "TM"
+    },
+    {
+      "_": "141176",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900391",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "The inscription is simply described by Alessi as 'il rottame di un'altra lapida'; likely a marble funerary plaque, but this is only a guess.",
   "objectType": {
     "_": "fragment",
     "ana": "#object.unknown"
@@ -17,19 +38,52 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is reported as continuous letters, and no indication of the precise layout is offered, although the presentation of the surviving letters implies it is the upper left portion of a plaque",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "No details are recorded",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -45,9 +99,26 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the Convento del Carmine, reported by Alessi as one of several find in the years preceding 1833",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1833",
+    "geo": {
+      "_": "37.509637, 15.088925",
+      "cert": "medium"
+    }
+  },
+  "provenanceLost": {
+    "_": "There is no evidence that the stone has been seen/recorded since the time of Alessi and it appears to be lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000353_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +126,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

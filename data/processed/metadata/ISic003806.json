@@ -3,11 +3,30 @@
   "uri": "ISic003806",
   "title": "I.Sicily inscription 003806",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "334210",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Stele with rough surfaces, with a rough and very irregular base bulb, projecting on the front and rear sides. Missing both angular parts and a large part of the upper face, the lower left corner and the left part of the bulb",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,20 +37,54 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "42",
-      "unit": "mm"
+      "_": "56",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "33.8",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "9.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.partly_illegible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "42",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -47,9 +100,23 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1969 in the excavation of trench XXXII, on the Episcopal property, in zone ε S",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1969",
+    "geo": "38.467163, 14.957333"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003806_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +124,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": {
+    "_": "Museo Archeologico Regionale Eoliano \"Luigi Bernabò Brea\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/048"
+  },
+  "idno": {
+    "_": "11656",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

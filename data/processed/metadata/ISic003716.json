@@ -3,11 +3,31 @@
   "uri": "ISic003716",
   "title": "I.Sicily inscription 003716",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "_": "136046",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "336052",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of pinkish clay tile, broken on all sides.",
   "objectType": {
     "_": "tile",
     "ana": "#object.tile",
@@ -18,22 +38,57 @@
     "ana": "#material.clay",
     "ref": "http://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "incised",
-    "ana": "#execution.chiselled",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 2",
-      "from": "line1",
-      "to": "line2",
-      "h": "12",
-      "unit": "mm"
+      "_": "8.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "13",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text incised prior to firing",
+      "rs": {
+        "_": "incised",
+        "ana": "#execution.chiselled",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters with deep terminal points, sigma slightly open, no serifs.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "12",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Agrigentum",
@@ -47,9 +102,22 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Said to have been found near the 'temple of Concord', or else in excavations 'in ancient Agrigentum'; donated to the museum in May 1918",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1918-05"
+  },
+  "provenanceObserved": {
+    "_": "Seen and photographed by Manganaro some time before 1999",
+    "type": "observed",
+    "subtype": "seen"
+  },
   "facsimile": {
     "url": "ISic003716_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +125,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "39398",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

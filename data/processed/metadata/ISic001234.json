@@ -3,11 +3,32 @@
   "uri": "ISic001234",
   "title": "Funerary inscription for Zosima",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492838",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101599",
+      "type": "EDCS"
+    },
+    {
+      "_": "140719",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "No description is preserved",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -18,19 +39,52 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The only indication of layout is the report at second hand from Gualtherus, showing a text over six lines, with the second line apparently missing, repeated continuation of words across line-end, and possible interpuncts around the age elements",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -46,9 +100,16 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceObserved": {
+    "_": "The text is only preserved in Gualtherus, who reports it himself at second hand",
+    "type": "observed",
+    "subtype": "reported"
+  },
   "facsimile": {
     "url": "ISic001234_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +117,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

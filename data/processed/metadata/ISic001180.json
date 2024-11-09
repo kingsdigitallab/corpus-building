@@ -3,11 +3,32 @@
   "uri": "ISic001180",
   "title": "Funerary inscription for (?)Marcus Flavius Tuendus",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492785",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102334",
+      "type": "EDCS"
+    },
+    {
+      "_": "140663",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "No description of the stone is preserved",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -18,20 +39,55 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-6",
-      "from": "line1",
-      "to": "line6",
-      "h": "unknown",
-      "unit": "mm"
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is recorded in the antiquarian tradition over 6 lines",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "No description exists, but Castelli 1784 transcribes with lunate sigma and mostly lunate epsilon",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-6",
+        "from": "line1",
+        "to": "line6",
+        "h": "unknown",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "unknown",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 500,
   "places": [
@@ -48,9 +104,27 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "Dug up in 1771 in the ruins of ancient Halaesa; recorded in 1784 as preserved at Monteregale (= Monreale?), ‘in monasterio Canonicorum regularium Benedictinae familiae’.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1771"
+  },
+  "provenanceObserved": {
+    "_": "At time of Castelli (1784) in Monteregale, in Monastery Canonicorum Regularium Benedictinae Familiae",
+    "type": "observed"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost",
+    "cert": "low"
+  },
   "facsimile": {
     "url": "ISic001180_tiled.tif",
     "desc": "Copy of Castelli 1784, 192 cl.14 no.113 no.297 (from Arachne edition)"
@@ -58,6 +132,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

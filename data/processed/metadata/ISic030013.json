@@ -3,11 +3,40 @@
   "uri": "ISic030013",
   "title": "ISic030013",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696122",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "4800285",
+      "type": "EDCS"
+    },
+    {
+      "_": "340339",
+      "type": "PHI"
+    },
+    {
+      "_": "329820",
+      "type": "PHI"
+    },
+    {
+      "_": "340339",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,22 +47,52 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-7",
-      "from": "line1",
-      "to": "line7",
-      "h": "4",
-      "unit": "mm"
+      "_": "5",
+      "unit": "cm",
+      "atMost": "5",
+      "dimension": "height"
+    },
+    {
+      "_": "12",
+      "unit": "cm",
+      "atMost": "12",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The curse is written left-to-right while the names of the victims are written right-to-left. (Arena)",
+      "damage": {
+        "ana": "#text_condition.partly_illegible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-7",
+        "from": "line1",
+        "to": "line7",
+        "h": "4",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -475,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Selinus",
@@ -47,9 +106,21 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the archaeological area of Selinunte, in the Malophoros Sanctuary.",
+    "type": "found",
+    "geo": "37.586763, 12.816874"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030013_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +128,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonio Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/isicily/museums/064"
+  },
+  "idno": {
+    "_": "42566",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

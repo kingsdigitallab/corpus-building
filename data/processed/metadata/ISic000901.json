@@ -3,12 +3,33 @@
   "uri": "ISic000901",
   "title": "I.Sicily inscription 000901",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492531",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102058",
+      "type": "EDCS"
+    },
+    {
+      "_": "140382",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
     "cert": "low"
   },
+  "support": "Text incised in the mortar used to close the sarcophagus.",
   "objectType": {
     "_": "tomb",
     "ana": "#object.funerary_monument",
@@ -19,21 +40,51 @@
     "ana": "#material.mortar",
     "ref": "https://www.eagle-network.eu/voc/material/lod/128"
   },
-  "layoutDesc": {
-    "_": "incised",
-    "ana": "#execution.incised",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "incised",
+        "ana": "#execution.incised",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 250,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -47,9 +98,21 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Catacomb of Vigna Cassia",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000901_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +120,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": "Catacomb of Vigna Cassia",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

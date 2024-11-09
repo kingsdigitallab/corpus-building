@@ -3,6 +3,31 @@
   "uri": "ISic001470",
   "title": "I.Sicily inscription 001470",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284912",
+      "type": "TM"
+    },
+    {
+      "_": "108697",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "41300078",
+      "type": "EDCS"
+    },
+    {
+      "_": "64700409",
+      "type": "EDCS"
+    },
+    {
+      "_": "175692",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +43,51 @@
     "ana": "#material.stone.limestone_tufa",
     "ref": "http://www.eagle-network.eu/voc/material/lod/64.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -475,
   "notAfter": -425,
+  "precision": "low",
   "places": [
     {
       "_": "Selinus",
@@ -46,9 +101,21 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Necropolis of Manicalunga",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001470_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +123,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8803",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

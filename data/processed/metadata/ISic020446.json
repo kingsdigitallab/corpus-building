@@ -3,11 +3,29 @@
   "uri": "ISic020446",
   "title": "ISic020446",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "owner inscription",
     "ana": "#function.ownership",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/104.html"
   },
+  "support": "Lekanis.",
   "objectType": {
     "_": "lekanis",
     "ana": "#object.vessel.lekanis",
@@ -18,21 +36,46 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription, partially boustrophedon, is arranged in a circular pattern on the lid of the lekanis.",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
+  "evidence": "lettering archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Selinus",
@@ -45,9 +88,21 @@
     }
   ],
   "geo": [
-    37.5853775,
-    12.8298666
+    [
+      37.5853775,
+      12.8298666
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Selinunte.",
+    "type": "found",
+    "geo": "37.5853775, 12.8298666"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020446_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +110,13 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "private house",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

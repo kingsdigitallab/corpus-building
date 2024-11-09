@@ -3,6 +3,26 @@
   "uri": "ISic001832",
   "title": "I.Sicily inscription 001832",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492868",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101630",
+      "type": "EDCS"
+    },
+    {
+      "_": "140750",
+      "type": "PHI"
+    }
+  ],
   "objectType": {
     "_": "seat",
     "ana": "#object.seat",
@@ -13,22 +33,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "10-12.5",
-      "unit": "mm"
+      "_": "98",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "25",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "10-12.5",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Tauromenium",
@@ -42,9 +95,20 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Theatre",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "under the scaenae frons",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001832_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +116,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": {
+    "_": "Teatro Greco Romano di Taormina",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

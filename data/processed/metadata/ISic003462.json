@@ -3,6 +3,24 @@
   "uri": "ISic003462",
   "title": "I.Sicily inscription 003462",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644939",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -18,19 +36,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 250,
   "places": [
@@ -46,9 +93,23 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated 2002 and 5 August 2010 on decumanus maximus, Capo Boeo, Marsala",
+    "type": "found",
+    "subtype": "discovered",
+    "from": "2002",
+    "to": "2010"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003462_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +117,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

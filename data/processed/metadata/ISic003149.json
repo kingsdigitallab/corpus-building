@@ -3,11 +3,32 @@
   "uri": "ISic003149",
   "title": "I.Sicily inscription 003149",
   "status": "draft",
+  "editions": [
+    {
+      "_": "494021",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "38000203",
+      "type": "EDCS"
+    },
+    {
+      "_": "178072",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A square plaque of marble, intact on all sides other than minor damage to the upper right corner. The edges are cut back towards the rear, and the rear is polished smooth, with an incised line marking a framing border around the rear face.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +39,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-6",
-      "from": "line1",
-      "to": "line6",
-      "h": "14-16",
-      "unit": "mm"
+      "_": "14.0",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "14.0",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text fills the space, with word breaks not observing line end, and the text not filling the final line.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-6",
+        "from": "line1",
+        "to": "line6",
+        "h": "14-16",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -47,9 +104,27 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found by Paolo Orsi, walled into a loculus in prop. M. Sangiorgi, via A. di San Giuliano (formerly via Lincoln), Catania",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1897",
+    "geo": {
+      "_": "37.505045, 15.089149",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "2016.05.12",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic003149_tiled.tif",
     "desc": "Photo J. Prag, 2016-05-12, courtesy Museo di Archeologia dell'Universita di Catania"
@@ -57,6 +132,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo di Archeologia dell'Universita di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/019"
+  },
+  "idno": {
+    "_": "05/136",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

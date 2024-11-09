@@ -3,11 +3,31 @@
   "uri": "ISic003352",
   "title": "Antiquarian 'invented' inscription, dedication by Gorgon",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645595",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "316302",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A smooth cylindrical column, with a moulding around the top and a small cavity (2cm diam) in the upper surface.",
   "objectType": {
     "_": "column",
     "ana": "#object.column",
@@ -18,22 +38,56 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "25-30",
-      "unit": "mm"
+      "_": "46.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "21",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "21",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text in Greek letters over five lines, over the lower two thirds of the vertical side of the column",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "25-30",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1769,
   "notAfter": 1784,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -47,9 +101,21 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Biscari (1784) states that it was found at Messina among the ruins of the earthquake in 1783",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "subsequent accounts in the early C19 attribute it to Capo Peloro (in Korhonen's view, a later refinement/attribution by Biscari)",
+    "type": "observed",
+    "subtype": "recorded"
+  },
   "facsimile": {
     "url": "ISic003352_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +123,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "355",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

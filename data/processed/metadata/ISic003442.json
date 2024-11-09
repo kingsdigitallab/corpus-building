@@ -3,6 +3,26 @@
   "uri": "ISic003442",
   "title": "I.Sicily inscription 003442",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644920",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900753",
+      "type": "EDCS"
+    },
+    {
+      "_": "337247",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +38,54 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "45",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "70",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "On a single side of the stone, but split over two lines.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Menae",
@@ -46,9 +99,21 @@
     }
   ],
   "geo": [
-    37.26494,
-    14.69381
+    [
+      37.26494,
+      14.69381
+    ]
   ],
+  "provenanceFound": {
+    "_": "Necropolis of S. Ippolito",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003442_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mineo",
+  "repository": {
+    "_": "Museo Civico Corrado Tamburino Merlini",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/023"
+  },
+  "idno": {
+    "_": "5202",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

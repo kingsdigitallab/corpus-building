@@ -3,11 +3,33 @@
   "uri": "ISic001131",
   "title": "I.Sicily inscription 001131",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492744",
+      "type": "TM"
+    },
+    {
+      "_": "136434",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102288",
+      "type": "EDCS"
+    },
+    {
+      "_": "140616",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "Unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "described only as a 'stone broken on both sides' by Castelli, no further information available.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -18,23 +40,56 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "200",
-      "unit": "mm",
-      "precision": "low"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "remains of three lines of monumental letters",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Reported by Castelli to have letters 'semicubitalis' in size, so approx. 20cm?",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "200",
+        "unit": "mm",
+        "precision": "low"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -50,
+  "evidence": "textual-context",
+  "precision": "low",
   "places": [
     {
       "_": "Soluntum",
@@ -48,9 +103,27 @@
     }
   ],
   "geo": [
-    38.09296,
-    13.53147
+    [
+      38.09296,
+      13.53147
+    ]
   ],
+  "provenanceFound": {
+    "_": "Dug up in 1771 from the ruins of ancient Soluntum",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1771"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Supposedly transported to the museum at Palermo, it was seemingly already lost in Kaibel's time",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001131_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +131,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "(?)",
+  "repository": "lost",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

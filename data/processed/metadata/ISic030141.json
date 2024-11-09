@@ -3,11 +3,30 @@
   "uri": "ISic030141",
   "title": "ISic030141",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "175254",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "tessera (civic)",
     "ana": "#function.tessera.civic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/130.html"
   },
+  "support": "Tessera.",
   "objectType": {
     "_": "tessera",
     "ana": "#object.tessera",
@@ -18,20 +37,46 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The text is placed on both sides.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -480,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -45,9 +90,22 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the archaeological area of Kamarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "36.87316, 14.4415"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030141_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +113,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

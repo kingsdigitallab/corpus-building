@@ -3,12 +3,33 @@
   "uri": "ISic000413",
   "title": "I.Sicily inscription 000413",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175782",
+      "type": "TM"
+    },
+    {
+      "_": "081525",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900476",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html",
     "cert": "low"
   },
+  "support": "Large fragment of a cornice, with dentils below, and remains of a Latin text above. Damaged left and right, and upper front edge.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -19,20 +40,53 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "not measured",
-      "unit": "mm"
+      "_": "38",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "68",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "single line of Latin letters across the front face of the cornice above the dentils.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "not measured",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -48,9 +102,21 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "First noted in the musem inventory in the 1880s and CIL 10 (1883)",
+    "type": "found",
+    "subtype": "first-recorded",
+    "notAfter": "1883"
+  },
+  "provenanceObserved": {
+    "_": "In storage in magazzino C",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic000920_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -58,6 +124,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "920",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

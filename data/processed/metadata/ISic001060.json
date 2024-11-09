@@ -3,11 +3,32 @@
   "uri": "ISic001060",
   "title": "I.Sicily inscription 001060",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492688",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102215",
+      "type": "EDCS"
+    },
+    {
+      "_": "140540",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Block of the local limestone, originally in situ above the entrance to the rock-cut structure of the gymnasium, but then cut from the site and removed. The epigraphic field is 212 x 64 cm. The face has two large round holes cut into the second line, and a further element cut out of the end of the first line (upper right corner). The lower edge is damaged, obscuring part of line 4.",
   "objectType": {
     "_": "block",
     "ana": "#object.block"
@@ -17,20 +38,53 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "90",
-      "unit": "mm"
+      "_": "74",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "212",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "48",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Very regular neat v-cut letters. The text is centred on the stone. Note the use of horizontal lines/dashes between the name and patronym of the officials. Sigma is four bar and open; Pi has short second vertical; omicron and omega are small, the latter closed.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "90",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -265,
   "notAfter": -215,
   "places": [
@@ -47,9 +101,21 @@
     }
   ],
   "geo": [
-    36.94573,
-    15.02365
+    [
+      36.94573,
+      15.02365
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in situ, first observed in 1558.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Photographed in the museum by Prag, 2023.",
+    "type": "observed",
+    "subtype": "photographed"
+  },
   "facsimile": {
     "url": "ISic001060_tiled.tif",
     "desc": "Photo J. Prag, 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +123,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Noto",
+  "repository": {
+    "_": "Museo Civico di Noto",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/100"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

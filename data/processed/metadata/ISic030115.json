@@ -3,11 +3,33 @@
   "uri": "ISic030115",
   "title": "Part of a caduceus of the city of Hi(p)pana",
   "status": "draft",
+  "editions": [
+    {
+      "_": "697270",
+      "type": "TM"
+    },
+    {
+      "_": "139028",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900546",
+      "type": "EDCS"
+    },
+    {
+      "_": "333393",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "public document",
     "ana": "#function.document.public",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/360.html"
   },
+  "support": "Part of the handle, cylindrical in section, with moulded ring elements, of a bronze caduceus. No dimensions are reported by Manganaro, but may be recorded in Crispi (non vidi)",
   "objectType": {
     "_": "caduceus",
     "ana": "#object.caduceus",
@@ -18,21 +40,49 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is incised immediately below the moulded ring near the top of the handle, with the word damosion running around the handle and the ethnic instead written down the handle, perpendicular to the first word (Manganaro appears to misinterpret Crispi, implying that the word damosion is written around the 'bottone', or moulded ring, but Crispi's text and fig.1 (reproduced in Manganaro fig.3) show it immediately below the ring).",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "In the drawing by Crispi, alpha has straight bar, nu is oblique, mu has four oblique strokes of equal length, omicron is full size, pi has longer left vertical, and sigma is four-bar with diverging strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -401,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Hippana",
@@ -46,9 +96,23 @@
     }
   ],
   "geo": [
-    37.701564,
-    13.436825
+    [
+      37.701564,
+      13.436825
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found on the site of ancient Hippana (Montagna dei Cavalli)",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1875",
+    "geo": "37.701564, 13.436825"
+  },
+  "provenanceLost": {
+    "_": "Reported lost, with no modern observation",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic030115_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +120,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

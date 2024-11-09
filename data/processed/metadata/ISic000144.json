@@ -3,11 +3,32 @@
   "uri": "ISic000144",
   "title": "Funerary inscription for Publius Cestius",
   "status": "edited",
+  "editions": [
+    {
+      "_": "284846",
+      "type": "TM"
+    },
+    {
+      "_": "111024",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100084",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of a thick limestone plaque. May be partially intact along the top edge, but otherwise broken on all sides. Rear is roughly finished and uneven. Modern red paint and traces of mortar around the sides. Some application of modern pencil to the letters.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,34 +39,79 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "24",
-      "unit": "mm"
+      "_": "12.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "30-32",
-      "unit": "mm"
+      "_": "28",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "incomplete",
-      "unit": "mm"
+      "_": "4.6 (top) - 6.5 (bottom)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Parts of three lines of Latin letters, possibly centred on the stone.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Neat, thinly incised (not a true v-cut) letters with simple terminal serifs. A triangular serif in line 2, and a comma shaped 'interpunct' at the end of line 2.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "24",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "30-32",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "incomplete",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "12",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "10",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -62,9 +128,22 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Gualtherus 1624, 'on the right side of the town hall, outside the doors'; Romano wrongly attributed its discovery to the period between 1784 and 1829 because it is omitted from the corpus of Torremuzza.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1624"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2023-07-07 in the Termini Museo Civico store rooms (room 1, rack 3, shelf 2)",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000144_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2023-07-07."
@@ -72,6 +151,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "38",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

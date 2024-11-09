@@ -3,11 +3,30 @@
   "uri": "ISic003005",
   "title": "Latin architrave inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645354",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A rectangular block of black volcanic stone, lightly damaged along the lower edge and at the right end, and rough below and behind (slight damage above the N to the top edge also). There are two cuttings or depressions in the upper surface.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -18,20 +37,54 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "120",
-      "unit": "mm"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "98",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "48",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "A single line of tall letters on the upper part of the front face, with blank space below",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "120",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "NA",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 69,
   "notAfter": 125,
   "places": [
@@ -47,9 +100,23 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated in the orchestra of the Roman theatre in 1950 by L. de Gregorio (assistente della Soprintendenza alla Antichita di Catania), under the direction of G. Libertini; seen in the theatre no later than 1961 by Manganaro.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1950",
+    "geo": "37.502709, 15.083659"
+  },
+  "provenanceObserved": {
+    "_": "Seen 2021-10-04 among a series of stone elements on the ground behind the upper rear corner of the odeon.",
+    "type": "observed",
+    "subtype": "identified"
+  },
   "facsimile": {
     "url": "ISic003005_cast_tiled.tif",
     "desc": "Photo J. Prag, courtesy Museo Civico di Catania, of cast"
@@ -57,6 +124,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Teatro Romano di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/017"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

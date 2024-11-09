@@ -3,6 +3,30 @@
   "uri": "ISic002758",
   "title": "I.Sicily inscription 002758",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "284750",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64600455",
+      "type": "EDCS"
+    },
+    {
+      "_": "331214",
+      "type": "PHI"
+    },
+    {
+      "_": "332931",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "prayer",
     "ana": "#function.prayer",
@@ -13,21 +37,51 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Dianae Fons",
@@ -41,9 +95,21 @@
     }
   ],
   "geo": [
-    36.94893,
-    14.60731
+    [
+      36.94893,
+      14.60731
+    ]
   ],
+  "provenanceFound": {
+    "_": "Area of Crucidda",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic002758_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +117,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico\n                            Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

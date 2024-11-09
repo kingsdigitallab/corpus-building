@@ -3,11 +3,29 @@
   "uri": "ISic030297",
   "title": "Entella 4 = B1",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "decree",
     "ana": "#function.decree",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/384.html"
   },
+  "support": "",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,21 +36,56 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -264,
   "notAfter": -241,
+  "evidence": "lettering textual-context",
   "places": [
     {
       "_": "Entella",
@@ -46,9 +99,21 @@
     }
   ],
   "geo": [
-    37.77889,
-    13.11509
+    [
+      37.77889,
+      13.11509
+    ]
   ],
+  "provenanceFound": {
+    "_": "The tablet was illegally looted from the site of Rocca d'Entella in the 1970s, and although reported, investigated, and published, remains unrecovered.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic030297_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,13 @@
   "country": "",
   "region": "",
   "settlement": "",
+  "repository": {
+    "_": "Unknown private location",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

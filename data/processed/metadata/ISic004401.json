@@ -3,6 +3,23 @@
   "uri": "ISic004401",
   "title": "I.Sicily inscription 004401",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -18,19 +35,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/16"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/16"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 575,
   "notAfter": 625,
   "places": [
@@ -46,9 +92,22 @@
     }
   ],
   "geo": [
-    37.82199,
-    12.80506
+    [
+      37.82199,
+      12.80506
+    ]
   ],
+  "provenanceFound": {
+    "_": "Panel preserved from a later mosaic floor on top of two earlier layers, this mosaic A, in the paleo-Christian basilica first excavated by Salinas in 1893",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.833019, 12.808066"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004401_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +115,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Salemi",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

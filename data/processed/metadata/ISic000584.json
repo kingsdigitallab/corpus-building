@@ -3,11 +3,31 @@
   "uri": "ISic000584",
   "title": "Funerary inscription for Marcus Limbricius and his wife Helvia Arura",
   "status": "edited",
+  "editions": [
+    {
+      "_": "491841",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100579",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A thick tablet of compact white limestone. The lower left and lower right corners are lost, and the slab is cracked in half vertically down the middle. Left edge is finished smooth and straight; top edge is lightly cut back to the rear and rough; the right and lower edges preserve a carefully cut moulding, which strongly implies that the slab has been re-used from a previous base or other structure.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,43 +38,101 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "42-45",
-      "unit": "mm"
+      "_": "37",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "38-42",
-      "unit": "mm"
+      "_": "51.8",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "33-38",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "36-40",
-      "unit": "mm"
+      "_": "5.4",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Latin text preserved in full over four lines, vertically centred on the stone, with a vacat below. The first line is the largest, the third line smallest and most compressed.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The letters are large and simply cut, without serifs. M has hastae of equal length, all off-vertical; S is shallow; R is closed with a long tail extending from the eye; B has small upper eye, closed; V is wide; F has shorter lower bar; E has equal short bars; C is not perfectly curved/circular, but rather shallow. Interpuncts throughout, formed of light vertical strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "42-45",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "38-42",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "33-38",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "36-40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "17-20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "18-20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "14-17",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 100,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Halaesa",
@@ -68,9 +146,26 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "First reported by Antonio Agustín in the church of S. Maria dei Palazzi.",
+    "type": "found",
+    "subtype": "first-recorded",
+    "geo": "37.996456, 14.261844"
+  },
+  "provenanceObserved": {
+    "_": "display room B2",
+    "type": "observed"
+  },
+  "provenanceLost": {
+    "_": "Lost by the time of Castelli, Principe di Torremuzza (later C18).",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000584_tiled.tif",
     "desc": "Photo J. Prag courtesy Soprintendenza BBCCAA di Messina"
@@ -78,6 +173,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
+  "repository": {
+    "_": "Antiquarium e sito archeologico di Halaesa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/053"
+  },
+  "idno": {
+    "_": "ME 20273",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

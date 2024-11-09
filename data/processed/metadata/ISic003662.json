@@ -3,11 +3,30 @@
   "uri": "ISic003662",
   "title": "I.Sicily inscription 003662",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "_": "108328",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Limestone block, coated with stucco, text engraved and then painted. The block is intact on the left (although the corner is damaged, but broken above, and the front face is broken above and below; the block is also intact on the right, although the front right corner is lost. Traces of a line of text above the preserved one are visible.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,29 +37,58 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "_": "Rubrication, blue coloured",
-      "ana": "#execution.rubrication.blue"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
-  "letterHeight": [
-    {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+  "layoutDesc": {
+    "layout": {
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        },
+        {
+          "_": "Rubrication, blue coloured",
+          "ana": "#execution.rubrication.blue"
+        }
+      ],
+      "damage": ""
     }
-  ],
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -280,
   "notAfter": -250,
   "places": [
@@ -56,9 +104,21 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavation 1988, via De Gasperi, proprietà Acquiconsult, T.131",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1988"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003662_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -66,6 +126,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,11 +3,33 @@
   "uri": "ISic001418",
   "title": "I.Sicily inscription 001418",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644968",
+      "type": "TM"
+    },
+    {
+      "_": "136203 + 136215",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900837",
+      "type": "EDCS"
+    },
+    {
+      "_": "333355",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Two parallel benches, 45 and 47.5m in length, set out in a north-south direction at a distance of 10m separation. \n                                    The more easterly bench is designated 'B' by the excavators; the more westerly, 'A'. Each bench is subdivided into two sections, \n                                    with a seat divider / arm-rest at the end of each section. The inscription is set out over all four sections, beginning at the northern end of Bench B (line 1), \n                                    proceeding to the southern end of B (line 2), and then continuing on the southern part of Bench A (line 3), and on to the northern section of Bench A (line 4).",
   "objectType": {
     "_": "seat",
     "ana": "#object.seat",
@@ -18,19 +40,48 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -2,
   "notAfter": 14,
   "places": [
@@ -46,9 +97,21 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Gymnasium",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.293628, 13.586525"
+  },
+  "provenanceObserved": {
+    "_": "The second half of the second bench (i.e. the northern section of Bench A) is in the courtyard at the entrance to the museum; the rest remains in situ in the gymnasium.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001418_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +119,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

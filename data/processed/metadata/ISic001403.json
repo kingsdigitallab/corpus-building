@@ -3,11 +3,32 @@
   "uri": "ISic001403",
   "title": "I.Sicily inscription 001403",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493019",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101531",
+      "type": "EDCS"
+    },
+    {
+      "_": "140911",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Simply described as an inscription carved on a stone.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -18,19 +39,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -46,9 +96,22 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "According to Ansaldi, it was found in an old tile-making workshop, in contrada Capitano.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1851"
+  },
+  "provenanceObserved": {
+    "_": "Described by Ansaldi, who saw it in the possession of Ioseph Polizzi.",
+    "type": "observed",
+    "subtype": "recorded"
+  },
   "facsimile": {
     "url": "ISic001403_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +119,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": "",
   "textLang": {
     "_": "Possibly Ancient Greek",
     "mainLang": "grc",

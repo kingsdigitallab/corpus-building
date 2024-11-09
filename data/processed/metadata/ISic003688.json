@@ -3,6 +3,23 @@
   "uri": "ISic003688",
   "title": "I.Sicily inscription 003688",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,19 +35,48 @@
     "ana": "#material.stone.local",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 500,
   "places": [
@@ -41,9 +87,20 @@
     }
   ],
   "geo": [
-    36.95151,
-    14.52788
+    [
+      36.95151,
+      14.52788
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in late 1970s or early 1980s during work on sewage plant by the\n                            Ippari river, below Vittoria (36.929038, 14.531914)",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003688_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +108,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Vittoria",
+  "repository": {
+    "_": "Polimuseo Attilio\n                            Zarino",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/092"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

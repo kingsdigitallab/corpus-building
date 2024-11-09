@@ -3,6 +3,25 @@
   "uri": "ISic003397",
   "title": "I.Sicily inscription 003397",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645615",
+      "type": "TM"
+    },
+    {
+      "_": "137138",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
@@ -18,20 +37,52 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "90-100",
-      "unit": "mm"
+      "_": "13",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "22",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "11",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "90-100",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -50,
   "places": [
@@ -47,9 +98,20 @@
     }
   ],
   "geo": [
-    38.09296,
-    13.53147
+    [
+      38.09296,
+      13.53147
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the area of the agora.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003397_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +119,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Solunto",
+  "repository": {
+    "_": "Area Archeologica e Antiquarium di Solunto",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/070"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

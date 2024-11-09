@@ -3,11 +3,31 @@
   "uri": "ISic001877",
   "title": "Fragment of an imperial honorific",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492326",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "23400546",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Described as a 'tabula marmorea', with no indication as to its state of preservation or dimensions.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,21 +38,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 399,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Tyndaris",
@@ -46,13 +96,38 @@
     }
   ],
   "geo": [
-    38.14227,
-    15.04385
+    [
+      38.14227,
+      15.04385
+    ]
   ],
+  "provenanceFound": {
+    "_": "Giardina (1882) reports seeing this \"Presso una casina di campagna di proprietà del Sig. Francesco Greco, distante un  chilometro da Patti\", which implies a local provenance, whether from the site of Tindari or the environs. Fasolo notes that CIL attributes the porperty to one Francisco Gatti instead, and following Scaffidi notes that casina was in the locality of Croce Segreto, probably below the SP 122 at Vigna Grande.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1882"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "lost (not observed since the original report, reproduced in CIL).",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Patti",
+  "repository": {
+    "_": "Private collection",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

@@ -3,11 +3,32 @@
   "uri": "ISic000163",
   "title": "Funerary inscription for Cornelia Scepsis",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175699",
+      "type": "TM"
+    },
+    {
+      "_": "077917",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "8900395",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Plaque broken into four pieces, with irregular edges. Small fragment missing at the centre of the reattached pieces. Rear of plaque is relatively flat.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,50 +39,89 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "32",
-      "unit": "mm"
+      "_": "22.5 (20 at right side)",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "23-29",
-      "unit": "mm"
+      "_": "49.5 (at widest)",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "27-30",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "28",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "22",
-      "unit": "mm"
+      "_": "33",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Five lines of Latin letters, roughly centred on stone",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Well-formed and straight letters, with regular spaces between letters. Serifs on most letters. Use of comma-shaped interpuncts between each word. Letter heights reduce in size at the end of lines 2 and 3. Extended 'I' in line 5 (27 mm).",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "32",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "23-29",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "27-30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "28",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "22",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 150,
   "notAfter": 250,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -75,9 +135,39 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found, together with ,  and  in contrada Madonna della Catena, on the property of Gallegra, in August 1907",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1907-08",
+    "ref": [
+      {
+        "_": "ISic000161",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000161"
+      },
+      {
+        "_": "ISic000162",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000162"
+      },
+      {
+        "_": "ISic000164",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000164"
+      }
+    ],
+    "geo": "37.977321, 13.708270"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2022-07-06. On display in Museo Civico Baldassare Romano.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-07-06",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000163_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-07-10"
@@ -85,6 +175,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "7ad",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

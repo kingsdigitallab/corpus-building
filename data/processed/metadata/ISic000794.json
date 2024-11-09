@@ -3,11 +3,37 @@
   "uri": "ISic000794",
   "title": "Funerary inscription for Kale",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493900",
+      "type": "TM"
+    },
+    {
+      "_": "140959",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "41300019",
+      "type": "EDCS"
+    },
+    {
+      "_": "175606",
+      "type": "PHI"
+    },
+    {
+      "_": "175607",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Thick plaque of white marble, intact on all sides, but irregular on the left and right sides. The surface is lightly pitted particularly on the lower half.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +44,59 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "30-45",
-      "unit": "mm"
+      "_": "28",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "54",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of ancient Greek filling the upper portion of the face of the stone, with a consistent left margin, the right side more cramped and irregular. The lower part of the stone is blank.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are somewhat irregular in size, with simple straight line serifs terminating most strokes. Alpha with both broken bar and straight bar; beta both open and closed with rounded eyes; epsilon quadrate with equal length strokes; theta and omicron are rhomboid; kappa has short arms; mu has vertical first and last, short middle strokes; pi has overhanging horizontal; sigma is quadrate lunate; omega is inverted cursive form, having the appearance of mu; the pi-rho ligature is used twice; staurogram at the end of the text.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "30-45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Centuripae",
@@ -47,9 +110,24 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Contrada Gelofia, Centuripe, 1877 ",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1877",
+    "geo": "37.614275, 14.733503"
+  },
+  "provenanceObserved": {
+    "_": "Quagliana 2022-05-23",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#NQ"
+  },
   "facsimile": {
     "url": "ISic000794_tiled.tif",
     "desc": "Photo J.Prag 2022-05-23"
@@ -57,6 +135,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8707",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

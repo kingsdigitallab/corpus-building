@@ -3,11 +3,33 @@
   "uri": "ISic000537",
   "title": "Fragment of a dedication to Venus Erycina",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175710",
+      "type": "TM"
+    },
+    {
+      "_": "092733",
+      "type": "EDR"
+    },
+    {
+      "_": "006236",
+      "type": "EDH"
+    },
+    {
+      "_": "22000842",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A statue base, according to Mommsen 1883 (CIL 10.7257) and Bücheler (CIL 2.7257). A stone slab with fractures on all sides. The surviving piece has an irregular rectangular shape. The fracture on the left side cuts the stone from top to bottom at an angle of about 20 degrees, which then decreases gradually. The fracture on the right side is almost parallel to the one on the left. The base therefore widens from bottom to top on the left side, while on the right side it narrows. The two fractures cut the text of the inscription irregularly to the left and right, while the inscription does not seem to continue at either the bottom or the top. The back of the stone appears roughly worked.",
   "objectType": {
     "_": "Statue base",
     "ana": "#object.statue_base",
@@ -18,36 +40,92 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line a 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "33",
-      "unit": "mm"
+      "_": "26",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line a2",
-      "from": "line2",
-      "to": "line2",
-      "h": "28",
-      "unit": "mm"
+      "_": "33",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "columns b, c, codicil",
-      "from": "line3",
-      "to": "line9",
-      "h": "11",
-      "unit": "mm"
+      "_": "12",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "The text is arranged over nine lines. The first two lines (praescriptio), larger than the others, are placed across the top. Two columns follow (b and c), the first one consisting of two lines (and a vacat) and the second one of seven. Lines 1-2 of the left column form a separate text from lines 1-2 in the right column. The space between the columns is 2.4 cm.",
+      "damage": {
+        "ana": "#text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Scriptura actuaria with letters made with the brush edge at an angle of less than 30 degrees to the writing line (rustica). All letters, except the last \"a\" in column 2, line 8, are rubricated, but most of the colour appears too bright to be ancient (and appears identical to that with which the inventory number on the lower left corner has been applied); it also appears that not all the interpuncts have been rubricated.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line a 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "33",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line a2",
+        "from": "line2",
+        "to": "line2",
+        "h": "28",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "columns b, c, codicil",
+        "from": "line3",
+        "to": "line9",
+        "h": "11",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line a1 to a2",
+        "from": "line1",
+        "to": "line2",
+        "h": "13",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line a2 to bc1",
+        "from": "line2",
+        "to": "line3",
+        "h": "10",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation columns b, c, codicil",
+        "from": "line3",
+        "to": "line9",
+        "h": "6",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 21,
   "notAfter": 25,
+  "evidence": "prosopography",
   "places": [
     {
       "_": "Eryx",
@@ -61,9 +139,26 @@
     }
   ],
   "geo": [
-    38.03785,
-    12.58778
+    [
+      38.03785,
+      12.58778
+    ]
   ],
+  "provenanceFound": {
+    "_": "Eryx, discovered under the ruins of the temple of Venus Erycina at the end of the 18th century according to Hager (1799, 10). The now lost fragment would have been found in the temple too. It was discovered in 1616 according to Cordici.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1780",
+    "cert": "low",
+    "geo": "38.035247, 12.592056"
+  },
+  "provenanceObserved": {
+    "_": "Vacanti 2021-08-20",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#CV",
+    "when": "2021-08-20"
+  },
   "facsimile": {
     "url": "ISic000537_tiled.tif",
     "desc": "Photo C. Vacanti with the collaboration and permission of the Museo Regionale di Trapani Agostino Pepoli"
@@ -71,6 +166,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Trapani",
+  "repository": {
+    "_": "Museo Regionale Agostino Pepoli",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/105"
+  },
+  "idno": {
+    "_": "5227",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

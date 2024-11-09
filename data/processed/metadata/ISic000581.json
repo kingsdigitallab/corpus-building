@@ -3,11 +3,31 @@
   "uri": "ISic000581",
   "title": "I.Sicily inscription 000581",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491838",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100576",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "testament",
     "ana": "#function.legal.testament #function.document.private",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/63.html"
   },
+  "support": "A large plaque of white marble, reused as support for a mosaic.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +38,56 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-13",
-      "from": "line1",
-      "to": "line13",
-      "h": "35-48",
-      "unit": "mm"
+      "_": "81.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "125",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "4.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "A monumental text over 13 lines.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-13",
+        "from": "line1",
+        "to": "line13",
+        "h": "35-48",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
+  "evidence": "internal-date",
   "places": [
     {
       "_": "Cephaloedium",
@@ -47,9 +101,20 @@
     }
   ],
   "geo": [
-    38.03856,
-    14.02285
+    [
+      38.03856,
+      14.02285
+    ]
   ],
+  "provenanceFound": {
+    "_": "Was lost for much of the C20, but rediscovered in 1974 during restoration works.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000581_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +122,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
+  "repository": "Duomo",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

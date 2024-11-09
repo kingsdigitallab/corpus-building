@@ -3,11 +3,29 @@
   "uri": "ISic020919",
   "title": "ISic020919",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Fragment of base and foot of a black-glazed skyphos.",
   "objectType": {
     "_": "skyphos",
     "ana": "#object.vessel.skyphos",
@@ -18,21 +36,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the underside of the foot of the skyphos.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "material-context lettering",
   "places": [
     {
       "_": "Entella",
@@ -46,9 +95,22 @@
     }
   ],
   "geo": [
-    37.77889,
-    13.11509
+    [
+      37.77889,
+      13.11509
+    ]
   ],
+  "provenanceFound": {
+    "_": "Sporadic find. From the 'central area' (Ampolo 2019) of the settlement of Entella.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.77889,13.11509"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020919_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +118,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Entella",
+  "repository": {
+    "_": "Museo Archeologico/Antiquarium Comunale di Entella",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/078"
+  },
+  "idno": {
+    "_": "E6652",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",

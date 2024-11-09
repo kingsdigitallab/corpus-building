@@ -3,11 +3,30 @@
   "uri": "ISic001676",
   "title": "Fragment of a Latin funerary inscription",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "34700073",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of the lower left corner of a thick tablet of off-white marble, intact left and below, broken right and above. The rear is smooth, with traces of mortar. Light chipping/damage to the left edge.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,43 +37,101 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "incomplete",
-      "unit": "mm"
+      "_": "21.2",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "41-42",
-      "unit": "mm"
+      "_": "16.9-17.4",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "32-33",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "18-20",
-      "unit": "mm"
+      "_": "3.6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin letters, with an uneven left margin, and of varying heights, the final line much smaller and with space mid-line.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Neat v-cut letters of rather square/blockish style, with simple straight serifs to ends of the strokes. T in line 2 is enlarged (50mm) and as is final I in line 4. Interpuncts of triangular form. C is large and asymmetrical; E has equal length horizontals.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "incomplete",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "41-42",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "32-33",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "18-20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "21",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "23",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "12-17",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 50,
   "notAfter": 200,
+  "evidence": "lettering textual-context",
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -68,9 +145,32 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the vicinity of the , entered into the museum on 17.12.1888",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1888-12-17",
+    "placeName": {
+      "_": "amphitheatre at Siracusa",
+      "ref": "https://pleiades.stoa.org/places/473876126"
+    },
+    "geo": {
+      "_": "37.074981, 15.278856",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Autopsy, Prag, 2015-07-01, magazzino B, cassa 26",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "when": "2015-07-01"
+  },
   "facsimile": {
     "url": "ISic001676_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -78,6 +178,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "6819",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

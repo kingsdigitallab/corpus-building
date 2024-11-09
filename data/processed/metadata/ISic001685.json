@@ -3,11 +3,29 @@
   "uri": "ISic001685",
   "title": "I.Sicily inscription 001685",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Described by Salinas as a large brick ('grosso mattone')",
   "objectType": {
     "_": "brick",
     "ana": "#object.brick",
@@ -18,21 +36,47 @@
     "ana": "#material.clay.fired",
     "ref": "http://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "Graffiti",
-    "ana": "#execution.scratched",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "text described as scratched on the brick (so post-firing?)",
+      "rs": {
+        "_": "Graffiti",
+        "ana": "#execution.scratched",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Salinas described the orthography as Byzantine, suggesting lunate sigma (rectilinear in form).",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Haluntium",
@@ -46,9 +90,22 @@
     }
   ],
   "geo": [
-    38.07261,
-    14.70093
+    [
+      38.07261,
+      14.70093
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded; donated to Palermo Museum",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1880"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001685_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +113,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

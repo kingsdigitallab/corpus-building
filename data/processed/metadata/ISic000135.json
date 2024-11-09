@@ -3,11 +3,32 @@
   "uri": "ISic000135",
   "title": "Funerary inscription for Auctarius",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175731",
+      "type": "TM"
+    },
+    {
+      "_": "076859",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900644",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Top part of a plaque of a variegated brown/pink stone. Intact top, left and right (apart from the very top left corner), broken across the lower half. The rear is very uneven, and cut back, from the front edges on all sides, to that the front edge is thin, but mostly preserved. The surface is relatively poor due to the stone's typology.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,36 +39,73 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "44-47",
-      "unit": "mm"
+      "_": "16.2",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "40-41 (NI ligature = 55)",
-      "unit": "mm"
+      "_": "29.2",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "at least 31",
-      "unit": "mm"
+      "_": "2.5-4.5 (thinner on right side)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin letters, filling the surface of the stone, maintaining left and right margins.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are relatively shallow v-cut, with terminal serifs and oval interpuncts, and some signs of cursive influence. Note the ligature in line 2 (NI) and the very ornate G and E.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "44-47",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "40-41 (NI ligature = 55)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "at least 31",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -62,9 +120,22 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Ferrua in 1941, as one of several pieces in the museo civico 'venute alla luce negli ultimi anni, durante costruzioni fatte in citta'.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1941"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-13",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000135_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana: photo J. Prag 13-07-2022"
@@ -72,6 +143,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "32",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

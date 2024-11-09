@@ -3,11 +3,29 @@
   "uri": "ISic020580",
   "title": "ISic020580",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ludic text",
     "ana": "#function.ludic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/369.html"
   },
+  "support": "Hydria.",
   "objectType": {
     "_": "hydria of local manufacture",
     "ana": "#object.vessel.hydria",
@@ -18,22 +36,55 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "passim",
-      "from": "sectiona",
-      "to": "sectionc",
-      "h": "4",
-      "unit": "mm"
+      "_": "34",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "88",
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "p": "The inscription is placed on three different parts of the vessel, divided as follows: \n                                        1) a first text on the inside of the rim of the vessel, arranged in a circle, boustrophedon; \n                                        2) a second text identical to the first arranged on the body of the vessel in three lines, boustrophedon; \n                                        3) a third text on the opposite side of the body, in two lines, boustrophedon.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "passim",
+        "from": "sectiona",
+        "to": "sectionc",
+        "h": "4",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -499,
   "notAfter": -480,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Herbessus (?)",
@@ -47,9 +98,22 @@
     }
   ],
   "geo": [
-    37.42658,
-    14.30061
+    [
+      37.42658,
+      14.30061
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Montagna di Marzo.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.42658,14.30061"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020580_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +121,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

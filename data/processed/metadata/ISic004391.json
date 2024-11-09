@@ -3,6 +3,23 @@
   "uri": "ISic004391",
   "title": "Sikel funerary inscription",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +35,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "42",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "97",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "30",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "_": "Large letters in single line\n                                    \n                                \t\n\t\t\t",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -500,
+  "precision": "low",
   "places": [
     {
       "_": "Euboia",
@@ -46,9 +97,26 @@
     }
   ],
   "geo": [
-    37.15674,
-    14.70555
+    [
+      37.15674,
+      14.70555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Necropolis at contrada Vigna della Signora; found October 1920, together with a second inscribed piece (ISic003363) and two uninscribed blocks",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "none",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic004391_Orsi_tiled.tif",
     "desc": "Drawing of P.Orsi, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -56,6 +124,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "lost",
+  "repository": "",
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

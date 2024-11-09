@@ -3,12 +3,30 @@
   "uri": "ISic020606",
   "title": "ISic020606",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ludic (?)",
     "ana": "#function.ludic",
     "cert": "low",
     "ref": "https://www.eagle-network.eu/voc/ typeins/lod/369.html"
   },
+  "support": "Locally manufactured askos.",
   "objectType": {
     "_": "askos (local production)",
     "ana": "#object.vessel.askos",
@@ -19,21 +37,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription is placed on the upper part of the body of the askos. The text is arranged in two lines, the first runs clockwise, the second counter-clockwise.",
+      "damage": {
+        "ana": "#text_condition.complete text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -499,
   "notAfter": -450,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Centuripae",
@@ -47,9 +96,22 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in a grave from the archaic necropolis of the modern Centuripe.",
+    "type": "found",
+    "when": "1824",
+    "geo": "37.62336, 14.74049"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020606_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +119,14 @@
   "country": "Germany",
   "region": "Baden-Württemberg",
   "settlement": "Karlsruhe",
+  "repository": {
+    "_": "Badisches Landesmuseum",
+    "role": "museum",
+    "ref": "https://www.landesmuseum.de/"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

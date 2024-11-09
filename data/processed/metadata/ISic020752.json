@@ -3,11 +3,29 @@
   "uri": "ISic020752",
   "title": "ISic020752",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ludic",
     "ana": "#function.ludic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/369.html"
   },
+  "support": "Anfora.",
   "objectType": {
     "_": "anfora",
     "ana": "#object.vessel.anfora",
@@ -18,21 +36,60 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "type": "diameter",
+        "subtype": "base",
+        "unit": "cm"
+      },
+      "1": {
+        "type": "diameter",
+        "subtype": "foot",
+        "unit": "cm"
+      },
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "p": "The text is painted on the wall of the vessel, arranged in two parallel bands spaced out by a geometric decoration.\n                                            The two strips have about the same number of letters and are arranged symmetrically to one another.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -525,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Herbessus (?)",
@@ -46,9 +103,21 @@
     }
   ],
   "geo": [
-    37.42658,
-    14.30061
+    [
+      37.42658,
+      14.30061
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (Soprintendenza alle Antichità di Siracusa, 1966—1968) in the area of the settlement.",
+    "type": "found",
+    "geo": "37.42658, 14.30061"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020752_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +125,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

@@ -3,11 +3,31 @@
   "uri": "ISic002773",
   "title": "I.Sicily inscription 002773",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645170",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "334208",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Upper part of stele with poorly polished surfaces, broken down and on the right side, missing the upper left corner of the front face",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -18,29 +38,65 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "60-65",
-      "unit": "mm"
+      "_": "22.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "48-60",
-      "unit": "mm"
+      "_": "21",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.partly_illegible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "60-65",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "48-60",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Lipara",
@@ -54,9 +110,23 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1979 in zone A of trench XXXVI (of the Zagami property). Reused in side E of the 1804 tomb",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1979",
+    "geo": "38.467130, 14.953871"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic002773_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,6 +134,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": {
+    "_": "Museo Archeologico Regionale Eoliano \"Luigi Bernabò Brea\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/048"
+  },
+  "idno": {
+    "_": "13459",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

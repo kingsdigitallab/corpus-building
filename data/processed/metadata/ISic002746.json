@@ -3,6 +3,27 @@
   "uri": "ISic002746",
   "title": "I.Sicily inscription 002746",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644844",
+      "type": "TM"
+    },
+    {
+      "_": "136614",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64400342",
+      "type": "EDCS"
+    },
+    {
+      "_": "332189",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "signature",
     "ana": "#function.signature",
@@ -18,21 +39,54 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/16"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of dark tesserae letters on a white field",
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/16"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -125,
   "notAfter": -75,
+  "precision": "low",
   "places": [
     {
       "_": "Segesta",
@@ -46,9 +100,20 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in situ, under later structures, near the theatre",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic002746_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "_": "in situ",
+    "role": "site"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

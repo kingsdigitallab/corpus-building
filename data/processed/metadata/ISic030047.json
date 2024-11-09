@@ -3,12 +3,30 @@
   "uri": "ISic030047",
   "title": "ISic030047",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "tessera (civic)?",
     "ana": "#function.tessera.civic",
     "cert": "low",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/130.html"
   },
+  "support": "Lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -19,21 +37,54 @@
     "ana": "#material.bronze",
     "ref": "https://www.eagle-network.eu/voc/material/lod/110.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The inscription runs on three lines on one side of the the lamina.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "archaeological-context lettering",
   "places": [
     {
       "_": "Terravecchia di Grammichele",
@@ -42,9 +93,24 @@
     }
   ],
   "geo": [
-    37.214706,
-    14.636362
+    [
+      37.214706,
+      14.636362
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered among the ex-voto from the shrine of Poggio dell'Aquila.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.214706, 14.636362"
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2022-01-17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2022-01-17"
+  },
   "facsimile": {
     "url": "ISic030047_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +118,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "15757",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",

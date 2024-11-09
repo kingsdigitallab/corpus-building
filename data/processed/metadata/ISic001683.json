@@ -3,11 +3,29 @@
   "uri": "ISic001683",
   "title": "Fragment of monumental Latin text",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "A rectangular brick, broken on the lower part",
   "objectType": {
     "_": "brick",
     "ana": "#object.brick",
@@ -18,23 +36,54 @@
     "ana": "#material.clay.fired",
     "ref": "http://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "200",
-      "unit": "mm",
-      "cert": "low"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "26",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "11",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "A single monumental letter filling the face of the brick",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The letter is incomplete and the photo poor, but appears to be a fine monumental letter R, v-cut, with rounded large eye, closed. The letter must have been in excess of 20 cm in height",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "200",
+        "unit": "mm",
+        "cert": "low"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Centuripae",
@@ -48,9 +97,23 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during repair works to via Traiano, in 'room c' of a structure identified as remains of imperial-era bath-building, between via Traiano and via Adriano in Centuripe",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1949-01-29",
+    "geo": "37.623389, 14.741257"
+  },
+  "provenanceObserved": {
+    "_": "No autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001683_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +121,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Centuripe",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/002"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

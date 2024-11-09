@@ -3,11 +3,29 @@
   "uri": "ISic001703",
   "title": "Fragmentary Greek inscription",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Fragment of a thick marble plaque, belonging to the lower left corner (intact to left and below, broken above and to the right; the face of the lower left corner is lost also)",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,21 +36,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "6.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "10.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "4",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two lines of Greek letters, with a single letter vacat at line beginning and a distinct vacat below the second line.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Described by Orsi as fine, small, regular characters of the fourth or third century BCE; Alpha has straight bar; Epsilon has shorter middle bar; omicron is smaller than other characters and mid-line; sigma is four-bar with top and bottom strokes angled moderately outwards, middle strokes extending almost full-width.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -201,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -46,9 +101,28 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Orsi's excavations at the Temple of Olympian Zeus, Siracusa, between 6 April and 6 May 1893 (although the inventory states March 1893).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1893",
+    "geo": "37.051605, 15.257322"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Not located to date",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001703_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +130,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "14930",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

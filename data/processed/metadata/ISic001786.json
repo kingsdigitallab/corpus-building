@@ -3,11 +3,29 @@
   "uri": "ISic001786",
   "title": "I.Sicily inscription 001786",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Small fragment of a marble plaque, intact across the top, broken on the other three sides",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +36,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "80",
-      "unit": "mm"
+      "_": "14",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "11.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Neatly v-cut monumental letters",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "80",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -47,15 +100,38 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavations in the crypt of S. Marziano, Siracusa, December 1904",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1904-12"
+  },
+  "provenanceObserved": {
+    "_": "Gradante, 2022-02-12",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-02-12"
+  },
   "facsimile": {
     "url": "ISic001786_tiled.tif",
     "desc": "I.Sicily with the permission of the Pontificia Commissione di Archeologia Sacra"
   },
   "country": "Italy",
   "region": "Sicily",
+  "repository": {
+    "_": "Antiquarium della Pontificia Commissione di Archeologia Sacra, Siracusa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/187"
+  },
+  "idno": {
+    "_": "24403d",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

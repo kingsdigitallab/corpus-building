@@ -3,11 +3,29 @@
   "uri": "ISic001698",
   "title": "I.Sicily inscription 001698",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "prayer/invocation",
     "ana": "#function.prayer",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/85.html"
   },
+  "support": "Mosaic floor of the frigidarium, approx. 6.25 x 5.85 m, within a late fourth-century (c.380 CE) bath house adjoining a fourth-century Roman villa.",
   "objectType": {
     "_": "mosaic",
     "ana": "#object.mosaic",
@@ -18,21 +36,52 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The primary text is laid out in a border surrounding all four sides of the mosaic floor (whihc is itself made up of pairs of overlapping and intertwining irregular hexagons). The border has a black frame, with white background, containing black letters the full height of the border. The text begins in the SW corner, proceeding along the West, North, East and South sides, with the letters to be read from within the room on each side. Four monograms, letters on white background, occupy the circular rosettes at the centre of ribbon-bordered octagons in the middle of the mosaic. The south-east monogram is damaged and lost.",
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 380,
   "notAfter": 390,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Gerace",
@@ -41,9 +90,23 @@
     }
   ],
   "geo": [
-    37.465295,
-    14.253326
+    [
+      37.465295,
+      14.253326
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavation in 2017/18",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "2016",
+    "geo": "37.465295, 14.253326"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001698_tiled.tif",
     "desc": "Photo Lorenzo Zurla"
@@ -51,6 +114,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gerace",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

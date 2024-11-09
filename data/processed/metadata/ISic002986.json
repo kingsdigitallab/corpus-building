@@ -3,6 +3,25 @@
   "uri": "ISic002986",
   "title": "I.Sicily inscription 002986",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645338",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "329611",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "accounts",
     "ana": "#function.account",
@@ -13,21 +32,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -44,
   "notAfter": -36,
+  "precision": "medium",
   "places": [
     {
       "_": "Tauromenium",
@@ -41,9 +90,21 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "2009.10.06",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic002986_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +112,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": {
+    "_": "Antiquarium del\n                            Teatro Antico",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/062"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

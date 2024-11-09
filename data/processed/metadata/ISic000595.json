@@ -3,11 +3,31 @@
   "uri": "ISic000595",
   "title": "I.Sicily inscription 000595",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491857",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100596",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Fragment of a marble plaque, with traces of red preserved in the letters (Salinas).",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,21 +38,53 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 198,
   "notAfter": 217,
+  "evidence": "office",
   "places": [
     {
       "_": "Tyndaris",
@@ -46,9 +98,26 @@
     }
   ],
   "geo": [
-    38.14227,
-    15.04385
+    [
+      38.14227,
+      15.04385
+    ]
   ],
+  "provenanceFound": {
+    "_": "Observed by Salinas in the collection of the Baron Sciacca in Villa della Scala near Tindari, in a collection formed almost wholly of pieces from the site of Tyndaris. Not subsequently recorded.",
+    "type": "found",
+    "subtype": "first-recorded"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000595_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +125,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari (?)",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

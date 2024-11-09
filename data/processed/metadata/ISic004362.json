@@ -3,11 +3,29 @@
   "uri": "ISic004362",
   "title": "I.Sicily inscription 004362",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A rough fragment of limestone with uneven face, broken on all sides.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -18,20 +36,56 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "30-35",
-      "unit": "mm"
+      "_": "11",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "18",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "12",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "remains of two lines of Greek letters",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Simple deep cut letters, omicron slightly smaller than other letters, phi extended to 5 cm.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "30-35",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -47,9 +101,22 @@
     }
   ],
   "geo": [
-    38.07261,
-    14.70093
+    [
+      38.07261,
+      14.70093
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in a tomb in Localita Calvario, presumed to be from ancient necropolis",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2006-04",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic004362_tiled.tif",
     "desc": "Photo J. Prag, 2018-07-05"
@@ -57,6 +124,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "S. Marco d'Alunzio",
+  "repository": {
+    "_": "Museo della cultura e delle Arti Figurative Bizantine e Normanne",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/054"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

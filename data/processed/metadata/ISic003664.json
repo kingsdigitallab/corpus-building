@@ -3,11 +3,30 @@
   "uri": "ISic003664",
   "title": "I.Sicily inscription 003664",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "_": "108280",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "An aedicula of sandstone, coated in plaster, with painted text and decoration.",
   "objectType": {
     "_": "aedicula",
     "ana": "#object.aedicula",
@@ -17,21 +36,52 @@
     "_": "Plaster on stone",
     "ana": "#material.plaster"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is set out to left and right of a painted figure, two lines (each of one word) on each side.",
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Lilybaeum",
@@ -45,9 +95,20 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003664_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +116,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mozia",
+  "repository": {
+    "_": "Villa Whitaker",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/107"
+  },
+  "idno": {
+    "_": "756",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

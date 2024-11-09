@@ -3,12 +3,33 @@
   "uri": "ISic001140",
   "title": "Fragmentary funerary inscription",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492753",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102297",
+      "type": "EDCS"
+    },
+    {
+      "_": "140625",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
     "cert": "low"
   },
+  "support": "Fragment of a small white marble plaque. Original edges at top and bottom, but missing fragment to left, and bottom right. Rear is flat.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -19,43 +40,81 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "24",
-      "unit": "mm"
+      "_": "16",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "17-27",
-      "unit": "mm"
+      "_": "13",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "20-31",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "24-27",
-      "unit": "mm"
+      "_": "2.6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of fragmentary Greek text.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are very thin, and chiselling is rough and uneven. Letters are unevenly spaced. Small serifs on letters. Use of cursive omega; line 2 xi in plaster cast has a mid-line which slopes upwards; upsilon in lines 2 and 4 are shaped like a lower-case alphabetic 'Y'.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "24",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "17-27",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "20-31",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "24-27",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -69,9 +128,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Reportedly found in 1879 'one hundred meters from the city walls' of Termini Imerese, in 'the house of Mr. Sinibaldi Oddo'. It was placed 'above a brick-covered tomb'. (Brugnone 1974, quoting Fiorelli).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1879"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2022-07-13. Brugnone (1974) saw in the Museo Civico Baldassare Romano both the original fragment, and a plaster cast of the whole. Remaining in the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 1, shelf 4, is now only the original fragment.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-07-13",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic001140_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -79,6 +153,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "19",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

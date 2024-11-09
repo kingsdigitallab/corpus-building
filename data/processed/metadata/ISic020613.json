@@ -3,12 +3,30 @@
   "uri": "ISic020613",
   "title": "ISic020613",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "votive (?)",
     "ana": "#function.votive",
     "cert": "low",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/83.html"
   },
+  "support": "Fragment of tile.",
   "objectType": {
     "_": "tile",
     "ana": "#object.tile",
@@ -19,21 +37,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130"
   },
-  "layoutDesc": {
-    "_": "scratched (before firing)",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched (before firing)",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "evidence": "material-context lettering",
   "places": [
     {
       "_": "Hybla Gereatis (?)",
@@ -47,9 +98,21 @@
     }
   ],
   "geo": [
-    37.56675,
-    14.90254
+    [
+      37.56675,
+      14.90254
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations carried out by P. Pelagatti at Paternò-Civita.",
+    "type": "found",
+    "geo": "37.56675, 14.90254"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020613_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +120,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Paternò",
+  "repository": {
+    "_": "Museo Civico Gaetano Savasta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/038"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "csx",

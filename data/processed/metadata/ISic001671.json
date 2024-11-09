@@ -3,11 +3,29 @@
   "uri": "ISic0016710",
   "title": "Fragment of a monumental Latin inscription",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of a marble plaque, broken on all sides (and with a break upper right but reattached); thickest upper right, slightly thinner at the base.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,28 +36,67 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "20.6",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
-    }
-  ],
-  "letterHeight": [
+      "_": "28.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "greater than 100",
-      "unit": "mm"
+      "_": "5.1-5.6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two lines of text, broken off top and bottom, neither complete in height",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Neatly carved large v-cut letters, with light serifs. The tail of the R has an extended serif along the line; N is close to square in form. Traces of red paint are visible.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "greater than 100",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "30-33",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 150,
+  "evidence": "lettering material-context",
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -53,9 +110,20 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Of uncertain provenance, first noted in the first volume of the museum inventory, compiled in 1885",
+    "type": "found",
+    "notAfter": "1885"
+  },
+  "provenanceObserved": {
+    "_": "Magazzino B, cassetta 16",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001671_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -63,6 +131,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "255",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

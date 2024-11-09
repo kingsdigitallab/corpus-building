@@ -3,6 +3,30 @@
   "uri": "ISic001092",
   "title": "I.Sicily inscription 001092",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284821",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102250",
+      "type": "EDCS"
+    },
+    {
+      "_": "140575",
+      "type": "PHI"
+    },
+    {
+      "_": "175629",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +42,54 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "19.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "36.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Partanna",
@@ -41,9 +98,22 @@
     }
   ],
   "geo": [
-    37.7268,
-    12.88917
+    [
+      37.7268,
+      12.88917
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found 1.5km outside Partanna, above Belice, in April 1880 (so IGPalermo)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1880-04"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001092_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +121,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8770",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

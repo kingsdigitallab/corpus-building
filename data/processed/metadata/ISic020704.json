@@ -3,11 +3,29 @@
   "uri": "ISic020704",
   "title": "ISic020704",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.production-ownership",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Attic Black-glazed kylix (concave lip C type, period of diffusion 500-480 BCE).",
   "objectType": {
     "_": "kylix",
     "ana": "#object.vessel.kylix",
@@ -18,21 +36,63 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "type": "graffito",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "type": "graffito",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription in placed on the bottom of the interior of the cup.",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Terravecchia di Grammichele",
@@ -41,9 +101,22 @@
     }
   ],
   "geo": [
-    37.214706,
-    14.636362
+    [
+      37.214706,
+      14.636362
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered among the grave goods in the tomb IX/1988 in the necropolis of Casa Cantoniera.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.214706, 14.636362"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020704_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +124,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Grammichele",
+  "repository": {
+    "_": "Museo Archeologico di Grammichele",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/025"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

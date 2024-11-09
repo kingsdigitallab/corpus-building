@@ -3,6 +3,25 @@
   "uri": "ISic003960",
   "title": "I.Sicily inscription 003960",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "334436",
+      "type": "PHI"
+    }
+  ],
+  "support": "Upper part of a stele, broken at the bottom.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -13,20 +32,53 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "56-60",
-      "unit": "mm"
+      "_": "21",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "44",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "56-60",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -42,9 +94,20 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded. It is claimed that it was found in Lipari.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Moved to the island of Stromboli where it still is, inserted into the wall of a modern villa, private property.",
+    "type": "observed",
+    "subtype": "transferred"
+  },
   "facsimile": {
     "url": "ISic003960_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +115,12 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Stromboli",
+  "repository": {
+    "role": "museum"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

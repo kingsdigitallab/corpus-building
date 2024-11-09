@@ -3,11 +3,29 @@
   "uri": "ISic030305",
   "title": "ISic030305",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "tessera (civic)",
     "ana": "#function.tessera.civic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/130.html"
   },
+  "support": "Tessera.",
   "objectType": {
     "_": "tessera",
     "ana": "#object.tessera",
@@ -18,20 +36,49 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "2.3",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "3.3",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "0.2-0.3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The fragment does not show signs of writing.",
+      "damage": {
+        "ana": "#text_condition.lost"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -480,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -45,9 +92,23 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found on the 27th of September 1990 in the archaeological area of Kamarina, from an excavation survey conducted north of the temple of Athena («Da un saggetto nel punto in cui sono state ritrovate delle lamine iscritte a nord del tempio, vicino alla strada che scende ai motori», G. Di Stefano; see Cordano, Di Stefano 2017, fig. 9).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1990-09-27",
+    "geo": "36.87316, 14.4415"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030305_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +116,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
+  "idno": {
+    "_": "782",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

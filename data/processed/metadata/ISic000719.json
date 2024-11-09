@@ -3,6 +3,25 @@
   "uri": "ISic000719",
   "title": "I.Sicily inscription 000719",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175775",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "6100278",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
@@ -18,22 +37,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "78",
-      "unit": "mm"
+      "_": "20.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "32.8",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "5.4-6.0",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "78",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not available",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 300,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -47,9 +101,22 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Assumed to come from the theatre (in store in a box labelled 'marmi provenienti dall'Antiquarium')",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "2014.09.25",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic000719_tiled.tif",
     "desc": "Photo J.Prag, with permission of Soprintendenza di Catania"
@@ -57,6 +124,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Teatro Romano di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/017"
+  },
+  "idno": {
+    "_": "5937",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

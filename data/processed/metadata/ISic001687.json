@@ -3,6 +3,23 @@
   "uri": "ISic001687",
   "title": "I.Sicily inscription 001687",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,21 +35,56 @@
     "ana": "#material.plaster",
     "ref": "http://www.eagle-network.eu/voc/material/lod/126.html"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "65",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "50",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Traces of a single line of letters above/between the heads of a reclining couple",
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Lilybaeum",
@@ -46,9 +98,22 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "One of thirteen found in Marsala in 1895; the original findspot was concealed.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1895"
+  },
+  "provenanceObserved": {
+    "_": "Observed in the Museo Archeologico Regionale Antonino Salinas, 27.09.2021 (2nd floor, not on display)",
+    "type": "observed",
+    "subtype": "identified"
+  },
   "facsimile": {
     "url": "ISic001687_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +121,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "1071",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

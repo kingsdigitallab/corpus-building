@@ -3,11 +3,29 @@
   "uri": "ISic004421",
   "title": "Epitaph for Athanippos",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Intact stele of the local sandstone belonging to a tomb of the epitymbion type B; the associated tomb monument has not been excavated.",
   "objectType": {
     "_": "plinth",
     "ana": "#object.arch_element.plinth",
@@ -18,22 +36,59 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "29",
-      "unit": "mm"
+      "_": "121",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "29",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "12",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "A single line of Greek letters filling the width of the stele, approximately 20 cm from the top of the stele.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Plainly cut and fairly regular squarish letters. Alpha has broken bar (and in the first instance, shows a slight apex at the top); theta is smaller than other letters and mid-line, with a single central dot; nu has equal length vertical strokes (the right slightly off vertical); pi is quadrate in form with nearly equal length vertical strokes and slightly overlapping horizontal; omicron is slightly smaller than other letters and mid-line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "29",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "NA",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Abacaenum",
@@ -49,9 +104,23 @@
     }
   ],
   "geo": [
-    38.05191,
-    15.10158
+    [
+      38.05191,
+      15.10158
+    ]
   ],
+  "provenanceFound": {
+    "_": "Unnumbered tomb on the eastern margin of the excavated area of the necropolis (close to tomb 23) \n                            in contrada Cardusa, where it remains in situ",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": "38.065190, 15.114380"
+  },
+  "provenanceObserved": {
+    "_": "Metcalfe 2016 visited site",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004421_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,6 +128,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
+  "repository": {
+    "_": "Necropoli di Abakainon",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/186"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

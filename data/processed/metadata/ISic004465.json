@@ -3,11 +3,29 @@
   "uri": "ISic004465",
   "title": "I.Sicily inscription 004465",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectangular plaque of \"bardiglio\" marble with irregular borders.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,26 +36,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "scratched",
-      "ana": "#execution.scratched",
-      "ref": "https://www.eagle-network.eu/voc/writing/lod/9.html"
-    }
-  ],
-  "letterHeight": [
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Large Christogram flanked by a palm branch on the left and a fish on the right, both lightly scratched. On the right side of the plaque a monogram.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "scratched",
+          "ana": "#execution.scratched",
+          "ref": "https://www.eagle-network.eu/voc/writing/lod/9.html"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 313,
   "notAfter": 600,
   "places": [
@@ -53,9 +103,21 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "San Diego cemetery (catacombs of Vigna Cassia)",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004465_tiled.tif",
     "desc": "Photo 2017 courtesy Museo Archeologico Regionale Paolo Orsi (Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014)"
@@ -63,6 +125,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "40535",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

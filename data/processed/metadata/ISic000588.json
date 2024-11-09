@@ -3,11 +3,31 @@
   "uri": "ISic000588",
   "title": "I.Sicily inscription 000588",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491845",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100583",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A block of the local pink 'breccia di San Marco' with white veins. Intact top and right, but broken to left, below, and behind.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,22 +38,56 @@
     "ana": "#material.stone.breccia",
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "55",
-      "unit": "mm"
+      "_": "14",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "30",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "19",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "An incomplete single line of Latin letters with a vacat above; the right margin is intact",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "55",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 42,
   "notAfter": null,
+  "evidence": "prosopography",
   "places": [
     {
       "_": "Haluntium",
@@ -47,9 +101,21 @@
     }
   ],
   "geo": [
-    38.07261,
-    14.70093
+    [
+      38.07261,
+      14.70093
+    ]
   ],
+  "provenanceFound": {
+    "_": "First noted by Gualtherus in the church of S.Maria 'ad nives' below the Norman Castle, which is perhaps Santa Maria in/di Aracoeli",
+    "type": "found",
+    "subtype": "first-recorded"
+  },
+  "provenanceObserved": {
+    "_": "Part of the inscription seen by Mommsen and Salinas in the steps of the Convento dei Cappuccini",
+    "type": "observed",
+    "subtype": "recorded"
+  },
   "facsimile": {
     "url": "ISic000588_tiled.tif",
     "desc": "Photo J. Prag"
@@ -57,6 +123,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "S. Marco d'Alunzio",
+  "repository": {
+    "_": "Museo della cultura e delle Arti Figurative Bizantine e Normanne",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/054"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

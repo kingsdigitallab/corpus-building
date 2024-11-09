@@ -3,11 +3,29 @@
   "uri": "ISic004469",
   "title": "I.Sicily inscription 004469",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectangular plaque of \"bardiglio\" marble with irregular borders. Lower left corner broken in antiquity.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,30 +36,62 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "painted",
-      "ana": "#execution.painted",
-      "ref": "https://www.eagle-network.eu/voc/writing/lod/10.html"
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
-  "letterHeight": [
-    {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+  "layoutDesc": {
+    "layout": {
+      "p": "Large chiselled and rubricated staurogram in central position, surrounded by a red painted circle or stylised wreath and flanked by two red painted Greek crosses. Perhaps it is possible to recognise a red painted star within the circle.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "painted",
+          "ana": "#execution.painted",
+          "ref": "https://www.eagle-network.eu/voc/writing/lod/10.html"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.legible"
+      }
     }
-  ],
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 451,
   "notAfter": 550,
   "places": [
@@ -57,9 +107,21 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "San Diego cemetery (catacombs of Vigna Cassia)",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004469_tiled.tif",
     "desc": "Photo 2017 courtesy Museo Archeologico Regionale Paolo Orsi (Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014)"
@@ -67,6 +129,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "40536",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

@@ -3,12 +3,33 @@
   "uri": "ISic000623",
   "title": "Fragmentary Latin inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175831",
+      "type": "TM"
+    },
+    {
+      "_": "074064",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "13700406",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
     "cert": "low"
   },
+  "support": "Fragment of a marble slab, broken on all sides",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -19,21 +40,53 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-2",
-      "from": "line1",
-      "to": "line2",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two lines of Latin letters",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "thinly incised regular letters with minimal serifs",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Abacaenum",
@@ -48,9 +101,23 @@
     }
   ],
   "geo": [
-    38.05191,
-    15.10158
+    [
+      38.05191,
+      15.10158
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavations during March 1952 in the presumed area of the ancient city, the area of trenches 6 and 8 (not precisely located) in the Piano between Pizzo Cisterna and the Castello",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1952-03",
+    "geo": "38.05720, 15.10404"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000623_tiled.tif",
     "desc": "Scan of NSA 1954 p.49 fig.4"
@@ -58,6 +125,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "(near) Tripi",
+  "repository": "Current location unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

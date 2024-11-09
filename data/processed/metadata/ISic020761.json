@@ -3,11 +3,29 @@
   "uri": "ISic020761",
   "title": "ISic020761",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership (?)",
     "ana": "#function.production-ownership",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Base of vessel.",
   "objectType": {
     "_": "vessel",
     "ana": "#object.vessel",
@@ -18,21 +36,60 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "type": "diameter",
+        "subtype": "base",
+        "unit": "cm"
+      },
+      "1": {
+        "type": "diameter",
+        "subtype": "foot",
+        "unit": "cm"
+      },
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the inside of the bottom of the vessel.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Herbessus (?)",
@@ -46,9 +103,26 @@
     }
   ],
   "geo": [
-    37.42658,
-    14.30061
+    [
+      37.42658,
+      14.30061
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (Soprintendenza alle Antichità di Siracusa, 1966—1968).",
+    "type": "found",
+    "geo": "37.42658, 14.30061"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic020761_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +130,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

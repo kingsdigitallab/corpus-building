@@ -3,6 +3,31 @@
   "uri": "ISic020592",
   "title": "ISic020592",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696276",
+      "type": "TM"
+    },
+    {
+      "_": "149901",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900804",
+      "type": "EDCS"
+    },
+    {
+      "_": "195333",
+      "type": "PHI"
+    },
+    {
+      "_": "331816",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "artist inscription",
     "ana": "#function.signature",
@@ -16,6 +41,7 @@
       "desc": "ownership"
     }
   },
+  "support": "Small black-glazed skyphoid-cup (Attic).",
   "objectType": {
     "_": "skyphoid-cup",
     "ana": "#object.vessel.skyphos",
@@ -26,21 +52,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the underside of the foot.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -525,
   "notAfter": -500,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Naxos",
@@ -54,9 +111,22 @@
     }
   ],
   "geo": [
-    37.82226,
-    15.26749
+    [
+      37.82226,
+      15.26749
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Giardini Naxos.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.82226, 15.26749"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020592_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,6 +134,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Giardini Naxos",
+  "repository": {
+    "_": "Museo Archeologico di Giardini Naxos",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/047"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

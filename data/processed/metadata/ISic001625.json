@@ -3,6 +3,24 @@
   "uri": "ISic001625",
   "title": "I.Sicily inscription 001625",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645077",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -13,21 +31,51 @@
     "ana": "#material.rock",
     "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Aegusa, Aegates Islands",
@@ -42,9 +90,22 @@
     }
   ],
   "geo": [
-    37.93333,
-    12.31667
+    [
+      37.93333,
+      12.31667
+    ]
   ],
+  "provenanceFound": {
+    "_": "Cave wall",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
   "facsimile": {
     "url": "ISic001625_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +113,9 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Favignana",
+  "repository": {
+    "role": "museum"
+  },
   "textLang": {
     "_": "NeoPunic",
     "mainLang": "xpu"

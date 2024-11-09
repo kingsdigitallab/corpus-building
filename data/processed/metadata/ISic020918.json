@@ -3,11 +3,29 @@
   "uri": "ISic020918",
   "title": "Funerary urn of Pakua Pontia",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "The fragmentary lid of a large lekanis, with a truncated cone profile. The lekanis body is lost. The lid is 42 cm in diameter.",
   "objectType": {
     "_": "lekanis",
     "ana": "#object.vessel.lekanis",
@@ -18,22 +36,60 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "10",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "42",
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is painted with a dark pigment on the surface of an undecorated and unpainted lid, in two lines over a length of c.15 cm.",
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Lunate epsilon and sigma, cursive omega; alpha with straight bar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "10",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -150,
+  "evidence": "archaeological-context nomenclature",
   "places": [
     {
       "_": "Messana",
@@ -47,9 +103,24 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated in 1971, found in a stone built chamber tomb in Largo Avignone, Messina",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": {
+      "_": "38.182636, 15.548695",
+      "cert": "high"
+    }
+  },
+  "provenanceObserved": {
+    "_": "in store",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic020918_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +128,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Soprintendenza Beni Culturali e Ambientali di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/197"
+  },
+  "idno": {
+    "_": "ME 31883",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

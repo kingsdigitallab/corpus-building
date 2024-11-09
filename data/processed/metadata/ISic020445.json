@@ -3,11 +3,29 @@
   "uri": "ISic020445",
   "title": "ISic020445",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "graffiti",
     "ana": "#function.ownership",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/104"
   },
+  "support": "Lekythos of red pottery decorated in black figure.",
   "objectType": {
     "_": "lekythos",
     "ana": "#object.vessel.lekythos",
@@ -18,21 +36,45 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -525,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Selinus",
@@ -45,9 +87,21 @@
     }
   ],
   "geo": [
-    37.5853775,
-    12.8298666
+    [
+      37.5853775,
+      12.8298666
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Selinunte.",
+    "type": "found",
+    "geo": "37.5853775, 12.8298666"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020445_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +109,12 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Selinunte",
+  "repository": {
+    "role": "museum"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

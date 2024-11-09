@@ -3,6 +3,26 @@
   "uri": "ISic003392",
   "title": "I.Sicily inscription 003392",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491427",
+      "type": "TM"
+    },
+    {
+      "_": "137139",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "46600169",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,22 +38,56 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "50-70",
-      "unit": "mm"
+      "_": "17",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "56",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "50-70",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -100,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Soluntum",
@@ -47,9 +101,22 @@
     }
   ],
   "geo": [
-    38.09296,
-    13.53147
+    [
+      38.09296,
+      13.53147
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in re-use in a wall of a house on via Castello 7, Solanto",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "38.076501, 13.542245"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003392_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +124,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Solanto",
+  "repository": {
+    "_": "private house",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

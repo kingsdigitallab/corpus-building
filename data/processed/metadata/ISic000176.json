@@ -3,11 +3,32 @@
   "uri": "ISic000176",
   "title": "Epitaph for [-]ettius Faustus, set up by Optatus",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285259",
+      "type": "TM"
+    },
+    {
+      "_": "127474",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100107",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectilinear grey limestone plaque, missing left edge and large part of lower left corner. Abrasion in top right corner. Traces of (modern?) mortar and modern paint on sides. Rear is flat.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,34 +39,70 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "48-51 (T=62mm)",
-      "unit": "mm"
+      "_": "23.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "42-48",
-      "unit": "mm"
+      "_": "32 (at top), 20 (at bottom)",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "41-45",
-      "unit": "mm"
+      "_": "7.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin text, each with missing section on the left. Appears to be centred on stone (on horizontal, but not vertical, axis). Use of triangular interpuncts. The interpunct in line three has chipped to look indistinct from the previous letter.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letter forms are mostly tall and thin, with a crude v-cut. Tendency to straight lines, e.g. in the form of the letter 'S' in lines 2 and 3. Serifs used throughout with pronounced feet to many letters. Letter heights are a little irregular (tall T in line line, tall I in line 3), and the base of letters do not always regularly follow a straight line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "48-51 (T=62mm)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "42-48",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "41-45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -62,9 +119,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The place, date, and circumstances of the discovery are unknown, but the inscription is assumed to come from Termini Imerese and was first recorded in the museum by Mommsen in CIL",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1883"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 2",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000176_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05."
@@ -72,6 +144,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "75",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

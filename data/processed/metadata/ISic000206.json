@@ -3,11 +3,32 @@
   "uri": "ISic000206",
   "title": "Funerary inscription for Pompeia Rodia",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285206",
+      "type": "TM"
+    },
+    {
+      "_": "126998",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100131",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Square plaque of local grey limestone, well-squared and in good condition, although front right bottom has a slight chip on face of stone. Protruded rear face.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,27 +39,62 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "36-43",
-      "unit": "mm"
+      "_": "26.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "34",
-      "unit": "mm"
+      "_": "27.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "10.5 (not including protrusion)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Latin letters, roughly centred.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Latin is relatively regular, tall and narrow, with minimal serifs. Lines are relatively straight, and letter spacing is extremely regular, except between the 'R' and 'o' in line 2. The 'M' in line 1 is slightly misaligned with the rest of the text.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "36-43",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "34",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -54,9 +110,25 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1835, in Termini Imerese, outside Porta Girgenti",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1835",
+    "geo": "37.9834352,13.6923962"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2022-07-06. On display in Museo Civico Baldassare Romano",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-07-06",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000206_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,6 +136,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "49",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

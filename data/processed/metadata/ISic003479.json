@@ -3,11 +3,36 @@
   "uri": "ISic003479",
   "title": "Sikel inscription on wall of a tomb",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645100",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70901062",
+      "type": "EDCS"
+    },
+    {
+      "_": "336138",
+      "type": "PHI"
+    },
+    {
+      "_": "337256",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A rock-cut tomb (Tomb 15) in the Coste di S. Frebonia, consisting of an entry and single chamber, with inscriptions on two walls, of which this is the right hand wall",
   "objectType": {
     "_": "rock face",
     "ana": "#object.rock-face",
@@ -18,22 +43,54 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "60-85",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is laid out on the right hand wall (as one enters) of the roughly rectangular chamber. Two sequences of letters run in the upper line from left to right and in the lower line from right to left, with a final letter below.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "60-85",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -650,
   "notAfter": -500,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Palagonia",
@@ -43,9 +100,27 @@
     }
   ],
   "geo": [
-    37.32955,
-    14.74474
+    [
+      37.32955,
+      14.74474
+    ]
   ],
+  "provenanceFound": {
+    "_": "Tomb 15 was identified in 1990 at the Coste di S. Febronia, near Palagonia",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "when": "1990",
+    "geo": {
+      "_": "37.32519, 14.76745",
+      "cert": "low"
+    }
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
   "facsimile": {
     "url": "ISic003479_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,6 +128,9 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palagonia",
+  "repository": {
+    "role": "museum"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

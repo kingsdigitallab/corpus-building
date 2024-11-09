@@ -3,11 +3,32 @@
   "uri": "ISic000216",
   "title": "Funerary Inscription for Rustia Asterin",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175730",
+      "type": "TM"
+    },
+    {
+      "_": "076858",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900660",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Marble plaque in two fragments. Surface of inscription has degraded, with each piece stored separately and with two levels of surface degradation on each. Fragment break in upper left corner, but together plaque is whole and relatively square (top edge slants slightly upwards to the right). Rear is relatively flat, but for slight protrusion on right. Photo and text of Bivona (1994) suggests it was intact at that time.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,36 +39,73 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "37-41",
-      "unit": "mm"
+      "_": "20",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "28-32",
-      "unit": "mm"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "24-27",
-      "unit": "mm"
+      "_": "4",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin text, not centred, but slightly over to right. Use of hederae in line three.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters have serifs. Depth of letter incision decreases from left to right, and line 2 is particularly lightly incised. Letters well-spaced, except for the final few letters of line three.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "37-41",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "28-32",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "24-27",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -62,9 +120,23 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The place, date, and circumstances of the discovery are unknown, but the piece is assumed to come from Termini Imerese",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2022-07-13. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 1, shelf 4.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-07-13",
+    "resp": "#AA"
+  },
   "facsimile": {
     "url": "ISic000216_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -72,6 +144,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "12",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

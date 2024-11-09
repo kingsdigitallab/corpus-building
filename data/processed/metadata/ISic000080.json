@@ -3,11 +3,31 @@
   "uri": "ISic000080",
   "title": "Funerary inscription for an Abbot (?)",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492395",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "45600021",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Two joining fragments of a marble slab broken on all sides, and re-used on the less smooth reverse side for a Latin inscription; the upper right corner may be preserved",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,20 +38,54 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "40",
-      "unit": "mm"
+      "_": "30.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of parts of four lines of Latin text, probably the upper right section of the text, with vacat in the upper right",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 300,
   "notAfter": 600,
   "places": [
@@ -48,9 +102,22 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the area of mediaeval houses built over the south-east corner of the agora",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.966807, 13.198520"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000080_tiled.tif",
     "desc": "Photo courtesy Zurich Ietas excavations"
@@ -58,6 +125,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
+  "repository": {
+    "_": "depot of the Zurich Ietas excavation",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/192"
+  },
+  "idno": {
+    "_": "I.14",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

@@ -3,11 +3,29 @@
   "uri": "ISic003673",
   "title": "I.Sicily inscription 003673",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of a marble plaque",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +36,54 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "30",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "traces of two lines of Latin letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Halaesa",
@@ -48,9 +98,26 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the front or interior of the west portico (trenches L, LI, LX), in excavations of 1956",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1956",
+    "geo": {
+      "_": "37.997962, 14.262587",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003673_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +125,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
+  "repository": {
+    "_": "Antiquarium e sito archeologico di Halaesa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/053"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

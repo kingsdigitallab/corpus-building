@@ -3,11 +3,36 @@
   "uri": "ISic001375",
   "title": "Epitaph",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492989",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101756",
+      "type": "EDCS"
+    },
+    {
+      "_": "140881",
+      "type": "PHI"
+    },
+    {
+      "_": "316263",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of a marble plaque, broken top, right and below; embedded in a plaster plaque for display purposes, so sides and rear not visible.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +43,59 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-6",
-      "from": "line1",
-      "to": "line6",
-      "h": "20-25",
-      "unit": "mm"
+      "_": "17",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "26",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1-6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-6",
+        "from": "line1",
+        "to": "line6",
+        "h": "20-25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not recorded",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 500,
+  "evidence": "textual-context",
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -47,9 +109,21 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found at the east of Porta Stesichori, close to the Convento del Carmine, it became part of Alessi’s collection (reported by Alessi as one of several find in the years preceding 1833).",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1833"
+  },
+  "provenanceObserved": {
+    "_": "Observed by Mavilla at the University of Catania and by Stevenson (Cod. Vat. Lat. 10574) in Antiquarium comunale, later by Korhonen in Magazzino del cortile, Museo Civico, formerly sala VI 104.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001375_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +131,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "296",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

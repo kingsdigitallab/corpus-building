@@ -3,11 +3,29 @@
   "uri": "ISic030049",
   "title": "Fragment of a Latin inscription on bronze",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Small fragment of bronze plaque, broken on all sides, with some degree of surface corrosion",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,21 +36,58 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-2",
-      "from": "line1",
-      "to": "line2",
-      "unit": "mm"
+      "_": "3.15",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "2.2",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "0.65",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Latin letters on two lines",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Ietas",
@@ -47,9 +102,23 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1986, in a mediaeval layer (above that of ISic030050) in the area of the agora, in the area of the altar in front of the so called podium temple (part of the west portico complex of the agora)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1986",
+    "geo": "37.967035, 13.198189"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic030049_tiled.tif",
     "desc": "Photo courtesy Zurich Ietas excavations"
@@ -57,6 +126,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
+  "repository": {
+    "_": "depot of the Zurich Ietas excavation",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/192"
+  },
+  "idno": {
+    "_": "I.4",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

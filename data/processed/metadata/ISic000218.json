@@ -3,11 +3,32 @@
   "uri": "ISic000218",
   "title": "I.Sicily inscription 000218",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285250",
+      "type": "TM"
+    },
+    {
+      "_": "127464",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100139",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fazellus lists this as one of a number of ancient marble tablets to be found in private houses in Termini",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,22 +39,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "unknown",
-      "unit": "mm"
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "_": "Three lines of Latin letters, if Fazellus' layout is reliable\n                                    \n                                \t\n\t\t\t",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "No information is preserved",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "unknown",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "unknown",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -47,9 +104,26 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The text is reported in Fazellus' De Rebus Siculis (1558) as being in a private house in Termini ('In domo Garfofali')",
+    "type": "found",
+    "subtype": "first-recorded"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "It was already either unfindable or illegible ('litera abolita') by the time of Gualtherus (1624)",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000218_tiled.tif",
     "desc": "Page from Fazellus 1558 (Rome copy on Google Books)"
@@ -57,6 +131,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "Lost",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

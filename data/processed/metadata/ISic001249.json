@@ -3,6 +3,30 @@
   "uri": "ISic001249",
   "title": "I.Sicily inscription 001249",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492855",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101617",
+      "type": "EDCS"
+    },
+    {
+      "_": "140737",
+      "type": "PHI"
+    },
+    {
+      "_": "329614",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "accounts",
     "ana": "#function.account",
@@ -18,21 +42,54 @@
     "ana": "#material.stone.breccia",
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "34.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "70",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "28",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Tauromenium",
@@ -46,9 +103,23 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the area of the ancient theatre c.1864",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1864"
+  },
+  "provenanceObserved": {
+    "_": "2009.10.06",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic001249_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +127,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": {
+    "_": "Antiquarium del Teatro Antico",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/062"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

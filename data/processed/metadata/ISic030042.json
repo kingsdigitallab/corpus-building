@@ -3,11 +3,29 @@
   "uri": "ISic030042",
   "title": "ISic030042",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "law of murder",
     "ana": "#function.regulatory",
     "ref": "http://vocab.getty.edu/page/aat/300027842"
   },
+  "support": "Lamina. Broken into twelve heavily damaged and burnt fragments, of which 4 are the most complete and legible.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,22 +36,47 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "7-10",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "0.2",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The text is boustrophedon and runs on both face a and face b of the lamina. Two of the larger fragments are included here. Text fragment 5 is the upper right-hand end of the lamina.",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "7-10",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -499,
   "notAfter": -400,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Monte San Mauro (di Caltagirone)",
@@ -42,9 +85,24 @@
     }
   ],
   "geo": [
-    37.21765,
-    14.46907
+    [
+      37.21765,
+      14.46907
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Monte San Mauro (di Caltagirone), at the top of Hill 3 (in Orsi's 1910 numbering), 30 cm below the ground level, \n                            in the area where the building in square blocks that Orsi interpreted as an 'anaktoron' was found. The fragments would have penetrated the rammed earth, which was the original walking surface of the structure..",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.21765, 14.46907"
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2022-01-17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2022-01-17"
+  },
   "facsimile": {
     "url": "ISic030042_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +110,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "30839",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

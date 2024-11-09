@@ -3,6 +3,26 @@
   "uri": "ISic003108",
   "title": "I.Sicily inscription 003108",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284792",
+      "type": "TM"
+    },
+    {
+      "_": "105600",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "65200114",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -18,22 +38,56 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "160-180",
-      "unit": "mm"
+      "_": "85",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "42-46",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines, boustrophedon, beginning left to right.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "160-180",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
+  "precision": "low",
   "places": [
     {
       "_": "Motya",
@@ -47,9 +101,21 @@
     }
   ],
   "geo": [
-    37.86503,
-    12.46798
+    [
+      37.86503,
+      12.46798
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavations between 1908 and 1913 in the Birgi necropolis",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003108_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +123,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mozia",
+  "repository": {
+    "_": "Villa Whitaker",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/107"
+  },
+  "idno": {
+    "_": "5422",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

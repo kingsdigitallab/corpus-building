@@ -3,6 +3,31 @@
   "uri": "ISic001453",
   "title": "I.Sicily inscription 001453",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284898",
+      "type": "TM"
+    },
+    {
+      "_": "112429",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "41300066",
+      "type": "EDCS"
+    },
+    {
+      "_": "64800243",
+      "type": "EDCS"
+    },
+    {
+      "_": "175678",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -13,19 +38,48 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -500,
   "places": [
@@ -41,9 +95,20 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001453_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +116,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Selinunte",
+  "repository": {
+    "_": "Baglio Florio\n                            Selinunte",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/116"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

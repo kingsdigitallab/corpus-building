@@ -3,11 +3,29 @@
   "uri": "ISic020510",
   "title": "ISic020510",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "votive",
     "ana": "#function.votive",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/83.html"
   },
+  "support": "Loom weight.",
   "objectType": {
     "_": "loom weight",
     "ana": "#object.loom_weight",
@@ -18,21 +36,48 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "incised",
-    "ana": "#execution.incised",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "6-7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "incised",
+        "ana": "#execution.incised",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
+      },
+      "p": "The text is placed horizontally along the longest face of the loom weight.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -450,
   "notAfter": -400,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Gela",
@@ -46,9 +91,21 @@
     }
   ],
   "geo": [
-    37.0630925,
-    14.2584705
+    [
+      37.0630925,
+      14.2584705
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the sanctuary of Bitalemi in Gela (chapel G1).",
+    "type": "found",
+    "geo": "37.061394, 14.260346"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020510_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +113,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/10"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

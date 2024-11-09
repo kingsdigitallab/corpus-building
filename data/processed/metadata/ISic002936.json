@@ -3,11 +3,35 @@
   "uri": "ISic002936",
   "title": "I.Sicily inscription 002936",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644845",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900783",
+      "type": "EDCS"
+    },
+    {
+      "_": "70900828",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "described by Orsi as a 'dado' (i.e. a base without moulding, or with the moulding missing?), with a circular cavity in the upper surface",
   "objectType": {
     "_": "base",
     "ana": "#object.base",
@@ -18,21 +42,55 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "36",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "57",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "36",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Greek text on the front face, on three lines",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Hybla Gereatis",
@@ -46,9 +104,27 @@
     }
   ],
   "geo": [
-    37.56675,
-    14.90254
+    [
+      37.56675,
+      14.90254
+    ]
   ],
+  "provenanceFound": {
+    "_": "Said by Orsi in 1900 to have been found 'recently' in the garden of the (ex) convent of the Cappuccini, Paternò, although Soraci 1958 notes that a reading is attributed to a local antiquarian c.1808",
+    "type": "found",
+    "subtype": "recorded",
+    "geo": "37.562836, 14.893780"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic002936_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -56,6 +132,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

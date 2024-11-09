@@ -3,11 +3,29 @@
   "uri": "ISic001783",
   "title": "I.Sicily inscription 001783",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A block of limestone, intact above, broken on left, cut / incomplete on the right, and uneven (broken?) below.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,20 +36,54 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "170",
-      "unit": "mm"
+      "_": "38",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "76",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "23",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Single line of monumental letters, slightly above the middle of the face.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deeply cut letters, with triangular terminations/serfis, and a four-pointed x-shaped interpunct.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "170",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -47,9 +99,26 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations in Piazza d'Armi, i.e. the ancient forum of Syracuse, in May 1897",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1897-05",
+    "geo": {
+      "_": "37.066672, 15.285155",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Photographed by Manganaro in the Siracusa museum some time in the 1960s.",
+    "type": "observed",
+    "subtype": "photographed"
+  },
   "facsimile": {
     "url": "ISic001783_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana (Photograph of G. Manganaro, 1960s)"
@@ -57,6 +126,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "16990",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"

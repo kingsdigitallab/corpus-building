@@ -3,6 +3,24 @@
   "uri": "ISic003364",
   "title": "I.Sicily inscription 003364",
   "status": "edited",
+  "editions": [
+    {
+      "_": "644869",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
@@ -18,21 +36,57 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "40",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "60",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "200",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "The text is on two lines and is arranged from right to left.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -500,
+  "precision": "low",
   "places": [
     {
       "_": "Mendolito",
@@ -41,9 +95,21 @@
     }
   ],
   "geo": [
-    37.69904,
-    14.808181
+    [
+      37.69904,
+      14.808181
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavation by Pelagatti 1962 in east wall of the city gate, inside the fortifications.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1962"
+  },
+  "provenanceObserved": {
+    "_": "Museo Archeologico Regionale Paolo Orsi Display Sector C Mendolito",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic003364_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -51,6 +117,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "96962",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

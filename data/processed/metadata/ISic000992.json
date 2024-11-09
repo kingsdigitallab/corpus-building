@@ -3,11 +3,32 @@
   "uri": "ISic000992",
   "title": "Epitaph of Syrakosios",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492619",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102146",
+      "type": "EDCS"
+    },
+    {
+      "_": "140470",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A grey marble plaque, intact (but lightly chipped) on all sides, but very irregular on left, right and below, only have a straight edge across the top.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -18,21 +39,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "18",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "19",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Six lines of text, of which the first four are neatly and regularly set out between guidelines, but the final two are squeezed into the remaining space, centred but unevenly and without guidelines.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Clear V-cut letters without serifs of somewhat uneven width, consistent height over the first four lines, more irregular thereafter. Alpha with broken bar and stroke rising off the apex; Beta with closed but separated eyes; delta with stroke rising off the apex; epsilon lunate in line 1 but regular in line 2; theta ovoid with full straight cross-bar; kappa has full length arms; mu has vertical first and last, and short middle strokes; omicron varies in size and from round to ovoid; pi is equal length with overlapping horizontal; rho has small closed eye; sigma is lunate, but rectilinear; omega is lunate and small above the line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 250,
   "notAfter": 500,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Syracusae",
@@ -46,9 +103,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Among material excavated by Cavalleri in the ",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1874",
+    "placeName": {
+      "_": "catacomb of S. Giovanni",
+      "ref": "https://pleiades.stoa.org/places/560149180"
+    },
+    "geo": "37.0767995, 15.2848558"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic000992_tiled.tif",
     "desc": "Photo Museo Arch. Reg. P. Orsi (2012), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -56,6 +131,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "110",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

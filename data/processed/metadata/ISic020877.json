@@ -3,12 +3,30 @@
   "uri": "ISic020877",
   "title": "ISic020877",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "production-ownership (?)",
     "ana": "#function.production-ownership",
     "cert": "low",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Tile.",
   "objectType": {
     "_": "tile",
     "ana": "#object.tile",
@@ -19,21 +37,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text runs on the upper part of the fragment of the tile.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -599,
   "notAfter": -480,
+  "evidence": "material-context lettering",
   "places": [
     {
       "_": "Castiglione di Ragusa",
@@ -42,9 +93,22 @@
     }
   ],
   "geo": [
-    36.950799,
-    14.650095
+    [
+      36.950799,
+      14.650095
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations carried out by G. Di Stefano in 1986 at Castiglione di Ragusa, in what has been assumed to be a sacred area of the settlement..",
+    "type": "found",
+    "when": "1986",
+    "geo": "36.950799, 14.650095"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020877_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +116,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"

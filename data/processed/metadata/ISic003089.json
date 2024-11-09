@@ -3,11 +3,32 @@
   "uri": "ISic003089",
   "title": "I.Sicily inscription 003089",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284882",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900517",
+      "type": "EDCS"
+    },
+    {
+      "_": "331405",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A large block of limestone, found in re-use in a later wall, and apparently recut on the right side, no longer preserving the right half.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -18,43 +39,84 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "45-70",
-      "unit": "mm"
+      "_": "80",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "35-40",
-      "unit": "mm"
+      "_": "60",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "30-45",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "30-40",
-      "unit": "mm"
+      "_": "30",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of text are preserved, with uneven left margin, suggesting that the text was centred on the stone prior to the later recutting. The letters reduce in size especially in the fourth line.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "From the published photograph, displays large, wide modules of the Hellenistic period, without serifs. Alpha has broken bar; epsilon bars of equal length; omicron very slightly smaller than other letters; mu has vertical first and last, with middle strokes full height.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "45-70",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "35-40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "30-45",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "30-40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Cephaloedium",
@@ -68,9 +130,25 @@
     }
   ],
   "geo": [
-    38.03856,
-    14.02285
+    [
+      38.03856,
+      14.02285
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in re-use in an enclosure wall outside the Duomo (of mediaeval date?), near the south tower ('saggio 1 bis')",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": {
+      "_": "38.0398499,14.0231015",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003089_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -78,6 +156,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
+  "repository": "Duomo",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

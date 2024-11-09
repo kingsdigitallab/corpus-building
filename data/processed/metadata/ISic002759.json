@@ -3,6 +3,26 @@
   "uri": "ISic002759",
   "title": "I.Sicily inscription 002759",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285035",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64600165",
+      "type": "EDCS"
+    },
+    {
+      "_": "175483",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "prayer",
     "ana": "#function.prayer",
@@ -18,21 +38,51 @@
     "ana": "#material.clay.fired",
     "ref": "http://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Acrae",
@@ -47,9 +97,22 @@
     }
   ],
   "geo": [
-    37.0578,
-    14.89346
+    [
+      37.0578,
+      14.89346
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contrada Anguglia",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "2013.10.02",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic002759_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +120,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

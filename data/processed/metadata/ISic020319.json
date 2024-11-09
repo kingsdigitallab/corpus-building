@@ -3,12 +3,30 @@
   "uri": "ISic020319",
   "title": "ISic020319",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "key": "dedication",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/79.html",
     "cert": "low"
   },
+  "support": "Foot and fragment of wall of a black-glaze kylix.",
   "objectType": {
     "_": "kylix",
     "ana": "#object.vessel.kylix",
@@ -19,22 +37,56 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "10-12",
-      "unit": "mm"
+      "_": "8",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "_": "7.7",
+        "type": "diameter",
+        "subtype": "min",
+        "unit": "cm"
+      },
+      "1": {
+        "_": "16.9",
+        "type": "diameter",
+        "subtype": "max",
+        "unit": "cm"
+      },
+      "dimension": "dim"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is arranged left-to-right and in scriptio continua on the underside of the foot.",
+      "damage": {
+        "ana": "#text_condition.incomplete text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "10-12",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Montelepre",
@@ -43,6 +95,18 @@
       "offset": "near"
     }
   ],
+  "geo": [],
+  "provenanceFound": {
+    "_": "Found in 1968 during the excavations by the Soprintendenza alle Antichità della Sicilia Occidentale in the ancient necropolis in the area of Manico di Quarara, on the slopes of Monte d'Oro di Montelepre, 1.4km north-west of Montelepre.",
+    "type": "found",
+    "when": "1968",
+    "geo": "38.09802, 13.17015"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic020319_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -50,6 +114,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",

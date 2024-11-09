@@ -3,11 +3,29 @@
   "uri": "ISic030280",
   "title": "ISicily 030280",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "decree",
     "ana": "#function.decree",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/384.html"
   },
+  "support": "",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -18,21 +36,56 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "evidence": "lettering textual-context",
   "places": [
     {
       "_": "Melita",
@@ -46,13 +99,32 @@
     }
   ],
   "geo": [
-    35.91667,
-    14.43333
+    [
+      35.91667,
+      14.43333
+    ]
   ],
+  "provenanceFound": {
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Campania",
   "settlement": "Napoli",
+  "repository": {
+    "_": "Museo archeologico nazionale di Napoli",
+    "role": "museum",
+    "ref": "https://mannapoli.it/"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"

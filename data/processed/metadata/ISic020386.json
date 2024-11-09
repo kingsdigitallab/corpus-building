@@ -3,12 +3,30 @@
   "uri": "ISic020386",
   "title": "ISic020386",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "regulatory (?)",
     "ana": "#function.regulatory",
     "cert": "low",
     "ref": "http://vocab.getty.edu/page/aat/300027842"
   },
+  "support": "Fragment of the wall of a black-glaze vessel (ostrakon?).",
   "objectType": [
     {
       "_": "vessel",
@@ -27,22 +45,50 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "The document is too fragmentary to determine the drawing dimensions.",
-      "unit": "mm"
+      "_": "5.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "4.7",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the underside of the base.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "The document is too fragmentary to determine the drawing dimensions.",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Segesta",
@@ -56,9 +102,22 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations 1989-1993 in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": "37.94240, 12.84509"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy; stored in the warehouse of the Parco Archeologico di Segesta",
+    "type": "observed",
+    "subtype": "identified"
+  },
   "facsimile": {
     "url": "ISic020386_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -66,6 +125,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "_": "Parco archeologico di Segesta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/196"
+  },
+  "idno": {
+    "_": "SG15805",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",

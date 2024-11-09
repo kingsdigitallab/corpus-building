@@ -3,12 +3,30 @@
   "uri": "ISic001784",
   "title": "I.Sicily inscription 001784",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
     "cert": "low"
   },
+  "support": "Part of a marble plaque, cut down for re-use in a pavement, damaged on all sides.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -19,21 +37,55 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "20",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "23",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of five lines of Latin text, line three with substantial vacat in centre.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Orsi describes as being 'in attuario del II secolo'; and records comma-shaped interpuncts.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 199,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -47,9 +99,28 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in an unknown location within Siracusa, and then in the possession of prof. Salv. Nicastro (so Orsi).",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1900"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost? Not recorded since Orsi's publication in 1900.",
+    "type": "not-observed",
+    "subtype": "lost",
+    "cert": "low"
+  },
   "facsimile": {
     "url": "ISic001784_tiled.tif",
     "desc": "Drawing in Orsi 1900, p. 65 no. 50"
@@ -57,6 +128,13 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "private collection?",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
