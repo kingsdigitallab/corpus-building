@@ -5,7 +5,7 @@
 	import InscriptionPlace from './InscriptionPlace.svelte';
 	import InscriptionLink from './InscriptionLink.svelte';
 
-	export let inscription;
+	let { inscription } = $props();
 </script>
 
 <div class="inscription-card">
@@ -20,15 +20,15 @@
 			/>
 		</InscriptionLink>
 	{/if}
-	<p class="inscription-title">
+	<div class="inscription-title">
 		<InscriptionLink id={inscription.file} title={inscription.title}
 			>{inscription.title}</InscriptionLink
 		>
-	</p>
-	<p class="inscription-date-place">
+	</div>
+	<div class="inscription-date-place">
 		<InscriptionDate {inscription} />
 		<InscriptionPlace {inscription} />
-	</p>
+	</div>
 	<dl>
 		<dt>ID</dt>
 		<dd>

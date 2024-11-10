@@ -4,11 +4,17 @@
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('./$types').PageData} data
+	 */
+
+	/** @type {Props} */
+	let { data } = $props();
 
 	let { slug, metadata, images, html } = data;
-	let curImageTitle = images[0].desc;
+	let curImageTitle = $state(images[0].desc);
 
 	const edition = html.divs.find((div) => div.id === 'edition');
 	const apparatus = html.divs.find((div) => div.id === 'apparatus');

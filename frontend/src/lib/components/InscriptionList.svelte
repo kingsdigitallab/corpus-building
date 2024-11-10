@@ -1,7 +1,7 @@
 <script>
 	import InscriptionCard from './InscriptionCard.svelte';
 
-	export let inscriptions;
+	let { inscriptions } = $props();
 </script>
 
 <ol class="inscription-list">

@@ -10,14 +10,20 @@
 	import { onMount } from 'svelte';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('./$types').PageData} data
+	 */
 
-	let { query, limit, total, results } = data;
+	/** @type {Props} */
+	let { data } = $props();
 
-	let isLoading = false;
-	let showCards = true;
-	let showMap = true;
+	let { query, limit, total, results } = $state(data);
+
+	let isLoading = $state(false);
+	let showCards = $state(true);
+	let showMap = $state(true);
 
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
@@ -68,7 +74,7 @@
 	</section>
 
 	<section>
-		<form on:submit={search} on:reset={reset}>
+		<form onsubmit={search} onreset={reset}>
 			<label class="visually-hidden" for="q">Search query:</label>
 			<input
 				type="text"

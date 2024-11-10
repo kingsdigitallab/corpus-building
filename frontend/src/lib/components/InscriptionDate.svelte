@@ -1,5 +1,5 @@
 <script>
-	export let inscription;
+	let { inscription } = $props();
 
 	let dates = [];
 
@@ -15,7 +15,7 @@
 		}
 	}
 
-	$: date = dates.join(' – ');
+	let date = $derived(dates.join(' – '));
 </script>
 
-<div class="inscription-date">{date}</div>
+<span class="inscription-date">{date}</span>

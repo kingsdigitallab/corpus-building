@@ -4,7 +4,13 @@
 	import * as config from '$lib/config';
 	import ThemeToggle from './ThemeToggle.svelte';
 
-	export let debug = false;
+	/**
+	 * @typedef {Object} Props
+	 * @property {boolean} [debug]
+	 */
+
+	/** @type {Props} */
+	let { debug = false } = $props();
 </script>
 
 <header>

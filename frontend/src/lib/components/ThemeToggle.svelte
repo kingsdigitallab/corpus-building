@@ -3,7 +3,7 @@
 	import { Button } from 'bits-ui';
 	import { MoonIcon, SunIcon } from 'lucide-svelte';
 
-	let theme = (browser && localStorage.getItem('color-scheme')) || 'light';
+	let theme = $state((browser && localStorage.getItem('color-scheme')) || 'light');
 
 	if (browser) {
 		const preference = window.matchMedia('(prefers-color-scheme: dark)');

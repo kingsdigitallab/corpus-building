@@ -3,7 +3,7 @@
 	import InscriptionLink from './InscriptionLink.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	export let inscription;
+	let { inscription } = $props();
 </script>
 
 <tr>

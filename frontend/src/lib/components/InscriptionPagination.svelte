@@ -2,33 +2,37 @@
 	import { Pagination } from 'bits-ui';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 
-	export let page;
-	export let count;
-	export let perPage;
-	export let onPageChange;
+	let {
+		page,
+		count,
+		perPage,
+		onPageChange
+	} = $props();
 </script>
 
 {#if count > 0}
-	<Pagination.Root {page} {count} {perPage} {onPageChange} let:pages let:range>
-		<div class="pagination">
-			<Pagination.PrevButton><ChevronLeft /></Pagination.PrevButton>
-			<div class="pages">
-				{#each pages as page (page.key)}
-					{#if page.type === 'ellipsis'}
-						<span>...</span>
-					{:else}
-						<Pagination.Page {page}>
-							{page.value}
-						</Pagination.Page>
-					{/if}
-				{/each}
+	<Pagination.Root {page} {count} {perPage} {onPageChange}  >
+		{#snippet children({ pages, range })}
+				<div class="pagination">
+				<Pagination.PrevButton><ChevronLeft /></Pagination.PrevButton>
+				<div class="pages">
+					{#each pages as page (page.key)}
+						{#if page.type === 'ellipsis'}
+							<span>...</span>
+						{:else}
+							<Pagination.Page {page}>
+								{page.value}
+							</Pagination.Page>
+						{/if}
+					{/each}
+				</div>
+				<Pagination.NextButton><ChevronRight /></Pagination.NextButton>
 			</div>
-			<Pagination.NextButton><ChevronRight /></Pagination.NextButton>
-		</div>
-		<p>
-			Showing {range.start + 1} - {range.end}
-		</p>
-	</Pagination.Root>
+			<p>
+				Showing {range.start + 1} - {range.end}
+			</p>
+					{/snippet}
+		</Pagination.Root>
 {/if}
 
 <style>

@@ -1,12 +1,14 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	export let url;
+	let { url, children } = $props();
+
+	const children_render = $derived(children);
 </script>
 
 {#key url}
 	<div in:fade={{ duration: 500 }}>
-		<slot />
+		{@render children_render?.()}
 	</div>
 {/key}
 

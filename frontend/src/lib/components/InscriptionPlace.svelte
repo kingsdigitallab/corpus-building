@@ -1,12 +1,11 @@
 <script>
-	export let inscription;
+	let { inscription } = $props();
 
-	const mainPlace = inscription.places[0];
-	const otherPlace = inscription.places[1];
+	let places = $derived(inscription?.places?.slice(0, 2));
 </script>
 
 <div class="inscription-place">
-	{#each [mainPlace, otherPlace] as place}
+	{#each places as place}
 		{#if place}
 			<span
 				>{#if place.offset}<em>{place.offset}</em>{/if}

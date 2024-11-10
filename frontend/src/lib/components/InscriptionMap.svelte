@@ -5,49 +5,59 @@
 
 	const { Map, Marker, NavigationControl, Popup } = maplibregl;
 
-	export let inscriptions;
-	export let show = true;
+	/**
+	 * @typedef {Object} Props
+	 * @property {any} inscriptions
+	 * @property {boolean} [show]
+	 */
 
-	let map;
+	/** @type {Props} */
+	let { inscriptions, show = true } = $props();
+
+	let map = $state();
 
 	/** @type HTMLDivElement */
-	let mapContainer;
+	let mapContainer = $state();
 
-	$: inscriptionsByGeo = inscriptions
-		.filter((inscription) => inscription.geo)
-		.reduce((acc, curr) => {
-			if (!curr.geo || curr.geo.length !== 2) return acc;
+	let inscriptionsByGeo = $derived(
+		inscriptions
+			.filter((inscription) => inscription.geo)
+			.reduce((acc, curr) => {
+				if (!curr.geo || curr.geo.length !== 2) return acc;
 
-			const key = curr.geo.join('_');
-			if (!acc[key]) {
-				acc[key] = [];
+				const key = curr.geo.join('_');
+				if (!acc[key]) {
+					acc[key] = [];
+				}
+
+				acc[key].push(curr);
+
+				return acc;
+			}, {})
+	);
+	let markers = $derived(
+		Object.entries(inscriptionsByGeo).map(([_, inscriptions]) => {
+			const geo = inscriptions[0].geo;
+
+			const numberInscriptions = inscriptions.length;
+			let markerSize = 'single';
+
+			if (numberInscriptions > 100) {
+				markerSize = 'lg';
+			} else if (numberInscriptions > 25) {
+				markerSize = 'md';
+			} else if (numberInscriptions > 1) {
+				markerSize = 'sm';
 			}
 
-			acc[key].push(curr);
-
-			return acc;
-		}, {});
-	$: markers = Object.entries(inscriptionsByGeo).map(([_, inscriptions]) => {
-		const geo = inscriptions[0].geo;
-
-		const numberInscriptions = inscriptions.length;
-		let markerSize = 'single';
-
-		if (numberInscriptions > 100) {
-			markerSize = 'lg';
-		} else if (numberInscriptions > 25) {
-			markerSize = 'md';
-		} else if (numberInscriptions > 1) {
-			markerSize = 'sm';
-		}
-
-		return {
-			coords: [geo[1], geo[0]],
-			markerSize,
-			numberInscriptions,
-			inscriptions
-		};
-	});
+			return {
+				coords: [geo[1], geo[0]],
+				markerSize,
+				numberInscriptions,
+				inscriptions
+			};
+		})
+	);
 
 	function addMarkerAction(node, { coords, inscriptions }) {
 		const popupContent = createPopupContent(inscriptions);
@@ -119,6 +129,7 @@
 				class:sm={marker.markerSize === 'sm'}
 				class:md={marker.markerSize === 'md'}
 				class:lg={marker.markerSize === 'lg'}
+				role="img"
 			>
 				{#if marker.numberInscriptions > 1}
 					<span>{marker.numberInscriptions}</span>
