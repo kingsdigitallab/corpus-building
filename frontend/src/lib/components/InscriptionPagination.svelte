@@ -57,7 +57,7 @@
 		height: 100%;
 		justify-content: center;
 
-		& button {
+		:global(button) {
 			background: none;
 			border: none;
 			box-shadow: none;

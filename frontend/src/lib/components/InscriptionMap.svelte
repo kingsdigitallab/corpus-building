@@ -147,22 +147,22 @@
 		height: 600px;
 		width: 100%;
 
-		& .maplibregl-popup-content {
+		:global(.maplibregl-popup-content) {
 			height: 200px;
 			overflow: scroll;
 		}
 
-		& button {
+		:global(button) {
 			box-shadow: none;
 			text-shadow: none;
 		}
 
-		& ul {
+		:global(ul) {
 			font-size: var(--font-size-1);
 			list-style: none;
 			padding-inline: 0;
 
-			& li {
+			:global(li) {
 				padding-inline: 0;
 			}
 		}
