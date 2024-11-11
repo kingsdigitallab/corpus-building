@@ -3,8 +3,8 @@
 	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
+	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 
-	
 	/**
 	 * @typedef {Object} Props
 	 * @property {import('./$types').PageData} data
@@ -137,9 +137,23 @@
 				<dt>Provenance found</dt>
 				<dd>{metadata.provenanceFound._}</dd>
 				{#if metadata.provenanceFound.geo}
-					<dt>Geographical coordinates</dt>
-					<dd>{metadata.provenanceFound.geo}</dd>
-					<dd>TODO: add map</dd>
+					{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
+					<dt>Map</dt>
+					<dd>
+						<MapLibre
+							center={lngLat}
+							zoom={7}
+							class="map"
+							standardControls
+							style="https://api.maptiler.com/maps/positron/style.json?key=brTBbnRxuiKp6PgjwFPr"
+						>
+							<DefaultMarker {lngLat}>
+								<Popup offset={[0, -10]}>
+									<div class="marker">{metadata.provenanceFound._}</div>
+								</Popup>
+							</DefaultMarker>
+						</MapLibre>
+					</dd>
 				{/if}
 			</dl>
 		</section>
@@ -160,7 +174,7 @@
 					<dt>Autopsy</dt>
 					<dd>{metadata.provenanceObserved._}</dd>
 					<dt>Map</dt>
-					<dd>TODO: add map</dd>
+					<dd>TODO: use the geo information in the museums dataset</dd>
 				</dl>
 			{/if}
 		</section>
@@ -246,7 +260,7 @@
 	}
 
 	:global(.map) {
-		height: 200px;
+		height: 300px;
 		width: 100%;
 	}
 
