@@ -149,7 +149,9 @@
 						>
 							<DefaultMarker {lngLat}>
 								<Popup offset={[0, -10]}>
-									<div class="marker">{metadata.provenanceFound._}</div>
+									<div class="popup">
+										{metadata.provenanceFound._}
+									</div>
 								</Popup>
 							</DefaultMarker>
 						</MapLibre>
@@ -260,8 +262,16 @@
 	}
 
 	:global(.map) {
+		border: var(--border-size-1) solid var(--text-1);
+		font-family: var(--font-family);
 		height: 300px;
 		width: 100%;
+	}
+
+	:global(.maplibregl-popup-content .popup) {
+		max-height: 200px;
+		max-width: 200px;
+		overflow: scroll;
 	}
 
 	@media (max-width: 768px) {
