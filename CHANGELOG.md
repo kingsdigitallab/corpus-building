@@ -1,5 +1,37 @@
 
 
+# [0.9.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.8.0...v0.9.0) (2024-11-11)
+
+
+### Bug Fixes
+
+* **etl:** remove redundant fields from the metadata ([ec358d6](https://github.com/kingsdigitallab/corpus-building/commit/ec358d6b9ae0ecca5456cb1f270cd4621192849a))
+* **frontend:** update css rules to be more explicit ([2310938](https://github.com/kingsdigitallab/corpus-building/commit/23109386016cf993b8e85ec52a74e792bc04b857))
+* **inscriptionmap:** add aria label ([ef1777b](https://github.com/kingsdigitallab/corpus-building/commit/ef1777b011c9dcb9d89cac598a408af278550559))
+
+
+### Features
+
+* **config:** add const for empty fields ([d2a8b6d](https://github.com/kingsdigitallab/corpus-building/commit/d2a8b6dac78db77faf9b76d94035e6a1950284d3))
+* display line numbers for all lines of the edition ([85ea2ad](https://github.com/kingsdigitallab/corpus-building/commit/85ea2ad7fcfeae9b404df72ae514f603ed0a3ece))
+* display line numbers for all lines of the edition ([08bfddd](https://github.com/kingsdigitallab/corpus-building/commit/08bfddd453925853729c3530db107251770055e5))
+* **etl:** extract more metadata ([2cdbddb](https://github.com/kingsdigitallab/corpus-building/commit/2cdbddb2273131afe39398bf15a7a202119e2395))
+* **etl:** use only the inscription id as the unique identifier ([4bfdcd7](https://github.com/kingsdigitallab/corpus-building/commit/4bfdcd764ca1d4d8a15d72d11f9d938626fda1fe))
+* **frontend:** display language, type and object type ([f48b57e](https://github.com/kingsdigitallab/corpus-building/commit/f48b57e9f40e70b3b825897c25a21fb9a0aef5ed))
+* **frontend:** use action to add markers ([eb5db91](https://github.com/kingsdigitallab/corpus-building/commit/eb5db91a59b411b4a9f1e9b8676481d7c94e2bd7))
+* **inscription:** display all extracted metadata ([644bb6a](https://github.com/kingsdigitallab/corpus-building/commit/644bb6a6f8bbbf6eadd3e33586527d47e2530ee8))
+* **inscription:** display mini map for provenance found ([68dafa0](https://github.com/kingsdigitallab/corpus-building/commit/68dafa01063a7b9b204697a10751a4999b678723))
+* **inscription:** style the inline maps ([6939c07](https://github.com/kingsdigitallab/corpus-building/commit/6939c0782ff1097e80b7294b18de3e9cccb09dbe))
+* **inscriptiontable:** display the settlement in the table ([4b4d5fd](https://github.com/kingsdigitallab/corpus-building/commit/4b4d5fd16934a8a31d27d4c7bd33e857d4d60f15))
+* update xslt version ([0920779](https://github.com/kingsdigitallab/corpus-building/commit/0920779fb2270e62121d5896e7172ce4207262ee))
+
+
+### Performance Improvements
+
+* **data:** exclude repository form the high-level metadata ([d5545bc](https://github.com/kingsdigitallab/corpus-building/commit/d5545bc1350ddb313464bbb3b80f0f6b2cbe95f6))
+* **etl:** remove debug log statement ([bb2861b](https://github.com/kingsdigitallab/corpus-building/commit/bb2861b77c1b77858d7a854198864496c318b1a7))
+* **xslt:** remove debug message ([34c3629](https://github.com/kingsdigitallab/corpus-building/commit/34c362965ff1fb88282ad9b656e06dec20fab786))
+
 # [0.8.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.7.1...v0.8.0) (2024-07-24)
 
 
