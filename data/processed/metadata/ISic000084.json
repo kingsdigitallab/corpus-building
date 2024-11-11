@@ -1,10 +1,28 @@
 {
   "file": "ISic000084",
-  "metadataFile": "metadata/ISic000084.json",
-  "htmlFile": "html/ISic000084.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000084",
+  "uri": "ISic000084",
   "title": "I.Sicily inscription 000084",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491827",
+      "type": "TM"
+    },
+    {
+      "_": "137600",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100031",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +38,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "34",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "45",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "7.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -48,9 +98,27 @@
     }
   ],
   "geo": [
-    38.13205,
-    13.33561
+    [
+      38.13205,
+      13.33561
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1863 during construction of palazzo Saponara, part of a necropolis extending from Porta S. Giorgio al Borgo towards via F. Crispi, C5 AD onwards.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1863",
+    "geo": [
+      38.1221099,
+      13.3605569
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000084_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +126,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "3537",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Panhormus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000084",
+    "isic000084",
     "i.sicily inscription 000084",
     "draft",
     "funerary",

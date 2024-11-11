@@ -1,10 +1,26 @@
 {
   "file": "ISic000617",
-  "metadataFile": "metadata/ISic000617.json",
-  "htmlFile": "html/ISic000617.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000617",
+  "uri": "ISic000617",
   "title": "I.Sicily inscription 000617",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644873",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
@@ -20,19 +36,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
   "places": [
@@ -48,9 +93,22 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the North Stoa of the Agora",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000617_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +116,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Aidone",
+  "repository": {
+    "_": "Museo Archeologico di\n                            Aidone",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/001"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Morgantina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000617",
+    "isic000617",
     "i.sicily inscription 000617",
     "draft",
     "unknown",

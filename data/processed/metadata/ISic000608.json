@@ -1,10 +1,28 @@
 {
   "file": "ISic000608",
-  "metadataFile": "metadata/ISic000608.json",
-  "htmlFile": "html/ISic000608.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000608",
+  "uri": "ISic000608",
   "title": "I.Sicily inscription 000608",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491873",
+      "type": "TM"
+    },
+    {
+      "_": "147266",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100612",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,19 +33,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -43,9 +90,21 @@
     }
   ],
   "geo": [
-    37.987235,
-    12.339898
+    [
+      37.987235,
+      12.339898
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000608_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +112,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Levanzo",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Phorbantia, Aegates Islands",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000608",
+    "isic000608",
     "i.sicily inscription 000608",
     "draft",
     "funerary",

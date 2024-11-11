@@ -1,10 +1,25 @@
 {
   "file": "ISic020440",
-  "metadataFile": "metadata/ISic020440.json",
-  "htmlFile": "html/ISic020440.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020440",
+  "uri": "ISic020440",
   "title": "ISic020440",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "invocation",
     "key": "invocation",
@@ -20,22 +35,51 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "Engraved (incision before firing)",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "3-5",
-      "unit": "mm"
+      "_": "4.6",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "4",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "3.4",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "Engraved (incision before firing)",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "The text is placed on one of the wider faces and runs along the border on three sides.",
+      "damage": {
+        "ana": "#text_condition.complete text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "3-5",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "precision": "low",
   "places": [
     {
       "_": "Segesta",
@@ -44,9 +88,28 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
+    "type": "found",
+    "subtype": "discovered",
+    "from": "1957",
+    "to": "1977",
+    "geo": [
+      37.9424,
+      12.84509
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020440_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -54,6 +117,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "?",
+  "repository": {
+    "_": "?",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "SG 16241",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",
@@ -66,7 +138,7 @@
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020440",
+    "isic020440",
     "isic020440",
     "draft",
     "invocation",

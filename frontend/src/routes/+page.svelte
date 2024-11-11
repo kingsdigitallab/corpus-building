@@ -10,14 +10,19 @@
 	import { onMount } from 'svelte';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('./$types').PageData} data
+	 */
 
-	let { query, limit, total, results } = data;
+	/** @type {Props} */
+	let { data } = $props();
 
-	let isLoading = false;
-	let showCards = true;
-	let showMap = true;
+	let { query, limit, total, results } = $state(data);
+
+	let isLoading = $state(false);
+	/** @type {'cards' | 'map' | 'table'} */
+	let view = $state('cards');
 
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
@@ -68,7 +73,7 @@
 	</section>
 
 	<section>
-		<form on:submit={search} on:reset={reset}>
+		<form onsubmit={search} onreset={reset}>
 			<label class="visually-hidden" for="q">Search query:</label>
 			<input
 				type="text"
@@ -92,22 +97,32 @@
 				<em>{query.split(' ').join(', ')}</em>
 			{/if}
 		</h2>
-		<InscriptionMap inscriptions={results.geo} show={showMap} />
 		<section class="controls">
-			<div class="info">
-				{#if showCards}<LayoutGridIcon />&#160;Card{:else}<TableIcon />&#160;Table{/if} view
-			</div>
 			<div class="toggles">
-				<Button.Root class="surface-4" on:click={() => (showCards = !showCards)}
-					>{#if showCards}<TableIcon />View table{:else}<LayoutGridIcon />View cards{/if}</Button.Root
+				<Button.Root
+					class={`${view === 'cards' ? 'surface-4' : 'surface-1'}`}
+					onclick={() => (view = 'cards')}
 				>
-				<Button.Root on:click={() => (showMap = !showMap)}
-					><MapIcon />{#if showMap}Hide map{:else}Show map{/if}</Button.Root
+					<LayoutGridIcon />View cards
+				</Button.Root>
+				<Button.Root
+					class={`${view === 'map' ? 'surface-4' : 'surface-1'}`}
+					onclick={() => (view = 'map')}
 				>
+					<MapIcon />View map
+				</Button.Root>
+				<Button.Root
+					class={`${view === 'table' ? 'surface-4' : 'surface-1'}`}
+					onclick={() => (view = 'table')}
+				>
+					<TableIcon />View table
+				</Button.Root>
 			</div>
 		</section>
 		{#if isLoading}
 			<LoaderCircleIcon />
+		{:else if view === 'map'}
+			<InscriptionMap inscriptions={results.geo} />
 		{:else}
 			<InscriptionPagination
 				page={$searchPage}
@@ -115,10 +130,10 @@
 				perPage={limit}
 				onPageChange={handlePageChange}
 			/>
-			{#if showCards}
-				<InscriptionList inscriptions={results.inscriptions} />
-			{:else}
+			{#if view === 'table'}
 				<InscriptionTable inscriptions={results.inscriptions} />
+			{:else}
+				<InscriptionList inscriptions={results.inscriptions} />
 			{/if}
 			<InscriptionPagination
 				page={$searchPage}
@@ -169,15 +184,8 @@
 		margin-block: var(--size-4);
 		width: 100%;
 
-		& .info {
-			align-items: center;
-			display: flex;
-			font-weight: var(--font-weight-6);
-		}
-
 		& .toggles {
 			margin-block-end: var(--size-2);
-			margin-left: auto;
 		}
 	}
 </style>

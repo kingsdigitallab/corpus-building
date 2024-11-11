@@ -1,15 +1,34 @@
 {
   "file": "ISic000238",
-  "metadataFile": "metadata/ISic000238.json",
-  "htmlFile": "html/ISic000238.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000238",
+  "uri": "ISic000238",
   "title": "Fragmentary funerary epitaph",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285277",
+      "type": "TM"
+    },
+    {
+      "_": "127498",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900666",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of yellow-white marble plaque. The front face was highly polished, but now slightly obscured with rough deposit in bands. Rear is flat. Depth of stone increases at base.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,27 +39,62 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "62-66 (I=71)",
-      "unit": "mm"
+      "_": "19.6",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "at least 33",
-      "unit": "mm"
+      "_": "17",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2 (at top), 2,9 (at bottom)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of a monumental Latin text. Visible use of guidelines below line and above line 2, with an additional guideline 14mm above line 2. Use of a deep triangular interpunct.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are tall, well-spaced, neat and extremely well-formed. Inicision is deep. Serifs are neat. I in line 1 is tall, above the other letters.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "62-66 (I=71)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "at least 33",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -57,9 +111,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The place, date, and circumstances of the discovery are unknown, but the inscription is assumed to come from Termini Imerese",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-07. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 13, shelf 3",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-07",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000238_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -67,13 +136,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "165",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000238",
+    "isic000238",
     "fragmentary funerary epitaph",
     "edited",
     "funerary",

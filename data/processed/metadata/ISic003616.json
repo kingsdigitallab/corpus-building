@@ -1,10 +1,26 @@
 {
   "file": "ISic003616",
-  "metadataFile": "metadata/ISic003616.json",
-  "htmlFile": "html/ISic003616.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003616",
+  "uri": "ISic003616",
   "title": "I.Sicily inscription 003616",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645689",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,19 +31,48 @@
     "ana": "#material.rock",
     "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -38,9 +83,26 @@
     }
   ],
   "geo": [
-    36.82145,
-    14.95132
+    [
+      36.82145,
+      14.95132
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contrada Stafenna-Coda di Lupo, Rosolini",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic003616_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -48,13 +110,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Rosolini",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003616",
+    "isic003616",
     "i.sicily inscription 003616",
     "unchecked",
     "funerary",

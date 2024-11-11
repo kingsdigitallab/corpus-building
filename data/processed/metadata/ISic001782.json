@@ -1,15 +1,31 @@
 {
   "file": "ISic001782",
-  "metadataFile": "metadata/ISic001782.json",
-  "htmlFile": "html/ISic001782.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001782",
+  "uri": "ISic001782",
   "title": "I.Sicily inscription 001782",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Two non-joining fragments of a marble plaque from the facade of a monumental arch",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,19 +36,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Fragments contain a single line of monumental letters",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -21,
   "notAfter": 50,
   "places": [
@@ -48,20 +96,46 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations in 1949-50 along the course of the via F.S. Cavallari. These fragments were found immediately to the south side of the southern pylon of the monumental Roman (Augustan?) arch, south of the amphitheatre, together with a fragment of cornice in white 'pietra arenaria'.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1950",
+    "geo": [
+      37.0736,
+      15.280063
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001782",
+    "isic001782",
     "i.sicily inscription 001782",
     "draft",
     "honorific",

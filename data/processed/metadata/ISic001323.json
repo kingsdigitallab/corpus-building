@@ -1,15 +1,38 @@
 {
   "file": "ISic001323",
-  "metadataFile": "metadata/ISic001323.json",
-  "htmlFile": "html/ISic001323.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001323",
+  "uri": "ISic001323",
   "title": "Honorary inscription for an agonothetes",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492929",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101694",
+      "type": "EDCS"
+    },
+    {
+      "_": "140817",
+      "type": "PHI"
+    },
+    {
+      "_": "316200",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Marble plaque damaged on the lower edge (slightly convex surface), originally connected to a marble column, as part of a statue base.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,28 +43,65 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "36",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication",
-      "ana": "#execution.rubrication"
-    }
-  ],
-  "letterHeight": [
+      "_": "41",
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Lines 1-9",
-      "from": "line1",
-      "to": "line9",
-      "h": "26-40",
-      "unit": "mm"
+      "_": "7.8",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Lines 1, 4 and 7 are set further to the left, with the other lines indented by one character space, reflecting the beginning of each line of hexameter verse.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication",
+          "ana": "#execution.rubrication"
+        }
+      ],
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Regular letters: lunate Ε, Σ, cursive Ω, Α with broken bar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-9",
+        "from": "line1",
+        "to": "line9",
+        "h": "26-40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not recorded",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 250,
   "notAfter": 400,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -55,9 +115,26 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1594 among the ruins of the Odeon (at the house of Dott. D. Cataldo Fimia Patricio) between Porta di Mezzo and Convento di S. Agostino.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1594",
+    "geo": [
+      37.5033164,
+      15.0838968
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Observed by Torremuzza in Museo dei Benedettini, later by Korhonen in magazzino superiore, Collezione dei Benedettini, formerly sala I.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001323_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018"
@@ -65,13 +142,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "22",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001323",
+    "isic001323",
     "honorary inscription for an agonothetes",
     "draft",
     "honorific",

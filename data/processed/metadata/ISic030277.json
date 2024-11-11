@@ -1,15 +1,31 @@
 {
   "file": "ISic030277",
-  "metadataFile": "metadata/ISic030277.json",
-  "htmlFile": "html/ISic030277.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030277",
+  "uri": "ISic030277",
   "title": "Decree in honour of Nemenios (copy A)",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "decree",
     "ana": "#function.decree",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/384.html"
   },
+  "support": "A substantial bronze plate over 5 mm thick, to which were affixed, by means of rivets, a number of relief elements giving it the form of a temple facade: crepidoma, a framing pair of Corinthian columns, an entabulature containing a frieze with triglyphs and metopes surmounted by a cornice with dentils, and a pediment, the tympanum of which is undecorated. The relief elements differ in detail between this example and the second copy (ISic030278), although not in essentials. The main plate consists of two pieces of bronze, welded together horizontally at a point equivalent to the second line of the inscribed text; this join is only visible on the reverse, which itself presents a very rough, unfinished appearance. The tablet suffered to some extent from the heat of the fire in the destruction of the building in which it was found. The damage is minimal on this copy, limited to a few small patches of surface damage in the field of the inscription. The tablet measures H 48 cm x W 24.5 cm x D 0.5 cm overall; the pediment is W 36.3 cm x H 8.3 cm; the columns (incl. base and capital) are 31.5cm high. The field available for inscription is 21 cm wide (measured at line 8) by 32 cm high.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,36 +36,76 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "7-12",
-      "unit": "mm"
+      "_": "48",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Lines 2-7",
-      "from": "line2",
-      "to": "line7",
-      "h": "4-7",
-      "unit": "mm"
+      "_": "24.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Lines 8-34",
-      "from": "line8",
-      "to": "line34",
-      "h": "3-4",
-      "unit": "mm"
+      "_": "0.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The inscription occupies the large field between the two columns; the upper part of the inscribed field also contains an engraved laurel-wreath, with the text of the initial lines arranged in and around the wreath (the precise arrangement differs slightly between the two copies). There are clear traces of a previous inscription underlying the existing text, and likewise most of the inscribed face shows the traces of having been beaten smooth prior to re-use.",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The letters of line 1 are largest (c. 7-12 mm high); those of lines 2-7 smaller (4-7 mm), and those of lines 8-34 smaller again (generally 3-4 mm). Letters of line 1 are quadrate, with standard closed omega (Ε, Σ, Ω), and are broadly comparable to letters of monumental Hieronian inscriptions (i.e. c. 265-215 BC Syracuse); letters of lines 2-34 are lunate (ϵ, ϲ, ω). There are two instances of broken-bar alpha, in lines 3 and 7. Eta is frequently, if not consistently, rendered in a form comparable to a reversed nu (described by Scibona as a cursive type). The form of the letter pi is also distinctive (in lines 2 34): the right hasta regularly bent outwards at the lower end; the left hasta occasionally similarly bent outwards also. The letters are engraved throughout by means of chasing with a chisel (with a curved rather than triangular profile).",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "7-12",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 2-7",
+        "from": "line2",
+        "to": "line7",
+        "h": "4-7",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 8-34",
+        "from": "line8",
+        "to": "line34",
+        "h": "3-4",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": -46,
+  "evidence": "lettering textual-context",
   "places": [
     {
       "_": "Halaesa",
@@ -64,9 +120,28 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found September 2004 lying close to the second example within a destruction layer in what appears to have been a ground-floor store-room in a larger building of uncertain character, but probably a large, private house (the rest of the building is unexcavated). The building lies within Insula I, to the north-west of the junction between cardo maximus and decumanus XII, close therefore to the likely route from the agora to the acropolis.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "2004-09",
+    "geo": [
+      37.998866,
+      14.262974
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2010-04-19",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030277_tiled.tif",
     "desc": "Photo J.Prag, 09.07.2018, courtesy Soprintendenza BBCCAA di Messina"
@@ -74,13 +149,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
+  "repository": {
+    "_": "Antiquarium e sito archeologico di Halaesa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/053"
+  },
+  "idno": {
+    "_": "ME 21924",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Halaesa",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030277",
+    "isic030277",
     "decree in honour of nemenios (copy a)",
     "edited",
     "decree",

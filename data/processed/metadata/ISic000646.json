@@ -1,10 +1,27 @@
 {
   "file": "ISic000646",
-  "metadataFile": "metadata/ISic000646.json",
-  "htmlFile": "html/ISic000646.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000646",
+  "uri": "ISic000646",
   "title": "I.Sicily inscription 000646",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644888",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "332959",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,22 +37,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line4",
-      "h": "20",
-      "unit": "mm"
+      "_": "30",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "18.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line4",
+        "h": "20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Mutyca",
@@ -49,9 +99,22 @@
     }
   ],
   "geo": [
-    36.84594,
-    14.77399
+    [
+      36.84594,
+      14.77399
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found 'in un podere a Modica (Ragusa)', and subsequently transferred to Rome.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1957"
+  },
+  "provenanceObserved": {
+    "_": "Seen in 1957 by Giacomo Manganaro",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000646_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +122,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Rome",
+  "repository": {
+    "_": "private collection",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Mutyca",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000646",
+    "isic000646",
     "i.sicily inscription 000646",
     "draft",
     "funerary",

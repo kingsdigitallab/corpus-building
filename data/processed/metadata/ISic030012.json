@@ -1,15 +1,36 @@
 {
   "file": "ISic030012",
-  "metadataFile": "metadata/ISic030012.json",
-  "htmlFile": "html/ISic030012.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030012",
+  "uri": "ISic030012",
   "title": "ISic030012",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "301174",
+      "type": "PHI"
+    },
+    {
+      "_": "340344",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,21 +41,47 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "from": "line1",
-      "to": "line6",
-      "h": "5",
-      "unit": "mm"
+      "_": "4.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "7.2",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "from": "line1",
+        "to": "line6",
+        "h": "5",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -499,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Selinus",
@@ -48,9 +95,26 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Gaggera, Sanctuary of Malophoros.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.586763,
+      12.816874
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030012_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +122,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "42561",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030012",
+    "isic030012",
     "isic030012",
     "draft",
     "dedication",

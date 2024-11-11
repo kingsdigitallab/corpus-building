@@ -1,15 +1,33 @@
 {
   "file": "ISic000721",
-  "metadataFile": "metadata/ISic000721.json",
-  "htmlFile": "html/ISic000721.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000721",
+  "uri": "ISic000721",
   "title": "I.Sicily inscription 000721",
   "status": "deprecated",
+  "editions": [
+    {
+      "_": "175776",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "6100279",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Fragment of a marble plaque, broken on all sides, but possibly reworked on the right margin.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +38,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "42",
-      "unit": "mm"
+      "_": "27",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "20",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Monumental Latin letters of the high empire.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "42",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +103,22 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavation in 1950/1951 in the Roman theatre of Catania.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000721_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +126,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000721",
+    "isic000721",
     "i.sicily inscription 000721",
     "deprecated",
     "honorific",

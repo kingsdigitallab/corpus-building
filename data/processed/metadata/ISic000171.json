@@ -1,15 +1,34 @@
 {
   "file": "ISic000171",
-  "metadataFile": "metadata/ISic000171.json",
-  "htmlFile": "html/ISic000171.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000171",
+  "uri": "ISic000171",
   "title": "Epitaph for C. Ducenius Epaphroditus",
   "status": "edited",
+  "editions": [
+    {
+      "_": "284854",
+      "type": "TM"
+    },
+    {
+      "_": "111316",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100103",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Off-white marble plaque, intact on all sides, but heavily chipped on upper and lower left, and lower right. Parts of the upper and lower left face are missing. The edges and rear only roughly finished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,43 +39,98 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "25",
-      "unit": "mm"
+      "_": "19.2",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "22-24",
-      "unit": "mm"
+      "_": "26.1 (face only 23.5)",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "20-23",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "22-24",
-      "unit": "mm"
+      "_": "3.7-4.0",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin text, centred on the stone.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deep-cut squat letters with marked serifs on some letters (e.g. V, L, D)",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "22-24",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "20-23",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "22-24",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "18",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "8",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "13-16",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -70,9 +144,28 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Termini Imerese outside the porta di Caccamo (= Porta di Girgenti), in a burial, from where it passed to the Baron Iannelli, and subsequent the civic museum",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1866",
+    "geo": [
+      37.9834352,
+      13.6923962
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2023-07-05, in the storeroom of the museo civico (room 1, rack 8, shelf 1)",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000171_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05"
@@ -80,13 +173,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "11",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000171",
+    "isic000171",
     "epitaph for c. ducenius epaphroditus",
     "edited",
     "funerary",

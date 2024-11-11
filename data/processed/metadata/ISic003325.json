@@ -1,15 +1,33 @@
 {
   "file": "ISic003325",
-  "metadataFile": "metadata/ISic003325.json",
-  "htmlFile": "html/ISic003325.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003325",
+  "uri": "ISic003325",
   "title": "I.Sicily inscription 003325",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491404",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "20401555",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Three quadrangular slabs originally from the crepidoma of the west side of the great north stoa, but reused for the crepidoma of the annex to the podium temple on the west side of the agora, and inscribed in that context.",
   "objectType": {
     "_": "crepidoma",
     "ana": "#object.arch_element.crepidoma",
@@ -20,22 +38,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "72-78",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Regular letters with triangular interpuncts.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "72-78",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -50,
   "notAfter": -1,
+  "evidence": "archaeological-context lettering",
   "places": [
     {
       "_": "Segesta",
@@ -50,9 +101,28 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Agora, Found during excavations in 1995, US 4558",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "when": "1995",
+    "geo": [
+      37.939716,
+      12.842467
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003325_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -60,13 +130,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "_": "Parco archeologico di Segesta",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/196"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003325",
+    "isic003325",
     "i.sicily inscription 003325",
     "draft",
     "building",

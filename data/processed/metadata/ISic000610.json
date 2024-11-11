@@ -1,15 +1,34 @@
 {
   "file": "ISic000610",
-  "metadataFile": "metadata/ISic000610.json",
-  "htmlFile": "html/ISic000610.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000610",
+  "uri": "ISic000610",
   "title": "Milestone of Aurelius Cotta",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175816",
+      "type": "TM"
+    },
+    {
+      "_": "074316",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "13600220",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "milestone",
     "ana": "#function.milestone",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/102"
   },
+  "support": "The original block, of the local stone, is said to have been approximately 1.5 m tall, with a maximum width of 0.46m and depth of 0.33m (so Di Vita 1955). However only two fragments are preserved (it having been broken up on discovery), both set into cement: the upper fragment (1), being max W 42 cm, max H 38 cm (face 33 cm), max D 36 cm; the lower fragment (2) is max W 32 cm, max H 27 cm across the face; the depth is uncertain, being only a piece off the front of the stone, now set into cement. A fragment is clearly missing from the left side, equivalent to a couple of letters, but the right side of the upper fragment appears original, and the top may well be also, both roughly finished.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,41 +39,77 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "75-95",
-      "unit": "mm"
+      "_": "150",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "55-95",
-      "unit": "mm"
+      "_": "46",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "60-75",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "70-110",
-      "unit": "mm"
+      "_": "36",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deep and well carved, with a U-shaped cut letters of generally regular height. Most letters are c.75mm tall; O is consistently smaller than the other letters (55-60 mm), S taller at 95 mm, and the numeral 50 is 110 mm. A deep round interpunct is viisble at the end of line 3.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "75-95",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "55-95",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "60-75",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "70-110",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -252,
   "notAfter": -248,
   "places": [
@@ -65,9 +120,28 @@
     }
   ],
   "geo": [
-    37.7905564,
-    13.3101399
+    [
+      37.7905564,
+      13.3101399
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in contrada Zuccarone, to the East of modern Corleone, by farm-workers on the southern side of a trackway (overall running north-south, but bending east-west at this specific point). Now on display in the Corleone Museo Civico.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1954-10-09",
+    "geo": [
+      37.8054867,
+      13.3542511
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2002.06.30 and 2023.10.28 (Prag)",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000610_tiled.tif",
     "desc": "Photo J. Prag, 2023.10.28, courtesy Museo Civico di Corleone."
@@ -75,13 +149,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Corleone",
+  "repository": {
+    "_": "Museo Civico Pippo Rizzo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/079"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Corleone",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000610",
+    "isic000610",
     "milestone of aurelius cotta",
     "edited",
     "milestone",

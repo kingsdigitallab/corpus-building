@@ -1,15 +1,31 @@
 {
   "file": "ISic020435",
-  "metadataFile": "metadata/ISic020435.json",
-  "htmlFile": "html/ISic020435.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020435",
+  "uri": "ISic020435",
   "title": "ISic020435",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Fragment of rim of an amphora.",
   "objectType": {
     "_": "amphora",
     "ana": "#object.vessel.amphora",
@@ -20,21 +36,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the outer surface of the rim.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -400,
+  "evidence": "material-context lettering",
   "places": [
     {
       "_": "Monte Castellazzo di Poggioreale",
@@ -42,9 +89,26 @@
     }
   ],
   "geo": [
-    37.7963066,
-    13.0243978
+    [
+      37.7963066,
+      13.0243978
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations undertaken in the 1960s and 1970s on the hill of Monte Castellazzo, near Poggioreale.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.7963066,
+      13.0243978
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020435_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -52,6 +116,12 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "",
+  "repository": {
+    "role": "museum"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",
@@ -64,7 +134,7 @@
   },
   "placeName": "Monte Castellazzo di Poggioreale",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020435",
+    "isic020435",
     "isic020435",
     "draft",
     "unknown",

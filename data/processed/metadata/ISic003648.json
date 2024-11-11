@@ -1,10 +1,25 @@
 {
   "file": "ISic003648",
-  "metadataFile": "metadata/ISic003648.json",
-  "htmlFile": "html/ISic003648.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003648",
+  "uri": "ISic003648",
   "title": "I.Sicily inscription 003648",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -21,19 +36,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
   "places": [
@@ -49,9 +93,22 @@
     }
   ],
   "geo": [
-    37.929543,
-    14.362532
+    [
+      37.929543,
+      14.362532
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "2006.04",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003648_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +116,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mistretta",
+  "repository": {
+    "_": "Museo Civico\n                            Polivalente",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/058"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Amestratus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003648",
+    "isic003648",
     "i.sicily inscription 003648",
     "unchecked",
     "funerary",

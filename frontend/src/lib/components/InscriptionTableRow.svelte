@@ -3,7 +3,7 @@
 	import InscriptionLink from './InscriptionLink.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	export let inscription;
+	let { inscription } = $props();
 </script>
 
 <tr>
@@ -27,4 +27,5 @@
 		{/if}
 	</td>
 	<td>{inscription.textLang?._ || 'N/A'}</td>
+	<td>{inscription.settlement || 'N/A'}</td>
 </tr>

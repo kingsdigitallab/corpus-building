@@ -1,15 +1,34 @@
 {
   "file": "ISic003300",
-  "metadataFile": "metadata/ISic003300.json",
-  "htmlFile": "html/ISic003300.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003300",
+  "uri": "ISic003300",
   "title": "Fragmentary Latin inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285149",
+      "type": "TM"
+    },
+    {
+      "_": "122915",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "17900204",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of a marble plaque, preserving the upper margin, but broken on the other three sides. The rear preserves a moulding, suggesting that this is a re-used piece of stone from an architectural context originally.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,28 +39,63 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "7.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication",
-      "ana": "#execution.rubrication"
-    }
-  ],
-  "letterHeight": [
+      "_": "18.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "35-37",
-      "unit": "mm"
+      "_": "3.7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Parts of two lines of Latin letters preserved, running left to right across the face; only the upper parts of line 2 preserved.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication",
+          "ana": "#execution.rubrication"
+        }
+      ],
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "35-37",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 600,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -55,9 +109,20 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded. The fragment was seen in the Biscari collection. Mommsen suggested that it was from Rome, but as Korhonen observes, the insignificant nature of the fragment makes this unlikely, and a local, Catania, provenance is to be presumed.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "mag. sup",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003300_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 13.05.2016"
@@ -65,13 +130,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003300",
+    "isic003300",
     "fragmentary latin inscription",
     "draft",
     "funerary",

@@ -1,15 +1,35 @@
 {
   "file": "ISic030036",
-  "metadataFile": "metadata/ISic030036.json",
-  "htmlFile": "html/ISic030036.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030036",
+  "uri": "ISic030036",
   "title": "ISic030036",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696260",
+      "type": "TM"
+    },
+    {
+      "_": "152906",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800220",
+      "type": "EDCS"
+    },
+    {
+      "_": "329539",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "Lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,21 +40,47 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.unknown"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -450,
   "notAfter": -400,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -48,9 +94,26 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the necropolis of Passo Marinaro (Camarina).",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      36.85957,
+      14.46436
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030036_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +121,19 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "",
+  "repository": {
+    "role": "museum"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Kamarina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030036",
+    "isic030036",
     "isic030036",
     "draft",
     "defixio",

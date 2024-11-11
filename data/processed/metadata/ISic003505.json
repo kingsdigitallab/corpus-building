@@ -1,10 +1,32 @@
 {
   "file": "ISic003505",
-  "metadataFile": "metadata/ISic003505.json",
-  "htmlFile": "html/ISic003505.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003505",
+  "uri": "ISic003505",
   "title": "I.Sicily inscription 003505",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492729",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102270",
+      "type": "EDCS"
+    },
+    {
+      "_": "140596",
+      "type": "PHI"
+    },
+    {
+      "_": "336567",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -20,22 +42,52 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "84-98",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "84-98",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -130,
   "notAfter": -100,
+  "evidence": "archaeological-context lettering",
   "places": [
     {
       "_": "Segesta",
@@ -49,9 +101,18 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": null,
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003505_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +120,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "_": "exacavation stores",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003505",
+    "isic003505",
     "i.sicily inscription 003505",
     "draft",
     "building",

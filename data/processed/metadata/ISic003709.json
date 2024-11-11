@@ -1,10 +1,25 @@
 {
   "file": "ISic003709",
-  "metadataFile": "metadata/ISic003709.json",
-  "htmlFile": "html/ISic003709.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003709",
+  "uri": "ISic003709",
   "title": "I.Sicily inscription 003709",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -15,19 +30,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
   "places": [
@@ -43,9 +87,22 @@
     }
   ],
   "geo": [
-    37.2581981,
-    13.9836298
+    [
+      37.2581981,
+      13.9836298
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in re-use in the internal face of the later C4 BC fortification\n                            wall on the acropolis\n                        ",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003709_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +110,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Monte Saraceno",
+  "repository": {
+    "_": "Monte Saraceno",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Kakyron",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003709",
+    "isic003709",
     "i.sicily inscription 003709",
     "unchecked",
     "block",

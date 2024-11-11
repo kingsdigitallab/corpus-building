@@ -1,15 +1,34 @@
 {
   "file": "ISic000118",
-  "metadataFile": "metadata/ISic000118.json",
-  "htmlFile": "html/ISic000118.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000118",
+  "uri": "ISic000118",
   "title": "I.Sicily inscription 000118",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285310",
+      "type": "TM"
+    },
+    {
+      "_": "127539",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100069",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A block of conglomerate, broken across the lower right corner. A rectangular field is inset into the face (H 26 cm x W 34), in which the inscription is set, the frame only roughly finished. The exact depth and form of the rear is uncertain, as when observed by Bivona the block was fixed to a wall with cement.",
   "objectType": {
     "_": "block",
     "ana": "object.block",
@@ -20,41 +39,78 @@
     "ana": "#material.stone.conglomerate",
     "ref": "http://www.eagle-network.eu/voc/material/lod/74.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "50",
-      "unit": "mm"
+      "_": "45",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "50-60",
-      "unit": "mm"
+      "_": "54",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "40-50",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "30-40",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of latin letters, filling the available space.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The letters are somewhat irregular, and the uneven surface makes it impossible to distinguish any interpuncts.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "50",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "50-60",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "40-50",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "30-40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 250,
   "places": [
@@ -71,9 +127,30 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First seen by B. Romano shortly prior to 1829 in a garden 'nella pianura di Giancaniglia fuori la porta di Palermo' , in use as a garden seat; subsequently hidden by the owner, but rediscovered in the later 19th cent.; transferred to the civic museum shortly before seen by Mommsen; seen by Bivona prior to 1994.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.9871901,
+      13.6867031
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Not located during study in the museum 2022-2023.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000118_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; scanned from ILTermini"
@@ -81,13 +158,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "117",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000118",
+    "isic000118",
     "i.sicily inscription 000118",
     "draft",
     "funerary",

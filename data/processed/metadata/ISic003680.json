@@ -1,16 +1,32 @@
 {
   "file": "ISic003680",
-  "metadataFile": "metadata/ISic003680.json",
-  "htmlFile": "html/ISic003680.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003680",
+  "uri": "ISic003680",
   "title": "I.Sicily inscription 003680",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html",
     "cert": "low"
   },
+  "support": "Four fragments of stucco plaster bearing traces of an incised inscription on which traces of red paint remain; the fragments are associated with other stucco fragments all of which are in turn associated with architrave elements of the so-called 'contraforte' or 'basamento curvilineo' above what is now know to be the cavea of the theatre.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -21,27 +37,59 @@
     "ana": "#material.plaster",
     "ref": "http://www.eagle-network.eu/voc/material/lod/126.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
-    }
-  ],
-  "letterHeight": [
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "traces of a single line of letters, incised and painted.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "'Caratteri di forma allungata e sottile' (Carettoni).",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": 100,
+  "precision": "low",
   "places": [
     {
       "_": "Halaesa",
@@ -56,9 +104,27 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1952 in front of the 'avancorpo centrale' of the 'basamento curvilineo' ('Rinvenuti in corrispondenza dell'avancorpo centrale, nello sterro superficiale ed al piano di risega (giorn. scavo, 20-30 giugno 1952)')",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1952-06",
+    "geo": [
+      37.999278,
+      14.262245
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003680_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -66,13 +132,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
+  "repository": {
+    "_": "Antiquarium e sito archeologico di Halaesa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/053"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Halaesa",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003680",
+    "isic003680",
     "i.sicily inscription 003680",
     "draft",
     "building",

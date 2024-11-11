@@ -1,15 +1,34 @@
 {
   "file": "ISic000127",
-  "metadataFile": "metadata/ISic000127.json",
-  "htmlFile": "html/ISic000127.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000127",
+  "uri": "ISic000127",
   "title": "Funerary epitaph for Gaius Alfius",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285294",
+      "type": "TM"
+    },
+    {
+      "_": "127517",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900640",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Grey marble plaque (with blue veining), broken on the right, intact on the other three sides. Rear is uneven.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,29 +39,65 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "37-39",
-      "unit": "mm"
+      "_": "15",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "37-41",
-      "unit": "mm"
+      "_": "28.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of latin letters, seemingly centred on the stone and beginning from the top, with vacat below.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Tall v-cut letters, with serifs, horizontals slightly angled upwards; interpuncts vary in form.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "37-39",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "37-41",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 50,
   "notAfter": 300,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -56,9 +111,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found among the building material in the ruins of the castle.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1885",
+    "geo": [
+      37.9886084,
+      13.6964197
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Alex Antoniou, 2023-07-05, in the storerooms of the museo civico.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000127_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05."
@@ -66,13 +139,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "27",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000127",
+    "isic000127",
     "funerary epitaph for gaius alfius",
     "draft",
     "funerary",

@@ -1,10 +1,26 @@
 {
   "file": "ISic001624",
-  "metadataFile": "metadata/ISic001624.json",
-  "htmlFile": "html/ISic001624.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001624",
+  "uri": "ISic001624",
   "title": "I.Sicily inscription 001624",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645076",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -15,21 +31,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Eryx",
@@ -43,9 +89,21 @@
     }
   ],
   "geo": [
-    38.03785,
-    12.58778
+    [
+      38.03785,
+      12.58778
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001624_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +111,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Erice (?)",
+  "repository": "",
   "textLang": {
     "_": "Punic",
     "mainLang": "xpu"
   },
   "placeName": "Eryx",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001624",
+    "isic001624",
     "i.sicily inscription 001624",
     "unchecked",
     "dedication",

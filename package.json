@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "etl": "npm run -w packages/etl etl -- ",
+    "etl:sef": "npm run -w packages/etl sef",
     "frontend:dev": "npm run -w frontend dev",
     "frontend:build": "npm run -w frontend build",
     "release": "release-it",
@@ -40,7 +41,8 @@
   },
   "devDependencies": {
     "@release-it/bumper": "^6.0.1",
-    "@release-it/conventional-changelog": "^8.0.1",
-    "release-it": "^17.4.1"
+    "@release-it/conventional-changelog": "^9.0.2",
+    "npm-check-updates": "^17.1.10",
+    "release-it": "^17.10.0"
   }
 }

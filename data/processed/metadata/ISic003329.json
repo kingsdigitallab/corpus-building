@@ -1,10 +1,32 @@
 {
   "file": "ISic003329",
-  "metadataFile": "metadata/ISic003329.json",
-  "htmlFile": "html/ISic003329.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003329",
+  "uri": "ISic003329",
   "title": "I.Sicily inscription 003329",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645580",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900819",
+      "type": "EDCS"
+    },
+    {
+      "_": "337251",
+      "type": "PHI"
+    },
+    {
+      "_": "337253",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "terminus",
     "ana": "#function.terminus",
@@ -20,21 +42,51 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -300,
+  "precision": "low",
   "places": [
     {
       "_": "Helorus",
@@ -48,9 +100,27 @@
     }
   ],
   "geo": [
-    36.84044,
-    15.10414
+    [
+      36.84044,
+      15.10414
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contr. Gioi, 2.5km west of Eloro ",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      36.86588,
+      15.06989
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Observed and photographed, Prag, 02.03.2023",
+    "type": "observed",
+    "subtype": "photographed",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003329_tiled.tif",
     "desc": "Photo J. Prag, 02.03.23, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +128,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Noto",
+  "repository": {
+    "_": "Museo Civico di Noto",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/100"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Helorus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003329",
+    "isic003329",
     "i.sicily inscription 003329",
     "draft",
     "terminus",

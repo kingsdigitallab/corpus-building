@@ -1,16 +1,32 @@
 {
   "file": "ISic020727",
-  "metadataFile": "metadata/ISic020727.json",
-  "htmlFile": "html/ISic020727.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020727",
+  "uri": "ISic020727",
   "title": "ISic020727",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "production or ownership (?)",
     "ana": "#function.production-ownership",
     "cert": "low",
     "ref": "http://vocab.getty.edu/page/aat/300256090"
   },
+  "support": "",
   "objectType": {
     "ana": "#object.vessel",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/305.html"
@@ -20,21 +36,47 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -575,
   "notAfter": -459,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Morgantina",
@@ -48,9 +90,26 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (1990) in the eastern shoulder of the plateau on which the archaic settlement was placed.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1990",
+    "geo": [
+      37.430596,
+      14.479485
+    ]
+  },
+  "provenanceObserved": {
+    "_": "no autopsy",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020727_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +117,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Aidone",
+  "repository": {
+    "_": "Museo Archeologico di Aidone",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/001"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx",
@@ -70,7 +137,7 @@
   },
   "placeName": "Morgantina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020727",
+    "isic020727",
     "isic020727",
     "unchecked",
     "production or ownership (?)",

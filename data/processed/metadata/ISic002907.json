@@ -1,10 +1,26 @@
 {
   "file": "ISic002907",
-  "metadataFile": "metadata/ISic002907.json",
-  "htmlFile": "html/ISic002907.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic002907",
+  "uri": "ISic002907",
   "title": "I.Sicily inscription 002907",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645300",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -20,19 +36,48 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 65,
   "notAfter": 66,
   "places": [
@@ -43,9 +88,22 @@
     }
   ],
   "geo": [
-    37.38417,
-    14.36921
+    [
+      37.38417,
+      14.36921
+    ]
   ],
+  "provenanceFound": {
+    "_": "Recovered during excavations at the villa del Casale",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic002907_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +111,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Piazza Armerina",
+  "repository": {
+    "_": "Villa Romana del Casale",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/198"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Piazza Armerina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic002907",
+    "isic002907",
     "i.sicily inscription 002907",
     "unchecked",
     "honorific",

@@ -1,16 +1,32 @@
 {
   "file": "ISic020662",
-  "metadataFile": "metadata/ISic020662.json",
-  "htmlFile": "html/ISic020662.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020662",
+  "uri": "ISic020662",
   "title": "ISic020662",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership (?)",
     "ana": "#function.production-ownership",
     "cert": "low",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Fragment of vessel.",
   "objectType": {
     "_": "vessel",
     "ana": "#object.vessel",
@@ -21,21 +37,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -599,
   "notAfter": -550,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Montagna di Ramacca",
@@ -44,9 +91,25 @@
     }
   ],
   "geo": [
-    37.38616,
-    14.69241
+    [
+      37.38616,
+      14.69241
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the area of Montagna di Ramacca.",
+    "type": "found",
+    "geo": [
+      37.38616,
+      14.69241
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020662_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -54,13 +117,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ramacca",
+  "repository": {
+    "_": "Museo Civico Archeologico di Ramacca",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/024"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"
   },
   "placeName": "Montagna di Ramacca",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020662",
+    "isic020662",
     "isic020662",
     "unchecked",
     "ownership (?)",

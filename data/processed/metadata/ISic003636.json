@@ -1,10 +1,27 @@
 {
   "file": "ISic003636",
-  "metadataFile": "metadata/ISic003636.json",
-  "htmlFile": "html/ISic003636.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003636",
+  "uri": "ISic003636",
   "title": "I.Sicily inscription 003636",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645705",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "59500343",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +37,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 400,
   "places": [
@@ -48,9 +94,22 @@
     }
   ],
   "geo": [
-    37.65418,
-    12.59304
+    [
+      37.65418,
+      12.59304
+    ]
   ],
+  "provenanceFound": null,
+  "provenanceObserved": {
+    "_": "seen in 1827 on a sarcophagus in the Cathedral",
+    "type": "observed",
+    "subtype": "seen"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic003636_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +117,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Mazara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003636",
+    "isic003636",
     "i.sicily inscription 003636",
     "unchecked",
     "funerary",

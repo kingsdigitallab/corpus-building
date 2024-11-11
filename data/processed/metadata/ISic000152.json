@@ -1,15 +1,34 @@
 {
   "file": "ISic000152",
-  "metadataFile": "metadata/ISic000152.json",
-  "htmlFile": "html/ISic000152.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000152",
+  "uri": "ISic000152",
   "title": "Funerary inscription for a Claud[---] Fort[---]",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285241",
+      "type": "TM"
+    },
+    {
+      "_": "111048",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900647",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Extremely irregular fragment of grey stone. Top edge original, but irregular shaped breaks on all other edges. It is possible that the lower left edge of the stone is original.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,34 +39,70 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "63-69",
-      "unit": "mm"
+      "_": "30",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "49-50",
-      "unit": "mm"
+      "_": "26.5 (at top), 11 (at irregular bottom)",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "34",
-      "unit": "mm"
+      "_": "4",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of fragmentary Latin text (a fourth line is possible, but the break obscures this; the epigraphic formula suggests three lines only). There is a large vacat on the left side of all text.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The text is irregularly and shakily carved. Letter height and width differ even on the same line, and the T on line 2 is significantly taller than other letters. Simple serifs used. The vertical bar for the 'R' in line 2 is bisected by a long horizontal foot. At the end of line 2, the top of a serifed downstroke is just visible after the T.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "63-69",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "49-50",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "34",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -63,9 +118,39 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavations in the garden of the Convento dei Cappuccini, in Termini Imerese, in 1889, during the construction of new buildings, together with  and .",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1889",
+    "ref": [
+      {
+        "_": "ISic000185",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000185"
+      },
+      {
+        "_": "ISic000226",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000226"
+      }
+    ],
+    "geo": [
+      37.982433,
+      13.695378
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 1.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-04",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000152_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04."
@@ -73,13 +158,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "55",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000152",
+    "isic000152",
     "funerary inscription for a claud[---] fort[---]",
     "edited",
     "funerary",

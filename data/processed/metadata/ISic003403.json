@@ -1,16 +1,34 @@
 {
   "file": "ISic003403",
-  "metadataFile": "metadata/ISic003403.json",
-  "htmlFile": "html/ISic003403.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003403",
+  "uri": "ISic003403",
   "title": "Fragment of a monumental Greek inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644948",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "140309",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html",
     "cert": "low"
   },
+  "support": "A large block of compact limestone ('calcare di Canicattini')",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -21,22 +39,59 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "210",
-      "unit": "mm"
+      "_": "36",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "70",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "90",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "A single line of monumental letters across the broad face of the block",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Elegant deep (14mm), v-cut letters of regular form. Kappa with short equal arms; sigma with horizontal top and bottom strokes; alpha with straight bar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "210",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "NA",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -50,9 +105,23 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Ortygia, extracted from the wall bordering the last canal/ditch linking the great and small harbours, on the corner looking towards the great harbour, in late 1888, at which point noted and recorded by Orsi, and transfered to the museum 4 December 1888.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1888",
+    "geo": [
+      37.0626632,
+      15.288339
+    ]
+  },
+  "provenanceObserved": null,
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003403_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -60,13 +129,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "12254",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003403",
+    "isic003403",
     "fragment of a monumental greek inscription",
     "draft",
     "building",

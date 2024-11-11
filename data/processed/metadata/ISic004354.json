@@ -1,10 +1,26 @@
 {
   "file": "ISic004354",
-  "metadataFile": "metadata/ISic004354.json",
-  "htmlFile": "html/ISic004354.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004354",
+  "uri": "ISic004354",
   "title": "I.Sicily inscription 004354",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
+  "support": "Rectangular marble plaque, recomposed from multiple joining fragments. A small part of the lower middle margin is missing, but otherwise complete.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -15,20 +31,55 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "45",
-      "unit": "mm"
+      "_": "22.3",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "58.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.6-1.8",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is centred on the plaque. To the right of line 1 there is a christogram composed of three letters: XPT.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 500,
   "places": [
@@ -44,9 +95,27 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Via Orto San Clemente, Catania, excavation of November 1968",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1968-11",
+    "geo": {
+      "_": "37.508751, 15.080804",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "2016.05.12",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic004354_tiled.tif",
     "desc": "Photo J. Prag, 2016-05-12, courtesy Museo di Archeologia dell'Universita di Catania"
@@ -54,13 +123,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo di Archeologia dell'Universita di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/019"
+  },
+  "idno": {
+    "_": "05/398",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004354",
+    "isic004354",
     "i.sicily inscription 004354",
     "draft",
     "plaque",

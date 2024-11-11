@@ -1,15 +1,31 @@
 {
   "file": "ISic004415",
-  "metadataFile": "metadata/ISic004415.json",
-  "htmlFile": "html/ISic004415.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004415",
+  "uri": "ISic004415",
   "title": "Epitaph for Krimma, child of Aunakos",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Plinth (support for a stele) with mouldings top and bottom, of the local sandstone; the upper moulding is damaged, principally at the corners. The plinth is the left one of a pair mounted on a single base, classified as an epitymbion of type C.",
   "objectType": {
     "_": "plinth",
     "ana": "#object.arch_element.plinth",
@@ -20,22 +36,59 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "30",
-      "unit": "mm"
+      "_": "32",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "60",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "67",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Single line of greek letters approximately centred on the face of the plinth",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Small simple letters. Kappa has short equal arms, attached to the vertical; rho has small closed eye; mu has slanting first and final strokes, with the mid-strokes joining as a curve and only descending half-way; alpha is broad with straight bar, in one case slightly curved with the apex extending at the top; nu has shorter right vertical joining the diagonal above the line; omicron is small and mid-line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "NA",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Abacaenum",
@@ -51,9 +104,27 @@
     }
   ],
   "geo": [
-    38.05191,
-    15.10158
+    [
+      38.05191,
+      15.10158
+    ]
   ],
+  "provenanceFound": {
+    "_": "Tomb 69/70 of the necropolis in contrada Cardusa, where it remains in situ",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      38.06519,
+      15.11438
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Metcalfe 2016 visited site",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004415_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -61,13 +132,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
+  "repository": {
+    "_": "Necropoli di Abakainon",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/186"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Abacaenum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004415",
+    "isic004415",
     "epitaph for krimma, child of aunakos",
     "edited",
     "funerary",

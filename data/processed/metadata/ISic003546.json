@@ -1,15 +1,34 @@
 {
   "file": "ISic003546",
-  "metadataFile": "metadata/ISic003546.json",
-  "htmlFile": "html/ISic003546.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003546",
+  "uri": "ISic003546",
   "title": "I.Sicily inscription 003546",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645621",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900400",
+      "type": "EDCS"
+    },
+    {
+      "_": "337198",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Text painted on wall of a tomb",
   "objectType": {
     "_": "wall",
     "ana": "#object.arch_element.wall",
@@ -20,19 +39,48 @@
     "ana": "#material.plaster",
     "ref": "http://www.eagle-network.eu/voc/material/lod/126.html"
   },
-  "layoutDesc": {
-    "_": "Painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "Painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
   "places": [
@@ -49,9 +97,23 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Tomba no. 2, Contrada Biliuzzo, Centuripe",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003546_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +121,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Centuripae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003546",
+    "isic003546",
     "i.sicily inscription 003546",
     "draft",
     "funerary",

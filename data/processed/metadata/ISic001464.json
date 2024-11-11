@@ -1,10 +1,37 @@
 {
   "file": "ISic001464",
-  "metadataFile": "metadata/ISic001464.json",
-  "htmlFile": "html/ISic001464.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001464",
+  "uri": "ISic001464",
   "title": "I.Sicily inscription 001464",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284911",
+      "type": "TM"
+    },
+    {
+      "_": "108690",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "41300060",
+      "type": "EDCS"
+    },
+    {
+      "_": "64700406",
+      "type": "EDCS"
+    },
+    {
+      "_": "175672",
+      "type": "PHI"
+    },
+    {
+      "_": "330102",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,21 +42,52 @@
     "ana": "#material.stone.limestone_tufa",
     "ref": "http://www.eagle-network.eu/voc/material/lod/64.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -650,
   "notAfter": -600,
+  "precision": "low",
   "places": [
     {
       "_": "Selinus",
@@ -43,9 +101,21 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001464_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +123,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8813",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001464",
+    "isic001464",
     "i.sicily inscription 001464",
     "draft",
     "funerary",

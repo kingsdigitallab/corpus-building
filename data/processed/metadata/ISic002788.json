@@ -1,15 +1,33 @@
 {
   "file": "ISic002788",
-  "metadataFile": "metadata/ISic002788.json",
-  "htmlFile": "html/ISic002788.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic002788",
+  "uri": "ISic002788",
   "title": "I.Sicily inscription 002788",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645185",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "334272",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Upper right corner part of stele, very regular and with carefully smoothed surfaces. Slightly chipped along the upper edge",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -20,22 +38,57 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "44-63",
-      "unit": "mm"
+      "_": "18",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "20",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "8",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "44-63",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Lipara",
@@ -49,9 +102,27 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1952 in trench VIII (Picone property). Reused in tomb 71",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1952",
+    "geo": [
+      38.46713,
+      14.953871
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic002788_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +130,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": {
+    "_": "Museo Archeologico Regionale Eoliano \"Luigi Bernabò Brea\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/048"
+  },
+  "idno": {
+    "_": "14179",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Lipara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic002788",
+    "isic002788",
     "i.sicily inscription 002788",
     "draft",
     "funerary",

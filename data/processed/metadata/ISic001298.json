@@ -1,15 +1,38 @@
 {
   "file": "ISic001298",
-  "metadataFile": "metadata/ISic001298.json",
-  "htmlFile": "html/ISic001298.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001298",
+  "uri": "ISic001298",
   "title": "Funerary inscription of Euporios",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492903",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101668",
+      "type": "EDCS"
+    },
+    {
+      "_": "140790",
+      "type": "PHI"
+    },
+    {
+      "_": "316217",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Block of black volcanic lava stone with irregular sides.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,26 +43,54 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "0": {
-        "_": "Line 1",
-        "from": "line1",
-        "to": "line1"
-      },
-      "1": {
-        "from": "line1",
-        "to": "line2"
-      },
-      "h": "60-80",
-      "unit": "mm"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "82",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "44",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Lunate Ε.",
+    "dimensions": [
+      {
+        "0": {
+          "_": "Line 1",
+          "from": "line1",
+          "to": "line1"
+        },
+        "1": {
+          "from": "line1",
+          "to": "line2"
+        },
+        "type": "letterHeight",
+        "h": "60-80",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -55,9 +106,20 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, but must be from the Etna region, based upon the material.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "First seen by Kaibel in Museo Biscari, later by Korhonen in cortile, Collezione Biscari",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001298_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -65,13 +127,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001298",
+    "isic001298",
     "funerary inscription of euporios",
     "draft",
     "funerary",

@@ -1,16 +1,32 @@
 {
   "file": "ISic020318",
-  "metadataFile": "metadata/ISic020318.json",
-  "htmlFile": "html/ISic020318.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020318",
+  "uri": "ISic020318",
   "title": "ISic020318",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "key": "dedication",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/79.html",
     "cert": "low"
   },
+  "support": "Fragments of foot of a black-glaze lekythos (?).",
   "objectType": {
     "_": "lekythos",
     "ana": "#object.vessel.lekythos",
@@ -22,23 +38,55 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "h": "4",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "h": "8-9",
-      "unit": "mm"
+      "0": {
+        "type": "diameter",
+        "subtype": "min",
+        "unit": "cm"
+      },
+      "1": {
+        "type": "diameter",
+        "subtype": "max",
+        "unit": "cm"
+      },
+      "dimension": "dim"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text consists of two inscriptions, arranged on two different sides of the same object. \n                                        The first one (face a) is on the underside of the foot: it is arranged in a clockwise spiral, on one line. \n                                        The second one (face b) is on the underside of the foot: it is arranged in a clockwise spiral, on one line.\n                                        On both faces the text has been highlighted with white painting in modern times to make it more legible.",
+      "damage": {
+        "ana": "#text_condition.incomplete text_condition.partly_legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "h": "4",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "h": "8-9",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Segesta",
@@ -47,9 +95,28 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Accidentally found by a local shepherd in the excavations area and attributed (Voza 1966, p.218, n.7) to the Segesta area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.9424,
+      12.84509
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2021-12-15",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2021-12-15"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020318_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,6 +124,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "54361",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",
@@ -69,7 +145,7 @@
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020318",
+    "isic020318",
     "isic020318",
     "draft",
     "dedication",

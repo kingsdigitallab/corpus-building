@@ -1,15 +1,31 @@
 {
   "file": "ISic004428",
-  "metadataFile": "metadata/ISic004428.json",
-  "htmlFile": "html/ISic004428.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004428",
+  "uri": "ISic004428",
   "title": "ISic004428",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Trapezoidal slab.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -20,21 +36,50 @@
     "ana": "#material.stone.limestone",
     "ref": "https://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "41",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "19-27",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "9",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is arranged from left to right and consists of five lines.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Hybla Heraea",
@@ -48,9 +93,27 @@
     }
   ],
   "geo": [
-    36.92653,
-    14.74761
+    [
+      36.92653,
+      14.74761
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered during the restoration of a casale in contrada Rose, on the northern side of the San Leonardo valley , 20km east of Ibla.",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      36.892981,
+      14.882702
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004428_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +121,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/91"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx",
@@ -70,7 +141,7 @@
   },
   "placeName": "Hybla Heraea",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004428",
+    "isic004428",
     "isic004428",
     "draft",
     "funerary",

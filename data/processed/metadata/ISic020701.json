@@ -1,16 +1,32 @@
 {
   "file": "ISic020701",
-  "metadataFile": "metadata/ISic020701.json",
-  "htmlFile": "html/ISic020701.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020701",
+  "uri": "ISic020701",
   "title": "ISic020701",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ludic (?)",
     "ana": "#function.ludic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/369.html",
     "cert": "low"
   },
+  "support": "Attic Black-figure Kotyle.",
   "objectType": {
     "_": "kotyle",
     "ana": "#object.vessel.kotyle",
@@ -21,21 +37,63 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "type": "graffito",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "type": "graffito",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription runs on the underside of the foot.",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Terravecchia di Grammichele",
@@ -44,9 +102,29 @@
     }
   ],
   "geo": [
-    37.214706,
-    14.636362
+    [
+      37.214706,
+      14.636362
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered in 1916 by P.Orsi among the grave goods in one tomb in the necropolis of Casa Cantoniera.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1916",
+    "geo": [
+      37.214706,
+      14.636362
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2022-01-17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2022-01-17"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020701_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -54,6 +132,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx",
@@ -66,7 +152,7 @@
   },
   "placeName": "Terravecchia di Grammichele",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020701",
+    "isic020701",
     "isic020701",
     "draft",
     "ludic (?)",

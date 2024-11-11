@@ -1,10 +1,27 @@
 {
   "file": "ISic000660",
-  "metadataFile": "metadata/ISic000660.json",
-  "htmlFile": "html/ISic000660.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000660",
+  "uri": "ISic000660",
   "title": "I.Sicily inscription 000660",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "494090",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "3700333",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,21 +32,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Piazza Armerina",
@@ -43,9 +90,21 @@
     }
   ],
   "geo": [
-    37.38417,
-    14.36921
+    [
+      37.38417,
+      14.36921
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000660_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +112,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Piazza Armerina",
+  "repository": {
+    "_": "private collection",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Piazza Armerina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000660",
+    "isic000660",
     "i.sicily inscription 000660",
     "unchecked",
     "funerary",

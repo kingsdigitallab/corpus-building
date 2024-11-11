@@ -1,15 +1,34 @@
 {
   "file": "ISic000124",
-  "metadataFile": "metadata/ISic000124.json",
-  "htmlFile": "html/ISic000124.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000124",
+  "uri": "ISic000124",
   "title": "I.Sicily inscription 000124",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285288",
+      "type": "TM"
+    },
+    {
+      "_": "127509",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900639",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A white marble plaque broken into five joining fragments; small fragments missing from start of line 1, upper middle edge and lower right corner, but text is complete. Rear is flat and uniform.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,29 +39,65 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "48-50 (F = 53)",
-      "unit": "mm"
+      "_": "15.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "47-53",
-      "unit": "mm"
+      "_": "34-31 (top to bottom)",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Latin letters centered on the stone. Guidlines above and below both lines, with incised lines marking the left and right border also.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Thin, tall, elegant v-cut letters, serifed, with horizontal strokes tending upwards (and breaking the guidelines); interpuncts formed by two strokes at right angles; use of ligature in line 1.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "48-50 (F = 53)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "47-53",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 300,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -56,9 +111,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Recovered during excavation for a water pipe in via Vittorio Amedeo, together with an urn formed of limestone slabs containing a ceramic vase with skeletal remains, which was however not preserved.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1890",
+    "geo": [
+      37.9833845,
+      13.6921226
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Alex Antoniou, 2023-07-07, storeroom of the Museo Civico",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000124_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07."
@@ -66,13 +139,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "30ae",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000124",
+    "isic000124",
     "i.sicily inscription 000124",
     "draft",
     "funerary",

@@ -1,10 +1,28 @@
 {
   "file": "ISic000321",
-  "metadataFile": "metadata/ISic000321.json",
-  "htmlFile": "html/ISic000321.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000321",
+  "uri": "ISic000321",
   "title": "Mosaic",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491530",
+      "type": "TM"
+    },
+    {
+      "_": "141142",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900359",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
@@ -20,19 +38,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "81",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "285",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Each word is placed in a tabula ansata, held in the hands of a pair of facing small naked male figures",
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 400,
   "places": [
@@ -48,9 +98,26 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the Terme Achilliane, Catania",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.502194,
+      15.0873522
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2017.07.01",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000321_detail_left_tiled.tif",
     "desc": "Photo J. Prag, 2017"
@@ -58,13 +125,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "MB 382",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000321",
+    "isic000321",
     "mosaic",
     "draft",
     "greeting",

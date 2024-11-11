@@ -1,10 +1,31 @@
 {
   "file": "ISic000636",
-  "metadataFile": "metadata/ISic000636.json",
-  "htmlFile": "html/ISic000636.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000636",
+  "uri": "ISic000636",
   "title": "I.Sicily inscription 000636",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644878",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "331827",
+      "type": "PHI"
+    },
+    {
+      "_": "332963",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -15,19 +36,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -50,
   "notAfter": -1,
   "places": [
@@ -43,9 +93,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Euryelos",
+    "type": "found",
+    "subtype": "discovered",
+    "cert": "low"
+  },
+  "provenanceObserved": {
+    "_": "Depositi, Mag B, ex Euryelos depository",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000636_a_tiled.tif",
     "desc": "Fragment a, photo J. Prag"
@@ -53,13 +116,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "104860",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000636",
+    "isic000636",
     "i.sicily inscription 000636",
     "draft",
     "building",

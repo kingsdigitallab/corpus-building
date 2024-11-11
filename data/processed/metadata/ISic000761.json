@@ -1,10 +1,27 @@
 {
   "file": "ISic000761",
-  "metadataFile": "metadata/ISic000761.json",
-  "htmlFile": "html/ISic000761.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000761",
+  "uri": "ISic000761",
   "title": "I.Sicily inscription 000761",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175797",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "6100290",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,21 +32,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line\n                                    1\n                                ",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line\n                                    1\n                                ",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to\n                                    2\n                                ",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": 100,
+  "precision": "low",
   "places": [
     {
       "_": "Morgantina",
@@ -43,9 +90,21 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000761_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +112,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Morgantina",
+  "repository": {
+    "_": "private collection",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Morgantina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000761",
+    "isic000761",
     "i.sicily inscription 000761",
     "draft",
     "funerary",

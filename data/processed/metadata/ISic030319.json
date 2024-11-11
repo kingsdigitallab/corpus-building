@@ -1,15 +1,31 @@
 {
   "file": "ISic030319",
-  "metadataFile": "metadata/ISic030319.json",
-  "htmlFile": "html/ISic030319.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030319",
+  "uri": "ISic030319",
   "title": "ISic030319",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "votive",
     "ana": "#function.votive",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/83"
   },
+  "support": ".",
   "objectType": {
     "_": "belt",
     "ana": "#object.belt",
@@ -20,22 +36,55 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "punched",
-    "ana": "#execution.punched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/11"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "25-30",
-      "unit": "mm"
+      "_": "9.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "_": "90",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "punched",
+        "ana": "#execution.punched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/11"
+      },
+      "p": "The text is placed on two lines over the entire length of the belt; the first line is 49 cm long, the second 57 cm.",
+      "damage": {
+        "ana": "#text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "25-30",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -300,
+  "precision": "low",
   "places": [
     {
       "_": "Palikè",
@@ -48,9 +97,28 @@
     }
   ],
   "geo": [
-    37.329954,
-    14.697361
+    [
+      37.329954,
+      14.697361
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found outside of the city wall along the northeast side of the hill of Palikè by the local landowner Sig. A. Tranquillità (Gentili 1962).",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.329954,
+      14.697361
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2021-01-17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2021-01-17"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030319_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +126,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "56674",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Palikè",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030319",
+    "isic030319",
     "isic030319",
     "draft",
     "votive",

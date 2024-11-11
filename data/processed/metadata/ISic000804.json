@@ -1,15 +1,34 @@
 {
   "file": "ISic000804",
-  "metadataFile": "metadata/ISic000804.json",
-  "htmlFile": "html/ISic000804.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000804",
+  "uri": "ISic000804",
   "title": "Dedication of a statue to Ceres, by Iulius Acilius Hermes, sevir",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175724",
+      "type": "TM"
+    },
+    {
+      "_": "075546",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "9401430",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "The inscription is incised on the face of the ovoid base which forms part of the same block from which is carved the statue of Ceres, 1.7m high. The base is 56 cm wide, 31.5 cm deep and 7.5-10.5 cm high.",
   "objectType": {
     "_": "statue base",
     "ana": "#object.statue_base",
@@ -20,29 +39,66 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "18-25",
-      "unit": "mm"
+      "_": "7.5-10.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "19-23",
-      "unit": "mm"
+      "_": "56",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "31.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The Latin text is engraved over two lines (letters c.20 mm high, but of uneven height), to a maximum length of 52 cm.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": " The letters show some irregularity, with fairly pronounced serifs, and lengthy tails to the letter R. The first two words are separated from the rest by a space; an interpunct is visible at the end of the dedicant’s name, and the final abbreviated phrase is separated from the rest by a large hedera (ivy leaf). The letter I in line 1 is frequently taller than the rest (but so too is the first L in line 1); the final I of line 1 is somewhat irregularly carved.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "18-25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "19-23",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation lines 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "7-15",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 180,
   "notAfter": 199,
+  "evidence": "context",
   "places": [
     {
       "_": "Halaesa",
@@ -57,9 +113,25 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated 8 September 1970; found on the floor of the west portico, between rooms 2 and 3",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.998037,
+      14.262643
+    ]
+  },
+  "provenanceObserved": {
+    "_": "On display in room A of the antiquarium",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000804_tiled.tif",
     "desc": "Photo J. Prag courtesy Soprintendenza BBCCAA di Messina"
@@ -67,13 +139,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
+  "repository": {
+    "_": "Antiquarium e sito archeologico di Halaesa",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/053"
+  },
+  "idno": {
+    "_": "ME 20194",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Halaesa",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000804",
+    "isic000804",
     "dedication of a statue to ceres, by iulius acilius hermes, sevir",
     "edited",
     "dedication",

@@ -1,15 +1,47 @@
 {
   "file": "ISic030113",
-  "metadataFile": "metadata/ISic030113.json",
-  "htmlFile": "html/ISic030113.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030113",
+  "uri": "ISic030113",
   "title": "Caduceus of the Rheginoi",
   "status": "draft",
+  "editions": [
+    {
+      "_": "681900",
+      "type": "TM"
+    },
+    {
+      "_": "149531",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900799",
+      "type": "EDCS"
+    },
+    {
+      "_": "70900781",
+      "type": "EDCS"
+    },
+    {
+      "_": "195319",
+      "type": "PHI"
+    },
+    {
+      "_": "330701",
+      "type": "PHI"
+    },
+    {
+      "_": "318693",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "public document",
     "ana": "#function.document.public",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/360.html"
   },
+  "support": "A bronze caduceus consisting of staff surmounted by Ionic capital supporting a pair of entwined snakes.",
   "objectType": {
     "_": "caduceus",
     "ana": "#object.caduceus",
@@ -20,22 +52,51 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "4",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is written on one side of the upper part of the staff, below the head.",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Chalcidic alphabet",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "4",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Rhegion",
@@ -49,9 +110,32 @@
     }
   ],
   "geo": [
-    38.109279,
-    15.64393
+    [
+      38.109279,
+      15.64393
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in contrada Civita in the early 1960s (possibly ancient )",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1964",
+    "placeName": {
+      "_": "Inessa/Aitna",
+      "type": "ancient",
+      "ref": "http://pleiades.stoa.org/places/465922"
+    },
+    "geo": [
+      37.60182,
+      14.90788
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030113_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +143,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Paternò",
+  "repository": {
+    "_": "Museo Civico Gaetano Savasta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/038"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Rhegion",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030113",
+    "isic030113",
     "caduceus of the rheginoi",
     "draft",
     "public document",

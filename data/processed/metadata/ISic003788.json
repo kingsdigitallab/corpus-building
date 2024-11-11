@@ -1,15 +1,32 @@
 {
   "file": "ISic003788",
-  "metadataFile": "metadata/ISic003788.json",
-  "htmlFile": "html/ISic003788.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003788",
+  "uri": "ISic003788",
   "title": "I.Sicily inscription 003788",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "334185",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Right side of stone cippus of which only the front is visible in its present location",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -20,20 +37,53 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "50",
-      "unit": "mm"
+      "_": "30",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "20",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "50",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -49,9 +99,27 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Cippus walled in a barbican under the medieval gate tower in the south corner of Piazza Mazzini",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "2003",
+    "geo": [
+      38.4685,
+      14.956605
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003788_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +127,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": "Piazza Mazzini",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Lipara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003788",
+    "isic003788",
     "i.sicily inscription 003788",
     "draft",
     "funerary",

@@ -1,10 +1,27 @@
 {
   "file": "ISic003336",
-  "metadataFile": "metadata/ISic003336.json",
-  "htmlFile": "html/ISic003336.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003336",
+  "uri": "ISic003336",
   "title": "I.Sicily inscription 003336",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491422",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900818",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +37,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
   "places": [
@@ -48,9 +94,21 @@
     }
   ],
   "geo": [
-    36.84044,
-    15.10414
+    [
+      36.84044,
+      15.10414
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contr. S. Curraiulo (during autostrada works), 5km from Eloro",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "May now be in Siracusa at P. Orsi, after the earthquake?",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003336_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +116,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Noto",
+  "repository": {
+    "_": "Museo Civico di\n                            Noto",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/100"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Helorus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003336",
+    "isic003336",
     "i.sicily inscription 003336",
     "draft",
     "funerary",

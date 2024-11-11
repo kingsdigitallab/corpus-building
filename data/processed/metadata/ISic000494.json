@@ -1,10 +1,27 @@
 {
   "file": "ISic000494",
-  "metadataFile": "metadata/ISic000494.json",
-  "htmlFile": "html/ISic000494.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000494",
+  "uri": "ISic000494",
   "title": "I.Sicily inscription 000494",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491720",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22000800",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +37,48 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -48,9 +94,21 @@
     }
   ],
   "geo": [
-    37.65418,
-    12.59304
+    [
+      37.65418,
+      12.59304
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "First noted by Gualtherus in the Cathedral of Mazara del Vallo in 1624; seen subsequently by Mommsen and others.",
+    "type": "observed",
+    "subtype": "recorded"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000494_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +116,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mazara del Vallo",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Mazara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000494",
+    "isic000494",
     "i.sicily inscription 000494",
     "draft",
     "funerary",

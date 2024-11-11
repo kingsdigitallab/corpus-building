@@ -1,10 +1,28 @@
 {
   "file": "ISic002979",
-  "metadataFile": "metadata/ISic002979.json",
-  "htmlFile": "html/ISic002979.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic002979",
+  "uri": "ISic002979",
   "title": "I.Sicily inscription 002979",
   "status": "draft",
+  "editions": [
+    {
+      "_": "494017",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39300431",
+      "type": "EDCS"
+    },
+    {
+      "_": "175482",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "prayer",
     "ana": "#function.prayer",
@@ -20,19 +38,50 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 600,
   "places": [
@@ -49,9 +98,21 @@
     }
   ],
   "geo": [
-    37.0578,
-    14.89346
+    [
+      37.0578,
+      14.89346
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic002979_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +120,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palazzolo Acreide",
+  "repository": "Museo Archeologico Gabriele Judica",
+  "idno": {
+    "_": "no.2250",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Acrae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic002979",
+    "isic002979",
     "i.sicily inscription 002979",
     "draft",
     "prayer",

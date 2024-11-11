@@ -1,15 +1,33 @@
 {
   "file": "ISic000759",
-  "metadataFile": "metadata/ISic000759.json",
-  "htmlFile": "html/ISic000759.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000759",
+  "uri": "ISic000759",
   "title": "I.Sicily inscription 000759",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175795",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "6100288",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A fragmentary altar made of limestone, damaged across the top and the right, intact front left and below.",
   "objectType": {
     "_": "altar",
     "ana": "#object.altar",
@@ -20,21 +38,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text within a recessed field, surrounded by a raised border, left margin is regular and text fills the field, but the first preserved line is larger, more widely spaced.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are broad and well-spaced, of a wide square module, with small serifs, decreasing in height towards the bottom. V appears slightly curved and sometimes over extended; M is broad, four diagonal full length strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Enna",
@@ -48,9 +100,19 @@
     }
   ],
   "geo": [
-    37.5655,
-    14.27433
+    [
+      37.5655,
+      14.27433
+    ]
   ],
+  "provenanceFound": {
+    "_": "Seen by Manganaro in a collection in Enna and assumed to come from the surrounding area",
+    "type": "found",
+    "subtype": "first-recorded",
+    "notAfter": "1989"
+  },
+  "provenanceObserved": null,
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000759_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +120,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Enna",
+  "repository": "private collection",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Enna",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000759",
+    "isic000759",
     "i.sicily inscription 000759",
     "edited",
     "funerary",

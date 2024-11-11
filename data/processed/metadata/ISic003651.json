@@ -1,10 +1,31 @@
 {
   "file": "ISic003651",
-  "metadataFile": "metadata/ISic003651.json",
-  "htmlFile": "html/ISic003651.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003651",
+  "uri": "ISic003651",
   "title": "I.Sicily inscription 003651",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492780",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "333748",
+      "type": "PHI"
+    },
+    {
+      "_": "336672",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "cadastral",
     "ana": "#function.cadastral",
@@ -20,21 +41,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Halaesa",
@@ -49,9 +100,27 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1958 on the site of ancient Halaesa, as a chance surface find, in the area immediately to the north/north-east of the church of S. Maria dei Palazzi.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1958",
+    "geo": {
+      "_": "37.996787, 14.261959",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Seen in 2017 in the office of the Rector of Messina University",
+    "type": "observed",
+    "subtype": "recorded",
+    "when": "2017-07-20"
+  },
   "facsimile": {
     "url": "ISic003651_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +128,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "University of Messina, office of the Rector",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Halaesa",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003651",
+    "isic003651",
     "i.sicily inscription 003651",
     "draft",
     "cadastral",

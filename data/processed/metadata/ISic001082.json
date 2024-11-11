@@ -1,15 +1,43 @@
 {
   "file": "ISic001082",
-  "metadataFile": "metadata/ISic001082.json",
-  "htmlFile": "html/ISic001082.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001082",
+  "uri": "ISic001082",
   "title": "I.Sicily inscription 001082",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492710",
+      "type": "TM"
+    },
+    {
+      "_": "136140",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900050",
+      "type": "EDCS"
+    },
+    {
+      "_": "39102239",
+      "type": "EDCS"
+    },
+    {
+      "_": "140564",
+      "type": "PHI"
+    },
+    {
+      "_": "331328",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Small limestone altar, intact, but with damage to the upper right, subsequently reattached. Mouldings top and bottom on three sides, but the rear is plain. On top a raised rectangular moulding surrounding a deeper recess. The upper moulding on the front face has dentils and incised decoration on its upper part. The epigraphic field on the front face (H 7.5 cm, W 13.5 cm) has a raised border below, left and right, bounded instead on the upper edge by the dentils of the upper moulding.",
   "objectType": {
     "_": "altar",
     "ana": "#object.altar",
@@ -20,43 +48,98 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "6-15",
-      "unit": "mm"
+      "_": "15.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "9-16",
-      "unit": "mm"
+      "_": "17",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "5-8",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "6-14",
-      "unit": "mm"
+      "_": "12",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Greek letters, all crudely incised in the epigraphic field on the front face.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The first two lines are deeply incised, the second two very lightly incised. Alpha has straight bar, with an apex; epsilon has equal length horizontals; mu in line 3 has extended apices, in anticipation of the cursive form; omicron is circular in lines 1 and 3, angular (made up of straight lines) in lines 3 and 4; sigma is and open four bar sigma in lines 1-2, a quadrate lunate sigma in lines 3-4; phi has a small elongated eye; omega is open in lines 1-2, lunate in line 4. It is therefore likely that lines 1-2 were incised by a different hand from lines 3-4.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "6-15",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "9-16",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "5-8",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "6-14",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "9-12",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "5-9",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "2-5",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Agrigentum",
@@ -70,9 +153,26 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in localita S. Nicola in 1866 .",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1866",
+    "geo": [
+      37.2966681,
+      13.5882617
+    ]
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001082_tiled.tif",
     "desc": "Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento"
@@ -80,13 +180,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
+  "idno": {
+    "_": "C311",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Agrigentum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001082",
+    "isic001082",
     "i.sicily inscription 001082",
     "draft",
     "dedication",

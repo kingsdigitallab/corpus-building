@@ -1,16 +1,36 @@
 {
   "file": "ISic001663",
-  "metadataFile": "metadata/ISic001663.json",
-  "htmlFile": "html/ISic001663.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001663",
+  "uri": "ISic001663",
   "title": "I.Sicily inscription 001663",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645121",
+      "type": "TM"
+    },
+    {
+      "_": "136229",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900838",
+      "type": "EDCS"
+    },
+    {
+      "_": "331490",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "decree",
     "ana": "#function.decree",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/384.html",
     "cert": "low"
   },
+  "support": "Fragment of a thick plaque or stele of limestone. Intact on the left and part of the front and rear face, but broken top, bottom, and on the right. A substantial raised moulding is partially preserved along the left side, which could originally have been a relief carving of an engaged column, but has a flat / smooth front survace. Part of the upper right of the preserved face is also lost.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -22,22 +42,58 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-16",
-      "from": "line1",
-      "to": "line16",
-      "h": "5-6",
-      "unit": "mm"
+      "_": "13.5 (maximum preserved; 16 at rear)",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "14.5 (maximum preserved; 14.7 at rear)",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "8.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of 16 densely packed lines of Greek, with the left margin intact; the faint suggestion of a raised border in the lower left corner implies that the final line preserved may be the final line of the text.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deep cut, small regular square letters, without serifs. Alpha has broken bar; omicron is full size; omega is closed, smaller circle atop a horizontal bar; theta slightly ovoid; sigma has horizontal top and bottom strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-16",
+        "from": "line1",
+        "to": "line16",
+        "h": "5-6",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "1-2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Agrigentum",
@@ -51,9 +107,28 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Area of the bouleuterion, S. Nicola ",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.2974711,
+      13.5884783
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2018-07-18",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "when": "2018-07-18"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001663_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -61,13 +136,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Agrigentum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001663",
+    "isic001663",
     "i.sicily inscription 001663",
     "draft",
     "decree",

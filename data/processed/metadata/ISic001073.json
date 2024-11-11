@@ -1,10 +1,28 @@
 {
   "file": "ISic001073",
-  "metadataFile": "metadata/ISic001073.json",
-  "htmlFile": "html/ISic001073.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001073",
+  "uri": "ISic001073",
   "title": "I.Sicily inscription 001073",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492700",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102228",
+      "type": "EDCS"
+    },
+    {
+      "_": "140553",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +38,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 380,
   "notAfter": 480,
   "places": [
@@ -43,9 +90,26 @@
     }
   ],
   "geo": [
-    36.851421,
-    14.837505
+    [
+      36.851421,
+      14.837505
+    ]
   ],
+  "provenanceFound": {
+    "_": "First transcription appears to be sent by letter on 8 June from Siracusa by one Dr Schubart to T. Bergk of the Zeitschrift fur Alterthumswissenschaft, from the caves of Cava d'Ispica",
+    "type": "found",
+    "subtype": "first-recorded",
+    "notAfter": "1843-06-08",
+    "geo": {
+      "_": "36.8509478,14.8354427",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic001073_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +117,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Modica",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Cava d'Ispica",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001073",
+    "isic001073",
     "i.sicily inscription 001073",
     "draft",
     "funerary",

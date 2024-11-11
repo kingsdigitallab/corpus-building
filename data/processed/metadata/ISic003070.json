@@ -1,10 +1,28 @@
 {
   "file": "ISic003070",
-  "metadataFile": "metadata/ISic003070.json",
-  "htmlFile": "html/ISic003070.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003070",
+  "uri": "ISic003070",
   "title": "I.Sicily inscription 003070",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284813",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "59700188",
+      "type": "EDCS"
+    },
+    {
+      "_": "331223",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -19,21 +37,56 @@
     "_": "Plaster on stone",
     "ana": "#material.plaster"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "87",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "34",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "34",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Neatly painted square letters with short serifs, painted in the style of stone cut letters. Alpha is broad with straight bar; Epsilon has equal length horizontal strokes; theta is ovoid with a full horizontal bar; kappa has arms that are not quite ful length; mu has vertical first and last, with middle strokes nearly reaching down to the line; pi has equal length verticals; sigma is four-bar, of equal length, top and bottom strokes horizontal.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Lilybaeum",
@@ -47,9 +100,23 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated in the via del Fante necropolis in 1984.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1984"
+  },
+  "provenanceObserved": {
+    "_": "Photographed, Metcalfe, 2018-08-31",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003070_tiled.tif",
     "desc": "Photo R.J.A. Wilson"
@@ -57,13 +124,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Lilybaeum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003070",
+    "isic003070",
     "i.sicily inscription 003070",
     "draft",
     "funerary",

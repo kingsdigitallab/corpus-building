@@ -1,15 +1,31 @@
 {
   "file": "ISic030007",
-  "metadataFile": "metadata/ISic030007.json",
-  "htmlFile": "html/ISic030007.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030007",
+  "uri": "ISic030007",
   "title": "ISic030007",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,21 +36,46 @@
     "ana": "#material.metal.lead",
     "ref": ""
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": ""
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": ""
+      },
+      "p": "",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
+  "evidence": "lettering archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Selinus",
@@ -47,9 +88,25 @@
     }
   ],
   "geo": [
-    37.5853775,
-    12.8298666
+    [
+      37.5853775,
+      12.8298666
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the archaeological area of Selinunte.",
+    "type": "found",
+    "geo": [
+      37.5853775,
+      12.8298666
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030007_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,13 +114,20 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Selinunte",
+  "repository": {
+    "role": "museum",
+    "ref": ""
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030007",
+    "isic030007",
     "isic030007",
     "unchecked",
     "defixio",

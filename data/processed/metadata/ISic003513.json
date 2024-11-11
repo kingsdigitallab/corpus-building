@@ -1,15 +1,34 @@
 {
   "file": "ISic003513",
-  "metadataFile": "metadata/ISic003513.json",
-  "htmlFile": "html/ISic003513.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003513",
+  "uri": "ISic003513",
   "title": "I.Sicily inscription 003513",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493843",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "38200004",
+      "type": "EDCS"
+    },
+    {
+      "_": "313629",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A marble plaque broken in two fragments across the middle; the fragments join. The right margin is lost, including the upper right corner. The lower margin is damaged, with the lower left and right corners missing.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,29 +39,67 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "24",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 3-4",
-      "from": "line3",
-      "to": "line4",
-      "h": "20",
-      "unit": "mm"
+      "_": "25",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.1-2.2",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text is more or less centered and concentrated on the upper portion of the plaque, with extensive use of interpuncts. Perhaps a single letter missing from the end of line 2.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Diamond shaped theta, broken and straight-bar alpha, beta with detached loops, sigma a slightly irregular four-bar version, epsilon with upward angled cross-strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "24",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -56,9 +113,23 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the 1914 excavation of the necropolis of San Placido",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1914"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003513_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -66,13 +137,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A3567",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Messana",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003513",
+    "isic003513",
     "i.sicily inscription 003513",
     "draft",
     "funerary",

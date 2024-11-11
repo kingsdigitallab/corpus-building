@@ -1,10 +1,28 @@
 {
   "file": "ISic002911",
-  "metadataFile": "metadata/ISic002911.json",
-  "htmlFile": "html/ISic002911.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic002911",
+  "uri": "ISic002911",
   "title": "I.Sicily inscription 002911",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "175820",
+      "type": "TM"
+    },
+    {
+      "_": "074096",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "13600405",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication; honorific",
     "ana": "#function.dedication #function.honorific",
@@ -16,21 +34,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Piazza Armerina",
@@ -39,9 +87,21 @@
     }
   ],
   "geo": [
-    37.38417,
-    14.36921
+    [
+      37.38417,
+      14.36921
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic002911_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -49,13 +109,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Piazza Armerina",
+  "repository": {
+    "_": "in store",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Piazza Armerina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic002911",
+    "isic002911",
     "i.sicily inscription 002911",
     "unchecked",
     "dedication; honorific",

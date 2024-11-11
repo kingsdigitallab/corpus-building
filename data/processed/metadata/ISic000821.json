@@ -1,15 +1,32 @@
 {
   "file": "ISic000821",
-  "metadataFile": "metadata/ISic000821.json",
-  "htmlFile": "html/ISic000821.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000821",
+  "uri": "ISic000821",
   "title": "Fragment of a Latin inscripton relating to building works",
   "status": "draft",
+  "editions": [
+    {
+      "_": "699462",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Fragment of a marble slab, broken on all four sides",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,21 +37,54 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "16",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "32",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "6.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -48,9 +98,25 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in via Dusmet, in the drain under the city market, in 1958",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.5014343,
+      15.0890466
+    ]
+  },
+  "provenanceObserved": {
+    "_": "In storage, Ex Manifattura Tabacchi - Catania, Via Garibaldi, 233 , Soprintendenza di Catania",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000821_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +124,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "In storage, Ex Manifattura Tabacchi - Catania, Via Garibaldi, 233 , Soprintendenza di Catania",
+    "role": "store"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000821",
+    "isic000821",
     "fragment of a latin inscripton relating to building works",
     "draft",
     "building",

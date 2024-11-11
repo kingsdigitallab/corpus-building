@@ -1,15 +1,34 @@
 {
   "file": "ISic000198",
-  "metadataFile": "metadata/ISic000198.json",
-  "htmlFile": "html/ISic000198.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000198",
+  "uri": "ISic000198",
   "title": "Funerary Epitaph for Mevia Faustin[---]",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285327",
+      "type": "TM"
+    },
+    {
+      "_": "127470",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100125",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Two joining fragments of a whiteish marble plaque, broken across the middle roughly halfway down plaque. The larger fragment (A) has two original edges on top and left. All other sides broken, but a vacat is preserved below the last line of letters in the lower fragment (B). Back of both fragments is flat. A: H=19 cm, W=18; B: H=10.5, W=8.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,48 +39,86 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "26-29",
-      "unit": "mm"
+      "_": "29.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "26",
-      "unit": "mm"
+      "_": "18",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "26-31",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "25-27",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "28",
-      "unit": "mm"
+      "_": "4.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Five lines of fragmentary Latin text. Lacuna on right is approximately 1 character.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are wide and well-defined. Pronounced serifs on all letters. Cross-bar on 'As' in lines 3-4 are short. Hederae used in lines 1 and 4. The hedera in line 1 is large (the size of the other characters) and in outline only. The hederae in line 4 are small. Most letters are straight, except line three where they slope to the right.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "26-29",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "26",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "26-31",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "25-27",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "28",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -77,9 +134,29 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The larger fragment was discovered in 1879 in the ruins of the castle. It is unknown where and when the smaller fragment was found.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1879",
+    "geo": [
+      37.9886141,
+      13.6972583
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 3.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-04",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000198_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -87,13 +164,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "94",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000198",
+    "isic000198",
     "funerary epitaph for mevia faustin[---]",
     "edited",
     "funerary",

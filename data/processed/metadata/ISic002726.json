@@ -1,10 +1,28 @@
 {
   "file": "ISic002726",
-  "metadataFile": "metadata/ISic002726.json",
-  "htmlFile": "html/ISic002726.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic002726",
+  "uri": "ISic002726",
   "title": "I.Sicily inscription 002726",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645146",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "71000722",
+      "type": "EDCS"
+    },
+    {
+      "_": "334613",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +38,51 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Euonymus",
@@ -48,9 +96,23 @@
     }
   ],
   "geo": [
-    38.6375,
-    15.06766
+    [
+      38.6375,
+      15.06766
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in localita San Pietro (east coast of island), in 1975 (work near Hotel Raya)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1975"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic002726_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +120,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Unknown",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Euonymus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic002726",
+    "isic002726",
     "i.sicily inscription 002726",
     "unchecked",
     "funerary",

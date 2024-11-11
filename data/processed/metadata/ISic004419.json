@@ -1,15 +1,31 @@
 {
   "file": "ISic004419",
-  "metadataFile": "metadata/ISic004419.json",
-  "htmlFile": "html/ISic004419.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004419",
+  "uri": "ISic004419",
   "title": "Epitaph for Aristarchos",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Plinth (support for a stele) with moulding around the base. The plinth is heavily damaged and all the upper portion is lost and much of the lower moulding on the sides also; the lower part of the inscribed face is preserved, marked by a number of deep striations in the surface. The plinth is the left one of a pair mounted on a single base, classified as an epitymbion of type C.",
   "objectType": {
     "_": "plinth",
     "ana": "#object.arch_element.plinth",
@@ -20,22 +36,59 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "30",
-      "unit": "mm"
+      "_": "18.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "51.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "52.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of a single line of Greek letters, somewhat irregularly laid out and not following the horizontal",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat irregular plainly cut, widely spaced letters. Rho has closed and regular eye; sigma has horizontal upper and lower strokes, the intermediate strokes joined by a curve; alpha is broad with straight bar; omicron is small and mid-line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "NA",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Abacaenum",
@@ -51,9 +104,27 @@
     }
   ],
   "geo": [
-    38.05191,
-    15.10158
+    [
+      38.05191,
+      15.10158
+    ]
   ],
+  "provenanceFound": {
+    "_": "Tomb 105 of the necropolis in contrada Cardusa, where it remains in situ",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      38.06519,
+      15.11438
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Metcalfe 2016 visited site",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004419_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -61,13 +132,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
+  "repository": {
+    "_": "Necropoli di Abakainon",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/186"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Abacaenum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004419",
+    "isic004419",
     "epitaph for aristarchos",
     "edited",
     "funerary",

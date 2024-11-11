@@ -1,15 +1,32 @@
 {
   "file": "ISic001490",
-  "metadataFile": "metadata/ISic001490.json",
-  "htmlFile": "html/ISic001490.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001490",
+  "uri": "ISic001490",
   "title": "I.Sicily inscription 001490",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644996",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "On the tenth row of seats in the theatre.",
   "objectType": {
     "_": "seat",
     "ana": "#object.seat",
@@ -20,21 +37,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -300,
+  "precision": "low",
   "places": [
     {
       "_": "Morgantina",
@@ -49,9 +96,27 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "Theatre, on the 10th row of seats, in the third 'cuneo' from the\n                            north",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      37.43006,
+      14.479243
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001490_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +124,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Morgantina",
+  "repository": {
+    "_": "Area archeologica di Morgantina",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/194"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Morgantina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001490",
+    "isic001490",
     "i.sicily inscription 001490",
     "draft",
     "dedication",

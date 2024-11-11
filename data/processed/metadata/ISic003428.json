@@ -1,15 +1,32 @@
 {
   "file": "ISic003428",
-  "metadataFile": "metadata/ISic003428.json",
-  "htmlFile": "html/ISic003428.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003428",
+  "uri": "ISic003428",
   "title": "Funerary inscription of Alphia",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644823",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "The lower part of the stone is broken off, and the stone is worn or damaged on all sides. Gentili suggests that it is the cover for a 'tomba a cassa'",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +37,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "64",
-      "unit": "mm"
+      "_": "20.8",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "86",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "45",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "lunate sigma and epsilon, alpha with straight bar, phi is circular",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "64",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -49,9 +101,25 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "found during works near so-called 'tomb of Archimedes' in constructing road from viale Augusto to Corso Gelone",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": {
+      "_": "37.078125, 15.281091",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Lying on the ground near the exit gate to the area of the amphitheatre",
+    "type": "observed",
+    "geo": "37.075192, 15.278277"
+  },
   "facsimile": {
     "url": "ISic003428_tiled.tif",
     "desc": "Photo J. Prag"
@@ -59,13 +127,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Area archeologica della Neapolis, Orecchio di Dionisio e Teatro Greco",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/160"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003428",
+    "isic003428",
     "funerary inscription of alphia",
     "draft",
     "funerary",

@@ -1,10 +1,26 @@
 {
   "file": "ISic003432",
-  "metadataFile": "metadata/ISic003432.json",
-  "htmlFile": "html/ISic003432.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003432",
+  "uri": "ISic003432",
   "title": "I.Sicily inscription 003432",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "644827",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +36,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Dianae Fons",
@@ -48,9 +94,22 @@
     }
   ],
   "geo": [
-    36.94893,
-    14.60731
+    [
+      36.94893,
+      14.60731
+    ]
   ],
+  "provenanceFound": {
+    "_": "Necropoli di Via Tenente Meli",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "in the entranceway",
+    "type": "observed",
+    "when": "1962"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003432_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +117,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Comiso",
+  "repository": {
+    "_": "Scuola di Arte",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Dianae Fons",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003432",
+    "isic003432",
     "i.sicily inscription 003432",
     "unchecked",
     "funerary",

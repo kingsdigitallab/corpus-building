@@ -1,15 +1,34 @@
 {
   "file": "ISic000162",
-  "metadataFile": "metadata/ISic000162.json",
-  "htmlFile": "html/ISic000162.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000162",
+  "uri": "ISic000162",
   "title": "Epitaph for Cornelius Castor",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175698",
+      "type": "TM"
+    },
+    {
+      "_": "077916",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "8900394",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A grey-white marble plaque with blue-grey veins. Broken into three (joining) fragments, which have been reconnected and mounted on a perspex stand. The edges are intact, except for some damage and loss tot he left edge, chipping on the lower edge, and loss of the extreme lower right corner - the text is complete. The epigraphic field itself is discoloured and very slightly lower than the surrounding stone (c.1mm difference), perhaps due to later covering or treatment of the surface which degraded the surface of the stone. The edges are finished, and cut back towards the rear. The rear is finished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,43 +39,81 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "30",
-      "unit": "mm"
+      "_": "21.4",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "25-30",
-      "unit": "mm"
+      "_": "33",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "25-29",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "23-24",
-      "unit": "mm"
+      "_": "2.1-2.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin, approximately centred with slightly inconsistent comma-shaped interpuncts. The lines are not perfectly horizontal or evenly spaced, with slightly irregular letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Thinly carved letters with serfis and some curving flourishes, such as extended tail to the initial M. R in line 2 is open, whereas R in line 3 has a faint closing line. A has oblique cross bar descending to left. Interpunct end of line 2 is almost a hedera.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "25-30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "25-29",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "23-24",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 150,
   "notAfter": 250,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -70,9 +127,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "A chance find, with three other inscriptions (ISic000161, 000163, 000164) in Contrada Madonna della Catena, proprieta Gallegra (c.800m outside the city at the time)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1907-08",
+    "geo": [
+      37.977321,
+      13.70827
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-05, on display in the Museo Civico.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000162_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-07-10"
@@ -80,13 +155,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "13ac",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000162",
+    "isic000162",
     "epitaph for cornelius castor",
     "edited",
     "funerary",

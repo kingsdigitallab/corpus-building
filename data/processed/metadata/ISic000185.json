@@ -1,15 +1,34 @@
 {
   "file": "ISic000185",
-  "metadataFile": "metadata/ISic000185.json",
-  "htmlFile": "html/ISic000185.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000185",
+  "uri": "ISic000185",
   "title": "Funerary inscription for Ignatia Athanais",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285297",
+      "type": "TM"
+    },
+    {
+      "_": "127521",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900655",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Small reddish/brown plaque, complete, all sides straight although abraded. Rear is flat.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,34 +39,70 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "23-30",
-      "unit": "mm"
+      "_": "16.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "26-30",
-      "unit": "mm"
+      "_": "21.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "27-29",
-      "unit": "mm"
+      "_": "6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of complete Latin text.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letter height is somewhat uneven. Incomplete downward left sloping cross-bar on 'A's throughout. Prominent serifs, with top of A very extended. Lines of letters not always conjoined.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "23-30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "26-30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "27-29",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -63,9 +118,39 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Recovered from the grounds of the former convent of the Cappuccini (Chiesa di San Girolamo), during the carrying out of building works in 1889, together with , and .",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1889",
+    "ref": [
+      {
+        "_": "ISic000152",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000152"
+      },
+      {
+        "_": "ISic000226",
+        "target": "http://sicily.classics.ox.ac.uk/inscription/ISic000226"
+      }
+    ],
+    "geo": [
+      37.9827351,
+      13.6896601
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 1.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-04",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000185_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04"
@@ -73,13 +158,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "98",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000185",
+    "isic000185",
     "funerary inscription for ignatia athanais",
     "edited",
     "funerary",

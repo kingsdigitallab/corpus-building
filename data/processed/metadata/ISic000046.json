@@ -1,10 +1,28 @@
 {
   "file": "ISic000046",
-  "metadataFile": "metadata/ISic000046.json",
-  "htmlFile": "html/ISic000046.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000046",
+  "uri": "ISic000046",
   "title": "I.Sicily inscription 000046",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491682",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900516",
+      "type": "EDCS"
+    },
+    {
+      "_": "175713",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +38,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -48,9 +96,28 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found 16 October 1751 by Thomas Hollis in the area of the Vigna Cassia catacombs ('behind the hermitage of S. Maria di Gesú')",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1751-10-16",
+    "geo": [
+      37.076278,
+      15.288184
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2017.07.21 (on display)",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000046_tiled.tif",
     "desc": "Photo J.Prag, courtesy Museo Archeologico Regionale Antonino Salinas"
@@ -58,13 +125,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "3547",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000046",
+    "isic000046",
     "i.sicily inscription 000046",
     "draft",
     "funerary",

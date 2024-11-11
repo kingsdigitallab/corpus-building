@@ -1,15 +1,34 @@
 {
   "file": "ISic000980",
-  "metadataFile": "metadata/ISic000980.json",
-  "htmlFile": "html/ISic000980.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000980",
+  "uri": "ISic000980",
   "title": "Epitaph for Paula",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492606",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102133",
+      "type": "EDCS"
+    },
+    {
+      "_": "140457",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A tablet of white limestone, intact on all four sides, roughly chiselled on the reverse. Traces of plaster on the edges.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,35 +39,74 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "chiselled",
-      "ana": "#execution.chiselled",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      "_": "24",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
-    }
-  ],
-  "letterHeight": [
-    {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "15-26",
-      "unit": "mm"
+      "_": "35.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 4-7",
-      "from": "line4",
-      "to": "line7",
-      "h": "10-22",
-      "unit": "mm"
+      "_": "5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Seven lines of Greek letters, with traces of red paint. Lines 1-3 are more formally / monumentally carved, from line four onwards the carving is lighter and less carefully laid out, rising to the right.",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Simple, thinly incised letters without serfis or terminations. The letters become increasingly ireregular and variable in the final lines. Alpha has striaght bar but also broken and oblique bar; beta has closed roughly equal eyes; Epsilon is quadrate with equal length bars; Zeta is Z in form but irregular; theta is ovoid with full straight bar; kappa has shorter arms; omicron mostly slightly smaller than other letters; sigma is lunate but square in form, lower bar slanting downwards, except for the irregular curved instance end of line 2; omega is in the form of a w, but formed entirely of straight lines and right angles. interlineation is highly irregular throughout. ",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "15-26",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4-7",
+        "from": "line4",
+        "to": "line7",
+        "h": "10-22",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 7",
+        "from": "line1",
+        "to": "line2",
+        "h": "0-17",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
+  "evidence": "office",
   "places": [
     {
       "_": "Syracusae",
@@ -62,9 +120,33 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the , date of discovery not recorded (already in the inventory as of 1885).",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1885",
+    "placeName": {
+      "_": "catacomb of S. Giovanni",
+      "ref": "https://pleiades.stoa.org/places/560149180"
+    },
+    "geo": [
+      37.0767995,
+      15.2848558
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag, 2018-09-10",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2018-09-10",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000980_tiled.tif",
     "desc": "Photo J. Prag (2018), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -72,13 +154,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "100",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000980",
+    "isic000980",
     "epitaph for paula",
     "edited",
     "funerary",

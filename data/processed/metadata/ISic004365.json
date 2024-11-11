@@ -1,15 +1,31 @@
 {
   "file": "ISic004365",
-  "metadataFile": "metadata/ISic004365.json",
-  "htmlFile": "html/ISic004365.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004365",
+  "uri": "ISic004365",
   "title": "I.Sicily inscription 004365",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A large off-white rectangular marble plaque, intact on all sides. Reverse is finished smooth.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,34 +36,81 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "21-25",
-      "unit": "mm"
+      "_": "21.4",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2-4",
-      "from": "line2",
-      "to": "line4",
-      "h": "23-29",
-      "unit": "mm"
+      "_": "28.4",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "26-32",
-      "unit": "mm"
+      "_": "1.9-2.7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Five lines of Greek letters, with line 1 centred, lines 2-5 with a regular left margin.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Simply and neatly cut letters with almost no serifs, well-spaced horizontally, but with minimal interlinear spacing. Simple interpuncts used frequently but inconsistently. Alpha has broken bar; epsilon is rectilinear with equal length bars; zeta is simple Z; theta is rhomboid with detached cross-bar; kappa has slightly shortened arms; omicron is rhomboid; rho has small closed and rounded eye; sigma is rectilinear with horizontal top and bottom strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "21-25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2-4",
+        "from": "line2",
+        "to": "line4",
+        "h": "23-29",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "26-32",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 4",
+        "from": "line1",
+        "to": "line4",
+        "h": "2-4",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 4 to 5",
+        "from": "line4",
+        "to": "line5",
+        "h": "5-7",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 400,
   "places": [
@@ -63,9 +126,23 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, from Centuripe prior to 2 Feb 1907.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1907-02-02"
+  },
+  "provenanceObserved": {
+    "_": "Depositi, Magazzino B, cassa 4, Museo Archeologico Regionale Paolo Orsi",
+    "type": "observed",
+    "subtype": "recorded"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004365_tiled.tif",
     "desc": "Photo J. Prag, 2014-09-11, by permission of Museo Archeologico Regionale Paolo Orsi"
@@ -73,13 +150,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "27071",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Centuripae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004365",
+    "isic004365",
     "i.sicily inscription 004365",
     "edited",
     "funerary",

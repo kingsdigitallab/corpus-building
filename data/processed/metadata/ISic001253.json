@@ -1,10 +1,32 @@
 {
   "file": "ISic001253",
-  "metadataFile": "metadata/ISic001253.json",
-  "htmlFile": "html/ISic001253.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001253",
+  "uri": "ISic001253",
   "title": "I.Sicily inscription 001253",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "492859",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101621",
+      "type": "EDCS"
+    },
+    {
+      "_": "140741",
+      "type": "PHI"
+    },
+    {
+      "_": "329618",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "accounts",
     "ana": "#function.account",
@@ -15,21 +37,51 @@
     "ana": "#material.stone.breccia",
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Tauromenium",
@@ -43,9 +95,21 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Hotel Metropole (?)",
+    "type": "observed",
+    "cert": "low"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001253_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +117,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Tauromenium",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001253",
+    "isic001253",
     "i.sicily inscription 001253",
     "unchecked",
     "accounts",

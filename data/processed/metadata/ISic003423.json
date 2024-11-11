@@ -1,15 +1,32 @@
 {
   "file": "ISic003423",
-  "metadataFile": "metadata/ISic003423.json",
-  "htmlFile": "html/ISic003423.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003423",
+  "uri": "ISic003423",
   "title": "Building inscription on a re-used louterion basin",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644818",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Multiple marble fragments (of which three join to make one larger fragment, and a\n                                        fourth is approximately contiguous to the main fragment), which appear to form\n                                        part of the circular basin of a 'louterion'. The remains of a square projection\n                                        (12 x 12 cm, projecting a further 6 cm from the base) are partly preserved on\n                                        the reverse of the main fragment, by which the basin was fixed onto the stand.",
   "objectType": {
     "_": "louterion",
     "ana": "#object.vessel.leuterion",
@@ -20,22 +37,75 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-7",
-      "from": "line1",
-      "to": "line7",
-      "h": "21-32",
-      "unit": "mm"
+      "n": "1",
+      "height": {
+        "_": "38",
+        "unit": "cm"
+      },
+      "width": {
+        "_": "47",
+        "unit": "cm"
+      },
+      "depth": {
+        "_": "3.25-4.8",
+        "unit": "cm"
+      },
+      "dimension": "0"
+    },
+    {
+      "n": "2",
+      "height": {
+        "_": "19",
+        "unit": "cm"
+      },
+      "width": {
+        "_": "18.5",
+        "unit": "cm"
+      },
+      "depth": {
+        "_": "3.1-3.55",
+        "unit": "cm"
+      },
+      "dimension": "1"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "The text is inscribed on the concave inner surface of the basin, over seven\n                                        lines. The visible vacats suggest that although the text is fragmentary, it only\n                                        covered seven lines originally. The disposition of the text within the basin\n                                        implies that the basin, in whole or in part, was re-used for the purposes of the\n                                        inscription. The text curves slightly, due to the concave surface and form of\n                                        the basin. The text preserves a clear left margin in lines 3-7. Both letter\n                                        height and interlineation are uneven.",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The letters are broad, square and regular in form. Alpha is very broad; sigma has\n                                    parallel top and bottom bars; delta, theta and omicron are smaller than the other\n                                    letters and mid-line; epsilon has a shorter middle bar; pi has a slightly\n                                    overlapping cross-bar; the mid-point of the mu nearly reaches the lower line; theta\n                                    is fully closed by the middle bar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-7",
+        "from": "line1",
+        "to": "line7",
+        "h": "21-32",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation lines 1 to 7",
+        "from": "line1",
+        "to": "line7",
+        "h": "1.7-3.2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -150,
+  "precision": "low",
   "places": [
     {
       "_": "Phintias",
@@ -49,9 +119,23 @@
     }
   ],
   "geo": [
-    37.10267,
-    13.93972
+    [
+      37.10267,
+      13.93972
+    ]
   ],
+  "provenanceFound": {
+    "_": "Monte Sant'Angelo di Licata, Excavation 2003-2005, sectors 1000 and 2000",
+    "type": "found",
+    "subtype": "discovered",
+    "from": "2003",
+    "to": "2005"
+  },
+  "provenanceObserved": {
+    "_": "On display",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003423_tiled.tif",
     "desc": "Photo Metcalfe"
@@ -59,13 +143,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Licata",
+  "repository": {
+    "_": "Museo Archeologico della Badia",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/134"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Phintias",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003423",
+    "isic003423",
     "building inscription on a re-used louterion basin",
     "draft",
     "building",

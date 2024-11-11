@@ -1,15 +1,38 @@
 {
   "file": "ISic001408",
-  "metadataFile": "metadata/ISic001408.json",
-  "htmlFile": "html/ISic001408.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001408",
+  "uri": "ISic001408",
   "title": "I.Sicily inscription 001408",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493025",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101537",
+      "type": "EDCS"
+    },
+    {
+      "_": "140917",
+      "type": "PHI"
+    },
+    {
+      "_": "330079",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A Doric capital, with traces of the broken off column or cippus below. ",
   "objectType": {
     "_": "column capital",
     "ana": "#object.arch_element.capital",
@@ -20,21 +43,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "37",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "77",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "77",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is set out across one face of the abacus, which is 16 cm high.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -500,
+  "precision": "low",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -48,9 +107,25 @@
     }
   ],
   "geo": [
-    37.2038,
-    15.18274
+    [
+      37.2038,
+      15.18274
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavation of the western necropolis in 1879",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1879",
+    "geo": {
+      "_": "37.205486, 15.170858",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Display, Sector B Megara Hyblaea",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001408_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +133,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "1",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Megara Hyblaea",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001408",
+    "isic001408",
     "i.sicily inscription 001408",
     "draft",
     "funerary",

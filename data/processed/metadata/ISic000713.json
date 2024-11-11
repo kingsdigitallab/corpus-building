@@ -1,15 +1,33 @@
 {
   "file": "ISic000713",
-  "metadataFile": "metadata/ISic000713.json",
-  "htmlFile": "html/ISic000713.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000713",
+  "uri": "ISic000713",
   "title": "I.Sicily inscription 000713",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493949",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "32701136",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of a marble plaque, broken on all sides.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +38,59 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "45",
-      "unit": "mm"
+      "_": "15",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "13.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of three lines of Latin letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Tall thin letters.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 500,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +104,22 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "From material recovered from the necropolis uncovered c.1960 on via Dottor Consoli / via Androne, Catania; according to Manganaro it was subsequently moved to the Museo Civico, but has not been located there.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000713_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +127,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000713",
+    "isic000713",
     "i.sicily inscription 000713",
     "draft",
     "unknown",

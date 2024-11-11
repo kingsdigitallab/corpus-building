@@ -18,13 +18,19 @@ export async function extractMetadata(xmlString) {
     uri: getURI(xml),
     title: getTitle(xml),
     status: getStatus(xml),
+    editions: getEditions(xml),
     type: getType(xml),
+    support: getSupport(xml),
     objectType: getObjectType(xml),
     material: getMaterial(xml),
+    dimensions: getDimensions(xml),
     layoutDesc: getLayoutDesc(xml),
-    letterHeight: getLetterHeight(xml),
+    handNote: getHandNote(xml),
     ...getDates(xml),
     ...getPlaces(xml),
+    provenanceFound: getProvenance(xml, "found"),
+    provenanceObserved: getProvenance(xml, "observed"),
+    provenanceLost: getProvenance(xml, "not-observed", "lost"),
     facsimile: getFacsimile(xml),
     ...getMsIdentifier(xml),
     textLang: getTextLang(xml),
@@ -32,8 +38,6 @@ export async function extractMetadata(xmlString) {
 
   metadata.placeName = metadata.places[0]?._;
   metadata.keywords = getKeywords(metadata);
-
-  delete metadata.repository;
 
   return metadata;
 }
@@ -49,9 +53,10 @@ async function parseXML(xmlString) {
 }
 
 function getURI(xml) {
-  return xml.TEI.teiHeader.fileDesc?.publicationStmt?.idno?.filter(
-    (idno) => idno.type === "URI"
-  )[0]?._;
+  return xml.TEI.teiHeader.fileDesc?.publicationStmt?.idno
+    ?.filter((idno) => idno.type === "URI")[0]
+    ?._.split("/")
+    .at(-1);
 }
 
 function getTitle(xml) {
@@ -62,8 +67,18 @@ function getStatus(xml) {
   return xml.TEI.teiHeader.revisionDesc.status;
 }
 
+function getEditions(xml) {
+  return xml.TEI.teiHeader.fileDesc.publicationStmt.idno?.filter((idno) =>
+    ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type)
+  );
+}
 function getType(xml) {
   return xml.TEI.teiHeader.profileDesc.textClass?.keywords?.term;
+}
+
+function getSupport(xml) {
+  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+    ?.supportDesc?.support?.p;
 }
 
 function getObjectType(xml) {
@@ -76,35 +91,57 @@ function getMaterial(xml) {
     ?.supportDesc?.support?.material;
 }
 
-function getLayoutDesc(xml) {
-  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
-    ?.layoutDesc?.layout?.rs;
+function getDimensions(xml) {
+  const dimensions =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+      ?.supportDesc?.support?.dimensions;
+
+  if (!dimensions) return [];
+
+  return Object.entries(dimensions).map(([key, value]) => ({
+    ...value,
+    dimension: key,
+  }));
 }
 
-function getLetterHeight(xml) {
-  let dimensions =
-    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.handDesc?.handNote
-      ?.dimensions;
-  let locus =
-    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.handDesc?.handNote
-      ?.locus;
+function getLayoutDesc(xml) {
+  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+    ?.layoutDesc;
+}
 
-  if (dimensions && !Array.isArray(dimensions)) {
-    dimensions = [dimensions];
-    locus = [locus];
+function getHandNote(xml) {
+  const handNote =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.handDesc?.handNote;
+
+  const lettering = handNote?.p;
+
+  let handNoteDimensions = handNote?.dimensions;
+  let handNoteLocus = handNote?.locus;
+
+  if (handNoteDimensions && !Array.isArray(handNoteDimensions)) {
+    handNoteDimensions = [handNoteDimensions];
+    handNoteLocus = [handNoteLocus];
   }
 
-  if (!dimensions || dimensions.length === 0) return undefined;
+  const dimensions = ["letterHeight", "interlinear"].flatMap((dimensionType) =>
+    handNoteDimensions
+      ?.map((dim, idx) => ({ ...dim, locus: handNoteLocus[idx] }))
+      .filter((dim) => dim.type === dimensionType)
+      .map((dim) => {
+        const { _: heightText, ...height } = dim?.height || {};
+        const { _: locusText, ...locus } = dim?.locus || {};
 
-  return dimensions
-    ?.map((dim, idx) => ({ ...dim, locus: locus[idx] }))
-    .filter((dim) => dim.type === "letterHeight")
-    .map((dim) => {
-      const { _: heightText, ...height } = dim?.height || {};
-      const { _: locusText, ...locus } = dim?.locus || {};
+        return {
+          type: dimensionType,
+          l: locusText,
+          ...locus,
+          h: heightText,
+          ...height,
+        };
+      })
+  );
 
-      return { l: locusText, ...locus, h: heightText, ...height };
-    });
+  return { lettering, dimensions };
 }
 
 function getDates(xml) {
@@ -120,6 +157,8 @@ function getDates(xml) {
     notAfter: origDate["notAfter-custom"]
       ? parseInt(origDate["notAfter-custom"])
       : null,
+    evidence: origDate.evidence,
+    precision: origDate.precision,
   };
 }
 
@@ -150,12 +189,50 @@ function getPlaces(xml) {
     }
   }
 
+  let geo = origPlace?.geo || [];
+
+  if (!Array.isArray(geo)) {
+    geo = [geo];
+  }
+
   return {
     places,
-    geo: origPlace?.geo
-      ?.split(",")
-      .map((g) => g.trim())
-      .map((g) => parseFloat(g)),
+    geo: geo?.map((g) =>
+      g
+        .split(",")
+        .map((g) => g.trim())
+        .map((g) => parseFloat(g))
+    ),
+  };
+}
+
+/**
+ * Retrieves provenance information from the XML data.
+ *
+ * @function getProvenance
+ * @param {Object} xml - The parsed XML data.
+ * @param {string} provenanceType - The type of provenance to retrieve.
+ * @param {string | null | undefined} [subtype=null] - The subtype of provenance to retrieve.
+ * @returns {Object|null} The provenance information if found, or null if not found.
+ */
+function getProvenance(xml, provenanceType, subtype = null) {
+  const provenance =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc?.history?.provenance;
+
+  if (!provenance) return null;
+
+  // Convert to array if single element
+  const provenanceArray = Array.isArray(provenance) ? provenance : [provenance];
+
+  const found = provenanceArray.find(
+    (p) => p.type === provenanceType && (!subtype || p.subtype === subtype)
+  );
+
+  if (!found) return null;
+
+  return {
+    ...found,
+    geo: found.geo?.split(",").map((g) => parseFloat(g.trim())),
   };
 }
 
@@ -183,6 +260,7 @@ function getMsIdentifier(xml) {
     region: msIdentifier.region?.trim(),
     settlement: msIdentifier.settlement?.trim(),
     repository: msIdentifier.repository,
+    idno: msIdentifier.idno,
   };
 }
 
@@ -223,7 +301,9 @@ export const metadataExtractors = {
   getType,
   getObjectType,
   getMaterial,
-  getLetterHeight,
+  getDimensions,
+  getLayoutDesc,
+  getHandNote,
   getDates,
   getPlaces,
   getFacsimile,

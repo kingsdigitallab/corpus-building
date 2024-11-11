@@ -1,15 +1,31 @@
 {
   "file": "ISic030303",
-  "metadataFile": "metadata/ISic030303.json",
-  "htmlFile": "html/ISic030303.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030303",
+  "uri": "ISic030303",
   "title": "ISic030303",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "Revenge doll (Rachepuppe)",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "Lead figurine naked with its head covered in holes, and its feet completely twisted.",
   "objectType": {
     "_": "statue",
     "ana": "#object.statue",
@@ -20,21 +36,64 @@
     "ana": "#material.metal.lead",
     "ref": "http://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "7.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The inscription runs on the back of the statue.",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -380,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Terravecchia di Grammichele",
@@ -43,9 +102,28 @@
     }
   ],
   "geo": [
-    37.214706,
-    14.636362
+    [
+      37.214706,
+      14.636362
+    ]
   ],
+  "provenanceFound": {
+    "_": "Discovered in Terravecchia di Grammichele.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.214706,
+      14.636362
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2022-01-24",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2022-01-24"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030303_detail_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,6 +131,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -65,7 +151,7 @@
   },
   "placeName": "Terravecchia di Grammichele",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030303",
+    "isic030303",
     "isic030303",
     "draft",
     "revenge doll (rachepuppe)",

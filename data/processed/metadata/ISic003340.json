@@ -1,15 +1,35 @@
 {
   "file": "ISic003340",
-  "metadataFile": "metadata/ISic003340.json",
-  "htmlFile": "html/ISic003340.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003340",
+  "uri": "ISic003340",
   "title": "Epitaph for Lucius Aurelius Quin[---] (?)",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645585",
+      "type": "TM"
+    },
+    {
+      "_": "159445",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "25601305",
+      "type": "EDCS"
+    },
+    {
+      "_": "334869",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Marble tabula ansata of which the right half is missing; surface heavily worn.",
   "objectType": {
     "_": "tabula ansata",
     "ana": "#object.plaque",
@@ -20,34 +40,72 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "80",
-      "unit": "mm"
+      "_": "43",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "52",
-      "unit": "mm"
+      "_": "59",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "46",
-      "unit": "mm"
+      "_": "11.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin inside the frame of the tabula ansata.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.deteriorated"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Neatly cut regular letters with a fairly wide module.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "80",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "52",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "46",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -63,9 +121,23 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Sporadic find of 1966, in saggio C of trench XXIX, property of the Bishop's palace.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1966"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003340_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -73,13 +145,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
+  "repository": {
+    "_": "Museo Archeologico Regionale Eoliano \"Luigi Bernabò Brea\"",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/048"
+  },
+  "idno": {
+    "_": "6784",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Lipara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003340",
+    "isic003340",
     "epitaph for lucius aurelius quin[---] (?)",
     "draft",
     "funerary",

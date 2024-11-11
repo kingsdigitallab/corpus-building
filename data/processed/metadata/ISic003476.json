@@ -1,15 +1,34 @@
 {
   "file": "ISic003476",
-  "metadataFile": "metadata/ISic003476.json",
-  "htmlFile": "html/ISic003476.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003476",
+  "uri": "ISic003476",
   "title": "I.Sicily inscription 003476",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645097",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64500537",
+      "type": "EDCS"
+    },
+    {
+      "_": "336070",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Limestone block, seemingly damanged on all sides, especially across the top and in the centre of the front face by plough damage.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,22 +39,60 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "40-45",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "62",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of three lines of large Greek letters with regular left margin. The text is not perpendicular to the face of the block as it survives, either implying poor layout or else the block has been recut.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Large wide and square letters, regularly set out, without notable serifs. Alpha has broken bar; epsilon has shorter middle bar; kappa has short arms; omicron is slightly smaller than other letters and above the line; pi has equal length vertical strokes and slight overlap of the horizontal; rho has a small closed loop",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "40-45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Centuripae",
@@ -49,9 +106,22 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, but prior to 1999 and in the area of Centuripe.",
+    "type": "found",
+    "notAfter": "1999"
+  },
+  "provenanceObserved": {
+    "_": "Recorded by Manganaro in house of Dr Prospero Cacai, prior to 1999.",
+    "type": "observed",
+    "subtype": "recorded"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003476_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +129,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": {
+    "_": "private collection (P. Cacia)",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Centuripae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003476",
+    "isic003476",
     "i.sicily inscription 003476",
     "draft",
     "funerary",

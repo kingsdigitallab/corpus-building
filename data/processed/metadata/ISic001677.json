@@ -1,15 +1,31 @@
 {
   "file": "ISic001677",
-  "metadataFile": "metadata/ISic001677.json",
-  "htmlFile": "html/ISic001677.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001677",
+  "uri": "ISic001677",
   "title": "Theatre seat inscription",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "seat inscription",
     "ana": "#function.seat",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/111.html"
   },
+  "support": "",
   "objectType": {
     "_": "seat",
     "ana": "#object.seat",
@@ -20,21 +36,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The same two letters are repeated in large form on the upper surface of the seat, and in monogrammatic form on the front vertical face of the same slab",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Large plain letters without serifs on the flat surface, smaller but similar on the vertical face; alpha is broad with a straight bar; pi has verticals of equal length and there is no extension of the horizontal beyond the verticals.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -220,
   "notAfter": -180,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Ietas",
@@ -49,9 +92,28 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "Identified on a preserved seat of the theatre during the excavations of 1986",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1986",
+    "xml:id": "findspot",
+    "geo": [
+      37.967621,
+      13.197898
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001677_tiled.tif",
     "desc": "Photo courtesy Zurich Ietas excavations"
@@ -59,13 +121,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
+  "repository": {
+    "_": "Area archeologica del Monte Iato",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/193"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Ietas",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001677",
+    "isic001677",
     "theatre seat inscription",
     "draft",
     "seat inscription",

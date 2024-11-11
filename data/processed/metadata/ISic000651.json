@@ -1,15 +1,33 @@
 {
   "file": "ISic000651",
-  "metadataFile": "metadata/ISic000651.json",
-  "htmlFile": "html/ISic000651.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000651",
+  "uri": "ISic000651",
   "title": "Fragmentary metrical epitaph",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644891",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "332934",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of marble plaque last seen walled into the Castello Ursino. Partially intact on the right and on the top.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +38,54 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-6",
-      "from": "line1",
-      "to": "line6",
-      "h": "not recorded",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Elongated letters with apices: Α with a straight cross-bar at l. 2 and l. 4, an upward sloping cross-bar at l. 3, Ε has a squared form, Θ, Ο, Ω an angled form, Φ has an extended upright and an angular bowl.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-6",
+        "from": "line1",
+        "to": "line6",
+        "h": "not recorded",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not recorded",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +99,21 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the burial area of Via Consoli",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Observed by Libertini in Castello Ursino, and seemingly also by Manganaro; not located in more recent studies.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000651_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +121,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000651",
+    "isic000651",
     "fragmentary metrical epitaph",
     "draft",
     "funerary",

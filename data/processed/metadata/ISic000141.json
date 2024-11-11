@@ -1,15 +1,34 @@
 {
   "file": "ISic000141",
-  "metadataFile": "metadata/ISic000141.json",
-  "htmlFile": "html/ISic000141.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000141",
+  "uri": "ISic000141",
   "title": "Funerary inscription for Caninia Epitychia",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175734",
+      "type": "TM"
+    },
+    {
+      "_": "076862",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900646",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Six joining fragments of a rectangular marble plaque, which is complete except for two small gaps in the upper edge. The face is reddish in colour, although the stone is not; the rear is smooth.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,36 +39,73 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "41-46",
-      "unit": "mm"
+      "_": "23.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "38-42 (Y=53)",
-      "unit": "mm"
+      "_": "37",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "20-27",
-      "unit": "mm"
+      "_": "1.2",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin letters, decreasing in size and only approximately centred on the stone, with each line starting a little further to the right.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Neat v-cut letters with pronounced serfis and several extravagant forms (very extended Y, CH in distinctive ligature), triangular interpuncts.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "41-46",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "38-42 (Y=53)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "20-27",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -64,9 +120,23 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "One of a number of pieces observed by Ferrua no later than 1941 and found in Termini during building work prior to that date.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1941"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou 2023-07-06 in the storeroom of the Museo Civico, Termini Imerese.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000141_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06."
@@ -74,13 +144,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "54ae",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000141",
+    "isic000141",
     "funerary inscription for caninia epitychia",
     "draft",
     "funerary",

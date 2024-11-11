@@ -1,10 +1,29 @@
 {
   "file": "ISic003067",
-  "metadataFile": "metadata/ISic003067.json",
-  "htmlFile": "html/ISic003067.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003067",
+  "uri": "ISic003067",
   "title": "I.Sicily inscription 003067",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645420",
+      "type": "TM"
+    },
+    {
+      "_": "136678",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900502",
+      "type": "EDCS"
+    },
+    {
+      "_": "332226",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -20,21 +39,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Soluntum",
@@ -49,9 +98,27 @@
     }
   ],
   "geo": [
-    38.09296,
-    13.53147
+    [
+      38.09296,
+      13.53147
+    ]
   ],
+  "provenanceFound": {
+    "_": "Via dell'agora, in situ ",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      38.092495,
+      13.531647
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003067_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +126,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Solunto",
+  "repository": {
+    "_": "Area Archeologica e Antiquarium di Solunto",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/070"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Soluntum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003067",
+    "isic003067",
     "i.sicily inscription 003067",
     "draft",
     "building",

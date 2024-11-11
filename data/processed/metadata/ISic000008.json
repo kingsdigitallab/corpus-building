@@ -1,15 +1,35 @@
 {
   "file": "ISic000008",
-  "metadataFile": "metadata/ISic000008.json",
-  "htmlFile": "html/ISic000008.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000008",
+  "uri": "ISic000008",
   "title": "Epitaph for Vibia Pothine",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175715",
+      "type": "TM"
+    },
+    {
+      "_": "076311",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "9400437",
+      "type": "EDCS"
+    },
+    {
+      "_": "334888",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A stele of the local volcanic stone.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -20,48 +40,87 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "45",
-      "unit": "mm"
+      "_": "59",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Lines 2-3",
-      "from": "line2",
-      "to": "line3",
-      "h": "40",
-      "unit": "mm"
+      "_": "36.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Lines 4-5",
-      "from": "line4",
-      "to": "line5",
-      "h": "30-35",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 6",
-      "from": "line6",
-      "to": "line6",
-      "h": "30-40",
-      "unit": "mm"
-    },
-    {
-      "l": "Lines 7-8",
-      "from": "line7",
-      "to": "line8",
-      "h": "30-35",
-      "unit": "mm"
+      "_": "11.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is centred on the stone, with some use of spacing between words.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 2-3",
+        "from": "line2",
+        "to": "line3",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 4-5",
+        "from": "line4",
+        "to": "line5",
+        "h": "30-35",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 6",
+        "from": "line6",
+        "to": "line6",
+        "h": "30-40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 7-8",
+        "from": "line7",
+        "to": "line8",
+        "h": "30-35",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -77,9 +136,23 @@
     }
   ],
   "geo": [
-    38.48333,
-    14.93333
+    [
+      38.48333,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found on Lipari in 1907 and given to the Palermo Museum by sig. Luigi Mancuso",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1907"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000008_tiled.tif",
     "desc": "Photo Museo Archeologico Regionale Antonino Salinas"
@@ -87,13 +160,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "3508",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Lipara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000008",
+    "isic000008",
     "epitaph for vibia pothine",
     "draft",
     "funerary",

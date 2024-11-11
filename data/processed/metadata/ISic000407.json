@@ -1,15 +1,33 @@
 {
   "file": "ISic000407",
-  "metadataFile": "metadata/ISic000407.json",
-  "htmlFile": "html/ISic000407.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000407",
+  "uri": "ISic000407",
   "title": "Fragmentary Latin inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491617",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900448",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of a thick plaque of grey marble. Intact on the lower edge, but broken on the other three sides. The rear is only pick-finished. Part of the face is lost to the lower right.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +38,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "33-37",
-      "unit": "mm"
+      "_": "15",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "14",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "4.2-4.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin letters, with vacat in line 3.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Tall letters poorly v-cut with limited serifs, in a later style (tall, narrow letters, with extended apices, short feet to the Ls). Guidelines are visible above and below each line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "33-37",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 400,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -49,9 +102,23 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, first record appears to be the autopsy notes of Schubring c.1865 (currently in the CIL archive), subsequently recorded in the initial inventory in c.1888 and seen by Mommsen prior to 1883.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1865"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2015-10-21, cassette 29, magazzino B, MARPO.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000407_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22."
@@ -59,13 +126,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "283",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000407",
+    "isic000407",
     "fragmentary latin inscription",
     "draft",
     "unknown",

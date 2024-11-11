@@ -1,15 +1,35 @@
 {
   "file": "ISic001173",
-  "metadataFile": "metadata/ISic001173.json",
-  "htmlFile": "html/ISic001173.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001173",
+  "uri": "ISic001173",
   "title": "Funerary inscription for Sosis",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284913",
+      "type": "TM"
+    },
+    {
+      "_": "108737",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102327",
+      "type": "EDCS"
+    },
+    {
+      "_": "140656",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A large block of grey limestone, built into the wall of a church. The lower right corner is missing, and the upper middle of the face shows cracking. Only the front face is visible in the current setting.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,27 +40,63 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "85",
-      "unit": "mm"
+      "_": "88",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "75-80",
-      "unit": "mm"
+      "_": "103.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "unknown",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Greek letters across the upper part of the face; the text fills the width of the stone on both lines",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat crude, large letters, probably later Hellenistic: sigma has parallel top and bottom strokes; omega is closed, tending to elliptical in form; mu has vertical first and last strokes, mid-point descends half-way only; phi has small circular eye and extended vertical; kappa has short tails; alpha has broken bar; epsilon has short middle stroke",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "85",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "75-80",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "10-15",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -50,
   "places": [
@@ -57,9 +113,28 @@
     }
   ],
   "geo": [
-    38.03856,
-    14.02285
+    [
+      38.03856,
+      14.02285
+    ]
   ],
+  "provenanceFound": {
+    "_": "In re-use in the external wall to the left of the main entrance of the Chiesa SS. Sacramento, Piazza Duomo",
+    "type": "found",
+    "subtype": "first-recorded",
+    "xml:id": "findspot",
+    "geo": [
+      38.039634,
+      14.022922
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2018-07-16 Prag",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001173_tiled.tif",
     "desc": "Photo J. Prag"
@@ -67,13 +142,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
+  "repository": "Oratorio del Santissimo Sacramento, Piazza Duomo",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Cephaloedium",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001173",
+    "isic001173",
     "funerary inscription for sosis",
     "draft",
     "funerary",

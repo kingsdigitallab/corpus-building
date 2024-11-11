@@ -1,15 +1,31 @@
 {
   "file": "ISic020920",
-  "metadataFile": "metadata/ISic020920.json",
-  "htmlFile": "html/ISic020920.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020920",
+  "uri": "ISic020920",
   "title": "ISic020920",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Fragment of wall and rim of a black-glazed fish-plate.",
   "objectType": {
     "_": "plate",
     "ana": "#object.vessel.plate",
@@ -20,21 +36,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed just below the rim, on the outer surface of the plate.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -400,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Segesta",
@@ -48,9 +95,25 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the area of the stoa (Western wing).",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      null
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy; stored in the warehouse of the Parco Archeologico di Segesta",
+    "type": "observed",
+    "subtype": "identified"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020920_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +121,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "_": "Parco archeologico di Segesta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/196"
+  },
+  "idno": {
+    "_": "SG14463",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Elymian",
     "mainLang": "xly",
@@ -70,7 +142,7 @@
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020920",
+    "isic020920",
     "isic020920",
     "draft",
     "unknown",

@@ -1,16 +1,35 @@
 {
   "file": "ISic003204",
-  "metadataFile": "metadata/ISic003204.json",
-  "htmlFile": "html/ISic003204.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003204",
+  "uri": "ISic003204",
   "title": "I.Sicily inscription 003204",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175823",
+      "type": "TM"
+    },
+    {
+      "_": "073929",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "13900105",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
     "cert": "low"
   },
+  "support": "A large slab or block of limestone, broken across the lower and right sides.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -21,20 +40,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "90",
-      "unit": "mm"
+      "_": "60",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "90",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "44",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Vacat at top followed by parts of three lines of Latin letters, seemingly centred on the stone.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "90",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -50,
   "notAfter": -1,
   "places": [
@@ -50,9 +104,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations in 1949-50 along the course of the via F.S. Cavallari, apparently in re-use in the remains of the ancient road leading to the monumental Roman arch south of the amphitheatre",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1950",
+    "geo": [
+      37.07365,
+      15.280159
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Photographed by Wilson 2009 in the archaeological park near the amphitheatre.",
+    "type": "observed",
+    "subtype": "photographed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003204_tiled.tif",
     "desc": "Photo R.J.A. Wilson 2009"
@@ -60,13 +132,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Area archeologica della Neapolis, Orecchio di Dionisio e Teatro Greco",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/160"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003204",
+    "isic003204",
     "i.sicily inscription 003204",
     "draft",
     "honorific",

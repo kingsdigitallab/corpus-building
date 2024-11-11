@@ -1,15 +1,34 @@
 {
   "file": "ISic001492",
-  "metadataFile": "metadata/ISic001492.json",
-  "htmlFile": "html/ISic001492.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001492",
+  "uri": "ISic001492",
   "title": "Epitaph for Aisaris Sattaras",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493876",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "38200027",
+      "type": "EDCS"
+    },
+    {
+      "_": "313673",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A rectangular slab of marble, heavily abraded on the upper right corner, but without obscuring the text.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,29 +39,64 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "25",
-      "unit": "mm"
+      "_": "23",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "15",
-      "unit": "mm"
+      "_": "28.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "_": "Five lines\n                                    \n                                \t\n\t\t\t",
+      "p": "Five lines of Greek, centred on the stone with an attempt to maintain regular margins. Guide lines are visible. Words are separated by substnatial interpuncts, and the final line is visibly smaller.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "15",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -56,9 +110,22 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Via S. Marta, fondo Martines",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001492_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -66,13 +133,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A3572",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Messana",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001492",
+    "isic001492",
     "epitaph for aisaris sattaras",
     "draft",
     "funerary",

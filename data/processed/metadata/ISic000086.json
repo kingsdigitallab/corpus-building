@@ -1,16 +1,35 @@
 {
   "file": "ISic000086",
-  "metadataFile": "metadata/ISic000086.json",
-  "htmlFile": "html/ISic000086.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000086",
+  "uri": "ISic000086",
   "title": "Dedication to Victoria",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285019",
+      "type": "TM"
+    },
+    {
+      "_": "109642",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100039",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html",
     "cert": "low"
   },
+  "support": "Fragment of red veined marble plaque, broken on all sides. Rear has modern plaster still attached, and traces of modern rust.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -21,27 +40,62 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "58-60",
-      "unit": "mm"
+      "_": "25.5 at greatest extent",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "58",
-      "unit": "mm"
+      "_": "25.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "18 (excluding modern plaster on rear)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of fragmentary Latin text. Vacat at top suggests there is not a missing first line.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Text is neat, straight and regular. Lines are straight, and text regularly spaced.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "58-60",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "58",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
   "places": [
@@ -58,9 +112,26 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found at a date between 1784 and 1829 in Termini, and moved to the civic collection by 1829 (Romano).",
+    "type": "found",
+    "subtype": "discovered",
+    "notBefore": "1784",
+    "notAfter": "1829"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2022-07-13. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 2, shelf 4.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-07-13",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000086_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -68,13 +139,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "41",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000086",
+    "isic000086",
     "dedication to victoria",
     "edited",
     "dedication",

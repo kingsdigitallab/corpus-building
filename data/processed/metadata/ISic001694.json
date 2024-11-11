@@ -1,15 +1,34 @@
 {
   "file": "ISic001694",
-  "metadataFile": "metadata/ISic001694.json",
-  "htmlFile": "html/ISic001694.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001694",
+  "uri": "ISic001694",
   "title": "Fragment of a public inscription",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "public text",
     "ana": "#function.legal #function.document.public",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/5.html"
   },
+  "support": "Fragment of a fine white limestone, broken on all sides, but preserving part of the original roughly cut rear surface; presumably part of a plaque or stele.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +39,61 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "8",
-      "unit": "mm"
+      "_": "10",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "10",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "111",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two columns of text, with a space between of 1-2.5 cm. The right margin of the left column (A) is uneven, with a vacat equivalent to two line ends above the end of the first visibile line of text; the left margin of the right column is consistent.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Arena notes that the quadrangular module of the individual letters is somewhat irregular, with the combined module of omicron-nu (used as a control across multiple similar fragments) being 10mm from centre to centre. Letters with neat terminal serifs, elegantly cut.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "8",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line5",
+        "h": "6",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -50,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Halaesa",
@@ -50,9 +108,21 @@
     }
   ],
   "geo": [
-    37.99907,
-    14.26197
+    [
+      37.99907,
+      14.26197
+    ]
   ],
+  "provenanceFound": {
+    "_": "A chance find on the archaeological site of Halaesa, with date and findspot unrecorded.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "In the archaeological stores of the Soprintendenza di Messina",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001694_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -60,13 +130,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Soprintendenza Beni Culturali e Ambientali di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/197"
+  },
+  "idno": {
+    "_": "ME30906",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Halaesa",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001694",
+    "isic001694",
     "fragment of a public inscription",
     "draft",
     "public text",

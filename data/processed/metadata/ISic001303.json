@@ -1,15 +1,57 @@
 {
   "file": "ISic001303",
-  "metadataFile": "metadata/ISic001303.json",
-  "htmlFile": "html/ISic001303.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001303",
+  "uri": "ISic001303",
   "title": "Epitaph for Ioulia Germana",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492908",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101673",
+      "type": "EDCS"
+    },
+    {
+      "_": "140795",
+      "type": "PHI"
+    },
+    {
+      "_": "316226",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": [
+    "Four joining fragments of a marble plaque, of which the lower corners lost (and currently only two fragments located).",
+    {
+      "_": "Overall dimensions:\n                                        \n                                   ",
+      "dimensions": {
+        "height": {
+          "_": "20",
+          "unit": "cm"
+        },
+        "width": {
+          "_": "23.5",
+          "unit": "cm"
+        },
+        "depth": {
+          "_": "1.5",
+          "unit": "cm"
+        }
+      }
+    }
+  ],
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +62,43 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
+  "dimensions": [],
   "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
-    {
-      "l": "Lines 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "16-30",
-      "unit": "mm"
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
-  ],
+  },
+  "handNote": {
+    "lettering": "Rhomboid Ο, Θ, Φ; Α with broken bar. Presence of interpuncts and of a ligature of ΜΗ at l. 3",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "16-30",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not registered",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +112,20 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Observed by Ferrara and Kaibel in Museo Biscari, who saw the lower corners also; later observed by Korhonen in magazzino del cortile e magazzino superiore, Collezione Biscari (formerly sala VI.65).",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001303_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +133,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "257",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001303",
+    "isic001303",
     "epitaph for ioulia germana",
     "draft",
     "funerary",

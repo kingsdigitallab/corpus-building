@@ -1,15 +1,31 @@
 {
   "file": "ISic001672",
-  "metadataFile": "metadata/ISic001672.json",
-  "htmlFile": "html/ISic001672.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001672",
+  "uri": "ISic001672",
   "title": "I.Sicily inscription 001672",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/386.html"
   },
+  "support": "A fragment of black and white mosaic, broken on all sides",
   "objectType": {
     "_": "mosaic",
     "ana": "#object.mosaic",
@@ -20,21 +36,49 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three letters are preserved in black tesserae against a white background, with white space to left and above, but the text broken off to the right",
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Plain regular letters. Alpha has broken bar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -60,
   "notAfter": -50,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Soluntum",
@@ -48,9 +92,27 @@
     }
   ],
   "geo": [
-    38.09296,
-    13.53147
+    [
+      38.09296,
+      13.53147
+    ]
   ],
+  "provenanceFound": {
+    "_": "Seemingly part of a group of material found near the north-west corner of the peristyle of the 'Casa delle ghirlande', probably during the excavations of V. Tusa in the 1950s",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      38.094675,
+      13.532235
+    ]
+  },
+  "provenanceObserved": {
+    "_": "On display in the site antiquarium",
+    "type": "observed",
+    "subtype": "identified",
+    "when": "2018"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001672_tiled.tif",
     "desc": "Photo J. Prag, 2018"
@@ -58,13 +120,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Solunto",
+  "repository": {
+    "_": "Area Archeologica e Antiquarium di Solunto",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/070"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Soluntum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001672",
+    "isic001672",
     "i.sicily inscription 001672",
     "edited",
     "greeting",

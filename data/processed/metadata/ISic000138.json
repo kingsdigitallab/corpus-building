@@ -1,15 +1,34 @@
 {
   "file": "ISic000138",
-  "metadataFile": "metadata/ISic000138.json",
-  "htmlFile": "html/ISic000138.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000138",
+  "uri": "ISic000138",
   "title": "Funerary inscription for Caecinia Sozusa",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285240",
+      "type": "TM"
+    },
+    {
+      "_": "111019",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900645",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Part of a thick grey marble plaque, partially intact on upper, left and lower edges, broken on the right, with damage to upper and lower left corners and along the top edge. Finished smooth on the rear, the edges roughtly finished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,41 +39,78 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "36",
-      "unit": "mm"
+      "_": "17.6",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "29-30",
-      "unit": "mm"
+      "_": "15.9",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "23-26",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "24",
-      "unit": "mm"
+      "_": "4.2-4.7 (top to bottom)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin letters, probably centred on the stone, first line centred, lines 2-4 maintaining a consistent left margin.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "V-cut letters with serifs and use of lightly incised small hederae; M slightly extended upper strokes, A with slping cross bar, E and L with downward sloping bars.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "36",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "29-30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "23-26",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "24",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -70,9 +126,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the ruins of the castle of Termini, in 1883",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1883",
+    "geo": [
+      37.9886141,
+      13.6972583
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-13, storeroom of the Museo Civico, Termini.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000138_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-13."
@@ -80,13 +154,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "56",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000138",
+    "isic000138",
     "funerary inscription for caecinia sozusa",
     "draft",
     "funerary",

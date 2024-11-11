@@ -1,15 +1,38 @@
 {
   "file": "ISic001308",
-  "metadataFile": "metadata/ISic001308.json",
-  "htmlFile": "html/ISic001308.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001308",
+  "uri": "ISic001308",
   "title": "Funerary inscription for Kornelios Agathemeros",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492913",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101678",
+      "type": "EDCS"
+    },
+    {
+      "_": "140800",
+      "type": "PHI"
+    },
+    {
+      "_": "316213",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +43,55 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "12-25",
-      "unit": "mm"
+      "_": "19.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "29",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "12-25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 250,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +105,21 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the mid-eighteenth century during foundation works for the\n                                Collegio di Maria (founded in 1752), outside the Porta Stesicorea (Porta di Aci), on the\n                                eastern side of Piazza Stesicoro. Found with the inscription no.27, set up by the same\n                                man.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Display, Voci di pietra no.26",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001308_tiled.tif",
     "desc": "Photo by students of Liceo M.M. Lazzaro, Catania"
@@ -59,6 +127,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di\n                            Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": {
+    "_": "287",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek with Latin numerals\n                        ",
     "mainLang": "grc",
@@ -66,7 +143,7 @@
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001308",
+    "isic001308",
     "funerary inscription for kornelios agathemeros",
     "draft",
     "funerary",

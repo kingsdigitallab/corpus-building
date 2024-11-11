@@ -1,10 +1,25 @@
 {
   "file": "ISic003644",
-  "metadataFile": "metadata/ISic003644.json",
-  "htmlFile": "html/ISic003644.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003644",
+  "uri": "ISic003644",
   "title": "I.Sicily inscription 003644",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "terminus",
     "ana": "#function.terminus",
@@ -20,22 +35,108 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "70-95",
-      "unit": "mm"
+      "_": "82",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "54",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "50",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "Boustrophedon. The inscription runs across the four faces (a, b, c, d) of the block and on the upper edge.",
+      "dimensions": [
+        {
+          "n": "a",
+          "unit": "cm",
+          "height": {
+            "_": "38",
+            "unit": "cm"
+          },
+          "width": {
+            "_": "48",
+            "unit": "cm"
+          }
+        },
+        {
+          "n": "b",
+          "unit": "cm",
+          "height": {
+            "_": "57",
+            "unit": "cm"
+          },
+          "width": {
+            "_": "33",
+            "unit": "cm"
+          }
+        },
+        {
+          "n": "c",
+          "unit": "cm",
+          "height": {
+            "_": "47",
+            "unit": "cm"
+          },
+          "width": {
+            "_": "36",
+            "unit": "cm"
+          }
+        },
+        {
+          "n": "d",
+          "unit": "cm",
+          "height": {
+            "_": "57",
+            "unit": "cm"
+          },
+          "width": {
+            "_": "36",
+            "unit": "cm"
+          }
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.deteriorated"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "70-95",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -500,
+  "precision": "low",
   "places": [
     {
       "_": "Mendolito",
@@ -44,9 +145,27 @@
     }
   ],
   "geo": [
-    37.69904,
-    14.808181
+    [
+      37.69904,
+      14.808181
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1883 on proprietà Sanfilippo, Mendolito",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1883",
+    "geo": [
+      37.70611,
+      14.80968
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003644_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -54,13 +173,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Adrano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/021"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"
   },
   "placeName": "Mendolito",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003644",
+    "isic003644",
     "i.sicily inscription 003644",
     "edited",
     "terminus",

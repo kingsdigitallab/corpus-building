@@ -1,15 +1,31 @@
 {
   "file": "ISic004389",
-  "metadataFile": "metadata/ISic004389.json",
-  "htmlFile": "html/ISic004389.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004389",
+  "uri": "ISic004389",
   "title": "terminus marker?",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "terminus",
     "ana": "#function.terminus",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/96.html"
   },
+  "support": "A block of yellow-orange local calcareous stone ('tufo arenaria'), intact left and below, but seemingly broken on top and on the right. Roughly finished on the reverse.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,29 +36,69 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "70-75",
-      "unit": "mm"
+      "_": "33",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "60-70",
-      "unit": "mm"
+      "_": "48",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "10",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Greek text, with a deep horizontal line above each (same depth as the letters). Although the stone is broken top and right, there is no clear evidence that the text continued beyond what is preserved (the surface is preserved beyond the text, and the 'guidelines' also stop with the preserved text. A cross precedes line 1.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Deeply and neatly cut letters (given the material). Xsi formed by multiple straight strokes, alternately horizontal and diagonal; epsilon has equal length bars; Nu has the diagonal not reaching to either top or bottom of the vertical strokes; beta is closed, with lower eye larger than upper; alpha has an extended upper serif, and crossbar is oblique, descending to left; sigma is lunate; kappa has full length arms.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "70-75",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "60-70",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "20-30",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 300,
   "notAfter": 700,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -56,9 +112,25 @@
     }
   ],
   "geo": [
-    37.2038,
-    15.18274
+    [
+      37.2038,
+      15.18274
+    ]
   ],
+  "provenanceFound": {
+    "_": "Part of the initial museum collection, without date of acquisition, noted by Orsi (Taccuino 1, p.78) as from Cantera, i.e. Megara Hyblaea",
+    "type": "found",
+    "subtype": "first-recorded",
+    "geo": [
+      37.203699,
+      15.181796
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Currently in the small store room behind the medagliere of the museum",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004389_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -66,13 +138,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/97"
+  },
+  "idno": {
+    "_": "223",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Megara Hyblaea",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004389",
+    "isic004389",
     "terminus marker?",
     "edited",
     "terminus",

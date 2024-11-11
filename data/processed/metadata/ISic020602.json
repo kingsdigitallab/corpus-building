@@ -1,15 +1,31 @@
 {
   "file": "ISic020602",
-  "metadataFile": "metadata/ISic020602.json",
-  "htmlFile": "html/ISic020602.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020602",
+  "uri": "ISic020602",
   "title": "ISic020602",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Fragment of tile.",
   "objectType": {
     "_": "tile",
     "ana": "#object.tile",
@@ -20,21 +36,64 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "scratched (before firing)",
-    "type": "graffito",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched (before firing)",
+        "type": "graffito",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription runs under the upper edge of the tile.",
+      "dimensions": {
+        "unit": "cm",
+        "height": {
+          "unit": "cm"
+        },
+        "width": {
+          "unit": "cm"
+        }
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -400,
+  "evidence": "archaeological-context material-context lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Mendolito",
@@ -43,9 +102,28 @@
     }
   ],
   "geo": [
-    37.69904,
-    14.808181
+    [
+      37.69904,
+      14.808181
+    ]
   ],
+  "provenanceFound": {
+    "_": "contrada Mendolito.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.69904,
+      14.808181
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2022-01-24",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2022-01-24"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020602_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +131,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "31889",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"
   },
   "placeName": "Mendolito",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020602",
+    "isic020602",
     "isic020602",
     "draft",
     "building",

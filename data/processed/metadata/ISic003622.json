@@ -1,10 +1,31 @@
 {
   "file": "ISic003622",
-  "metadataFile": "metadata/ISic003622.json",
-  "htmlFile": "html/ISic003622.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003622",
+  "uri": "ISic003622",
   "title": "I.Sicily inscription 003622",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645695",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "59500346",
+      "type": "EDCS"
+    },
+    {
+      "_": "63800027",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +41,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "painted",
-    "ana": "#execution.painted",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "painted",
+        "ana": "#execution.painted",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/10"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 200,
   "notAfter": 500,
   "places": [
@@ -49,9 +99,23 @@
     }
   ],
   "geo": [
-    35.91667,
-    14.43333
+    [
+      35.91667,
+      14.43333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Rabat, catacomb of St. Agata, hypogeum of the rupestral church",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003622_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,6 +123,9 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Rabat",
+  "repository": {
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek and Latin",
     "mainLang": "grc",
@@ -67,7 +134,7 @@
   },
   "placeName": "Melita",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003622",
+    "isic003622",
     "i.sicily inscription 003622",
     "draft",
     "funerary",

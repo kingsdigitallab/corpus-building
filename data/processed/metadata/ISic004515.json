@@ -1,15 +1,31 @@
 {
   "file": "ISic004515",
-  "metadataFile": "metadata/ISic004515.json",
-  "htmlFile": "html/ISic004515.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004515",
+  "uri": "ISic004515",
   "title": "I.Sicily inscription 004515",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/386.html"
   },
+  "support": "white (decoration) and black (letters) tesserae set into an opus signinum pavement; part of the pavement remains underneath later walls.",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -20,21 +36,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "inlaid",
-    "ana": "#execution.inlaid",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is placed inside a rounded tabula ansata.",
+      "rs": {
+        "_": "inlaid",
+        "ana": "#execution.inlaid",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -1,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Centuripae",
@@ -48,9 +91,26 @@
     }
   ],
   "geo": [
-    37.62336,
-    14.74049
+    [
+      37.62336,
+      14.74049
+    ]
   ],
+  "provenanceFound": {
+    "_": "in situ in a late Republican house, itself found underneath an aedicula tomb in the Roman imperial period necropolis at localita Castellaccio, Centuripe",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.624464,
+      14.746523
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004515_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +118,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
+  "repository": {
+    "_": "Centuripe",
+    "role": "site"
+  },
+  "idno": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Centuripae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004515",
+    "isic004515",
     "i.sicily inscription 004515",
     "draft",
     "greeting",

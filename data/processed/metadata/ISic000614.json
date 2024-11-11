@@ -1,15 +1,33 @@
 {
   "file": "ISic000614",
-  "metadataFile": "metadata/ISic000614.json",
-  "htmlFile": "html/ISic000614.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000614",
+  "uri": "ISic000614",
   "title": "I.Sicily inscription 000614",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491380",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "380313",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "A stone rostra/tribunal in the internal NW corner of the north portico of the agora; the inscription is part of the moulding from the upper edge of the tribunal, on a block which is intact above and eblow and to the left, but broken on the right; possibly a re-used part of a statue base.",
   "objectType": {
     "_": "moulding",
     "ana": "#object.arch_element.moulding",
@@ -20,23 +38,50 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "30",
-      "unit": "mm",
-      "precision": "low"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is unevently and lightly incised on the right hand (broken) end of the upper part of the moulding.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Lightly and fairly crudely incised small letters, without serifs; C and S are very shallow, O somewhat ovoid.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "30",
+        "unit": "mm",
+        "precision": "low"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Ietas",
@@ -50,9 +95,26 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "On the partially preserved moulding of the rostra/tribunal in the internal NW corner of the north portico of the agora",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.967305,
+      13.198057
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000614_tiled.tif",
     "desc": "Photo courtesy Zurich Ietas excavations"
@@ -60,13 +122,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
+  "repository": {
+    "_": "depot of the Zurich Ietas excavation",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/192"
+  },
+  "idno": {
+    "_": "A.1040",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Ietas",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000614",
+    "isic000614",
     "i.sicily inscription 000614",
     "draft",
     "building",

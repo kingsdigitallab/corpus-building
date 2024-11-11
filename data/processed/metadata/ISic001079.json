@@ -1,15 +1,34 @@
 {
   "file": "ISic001079",
-  "metadataFile": "metadata/ISic001079.json",
-  "htmlFile": "html/ISic001079.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001079",
+  "uri": "ISic001079",
   "title": "I.Sicily inscription 001079",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492707",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102236",
+      "type": "EDCS"
+    },
+    {
+      "_": "140561",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "decree",
     "ana": "#function.decree",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/384.html"
   },
+  "support": "A marble louterion stand, in the typical form of a fluted column.",
   "objectType": {
     "_": "louterion",
     "ana": "#object.vessel.louterion",
@@ -20,19 +39,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "60",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Inscribed around the foot of the louterion stand.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letter forms include shallow open lunate sigma, variously large and small omicron, mu both with vertical first and last and with splayed first and last strokes, quadrate epsilon with equal strokes; also one instance of open omega with short tails.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1768,
   "notAfter": 1800,
   "places": [
@@ -48,9 +99,23 @@
     }
   ],
   "geo": [
-    37.10267,
-    13.93972
+    [
+      37.10267,
+      13.93972
+    ]
   ],
+  "provenanceFound": {
+    "_": "Variously said in different publications to be found in 1768, 1778 and 1788, on the 'monte di Licata', near the convent of the PP. Cappuccini (the modern cemetery), by one Caolgero Galetto, together with ruins of a mosaci pavement, and a statuette of the same stone. Acquired by Baron Vincenzo Trigona Rabugino, and preserved by his descendants.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1778"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001079_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +123,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Licata",
+  "repository": {
+    "_": "In private hands (family Trigona)",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Phintias",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001079",
+    "isic001079",
     "i.sicily inscription 001079",
     "draft",
     "decree",

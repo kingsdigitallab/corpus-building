@@ -1,15 +1,31 @@
 {
   "file": "ISic001869",
-  "metadataFile": "metadata/ISic001869.json",
-  "htmlFile": "html/ISic001869.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001869",
+  "uri": "ISic001869",
   "title": "Funerary inscription for Artemo",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Described as a rough block of \"calcare\" in the museum inventory, as 'un blocco sformato di arenaria' in Orsi 1899, and so presumably a coarse local limestone. The inventory notes that it was sawn down for transportation, and was thicker before it was transported to the museum (it is unclear therefore whether the measurement of thickness/depth reported in Orsi's publication is pre- or post-transportation, since the block has so far not been relocated. The inventory does not record the thickness. It appears from the sketch in the inventory that the stone was damaged on the left side, and upper right corner.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,22 +36,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "55-95",
-      "unit": "mm"
+      "_": "36",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "69",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "33",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Greek letters, seemingly not centered / regularly laid out.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Described by Orsi (1896) as 'scritto a pessimi caratteri', and (1899) as 'lettere cattive, rustiche cosi che a tutta prima sembrano archaiche, e molto sconservate... L'iscrizione negligentemente redatta e scolpita è funebre di tarda età'. Pace states 'lettere del III sec. av. Cr.', but given the presence of lunate epsilon and Orsi's comments, a later date seems much more likely.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "55-95",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 400,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Kamarina",
@@ -49,20 +100,47 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "A chance find during the excavations of 1896 by a farmer, found in the water at the mouth of the Hipparis (Forgia).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1896",
+    "geo": [
+      36.8759983,
+      14.4377781
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None; the stone has not so far been located in the Siracusa museum (now in Camarina?)",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "16474",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Kamarina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001869",
+    "isic001869",
     "funerary inscription for artemo",
     "edited",
     "funerary",

@@ -1,10 +1,36 @@
 {
   "file": "ISic001063",
-  "metadataFile": "metadata/ISic001063.json",
-  "htmlFile": "html/ISic001063.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001063",
+  "uri": "ISic001063",
   "title": "I.Sicily inscription 001063",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492694",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102220",
+      "type": "EDCS"
+    },
+    {
+      "_": "140543",
+      "type": "PHI"
+    },
+    {
+      "_": "140545",
+      "type": "PHI"
+    },
+    {
+      "_": "140547",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +46,53 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "42",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "34",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 350,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Mutyca",
@@ -48,9 +106,22 @@
     }
   ],
   "geo": [
-    36.84594,
-    14.77399
+    [
+      36.84594,
+      14.77399
+    ]
   ],
+  "provenanceFound": {
+    "_": "Molino della Larderia, grotta della signora",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001063_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +129,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Mutyca",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001063",
+    "isic001063",
     "i.sicily inscription 001063",
     "draft",
     "funerary",

@@ -1,15 +1,33 @@
 {
   "file": "ISic003380",
-  "metadataFile": "metadata/ISic003380.json",
-  "htmlFile": "html/ISic003380.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003380",
+  "uri": "ISic003380",
   "title": "Ash chest for Pompeios Elpistos",
   "status": "edited",
+  "editions": [
+    {
+      "_": "645608",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "140340",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectangular plain limestone ash chest, with a lid with plain moulding. Lid, not included in measurements below, is 68mm high.",
   "objectType": {
     "_": "ash chest",
     "ana": "#object.ash_chest",
@@ -20,48 +38,86 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "23-32",
-      "unit": "mm"
+      "_": "26",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "19-25",
-      "unit": "mm"
+      "_": "47",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "17-25",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "15-23",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "15-20",
-      "unit": "mm"
+      "_": "39",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Five lines of Greek letters, centred on the wide face of the chest and laid out between guide lines.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Deeply cut lunate letters of somewhat varying height. Kappa has tall vertical, lower tail extends to the line; Pi has vertical strokes of equal length, some overlap by horizontal; Mu has extended serifs off the upper strokes; epsilon and sigma are lunate, the cross-bar of the epsilon sometimes very lightly cut and detached; alpha and delta have extended serifs on the upper strokes; there is a single comma-shaped interpunct in line 1 after the first letter.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "23-32",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "19-25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "17-25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "15-23",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "15-20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -77,9 +133,25 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during exploration of predio di avv. Avolio, behind convent of S.Lucia, Siracusa, as inv. no. 15410, in early 1880s",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.073291,
+      15.291516
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Depositi, Mag C",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003380_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -87,13 +159,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "15411",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003380",
+    "isic003380",
     "ash chest for pompeios elpistos",
     "edited",
     "funerary",

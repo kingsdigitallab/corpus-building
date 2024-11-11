@@ -1,15 +1,35 @@
 {
   "file": "ISic003510",
-  "metadataFile": "metadata/ISic003510.json",
-  "htmlFile": "html/ISic003510.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003510",
+  "uri": "ISic003510",
   "title": "Epitaph for Lucius Ostrius Crescens",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284772",
+      "type": "TM"
+    },
+    {
+      "_": "033612",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "14805793",
+      "type": "EDCS"
+    },
+    {
+      "_": "313626",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A slightly irregular small tablet of marble",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,36 +40,74 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "25",
-      "unit": "mm"
+      "_": "16",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "20-22",
-      "unit": "mm"
+      "_": "20.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Lines 3-4",
-      "from": "line3",
-      "to": "line4",
-      "h": "20",
-      "unit": "mm"
+      "_": "3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Four lines of Latin letters approximately centred on the stone",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Thinly but deeply incised regular letters with minimal serifs and of slightly uneven size. R has a small open eye, with a long straight tail; E is fully perpendicular with equal length strokes; M is made up four equal oblique strokes reaching to top and bottom of the line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "20-22",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Lines 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "20",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation lines 1 to 4",
+        "from": "line1",
+        "to": "line4",
+        "h": "9-14",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -63,9 +121,31 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found within a funerary building within the area designated 'recinto B' by Paolo Orsi during excavation in 1914 of the ",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1914",
+    "placeName": {
+      "_": "Necropolis of San Placido",
+      "type": "ancient",
+      "ref": "https://pleiades.stoa.org/places/888447551"
+    },
+    "geo": [
+      38.1992517,
+      15.5566385
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Currently on display",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003510_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -73,13 +153,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A3560",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Messana",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003510",
+    "isic003510",
     "epitaph for lucius ostrius crescens",
     "draft",
     "funerary",

@@ -1,10 +1,33 @@
 {
   "file": "ISic003695",
-  "metadataFile": "metadata/ISic003695.json",
-  "htmlFile": "html/ISic003695.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003695",
+  "uri": "ISic003695",
   "title": "I.Sicily inscription 003695",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696079",
+      "type": "TM"
+    },
+    {
+      "_": "150198",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800226",
+      "type": "EDCS"
+    },
+    {
+      "_": "330076",
+      "type": "PHI"
+    },
+    {
+      "_": "301089",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -22,21 +45,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -700,
   "notAfter": -600,
+  "precision": "low",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -51,9 +104,23 @@
     }
   ],
   "geo": [
-    37.2038,
-    15.18274
+    [
+      37.2038,
+      15.18274
+    ]
   ],
+  "provenanceFound": {
+    "_": "In re-use in the Hellenistic walls",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003695_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -61,13 +128,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
+  "repository": {
+    "_": "Area archeologica di Megara Hyblaea",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/167"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Megara Hyblaea",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003695",
+    "isic003695",
     "i.sicily inscription 003695",
     "draft",
     "funerary",

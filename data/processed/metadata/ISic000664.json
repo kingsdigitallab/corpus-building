@@ -1,15 +1,33 @@
 {
   "file": "ISic000664",
-  "metadataFile": "metadata/ISic000664.json",
-  "htmlFile": "html/ISic000664.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000664",
+  "uri": "ISic000664",
   "title": "Fragmentary inscription mentioning a likely building",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491373",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "5000361",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Block of limestone (calcarenite) likely corresponding to a piece of entablature.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,20 +38,52 @@
     "ana": "#material.stone.limestone",
     "ref": "https://www.eagle-network.eu/voc/material/lod/6"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1 to 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "57",
-      "unit": "mm"
+      "_": "51",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "58.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "51",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1 to 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "57",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -50,
   "notAfter": -50,
   "places": [
@@ -49,9 +99,20 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Segesta, site reference SAS 4",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000664_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +120,16 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "role": "museum"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000664",
+    "isic000664",
     "fragmentary inscription mentioning a likely building",
     "draft",
     "building",

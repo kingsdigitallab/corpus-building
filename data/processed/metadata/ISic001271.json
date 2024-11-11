@@ -1,16 +1,35 @@
 {
   "file": "ISic001271",
-  "metadataFile": "metadata/ISic001271.json",
-  "htmlFile": "html/ISic001271.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001271",
+  "uri": "ISic001271",
   "title": "I.Sicily inscription 001271",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492878",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101640",
+      "type": "EDCS"
+    },
+    {
+      "_": "140760",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
     "cert": "low"
   },
+  "support": "Ferrua reports that it appears to have been a mosaic",
   "objectType": {
     "_": "mosaic",
     "ana": "#object.mosaic",
@@ -21,19 +40,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -49,9 +97,22 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Ferrua reports Morso as recording that it was found some time before 1823 in the baths of Taormina",
+    "type": "found",
+    "notAfter": "1823"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001271_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +120,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Tauromenium",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001271",
+    "isic001271",
     "i.sicily inscription 001271",
     "draft",
     "honorific",

@@ -1,15 +1,31 @@
 {
   "file": "ISic020731",
-  "metadataFile": "metadata/ISic020731.json",
-  "htmlFile": "html/ISic020731.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020731",
+  "uri": "ISic020731",
   "title": "ISic020731",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "private (graffito), dedication?",
     "ana": "#function.document.private",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/359.html"
   },
+  "support": "Fragment of vessel.",
   "objectType": {
     "_": "vessel",
     "ana": "#object.vessel",
@@ -20,21 +36,47 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.incomplete text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -460,
   "notAfter": -440,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Herbessus (?)",
@@ -48,9 +90,25 @@
     }
   ],
   "geo": [
-    37.42658,
-    14.30061
+    [
+      37.42658,
+      14.30061
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (Soprintendenza alle Antichità di Siracusa,1966—1968) in the area of Montagna di Marzo.",
+    "type": "found",
+    "geo": [
+      37.42658,
+      14.30061
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020731_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +116,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/010"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx",
@@ -70,7 +136,7 @@
   },
   "placeName": "Herbessus (?)",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020731",
+    "isic020731",
     "isic020731",
     "draft",
     "private (graffito), dedication?",

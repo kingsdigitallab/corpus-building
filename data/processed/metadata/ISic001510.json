@@ -1,10 +1,26 @@
 {
   "file": "ISic001510",
-  "metadataFile": "metadata/ISic001510.json",
-  "htmlFile": "html/ISic001510.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001510",
+  "uri": "ISic001510",
   "title": "I.Sicily inscription 001510",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645011",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -21,22 +37,59 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "250",
-      "unit": "mm"
+      "_": "44",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "56",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "110",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "_": "Single letter incised on one face of a block\n                                    \n                                \t\n\t\t\t",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "250",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "NA",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -600,
   "notAfter": -400,
+  "precision": "low",
   "places": [
     {
       "_": "Selinus",
@@ -50,20 +103,38 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "From the northern part of the area of Temple C (from outside the temple), probably re-used in later building work",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": null,
+  "provenanceLost": {
+    "_": "The stone has not been seen in recent times and is presumed lost (so already IFPCO)",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
   "textLang": {
     "_": "Punic",
     "mainLang": "xpu"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001510",
+    "isic001510",
     "i.sicily inscription 001510",
     "draft",
     "building",

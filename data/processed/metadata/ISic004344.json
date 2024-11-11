@@ -1,15 +1,31 @@
 {
   "file": "ISic004344",
-  "metadataFile": "metadata/ISic004344.json",
-  "htmlFile": "html/ISic004344.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004344",
+  "uri": "ISic004344",
   "title": "Honorary inscription for Quintus Pompeius.",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Three fragments, of which two join; traces of mortar on the sides and the back. The back of the plaque is polished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +36,65 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "75-76",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Guide lines are visible top and bottom of each line.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Interpunct takes form of a reversed comma. Letters are neatly V-cut with short serifs.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "75-76",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "23-27",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "28",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Sicilia",
@@ -48,6 +107,19 @@
       "ref": "http://sws.geonames.org/2523119"
     }
   ],
+  "geo": [],
+  "provenanceFound": {
+    "_": "Exact provenance unknown, but the smallest fragment (inv.05/100) was stored with the note \"Agira?\".",
+    "type": "found",
+    "cert": "low"
+  },
+  "provenanceObserved": {
+    "_": "2016.05.12",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004344_tiled.tif",
     "desc": "Photo J. Prag, 2016-05-12, courtesy Museo di Archeologia dell'Universita di Catania"
@@ -55,13 +127,32 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo di Archeologia dell'Universita di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/019"
+  },
+  "idno": [
+    {
+      "_": "05/100",
+      "type": "inventory"
+    },
+    {
+      "_": "05/134",
+      "type": "inventory"
+    },
+    {
+      "_": "05/135",
+      "type": "inventory"
+    }
+  ],
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Sicilia",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004344",
+    "isic004344",
     "honorary inscription for quintus pompeius.",
     "draft",
     "honorific",

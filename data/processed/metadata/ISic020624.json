@@ -1,15 +1,31 @@
 {
   "file": "ISic020624",
-  "metadataFile": "metadata/ISic020624.json",
-  "htmlFile": "html/ISic020624.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020624",
+  "uri": "ISic020624",
   "title": "ISic020624",
   "status": "unchecked",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of vessel.",
   "objectType": {
     "_": "vessel",
     "ana": "#object.vessel",
@@ -20,21 +36,52 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -520,
   "notAfter": -480,
+  "evidence": "material-context lettering",
   "places": [
     {
       "_": "Hybla Gereatis (?)",
@@ -48,9 +95,25 @@
     }
   ],
   "geo": [
-    37.56675,
-    14.90254
+    [
+      37.56675,
+      14.90254
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during excavations carried out by P. Pelagatti at Paternò-Civita.",
+    "type": "found",
+    "geo": [
+      37.56675,
+      14.90254
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020624_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +121,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Paternò",
+  "repository": {
+    "_": "Museo Civico Gaetano Savasta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/038"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"
   },
   "placeName": "Hybla Gereatis (?)",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020624",
+    "isic020624",
     "isic020624",
     "unchecked",
     "unknown",

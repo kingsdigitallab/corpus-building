@@ -1,15 +1,34 @@
 {
   "file": "ISic000167",
-  "metadataFile": "metadata/ISic000167.json",
-  "htmlFile": "html/ISic000167.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000167",
+  "uri": "ISic000167",
   "title": "Funerary inscription for Daphne",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285261",
+      "type": "TM"
+    },
+    {
+      "_": "127476",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100100",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Vaguely rectalinear cippus of grey-yellow stone, broken on right edge, and top left corner. Top edge is rounded on both sides. Left edge slightly tapers. Top and bottom edges straight. Rear of stone is flat, but for large calcified deposits making it uneven. Sides, edges and top all painted in modern red paint.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -20,34 +39,70 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "70-72",
-      "unit": "mm"
+      "_": "48",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "48-52",
-      "unit": "mm"
+      "_": "41-31",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "40-45",
-      "unit": "mm"
+      "_": "7",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three line Latin inscription in top half of stone. Text complete. Text almost centred, but shifted slightly to the right. Grey discolouration around letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are tall, thin, and well defined, in pronounced v-cut. Characters in line 1 differ from those on the following two lines (compare A and N). Defined serifs on all letters. Use of triangular interpuncts on lines two and three. First line is more deeply cut than the other two. End of line 2 tapers upwards, to fit into stone. Every instance of 'X' have deeply and widely incised lines that slope from left to right.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "70-72",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "48-52",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "40-45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -63,9 +118,25 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Termini Imerese, in 1881, in the ancient necropolis located in S. Antonino. NSA describes the location of discovery as 'a few steps from the city walls, in the S. Antonino plateau' (A pochi passi dalle mura della citta, nel piano di S. Antonino\").",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1881"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 1, shelf 6.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-04",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000167_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04"
@@ -73,13 +144,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "84",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000167",
+    "isic000167",
     "funerary inscription for daphne",
     "edited",
     "funerary",

@@ -1,15 +1,33 @@
 {
   "file": "ISic003293",
-  "metadataFile": "metadata/ISic003293.json",
-  "htmlFile": "html/ISic003293.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003293",
+  "uri": "ISic003293",
   "title": "Fragment of an Epitaph",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645560",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "316278",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Upper left fragment of marble plaque, set in plaster in modern times. The second fragment has been lost.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +38,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "45",
-      "unit": "mm"
+      "_": "17",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "20",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters with apices, Ν with the oblique that does not start and end from the top of one upright to the bottom of the other upright, lunate Σ. At l. 1 the cross has been erased.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not recorded",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 401,
   "notAfter": 600,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +102,22 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1935 in Via Dottor Consoli, Catania.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1935"
+  },
+  "provenanceObserved": {
+    "_": "Observed by Korhonen in Magazzino del cortile, Museo Civico (formerly sala VI suppl. 168).",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003293_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +125,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003293",
+    "isic003293",
     "fragment of an epitaph",
     "draft",
     "funerary",

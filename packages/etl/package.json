@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "etl": "node src/index.js",
+    "sef": "cd ../../xslt && npx xslt3 -xsl:epidoc/start-edition.xsl -export:start-edition.sef.json -t && cd -",
     "test": "vitest"
   },
   "repository": {

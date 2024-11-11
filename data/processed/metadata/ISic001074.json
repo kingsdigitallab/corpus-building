@@ -1,10 +1,36 @@
 {
   "file": "ISic001074",
-  "metadataFile": "metadata/ISic001074.json",
-  "htmlFile": "html/ISic001074.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001074",
+  "uri": "ISic001074",
   "title": "I.Sicily inscription 001074",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491441",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70901064",
+      "type": "EDCS"
+    },
+    {
+      "_": "140554",
+      "type": "PHI"
+    },
+    {
+      "_": "175612",
+      "type": "PHI"
+    },
+    {
+      "_": "330074",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,22 +46,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-6",
-      "from": "line1",
-      "to": "line6",
-      "h": "25",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "43.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "rhomboid omicron, theta and omega; four-bar sigma always reversed; multiple ligatures",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-6",
+        "from": "line1",
+        "to": "line6",
+        "h": "25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 300,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Euboia",
@@ -49,9 +110,25 @@
     }
   ],
   "geo": [
-    37.15674,
-    14.70555
+    [
+      37.15674,
+      14.70555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the 'ex feudo di Sciri Sottano' in 1778, and subsequently part of the Collezione Astuto di Noto",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1778",
+    "geo": {
+      "_": "37.10836, 14.55774",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "sala iscr. Gr.",
+    "type": "observed"
+  },
   "facsimile": {
     "url": "ISic001074_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +136,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8739",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Euboia",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001074",
+    "isic001074",
     "i.sicily inscription 001074",
     "draft",
     "funerary",

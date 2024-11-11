@@ -1,15 +1,34 @@
 {
   "file": "ISic001293",
-  "metadataFile": "metadata/ISic001293.json",
-  "htmlFile": "html/ISic001293.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001293",
+  "uri": "ISic001293",
   "title": "I.Sicily inscription 001293",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492897",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101662",
+      "type": "EDCS"
+    },
+    {
+      "_": "140783",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A marble ?plaque, damaged or otherwise defaced on the right side",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,19 +39,50 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -48,9 +98,26 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found several years before 1833 near to the drinking trough/fountain between the Palazzo Rizzari and Palazzo di Mazza, to the north of the porta Stesicorea",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1833",
+    "geo": {
+      "_": "37.509673, 15.084874",
+      "cert": "medium"
+    }
+  },
+  "provenanceLost": {
+    "_": "Not seen since the 19th century, presumed lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001293_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +125,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001293",
+    "isic001293",
     "i.sicily inscription 001293",
     "draft",
     "funerary",

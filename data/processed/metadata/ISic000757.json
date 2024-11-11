@@ -1,16 +1,33 @@
 {
   "file": "ISic000757",
-  "metadataFile": "metadata/ISic000757.json",
-  "htmlFile": "html/ISic000757.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000757",
+  "uri": "ISic000757",
   "title": "I.Sicily inscription 000757",
   "status": "draft",
+  "editions": [
+    {
+      "_": "653659",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
     "cert": "low"
   },
+  "support": "A thick limestone plaque, used for grinding grain and so heavily worn; the stone is cut off to the left and probably above also.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -21,22 +38,59 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "65-70",
-      "unit": "mm"
+      "_": "49",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "64",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "15",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "At least four lines of Latin letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.partly_illegible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The text is heavily eroded, but the letters appear to show the narrower and extended form of the later second century AD onwards",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "65-70",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 150,
   "notAfter": 300,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Assorus",
@@ -50,9 +104,21 @@
     }
   ],
   "geo": [
-    37.6221,
-    14.4181
+    [
+      37.6221,
+      14.4181
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in prop. Crimi, in Contrada Morra/Murra approximately 3km east of Assoro",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1963",
+    "geo": {
+      "_": "37.626510, 14.461248",
+      "cert": "medium"
+    }
+  },
   "facsimile": {
     "url": "ISic000757_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -60,13 +126,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Assorus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000757",
+    "isic000757",
     "i.sicily inscription 000757",
     "draft",
     "funerary",

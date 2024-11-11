@@ -1,10 +1,28 @@
 {
   "file": "ISic001256",
-  "metadataFile": "metadata/ISic001256.json",
-  "htmlFile": "html/ISic001256.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001256",
+  "uri": "ISic001256",
   "title": "I.Sicily inscription 001256",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492862",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101624",
+      "type": "EDCS"
+    },
+    {
+      "_": "140744",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -20,21 +38,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": 100,
+  "precision": "low",
   "places": [
     {
       "_": "Tauromenium",
@@ -48,9 +96,21 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "Seen by Campagna 2005-03-30",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001256_tiled.tif",
     "desc": "Photo L. Campagna 2005-03-31"
@@ -58,13 +118,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": {
+    "_": "Antiquarium del\n                            Teatro Antico",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/062"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Tauromenium",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001256",
+    "isic001256",
     "i.sicily inscription 001256",
     "draft",
     "dedication",

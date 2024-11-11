@@ -1,13 +1,21 @@
 <script>
+	import { preventDefault } from 'svelte/legacy';
+
 	import BaseLink from '$lib/components/BaseLink.svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('./$types').PageData} data
+	 */
+
+	/** @type {Props} */
+	let { data } = $props();
 
 	/**
 	 * @param {string} text
 	 */
-	function copyTargetToClipboard(text) {
+	function copyTargetToClipboard(event, text) {
+		event.preventDefault;
 		navigator.clipboard.writeText(`inspect($$("${text}")[0])`);
 		alert('Copied to clipboard!');
 	}
@@ -42,9 +50,9 @@
 								<td>{violation.description}</td>
 								<td>
 									<a
-										href="#"
+										href="#copy-target"
 										class="copy-to-clipboard"
-										on:click|preventDefault={copyTargetToClipboard(violation.nodes[0].target)}
+										onclick={(event) => copyTargetToClipboard(event, violation.nodes[0].target)}
 										>{violation.nodes[0].target}</a
 									>
 								</td>

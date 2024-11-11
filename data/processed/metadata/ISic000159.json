@@ -1,15 +1,34 @@
 {
   "file": "ISic000159",
-  "metadataFile": "metadata/ISic000159.json",
-  "htmlFile": "html/ISic000159.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000159",
+  "uri": "ISic000159",
   "title": "Fragments of a funerary(?) inscription recording a member of the gens Cornelia",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285153",
+      "type": "TM"
+    },
+    {
+      "_": "111309",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100096",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Two joining fragments of a white marble plaque. A third fragment, seen and photographed by Bivona from the upper left corner (completing the letters C and O in line 1) is missing. Top edge is partially intact, other three sides are broken. The rear is flat. Traces of mortar on sides, and some encrustation on parts of the front face. Depth of stone decreases towards the base.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,29 +39,65 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "58",
-      "unit": "mm"
+      "_": "15",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "greater than 28",
-      "unit": "mm"
+      "_": "23",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.8-1.0 (top to bottom)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two fragmentary lines of large Latin letters.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Large, well-executed, letters with simple serifs. Letters are evenly spaced. Although the full-size of the letters in line 2 cannot be determined, they are smaller than the letters in line 1.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "58",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "greater than 28",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 100,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -57,9 +112,25 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded in the museum by Mommsen 1883 and assumed to come from Termini.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1883"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-07. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 3, shelf 2",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-07",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000159_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2023-07-07."
@@ -67,13 +138,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000159",
+    "isic000159",
     "fragments of a funerary(?) inscription recording a member of the gens cornelia",
     "edited",
     "funerary",

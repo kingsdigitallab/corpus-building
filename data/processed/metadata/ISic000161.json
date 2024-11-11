@@ -1,15 +1,34 @@
 {
   "file": "ISic000161",
-  "metadataFile": "metadata/ISic000161.json",
-  "htmlFile": "html/ISic000161.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000161",
+  "uri": "ISic000161",
   "title": "Epitaph of Lucius Cornelius Auctus",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175697",
+      "type": "TM"
+    },
+    {
+      "_": "077915",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "8900393",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Two joining fragments of a thin white marble plaque, broken on all sides except the left edge of the left fragment (and possibly lower left edge). The rear is finished smooth, but discoloured. The two fragments have been reconnected and fixed to a clear perspex stand. Note that the intact left margin of the stone is not parallel to the left margin of the text. Fragment 1 (left) is max H 16.6 cm x max W 14.5 x D 1.9; fragment 2 (right) is max H 19 cm x W 13.2 x D 1.5.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,36 +39,73 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "35",
-      "unit": "mm"
+      "_": "20",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "26-38",
-      "unit": "mm"
+      "_": "26.3",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "22-28",
-      "unit": "mm"
+      "_": "1.9-1.5 (left to right)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three slightly irregular and roughly centred lines of Latin letters, with single use of hedera in the middle of the name; the final letters of the cognomen are combined in a mixture of large and small letters, almost monogram-like.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat fluid letters, with extensions to the apices of letters such as M and A, absence of cross-bar on A, L with oblique lower stroke.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "35",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "26-38",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "22-28",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 150,
   "notAfter": 250,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -63,9 +119,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "A chance find, with three other inscriptions (ISic000161-000164) in Contrada Madonna della Catena, proprieta Gallegra (c.800m outside the city at the time)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1907-08",
+    "geo": [
+      37.977321,
+      13.70827
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-05, on display in the Museo Civico.",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000161_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-07-10"
@@ -73,13 +147,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "8ab",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000161",
+    "isic000161",
     "epitaph of lucius cornelius auctus",
     "edited",
     "funerary",

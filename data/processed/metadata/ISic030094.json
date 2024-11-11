@@ -1,15 +1,34 @@
 {
   "file": "ISic030094",
-  "metadataFile": "metadata/ISic030094.json",
-  "htmlFile": "html/ISic030094.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030094",
+  "uri": "ISic030094",
   "title": "ISic030094",
   "status": "draft",
+  "editions": [
+    {
+      "_": "699098",
+      "type": "TM"
+    },
+    {
+      "_": "155826",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "340323",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "Rectangular lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,22 +39,53 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "9",
-      "unit": "mm"
+      "_": "3.5",
+      "unit": "cm",
+      "atMost": "3.5",
+      "dimension": "height"
+    },
+    {
+      "_": "9",
+      "unit": "cm",
+      "atMost": "9",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "lunate epsilon",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "9",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -250,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Selinus",
@@ -49,9 +99,26 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the deposits of Selinunte.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.58337,
+      12.82522
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030094_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +126,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonio Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/isicily/museums/064"
+  },
+  "idno": {
+    "_": "42575",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030094",
+    "isic030094",
     "isic030094",
     "draft",
     "defixio",

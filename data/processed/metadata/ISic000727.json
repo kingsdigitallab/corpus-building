@@ -1,16 +1,34 @@
 {
   "file": "ISic000727",
-  "metadataFile": "metadata/ISic000727.json",
-  "htmlFile": "html/ISic000727.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000727",
+  "uri": "ISic000727",
   "title": "I.Sicily inscription 000727",
   "status": "edited",
+  "editions": [
+    {
+      "_": "492380",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "32701115",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html",
     "cert": "low"
   },
+  "support": "A large block of crystalline off-white marble, finished flat across the base, broken to left and right, with the front face mostly preserved. The top presents a rounded surface, partly damaged. The rear is damaged / broken off also. The front face presents three flat surfaces at different depths, with a rounded moulding separating the upper two layers; the text is on the middle of the three surfaces, below the moulding. The block seems likely to be part of an architrave or moulding from a structure.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -22,22 +40,53 @@
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
     "cert": "low"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "60-70",
-      "unit": "mm"
+      "_": "37",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "60",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "30.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is engraved in a single line across the middle of the three vertical surfaces on the front face of the stone.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Tall, narrow and slightly uneven, v-cut letters with some use of serifs; diminishing in height towards line end. A has a cross-bar which extends beyond the uprights on both sides, sloping down to the left; E has strokes of approximately equal length; P and R are open; S has larger upper half.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "60-70",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 300,
   "notAfter": 399,
+  "evidence": "titulature",
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -51,9 +100,29 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Recovered from Piazza d'Armi, the site of the Roman forum 'presso il pozzo dell'Ingegnere' ",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1888",
+    "geo": [
+      37.066339,
+      15.284319
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2018-03-15",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2018-03-15",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000727_tiled.tif",
     "desc": "Photo J. Prag (2018), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -61,13 +130,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000727",
+    "isic000727",
     "i.sicily inscription 000727",
     "edited",
     "building",

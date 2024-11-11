@@ -1,15 +1,47 @@
 {
   "file": "ISic030025",
-  "metadataFile": "metadata/ISic030025.json",
-  "htmlFile": "html/ISic030025.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030025",
+  "uri": "ISic030025",
   "title": "ISic030025",
   "status": "draft",
+  "editions": [
+    {
+      "_": "697176",
+      "type": "TM"
+    },
+    {
+      "_": "136698",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800205",
+      "type": "EDCS"
+    },
+    {
+      "_": "64400324",
+      "type": "EDCS"
+    },
+    {
+      "_": "330150",
+      "type": "PHI"
+    },
+    {
+      "_": "329507",
+      "type": "PHI"
+    },
+    {
+      "_": "340038",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,29 +52,60 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Face a",
-      "from": "facea",
-      "to": "facea",
-      "h": "4-6",
-      "unit": "mm"
+      "_": "5",
+      "unit": "cm",
+      "atMost": "5",
+      "dimension": "height"
     },
     {
-      "l": "Face b",
-      "from": "faceb",
-      "to": "faceb",
-      "h": "3",
-      "unit": "mm"
+      "_": "10.2",
+      "unit": "cm",
+      "atMost": "10.2",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "Opisthographic. The text on face a is in two parts, the tablet rotated through 180 degrees from the upper part to the lower.",
+      "damage": {
+        "ana": "text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Face a",
+        "from": "facea",
+        "to": "facea",
+        "h": "4-6",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Face b",
+        "from": "faceb",
+        "to": "faceb",
+        "h": "3",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -525,
   "notAfter": -500,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Palermo (area of)",
@@ -51,9 +114,25 @@
     }
   ],
   "geo": [
-    38.13205,
-    13.3356
+    [
+      38.13205,
+      13.3356
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found amongst terracotta fragments in the Virzi collection, and assumed to come from the area of Palermo.",
+    "type": "found",
+    "geo": [
+      38.13205,
+      13.3356
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030025_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -61,13 +140,20 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "private collection",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Palermo (area of)",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030025",
+    "isic030025",
     "isic030025",
     "draft",
     "defixio",

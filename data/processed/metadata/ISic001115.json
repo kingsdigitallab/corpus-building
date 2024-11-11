@@ -1,10 +1,28 @@
 {
   "file": "ISic001115",
-  "metadataFile": "metadata/ISic001115.json",
-  "htmlFile": "html/ISic001115.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001115",
+  "uri": "ISic001115",
   "title": "I.Sicily inscription 001115",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492731",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102272",
+      "type": "EDCS"
+    },
+    {
+      "_": "140598",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +38,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Alcamo",
@@ -43,9 +91,23 @@
     }
   ],
   "geo": [
-    37.9779,
-    12.96473
+    [
+      37.9779,
+      12.96473
+    ]
   ],
+  "provenanceFound": {
+    "_": "Santa Maria",
+    "type": "found",
+    "subtype": "discovered",
+    "cert": "low"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001115_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +115,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Alcamo",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Alcamo",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001115",
+    "isic001115",
     "i.sicily inscription 001115",
     "draft",
     "funerary",

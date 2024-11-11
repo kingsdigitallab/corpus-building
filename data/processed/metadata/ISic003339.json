@@ -1,15 +1,33 @@
 {
   "file": "ISic003339",
-  "metadataFile": "metadata/ISic003339.json",
-  "htmlFile": "html/ISic003339.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003339",
+  "uri": "ISic003339",
   "title": "Honorific for the Emperor Tiberius",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492390",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "34100466",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A rectangular off-white marble slab, broken in three joining fragments, the lower\n                                        right corner missing. The reverse is unfinished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,34 +38,70 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "42-61",
-      "unit": "mm"
+      "_": "15.1",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "41-43",
-      "unit": "mm"
+      "_": "70.2",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "15",
-      "unit": "mm"
+      "_": "4.9",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "Latin text over three lines. The two letters of the third line are centred and\n                                        much smaller",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Neat v-cut letters, well, but not perfectly spaced and regular, with deep triangular\n                                    serifs, and deep triangular interpuncts between every word. Long 'I' is elongated.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "42-61",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "41-43",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "15",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation not measured",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 14,
   "notAfter": 37,
   "places": [
@@ -63,9 +117,27 @@
     }
   ],
   "geo": [
-    38.16579,
-    14.75064
+    [
+      38.16579,
+      14.75064
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found when digging a well in or before 1882, on the farm of Filippo\n                            Cangemi, Capo d'Orlando (Casa Cangemi is marked on the 1:25000 map)\n                        ",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      38.13686,
+      14.73646
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2006.04",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003339_tiled.tif",
     "desc": "Photo J.Prag"
@@ -73,13 +145,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Capo d'Orlando",
+  "repository": {
+    "_": "Antiquarium di Capo\n                            d'Orlando",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/057"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Agathyrnum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003339",
+    "isic003339",
     "honorific for the emperor tiberius",
     "draft",
     "honorific",

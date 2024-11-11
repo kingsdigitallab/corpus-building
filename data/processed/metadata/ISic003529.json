@@ -1,15 +1,34 @@
 {
   "file": "ISic003529",
-  "metadataFile": "metadata/ISic003529.json",
-  "htmlFile": "html/ISic003529.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003529",
+  "uri": "ISic003529",
   "title": "I.Sicily inscription 003529",
   "status": "draft",
+  "editions": [
+    {
+      "_": "493861",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "38200015",
+      "type": "EDCS"
+    },
+    {
+      "_": "313651",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Marble plauqe, broken vertically in two and reconnected. The upper and lower left corners are lost, and the text is damaged across the break.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +39,59 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "17",
-      "unit": "mm"
+      "_": "17",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "20",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text is centred with both margins justified, and filling the available surface.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.deteriorated"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "somewhat crudely and irregularly cut letters of regular height. Lunate eipsilon and sigma, cursive omega and mu; extensive use of simple hederae for word division.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "17",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 5",
+        "from": "line1",
+        "to": "line5",
+        "h": "10-15",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -49,9 +105,22 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Necropolis at the Orti della Maddalena",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003529_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +128,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147"
+  },
+  "idno": {
+    "_": "A3577",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Messana",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003529",
+    "isic003529",
     "i.sicily inscription 003529",
     "draft",
     "funerary",

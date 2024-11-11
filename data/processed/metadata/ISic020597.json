@@ -1,15 +1,43 @@
 {
   "file": "ISic020597",
-  "metadataFile": "metadata/ISic020597.json",
-  "htmlFile": "html/ISic020597.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020597",
+  "uri": "ISic020597",
   "title": "ISic020597",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696285",
+      "type": "TM"
+    },
+    {
+      "_": "149832",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900714",
+      "type": "EDCS"
+    },
+    {
+      "_": "195538",
+      "type": "PHI"
+    },
+    {
+      "_": "330112",
+      "type": "PHI"
+    },
+    {
+      "_": "331830",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.ownership",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/104.html"
   },
+  "support": "Fragment of a pyxis (Protocorinthian style).",
   "objectType": {
     "_": "pyxis",
     "ana": "#object.vessel.pyxis",
@@ -20,21 +48,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "3",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "_": "5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text was perhaps placed in a spiral around the pyxis.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -700,
   "notAfter": -675,
+  "evidence": "lettering archaeological-context material-context",
   "places": [
     {
       "_": "Syracusae",
@@ -48,9 +109,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the oldest layer under the foundations of the temple of Athena in Siracusa.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1913",
+    "geo": [
+      37.05966,
+      15.29351
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020597_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +137,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "33903",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020597",
+    "isic020597",
     "isic020597",
     "draft",
     "ownership",

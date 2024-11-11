@@ -1,15 +1,42 @@
 {
   "file": "ISic001048",
-  "metadataFile": "metadata/ISic001048.json",
-  "htmlFile": "html/ISic001048.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001048",
+  "uri": "ISic001048",
   "title": "I.Sicily inscription 001048",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492676",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102202",
+      "type": "EDCS"
+    },
+    {
+      "_": "64900731",
+      "type": "EDCS"
+    },
+    {
+      "_": "140527",
+      "type": "PHI"
+    },
+    {
+      "_": "175431",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Described by Rose, after an aopograph from Thomas Thorp, as a 'marmor', found among the tombs near the ruins of Acrae. The state of the stone is not described, and the use of 'marmor' is likely simply to be generic (i.e. such stones generally referred to as 'marbles' in this period), rather than a true representation of the original material.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.uknown",
@@ -21,21 +48,53 @@
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
     "cert": "low"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -501,
+  "precision": "low",
   "places": [
     {
       "_": "Acrae",
@@ -50,9 +109,27 @@
     }
   ],
   "geo": [
-    37.0578,
-    14.89346
+    [
+      37.0578,
+      14.89346
+    ]
   ],
+  "provenanceFound": {
+    "_": "Rose reports its from an apograph sent to him by Thomas Thorp of Trinity College, who saw it during a journey to Sicily, having been found by the Baron Iudica among the tombs near the ruins of ancient Akrai.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1825"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Kaibel could not find it in 1880 and it has not been seen subsequently.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001048_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -60,13 +137,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Acrae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001048",
+    "isic001048",
     "i.sicily inscription 001048",
     "draft",
     "funerary",

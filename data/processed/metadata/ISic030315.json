@@ -1,15 +1,31 @@
 {
   "file": "ISic030315",
-  "metadataFile": "metadata/ISic030315.json",
-  "htmlFile": "html/ISic030315.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030315",
+  "uri": "ISic030315",
   "title": "ISic030315",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "tessera (civic)",
     "ana": "#function.tessera.civic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/130.html"
   },
+  "support": "Tessera.",
   "objectType": {
     "_": "tessera",
     "ana": "#object.tessera",
@@ -20,21 +36,63 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "2.8-2.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "_": "1.8-1.5",
+        "unit": "cm"
+      },
+      "1": {
+        "_": "6",
+        "unit": "cm"
+      },
+      "dimension": "width"
+    },
+    {
+      "_": "0.2-0.3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "The inscription is placed on one side of both the contiguous fragments.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -480,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Kamarina",
@@ -48,9 +106,27 @@
     }
   ],
   "geo": [
-    36.8736,
-    14.4507
+    [
+      36.8736,
+      14.4507
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found on the 9th of April 1990 in the archaeological area of Kamarina, from an excavation survey conducted north of the temple of Athena («Trovate da G. Gurrieri nel terreno sotto le basi a fianco del tempio», G. Di Stefano).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1990-04-09",
+    "geo": [
+      36.87316,
+      14.4415
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030315_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +134,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
+  "idno": {
+    "_": "777-778",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Kamarina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030315",
+    "isic030315",
     "isic030315",
     "draft",
     "tessera (civic)",

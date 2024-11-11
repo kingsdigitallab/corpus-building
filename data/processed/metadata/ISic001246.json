@@ -1,10 +1,28 @@
 {
   "file": "ISic001246",
-  "metadataFile": "metadata/ISic001246.json",
-  "htmlFile": "html/ISic001246.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001246",
+  "uri": "ISic001246",
   "title": "List of stratagoi",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492852",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101614",
+      "type": "EDCS"
+    },
+    {
+      "_": "140734",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "list of magistrates",
     "ana": "#function.list.magistrates",
@@ -20,21 +38,56 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "155",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "42.5 (base) - 39.8 (top)",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "31 (base) - 30 (top)",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is inscribed on three faces, the precise organisation of which remains a question of discussion. Battistoni 2020 and 2011, after Bormann, offers the most plausible and complete reconstruction, followed here: Section A in two columns on face I (left face for the viewer), continuing upper left on face III (central face for the viewer); Section B in a single column on face II (right face for the viewer); Section C, top of face III, followed by a large lacuna; Section D, lower left of face III; Section E.i, traces top right of face III, followed by a large lacuna; section E.ii, lower right of face III.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Multiple hands",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Tauromenium",
@@ -48,9 +101,27 @@
     }
   ],
   "geo": [
-    37.85358,
-    15.28851
+    [
+      37.85358,
+      15.28851
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found c.1864 in the Bagnoli area of Taormina",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1864",
+    "geo": {
+      "_": "37.851152, 15.289485",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "2009.10.06",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
   "facsimile": {
     "url": "ISic001246_III_tiled.tif",
     "desc": "Photo J. Prag, courtesy Parco archeologico di Naxos"
@@ -58,13 +129,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
+  "repository": {
+    "_": "Antiquarium del Teatro Antico",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/062"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Tauromenium",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001246",
+    "isic001246",
     "list of stratagoi",
     "draft",
     "list of magistrates",

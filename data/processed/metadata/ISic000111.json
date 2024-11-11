@@ -1,15 +1,34 @@
 {
   "file": "ISic000111",
-  "metadataFile": "metadata/ISic000111.json",
-  "htmlFile": "html/ISic000111.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000111",
+  "uri": "ISic000111",
   "title": "I.Sicily inscription 000111",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284843",
+      "type": "TM"
+    },
+    {
+      "_": "110893",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100061",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "testamentary",
     "ana": "#function.legal.testament",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/63.html"
   },
+  "support": "Two fragments of a large, thick plaque(?) of limestone; joined together with plaster when seen by Bivona, but seemingly not actually joining, with a gap of at least 2-3 letters in between (as proposed by Mommsen). Fragment A (left) is H 29 x W 47 x D 18 cm; Fragment B (right) is H 31 x W 68 x D 20 (measurements by Bivona).",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,29 +39,65 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "150",
-      "unit": "mm"
+      "_": "29-31",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "60",
-      "unit": "mm"
+      "_": "greater than 115",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "18-20",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "twolines of Latin letters fill the available space, with the first line much larger than the second.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Large v-cut letters relatively wide in the module, with simple terminal serifs.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "150",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "60",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -57,9 +112,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Already affixed to the town hall when seen by Gualtherus in or before 1624; subsequently transferred to the museum, where last seen by Bivona prior to 1994.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1624"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Not located during systematic study of material in the museum in 2022-2023.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000111_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; scanned from ILTermini."
@@ -67,13 +140,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000111",
+    "isic000111",
     "i.sicily inscription 000111",
     "draft",
     "testamentary",

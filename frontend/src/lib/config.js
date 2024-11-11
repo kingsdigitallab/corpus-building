@@ -13,3 +13,5 @@ export const search = {
 export const imageServer =
 	'https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=inscription_images/';
 export const imageThumbParams = 'full/400,/0/default.jpg';
+
+export const EMPTY_PLACEHOLDER = 'No data';

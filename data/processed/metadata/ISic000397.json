@@ -1,15 +1,34 @@
 {
   "file": "ISic000397",
-  "metadataFile": "metadata/ISic000397.json",
-  "htmlFile": "html/ISic000397.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000397",
+  "uri": "ISic000397",
   "title": "I.Sicily inscription 000397",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491608",
+      "type": "TM"
+    },
+    {
+      "_": "141215",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900438",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A plaque of marble (Orsi describes as Parian marble, but Manganaro highly sceptical), convex on the front, concave at the rear, and recut in antiquity from a larger piece.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +39,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "40",
-      "unit": "mm"
+      "_": "26",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "80",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "6",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three even and equal lines of text, carefully set out, with vacats above and below.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 550,
   "notAfter": 650,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +104,27 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Orsi records that it was found in an unspecified location in the vicinity of Acireale, which Manganaro suggests to indicate ancient Acium/Akis, located in the vicinity of Capo Mulini south of Acrieale. However, the piece was already recorded by Ferrara in 1829, as being in the collection of barone Recupero, having been found some years before during the construction of the 'chiesa dei minoriti', in Catania.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1829",
+    "geo": [
+      37.506083,
+      15.086167
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000397_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +132,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Galleria regionale di Palazzo Bellomo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/098"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000397",
+    "isic000397",
     "i.sicily inscription 000397",
     "draft",
     "funerary",

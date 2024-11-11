@@ -22,9 +22,7 @@ describe("getURI function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getURI(xml)).toBe(
-      "http://sicily.classics.ox.ac.uk/inscription/ISic000612"
-    );
+    expect(metadataExtractors.getURI(xml)).toBe("ISic000612");
   });
 
   it("should return undefined when no URI is present", async () => {
@@ -58,9 +56,7 @@ describe("getURI function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getURI(xml)).toBe(
-      "http://sicily.classics.ox.ac.uk/inscription/ISic000612"
-    );
+    expect(metadataExtractors.getURI(xml)).toBe("ISic000612");
   });
 
   it("should return undefined when publicationStmt is empty", async () => {
@@ -397,113 +393,6 @@ describe("getMaterial function", () => {
   });
 });
 
-describe("getLetterHeight function", () => {
-  it("should return undefined when dimensions is null", async () => {
-    const xml = await createXmlObject(`
-      <TEI>
-        <teiHeader>
-          <fileDesc>
-            <sourceDesc>
-              <msDesc>
-                <physDesc>
-                  <handDesc>
-                    <handNote>
-                      <dimensions/>
-                      <locus>line 1</locus>
-                    </handNote>
-                  </handDesc>
-                </physDesc>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-        </teiHeader>
-      </TEI>
-    `);
-
-    expect(metadataExtractors.getLetterHeight(xml)).toBeUndefined();
-  });
-
-  it("should return undefined when dimensions is undefined", async () => {
-    const xml = await createXmlObject(`
-      <TEI>
-        <teiHeader>
-          <fileDesc>
-            <sourceDesc>
-              <msDesc>
-                <physDesc>
-                  <handDesc>
-                    <handNote>
-                      <locus>line 1</locus>
-                    </handNote>
-                  </handDesc>
-                </physDesc>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-        </teiHeader>
-      </TEI>
-    `);
-
-    expect(metadataExtractors.getLetterHeight(xml)).toBeUndefined();
-  });
-  it("should handle null locus gracefully", async () => {
-    const xml = await createXmlObject(`
-      <TEI>
-        <teiHeader>
-          <fileDesc>
-            <sourceDesc>
-              <msDesc>
-                <physDesc>
-                  <handDesc>
-                    <handNote>
-                      <dimensions type="letterHeight">
-                        <height unit="cm">1-2</height>
-                      </dimensions>
-                    </handNote>
-                  </handDesc>
-                </physDesc>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-        </teiHeader>
-      </TEI>
-    `);
-
-    expect(metadataExtractors.getLetterHeight(xml)).toEqual([
-      { h: "1-2", unit: "cm" },
-    ]);
-  });
-
-  it("should return height and locus", async () => {
-    const xml = await createXmlObject(`
-      <TEI>
-        <teiHeader>
-          <fileDesc>
-            <sourceDesc>
-              <msDesc>
-                <physDesc>
-                  <handDesc>
-                    <handNote>
-                      <locus from="line1" to="line1">Line 1</locus>
-                      <dimensions type="letterHeight">
-                        <height unit="cm">1-2</height>
-                      </dimensions>
-                    </handNote>
-                  </handDesc>
-                </physDesc>
-              </msDesc>
-            </sourceDesc>
-          </fileDesc>
-        </teiHeader>
-      </TEI>
-    `);
-
-    expect(metadataExtractors.getLetterHeight(xml)).toEqual([
-      { h: "1-2", unit: "cm", l: "Line 1", from: "line1", to: "line1" },
-    ]);
-  });
-});
-
 describe("getDates function", () => {
   it("should return correct notBefore and notAfter dates when origDate is present", async () => {
     const xml = await createXmlObject(`
@@ -654,7 +543,7 @@ describe("getPlaces function", () => {
 
     const result = metadataExtractors.getPlaces(xml);
     expect(result.places).toHaveLength(1);
-    expect(result.geo).toEqual([1, 1]);
+    expect(result.geo).toEqual([[1, 1]]);
     expect(result.places[0]).toEqual({
       type: "modern",
       _: "Syracuse",
@@ -687,7 +576,7 @@ describe("getPlaces function", () => {
 
     const result = metadataExtractors.getPlaces(xml);
     expect(result.places).toHaveLength(2);
-    expect(result.geo).toEqual([1, 1]);
+    expect(result.geo).toEqual([[1, 1]]);
     expect(result.places[0]).toEqual({ type: "ancient", _: "Syracusae" });
     expect(result.places[1]).toEqual({ type: "modern", _: "Syracuse" });
   });

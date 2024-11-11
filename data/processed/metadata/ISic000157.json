@@ -1,15 +1,34 @@
 {
   "file": "ISic000157",
-  "metadataFile": "metadata/ISic000157.json",
-  "htmlFile": "html/ISic000157.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000157",
+  "uri": "ISic000157",
   "title": "Funerary epitaph for Coponia",
   "status": "edited",
+  "editions": [
+    {
+      "_": "175735",
+      "type": "TM"
+    },
+    {
+      "_": "076863",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "10900650",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Large rectangular plaque in brown/grey marble. Lower left corner missing, obscuring the beginning of lines 2-3. Traces of likely modern mortar and paint on sides. Stone is polished smooth on front face, but is not uniformly flat on the front surface. Rear is almost perfectly flat and polished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,36 +39,73 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "39-40",
-      "unit": "mm"
+      "_": "23.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "39-41",
-      "unit": "mm"
+      "_": "36.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "39-44",
-      "unit": "mm"
+      "_": "3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin text, centred on the stone, with the header of line 1 filling the upper half of the stone. Interpuncts only used in final line, and do not follow a consistent pattern (first visible interpunct is shaped like a tight comma, second like a diagonal slash, third like a larger comma, final like a downwards slash).",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are tall and precise. There are simple, but standard, serifs on all letters. P is very open, T and L have wavy cross bars.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "39-40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "39-41",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "39-44",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 150,
   "notAfter": 200,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -64,9 +120,25 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded/seen by Ferrua in 1941 in the museum, provenance assumed to be Termini Imerese.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1941"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 1",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000157_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05."
@@ -74,13 +146,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "68",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000157",
+    "isic000157",
     "funerary epitaph for coponia",
     "edited",
     "funerary",

@@ -1,15 +1,31 @@
 {
   "file": "ISic020711",
-  "metadataFile": "metadata/ISic020711.json",
-  "htmlFile": "html/ISic020711.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020711",
+  "uri": "ISic020711",
   "title": "ISic020711",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ludic (symposium context?)",
     "ana": "#function.ludic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/369.html"
   },
+  "support": "Stemless kylix.",
   "objectType": {
     "_": "stemless kylix",
     "ana": "#object.vessel.kylix",
@@ -20,21 +36,47 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is placed on the bottom of the interior of the vessel and runs from right to left.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -575,
   "notAfter": -459,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Morgantina",
@@ -48,9 +90,26 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found during the excavations (1990) in the eastern shoulder of the plateau on which the archaic settlement was placed, Trench 14A, Stratum 2 (Antonaccio, Shea 2015).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1990",
+    "geo": [
+      37.430596,
+      14.479485
+    ]
+  },
+  "provenanceObserved": {
+    "_": "no autopsy",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020711_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +117,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Aidone",
+  "repository": {
+    "_": "Museo Archeologico di Aidone",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/001"
+  },
+  "idno": {
+    "_": "60-1738",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Sikel",
     "mainLang": "scx"
   },
   "placeName": "Morgantina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020711",
+    "isic020711",
     "isic020711",
     "draft",
     "ludic (symposium context?)",

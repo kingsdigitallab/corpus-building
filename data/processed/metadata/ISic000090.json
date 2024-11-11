@@ -1,15 +1,34 @@
 {
   "file": "ISic000090",
-  "metadataFile": "metadata/ISic000090.json",
-  "htmlFile": "html/ISic000090.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000090",
+  "uri": "ISic000090",
   "title": "I.Sicily inscription 000090",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284838",
+      "type": "TM"
+    },
+    {
+      "_": "109665",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100043",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A large statue base of compact grey limestone. Intact except for minor chipping to the edges and damage to the lower front moulding. Finished, with plain mouldings top and bottom to the front face only. The sides are roughly chiselled flat, while the rear is flat but rough and uneven. The upper surface is damaged towards the rear, but has two footholes, the right one front facing (12x32cm), the left one towards the rear and angled left, but incomplete, min. 11 x 18cm.",
   "objectType": {
     "_": "base",
     "ana": "#object.base",
@@ -20,50 +39,89 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "86-91",
-      "unit": "mm"
+      "_": "156",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "50-57",
-      "unit": "mm"
+      "_": "60",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "52-54",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 4",
-      "from": "line4",
-      "to": "line4",
-      "h": "82-89",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 5",
-      "from": "line5",
-      "to": "line5",
-      "h": "71-72",
-      "unit": "mm"
+      "_": "63",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The inscription is set out as five lines of large monumental Latin letters centreed on the upper portion of the epigraphic field on the front face below the moulding (the field is 60W x 85 H). Lines 1 and 4 are larger.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters have standard serifs and a wide regular module; a variety of hedera and interpuncts are employed.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "86-91",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "50-57",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "52-54",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "82-89",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "71-72",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 195,
   "notAfter": null,
+  "evidence": "prosopography",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -77,9 +135,27 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Attributed by Gualtherus to the 'House of Sthenius', located in the area of the duomo",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1624",
+    "geo": [
+      37.9874433,
+      13.6969834
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-07-08, in the courtyard of the Museo Civico",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000090_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 08-07-2022"
@@ -87,13 +163,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "122",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000090",
+    "isic000090",
     "i.sicily inscription 000090",
     "draft",
     "dedication",

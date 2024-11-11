@@ -1,15 +1,42 @@
 {
   "file": "ISic031001",
-  "metadataFile": "metadata/ISic031001.json",
-  "htmlFile": "html/ISic031001.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic031001",
+  "uri": "ISic031001",
   "title": "ISicily inscription 031001",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696113",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800276",
+      "type": "EDCS"
+    },
+    {
+      "_": "330105",
+      "type": "PHI"
+    },
+    {
+      "_": "301165",
+      "type": "PHI"
+    },
+    {
+      "_": "331732",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "A rectangular lead sheet in three joining pieces, originally folded five times. Heavily corroded.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,22 +47,58 @@
     "ana": "#material.metal.lead",
     "ref": "http://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-11",
-      "from": "line1",
-      "to": "line11",
-      "h": "3",
-      "unit": "mm"
+      "_": "3.7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "8",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Greek text inscribed on both sides, beginning on the recto in 9 lines, boustrophedon (first line l-to-r), and continuing on the verso in a further two lines, also boustrophedon (first line l-to-r).",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.deteriorated"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "presence of qoppa",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-11",
+        "from": "line1",
+        "to": "line11",
+        "h": "3",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -525,
   "notAfter": -475,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Selinus",
@@ -49,9 +112,22 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the Buffa necropolis, Selinunte",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.59873,
+      12.83127
+    ]
+  },
+  "provenanceObserved": null,
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic031001_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +135,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "42579",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic031001",
+    "isic031001",
     "isicily inscription 031001",
     "draft",
     "defixio",

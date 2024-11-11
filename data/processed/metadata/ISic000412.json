@@ -1,16 +1,34 @@
 {
   "file": "ISic000412",
-  "metadataFile": "metadata/ISic000412.json",
-  "htmlFile": "html/ISic000412.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000412",
+  "uri": "ISic000412",
   "title": "I.Sicily inscription 000412",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491644",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900474",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html",
     "cert": "low"
   },
+  "support": "No description of the object is provided",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -21,23 +39,53 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "300",
-      "unit": "mm",
-      "precision": "low"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Described as 'litteris pedalibus', i.e. monumental letters.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "300",
+        "unit": "mm",
+        "precision": "low"
+      },
+      {
+        "type": "interlinear",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Syracusae",
@@ -51,20 +99,39 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, reported in Gualtherus as a text seen by Mirabella.",
+    "type": "found",
+    "subtype": "discovery",
+    "notAfter": "1624"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Described as lost already by Gualtherus (1624)",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000412",
+    "isic000412",
     "i.sicily inscription 000412",
     "draft",
     "building",

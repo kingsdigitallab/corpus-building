@@ -11,12 +11,21 @@
 
 	import '../app.css';
 
-	/** @type {import('./$types').LayoutData} */
-	export let data;
+	
+	/**
+	 * @typedef {Object} Props
+	 * @property {import('./$types').LayoutData} data
+	 * @property {import('svelte').Snippet} [children]
+	 */
+
+	/** @type {Props} */
+	let { data, children } = $props();
 
 	const version = import.meta.env.APP_VERSION;
 
-	$: ({ url } = data);
+	let { url } = $derived(data);
+
+	const children_render = $derived(children);
 </script>
 
 <svelte:head>
@@ -32,7 +41,7 @@
 
 	<main>
 		<Transition {url}>
-			<slot />
+			{@render children_render?.()}
 		</Transition>
 	</main>
 

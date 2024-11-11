@@ -1,15 +1,31 @@
 {
   "file": "ISic020489",
-  "metadataFile": "metadata/ISic020489.json",
-  "htmlFile": "html/ISic020489.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020489",
+  "uri": "ISic020489",
   "title": "ISic020489",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "votive",
     "ana": "#function.votive",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/83"
   },
+  "support": "Pyxis (Attic).",
   "objectType": {
     "_": "pyxis",
     "ana": "#object.vessel.pyxis",
@@ -20,21 +36,47 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text is arranged in a circular pattern on the fragment.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -475,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Gela",
@@ -48,9 +90,25 @@
     }
   ],
   "geo": [
-    37.0630925,
-    14.2584705
+    [
+      37.0630925,
+      14.2584705
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Bitalemi.",
+    "type": "found",
+    "geo": [
+      37.061394,
+      14.260346
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020489_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +116,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/10"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Gela",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020489",
+    "isic020489",
     "isic020489",
     "draft",
     "votive",

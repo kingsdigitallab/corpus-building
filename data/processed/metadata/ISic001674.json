@@ -1,15 +1,35 @@
 {
   "file": "ISic001674",
-  "metadataFile": "metadata/ISic001674.json",
-  "htmlFile": "html/ISic001674.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001674",
+  "uri": "ISic001674",
   "title": "Opus signinum pavement inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "697235",
+      "type": "TM"
+    },
+    {
+      "_": "137142",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64901084",
+      "type": "EDCS"
+    },
+    {
+      "_": "331396",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/386.html"
   },
+  "support": "Inscription set in opus signinum pavement at the threshold between rooms 17 and 16 in 'casa a peristilo 1', inside room 17, facing the viewer as one moves from west to east, from room 17 to room 16. There is some damage and lacunae in the right hand half of the text.",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -20,23 +40,58 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "inlaid",
-    "ana": "#execution.inlaid",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "80",
-      "unit": "mm",
-      "precision": "medium"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Set out over two lines, somewhat unevenly, parallel to the stone threshold",
+      "rs": {
+        "_": "inlaid",
+        "ana": "#execution.inlaid",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Deeply engraved letters of slightly varying height (omicron/theta small and midline, iota extended beyond other letters). Letters have pronounced circular terminations to many strokes (punched). Alpha has straight bar; epsilon has short middle stroke; theta is small and midline with central point; iota is tall; pi has verticals of equal length; rho appears open; sigma has diverging upper and lower strokes.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "80",
+        "unit": "mm",
+        "precision": "medium"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Ietas",
@@ -51,9 +106,28 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "On the threshold of doorway from room 17 to room 16 of 'casa a peristilo 1'",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1985",
+    "xml:id": "findspot",
+    "geo": [
+      37.967313,
+      13.195928
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001674_tiled.tif",
     "desc": "Photo courtesy Zurich Ietas excavations"
@@ -61,13 +135,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
+  "repository": {
+    "_": "Area archeologica del Monte Iato",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/193"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Ietas",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001674",
+    "isic001674",
     "opus signinum pavement inscription",
     "draft",
     "greeting",

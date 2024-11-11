@@ -1,15 +1,31 @@
 {
   "file": "ISic004339",
-  "metadataFile": "metadata/ISic004339.json",
-  "htmlFile": "html/ISic004339.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004339",
+  "uri": "ISic004339",
   "title": "I.Sicily inscription 004339",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Plaque cut down to a disc shape.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,20 +36,50 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "6.5",
-      "unit": "mm"
+      "_": "7.2",
+      "unit": "cm",
+      "dimension": "depth"
+    },
+    {
+      "_": "21.5/22",
+      "type": "diameter",
+      "dimension": "dim"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of letters separated by a guideline.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "6.5",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 300,
   "notAfter": 600,
   "places": [
@@ -48,6 +94,18 @@
       "ref": "http://sws.geonames.org/2523650"
     }
   ],
+  "geo": [],
+  "provenanceFound": {
+    "_": "Contrada Cisternazzi, from a hypogeum",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004339_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -55,6 +113,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Kamarina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/093"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -62,7 +125,7 @@
   },
   "placeName": "Sicilia",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004339",
+    "isic004339",
     "i.sicily inscription 004339",
     "draft",
     "unknown",

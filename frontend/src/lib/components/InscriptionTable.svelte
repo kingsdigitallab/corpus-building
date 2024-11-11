@@ -4,7 +4,7 @@
 	import InscriptionLink from './InscriptionLink.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	export let inscriptions;
+	let { inscriptions } = $props();
 </script>
 
 <table>
@@ -18,6 +18,7 @@
 			<th>Type</th>
 			<th>Object type</th>
 			<th>Language</th>
+			<th>Settlement</th>
 		</tr>
 	</thead>
 	{#each inscriptions as inscription}

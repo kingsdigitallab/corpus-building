@@ -1,15 +1,31 @@
 {
   "file": "ISic020401",
-  "metadataFile": "metadata/ISic020401.json",
-  "htmlFile": "html/ISic020401.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020401",
+  "uri": "ISic020401",
   "title": "ISic020401",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Fragment of foot of a black-glazed vessel.",
   "objectType": {
     "_": "vessel",
     "ana": "#object.vessel",
@@ -20,22 +36,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "70",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "8",
+      "type": "diameter",
+      "unit": "cm",
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text runs from right to left and is placed on the underside of the foot of the vessel.",
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "70",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Segesta",
@@ -44,9 +92,26 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Sporadic find. Probably from the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.9424,
+      12.84509
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy; stored in the warehouse of the Parco Archeologico di Segesta",
+    "type": "observed",
+    "subtype": "identified"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020401_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -54,6 +119,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
+  "repository": {
+    "_": "Parco archeologico di Segesta",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/196"
+  },
+  "idno": {
+    "_": "SG2054",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -66,7 +140,7 @@
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020401",
+    "isic020401",
     "isic020401",
     "draft",
     "unknown",

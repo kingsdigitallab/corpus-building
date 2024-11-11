@@ -1,10 +1,28 @@
 {
   "file": "ISic004432",
-  "metadataFile": "metadata/ISic004432.json",
-  "htmlFile": "html/ISic004432.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004432",
+  "uri": "ISic004432",
   "title": "Epitaph of Drakon",
   "status": "draft",
+  "editions": [
+    {
+      "_": "698378",
+      "type": "TM"
+    },
+    {
+      "_": "150060",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "68800042",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,22 +38,50 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "20-30",
-      "unit": "mm"
+      "_": "9",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "31",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "17",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "20-30",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": 100,
+  "precision": "low",
   "places": [
     {
       "_": "Tyndaris",
@@ -49,9 +95,27 @@
     }
   ],
   "geo": [
-    38.1453639,
-    15.020175
+    [
+      38.1453639,
+      15.020175
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the district of SS. Salvatore di Patti (ME), near the Cedro stream on the edge of a path",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "2011",
+    "geo": [
+      38.145361,
+      15.020167
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004432_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +123,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tyndaris",
+  "repository": {
+    "_": "Soprintendenza Beni Culturali e Ambientali di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/197"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Tyndaris",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004432",
+    "isic004432",
     "epitaph of drakon",
     "draft",
     "funerary",

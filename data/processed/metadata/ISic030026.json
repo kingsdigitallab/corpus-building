@@ -1,15 +1,39 @@
 {
   "file": "ISic030026",
-  "metadataFile": "metadata/ISic030026.json",
-  "htmlFile": "html/ISic030026.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030026",
+  "uri": "ISic030026",
   "title": "ISic030026",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    },
+    {
+      "_": "329508",
+      "type": "PHI"
+    },
+    {
+      "_": "339994",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.ownership",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/104.html"
   },
+  "support": "Lamina.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,21 +44,49 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "from": "line1",
-      "to": "line13",
-      "h": "3",
-      "unit": "mm"
+      "_": "6.7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "11.3",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "from": "line1",
+        "to": "line13",
+        "h": "3",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Panhormus",
@@ -48,9 +100,25 @@
     }
   ],
   "geo": [
-    38.13205,
-    13.33561
+    [
+      38.13205,
+      13.33561
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the Virzi collection.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      null
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030026_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +126,20 @@
   "country": "Italy",
   "region": "",
   "settlement": "",
+  "repository": {
+    "_": "private house",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Panhormus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030026",
+    "isic030026",
     "isic030026",
     "draft",
     "ownership",

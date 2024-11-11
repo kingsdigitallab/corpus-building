@@ -1,15 +1,34 @@
 {
   "file": "ISic001489",
-  "metadataFile": "metadata/ISic001489.json",
-  "htmlFile": "html/ISic001489.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001489",
+  "uri": "ISic001489",
   "title": "Dedication to Hermes",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644995",
+      "type": "TM"
+    },
+    {
+      "_": "136102",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "329602",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A square block of blue-grey marble with white veins. The block is intact on all sides, but  appears to have been broken in half (with a further break in the upper part) at some point in the (modern) past, and repaired.  There is minor damage to the top left, top middle and bottom right of the front face.  The upper face contains a large square recess centred in relation to the block (30 cm wide x 34 cm front to back, border on left/right is 15 cm; border front/back is 14 cm), parallel to the overall form of the block.",
   "objectType": {
     "_": "statue base\n                                    ",
     "ana": "#object.statue_base",
@@ -20,29 +39,65 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "18-25",
-      "unit": "mm"
+      "_": "30",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "18-24",
-      "unit": "mm"
+      "_": "64",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "57.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "_": "Two lines of Greek letters, across the middle of the front face. The letters are aligned on the left margin, and are arranged in pseudo-stoichedon, i.e. vertically aligned.\n                                    \n                                \t\n\t\t\t",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "18-25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "18-24",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "18-20",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -250,
+  "precision": "low",
   "places": [
     {
       "_": "Agrigentum",
@@ -56,9 +111,25 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found approx 200m north of Temple of Concord ('terreno Sclafani) in 1918",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.291514,
+      13.591975
+    ]
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001489_tiled.tif",
     "desc": "Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo"
@@ -66,13 +137,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
+  "idno": {
+    "_": "1869",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Agrigentum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001489",
+    "isic001489",
     "dedication to hermes",
     "draft",
     "dedication",

@@ -1,15 +1,31 @@
 {
   "file": "ISic001678",
-  "metadataFile": "metadata/ISic001678.json",
-  "htmlFile": "html/ISic001678.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001678",
+  "uri": "ISic001678",
   "title": "Plaster graffito",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "business record",
     "ana": "#function",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/126.html"
   },
+  "support": "Two joining fragmenta of plaster fallen from the surface of a wall within the building",
   "objectType": {
     "_": "wall",
     "ana": "#object.arch_element.wall",
@@ -20,21 +36,49 @@
     "ana": "#material.plaster",
     "ref": "https://www.eagle-network.eu/voc/material/lod/126.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "letters scratched into plaster; a single line preserved, unclear if text complete to left, but clearly incomplete to right; space above and below",
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Moderately regular and evenly spaced letters of generally equal height. Straight-bar alpha; slightly open gamma; lunate epsilon; kappa has full-length arms; rho has a triangular eye.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -200,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Ietas",
@@ -49,9 +93,27 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 2008 among material fallen to the floor in the north ambulacrum of the peristyle of peristyle house 2",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "2008",
+    "geo": [
+      37.967473,
+      13.194732
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001678_tiled.tif",
     "desc": "Photo courtesy Zurich Ietas excavations"
@@ -59,13 +121,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
+  "repository": {
+    "_": "depot of the Zurich Ietas excavation",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/192"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Ietas",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001678",
+    "isic001678",
     "plaster graffito",
     "draft",
     "business record",

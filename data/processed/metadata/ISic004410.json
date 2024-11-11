@@ -1,15 +1,31 @@
 {
   "file": "ISic004410",
-  "metadataFile": "metadata/ISic004410.json",
-  "htmlFile": "html/ISic004410.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004410",
+  "uri": "ISic004410",
   "title": "Fragmentary Latin inscription",
   "status": "edited",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "Fragment of a white marble plaque, of which part of the upper border is preserved with a simple moulding, but broken on left, right and below.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +36,58 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "46",
-      "unit": "mm"
+      "_": "12.3",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "14.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two lines of Latin letters, with a moulding above.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Deeply incised elegant, v-cut letters, with pronounced serifs and comma-shaped interpuncts. The letters are very regularly proportioned and neatly cut, fairly closely spaced, and with faint guidelines top and bottom.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "46",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 100,
+  "precision": "low",
   "places": [
     {
       "_": "Aquae Segestanae",
@@ -49,9 +101,28 @@
     }
   ],
   "geo": [
-    37.972503,
-    12.891676
+    [
+      37.972503,
+      12.891676
+    ]
   ],
+  "provenanceFound": {
+    "_": "Among material recovered from the territory of Partinico, in this case ascribed to Terme Segestane, found apparently either in 1917 or 1960.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1917",
+    "certainty": {
+      "locus": "value",
+      "match": "../@when",
+      "assertedValue": "1960"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Metcalfe 2019.09.09",
+    "type": "observed",
+    "subtype": "photographed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004410_tiled.tif",
     "desc": "Photo R. Wilson, 25.10.2022"
@@ -59,13 +130,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Partinico",
+  "repository": {
+    "_": "Biblioteca Comunale/Antiquarium Comunale",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/074"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Aquae Segestanae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004410",
+    "isic004410",
     "fragmentary latin inscription",
     "edited",
     "unknown",

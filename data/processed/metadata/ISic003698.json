@@ -1,15 +1,35 @@
 {
   "file": "ISic003698",
-  "metadataFile": "metadata/ISic003698.json",
-  "htmlFile": "html/ISic003698.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003698",
+  "uri": "ISic003698",
   "title": "I.Sicily inscription 003698",
   "status": "draft",
+  "editions": [
+    {
+      "_": "697633",
+      "type": "TM"
+    },
+    {
+      "_": "150260",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70901039",
+      "type": "EDCS"
+    },
+    {
+      "_": "330087",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "terminus",
     "ana": "#function.terminus",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/96.html"
   },
+  "support": "A block, 57 cm in diameter, suggests possibly to be approximately half of a column drum, with text on the flat surface of the top of the 'drum'.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,22 +40,55 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "75",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "unclear whether the original text covered the entire upper face or not, being very weathered.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "75",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 300,
   "notAfter": 700,
+  "precision": "low",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -49,9 +102,26 @@
     }
   ],
   "geo": [
-    37.2038,
-    15.18274
+    [
+      37.2038,
+      15.18274
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in 1965, east of the Hellenistic walls",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1965",
+    "geo": {
+      "_": "37.204307, 15.181053",
+      "cert": "low"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003698_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +129,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
+  "repository": {
+    "_": "Antiquarium di Megara Hyblaia",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/104"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Megara Hyblaea",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003698",
+    "isic003698",
     "i.sicily inscription 003698",
     "draft",
     "terminus",

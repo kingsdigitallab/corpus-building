@@ -1,10 +1,36 @@
 {
   "file": "ISic003107",
-  "metadataFile": "metadata/ISic003107.json",
-  "htmlFile": "html/ISic003107.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003107",
+  "uri": "ISic003107",
   "title": "I.Sicily inscription 003107",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284789",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "65200113",
+      "type": "EDCS"
+    },
+    {
+      "_": "329607",
+      "type": "PHI"
+    },
+    {
+      "_": "329608",
+      "type": "PHI"
+    },
+    {
+      "_": "333758",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +46,51 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -475,
   "notAfter": -450,
+  "precision": "medium",
   "places": [
     {
       "_": "Motya",
@@ -48,9 +104,28 @@
     }
   ],
   "geo": [
-    37.86503,
-    12.46798
+    [
+      37.86503,
+      12.46798
+    ]
   ],
+  "provenanceFound": {
+    "_": "Birgi necropolis",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.886226,
+      12.481669
+    ]
+  },
+  "provenanceObserved": {
+    "_": "2022-10-30, Metcalfe",
+    "type": "observed",
+    "subtype": "seen",
+    "resp": "#MM",
+    "when": "2022-10-30"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003107_tiled.tif",
     "desc": "Photo 2022-10-30, M. Metcalfe"
@@ -58,13 +133,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mozia",
+  "repository": {
+    "_": "Villa Whitaker",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/107"
+  },
+  "idno": {
+    "_": "5422",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Motya",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003107",
+    "isic003107",
     "i.sicily inscription 003107",
     "draft",
     "funerary",

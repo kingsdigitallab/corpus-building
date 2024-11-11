@@ -1,15 +1,31 @@
 {
   "file": "ISic004381",
-  "metadataFile": "metadata/ISic004381.json",
-  "htmlFile": "html/ISic004381.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004381",
+  "uri": "ISic004381",
   "title": "Fragmentary Greek epitaph",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Three joining fragments of a white marble plaque, of which the upper left corner and lower right corner are missing; minor damage to the upper right corner also.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +36,57 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-4",
-      "from": "line1",
-      "to": "line4",
-      "h": "21",
-      "unit": "mm"
+      "_": "20.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "24.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "1.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of four lines of Greek letters, approximately centred on the stone. The beginning of lines 1 and 2 is lost, and the end of line 4 is damaged.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Somewhat irregular quadrate letters, with a rhomboid omicron and regular sigma; epsilon has bars of equal length. Vertical strokes appear to serve as interpuncts in line 1 and to demarcate the number in line 4.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-4",
+        "from": "line1",
+        "to": "line4",
+        "h": "21",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Messana",
@@ -49,9 +100,27 @@
     }
   ],
   "geo": [
-    38.19394,
-    15.55256
+    [
+      38.19394,
+      15.55256
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavated (between 1991 and 1997) in the southern necropolis, in re-use in the wall of a now-demolished late C18 house, isolato 83, IV comparto, via C. Battisti",
+    "type": "found",
+    "subtype": "discovered",
+    "from": "1991",
+    "to": "1997",
+    "geo": [
+      38.183179,
+      15.549449
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in store",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004381_tiled.tif",
     "desc": "Photo courtesy of archivio fotografico della soprintendenza di Messina"
@@ -59,13 +128,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
+  "repository": "Soprintendenza stores",
+  "idno": {
+    "_": "ME 10771",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Messana",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004381",
+    "isic004381",
     "fragmentary greek epitaph",
     "draft",
     "funerary",

@@ -1,15 +1,34 @@
 {
   "file": "ISic003633",
-  "metadataFile": "metadata/ISic003633.json",
-  "htmlFile": "html/ISic003633.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003633",
+  "uri": "ISic003633",
   "title": "Funerary inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "645704",
+      "type": "TM"
+    },
+    {
+      "_": "136011",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "336045",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "a limestone block, parallelipede in form, seemingly broken/incomplete on right side.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,22 +39,56 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "50",
-      "unit": "mm"
+      "_": "43",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "71",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "12",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Single line of letters across the upper edge",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "50",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -400,
+  "precision": "low",
   "places": [
     {
       "_": "Agrigentum",
@@ -49,9 +102,21 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, said to be from Agrigento but in a private collection, seen by Manganaro before 1999.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003633_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +124,17 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "private collection",
+    "role": "private"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Agrigentum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003633",
+    "isic003633",
     "funerary inscription",
     "draft",
     "funerary",

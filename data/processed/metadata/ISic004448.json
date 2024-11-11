@@ -1,15 +1,31 @@
 {
   "file": "ISic004448",
-  "metadataFile": "metadata/ISic004448.json",
-  "htmlFile": "html/ISic004448.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004448",
+  "uri": "ISic004448",
   "title": "I.Sicily inscription 004448",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectangular fragment of plaster, from the tomb-cover. Four nacreous shells preserved on the left side.",
   "objectType": {
     "_": "tomb cover",
     "ana": "#object.funerary_monument.tomb_cover",
@@ -19,28 +35,62 @@
     "_": "plaster",
     "ana": "#material.plaster"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "incised",
-      "ana": "#execution.incised",
-      "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "mosaic",
-      "ana": "#execution.mosaic",
-      "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
-    }
-  ],
-  "letterHeight": [
+      "unit": "cm",
+      "dimension": "width"
+    },
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text on one straight line, gap on the right, etched on the fresh plaster. Before the inscription, along the left side, two big letters in column, made of colored glass paste mosaic tiles. Impressions of other tiles between the 2nd and 3rd letter of the inscription, within the 4th and between the 5th and the 6th. Letters and the random mosaic tiles, fixed on the fresh plaster and therefore contemporary to the etched inscription, perhaps represent a rough decoration, also repeating the first two letters of the deceased's name.",
+      "rs": [
+        {
+          "_": "incised",
+          "ana": "#execution.incised",
+          "ref": "https://www.eagle-network.eu/voc/writing/lod/14.html"
+        },
+        {
+          "_": "mosaic",
+          "ana": "#execution.mosaic",
+          "ref": "https://www.eagle-network.eu/voc/writing/lod/16.html"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.legible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "A with broken crossbar.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 330,
   "notAfter": 370,
+  "evidence": "archaeological-context",
   "places": [
     {
       "_": "Syracusae",
@@ -54,9 +104,22 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Fuehrer catacomb",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004448_tiled.tif",
     "desc": "Photo 2017 courtesy Museo Archeologico Regionale Paolo Orsi (Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014)"
@@ -64,13 +127,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "15461",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004448",
+    "isic004448",
     "i.sicily inscription 004448",
     "draft",
     "funerary",

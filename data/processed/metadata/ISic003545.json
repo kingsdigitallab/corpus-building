@@ -1,10 +1,27 @@
 {
   "file": "ISic003545",
-  "metadataFile": "metadata/ISic003545.json",
-  "htmlFile": "html/ISic003545.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003545",
+  "uri": "ISic003545",
   "title": "I.Sicily inscription 003545",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "653663",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "140927",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
@@ -20,21 +37,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -100,
+  "precision": "medium",
   "places": [
     {
       "_": "Melita",
@@ -48,9 +95,21 @@
     }
   ],
   "geo": [
-    35.91667,
-    14.43333
+    [
+      35.91667,
+      14.43333
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003545_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,6 +117,10 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Paris, France",
+  "repository": {
+    "_": "Louvre",
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek and Punic",
     "mainLang": "grc",
@@ -65,7 +128,7 @@
   },
   "placeName": "Melita",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003545",
+    "isic003545",
     "i.sicily inscription 003545",
     "unchecked",
     "dedication",

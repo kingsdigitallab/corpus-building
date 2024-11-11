@@ -1,15 +1,34 @@
 {
   "file": "ISic000183",
-  "metadataFile": "metadata/ISic000183.json",
-  "htmlFile": "html/ISic000183.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000183",
+  "uri": "ISic000183",
   "title": "Funerary epitaph for Marcus Hortesius Primus",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285257",
+      "type": "TM"
+    },
+    {
+      "_": "127472",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100114",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Large slab of dark grey stone. Left and top edges are intact, straight and square. The bottom and right are broken, and heavily abraded. The rear is almost completely flat, although there is a slight wave in the stone.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,34 +39,70 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "40-49",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "30-34",
-      "unit": "mm"
+      "_": "29.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "41-50",
-      "unit": "mm"
+      "_": "11.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin text, with triangular interpuncts",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letter shapes and orientation are slightly erratic, but the letters are extremely thin and with exaggerated serif tails, with a strong leftward slant to the vertical axis. The long legs of the \"R\"s are particularly distinctive.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "40-49",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "30-34",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "41-50",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 100,
   "notAfter": 300,
   "places": [
@@ -63,9 +118,29 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Termini together with ) in 1824",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1824",
+    "ref": {
+      "_": "ISic001143",
+      "target": "http://sicily.classics.ox.ac.uk/inscription/ISic001143"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-06",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000183_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06."
@@ -73,13 +148,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "100",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000183",
+    "isic000183",
     "funerary epitaph for marcus hortesius primus",
     "edited",
     "funerary",

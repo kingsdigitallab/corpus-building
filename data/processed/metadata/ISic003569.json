@@ -1,10 +1,27 @@
 {
   "file": "ISic003569",
-  "metadataFile": "metadata/ISic003569.json",
-  "htmlFile": "html/ISic003569.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003569",
+  "uri": "ISic003569",
   "title": "I.Sicily inscription 003569",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645640",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "337416",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,19 +32,48 @@
     "ana": "#material.rock",
     "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
   "places": [
@@ -39,9 +85,23 @@
     }
   ],
   "geo": [
-    36.851421,
-    14.837505
+    [
+      36.851421,
+      14.837505
+    ]
   ],
+  "provenanceFound": {
+    "_": "Hypogeum, contrada Finocchiara, Cava d'Ispica",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003569_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -49,13 +109,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Cava Ispica, contrada Finocchiara",
+  "repository": "hypogeum",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Cava d'Ispica",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003569",
+    "isic003569",
     "i.sicily inscription 003569",
     "unchecked",
     "funerary",

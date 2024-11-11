@@ -1,10 +1,27 @@
 {
   "file": "ISic003405",
-  "metadataFile": "metadata/ISic003405.json",
-  "htmlFile": "html/ISic003405.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003405",
+  "uri": "ISic003405",
   "title": "epitaph of Truphon",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644950",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "140557",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +37,53 @@
     "ana": "#material.clay.fired",
     "ref": "http://www.eagle-network.eu/voc/material/lod/130.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "36",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "36",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 500,
+  "precision": "low",
   "places": [
     {
       "_": "Santa Croce di Camarina",
@@ -43,9 +92,21 @@
     }
   ],
   "geo": [
-    36.82842,
-    14.52538
+    [
+      36.82842,
+      14.52538
+    ]
   ],
+  "provenanceFound": {
+    "_": "Catacomb, Santa Croce di Camarina",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003405_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +114,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico\n                            Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Santa Croce di Camarina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003405",
+    "isic003405",
     "epitaph of truphon",
     "draft",
     "funerary",

@@ -1,77 +1,76 @@
 <script>
 	import maplibregl from 'maplibre-gl';
-	import { afterUpdate, onDestroy, onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 
 	const { Map, Marker, NavigationControl, Popup } = maplibregl;
 
-	export let inscriptions;
-	export let show = true;
+	/**
+	 * @typedef {Object} Props
+	 * @property {any} inscriptions
+	 * @property {boolean} [show]
+	 */
 
-	let map;
-	let markers = [];
+	/** @type {Props} */
+	let { inscriptions, show = true } = $props();
+
+	let map = $state();
 
 	/** @type HTMLDivElement */
-	let mapContainer;
+	let mapContainer = $state();
 
-	function addMarkers() {
-		markers.forEach((marker) => marker.remove());
-		markers = [];
-
-		const inscriptionsByGeo = inscriptions
+	let inscriptionsByGeo = $derived(
+		inscriptions
 			.filter((inscription) => inscription.geo)
 			.reduce((acc, curr) => {
+				if (!curr.geo || curr.geo.length !== 2) return acc;
+
 				const key = curr.geo.join('_');
 				if (!acc[key]) {
 					acc[key] = [];
 				}
+
 				acc[key].push(curr);
+
 				return acc;
-			}, {});
-
-		Object.entries(inscriptionsByGeo).forEach(([_, inscriptions]) => {
+			}, {})
+	);
+	let markers = $derived(
+		Object.entries(inscriptionsByGeo).map(([_, inscriptions]) => {
 			const geo = inscriptions[0].geo;
-			if (geo && geo.length === 2) {
-				const numberInscriptions = inscriptions.length;
-				let markerSize = '8px';
-				let groupSize = 'single';
 
-				if (numberInscriptions > 100) {
-					markerSize = '48px';
-					groupSize = 'lg';
-				} else if (numberInscriptions > 25) {
-					markerSize = '32px';
-					groupSize = 'md';
-				} else if (numberInscriptions > 1) {
-					markerSize = '16px';
-					groupSize = 'sm';
-				}
+			const numberInscriptions = inscriptions.length;
+			let markerSize = 'single';
 
-				const el = createMarkerElement(markerSize, groupSize, numberInscriptions);
-				const popupContent = createPopupContent(inscriptions);
-
-				const marker = new Marker({ element: el })
-					.setLngLat([geo[1], geo[0]])
-					.setPopup(new Popup().setHTML(popupContent))
-					.addTo(map);
-
-				markers.push(marker);
+			if (numberInscriptions > 100) {
+				markerSize = 'lg';
+			} else if (numberInscriptions > 25) {
+				markerSize = 'md';
+			} else if (numberInscriptions > 1) {
+				markerSize = 'sm';
 			}
-		});
-	}
 
-	function createMarkerElement(size, groupSize, numberInscriptions) {
-		const el = document.createElement('div');
-		el.className = `marker ${groupSize}`;
-		el.style.width = size;
-		el.style.height = size;
-		el.style.lineHeight = size;
+			return {
+				coords: [geo[1], geo[0]],
+				markerSize,
+				numberInscriptions,
+				inscriptions
+			};
+		})
+	);
 
-		if (numberInscriptions > 1) {
-			el.innerHTML = numberInscriptions.toString();
-		}
+	function addMarkerAction(node, { coords, inscriptions }) {
+		const popupContent = createPopupContent(inscriptions);
+		const marker = new Marker({ element: node })
+			.setLngLat(coords)
+			.setPopup(new Popup().setHTML(popupContent))
+			.addTo(map);
 
-		return el;
+		return {
+			destroy() {
+				marker?.remove();
+			}
+		};
 	}
 
 	function createPopupContent(inscriptions) {
@@ -117,52 +116,36 @@
 		map.addControl(new NavigationControl({ showCompass: true, showZoom: true }));
 	});
 
-	afterUpdate(() => {
-		addMarkers();
-	});
-
 	onDestroy(() => map?.remove());
 </script>
 
-<div class="inscription-map" class:hidden={!show} bind:this={mapContainer}></div>
+<div class="inscription-map" class:hidden={!show} bind:this={mapContainer}>
+	{#if map && markers}
+		{#each markers as marker}
+			<div
+				use:addMarkerAction={{ coords: marker.coords, inscriptions: marker.inscriptions }}
+				class="marker"
+				class:single={marker.markerSize === 'single'}
+				class:sm={marker.markerSize === 'sm'}
+				class:md={marker.markerSize === 'md'}
+				class:lg={marker.markerSize === 'lg'}
+				role="img"
+				aria-label={`Map marker for ${marker.inscriptions[0].title}`}
+			>
+				{#if marker.numberInscriptions > 1}
+					<span>{marker.numberInscriptions}</span>
+				{/if}
+			</div>
+		{/each}
+	{/if}
+</div>
 
 <style>
 	.inscription-map {
 		border: var(--border-size-1) solid var(--text-1);
-		height: 400px;
+		font-family: var(--font-family);
+		height: 600px;
 		width: 100%;
-
-		& .marker {
-			background-color: var(--teal-4);
-			border-radius: 50%;
-			border: none;
-			box-shadow: var(--shadow-1);
-			color: var(--gray-12);
-			cursor: pointer;
-			display: block;
-			font-family: var(--font-family);
-			font-size: var(--font-size-0);
-			font-weight: var(--font-weight-6);
-			padding: 0;
-			text-align: center;
-
-			&.sm {
-				background-color: var(--blue-4);
-			}
-
-			&.md {
-				background-color: var(--yellow-4);
-			}
-
-			&.lg {
-				background-color: var(--red-4);
-			}
-
-			& :hover {
-				filter: brightness(90%);
-				box-shadow: var(--shadow-4);
-			}
-		}
 
 		& .maplibregl-popup-content {
 			height: 200px;
@@ -183,6 +166,50 @@
 				padding-inline: 0;
 			}
 		}
+	}
+
+	.marker {
+		--marker-size: 12px;
+
+		background-color: var(--blue-4);
+		border-radius: var(--radius-4);
+		border: none;
+		box-shadow: var(--shadow-1);
+		color: var(--gray-12);
+		cursor: pointer;
+		display: block;
+		font-size: var(--font-size-0);
+		font-weight: var(--font-weight-6);
+		height: var(--marker-size);
+		line-height: var(--marker-size);
+		padding: 0;
+		text-align: center;
+		width: var(--marker-size);
+	}
+
+	.marker:hover {
+		filter: brightness(90%);
+		box-shadow: var(--shadow-4);
+	}
+
+	.sm {
+		--marker-size: 24px;
+
+		background-color: var(--blue-6);
+	}
+
+	.md {
+		--marker-size: 36px;
+
+		background-color: var(--blue-8);
+		color: white;
+	}
+
+	.lg {
+		--marker-size: 50px;
+
+		background-color: var(--blue-10);
+		color: white;
 	}
 
 	.hidden {

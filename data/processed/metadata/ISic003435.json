@@ -1,16 +1,35 @@
 {
   "file": "ISic003435",
-  "metadataFile": "metadata/ISic003435.json",
-  "htmlFile": "html/ISic003435.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003435",
+  "uri": "ISic003435",
   "title": "I.Sicily inscription 003435",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644914",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900815",
+      "type": "EDCS"
+    },
+    {
+      "_": "336160",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
     "cert": "low"
   },
+  "support": "Three blocks of stone (type not specified), well finished, with moulding along the upper edge and inscription below; assumed by Manganaro and Orsi to join as part of a funerary monument. The first is described in report of 1841 as 5.5 palms wide, the second 4 palms, the third 4.5 palms. Messina proposes that the blocks are part of the facade of a nymphaeum uncovered in 1961.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -21,19 +40,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
   "places": [
@@ -49,9 +97,27 @@
     }
   ],
   "geo": [
-    37.26494,
-    14.69381
+    [
+      37.26494,
+      14.69381
+    ]
   ],
+  "provenanceFound": {
+    "_": "Described as a chance find in 1813, in a 'vignaletto' below the road that leads into Mineo from the west\n                            through the 'Udienza' gate. Messina proposes that it should be associated with the moumental nymphaeum uncovered int he area in 196.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1813"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic003435_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +125,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mineo",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Menae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003435",
+    "isic003435",
     "i.sicily inscription 003435",
     "draft",
     "building",

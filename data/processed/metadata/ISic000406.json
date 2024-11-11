@@ -1,10 +1,29 @@
 {
   "file": "ISic000406",
-  "metadataFile": "metadata/ISic000406.json",
-  "htmlFile": "html/ISic000406.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000406",
+  "uri": "ISic000406",
   "title": "I.Sicily inscription 000406",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284592",
+      "type": "TM"
+    },
+    {
+      "_": "074189",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900447",
+      "type": "EDCS"
+    },
+    {
+      "_": "140305",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -20,21 +39,54 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "105",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "49.5",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "49",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -48,9 +100,21 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found on Ortygia 10 May 1792",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Identified in depositi, Mag C, 2013-10-03",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000406_tiled.tif",
     "desc": "Photo J. Prag"
@@ -58,6 +122,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "8",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek with the first two lines in Latin",
     "mainLang": "grc",
@@ -66,7 +139,7 @@
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000406",
+    "isic000406",
     "i.sicily inscription 000406",
     "draft",
     "honorific",

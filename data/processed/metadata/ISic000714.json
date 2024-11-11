@@ -1,15 +1,33 @@
 {
   "file": "ISic000714",
-  "metadataFile": "metadata/ISic000714.json",
-  "htmlFile": "html/ISic000714.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000714",
+  "uri": "ISic000714",
   "title": "Bilingual (?) epitaph",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644829",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "_": "331951",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Three joining marble fragments of a marble plaque, partially intact on the upper left and on the lower right side. Ferrua speculates that the plaque as a whole was c.55 cm wide, giving dimensions firstly for Fragment (a) (H=20, W=21, D=3.8 cm) and secondly for Fragments (b) and (c) combined (H=27.5, W=33.5, D=3.8 cm); Manganaro gives dimensions for fragment (b) separately (H=26, W=12, D=3 cm).",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,20 +38,56 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Lines 1-12",
-      "from": "line1",
-      "to": "line12",
-      "h": "15-25",
-      "unit": "mm"
+      "_": "greater than 30",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "55",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "3.8",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Irregular letters, some of which are larger than the others (the Latin D, the Greek Β). In the Greek text, E, Θ (according to Ferrua's drawing), Ω are lunate, (Latin and Greek), A has a broken cross-bar, Ξ is cursive. \n                                From Ferrua's drawing, the abbreviation of ὑπατίᾳ is realized through a small superscript π above the υ.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Lines 1-12",
+        "from": "line1",
+        "to": "line12",
+        "h": "15-25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not recorded",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 455,
   "notAfter": 456,
   "places": [
@@ -49,9 +103,22 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded, but Ferrua states that it was found in via Dott. Consoli, and suggests that it was originally in a pavement.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Observed by Ferrua in 1967 in the courtyard of Castello Ursino; Manganaro subsequently saw and photographed the left two fragments only; not seen subsequently.",
+    "type": "observed",
+    "when": "1967"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000714_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,6 +126,11 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
   "textLang": {
     "_": "Latin and Ancient Greek",
     "mainLang": "la",
@@ -67,7 +139,7 @@
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000714",
+    "isic000714",
     "bilingual (?) epitaph",
     "draft",
     "funerary",

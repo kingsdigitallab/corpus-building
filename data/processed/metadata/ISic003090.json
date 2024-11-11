@@ -1,16 +1,35 @@
 {
   "file": "ISic003090",
-  "metadataFile": "metadata/ISic003090.json",
-  "htmlFile": "html/ISic003090.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003090",
+  "uri": "ISic003090",
   "title": "I.Sicily inscription 003090",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284916",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900518",
+      "type": "EDCS"
+    },
+    {
+      "_": "331406",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html",
     "cert": "low"
   },
+  "support": "Large block walled into the 'bema', facing the nave, inside the Duomo. The block has been recut along the top and the right, but appears to preserve the original margins on the left and below. The surface is somewhat eroded, and the stone porous.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -21,36 +40,76 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "20-60",
-      "unit": "mm"
+      "_": "42",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "45-90",
-      "unit": "mm"
+      "_": "58",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "30-80",
-      "unit": "mm"
+      "_": "39",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "three lines of somewhat irregular letters are preserved, with a slightly irregular left margin.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete #text_condition.deteriorated"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "The letters are somewhat irregular and uneven in size and spacing, without serifs. Alpha has straight and broken bar; epsilon has shorter middle bar; zeta regular Z with a line breaking the diagonal stroke; mu has vertical first and last, with middle strokes above the line; omicron is smaller and somewhat ovoid; rho has small curved head; sigma is slightly open, and shallow middle strokes with a point on the join; omega is smaller, rounded, and open. ",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "20-60",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "45-90",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "30-80",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -350,
   "notAfter": -200,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Cephaloedium",
@@ -64,9 +123,25 @@
     }
   ],
   "geo": [
-    38.03856,
-    14.02285
+    [
+      38.03856,
+      14.02285
+    ]
   ],
+  "provenanceFound": {
+    "_": "Built into an internal wall of the duomo, at the base of the south corner of the principal apse, facing the nave, below the level of the pavement",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": {
+      "_": "38.0399094,14.0225895",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic003090_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -74,13 +149,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
+  "repository": "Duomo",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Cephaloedium",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003090",
+    "isic003090",
     "i.sicily inscription 003090",
     "draft",
     "dedication",

@@ -1,15 +1,33 @@
 {
   "file": "ISic000401",
-  "metadataFile": "metadata/ISic000401.json",
-  "htmlFile": "html/ISic000401.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000401",
+  "uri": "ISic000401",
   "title": "Candelabrum dedicated to Minerva",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491612",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900442",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Part of a marble candelabrum, ovoid in shape, with a moulding around the upper part (below which runs the inscription), and floral decoration in light relief on the body; a square socket with circular hole at the base of the surviving section.",
   "objectType": {
     "_": "candelabrum",
     "ana": "#object.candelabrum",
@@ -20,20 +38,55 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "22-28",
-      "unit": "mm"
+      "_": "82",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "28",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The inscription runs around one side of the upper part of the surviving section, immediately below a rounded rim moulding. The epigraphic field is 34 cm long, and 6.5 cm high.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters to to slightly cursive in form, with serifs, especially on the M an the A; E and L are narrow.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "22-28",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -49,9 +102,23 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Inventory notes found in 'podere di Rizza'; CIL observes in 1876 together with an aedicula thought to be of Cybele, in 1876 in a well in Achradina.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Prag 2022-04-28",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000401_tiled.tif",
     "desc": "Photo J. Prag 29.04.2022: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -59,13 +126,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "229",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000401",
+    "isic000401",
     "candelabrum dedicated to minerva",
     "draft",
     "dedication",

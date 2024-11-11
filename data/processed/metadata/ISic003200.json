@@ -1,10 +1,28 @@
 {
   "file": "ISic003200",
-  "metadataFile": "metadata/ISic003200.json",
-  "htmlFile": "html/ISic003200.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003200",
+  "uri": "ISic003200",
   "title": "I.Sicily inscription 003200",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285008",
+      "type": "TM"
+    },
+    {
+      "_": "114090",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900513",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
@@ -20,21 +38,51 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "mosaic",
-    "ana": "#execution.mosaic",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/16"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "mosaic",
+        "ana": "#execution.mosaic",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/16"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -125,
   "notAfter": -75,
+  "precision": "low",
   "places": [
     {
       "_": "Panhormus",
@@ -48,9 +96,21 @@
     }
   ],
   "geo": [
-    38.13205,
-    13.33561
+    [
+      38.13205,
+      13.33561
+    ]
   ],
+  "provenanceFound": {
+    "_": "on the threshold of room p in edificio B, piazza Vittoria excavations, Palermo",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003200_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +118,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Panhormus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003200",
+    "isic003200",
     "i.sicily inscription 003200",
     "draft",
     "greeting",

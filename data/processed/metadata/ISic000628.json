@@ -1,10 +1,28 @@
 {
   "file": "ISic000628",
-  "metadataFile": "metadata/ISic000628.json",
-  "htmlFile": "html/ISic000628.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000628",
+  "uri": "ISic000628",
   "title": "Epitaph of Abdalas",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175711",
+      "type": "TM"
+    },
+    {
+      "_": "079873",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "8300354",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +38,53 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line\n                                    1\n                                ",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "26.5",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "35",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line\n                                    1\n                                ",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to\n                                    2\n                                ",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 101,
   "notAfter": 140,
+  "precision": "low",
   "places": [
     {
       "_": "Capitoniania",
@@ -48,9 +98,22 @@
     }
   ],
   "geo": [
-    37.38616,
-    14.69241
+    [
+      37.38616,
+      14.69241
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contrada Ventrelli, nr. Ramacca",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000628_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +121,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ramacca",
+  "repository": {
+    "_": "Museo Civico\n                            Archeologico di Ramacca",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/024"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Capitoniania",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000628",
+    "isic000628",
     "epitaph of abdalas",
     "draft",
     "funerary",

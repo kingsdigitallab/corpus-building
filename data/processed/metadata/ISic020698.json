@@ -1,15 +1,31 @@
 {
   "file": "ISic020698",
-  "metadataFile": "metadata/ISic020698.json",
-  "htmlFile": "html/ISic020698.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020698",
+  "uri": "ISic020698",
   "title": "ISic020698",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.production-ownership",
     "ref": "http://vocab.getty.edu/page/aat/300195926"
   },
+  "support": "Ionic kylix.",
   "objectType": {
     "_": "kylix",
     "ana": "#object.vessel.kylix",
@@ -20,21 +36,54 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/130"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The text runs on the lowest part of the outer surface of the body.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -575,
   "notAfter": -480,
+  "evidence": "archaeological-context material-context lettering",
   "places": [
     {
       "_": "Castiglione di Ragusa",
@@ -43,9 +92,25 @@
     }
   ],
   "geo": [
-    36.950799,
-    14.650095
+    [
+      36.950799,
+      14.650095
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the Western Necropolis of Castiglione di Ragusa, grave 111.",
+    "type": "found",
+    "geo": [
+      36.950799,
+      14.650095
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020698_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +118,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
+  "repository": {
+    "_": "Museo Archeologico Ibleo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/091"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Castiglione di Ragusa",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020698",
+    "isic020698",
     "isic020698",
     "draft",
     "ownership",

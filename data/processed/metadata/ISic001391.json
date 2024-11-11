@@ -1,15 +1,35 @@
 {
   "file": "ISic001391",
-  "metadataFile": "metadata/ISic001391.json",
-  "htmlFile": "html/ISic001391.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001391",
+  "uri": "ISic001391",
   "title": "Greek inscription recording enjoyment of a spring",
   "status": "edited",
+  "editions": [
+    {
+      "_": "493006",
+      "type": "TM"
+    },
+    {
+      "_": "150070",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101518",
+      "type": "EDCS"
+    },
+    {
+      "_": "140898",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "touristic text",
     "ana": "#function.touristic",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/135.html"
   },
+  "support": "The inscription is engraved on the vertical face of the natural rock, part of a low cliff immediately above a natural spring, on  a terrace above the river Simeto. The text is preserved complete. The height of the inscribed area is 0.29-0.34m; the width of the inscribed area 1.25m.",
   "objectType": {
     "_": "rock face",
     "ana": "#object.rock-face",
@@ -20,22 +40,57 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-3",
-      "from": "line1",
-      "to": "line3",
-      "h": "70-90",
-      "unit": "mm"
+      "_": "29-34",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "125",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "NA",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text maintains a clear left margin, laid out over three lines. The extended spacing in lines 1 and 2 has sometimes suggested to editors that the text divides into columns; however this is probably to compensate for the fact that lines 2 and 3 are shortened by the insertion of a large engraved palm leaf (20 cm high) on the right margin.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The text is engraved in large bold letters, with the topmost stroke often extended vertically above the letter on Α, Λ, Δ. Letter forms are somewhat variable within the inscription, with lunate and straight sigma used indiscriminately; epsilon is normally straight, but appears lunate in ΦΗϹΕΙΝΟϹ in line 2; alpha is normally straight but displays broken bar in ΕΥΦΡΑΝΘΗΣΑΝ in line 3; phi has an angular eye in lines 1 and 2 but a rounded eye in line 3; variation within texts is however common, and it is not necessary to assume that this reflects different hands in use within the text. Ligatures are employed several times in the text, which has been the source of several confused readings in the past.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-3",
+        "from": "line1",
+        "to": "line3",
+        "h": "70-90",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 350,
+  "precision": "low",
   "places": [
     {
       "_": "Adranon",
@@ -50,9 +105,27 @@
     }
   ],
   "geo": [
-    37.66358,
-    14.83283
+    [
+      37.66358,
+      14.83283
+    ]
   ],
+  "provenanceFound": {
+    "_": "In situ on the natural rock at Fonte delle Favare, contrada Polichello, 3.5 km NW of the centre of Adrano",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      37.680917,
+      14.801028
+    ]
+  },
+  "provenanceObserved": {
+    "_": "On private property, but generally accessible; one must climb into the spring, however, to read it.",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001391_tiled.tif",
     "desc": "Photo J. Prag"
@@ -60,13 +133,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Adranon",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001391",
+    "isic001391",
     "greek inscription recording enjoyment of a spring",
     "edited",
     "touristic text",

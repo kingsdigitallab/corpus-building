@@ -1,10 +1,28 @@
 {
   "file": "ISic000630",
-  "metadataFile": "metadata/ISic000630.json",
-  "htmlFile": "html/ISic000630.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000630",
+  "uri": "ISic000630",
   "title": "I.Sicily inscription 000630",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175815",
+      "type": "TM"
+    },
+    {
+      "_": "081934",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "5200285",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -15,21 +33,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 201,
   "notAfter": 300,
+  "precision": "low",
   "places": [
     {
       "_": "Mazara",
@@ -43,9 +91,20 @@
     }
   ],
   "geo": [
-    37.65418,
-    12.59304
+    [
+      37.65418,
+      12.59304
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded.",
+    "type": "found"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000630_tiled.tif",
     "desc": "Photo M. Metcalfe"
@@ -53,13 +112,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Mazara del Vallo",
+  "repository": {
+    "_": "Mirabilia Urbis",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/115"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Mazara",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000630",
+    "isic000630",
     "i.sicily inscription 000630",
     "draft",
     "honorific",

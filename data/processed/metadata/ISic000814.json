@@ -1,15 +1,33 @@
 {
   "file": "ISic000814",
-  "metadataFile": "metadata/ISic000814.json",
-  "htmlFile": "html/ISic000814.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000814",
+  "uri": "ISic000814",
   "title": "Architrave recording two duumvirs",
   "status": "draft",
+  "editions": [
+    {
+      "_": "644906",
+      "type": "TM"
+    },
+    {
+      "_": "136234",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "A large architrave block preserving mouldings with the guttae from the base of triglyphs along the top edge. Appears intact on all sides, but broken/damaged at the right-hand end. The rear and the left end are finished.",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -20,20 +38,54 @@
     "ana": "#material.stone.sandstone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "85-100",
-      "unit": "mm"
+      "_": "45",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "176",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "52",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "A single line of deep cut very regular Greek letters with some traces of stucco preserved within the letters (and elsewhere on the stone)",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "85-100",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "n/a",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -44,
   "notAfter": -1,
   "places": [
@@ -49,9 +101,25 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Attributed by Fiorentini 2009: 101 n.5 to the architrave of the portico of the gymnasium",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.293371,
+      13.58641
+    ]
+  },
+  "provenanceObserved": {
+    "_": "On display, outside the medagliere.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000814_copy1_tiled.tif",
     "desc": "Photo J. Prag, courtesy Museo Regionale Archeologico Pietro Griffo"
@@ -59,13 +127,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
+  "repository": {
+    "_": "Museo Regionale Archeologico Pietro Griffo",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/130"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Agrigentum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000814",
+    "isic000814",
     "architrave recording two duumvirs",
     "draft",
     "building",

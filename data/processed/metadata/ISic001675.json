@@ -1,15 +1,35 @@
 {
   "file": "ISic001675",
-  "metadataFile": "metadata/ISic001675.json",
-  "htmlFile": "html/ISic001675.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001675",
+  "uri": "ISic001675",
   "title": "Opus signinum pavement inscription",
   "status": "draft",
+  "editions": [
+    {
+      "_": "698352",
+      "type": "TM"
+    },
+    {
+      "_": "149782",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70900984",
+      "type": "EDCS"
+    },
+    {
+      "_": "331124",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "greeting",
     "ana": "#function.greeting",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/386.html"
   },
+  "support": "Inscription set in white tesserae in an opus signinum floor of room 12 of the House of the Doric Capital, possibly a bathroom.",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -20,22 +40,50 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "inlaid",
-    "ana": "#execution.inlaid",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "120-125",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Set out over one line in white tesserae in a 'doormat'",
+      "rs": {
+        "_": "inlaid",
+        "ana": "#execution.inlaid",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "120-125",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -275,
   "notAfter": -150,
+  "evidence": "archaeological-context",
+  "precision": "low",
   "places": [
     {
       "_": "Morgantina",
@@ -50,9 +98,28 @@
     }
   ],
   "geo": [
-    37.430596,
-    14.479485
+    [
+      37.430596,
+      14.479485
+    ]
   ],
+  "provenanceFound": {
+    "_": "Room 12 of the House of the Doric capital",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1958",
+    "xml:id": "findspot",
+    "geo": [
+      37.430944,
+      14.480399
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001675_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -60,13 +127,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Aidone",
+  "repository": {
+    "_": "Area archeologica di Morgantina",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/194"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Morgantina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001675",
+    "isic001675",
     "opus signinum pavement inscription",
     "draft",
     "greeting",

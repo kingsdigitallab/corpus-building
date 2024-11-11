@@ -1,10 +1,26 @@
 {
   "file": "ISic003615",
-  "metadataFile": "metadata/ISic003615.json",
-  "htmlFile": "html/ISic003615.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003615",
+  "uri": "ISic003615",
   "title": "I.Sicily inscription 003615",
   "status": "unchecked",
+  "editions": [
+    {
+      "_": "645688",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -15,19 +31,48 @@
     "ana": "#material.rock",
     "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -39,9 +84,23 @@
     }
   ],
   "geo": [
-    36.95,
-    14.93333
+    [
+      36.95,
+      14.93333
+    ]
   ],
+  "provenanceFound": {
+    "_": "'versante meridionale della Cava della Signora, in uno spazioso\n                            ambiente ipogeico aperto a Nord'",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003615_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -49,13 +108,16 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Castelluccio",
+  "repository": {
+    "role": "museum"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Castelluccio",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003615",
+    "isic003615",
     "i.sicily inscription 003615",
     "unchecked",
     "funerary",

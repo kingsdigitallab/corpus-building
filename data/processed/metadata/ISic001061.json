@@ -1,10 +1,33 @@
 {
   "file": "ISic001061",
-  "metadataFile": "metadata/ISic001061.json",
-  "htmlFile": "html/ISic001061.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001061",
+  "uri": "ISic001061",
   "title": "I.Sicily inscription 001061",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491439",
+      "type": "TM"
+    },
+    {
+      "_": "148557",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102216",
+      "type": "EDCS"
+    },
+    {
+      "_": "140541",
+      "type": "PHI"
+    },
+    {
+      "_": "175624",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
@@ -20,21 +43,51 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": 100,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Netum",
@@ -49,9 +102,21 @@
     }
   ],
   "geo": [
-    36.94573,
-    15.02365
+    [
+      36.94573,
+      15.02365
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Previously in the sala iscr. Gr., no longer on display",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001061_tiled.tif",
     "desc": "Museo Archeologico Regionale Antonino Salinas, reproduced with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +124,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8735",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Netum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001061",
+    "isic001061",
     "i.sicily inscription 001061",
     "draft",
     "building",

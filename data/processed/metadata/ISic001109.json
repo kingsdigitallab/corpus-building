@@ -1,15 +1,39 @@
 {
   "file": "ISic001109",
-  "metadataFile": "metadata/ISic001109.json",
-  "htmlFile": "html/ISic001109.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001109",
+  "uri": "ISic001109",
   "title": "I.Sicily inscription 001109",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492726",
+      "type": "TM"
+    },
+    {
+      "_": "105548",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102266",
+      "type": "EDCS"
+    },
+    {
+      "_": "140592",
+      "type": "PHI"
+    },
+    {
+      "_": "175643",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Upper right part of a rectangular plaque of local stone. Part of the upper and right margins are preserved.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,22 +44,59 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "10-15",
-      "unit": "mm"
+      "_": "6",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "19",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "10.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of two lines of text preserved, with slightly irregular right margin to the lines.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Regular, deeply incised letters, of which alpha the widest. Borken bar alpha; epsilon has shorter middle bar; Mu has vertical first and last, with middle strokes only descending half-way; omicron is small and mid-line; rho is rounded and closed; sigma is regular four bar, with horizontal top and bottom, middle strokes half-width.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "10-15",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -200,
   "notAfter": -100,
+  "precision": "low",
   "places": [
     {
       "_": "Segesta",
@@ -49,9 +110,23 @@
     }
   ],
   "geo": [
-    37.94171,
-    12.83649
+    [
+      37.94171,
+      12.83649
+    ]
   ],
+  "provenanceFound": {
+    "_": "Recovered from the ruins of the ancient city (so Salinas).",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1885"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001109_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +134,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonino Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064"
+  },
+  "idno": {
+    "_": "8827",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Segesta",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001109",
+    "isic001109",
     "i.sicily inscription 001109",
     "draft",
     "honorific",

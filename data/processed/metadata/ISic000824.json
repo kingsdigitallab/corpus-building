@@ -1,15 +1,39 @@
 {
   "file": "ISic000824",
-  "metadataFile": "metadata/ISic000824.json",
-  "htmlFile": "html/ISic000824.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000824",
+  "uri": "ISic000824",
   "title": "I.Sicily inscription 000824",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285055",
+      "type": "TM"
+    },
+    {
+      "_": "114400",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101972",
+      "type": "EDCS"
+    },
+    {
+      "_": "140292",
+      "type": "PHI"
+    },
+    {
+      "_": "332314",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Carved across the rear wall of the terrace separating the upper and lower sections of the theatre cavea, text interrupted by  the breaks between the cunei.",
   "objectType": {
     "_": "wall",
     "ana": "#object.arch_element.wall",
@@ -20,19 +44,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -241,
   "notAfter": -220,
   "places": [
@@ -49,9 +102,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Theatre of Hieron, Siracusa",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      37.075999,
+      15.275032
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000824_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +130,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Area archeologica della Neapolis, Orecchio di Dionisio e Teatro Greco",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/160"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000824",
+    "isic000824",
     "i.sicily inscription 000824",
     "draft",
     "honorific",

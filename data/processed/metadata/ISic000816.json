@@ -1,15 +1,34 @@
 {
   "file": "ISic000816",
-  "metadataFile": "metadata/ISic000816.json",
-  "htmlFile": "html/ISic000816.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000816",
+  "uri": "ISic000816",
   "title": "Public building works in honour of Marcus Aurelius",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175810",
+      "type": "TM"
+    },
+    {
+      "_": "074415",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "12800323",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A large slab/stele, probably complete, but with significant corrsion of the surface.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,62 +39,97 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "70",
-      "unit": "mm"
+      "_": "190",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 3-5",
-      "from": "line3",
-      "to": "line5",
-      "h": "55",
-      "unit": "mm"
+      "_": "65",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 6-11",
-      "from": "line6",
-      "to": "line11",
-      "h": "45",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 12",
-      "from": "line12",
-      "to": "line12",
-      "h": "40",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 13",
-      "from": "line13",
-      "to": "line3",
-      "h": "45",
-      "unit": "mm"
-    },
-    {
-      "l": "Line 14-15",
-      "from": "line14",
-      "to": "line15",
-      "h": "55",
-      "unit": "mm"
-    },
-    {
-      "l": "Interlineation line 1 to 2",
-      "from": "line1",
-      "to": "line2",
-      "h": "40",
-      "unit": "mm"
+      "_": "13",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "70",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3-5",
+        "from": "line3",
+        "to": "line5",
+        "h": "55",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 6-11",
+        "from": "line6",
+        "to": "line11",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 12",
+        "from": "line12",
+        "to": "line12",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 13",
+        "from": "line13",
+        "to": "line3",
+        "h": "45",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 14-15",
+        "from": "line14",
+        "to": "line15",
+        "h": "55",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 169,
   "notAfter": 172,
   "places": [
@@ -91,9 +145,21 @@
     }
   ],
   "geo": [
-    37.80355,
-    12.4379
+    [
+      37.80355,
+      12.4379
+    ]
   ],
+  "provenanceFound": {
+    "_": "Excavations in Roman villa in Marsala",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "On display.",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000816_tiled.tif",
     "desc": "Photo M. Metcalfe"
@@ -101,13 +167,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
+  "repository": {
+    "_": "Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/108"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Lilybaeum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000816",
+    "isic000816",
     "public building works in honour of marcus aurelius",
     "draft",
     "honorific",

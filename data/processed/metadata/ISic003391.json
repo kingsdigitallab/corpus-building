@@ -1,15 +1,34 @@
 {
   "file": "ISic003391",
-  "metadataFile": "metadata/ISic003391.json",
-  "htmlFile": "html/ISic003391.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003391",
+  "uri": "ISic003391",
   "title": "Opus signinum inscription of Gnaius Modius",
   "status": "draft",
+  "editions": [
+    {
+      "_": "494029",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70901044",
+      "type": "EDCS"
+    },
+    {
+      "_": "330096",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "ownership",
     "ana": "#function.ownership",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/105.html"
   },
+  "support": "text set in an opus signunum pavement at the entrance to a room",
   "objectType": {
     "_": "pavement",
     "ana": "#object.pavement",
@@ -20,21 +39,55 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "inlaid",
-    "ana": "#execution.inlaid",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "inlaid",
+        "ana": "#execution.inlaid",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/4.html"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Letters neatly formed of small black basalt stone chips. Nu has a shorter right hand vertical; omicron is equal size to the other letters; alpha off vertical, cross-bar formed by single piece; mu formed by four equal off-vertical strokes, mid-point descending fully to the base-line.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -100,
   "notAfter": -1,
+  "evidence": "context",
+  "precision": "low",
   "places": [
     {
       "_": "Megara Hyblaea",
@@ -49,9 +102,27 @@
     }
   ],
   "geo": [
-    37.2038,
-    15.18274
+    [
+      37.2038,
+      15.18274
+    ]
   ],
+  "provenanceFound": {
+    "_": "Mosaic at the entrance to room i of house 13,22 in SE quarter of Megara Hyblaea",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot",
+    "geo": [
+      37.203839,
+      15.18106
+    ]
+  },
+  "provenanceObserved": {
+    "_": "in situ in House 13.22",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003391_tiled.tif",
     "desc": "Photo J. Prag"
@@ -59,13 +130,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
+  "repository": {
+    "_": "Area archeologica di Megara Hyblaea",
+    "role": "site",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/167"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Megara Hyblaea",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003391",
+    "isic003391",
     "opus signinum inscription of gnaius modius",
     "draft",
     "ownership",

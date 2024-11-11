@@ -1,16 +1,35 @@
 {
   "file": "ISic000328",
-  "metadataFile": "metadata/ISic000328.json",
-  "htmlFile": "html/ISic000328.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000328",
+  "uri": "ISic000328",
   "title": "I.Sicily inscription 000328",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491537",
+      "type": "TM"
+    },
+    {
+      "_": "141134",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900366",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "list",
     "ana": "#function.list",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/108.html",
     "cert": "low"
   },
+  "support": "No details of the stone are recorded, other than its fragmentary state.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -21,21 +40,53 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 150,
   "notAfter": 250,
+  "evidence": "nomenclature",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +100,30 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Unearthed along with many other fragments in 'area Stesichori' (i.e. the general area of the amphitheatre on the north side of the city centre) in 1740 according to Amico",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1740",
+    "geo": {
+      "_": "37.507546, 15.086227",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "Seen by Mommsen, in museo Biscari",
+    "type": "observed"
+  },
+  "provenanceLost": {
+    "_": "Not seen since Mommsen and assumed to be lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000328_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +131,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000328",
+    "isic000328",
     "i.sicily inscription 000328",
     "draft",
     "list",

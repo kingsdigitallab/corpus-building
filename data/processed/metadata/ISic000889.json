@@ -1,15 +1,64 @@
 {
   "file": "ISic000889",
-  "metadataFile": "metadata/ISic000889.json",
-  "htmlFile": "html/ISic000889.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000889",
+  "uri": "ISic000889",
   "title": "I.Sicily inscription 000889",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492519",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102046",
+      "type": "EDCS"
+    },
+    {
+      "_": "140370",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": [
+    "Plastered front of a trisome arcosolium.",
+    {
+      "_": "For the four impressions on the tabula see: , ,\n                                         and .",
+      "ref": [
+        {
+          "_": "ISic010005-001",
+          "target": "ISic010005-001.xml"
+        },
+        {
+          "_": "ISic010005-002",
+          "target": "ISic010005-002.xml"
+        },
+        {
+          "_": "ISic010005-003",
+          "target": "ISic010005-003.xml"
+        },
+        {
+          "_": "ISic010005-004",
+          "target": "ISic010005-004.xml"
+        }
+      ]
+    },
+    {
+      "_": "A fifth impression of the same signaculum can be found on another tomb, see .",
+      "ref": {
+        "_": "ISic010006-sig",
+        "target": "ISic010006-sig.xml"
+      }
+    }
+  ],
   "objectType": {
     "_": "arcosolium",
     "ana": "#object.funerary_monument.tomb",
@@ -19,28 +68,69 @@
     "_": "plaster",
     "ana": "#material.plaster"
   },
-  "layoutDesc": [
+  "dimensions": [
     {
-      "_": "scratched",
-      "ana": "#execution.scratched",
-      "ref": "http://www.eagle-network.eu/voc/writing/lod/9 "
+      "_": "23",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "_": "Rubrication, red coloured",
-      "ana": "#execution.rubrication.red"
+      "_": "67",
+      "unit": "cm",
+      "dimension": "width"
     }
   ],
-  "letterHeight": [
-    {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "50",
-      "unit": "mm"
+  "layoutDesc": {
+    "layout": {
+      "p": {
+        "_": "Scratched inscription in the middle, surrounded by four impressions of the same  signaculum impressed on the four corners of a rectangular tabula etched in fresco \n                                        on the plaster. Epigraphic field divided into two concentric registers delimited by a linear frame.",
+        "rs": {
+          "_": "circular",
+          "ana": "#shape.circular"
+        }
+      },
+      "rs": [
+        {
+          "_": "scratched",
+          "ana": "#execution.scratched",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/9 "
+        },
+        {
+          "_": "Rubrication, red coloured",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
-  ],
+  },
+  "handNote": {
+    "lettering": [
+      "Letters are painted in red.",
+      "Omicron and sigma small and stacked one on top of the other."
+    ],
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "50",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 351,
   "notAfter": 500,
+  "evidence": "textual-context archaeological-context",
   "places": [
     {
       "_": "Syracusae",
@@ -54,9 +144,23 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "found in situ, San Giovanni catacomb, gallery no. 2, Region N",
+    "type": "found",
+    "subtype": "discovered",
+    "xml:id": "findspot"
+  },
+  "provenanceObserved": {
+    "_": "in situ",
+    "type": "observed",
+    "corresp": "#findspot"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000889_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,13 +168,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": "San Giovanni catacomb",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000889",
+    "isic000889",
     "i.sicily inscription 000889",
     "draft",
     "funerary",

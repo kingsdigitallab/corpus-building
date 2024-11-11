@@ -1,15 +1,34 @@
 {
   "file": "ISic000242",
-  "metadataFile": "metadata/ISic000242.json",
-  "htmlFile": "html/ISic000242.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000242",
+  "uri": "ISic000242",
   "title": "I.Sicily inscription 000242",
   "status": "draft",
+  "editions": [
+    {
+      "_": "285329",
+      "type": "TM"
+    },
+    {
+      "_": "127456",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100570",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/143.html"
   },
+  "support": "A fragment seemingly broken on all sides",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -20,21 +39,53 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "remains of two lines of latin text, both ends lost",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Latin capitals; in line 1 what is presumably a letter A is missing the cross-bar in Mommsen's representation in CIL",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Thermae Himeraeae",
@@ -49,9 +100,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Mommsen in CIL (1883) as being in the Termini civic museum",
+    "type": "found",
+    "subtype": "first-seen",
+    "notAfter": "1883"
+  },
+  "provenanceObserved": null,
+  "provenanceLost": {
+    "_": "Seemingly now lost: Bivona, writing in 1994 (ILTermini) was unable to locate it in the museum",
+    "type": "not-observed",
+    "subtype": "lost",
+    "notAfter": "1994"
+  },
   "facsimile": {
     "url": "ISic000242_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +125,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000242",
+    "isic000242",
     "i.sicily inscription 000242",
     "draft",
     "unknown",

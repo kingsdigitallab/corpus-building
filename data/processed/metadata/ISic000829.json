@@ -1,15 +1,34 @@
 {
   "file": "ISic000829",
-  "metadataFile": "metadata/ISic000829.json",
-  "htmlFile": "html/ISic000829.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000829",
+  "uri": "ISic000829",
   "title": "I.Sicily inscription 000829",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492453",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101979",
+      "type": "EDCS"
+    },
+    {
+      "_": "140299",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "list of priests",
     "ana": "#function.list.priests",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/33.html"
   },
+  "support": "described as a 'tabella marmorea' by Caietanus, but without further details.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,21 +39,51 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 100,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -48,9 +97,27 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "First recorded by Caietanus (d.1620) and not recorded subsequently except derivatively.",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1620"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000829_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +125,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000829",
+    "isic000829",
     "i.sicily inscription 000829",
     "draft",
     "list of priests",

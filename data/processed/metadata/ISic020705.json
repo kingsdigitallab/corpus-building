@@ -1,15 +1,31 @@
 {
   "file": "ISic020705",
-  "metadataFile": "metadata/ISic020705.json",
-  "htmlFile": "html/ISic020705.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic020705",
+  "uri": "ISic020705",
   "title": "ISic020705",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "votive",
     "ana": "#function.votive",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/83.html"
   },
+  "support": "Bust (clay).",
   "objectType": {
     "_": "bust",
     "ana": "#object.bust",
@@ -20,21 +36,60 @@
     "ana": "#material.clay.fired",
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
-  "layoutDesc": {
-    "_": "scratched",
-    "ana": "#execution.scratched",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "0": {
+        "type": "diameter",
+        "subtype": "base",
+        "unit": "cm"
+      },
+      "1": {
+        "type": "diameter",
+        "subtype": "foot",
+        "unit": "cm"
+      },
+      "dimension": "dim"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "scratched",
+        "ana": "#execution.scratched",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/9"
+      },
+      "p": "The inscription runs along the back of the bust, at the height of the right shoulder of the female figure.",
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -480,
   "notAfter": -450,
+  "evidence": "archaeological-context material-context",
   "places": [
     {
       "_": "Terravecchia di Grammichele",
@@ -43,9 +98,28 @@
     }
   ],
   "geo": [
-    37.214706,
-    14.636362
+    [
+      37.214706,
+      14.636362
+    ]
   ],
+  "provenanceFound": {
+    "_": "Terravecchia di Grammichele, stipe from Poggio dell'Aquila.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.214706,
+      14.636362
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Mignosa 2022-01-17",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#VM",
+    "when": "2022-01-17"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic020705_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,6 +127,15 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "20403",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -65,7 +148,7 @@
   },
   "placeName": "Terravecchia di Grammichele",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic020705",
+    "isic020705",
     "isic020705",
     "draft",
     "votive",

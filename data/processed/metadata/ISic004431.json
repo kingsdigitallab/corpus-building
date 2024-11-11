@@ -1,10 +1,28 @@
 {
   "file": "ISic004431",
-  "metadataFile": "metadata/ISic004431.json",
-  "htmlFile": "html/ISic004431.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004431",
+  "uri": "ISic004431",
   "title": "Epitaph of Timon",
   "status": "draft",
+  "editions": [
+    {
+      "_": "698377",
+      "type": "TM"
+    },
+    {
+      "_": "150059",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "68800041",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +38,52 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "_": "65",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "65",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -300,
   "notAfter": -1,
   "places": [
@@ -48,9 +99,26 @@
     }
   ],
   "geo": [
-    38.14357,
-    15.04308
+    [
+      38.14357,
+      15.04308
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found at Contrada San Leo in the municipality of Oliveri, at the foot of Tyndaris",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1970",
+    "geo": {
+      "_": "38.132401, 15.052095",
+      "cert": "medium"
+    }
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
   "facsimile": {
     "url": "ISic004431_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +126,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Tyndaris",
+  "repository": {
+    "_": "Antiquarium e scavi della villa Romana di Marina di Patti",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/056"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Tyndaris",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004431",
+    "isic004431",
     "epitaph of timon",
     "draft",
     "funerary",

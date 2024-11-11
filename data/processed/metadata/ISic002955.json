@@ -1,15 +1,33 @@
 {
   "file": "ISic002955",
-  "metadataFile": "metadata/ISic002955.json",
-  "htmlFile": "html/ISic002955.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic002955",
+  "uri": "ISic002955",
   "title": "Small altar of Zeus Soter Hieron",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284604",
+      "type": "TM"
+    },
+    {
+      "_": "114491",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "A small horned altar of limestone, damaged across the top from front to back between the horns. The altar has mouldings around the base and the top on all four sides, with a smooth field in between on all four faces",
   "objectType": {
     "_": "altar",
     "ana": "#object.altar",
@@ -20,22 +38,58 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "5-10",
-      "unit": "mm"
+      "_": "7",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "9.4",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "4.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Two lines of Greek text in the field on the front face of the altar (8.5 cm wide x 2.5 cm high)",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "The first three letters are more deeply engraved, the remaining letters are little more than scratched in the surface with a sharp point, and are increasingly irregular in form. Omega is open; top and bottom bars of sigma tending slightly apart; omicron is small than other letters; epsilon has horizontals of equal length.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "5-10",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -250,
   "notAfter": -200,
+  "precision": "low",
   "places": [
     {
       "_": "Syracusae",
@@ -49,9 +103,25 @@
     }
   ],
   "geo": [
-    37.08415,
-    15.27628
+    [
+      37.08415,
+      15.27628
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavation in Giardino Spagna (1948), area of the modern Umberto I hospital, Siracusa",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.0745,
+      15.282107
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Display Sector D, case 315 no.4",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic002955_a_tiled.tif",
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014"
@@ -59,13 +129,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
+  "repository": {
+    "_": "Museo Archeologico Regionale Paolo Orsi",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/097"
+  },
+  "idno": {
+    "_": "51593",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Syracusae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic002955",
+    "isic002955",
     "small altar of zeus soter hieron",
     "draft",
     "dedication",

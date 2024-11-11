@@ -1,10 +1,28 @@
 {
   "file": "ISic003471",
-  "metadataFile": "metadata/ISic003471.json",
-  "htmlFile": "html/ISic003471.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003471",
+  "uri": "ISic003471",
   "title": "I.Sicily inscription 003471",
   "status": "draft",
+  "editions": [
+    {
+      "_": "175857",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900438",
+      "type": "EDCS"
+    },
+    {
+      "_": "337233",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +38,51 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 301,
   "notAfter": 400,
+  "precision": "low",
   "places": [
     {
       "_": "Gela",
@@ -48,9 +96,23 @@
     }
   ],
   "geo": [
-    37.07381,
-    14.24038
+    [
+      37.07381,
+      14.24038
+    ]
   ],
+  "provenanceFound": {
+    "_": "Contrada Manfria, necropolis",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "2015.07.23 Metcalfe",
+    "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#MM"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003471_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +120,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico\n                            Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/010"
+  },
+  "idno": {
+    "_": "38326",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Gela",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003471",
+    "isic003471",
     "i.sicily inscription 003471",
     "draft",
     "funerary",

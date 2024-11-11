@@ -1,15 +1,35 @@
 {
   "file": "ISic001389",
-  "metadataFile": "metadata/ISic001389.json",
-  "htmlFile": "html/ISic001389.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001389",
+  "uri": "ISic001389",
   "title": "Greek funerary inscription of Kallistratos",
   "status": "edited",
+  "editions": [
+    {
+      "_": "493004",
+      "type": "TM"
+    },
+    {
+      "_": "149504",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101516",
+      "type": "EDCS"
+    },
+    {
+      "_": "140896",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "The stone is one of three described as 'petra nigra' by Gualtherus (1624: 50), but neither state of conservation nor dimensions are recorded.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -20,21 +40,53 @@
     "ana": "#material.stone.volcanic",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The text is presented as split over three lines",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Plain transcription in standard capitals makes it impossible to assess the letter-forms.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Adranon",
@@ -48,9 +100,26 @@
     }
   ],
   "geo": [
-    37.66358,
-    14.83283
+    [
+      37.66358,
+      14.83283
+    ]
   ],
+  "provenanceFound": {
+    "_": "Described by Gualtherus (1624) as coming from the ruins popularly identified with the shrine of the god Hadranus (not identified). All later editions derive from Gualtherus.",
+    "type": "found",
+    "subtype": "first-recorded"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic001389_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -64,7 +133,7 @@
   },
   "placeName": "Adranon",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001389",
+    "isic001389",
     "greek funerary inscription of kallistratos",
     "edited",
     "funerary",

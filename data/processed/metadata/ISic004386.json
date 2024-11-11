@@ -1,15 +1,32 @@
 {
   "file": "ISic004386",
-  "metadataFile": "metadata/ISic004386.json",
-  "htmlFile": "html/ISic004386.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004386",
+  "uri": "ISic004386",
   "title": "A fragmentary monumental Latin inscription",
   "status": "deprecated",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "74000028",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "building",
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "A block of worked limestone. The block is broken on the left; on the right margin the remains of 'anathyrosis' indicate that the edge of the stone is intact, but that a further block was joined to this one. The upper and lower margins are preserved.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,22 +37,57 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-2",
-      "from": "line1",
-      "to": "line2",
-      "h": "100",
-      "unit": "mm"
+      "_": "42",
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "49",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "32",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Parts of two lines of monumental Latin letters are preserved, which fill most of the available face.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Plainly carved monumental letters without serifs.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "100",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -150,
   "notAfter": -1,
+  "precision": "low",
   "places": [
     {
       "_": "Ietas",
@@ -49,9 +101,26 @@
     }
   ],
   "geo": [
-    37.96705,
-    13.198199
+    [
+      37.96705,
+      13.198199
+    ]
   ],
+  "provenanceFound": {
+    "_": "From material recovered from the interior of the large Hellenistic public cistern to the west of the agora",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.966871,
+      13.197718
+    ]
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004386_tiled.tif",
     "desc": "Scan of Isler 2009: taf.16.9"
@@ -59,13 +128,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Monte Iato",
+  "repository": "Monte Iato excavation",
+  "idno": {
+    "_": "I.16",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Ietas",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004386",
+    "isic004386",
     "a fragmentary monumental latin inscription",
     "deprecated",
     "building",

@@ -1,15 +1,31 @@
 {
   "file": "ISic030281",
-  "metadataFile": "metadata/ISic030281.json",
-  "htmlFile": "html/ISic030281.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030281",
+  "uri": "ISic030281",
   "title": "ISicily 030281",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "decree",
     "ana": "#function.decree",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/384.html"
   },
+  "support": "A bronze disk, cut out from what was presumably originally a quadrangular plaque, of diameter 7.2 cm (Robert).",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,22 +36,58 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-10",
-      "from": "line1",
-      "to": "line10",
-      "h": "5",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "0.3",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "The extent/layout of the text is unknown, since the disc was cut out of the original text.",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/3"
+      },
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-10",
+        "from": "line1",
+        "to": "line10",
+        "h": "5",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
+        "h": "not measured",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -46,
   "notAfter": -1,
+  "evidence": "lettering textual-context",
   "places": [
     {
       "_": "Agrigentum",
@@ -49,9 +101,23 @@
     }
   ],
   "geo": [
-    37.32084,
-    13.58876
+    [
+      37.32084,
+      13.58876
+    ]
   ],
+  "provenanceFound": {
+    "_": "Purchased by Hartung near Gavignano, in October 1846, where it was apparently also found, although this remains uncertain (see Kajava 2014: 208 for full discussion)",
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1846"
+  },
+  "provenanceObserved": {
+    "_": "none",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030281_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +125,20 @@
   "country": "France",
   "region": "",
   "settlement": "Paris",
+  "repository": {
+    "_": "Formerly in the Collection Froehner",
+    "role": "museum"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Agrigentum",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030281",
+    "isic030281",
     "isicily 030281",
     "draft",
     "decree",

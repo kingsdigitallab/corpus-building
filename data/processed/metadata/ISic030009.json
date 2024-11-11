@@ -1,15 +1,42 @@
 {
   "file": "ISic030009",
-  "metadataFile": "metadata/ISic030009.json",
-  "htmlFile": "html/ISic030009.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030009",
+  "uri": "ISic030009",
   "title": "ISic030009",
   "status": "draft",
+  "editions": [
+    {
+      "_": "696118",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64800281",
+      "type": "EDCS"
+    },
+    {
+      "_": "301171",
+      "type": "PHI"
+    },
+    {
+      "_": "340336",
+      "type": "PHI"
+    },
+    {
+      "_": "331414",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/76.html"
   },
+  "support": "Lamina of oval shape.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -20,22 +47,49 @@
     "ana": "#material.metal.lead",
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1-5",
-      "from": "line1",
-      "to": "line5",
-      "h": "2",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "_": "5.3",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "p": "Opisthographic. Written circularly on the recto (a), left-right on the verso (b).",
+      "damage": {
+        "ana": "#text_condition.partly_illegible"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1-5",
+        "from": "line1",
+        "to": "line5",
+        "h": "2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -500,
   "notAfter": -450,
+  "evidence": "lettering archaeological-context",
   "places": [
     {
       "_": "Selinus",
@@ -49,9 +103,26 @@
     }
   ],
   "geo": [
-    37.586763,
-    12.816874
+    [
+      37.586763,
+      12.816874
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in the archaeological area of Selinunte, in the Malophoros Sanctuary.",
+    "type": "found",
+    "subtype": "discovered",
+    "geo": [
+      37.585378,
+      12.829867
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030009_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,13 +130,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": {
+    "_": "Museo Archeologico Regionale Antonio Salinas",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/isicily/museums/064"
+  },
+  "idno": {
+    "_": "42567",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030009",
+    "isic030009",
     "isic030009",
     "draft",
     "defixio",

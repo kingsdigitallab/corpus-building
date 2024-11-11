@@ -1,10 +1,28 @@
 {
   "file": "ISic001068",
-  "metadataFile": "metadata/ISic001068.json",
-  "htmlFile": "html/ISic001068.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001068",
+  "uri": "ISic001068",
   "title": "I.Sicily inscription 001068",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492695",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39102223",
+      "type": "EDCS"
+    },
+    {
+      "_": "140548",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,19 +38,48 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
   "places": [
@@ -43,9 +90,22 @@
     }
   ],
   "geo": [
-    36.851421,
-    14.837505
+    [
+      36.851421,
+      14.837505
+    ]
   ],
+  "provenanceFound": {
+    "_": "From an unspecified 'grotta'.",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001068_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -53,13 +113,14 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Cava d'Ispica",
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Cava d'Ispica",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001068",
+    "isic001068",
     "i.sicily inscription 001068",
     "draft",
     "funerary",

@@ -1,15 +1,31 @@
 {
   "file": "ISic004430",
-  "metadataFile": "metadata/ISic004430.json",
-  "htmlFile": "html/ISic004430.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic004430",
+  "uri": "ISic004430",
   "title": "ISic004430",
   "status": "draft",
+  "editions": [
+    {
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "votive inscription",
     "ana": "#function.votive",
     "ref": "https://www.eagle-network.eu/voc/typeins/lod/83.html"
   },
+  "support": "Block.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -20,19 +36,42 @@
     "ana": "#material.limestone",
     "ref": "https://www.eagle-network.eu/voc/material/lod/66"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "p": "",
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -550,
   "notAfter": -525,
   "places": [
@@ -47,9 +86,25 @@
     }
   ],
   "geo": [
-    37.0630925,
-    14.2584705
+    [
+      37.0630925,
+      14.2584705
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in Gela.",
+    "type": "found",
+    "geo": [
+      37.0630925,
+      14.2584705
+    ]
+  },
+  "provenanceObserved": {
+    "_": "No Autopsy",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic004430_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -57,13 +112,21 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Gela",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/10"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Gela",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic004430",
+    "isic004430",
     "isic004430",
     "draft",
     "votive inscription",

@@ -1,15 +1,34 @@
 {
   "file": "ISic000382",
-  "metadataFile": "metadata/ISic000382.json",
-  "htmlFile": "html/ISic000382.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000382",
+  "uri": "ISic000382",
   "title": "I.Sicily inscription 000382",
   "status": "draft",
+  "editions": [
+    {
+      "_": "491593",
+      "type": "TM"
+    },
+    {
+      "_": "141194",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "21900422",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "No description is provided by Amico, but the text / stone is clearly damaged on the left side.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -20,21 +39,55 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "five lines of text, of which the first three are clearly latin, but the final two may be Greek.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.partly_illegible"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Apart from the possible presence of lunate sigma, implied in the final line, nothing else can be inferred from Amico's text.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 400,
+  "evidence": "textual-context",
   "places": [
     {
       "_": "Catina",
@@ -49,9 +102,26 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "Original discovery not recorded; seen by Amico 'apud Vincentium Michaelangelum' prior to 1740.",
+    "type": "found",
+    "notAfter": "1740"
+  },
+  "provenanceObserved": {
+    "_": "None",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": {
+    "_": "Now seems to be lost (no record subsequent to Amico is based upon autopsy).",
+    "type": "not-observed",
+    "subtype": "lost"
+  },
   "facsimile": {
     "url": "ISic000382_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -59,6 +129,7 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": "'apud Vicentium Michaelangelum'",
   "textLang": {
     "_": "Latin and Ancient Greek",
     "mainLang": "la",
@@ -68,7 +139,7 @@
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000382",
+    "isic000382",
     "i.sicily inscription 000382",
     "draft",
     "funerary",

@@ -1,10 +1,28 @@
 {
   "file": "ISic003036",
-  "metadataFile": "metadata/ISic003036.json",
-  "htmlFile": "html/ISic003036.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic003036",
+  "uri": "ISic003036",
   "title": "I.Sicily inscription 003036",
   "status": "draft",
+  "editions": [
+    {
+      "_": "284831",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "64900409",
+      "type": "EDCS"
+    },
+    {
+      "_": "332365",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -20,21 +38,53 @@
     "ana": "#material.stone.tuff",
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": null,
   "notAfter": null,
+  "precision": "medium",
   "places": [
     {
       "_": "Selinus",
@@ -48,9 +98,24 @@
     }
   ],
   "geo": [
-    37.58337,
-    12.82522
+    [
+      37.58337,
+      12.82522
+    ]
   ],
+  "provenanceFound": {
+    "_": "Modione, contrada Vallesecco",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "2022-10-29, Metcalfe",
+    "type": "observed",
+    "subtype": "seen",
+    "resp": "#MM",
+    "when": "2022-10-29"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic003036_tiled.tif",
     "desc": "Photo 2022-10-29, M. Metcalfe"
@@ -58,13 +123,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Partanna",
+  "repository": {
+    "_": "Museo della Preistoria",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/111"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Selinus",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic003036",
+    "isic003036",
     "i.sicily inscription 003036",
     "draft",
     "funerary",

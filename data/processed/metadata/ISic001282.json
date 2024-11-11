@@ -1,15 +1,38 @@
 {
   "file": "ISic001282",
-  "metadataFile": "metadata/ISic001282.json",
-  "htmlFile": "html/ISic001282.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic001282",
+  "uri": "ISic001282",
   "title": "Epitaph of Agathopous",
   "status": "draft",
+  "editions": [
+    {
+      "_": "492887",
+      "type": "TM"
+    },
+    {
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "39101651",
+      "type": "EDCS"
+    },
+    {
+      "_": "140772",
+      "type": "PHI"
+    },
+    {
+      "_": "316208",
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Three joining fragments of a marble tablet, damaged upper left and below. The left (a) and right (c) fragments set in plaster in modern times. The rear is smooth. (A) W=28.3, H=17.2  (B) W= 10, H=9 cm; (C) W=27.5, H=22",
   "objectType": {
     "_": "plaque",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259",
@@ -20,29 +43,84 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "30",
-      "unit": "mm"
+      "_": "22",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "25-34",
-      "unit": "mm"
+      "_": "43",
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "_": "2.8",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Remains of four lines of an incomplete Greek text centred on the stone",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Moderately regularly and deeply incised letters with pronounced terminal points but without substantial serifs. Broken bar Α, lunate Σ and Ε. Occasional use of hederae between words. Line lower right may be remains of a supraline above a numeral, or else an ornate hedera.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "25-34",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Line 1-2",
+        "from": "line1",
+        "to": "line2",
+        "h": "28",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Line 2-3",
+        "from": "line2",
+        "to": "line3",
+        "h": "15",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Line 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "15",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 50,
   "notAfter": 200,
+  "precision": "low",
   "places": [
     {
       "_": "Catina",
@@ -58,9 +136,21 @@
     }
   ],
   "geo": [
-    37.49223,
-    15.07041
+    [
+      37.49223,
+      15.07041
+    ]
   ],
+  "provenanceFound": {
+    "_": "details of original discovery are not recorded; assumed to be Catania, but possibly Centuripe",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "sotterraneo SB5 + Cassetta EPICUM 1 Sala XXII + 285 in Sala XXV settore A",
+    "type": "observed"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic001282_fr1_tiled.tif",
     "desc": "Photo J. Prag"
@@ -68,13 +158,28 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
+  "repository": {
+    "_": "Museo Civico di Catania",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/018"
+  },
+  "idno": [
+    {
+      "_": "285",
+      "type": "inventory"
+    },
+    {
+      "_": "254",
+      "type": "inventory"
+    }
+  ],
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Catina",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic001282",
+    "isic001282",
     "epitaph of agathopous",
     "draft",
     "funerary",

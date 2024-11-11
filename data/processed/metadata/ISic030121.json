@@ -1,15 +1,34 @@
 {
   "file": "ISic030121",
-  "metadataFile": "metadata/ISic030121.json",
-  "htmlFile": "html/ISic030121.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic030121",
+  "uri": "ISic030121",
   "title": "Caduceus of the people of Enna",
   "status": "draft",
+  "editions": [
+    {
+      "_": "705684",
+      "type": "TM"
+    },
+    {
+      "_": "159042",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "70800277",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "public document",
     "ana": "#function.document.public",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/360.html"
   },
+  "support": "Part of the handle of a bronze caduceus, rectangular in cross-section (dimensions not recorded)",
   "objectType": {
     "_": "caduceus",
     "ana": "#object.caduceus",
@@ -20,21 +39,49 @@
     "ana": "#material.metal.bronze",
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
-  "layoutDesc": {
-    "_": "engraved",
-    "ana": "#execution.engraved",
-    "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "unit": "mm"
+      "unit": "cm",
+      "dimension": "height"
+    },
+    {
+      "unit": "cm",
+      "dimension": "width"
+    },
+    {
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Text is incised along one face of the handle.",
+      "rs": {
+        "_": "engraved",
+        "ana": "#execution.engraved",
+        "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
+      },
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
+    }
+  },
+  "handNote": {
+    "lettering": "Well spaced plain letters, showing some tendency to curvature on the longer strokes. Alpha has straight bar; epsilon has bars of equal length; nu leans to the right; omicron appears to be small; initial aspirate of the 'half-eta' form.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": -400,
   "notAfter": -301,
+  "evidence": "lettering",
+  "precision": "low",
   "places": [
     {
       "_": "Enna",
@@ -48,9 +95,22 @@
     }
   ],
   "geo": [
-    37.5655,
-    14.27433
+    [
+      37.5655,
+      14.27433
+    ]
   ],
+  "provenanceFound": {
+    "type": "found",
+    "subtype": "discovered",
+    "notAfter": "2007"
+  },
+  "provenanceObserved": {
+    "_": "none",
+    "type": "observed",
+    "subtype": "autopsied"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic030121_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -58,13 +118,20 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "unknown",
+  "repository": {
+    "_": "Apparently in a private collection",
+    "role": "private"
+  },
+  "idno": {
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc"
   },
   "placeName": "Enna",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic030121",
+    "isic030121",
     "caduceus of the people of enna",
     "draft",
     "public document",

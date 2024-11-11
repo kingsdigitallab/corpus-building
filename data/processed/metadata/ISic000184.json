@@ -1,15 +1,34 @@
 {
   "file": "ISic000184",
-  "metadataFile": "metadata/ISic000184.json",
-  "htmlFile": "html/ISic000184.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000184",
+  "uri": "ISic000184",
   "title": "Funerary inscription for the slave Ianuarius",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285225",
+      "type": "TM"
+    },
+    {
+      "_": "127389",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100115",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Rectangular dark-grey marble plaque, with somewhat chipped edges. Rear is flat, but rear and sides discoloured with modern rust.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -20,34 +39,70 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "40",
-      "unit": "mm"
+      "_": "17.5",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "38-40",
-      "unit": "mm"
+      "_": "34.5",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "37-41 (final 'o' at the end of the line is 18mm)",
-      "unit": "mm"
+      "_": "8",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of Latin text, with a gap to the left of the text (but not on the right). Clearly inscribed horizontal guidelines to top and bottom of each line, with an incised left and right margin also. Guidelines have the following heights: line 1 (39 mm), line 2 (37 mm), line 3 (35mm). The spaces between the guidelines are not equal, between lines 1 and 2 is a space of between 4-8mm (the gap reduces to the right), and between lines 2 and 3 is a space of between 5-6mm (again reducing at the right). Use of interpuncts consistently between words.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Text is very elegantly carved, following the guidelines with some freedom. Text is has a consistent left margin, not quite perfectly judged in length to the right margin, with some compression at line end. Elegant use of serifs. Interpuncts predominantly of a 'comma' shape. Vs have a particularly distinctive shape, with greater slope on left line. Size of letters decreases from left to right, as the stone-cutter runs out of room. Diminuitive 'o' at the end of line 3.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "38-40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "37-41 (final 'o' at the end of the line is 18mm)",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -63,9 +118,29 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "Found in excavations in Piazza Duomo in mid-March 1878",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1884-03",
+    "geo": [
+      37.987048,
+      13.696422
+    ]
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2022-07-13. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 2, shelf 4.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2022-07-13",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000184_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-13."
@@ -73,13 +148,22 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
+  "idno": {
+    "_": "2",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000184",
+    "isic000184",
     "funerary inscription for the slave ianuarius",
     "edited",
     "funerary",

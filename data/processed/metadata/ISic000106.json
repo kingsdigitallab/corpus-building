@@ -1,16 +1,35 @@
 {
   "file": "ISic000106",
-  "metadataFile": "metadata/ISic000106.json",
-  "htmlFile": "html/ISic000106.json",
-  "uri": "http://sicily.classics.ox.ac.uk/inscription/ISic000106",
+  "uri": "ISic000106",
   "title": "Fragmentary text of a publicly financed initiative",
   "status": "edited",
+  "editions": [
+    {
+      "_": "285120",
+      "type": "TM"
+    },
+    {
+      "_": "110879",
+      "type": "EDR"
+    },
+    {
+      "type": "EDH"
+    },
+    {
+      "_": "22100058",
+      "type": "EDCS"
+    },
+    {
+      "type": "PHI"
+    }
+  ],
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
     "cert": "low"
   },
+  "support": "Fragment of a yellow/brown limestone plaque. Broken on all sides and heavily abraded on surface. The second line is abraded and partially destroyed by later reuse: an oval slot/door jamb or similar was carved into stone. The back is flat, but for a teardrop shaped recess in centre of stone.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -21,34 +40,70 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "layoutDesc": {
-    "_": "chiselled",
-    "ana": "#execution.chiselled",
-    "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-  },
-  "letterHeight": [
+  "dimensions": [
     {
-      "l": "Line 1",
-      "from": "line1",
-      "to": "line1",
-      "h": "tallest letter 36 (but no letter complete)",
-      "unit": "mm"
+      "_": "18 (at highest)",
+      "unit": "cm",
+      "dimension": "height"
     },
     {
-      "l": "Line 2",
-      "from": "line2",
-      "to": "line2",
-      "h": "tallest letter 56 (but all other letters incomplete)",
-      "unit": "mm"
+      "_": "24 (at widest)",
+      "unit": "cm",
+      "dimension": "width"
     },
     {
-      "l": "Line 3",
-      "from": "line3",
-      "to": "line3",
-      "h": "46-51 (on surviving letters)",
-      "unit": "mm"
+      "_": "5.5",
+      "unit": "cm",
+      "dimension": "depth"
     }
   ],
+  "layoutDesc": {
+    "layout": {
+      "p": "Three lines of fragmentary Latin text. Triangular interpunct in line 2.",
+      "rs": {
+        "_": "chiselled",
+        "ana": "#execution.chiselled",
+        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+      },
+      "damage": ""
+    }
+  },
+  "handNote": {
+    "lettering": "Letters are tall, thin and crowded together, but nonetheless well-formed, with clean, straight serifs.",
+    "dimensions": [
+      {
+        "type": "letterHeight",
+        "l": "Line 1",
+        "from": "line1",
+        "to": "line1",
+        "h": "tallest letter 36 (but no letter complete)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "tallest letter 56 (but all other letters incomplete)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "46-51 (on surviving letters)",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 1 to 2",
+        "from": "line1",
+        "to": "line2",
+        "unit": "mm"
+      }
+    ]
+  },
   "notBefore": 1,
   "notAfter": 300,
   "places": [
@@ -65,9 +120,24 @@
     }
   ],
   "geo": [
-    37.98365,
-    13.69555
+    [
+      37.98365,
+      13.69555
+    ]
   ],
+  "provenanceFound": {
+    "_": "The place, date, and circumstances of the discovery are unknown, but the fragment is assumed to come from Termini Imerese",
+    "type": "found",
+    "subtype": "discovered"
+  },
+  "provenanceObserved": {
+    "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 3.",
+    "type": "observed",
+    "subtype": "autopsied",
+    "when": "2023-07-05",
+    "resp": "#AA"
+  },
+  "provenanceLost": null,
   "facsimile": {
     "url": "ISic000106_tiled.tif",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
@@ -75,13 +145,18 @@
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
+  "repository": {
+    "_": "Museo Civico Baldassare Romano",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/066"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la"
   },
   "placeName": "Thermae Himeraeae",
   "keywords": [
-    "http://sicily.classics.ox.ac.uk/inscription/isic000106",
+    "isic000106",
     "fragmentary text of a publicly financed initiative",
     "edited",
     "honorific",
