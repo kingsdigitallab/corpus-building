@@ -130,6 +130,7 @@
 				class:md={marker.markerSize === 'md'}
 				class:lg={marker.markerSize === 'lg'}
 				role="img"
+				aria-label={`Map marker for ${marker.inscriptions[0].title}`}
 			>
 				{#if marker.numberInscriptions > 1}
 					<span>{marker.numberInscriptions}</span>
