@@ -96,9 +96,6 @@ function getDimensions(xml) {
     xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
       ?.supportDesc?.support?.dimensions;
 
-  console.log(dimensions);
-
-  // Return empty array if dimensions is null/undefined
   if (!dimensions) return [];
 
   return Object.entries(dimensions).map(([key, value]) => ({
@@ -227,9 +224,16 @@ function getProvenance(xml, provenanceType, subtype = null) {
   // Convert to array if single element
   const provenanceArray = Array.isArray(provenance) ? provenance : [provenance];
 
-  return provenanceArray.find(
+  const found = provenanceArray.find(
     (p) => p.type === provenanceType && (!subtype || p.subtype === subtype)
   );
+
+  if (!found) return null;
+
+  return {
+    ...found,
+    geo: found.geo?.split(",").map((g) => parseFloat(g.trim())),
+  };
 }
 
 function getFacsimile(xml) {
