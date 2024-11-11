@@ -143,7 +143,7 @@
 	.inscription-map {
 		border: var(--border-size-1) solid var(--text-1);
 		font-family: var(--font-family);
-		height: 400px;
+		height: 600px;
 		width: 100%;
 
 		& .maplibregl-popup-content {
