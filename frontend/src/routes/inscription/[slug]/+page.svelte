@@ -228,11 +228,11 @@
 		gap: var(--size-8);
 		grid-template-columns: 2fr 1fr;
 
-		& h2::first-letter,
-		h3::first-letter,
-		h4::first-letter,
-		h5::first-letter,
-		h6::first-letter {
+		:global(h2::first-letter),
+		:global(h3::first-letter),
+		:global(h4::first-letter),
+		:global(h5::first-letter),
+		:global(h6::first-letter) {
 			text-transform: uppercase;
 		}
 	}
@@ -266,12 +266,12 @@
 		font-family: var(--font-family);
 		height: 300px;
 		width: 100%;
-	}
 
-	:global(.maplibregl-popup-content .popup) {
-		max-height: 200px;
-		max-width: 200px;
-		overflow: scroll;
+		:global(.maplibregl-popup-content .popup) {
+			max-height: 200px;
+			max-width: 200px;
+			overflow: scroll;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -279,7 +279,7 @@
 			grid-template-columns: 1fr;
 		}
 
-		#facsmile-images,
+		#facsimile-images,
 		#edition {
 			grid-column: 1;
 		}

@@ -52,7 +52,7 @@
 </svelte:head>
 
 <div class="theme-toggle">
-	<Button.Root on:click={handleThemeToggle} aria-label="Toggle colour scheme">
+	<Button.Root onclick={handleThemeToggle} aria-label="Toggle colour scheme">
 		{#if theme === 'light'}
 			<MoonIcon />
 		{:else}
@@ -63,7 +63,7 @@
 
 <style>
 	.theme-toggle {
-		& button {
+		:global(button) {
 			aspect-ratio: var(--ratio-square);
 			background: none;
 			border: none;
