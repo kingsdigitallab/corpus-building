@@ -19,6 +19,11 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Update symlinks
+        run: |
+          rm -f ./frontend/src/data/inscriptions
+          ln -s ./data/raw/inscriptions ./frontend/src/data/inscriptions
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -26,7 +31,7 @@ jobs:
 
       - name: Create .env file
         run: |
-          touch .env
+          touch ./frontend/.env
           echo DEBUG=true >> ./frontend/.env
 
       - name: Install dependencies
