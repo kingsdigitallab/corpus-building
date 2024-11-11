@@ -100,6 +100,10 @@
 	}
 
 	:global(.copy-to-clipboard) {
+		background: none;
+		border: none;
 		cursor: copy;
+		padding: 0;
+		text-decoration: underline;
 	}
 </style>
