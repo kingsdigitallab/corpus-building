@@ -50,7 +50,7 @@
 								<td>{violation.description}</td>
 								<td>
 									<a
-										href="#copy-target"
+										href="javascript:void(0)"
 										class="copy-to-clipboard"
 										onclick={(event) => copyTargetToClipboard(event, violation.nodes[0].target)}
 										>{violation.nodes[0].target}</a
