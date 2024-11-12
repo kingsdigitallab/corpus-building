@@ -22,7 +22,7 @@ jobs:
       - name: Update symlinks
         run: |
           rm -f ./frontend/src/data/inscriptions
-          ln -s ./data/raw/inscriptions ./frontend/src/data/inscriptions
+          ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
