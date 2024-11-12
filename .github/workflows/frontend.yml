@@ -15,7 +15,14 @@ jobs:
         node-version: [20.x]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Update symlinks
+        run: |
+          rm -f ./frontend/src/data/inscriptions
+          ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -24,7 +31,7 @@ jobs:
 
       - name: Create .env file
         run: |
-          touch .env
+          touch ./frontend/.env
           echo DEBUG=true >> ./frontend/.env
 
       - name: Install dependencies
@@ -40,7 +47,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "ci(frontend): update test results"
-          file_pattern: "frontend/test-results/*.json"
+          file_pattern: "frontend/src/lib/prerender-errors.json frontend/test-results/*.json"
 
       - name: Build
         run: |

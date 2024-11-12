@@ -129,11 +129,13 @@
 		<section id="provenance">
 			<h2>Provenance</h2>
 			<dl>
-				<dt>Place of origin</dt>
-				<dd>
-					{metadata.places[0].offset || ''}
-					<a href={metadata.places[0].ref}>{metadata.places[0]._}</a>
-				</dd>
+				{#if metadata.places.length}
+					<dt>Place of origin</dt>
+					<dd>
+						{metadata.places[0].offset || ''}
+						<a href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+					</dd>
+				{/if}
 				<dt>Provenance found</dt>
 				<dd>{metadata.provenanceFound._}</dd>
 				{#if metadata.provenanceFound.geo}

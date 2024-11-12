@@ -1,7 +1,6 @@
 <script>
-	import { preventDefault } from 'svelte/legacy';
-
 	import BaseLink from '$lib/components/BaseLink.svelte';
+	import { Button } from 'bits-ui';
 
 	/**
 	 * @typedef {Object} Props
@@ -49,12 +48,12 @@
 								<td>{violation.impact}</td>
 								<td>{violation.description}</td>
 								<td>
-									<a
-										href="#copy-target"
+									<Button.Root
 										class="copy-to-clipboard"
 										onclick={(event) => copyTargetToClipboard(event, violation.nodes[0].target)}
-										>{violation.nodes[0].target}</a
 									>
+										{violation.nodes[0].target}
+									</Button.Root>
 								</td>
 								<td><a href={violation.helpUrl}>{violation.help}</a></td>
 							</tr>
@@ -100,7 +99,11 @@
 		width: 100%;
 	}
 
-	.copy-to-clipboard {
+	:global(.copy-to-clipboard) {
+		background: none;
+		border: none;
 		cursor: copy;
+		padding: 0;
+		text-decoration: underline;
 	}
 </style>

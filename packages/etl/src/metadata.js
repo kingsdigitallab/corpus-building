@@ -230,10 +230,28 @@ function getProvenance(xml, provenanceType, subtype = null) {
 
   if (!found) return null;
 
-  return {
-    ...found,
-    geo: found.geo?.split(",").map((g) => parseFloat(g.trim())),
-  };
+  // geo can either be a string or an object in the format { _: '37.967227, 13.198435', cert: 'medium' }
+  let geo = found.geo;
+  if (geo && geo.cert) {
+    found.geoCert = geo.cert;
+    geo = geo._;
+  }
+  geo = geo?.split(",").map((g) => parseFloat(g.trim()));
+
+  if (
+    geo &&
+    geo.length === 2 &&
+    geo[0] >= -180 &&
+    geo[0] <= 180 &&
+    geo[1] >= -90 &&
+    geo[1] <= 90
+  ) {
+    found.geo = geo;
+  } else {
+    found.geo = null;
+  }
+
+  return found;
 }
 
 function getFacsimile(xml) {
