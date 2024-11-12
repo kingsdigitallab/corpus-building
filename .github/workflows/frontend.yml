@@ -47,7 +47,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "ci(frontend): update test results"
-          file_pattern: "frontend/test-results/*.json"
+          file_pattern: "frontend/src/lib/prerender-errors.json frontend/test-results/*.json"
 
       - name: Build
         run: |
