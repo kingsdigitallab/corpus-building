@@ -85,15 +85,21 @@
 				<h3>Support</h3>
 				<dl>
 					<dt>Description</dt>
-					<dd>{metadata.support}</dd>
+					<dd>{metadata.support || config.EMPTY_PLACEHOLDER}</dd>
+					<dt>Object type</dt>
 					{#if metadata.objectType}
-						<dt>Object type</dt>
 						<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+					{:else}
+						<dd>{config.EMPTY_PLACEHOLDER}</dd>
 					{/if}
 					<dt>Material</dt>
 					<dd><a href={metadata.material.ref}>{metadata.material._}</a></dd>
 					<dt>Condition</dt>
-					<dd>TODO: add condition</dd>
+					{#if metadata.condition?.ana}
+						<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
+					{:else}
+						<dd>{metadata.condition._ || config.EMPTY_PLACEHOLDER}</dd>
+					{/if}
 					<dt>Dimensions</dt>
 					<dd>
 						{#each metadata.dimensions as dimension, index}
@@ -107,11 +113,15 @@
 				<h3>Inscription</h3>
 				<dl>
 					<dt>Layout</dt>
-					<dd>{metadata.layoutDesc.layout.p}</dd>
+					<dd>{metadata.layoutDesc.layout.p || config.EMPTY_PLACEHOLDER}</dd>
 					<dt>Text condition</dt>
-					<dd>{metadata.layoutDesc.layout.damage || config.EMPTY_PLACEHOLDER}</dd>
+					{#if metadata.layoutDesc.layout.damage.ana}
+						<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
+					{:else}
+						<dd>{metadata.layoutDesc.layout.damage._ || config.EMPTY_PLACEHOLDER}</dd>
+					{/if}
 					<dt>Lettering</dt>
-					<dd>{metadata.handNote.lettering}</dd>
+					<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
 					<dt>Letter heights</dt>
 					{#each metadata.handNote.dimensions.filter((dim) => dim.type === 'letterHeight') as dimension}
 						<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
@@ -129,16 +139,18 @@
 		<section id="provenance">
 			<h2>Provenance</h2>
 			<dl>
+				<dt>Place of origin</dt>
 				{#if metadata.places.length}
-					<dt>Place of origin</dt>
 					<dd>
 						{metadata.places[0].offset || ''}
 						<a href={metadata.places[0].ref}>{metadata.places[0]._}</a>
 					</dd>
+				{:else}
+					<dd>{config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Provenance found</dt>
-				<dd>{metadata.provenanceFound._}</dd>
-				{#if metadata.provenanceFound.geo}
+				<dd>{metadata.provenanceFound?._ || config.EMPTY_PLACEHOLDER}</dd>
+				{#if metadata.provenanceFound?.geo}
 					{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
 					<dt>Map</dt>
 					<dd>
@@ -176,7 +188,7 @@
 							{metadata.idno._}{/if}
 					</dd>
 					<dt>Autopsy</dt>
-					<dd>{metadata.provenanceObserved._}</dd>
+					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
 					<dt>Map</dt>
 					<dd>TODO: use the geo information in the museums dataset</dd>
 				</dl>
@@ -188,7 +200,7 @@
 			<InscriptionDate inscription={metadata} />
 			<dl>
 				<dt>Evidence</dt>
-				<dd>{metadata.evidence}</dd>
+				<dd>{metadata.evidence || config.EMPTY_PLACEHOLDER}</dd>
 			</dl>
 		</section>
 
@@ -213,7 +225,7 @@
 			<h2>Citation and editorial status</h2>
 			<dl>
 				<dt>Citation</dt>
-				<dd>{metadata.citation}</dd>
+				<dd>{metadata.citation || config.EMPTY_PLACEHOLDER}</dd>
 			</dl>
 		</section>
 	</div>
