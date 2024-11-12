@@ -1,8 +1,8 @@
 {
   "file": "ISic001686",
   "uri": "ISic001686",
-  "title": "I.Sicily inscription 001686",
-  "status": "draft",
+  "title": "Fragment of an honorific",
+  "status": "edited",
   "editions": [
     {
       "type": "TM"
@@ -14,6 +14,7 @@
       "type": "EDH"
     },
     {
+      "_": "60800053",
       "type": "EDCS"
     },
     {
@@ -25,7 +26,13 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
-  "support": "Large slab of white crystalline marble. Intact top and left, but broken on right and below. Left edge only roughly finished; top edge neatly finished. Circular hole drilled in middle of the top edge, and on the right side there is a clamp hole. Reverse side has brown discolouration / encrustation, thefront is clean. A second text on the reverse, the clamp holes and letter forms imply this is the secondary text, the text on the reverse the primary.",
+  "support": {
+    "_": "Large slab of white crystalline marble. Intact top and left, but broken on right and below. Left edge only roughly finished; top edge neatly finished. Circular hole drilled in middle of the top edge, and on the right side there is a clamp hole. Reverse side has brown discolouration / encrustation, the front is clean. A second text  on the other side, the clamp holes and letter forms imply this is the secondary text, the text on the other side the primary.",
+    "ref": {
+      "_": "ISic000726",
+      "sameAs": "ISic000726.xml"
+    }
+  },
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -35,6 +42,9 @@
     "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+  },
+  "condition": {
+    "ana": "#condition.fragment"
   },
   "dimensions": [
     {
@@ -55,21 +65,42 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Three lines of Latin letters, the first two with a consistent right margin, the third finishing much shorter, and a clear vacat below (up to c.50 mm) suggesting any fourth line significantly shorter. Lines 2 and 3 have guidelines along the upper edge of the line.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Somewhat crudely v-cut letters of rather stocky form, with simple serifs. P is open, R closed with straight tail. G has a very curved hook. A simple dash form interpunct at end of line 2, but not between the abbreviations in line 2.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
+        "h": "51-55",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "51-55",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "50",
         "unit": "mm"
       },
       {
@@ -77,6 +108,15 @@
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
+        "h": "4-7",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "7",
         "unit": "mm"
       }
     ]
@@ -102,14 +142,17 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Found in the area of S. Lucia, July 1917.",
+    "_": "Found in the area of S. Lucia, July 1917, acquired by Orsi for the museum on 6 August 1917.",
     "type": "found",
     "subtype": "discovered",
     "when": "1917-07",
-    "geo": null
+    "geo": [
+      37.0724766,
+      15.289337
+    ]
   },
   "provenanceObserved": {
-    "_": "2016-10-10, Magazzino B, cassa 33.",
+    "_": "Prag 2016-10-10, Magazzino B, cassa 33.",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -117,7 +160,7 @@
   "provenanceLost": null,
   "facsimile": {
     "url": "ISic001686_tiled.tif",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2016-10-10"
   },
   "country": "Italy",
   "region": "Sicily",
@@ -138,8 +181,8 @@
   "placeName": "Syracusae",
   "keywords": [
     "isic001686",
-    "i.sicily inscription 001686",
-    "draft",
+    "fragment of an honorific",
+    "edited",
     "honorific",
     "plaque",
     "marble",

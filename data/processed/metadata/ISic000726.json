@@ -1,8 +1,8 @@
 {
   "file": "ISic000726",
   "uri": "ISic000726",
-  "title": "I.Sicily inscription 000726",
-  "status": "draft",
+  "title": "Fragment of a dedication to a Roman emperor",
+  "status": "edited",
   "editions": [
     {
       "_": "175780",
@@ -27,7 +27,13 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
-  "support": "Large slab of white crystalline marble. Intact top and left, but broken on right and below. Left edge only roughly finished; top edge neatly finished. circular hole drilled in middle of the top edge, and on the rear of the left side there is a clamp hole. Front side has brown discolouration / encrustation, the rear is clean. A second text on the reverse, the clamp holes and letter forms imply this is the primary text, the reverse the re-use.",
+  "support": {
+    "_": "Large slab of white crystalline marble. Intact top and left, but broken on right and below. Left edge only roughly finished; top edge neatly finished. circular hole drilled in middle of the top edge, and on the rear of the left side there is a clamp hole. Front side has brown discolouration / encrustation, the rear is clean. A second text on the reverse , the clamp holes and letter forms imply this is the primary text, the reverse the re-use.",
+    "ref": {
+      "_": "ISic001686",
+      "sameAs": "ISic001686.xml"
+    }
+  },
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -37,6 +43,9 @@
     "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+  },
+  "condition": {
+    "ana": "#condition.fragment"
   },
   "dimensions": [
     {
@@ -57,21 +66,42 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The first line is set to the left, with lines 2 and 3 indented by 1.5 letter spaces. The text reduces in size in line 3, and the gap visible below line 3 (up to 32 mm)  is greater than the normal interlineation. Guidelines are visible in lines 2-3, but the letters do not appear to follow them.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Elegant well-spaced quite wide letters with a thin v-cut and pronounced curving serifs on almost all terminations. Letters tend to curvature (e.g. bottom stroke of E, the hook of the G, the tail of the R).P and R are open, G is rounded.  Interpunct not visible in line 1.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
+        "h": "50-55",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "50-53",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "47-52",
         "unit": "mm"
       },
       {
@@ -79,12 +109,22 @@
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
+        "h": "14",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "11-13",
         "unit": "mm"
       }
     ]
   },
-  "notBefore": null,
-  "notAfter": null,
+  "notBefore": 116,
+  "notAfter": 116,
+  "evidence": "office",
   "places": [
     {
       "_": "Syracusae",
@@ -104,14 +144,17 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Found in the area of S. Lucia, July 1917.",
+    "_": "Found in the area of S. Lucia, July 1917, acquired by Orsi for the museum on 6 August 1917.",
     "type": "found",
     "subtype": "discovered",
     "when": "1917-07",
-    "geo": null
+    "geo": [
+      37.0724766,
+      15.289337
+    ]
   },
   "provenanceObserved": {
-    "_": "2016-10-10, Magazzino B, cassa 33.",
+    "_": "Prag 2016-10-10, Magazzino B, cassa 33.",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -119,7 +162,7 @@
   "provenanceLost": null,
   "facsimile": {
     "url": "ISic000726_tiled.tif",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2016-10-10"
   },
   "country": "Italy",
   "region": "Sicily",
@@ -140,11 +183,13 @@
   "placeName": "Syracusae",
   "keywords": [
     "isic000726",
-    "i.sicily inscription 000726",
-    "draft",
+    "fragment of a dedication to a roman emperor",
+    "edited",
     "honorific",
     "plaque",
     "marble",
+    "116",
+    "116",
     "syracusae",
     "siracusa",
     "italy",

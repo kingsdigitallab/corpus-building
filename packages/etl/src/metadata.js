@@ -23,6 +23,7 @@ export async function extractMetadata(xmlString) {
     support: getSupport(xml),
     objectType: getObjectType(xml),
     material: getMaterial(xml),
+    condition: getCondition(xml),
     dimensions: getDimensions(xml),
     layoutDesc: getLayoutDesc(xml),
     handNote: getHandNote(xml),
@@ -89,6 +90,11 @@ function getObjectType(xml) {
 function getMaterial(xml) {
   return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
     ?.supportDesc?.support?.material;
+}
+
+function getCondition(xml) {
+  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+    ?.supportDesc?.condition;
 }
 
 function getDimensions(xml) {

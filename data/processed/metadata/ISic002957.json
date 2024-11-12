@@ -1,7 +1,7 @@
 {
   "file": "ISic002957",
   "uri": "ISic002957",
-  "title": "I.Sicily inscription 002957",
+  "title": "Fragment of a Latin inscription (funerary?)",
   "status": "draft",
   "editions": [
     {
@@ -25,12 +25,23 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
+    "cert": "low"
+  },
+  "support": "A fragment of a Latin text, presumably a plaque, but with no description beyond the presentation in CIL, which suggests possibly intact on the left side, but broken on the other three.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259",
+    "cert": "low"
   },
   "material": {
     "_": "stone",
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
+  },
+  "condition": {
+    "ana": "#condition.fragment"
   },
   "dimensions": [
     {
@@ -53,10 +64,13 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "The CIL text suggests use of both hedera and interpuncts.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -95,8 +109,10 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Seen by Dessau in a courtyard of the Hotel Bellevue (later Metropole) at a date before 1883, and not seen since.",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1883",
     "geo": null
   },
   "provenanceObserved": {
@@ -105,11 +121,13 @@
     "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "facsimile": {
-    "url": "ISic002957_tiled.tif",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
   },
+  "facsimile": null,
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
@@ -121,9 +139,10 @@
   "placeName": "Tauromenium",
   "keywords": [
     "isic002957",
-    "i.sicily inscription 002957",
+    "fragment of a latin inscription (funerary?)",
     "draft",
     "funerary",
+    "plaque",
     "stone",
     "1",
     "400",

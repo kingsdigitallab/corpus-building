@@ -140,6 +140,7 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
 
         delete result.editions;
         delete result.support;
+        delete result.condition;
         delete result.dimensions;
         delete result.layoutDesc;
         delete result.handNote;
