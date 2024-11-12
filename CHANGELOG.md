@@ -1,5 +1,13 @@
 
 
+# [0.10.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.9.1...v0.10.0) (2024-11-12)
+
+
+### Features
+
+* **etl:** extract condition data ([c8e988e](https://github.com/kingsdigitallab/corpus-building/commit/c8e988ea36f285f67c67a7cd71fcf2c848449080))
+* **inscription:** output empty placeholder when no data is available ([bab8046](https://github.com/kingsdigitallab/corpus-building/commit/bab80462ddc40b66ef0a471e09aaa436a38473cc))
+
 ## [0.9.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.9.0...v0.9.1) (2024-11-12)
 
 
