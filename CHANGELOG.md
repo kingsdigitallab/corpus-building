@@ -1,5 +1,17 @@
 
 
+## [0.9.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.9.0...v0.9.1) (2024-11-12)
+
+
+### Bug Fixes
+
+* **_qa:** replace link with button ([38bc805](https://github.com/kingsdigitallab/corpus-building/commit/38bc805804dc0b7573cdb34ffea909cd30deb197))
+* **_qa:** set href to javascript:void(0) ([afff7e7](https://github.com/kingsdigitallab/corpus-building/commit/afff7e7d7b4e1224b96aaa3b1df304172c25b333))
+* **data:** upload latest version of processed data ([cad351b](https://github.com/kingsdigitallab/corpus-building/commit/cad351b122e01cf62c4e8a92e6aa081e28c8867b))
+* **inscription:** check if there are places associated with the inscription ([bd34f6a](https://github.com/kingsdigitallab/corpus-building/commit/bd34f6a6b9d6c77e1e73562a873d747e0341fd81))
+* **metadata:** check if geo is valid ([84a62fa](https://github.com/kingsdigitallab/corpus-building/commit/84a62fa50509bd411427f91e9483de9fa694b51e))
+* **qa:** style the copy to clipboard button ([8021987](https://github.com/kingsdigitallab/corpus-building/commit/8021987c8f32a1ac3675e51b53dbfcc49b74ad30))
+
 # [0.9.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.8.0...v0.9.0) (2024-11-11)
 
 
