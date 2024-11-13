@@ -123,11 +123,11 @@
 					<dt>Lettering</dt>
 					<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
 					<dt>Letter heights</dt>
-					{#each metadata.handNote.dimensions.filter((dim) => dim.type === 'letterHeight') as dimension}
+					{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
 						<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
 					{/each}
 					<dt>Interlinear heights</dt>
-					{#each metadata.handNote.dimensions.filter((dim) => dim.type === 'interlinear') as dimension}
+					{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
 						<dd>
 							{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
 						</dd>
