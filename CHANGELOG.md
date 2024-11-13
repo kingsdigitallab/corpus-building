@@ -1,5 +1,12 @@
 
 
+## [0.10.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.10.0...v0.10.1) (2024-11-13)
+
+
+### Bug Fixes
+
+* **inscription:** check dimensions are available ([3a05ddb](https://github.com/kingsdigitallab/corpus-building/commit/3a05ddb29beb79ea40e89da215684ed64996e45f))
+
 # [0.10.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.9.1...v0.10.0) (2024-11-12)
 
 
