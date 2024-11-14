@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
+	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
@@ -20,7 +21,6 @@
 	const apparatus = html.divs.find((div) => div.id === 'apparatus');
 	const translations = html.divs.filter((div) => div.id === 'translation');
 	const commentary = html.divs.find((div) => div.id === 'commentary');
-	const bibliography = html.divs.filter((div) => div.id === 'bibliography');
 
 	let tileSources = images.map(
 		(/** @type Object<String, string> */ image) =>
@@ -213,11 +213,16 @@
 			{@html commentary.html}
 		</section>
 
-		{#if bibliography.length}
+		{#if metadata.bibliographyEdition?.bibl?.length}
 			<section id="bibliography">
-				{#each bibliography as bib}
-					{@html bib.html}
-				{/each}
+				<h2>Bibliography</h2>
+				<ul class="bibliography-list">
+					{#each metadata.bibliographyEdition.bibl as entry}
+						<li>
+							<BibliographyEntry {entry} />
+						</li>
+					{/each}
+				</ul>
 			</section>
 		{/if}
 
