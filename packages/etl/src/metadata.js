@@ -35,6 +35,8 @@ export async function extractMetadata(xmlString) {
     facsimile: getFacsimile(xml),
     ...getMsIdentifier(xml),
     textLang: getTextLang(xml),
+    bibliographyEdition: getBibliography(xml, "edition"),
+    bibliographyDiscussion: getBibliography(xml, "discussion"),
   };
 
   metadata.placeName = metadata.places[0]?._;
@@ -290,6 +292,20 @@ function getMsIdentifier(xml) {
 
 function getTextLang(xml) {
   return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents.textLang;
+}
+
+function getBibliography(xml, bibliographyType = "edition") {
+  let bibliography = xml.TEI.text.body.div.find(
+    (div) => div.type === "bibliography"
+  )?.listBibl;
+
+  if (!bibliography) return [];
+
+  if (!Array.isArray(bibliography)) {
+    bibliography = [bibliography];
+  }
+
+  return bibliography.find((listBibl) => listBibl.type === bibliographyType);
 }
 
 function getKeywords(metadata) {

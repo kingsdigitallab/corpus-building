@@ -148,6 +148,8 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         delete result.provenanceObserved;
         delete result.provenanceLost;
         delete result.repository;
+        delete result.bibliographyEdition;
+        delete result.bibliographyDiscussion;
 
         results.push(result);
 
