@@ -5,6 +5,7 @@
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
+	import EditionEntry from '$lib/components/EditionEntry.svelte';
 
 	/**
 	 * @typedef {Object} Props
@@ -213,18 +214,31 @@
 			{@html commentary.html}
 		</section>
 
-		{#if metadata.bibliographyEdition?.bibl?.length}
-			<section id="bibliography">
-				<h2>Bibliography</h2>
-				<ul class="bibliography-list">
-					{#each metadata.bibliographyEdition.bibl as entry}
-						<li>
-							<BibliographyEntry {entry} />
-						</li>
-					{/each}
-				</ul>
-			</section>
-		{/if}
+		<section id="bibliography">
+			<h2>Bibliography</h2>
+			<dl>
+				<dt>Digital editions</dt>
+				<dd>
+					<ul>
+						{#each metadata.editions as edition}
+							<li><EditionEntry {edition} /></li>
+						{/each}
+					</ul>
+				</dd>
+				{#if metadata.bibliographyEdition?.bibl?.length}
+					<dt>Printed editions</dt>
+					<dd>
+						<ul class="bibliography-list">
+							{#each metadata.bibliographyEdition.bibl as entry}
+								<li>
+									<BibliographyEntry {entry} />
+								</li>
+							{/each}
+						</ul>
+					</dd>
+				{/if}
+			</dl>
+		</section>
 
 		<section id="citation-and-status">
 			<h2>Citation and editorial status</h2>
