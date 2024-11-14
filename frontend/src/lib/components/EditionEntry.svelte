@@ -28,7 +28,6 @@
 		switch (type) {
 			case 'DOI':
 				return digitalEditionUrls.DOI + value;
-
 			case 'EDR':
 			case 'EDH':
 				return digitalEditionUrls[type] + padToSixDigits(value);
