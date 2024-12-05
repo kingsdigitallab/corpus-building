@@ -7,7 +7,8 @@ export const description = `${title} is dedicated to the inscribed texts from an
 export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
 export const search = {
-	limit: 20
+	limit: 20,
+	maxLimit: 5000
 };
 
 export const imageServer =
