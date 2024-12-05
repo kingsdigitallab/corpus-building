@@ -16,7 +16,7 @@
 
 	let map = $state();
 
-	/** @type HTMLDivElement */
+	/** @type {HTMLDivElement | undefined} */
 	let mapContainer = $state();
 
 	let inscriptionsByGeo = $derived(
@@ -105,7 +105,7 @@
 		return `${html}<dl>${items}</dl></div>`;
 	}
 
-	onMount(() => {
+	onMount(async () => {
 		map = new Map({
 			container: mapContainer,
 			style: 'https://api.maptiler.com/maps/positron/style.json?key=brTBbnRxuiKp6PgjwFPr',
@@ -116,29 +116,37 @@
 		map.addControl(new NavigationControl({ showCompass: true, showZoom: true }));
 	});
 
-	onDestroy(() => map?.remove());
+	onDestroy(async () => {
+		if (map) {
+			map.remove();
+			map = undefined;
+			mapContainer = undefined;
+		}
+	});
 </script>
 
-<div class="inscription-map" class:hidden={!show} bind:this={mapContainer}>
-	{#if map && markers}
-		{#each markers as marker}
-			<div
-				use:addMarkerAction={{ coords: marker.coords, inscriptions: marker.inscriptions }}
-				class="marker"
-				class:single={marker.markerSize === 'single'}
-				class:sm={marker.markerSize === 'sm'}
-				class:md={marker.markerSize === 'md'}
-				class:lg={marker.markerSize === 'lg'}
-				role="img"
-				aria-label={`Map marker for ${marker.inscriptions[0].title}`}
-			>
-				{#if marker.numberInscriptions > 1}
-					<span>{marker.numberInscriptions}</span>
-				{/if}
-			</div>
-		{/each}
-	{/if}
-</div>
+{#if show}
+	<div class="inscription-map" bind:this={mapContainer}>
+		{#if map && markers}
+			{#each markers as marker}
+				<div
+					use:addMarkerAction={{ coords: marker.coords, inscriptions: marker.inscriptions }}
+					class="marker"
+					class:single={marker.markerSize === 'single'}
+					class:sm={marker.markerSize === 'sm'}
+					class:md={marker.markerSize === 'md'}
+					class:lg={marker.markerSize === 'lg'}
+					role="img"
+					aria-label={`Map marker for ${marker.inscriptions[0].title}`}
+				>
+					{#if marker.numberInscriptions > 1}
+						<span>{marker.numberInscriptions}</span>
+					{/if}
+				</div>
+			{/each}
+		{/if}
+	</div>
+{/if}
 
 <style>
 	.inscription-map {
@@ -210,9 +218,5 @@
 
 		background-color: var(--blue-10);
 		color: white;
-	}
-
-	.hidden {
-		display: none;
 	}
 </style>
