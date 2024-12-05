@@ -14,7 +14,7 @@
 	const searchPage = queryParam('page', ssp.number(1));
 	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
 
-	/** {'cards' | 'map' | 'table'} */
+	/** @type {'cards' | 'map' | 'table'} */
 	let view = $state('cards');
 
 	/** @type {import('./worker.js').WorkerStatus} */
@@ -32,17 +32,15 @@
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
 	let inscriptionsGeo = $derived(
-		view === 'map'
-			? inscriptions.map((inscription) => ({
-					file: inscription.file,
-					title: inscription.title,
-					places: inscription.places,
-					geo: inscription.geo[0]
-				}))
-			: []
+		inscriptions?.map((inscription) => ({
+			file: inscription.file,
+			title: inscription.title,
+			places: inscription.places,
+			geo: inscription.geo[0]
+		}))
 	);
 
-	function init() {
+	async function init() {
 		if (searchStatus === 'ready') return;
 
 		searchStatus = 'load';
@@ -86,13 +84,11 @@
 		postSearchMessage();
 	});
 
-	function postSearchMessage() {
+	async function postSearchMessage() {
 		if (searchStatus === 'ready') {
-			const limit = view === 'map' ? config.search.maxLimit : config.search.limit;
-
 			searchWorker.postMessage({
 				type: 'search',
-				data: { limit, page: $searchPage, query: $searchQuery }
+				data: { limit: $searchLimit, page: $searchPage, query: $searchQuery }
 			});
 		}
 	}
@@ -106,6 +102,29 @@
 		$searchQuery = '';
 		$searchPage = 1;
 		$searchLimit = config.search.limit;
+	}
+
+	/**
+	 * @param {'cards' | 'map' | 'table'} newView
+	 */
+	async function handleViewChange(newView) {
+		if (newView === 'map') {
+			$searchLimit = config.search.maxLimit;
+		} else if (view === 'map') {
+			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
+			searchResults = {
+				...searchResults,
+				data: {
+					...searchResults.data,
+					items: []
+				}
+			};
+
+			$searchLimit = config.search.limit;
+			$searchPage = 1;
+		}
+
+		view = newView;
 	}
 
 	/**
@@ -153,19 +172,19 @@
 				<div class="toggles">
 					<Button.Root
 						class={`${view === 'cards' ? 'surface-4' : 'surface-1'}`}
-						onclick={() => (view = 'cards')}
+						onclick={() => handleViewChange('cards')}
 					>
 						<LayoutGridIcon />View cards
 					</Button.Root>
 					<Button.Root
 						class={`${view === 'map' ? 'surface-4' : 'surface-1'}`}
-						onclick={() => (view = 'map')}
+						onclick={() => handleViewChange('map')}
 					>
 						<MapIcon />View map
 					</Button.Root>
 					<Button.Root
 						class={`${view === 'table' ? 'surface-4' : 'surface-1'}`}
-						onclick={() => (view = 'table')}
+						onclick={() => handleViewChange('table')}
 					>
 						<TableIcon />View table
 					</Button.Root>
