@@ -1,14 +1,16 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade, slide } from 'svelte/transition';
 	import { Button } from 'bits-ui';
 	import SearchWorker from './worker.js?worker';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 	import * as config from '$lib/config';
-	import { LayoutGridIcon, MapIcon, TableIcon } from 'lucide-svelte';
-	import InscriptionTable from '../InscriptionTable.svelte';
-	import InscriptionList from '../InscriptionList.svelte';
-	import InscriptionMap from '../InscriptionMap.svelte';
-	import InscriptionPagination from '../InscriptionPagination.svelte';
+	import { FilterIcon, LayoutGridIcon, MapIcon, TableIcon } from 'lucide-svelte';
+	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
+	import InscriptionList from '$lib/components/InscriptionList.svelte';
+	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
+	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
+	import SearchSummary from './SearchSummary.svelte';
 
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
@@ -40,6 +42,18 @@
 		}))
 	);
 
+	let showFilters = $state(false);
+
+	/** @type {string[]} */
+	let placeNameFilters = $state([]);
+	/** @type {string[]} */
+	let statusFilters = $state([]);
+
+	let selectedFilters = $derived({
+		placeName: placeNameFilters,
+		status: statusFilters
+	});
+
 	async function init() {
 		if (searchStatus === 'ready') return;
 
@@ -57,12 +71,16 @@
 
 				if (type === 'results') {
 					searchResults = data;
+					console.debug(data);
 				}
 			}
 		);
 		searchWorker.postMessage({ type: 'load' });
 	}
 
+	/**
+	 * @returns {number}
+	 */
 	function getYearSpan() {
 		if (!searchAggregations) return 0;
 		if (!searchAggregations?.notAfter && !searchAggregations?.notBefore) return 0;
@@ -86,9 +104,18 @@
 
 	async function postSearchMessage() {
 		if (searchStatus === 'ready') {
+			const filters = Object.fromEntries(
+				Object.keys(selectedFilters).map((key) => [key, [...selectedFilters[key]]])
+			);
+
 			searchWorker.postMessage({
 				type: 'search',
-				data: { limit: $searchLimit, page: $searchPage, query: $searchQuery }
+				data: {
+					limit: $searchLimit,
+					page: $searchPage,
+					query: $searchQuery,
+					filters
+				}
 			});
 		}
 	}
@@ -153,21 +180,27 @@
 			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
 			<Button.Root class="surface-1" type="reset" disabled={!$searchQuery}>Reset</Button.Root>
 		</form>
+		<div class="filters-toggle">
+			<Button.Root
+				class={showFilters ? 'surface-4' : 'surface-1'}
+				onclick={() => (showFilters = !showFilters)}
+			>
+				<FilterIcon />Filters
+			</Button.Root>
+		</div>
 	</section>
 
 	<section class="inscriptions">
 		{#if isLoading}
 			<h2 aria-busy="true">Loading inscriptions...</h2>
 		{:else}
-			<h2>
-				<em>{total.toLocaleString()}</em> Inscriptions over
-				<em>{yearSpan.toLocaleString()}</em>
-				years across
-				<em>{numberOfLocations.toLocaleString()}</em>
-				locations{#if $searchQuery}, matching
-					<em>{$searchQuery.split(' ').join(', ')}</em>
-				{/if}
-			</h2>
+			<SearchSummary
+				{total}
+				{yearSpan}
+				{numberOfLocations}
+				query={$searchQuery}
+				filters={selectedFilters}
+			/>
 			<section class="controls">
 				<div class="toggles">
 					<Button.Root
@@ -191,7 +224,9 @@
 				</div>
 			</section>
 			{#if view === 'map'}
-				<InscriptionMap inscriptions={inscriptionsGeo} />
+				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
+					<InscriptionMap inscriptions={inscriptionsGeo} />
+				</div>
 			{:else}
 				<InscriptionPagination
 					page={$searchPage}
@@ -199,11 +234,19 @@
 					perPage={$searchLimit}
 					onPageChange={handlePageChange}
 				/>
-				{#if view === 'table'}
-					<InscriptionTable {inscriptions} />
-				{:else}
-					<InscriptionList {inscriptions} />
-				{/if}
+				{#key view}
+					<div
+						class="transition-container"
+						in:fade={{ duration: 500 }}
+						out:fade={{ duration: 250 }}
+					>
+						{#if view === 'table'}
+							<InscriptionTable {inscriptions} />
+						{:else}
+							<InscriptionList {inscriptions} />
+						{/if}
+					</div>
+				{/key}
 				<InscriptionPagination
 					page={$searchPage}
 					count={total}
@@ -214,6 +257,46 @@
 		{/if}
 	</section>
 </article>
+
+{#if showFilters}
+	<aside class="filters" transition:slide={{ axis: 'x' }}>
+		<section>
+			<h2>Filters</h2>
+			<div class="filter-groups">
+				{#if searchAggregations?.status}
+					<div class="filter-group">
+						<h3>{searchAggregations.status.title}</h3>
+						<ul>
+							{#each searchAggregations.status.buckets as bucket}
+								<li>
+									<label>
+										<input type="checkbox" value={bucket.key} bind:group={statusFilters} />
+										{bucket.key} ({bucket.doc_count})
+									</label>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+				{#if searchAggregations?.placeName}
+					<div class="filter-group">
+						<h3>{searchAggregations.placeName.title}</h3>
+						<ul>
+							{#each searchAggregations.placeName.buckets as bucket}
+								<li>
+									<label>
+										<input type="checkbox" value={bucket.key} bind:group={placeNameFilters} />
+										{bucket.key} ({bucket.doc_count})
+									</label>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+			</div>
+		</section>
+	</aside>
+{/if}
 
 <style>
 	form {
@@ -242,6 +325,12 @@
 		text-align: center;
 	}
 
+	.filters-toggle {
+		display: flex;
+		justify-content: center;
+		margin-block: var(--size-4);
+	}
+
 	.controls {
 		border-bottom: var(--border-size-1) solid var(--gray-4);
 		display: flex;
@@ -250,6 +339,52 @@
 
 		& .toggles {
 			margin-block-end: var(--size-2);
+		}
+	}
+
+	.transition-container {
+		width: 100%;
+	}
+
+	.filters {
+		background: var(--surface-2);
+		border: var(--border-size-1) solid var(--surface-3);
+		border-radius: var(--radius-3);
+		padding: var(--size-4);
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: min(400px, 100vw);
+		overflow-y: auto;
+		z-index: 10;
+		box-shadow: var(--shadow-4);
+
+		& h2 {
+			font-size: var(--font-size-4);
+			margin-block-end: var(--size-4);
+			margin-block-start: var(--size-8);
+		}
+
+		& .filter-groups {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--size-4);
+		}
+
+		& .filter-group {
+			flex: 1;
+			min-width: 200px;
+
+			& h3 {
+				font-size: var(--font-size-2);
+				margin-block-end: var(--size-2);
+			}
+
+			& ul {
+				list-style: none;
+				padding: 0;
+			}
 		}
 	}
 </style>
