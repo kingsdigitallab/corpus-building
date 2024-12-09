@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fade, slide } from 'svelte/transition';
-	import { Button, Slider } from 'bits-ui';
+	import { fade } from 'svelte/transition';
+	import { Button } from 'bits-ui';
 	import SearchWorker from './worker.js?worker';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 	import * as config from '$lib/config';
