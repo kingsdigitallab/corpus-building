@@ -13,7 +13,7 @@
 	<td><InscriptionPlace {inscription} /></td>
 	<td>{inscription.status}</td>
 	<td>
-		{#if inscription.type.ref}
+		{#if inscription.type?.ref}
 			<a href={inscription.type.ref}>{inscription.type?._}</a>
 		{:else}
 			{inscription.type?._ || 'N/A'}
