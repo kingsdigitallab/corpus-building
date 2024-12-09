@@ -1,5 +1,4 @@
-import corpus from '$data/corpus.json';
-import * as config from '$lib/config';
+import corpus from '../../../data/corpus.json';
 import itemsjs from 'itemsjs';
 
 /**
@@ -161,7 +160,7 @@ function getHierarchicalValues(value, leaf = null) {
  * @param {SearchOptions} options
  */
 export function search({
-	limit = config.search.limit,
+	limit = 20,
 	page = 1,
 	query = '',
 	sort = 'file_asc',
