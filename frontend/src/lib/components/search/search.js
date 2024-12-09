@@ -7,24 +7,56 @@ import itemsjs from 'itemsjs';
  */
 let searchEngine;
 
-const searchConfig = {
+export const searchConfig = {
 	aggregations: {
 		notAfter: {
 			title: 'Not after',
 			hide_zero_doc_count: true,
 			show_facet_stats: true,
-			size: 1000
+			size: 1000,
+			sort: 'key'
 		},
 		notBefore: {
 			title: 'Not before',
 			hide_zero_doc_count: true,
 			show_facet_stats: true,
-			size: 1000
+			size: 1000,
+			sort: 'key'
+		},
+		language: {
+			title: 'Language',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
 		},
 		placeName: {
-			title: 'Place name',
+			title: 'Place',
 			hide_zero_doc_count: true,
-			size: 200
+			size: 200,
+			sort: 'key'
+		},
+		inscriptionType: {
+			title: 'Inscription type',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
+		},
+		objectType: {
+			title: 'Object type',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
+		},
+		material: {
+			title: 'Material',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
+		},
+		status: {
+			title: 'Status',
+			hide_zero_doc_count: true,
+			sort: 'key'
 		}
 	},
 	searchableFields: ['keywords', 'title', 'text'],
@@ -64,14 +96,56 @@ const searchConfig = {
 	}
 };
 
-export function load() {
+export function load({ sortAggregationsBy = 'key' } = {}) {
 	const processedCorpus = corpus.map((item) => ({
 		...item,
 		notAfter: item.notAfter ?? undefined,
-		notBefore: item.notBefore ?? undefined
+		notBefore: item.notBefore ?? undefined,
+		language: item.textLang?._?.trim() ?? undefined,
+		inscriptionType: item.type?._?.trim() ?? undefined,
+		objectType: getHierarchicalValues(item.objectType?.ana, item.objectType?._),
+		material: getHierarchicalValues(item.material?.ana)
 	}));
 
+	searchConfig.aggregations = Object.fromEntries(
+		Object.entries(searchConfig.aggregations).map(([key, agg]) => [
+			key,
+			{ ...agg, sort: sortAggregationsBy }
+		])
+	);
+
 	searchEngine = itemsjs(processedCorpus, searchConfig);
+}
+
+/**
+ *
+ * @param {string} value
+ * @param {string | null} leaf
+ * @returns {string[] | undefined}
+ */
+function getHierarchicalValues(value, leaf = null) {
+	if (!value) return undefined;
+
+	let parts = value
+		.replace('#', '')
+		.split('.')
+		.map((v) => v.trim());
+
+	if (parts.length === 1) {
+		return [parts[0]];
+	}
+
+	if (leaf) {
+		parts[parts.length - 1] = leaf.trim();
+	}
+
+	const hierarchicalValues = [];
+
+	for (let i = 1; i < parts.length + 1; i++) {
+		hierarchicalValues.push(parts.slice(0, i).join(':::'));
+	}
+
+	return hierarchicalValues;
 }
 
 /**
@@ -81,6 +155,7 @@ export function load() {
  *   page?: number;
  *   sort?: string;
  *   filters?: Record<string, any>;
+ *   dateRange?: [number | undefined, number | undefined];
  * }} SearchOptions
  *
  * @param {SearchOptions} options
@@ -90,8 +165,22 @@ export function search({
 	page = 1,
 	query = '',
 	sort = 'file_asc',
-	filters = {}
+	filters = {},
+	dateRange = [undefined, undefined]
 }) {
 	if (!searchEngine) load();
-	return searchEngine.search({ per_page: limit, page, query, sort, filters });
+	return searchEngine.search({
+		per_page: limit,
+		page,
+		query,
+		sort,
+		filters,
+		filter: function (item) {
+			if (!dateRange[0] && !dateRange[1]) return true;
+			return (
+				(!dateRange[0] || item.notBefore >= dateRange[0]) &&
+				(!dateRange[1] || item.notAfter <= dateRange[1])
+			);
+		}
+	});
 }

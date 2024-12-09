@@ -6,7 +6,7 @@ addEventListener('message', async (event) => {
 	const { type, data } = event.data;
 
 	if (type === 'load') {
-		load();
+		load(data);
 		postMessage({ type: 'ready' });
 	}
 
