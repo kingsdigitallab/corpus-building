@@ -43,7 +43,7 @@
 		}))
 	);
 
-	let showFilters = $state(true);
+	let showFilters = $state(false);
 
 	let filterOptions = $state({
 		sortAggregationsBy: 'key'
