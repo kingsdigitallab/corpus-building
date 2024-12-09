@@ -1,13 +1,15 @@
 <script>
-	let { total, yearSpan, numberOfLocations, query, filters } = $props();
+	let { total, dateRange, numberOfLocations, query, filters } = $props();
 
 	let hasSelectedFilters = $derived(Object.values(filters).some((filter) => filter.length > 0));
 </script>
 
 <h2>
-	<em>{total.toLocaleString()}</em> Inscriptions over
-	<em>{yearSpan.toLocaleString()}</em>
-	years across
+	<em>{total.toLocaleString()}</em> Inscriptions between
+	<em>{dateRange[0] > 0 ? `AD ${dateRange[0]}` : `${Math.abs(dateRange[0])} BC`}</em>
+	–
+	<em>{dateRange[1] > 0 ? `AD ${dateRange[1]}` : `${Math.abs(dateRange[1])} BC`}</em>
+	across
 	<em>{numberOfLocations.toLocaleString()}</em>
 	locations{#if query}, matching
 		<em>{query.split(' ').join(', ')}</em>
