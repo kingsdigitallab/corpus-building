@@ -5,7 +5,14 @@
 	import SearchWorker from './worker.js?worker';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 	import * as config from '$lib/config';
-	import { FilterIcon, LayoutGridIcon, MapIcon, TableIcon } from 'lucide-svelte';
+	import {
+		FilterIcon,
+		LayoutGridIcon,
+		LucideArrowDown,
+		LucideArrowUp,
+		MapIcon,
+		TableIcon
+	} from 'lucide-svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
 	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
@@ -45,8 +52,10 @@
 
 	let showFilters = $state(false);
 
-	let filterOptions = $state({
-		sortAggregationsBy: 'key'
+	let searchOptions = $state({
+		sortAggregationsBy: 'key',
+		sortResultsBy: 'file',
+		sortResultsOrder: 'asc'
 	});
 
 	let selectedDateRange = $state([-700, 1830]);
@@ -83,7 +92,7 @@
 		);
 		searchWorker.postMessage({
 			type: 'load',
-			data: { sortAggregationsBy: filterOptions.sortAggregationsBy }
+			data: { sortAggregationsBy: searchOptions.sortAggregationsBy }
 		});
 	}
 
@@ -110,6 +119,7 @@
 					limit: $searchLimit,
 					page: $searchPage,
 					query: $searchQuery,
+					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
 					filters,
 					dateRange: [...selectedDateRange]
 				}
@@ -129,10 +139,10 @@
 	}
 
 	$effect(() => {
-		if (filterOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
 			searchWorker.postMessage({
 				type: 'load',
-				data: { sortAggregationsBy: filterOptions.sortAggregationsBy }
+				data: { sortAggregationsBy: searchOptions.sortAggregationsBy }
 			});
 
 			postSearchMessage();
@@ -160,6 +170,10 @@
 		}
 
 		view = newView;
+	}
+
+	async function handleSortResultsOrderToggle() {
+		searchOptions.sortResultsOrder = searchOptions.sortResultsOrder === 'asc' ? 'desc' : 'asc';
 	}
 
 	/**
@@ -230,6 +244,27 @@
 						<TableIcon />View table
 					</Button.Root>
 				</div>
+				<div class="sort-controls">
+					<label for="sort-select">Sort by:</label>
+					<select id="sort-select" bind:value={searchOptions.sortResultsBy}>
+						<option value="file">File</option>
+						<option value="notBefore">Not before</option>
+						<option value="notAfter">Not after</option>
+						<option value="title">Title</option>
+					</select>
+
+					<Button.Root
+						class="order-toggle"
+						onclick={() => handleSortResultsOrderToggle()}
+						aria-label="Toggle sort order from ascending to descending to no order"
+					>
+						{#if searchOptions.sortResultsOrder === 'asc'}
+							<LucideArrowUp aria-label="Ascending" />
+						{:else}
+							<LucideArrowDown aria-label="Descending" />
+						{/if}
+					</Button.Root>
+				</div>
 			</section>
 			{#if view === 'map'}
 				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
@@ -269,7 +304,7 @@
 <SearchFilters
 	show={showFilters}
 	aggregations={searchAggregations}
-	bind:sortAggregationsBy={filterOptions.sortAggregationsBy}
+	bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
 	bind:selectedDateRange
 	bind:selectedFilters
 />
@@ -310,12 +345,19 @@
 	.controls {
 		border-bottom: var(--border-size-1) solid var(--gray-4);
 		display: flex;
+		justify-content: space-between;
 		margin-block: var(--size-4);
 		width: 100%;
 
 		& .toggles {
 			margin-block-end: var(--size-2);
 		}
+	}
+
+	.sort-controls {
+		align-items: center;
+		display: flex;
+		gap: var(--size-2);
 	}
 
 	.transition-container {
