@@ -3,13 +3,11 @@
 	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
 </script>
 
-<article>
-	<section class="hero">
-		<h1>{config.description}</h1>
-	</section>
+<section class="hero">
+	<h1>{config.description}</h1>
+</section>
 
-	<FacetedSearch />
-</article>
+<FacetedSearch />
 
 <style>
 	.hero {
