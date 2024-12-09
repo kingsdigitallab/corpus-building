@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade, slide } from 'svelte/transition';
-	import { Button } from 'bits-ui';
+	import { Button, Slider } from 'bits-ui';
 	import SearchWorker from './worker.js?worker';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 	import * as config from '$lib/config';
@@ -11,6 +11,8 @@
 	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import SearchSummary from './SearchSummary.svelte';
+	import SearchFilters from './SearchFilters.svelte';
+	import { searchConfig } from './search';
 
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
@@ -29,7 +31,6 @@
 	let searchAggregations = $derived(searchResults?.data?.aggregations ?? {});
 
 	let total = $derived(searchPagination?.total ?? 0);
-	let yearSpan = $derived(getYearSpan());
 	let numberOfLocations = $derived(getNumberOfLocations());
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
@@ -42,17 +43,23 @@
 		}))
 	);
 
-	let showFilters = $state(false);
+	let showFilters = $state(true);
 
-	/** @type {string[]} */
-	let placeNameFilters = $state([]);
-	/** @type {string[]} */
-	let statusFilters = $state([]);
-
-	let selectedFilters = $derived({
-		placeName: placeNameFilters,
-		status: statusFilters
+	let filterOptions = $state({
+		sortAggregationsBy: 'key'
 	});
+
+	let selectedDateRange = $state([-700, 1830]);
+
+	/** @type {{ [key: string]: string[] }} */
+	let selectedFilters = $state(
+		Object.keys(searchConfig.aggregations)
+			.filter((k) => k.indexOf('not') < 0)
+			.reduce((acc, cur) => {
+				acc[cur] = [];
+				return acc;
+			}, {})
+	);
 
 	async function init() {
 		if (searchStatus === 'ready') return;
@@ -71,24 +78,13 @@
 
 				if (type === 'results') {
 					searchResults = data;
-					console.debug(data);
 				}
 			}
 		);
-		searchWorker.postMessage({ type: 'load' });
-	}
-
-	/**
-	 * @returns {number}
-	 */
-	function getYearSpan() {
-		if (!searchAggregations) return 0;
-		if (!searchAggregations?.notAfter && !searchAggregations?.notBefore) return 0;
-
-		const notBefore = searchAggregations.notBefore.facet_stats.min ?? 0;
-		const notAfter = searchAggregations.notAfter.facet_stats.max ?? 0;
-
-		return notAfter - notBefore;
+		searchWorker.postMessage({
+			type: 'load',
+			data: { sortAggregationsBy: filterOptions.sortAggregationsBy }
+		});
 	}
 
 	function getNumberOfLocations() {
@@ -114,7 +110,8 @@
 					limit: $searchLimit,
 					page: $searchPage,
 					query: $searchQuery,
-					filters
+					filters,
+					dateRange: [...selectedDateRange]
 				}
 			});
 		}
@@ -130,6 +127,17 @@
 		$searchPage = 1;
 		$searchLimit = config.search.limit;
 	}
+
+	$effect(() => {
+		if (filterOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchWorker.postMessage({
+				type: 'load',
+				data: { sortAggregationsBy: filterOptions.sortAggregationsBy }
+			});
+
+			postSearchMessage();
+		}
+	});
 
 	/**
 	 * @param {'cards' | 'map' | 'table'} newView
@@ -196,7 +204,7 @@
 		{:else}
 			<SearchSummary
 				{total}
-				{yearSpan}
+				dateRange={selectedDateRange}
 				{numberOfLocations}
 				query={$searchQuery}
 				filters={selectedFilters}
@@ -258,45 +266,13 @@
 	</section>
 </article>
 
-{#if showFilters}
-	<aside class="filters" transition:slide={{ axis: 'x' }}>
-		<section>
-			<h2>Filters</h2>
-			<div class="filter-groups">
-				{#if searchAggregations?.status}
-					<div class="filter-group">
-						<h3>{searchAggregations.status.title}</h3>
-						<ul>
-							{#each searchAggregations.status.buckets as bucket}
-								<li>
-									<label>
-										<input type="checkbox" value={bucket.key} bind:group={statusFilters} />
-										{bucket.key} ({bucket.doc_count})
-									</label>
-								</li>
-							{/each}
-						</ul>
-					</div>
-				{/if}
-				{#if searchAggregations?.placeName}
-					<div class="filter-group">
-						<h3>{searchAggregations.placeName.title}</h3>
-						<ul>
-							{#each searchAggregations.placeName.buckets as bucket}
-								<li>
-									<label>
-										<input type="checkbox" value={bucket.key} bind:group={placeNameFilters} />
-										{bucket.key} ({bucket.doc_count})
-									</label>
-								</li>
-							{/each}
-						</ul>
-					</div>
-				{/if}
-			</div>
-		</section>
-	</aside>
-{/if}
+<SearchFilters
+	show={showFilters}
+	aggregations={searchAggregations}
+	bind:sortAggregationsBy={filterOptions.sortAggregationsBy}
+	bind:selectedDateRange
+	bind:selectedFilters
+/>
 
 <style>
 	form {
@@ -384,6 +360,10 @@
 			& ul {
 				list-style: none;
 				padding: 0;
+			}
+
+			& .slider {
+				width: 100%;
 			}
 		}
 	}
