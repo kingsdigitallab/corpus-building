@@ -44,7 +44,12 @@
 </script>
 
 {#if show}
-	<aside class="filters" transition:slide={{ axis: 'x' }}>
+	<aside
+		class="filters"
+		tabindex="0"
+		transition:slide={{ axis: 'x' }}
+		onintroend={(e) => e.currentTarget.focus()}
+	>
 		<section>
 			<h2>Filters</h2>
 			<section class="filters-options">
