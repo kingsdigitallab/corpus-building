@@ -17,7 +17,7 @@
 		<span class="selected-filters">
 			{#each Object.entries(filters).filter(([_, value]) => value.length > 0) as [key, value]}
 				<span>
-					{key}: <em>{value.join(', ')}</em>
+					{key}: <em>{value.join(', ').replaceAll('_', ' ').replaceAll(':::', ' ')}</em>
 				</span>
 			{/each}
 		</span>
