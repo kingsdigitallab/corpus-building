@@ -149,9 +149,12 @@
 	}
 
 	function hasActiveFilters() {
+		const initialDateRange = initDateRange();
+
 		return (
-			selectedDateRange !== initDateRange() ||
-			Object.values(selectedFilters).some((f) => f.length > 0)
+			$searchQuery !== '' ||
+			selectedDateRange.some((value, index) => value !== initialDateRange[index]) ||
+			Object.keys(selectedFilters).some((key) => selectedFilters[key].length > 0)
 		);
 	}
 
@@ -233,9 +236,7 @@
 				bind:value={$searchQuery}
 			/>
 			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
-			<Button.Root class="surface-1" type="reset" disabled={!$searchQuery && !hasActiveFilters()}>
-				Reset
-			</Button.Root>
+			<Button.Root class="surface-1" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
 		</form>
 		<div class="filters-toggle">
 			<Button.Root
