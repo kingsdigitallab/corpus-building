@@ -52,6 +52,18 @@ export const searchConfig = {
 			size: 200,
 			sort: 'key'
 		},
+		technique: {
+			title: 'Technique',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
+		},
+		pigment: {
+			title: 'Pigment',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
+		},
 		status: {
 			title: 'Status',
 			hide_zero_doc_count: true,
@@ -96,15 +108,28 @@ export const searchConfig = {
 };
 
 export function load({ sortAggregationsBy = 'key' } = {}) {
-	const processedCorpus = corpus.map((item) => ({
-		...item,
-		notAfter: item.notAfter ?? undefined,
-		notBefore: item.notBefore ?? undefined,
-		language: item.textLang?._?.trim() ?? undefined,
-		inscriptionType: item.type?._?.trim() ?? undefined,
-		objectType: getHierarchicalValues(item.objectType?.ana, item.objectType?._),
-		material: getHierarchicalValues(item.material?.ana)
-	}));
+	const processedCorpus = corpus.map((item) => {
+		const technique = Array.isArray(item.layoutDesc?.layout?.rs)
+			? item.layoutDesc.layout.rs[0]?.ana
+			: item.layoutDesc?.layout?.rs?.ana;
+		const pigment = Array.isArray(item.layoutDesc?.layout?.rs)
+			? item.layoutDesc.layout.rs.find((rs) => rs.ana.includes('#execution.rubrication'))?.ana
+			: item.layoutDesc?.layout?.rs?.ana === '#execution.rubrication'
+				? '#execution.rubrication'
+				: undefined;
+
+		return {
+			...item,
+			notAfter: item.notAfter ?? undefined,
+			notBefore: item.notBefore ?? undefined,
+			language: item.textLang?._?.trim() ?? undefined,
+			inscriptionType: item.type?._?.trim() ?? undefined,
+			objectType: getHierarchicalValues(item.objectType?.ana),
+			material: getHierarchicalValues(item.material?.ana),
+			technique: getHierarchicalValues(technique),
+			pigment: getHierarchicalValues(pigment)
+		};
+	});
 
 	searchConfig.aggregations = Object.fromEntries(
 		Object.entries(searchConfig.aggregations).map(([key, agg]) => [
@@ -126,9 +151,10 @@ function getHierarchicalValues(value, leaf = null) {
 	if (!value) return undefined;
 
 	let parts = value
-		.replace('#', '')
 		.split('.')
-		.map((v) => v.trim());
+		.slice(1)
+		.map((v) => v.trim())
+		.map((v) => v.replaceAll('_', ' '));
 
 	if (parts.length === 1) {
 		return [parts[0]];
