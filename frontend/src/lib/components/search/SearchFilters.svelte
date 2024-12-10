@@ -1,6 +1,7 @@
 <script>
-	import { slide } from 'svelte/transition';
 	import { Slider } from 'bits-ui';
+	import debounce from 'lodash.debounce';
+	import { slide } from 'svelte/transition';
 
 	let {
 		show = false,
@@ -14,6 +15,16 @@
 		{ label: 'Value', value: 'key' },
 		{ label: 'Count', value: 'count' }
 	];
+
+	let currentDateRange = $state(selectedDateRange);
+
+	const updateSelectedDateRange = debounce((newValue) => {
+		selectedDateRange = newValue;
+	}, 300);
+
+	$effect(() => {
+		updateSelectedDateRange([...currentDateRange]);
+	});
 
 	/** @type {Record<string, string>} */
 	let filterContains = $state({});
@@ -101,7 +112,7 @@
 								min={-700}
 								max={1830}
 								step={1}
-								bind:value={selectedDateRange}
+								bind:value={currentDateRange}
 								let:thumbs
 							>
 								<span class="slider-track">
@@ -119,11 +130,11 @@
 						<div class="date-inputs">
 							<label>
 								Not before
-								<input type="number" bind:value={selectedDateRange[0]} min={-700} max={1811} />
+								<input type="number" bind:value={currentDateRange[0]} min={-700} max={1811} />
 							</label>
 							<span>–</span>
 							<label>
-								<input type="number" bind:value={selectedDateRange[1]} min={-675} max={1830} />
+								<input type="number" bind:value={currentDateRange[1]} min={-675} max={1830} />
 								Not after
 							</label>
 						</div>
