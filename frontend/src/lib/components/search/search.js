@@ -64,6 +64,18 @@ export const searchConfig = {
 			size: 200,
 			sort: 'key'
 		},
+		damage: {
+			title: 'Damage',
+			hide_zero_doc_count: true,
+			size: 100,
+			sort: 'key'
+		},
+		repository: {
+			title: 'Repository',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key'
+		},
 		status: {
 			title: 'Status',
 			hide_zero_doc_count: true,
@@ -127,7 +139,9 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			objectType: getHierarchicalValues(item.objectType?.ana),
 			material: getHierarchicalValues(item.material?.ana),
 			technique: getHierarchicalValues(technique),
-			pigment: getHierarchicalValues(pigment)
+			pigment: getHierarchicalValues(pigment),
+			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
+			repository: item.repository?._?.trim() ?? undefined
 		};
 	});
 
@@ -147,21 +161,21 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
  * @param {string | null} leaf
  * @returns {string[] | undefined}
  */
-function getHierarchicalValues(value, leaf = null) {
+function getHierarchicalValues(value, discardRoot = true) {
 	if (!value) return undefined;
 
 	let parts = value
+		.replaceAll('#', '')
 		.split('.')
-		.slice(1)
 		.map((v) => v.trim())
 		.map((v) => v.replaceAll('_', ' '));
 
-	if (parts.length === 1) {
-		return [parts[0]];
+	if (discardRoot) {
+		parts = parts.slice(1);
 	}
 
-	if (leaf) {
-		parts[parts.length - 1] = leaf.trim();
+	if (parts.length === 1) {
+		return [parts[0]];
 	}
 
 	const hierarchicalValues = [];
