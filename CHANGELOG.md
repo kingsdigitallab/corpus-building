@@ -1,5 +1,55 @@
 
 
+# [0.11.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.10.1...v0.11.0) (2024-12-10)
+
+
+### Bug Fixes
+
+* **home:** remove extra wraping article ([b795af2](https://github.com/kingsdigitallab/corpus-building/commit/b795af20f443a61962432d7f406f656c49a09940))
+* **inscriptiontablerow:** check if inscription has type ([4948905](https://github.com/kingsdigitallab/corpus-building/commit/4948905943b6716fb51f5686ea6f3573379bf98f))
+* **searchfilters:** restore focus to previous active element on close ([1d6d62b](https://github.com/kingsdigitallab/corpus-building/commit/1d6d62bd42300697b04ed8ee76a1a273646e80b0))
+* **searchfilters:** set focus to the filter section on open ([b77eae4](https://github.com/kingsdigitallab/corpus-building/commit/b77eae4e9aa2042e7898567baea5760d48231d0c))
+* **searchfilters:** set tabindex to negative ([d64710e](https://github.com/kingsdigitallab/corpus-building/commit/d64710e8b139b910f9e0215898f9738ef97071d2))
+* **search:** remove unused css ([508ee3c](https://github.com/kingsdigitallab/corpus-building/commit/508ee3c6748d45cbf4daa282d8857ddaf1137f08))
+* **search:** remove unused imports ([a78c856](https://github.com/kingsdigitallab/corpus-building/commit/a78c8565ca479bac20f334b520f9f810319b2bc3))
+* **search:** temporarily remove config import ([a231fd6](https://github.com/kingsdigitallab/corpus-building/commit/a231fd6211c3c2bc9e332b39b77a80bb4ccc2302))
+
+
+### Features
+
+* **bibliographyentry:** add component to render bibliography entries ([c112ff9](https://github.com/kingsdigitallab/corpus-building/commit/c112ff9b72a3c47f1067bbbda35641234e384168))
+* **config:** add global setting with possible values for edition types ([15ba7fd](https://github.com/kingsdigitallab/corpus-building/commit/15ba7fdecca2ae999c3ffa77d53f65f69bafc451))
+* **css:** add classes to style range sliders ([1c11fb2](https://github.com/kingsdigitallab/corpus-building/commit/1c11fb22434c2242418651c0cc1687a7d37b981c))
+* **editionentry:** add component to render digital editions ([7a12b3a](https://github.com/kingsdigitallab/corpus-building/commit/7a12b3a4cc148f1295914737a668227ebe095323))
+* **etl:** extract bibliography ([12a7112](https://github.com/kingsdigitallab/corpus-building/commit/12a71128109f55589f391a0378dbd38600d7b5fc))
+* **etl:** include layout desc in the corpus data ([2dec7df](https://github.com/kingsdigitallab/corpus-building/commit/2dec7df49b6828ad5f0c0bd616d622e82b83233d))
+* **etl:** include repository in the corpus data ([644b057](https://github.com/kingsdigitallab/corpus-building/commit/644b057604e1cd28e38cdcccfa856d48377250a8))
+* **facetedsearch:** add default initial values for filters ([fc67902](https://github.com/kingsdigitallab/corpus-building/commit/fc6790255e940f14fc41956e36d9157d60966337))
+* **facetedsearch:** add filters section ([2c12c21](https://github.com/kingsdigitallab/corpus-building/commit/2c12c215a2bbc66eeb058e72cce0bc353cd94738))
+* **facetedsearch:** add function to handle view change ([23067cd](https://github.com/kingsdigitallab/corpus-building/commit/23067cd1d6a7c62ac4226070f484819649dff11d))
+* **facetedsearch:** display keyboard shortcut to toggle filters ([69dc121](https://github.com/kingsdigitallab/corpus-building/commit/69dc121a5465872a5ab528c28eacad54f69bdaee))
+* **facetedsearch:** enable reset to reset all filters as well ([2075148](https://github.com/kingsdigitallab/corpus-building/commit/2075148dc480731538b11992a64003072235ef2f))
+* **frontend:** add setting for maximum number of search results ([53615e9](https://github.com/kingsdigitallab/corpus-building/commit/53615e9fc44081710083a63383672df5d74e9d2e))
+* **frontend:** re-implement search with itemsjs ([ba64de8](https://github.com/kingsdigitallab/corpus-building/commit/ba64de8b8439fee01e72b1bbc3231527297d8655))
+* **inscription:** render digital editions using the edition entry component ([7601f84](https://github.com/kingsdigitallab/corpus-building/commit/7601f84cb2972b7d6c0fa02d59d8b66d0659a169))
+* **inscription:** use bibliotraphy entry component to render the bibliography ([cd85959](https://github.com/kingsdigitallab/corpus-building/commit/cd85959ca6b523f54fc7ceeafde90bd294b45a80))
+* **search:** add aggregations for technique and pigment ([deece7b](https://github.com/kingsdigitallab/corpus-building/commit/deece7b344bdc8b7914459fb1a103a14d4e21d71))
+* **search:** add extra facets ([e7374e8](https://github.com/kingsdigitallab/corpus-building/commit/e7374e830840f6c5efda965a9e6f2f2db58f97a9))
+* **search:** add search results sorting ([bb030f0](https://github.com/kingsdigitallab/corpus-building/commit/bb030f055f14d98d987ebda7f02fbf6765e75697))
+* **search:** add separate component to render the filters ([68e08eb](https://github.com/kingsdigitallab/corpus-building/commit/68e08ebe20913126662b129e231bca2e6d4b4768))
+* **search:** expand facets configuration and add filter by date ([ddf28cc](https://github.com/kingsdigitallab/corpus-building/commit/ddf28cc3015e32fc2f12f6d8baa2f929028890a8))
+* **searchfilters:** add button to close filter panel ([601c3b2](https://github.com/kingsdigitallab/corpus-building/commit/601c3b286a57025cb999bdeebe873472e2eebaf7))
+* **searchfilters:** display the number of items in each facet ([1b46f22](https://github.com/kingsdigitallab/corpus-building/commit/1b46f222d116704445ca3bc229539086f280ccb1))
+* **searchsummary:** add component to render the search summary ([2a57166](https://github.com/kingsdigitallab/corpus-building/commit/2a5716610bcd9674a126d96115422f82c8670542))
+* **searchsummary:** remove separator characters from filter values for display ([7b9b1c1](https://github.com/kingsdigitallab/corpus-building/commit/7b9b1c1ee5dcaea78bae41e603b4f3618e29587a))
+* **searchsummary:** show date range instead of the year span ([f3282e4](https://github.com/kingsdigitallab/corpus-building/commit/f3282e49f4702e041bae321583ad17471df8b547))
+
+
+### Performance Improvements
+
+* **inscriptionmap:** unset map and container on destroy ([6f8d723](https://github.com/kingsdigitallab/corpus-building/commit/6f8d72349390d6e1253c3fb0690d72d97ee001bb))
+* **searchfilters:** debounce the date slider ([cd51bcd](https://github.com/kingsdigitallab/corpus-building/commit/cd51bcd6b62a081c5ad371ffbbeae73a97dd6dcd))
+
 ## [0.10.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.10.0...v0.10.1) (2024-11-13)
 
 
