@@ -1,10 +1,11 @@
 <script>
-	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
-	import { Button } from 'bits-ui';
-	import SearchWorker from './worker.js?worker';
-	import { queryParam, ssp } from 'sveltekit-search-params';
+	import { browser } from '$app/environment';
+	import InscriptionList from '$lib/components/InscriptionList.svelte';
+	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
+	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
+	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
+	import { Button } from 'bits-ui';
 	import {
 		FilterIcon,
 		LayoutGridIcon,
@@ -13,13 +14,15 @@
 		MapIcon,
 		TableIcon
 	} from 'lucide-svelte';
-	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
-	import InscriptionList from '$lib/components/InscriptionList.svelte';
-	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
-	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
-	import SearchSummary from './SearchSummary.svelte';
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	import { queryParam, ssp } from 'sveltekit-search-params';
 	import SearchFilters from './SearchFilters.svelte';
+	import SearchSummary from './SearchSummary.svelte';
 	import { searchConfig } from './search';
+	import SearchWorker from './worker.js?worker';
+
+	const platform = (browser && window.navigator.platform) || 'unknown';
 
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
@@ -188,6 +191,17 @@
 	});
 </script>
 
+<svelte:window
+	onkeydown={(e) => {
+		if (e.ctrlKey || e.metaKey) {
+			if (e.key === 'k' || e.key === 'K') {
+				e.preventDefault();
+				showFilters = !showFilters;
+			}
+		}
+	}}
+/>
+
 <article>
 	<section>
 		<form onsubmit={handleSearch} onreset={handleReset}>
@@ -207,7 +221,8 @@
 				class={showFilters ? 'surface-4' : 'surface-1'}
 				onclick={() => (showFilters = !showFilters)}
 			>
-				<FilterIcon />Filters
+				<FilterIcon />Filters <kbd>{platform.indexOf('Mac') >= 0 ? '⌘' : 'Ctrl'}</kbd> +
+				<kbd>K</kbd>
 			</Button.Root>
 		</div>
 	</section>
