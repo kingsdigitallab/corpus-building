@@ -22,8 +22,6 @@
 	import { searchConfig } from './search';
 	import SearchWorker from './worker.js?worker';
 
-	const platform = (browser && window.navigator.platform) || 'unknown';
-
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
 	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
@@ -61,17 +59,10 @@
 		sortResultsOrder: 'asc'
 	});
 
-	let selectedDateRange = $state([-700, 1830]);
+	let selectedDateRange = $state(initDateRange());
 
 	/** @type {{ [key: string]: string[] }} */
-	let selectedFilters = $state(
-		Object.keys(searchConfig.aggregations)
-			.filter((k) => k.indexOf('not') < 0)
-			.reduce((acc, cur) => {
-				acc[cur] = [];
-				return acc;
-			}, {})
-	);
+	let selectedFilters = $state(initFilters());
 
 	async function init() {
 		if (searchStatus === 'ready') return;
@@ -99,13 +90,6 @@
 		});
 	}
 
-	function getNumberOfLocations() {
-		if (!searchAggregations) return 0;
-		if (!searchAggregations?.placeName) return 0;
-
-		return searchAggregations.placeName.buckets.length;
-	}
-
 	$effect(() => {
 		postSearchMessage();
 	});
@@ -130,6 +114,26 @@
 		}
 	}
 
+	function initDateRange() {
+		return [-700, 1830];
+	}
+
+	function initFilters() {
+		return Object.keys(searchConfig.aggregations)
+			.filter((k) => k.indexOf('not') < 0)
+			.reduce((acc, cur) => {
+				acc[cur] = [];
+				return acc;
+			}, {});
+	}
+
+	function getNumberOfLocations() {
+		if (!searchAggregations) return 0;
+		if (!searchAggregations?.placeName) return 0;
+
+		return searchAggregations.placeName.buckets.length;
+	}
+
 	async function handleSearch(/** @type {Event} */ e) {
 		e.preventDefault();
 	}
@@ -139,6 +143,16 @@
 		$searchQuery = '';
 		$searchPage = 1;
 		$searchLimit = config.search.limit;
+
+		selectedDateRange = initDateRange();
+		selectedFilters = initFilters();
+	}
+
+	function hasActiveFilters() {
+		return (
+			selectedDateRange !== initDateRange() ||
+			Object.values(selectedFilters).some((f) => f.length > 0)
+		);
 	}
 
 	$effect(() => {
@@ -199,6 +213,11 @@
 				showFilters = !showFilters;
 			}
 		}
+
+		if (e.key === '/') {
+			e.preventDefault();
+			document.getElementById('q')?.focus();
+		}
 	}}
 />
 
@@ -214,15 +233,16 @@
 				bind:value={$searchQuery}
 			/>
 			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
-			<Button.Root class="surface-1" type="reset" disabled={!$searchQuery}>Reset</Button.Root>
+			<Button.Root class="surface-1" type="reset" disabled={!$searchQuery && !hasActiveFilters()}>
+				Reset
+			</Button.Root>
 		</form>
 		<div class="filters-toggle">
 			<Button.Root
 				class={showFilters ? 'surface-4' : 'surface-1'}
 				onclick={() => (showFilters = !showFilters)}
 			>
-				<FilterIcon />Filters <kbd>{platform.indexOf('Mac') >= 0 ? '⌘' : 'Ctrl'}</kbd> +
-				<kbd>K</kbd>
+				<FilterIcon />Filters
 			</Button.Root>
 		</div>
 	</section>
