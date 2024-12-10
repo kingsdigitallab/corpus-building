@@ -75,7 +75,7 @@
 {#if show}
 	<aside
 		class="filters"
-		tabindex="0"
+		tabindex="-1"
 		transition:slide={{ axis: 'x' }}
 		onintroend={handleIntroEnd}
 		onoutroend={handleOutroEnd}
