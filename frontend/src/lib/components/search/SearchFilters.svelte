@@ -1,5 +1,5 @@
 <script>
-	import { Slider } from 'bits-ui';
+	import { Button, Slider } from 'bits-ui';
 	import debounce from 'lodash.debounce';
 	import { slide } from 'svelte/transition';
 
@@ -38,6 +38,10 @@
 	function handleIntroEnd(e) {
 		previousFocusElement = /** @type {HTMLElement} */ (document.activeElement);
 		e.currentTarget?.focus();
+	}
+
+	function handleClose() {
+		show = false;
 	}
 
 	function handleOutroEnd() {
@@ -80,6 +84,9 @@
 		onintroend={handleIntroEnd}
 		onoutroend={handleOutroEnd}
 	>
+		<Button.Root class="close-button" onclick={handleClose} aria-label="Close filters"
+			>×</Button.Root
+		>
 		<section>
 			<h2>Filters</h2>
 			<section class="filters-options">
@@ -188,6 +195,15 @@
 		top: 0;
 		width: min(400px, 100vw);
 		z-index: 10;
+	}
+
+	:global(.close-button) {
+		background: transparent;
+		border: none;
+		box-shadow: var(--shadow-1);
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
 	}
 
 	h2 {
