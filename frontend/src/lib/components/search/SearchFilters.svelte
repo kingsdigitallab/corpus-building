@@ -108,7 +108,7 @@
 				{#each Object.keys(selectedFilters) as key}
 					{#if key in aggregations && aggregations[key].title}
 						<section class="filter-group">
-							<h3>{aggregations[key].title}</h3>
+							<h3>{aggregations[key].title} ({aggregations[key].buckets.length})</h3>
 							{#if aggregations[key].buckets.length > 20}
 								<input
 									type="text"
