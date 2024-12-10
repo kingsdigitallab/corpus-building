@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import dotenv from 'dotenv';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
@@ -56,7 +57,8 @@ const config = {
 				throw new Error(message);
 			}
 		}
-	}
+	},
+	preprocess: [vitePreprocess()]
 };
 
 export default config;
