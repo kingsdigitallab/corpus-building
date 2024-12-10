@@ -10,12 +10,30 @@
 		selectedFilters = $bindable({})
 	} = $props();
 
-	const sortAggregationsOptions = ['key', 'count'];
+	const sortAggregationsOptions = [
+		{ label: 'Value', value: 'key' },
+		{ label: 'Count', value: 'count' }
+	];
+
+	/** @type {Record<string, string>} */
+	let filterContains = $state({});
+
+	/** @type {HTMLElement | null} */
+	let previousFocusElement = $state(null);
 
 	/**
-	 * @type {Record<string, string>}
+	 * @param {{ currentTarget: { focus: () => void; }; }} e
 	 */
-	let filterContains = $state({});
+	function handleIntroEnd(e) {
+		previousFocusElement = /** @type {HTMLElement} */ (document.activeElement);
+		e.currentTarget?.focus();
+	}
+
+	function handleOutroEnd() {
+		if (previousFocusElement) {
+			previousFocusElement.focus();
+		}
+	}
 
 	/**
 	 * @param {import('itemsjs').Bucket[]} buckets
@@ -48,7 +66,8 @@
 		class="filters"
 		tabindex="0"
 		transition:slide={{ axis: 'x' }}
-		onintroend={(e) => e.currentTarget.focus()}
+		onintroend={handleIntroEnd}
+		onoutroend={handleOutroEnd}
 	>
 		<section>
 			<h2>Filters</h2>
@@ -62,10 +81,10 @@
 								<input
 									type="radio"
 									name="sort-aggregations"
-									value={option}
+									value={option.value}
 									bind:group={sortAggregationsBy}
 								/>
-								{option}
+								{option.label}
 							</label>
 						{/each}
 					</fieldset>
