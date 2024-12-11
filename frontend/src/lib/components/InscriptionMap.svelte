@@ -19,6 +19,8 @@
 	/** @type {HTMLDivElement | undefined} */
 	let mapContainer = $state();
 
+	let activeMarkers = $state([]);
+
 	let inscriptionsByGeo = $derived(
 		inscriptions
 			.filter((inscription) => inscription.geo)
@@ -60,15 +62,28 @@
 	);
 
 	function addMarkerAction(node, { coords, inscriptions }) {
-		const popupContent = createPopupContent(inscriptions);
-		const marker = new Marker({ element: node })
-			.setLngLat(coords)
-			.setPopup(new Popup().setHTML(popupContent))
-			.addTo(map);
+		const popup = new Popup();
+
+		const updatePopupContent = () => {
+			const content = createPopupContent(inscriptions);
+			popup.setHTML(content);
+		};
+
+		updatePopupContent();
+
+		const marker = new Marker({ element: node }).setLngLat(coords).setPopup(popup).addTo(map);
+
+		activeMarkers.push(marker);
 
 		return {
 			destroy() {
 				marker?.remove();
+				activeMarkers = activeMarkers.filter((m) => m !== marker);
+			},
+			update({ coords: newCoords, inscriptions: newInscriptions }) {
+				inscriptions = newInscriptions;
+				updatePopupContent();
+				marker.setLngLat(newCoords);
 			}
 		};
 	}
