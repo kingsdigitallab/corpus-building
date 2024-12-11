@@ -1,5 +1,4 @@
 <script>
-	import { browser } from '$app/environment';
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
 	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
@@ -26,7 +25,7 @@
 	const searchPage = queryParam('page', ssp.number(1));
 	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
 
-	/** @type {'cards' | 'map' | 'table'} */
+	/** @property {'cards' | 'map' | 'table'} */
 	let view = $state('cards');
 
 	/** @type {import('./worker.js').WorkerStatus} */
@@ -43,12 +42,14 @@
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
 	let inscriptionsGeo = $derived(
-		inscriptions?.map((inscription) => ({
-			file: inscription.file,
-			title: inscription.title,
-			places: inscription.places,
-			geo: inscription.geo[0]
-		}))
+		view === 'map'
+			? inscriptions?.map((inscription) => ({
+					file: inscription.file,
+					title: inscription.title,
+					places: inscription.places,
+					geo: inscription.geo[0]
+				}))
+			: []
 	);
 
 	let showFilters = $state(false);
