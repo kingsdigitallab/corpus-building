@@ -24,9 +24,8 @@
 	const searchQuery = queryParam('q', ssp.string(''));
 	const searchPage = queryParam('page', ssp.number(1));
 	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
-
 	/** @property {'cards' | 'map' | 'table'} */
-	let view = $state('cards');
+	const searchView = queryParam('view', ssp.string('cards'));
 
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
@@ -42,7 +41,7 @@
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
 	let inscriptionsGeo = $derived(
-		view === 'map'
+		$searchView === 'map'
 			? inscriptions?.map((inscription) => ({
 					file: inscription.file,
 					title: inscription.title,
@@ -176,7 +175,7 @@
 	async function handleViewChange(newView) {
 		if (newView === 'map') {
 			$searchLimit = config.search.maxLimit;
-		} else if (view === 'map') {
+		} else if ($searchView === 'map') {
 			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
 			searchResults = {
 				...searchResults,
@@ -190,7 +189,7 @@
 			$searchPage = 1;
 		}
 
-		view = newView;
+		$searchView = newView;
 	}
 
 	async function handleSortResultsOrderToggle() {
@@ -263,19 +262,19 @@
 			<section class="controls">
 				<div class="toggles">
 					<Button.Root
-						class={`${view === 'cards' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchView === 'cards' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('cards')}
 					>
 						<LayoutGridIcon />View cards
 					</Button.Root>
 					<Button.Root
-						class={`${view === 'map' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchView === 'map' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('map')}
 					>
 						<MapIcon />View map
 					</Button.Root>
 					<Button.Root
-						class={`${view === 'table' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchView === 'table' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('table')}
 					>
 						<TableIcon />View table
@@ -303,7 +302,7 @@
 					</Button.Root>
 				</div>
 			</section>
-			{#if view === 'map'}
+			{#if $searchView === 'map'}
 				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
 					<InscriptionMap inscriptions={inscriptionsGeo} />
 				</div>
@@ -314,13 +313,13 @@
 					perPage={$searchLimit}
 					onPageChange={handlePageChange}
 				/>
-				{#key view}
+				{#key $searchView}
 					<div
 						class="transition-container"
 						in:fade={{ duration: 500 }}
 						out:fade={{ duration: 250 }}
 					>
-						{#if view === 'table'}
+						{#if $searchView === 'table'}
 							<InscriptionTable {inscriptions} />
 						{:else}
 							<InscriptionList {inscriptions} />
