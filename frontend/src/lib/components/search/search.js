@@ -28,8 +28,8 @@ export const searchConfig = {
 			size: 200,
 			sort: 'key'
 		},
-		placeName: {
-			title: 'Place',
+		provenance: {
+			title: 'Provenance',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key'

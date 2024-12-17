@@ -39,7 +39,7 @@ export async function extractMetadata(xmlString) {
     bibliographyDiscussion: getBibliography(xml, "discussion"),
   };
 
-  metadata.placeName = metadata.places[0]?._;
+  metadata.provenance = metadata.places[0]?._;
   metadata.keywords = getKeywords(metadata);
 
   return metadata;

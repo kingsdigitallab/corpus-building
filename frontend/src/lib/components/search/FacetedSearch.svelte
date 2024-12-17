@@ -129,9 +129,9 @@
 
 	function getNumberOfLocations() {
 		if (!searchAggregations) return 0;
-		if (!searchAggregations?.placeName) return 0;
+		if (!searchAggregations?.provenance) return 0;
 
-		return searchAggregations.placeName.buckets.length;
+		return searchAggregations.provenance.buckets.length;
 	}
 
 	async function handleSearch(/** @type {Event} */ e) {

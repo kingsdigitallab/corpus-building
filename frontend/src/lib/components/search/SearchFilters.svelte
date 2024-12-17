@@ -80,7 +80,7 @@
 	<aside
 		class="filters"
 		tabindex="-1"
-		transition:slide={{ axis: 'x' }}
+		transition:slide={{ axis: 'x', duration: 300 }}
 		onintroend={handleIntroEnd}
 		onoutroend={handleOutroEnd}
 	>
@@ -186,8 +186,8 @@
 		background: var(--surface-4);
 		border-radius: var(--radius-2);
 		border: var(--border-size-1) solid var(--surface-3);
-		bottom: 0;
 		box-shadow: var(--shadow-4);
+		height: 100vh;
 		left: 0;
 		overflow-y: auto;
 		padding: var(--size-4);

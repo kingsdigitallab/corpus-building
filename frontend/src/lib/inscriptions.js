@@ -82,7 +82,7 @@ export function getYearSpan(inscriptions) {
 export function getNumberOfLocations(inscriptions) {
 	if (!inscriptions) return 0;
 
-	return new Set(inscriptions.map((inscription) => inscription.placeName)).size;
+	return new Set(inscriptions.map((inscription) => inscription.provenance)).size;
 }
 
 export function getSearchParams(url) {
