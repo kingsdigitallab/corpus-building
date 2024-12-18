@@ -135,7 +135,7 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			notAfter: item.notAfter ?? undefined,
 			notBefore: item.notBefore ?? undefined,
 			language: item.textLang?._?.trim() ?? undefined,
-			inscriptionType: item.type?._?.trim() ?? undefined,
+			inscriptionType: getHierarchicalValues(item.type?.ana),
 			objectType: getHierarchicalValues(item.objectType?.ana),
 			material: getHierarchicalValues(item.material?.ana),
 			technique: getHierarchicalValues(technique),
@@ -172,6 +172,11 @@ function getHierarchicalValues(value, discardRoot = true) {
 
 	if (discardRoot) {
 		parts = parts.slice(1);
+	}
+
+	// if all the parts are empty, return empty placeholder
+	if (parts.every((part) => part === '')) {
+		return ['No data'];
 	}
 
 	if (parts.length === 1) {
