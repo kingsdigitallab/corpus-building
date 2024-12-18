@@ -129,6 +129,11 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			: item.layoutDesc?.layout?.rs?.ana === '#execution.rubrication'
 				? '#execution.rubrication'
 				: undefined;
+		const repository =
+			item.repository?.role?.toLowerCase().indexOf('private') !== -1 ||
+			item.repository?._?.toLowerCase().indexOf('private') !== -1
+				? 'Private'
+				: (item.repository?._?.trim() ?? undefined);
 
 		return {
 			...item,
@@ -141,7 +146,7 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			technique: getHierarchicalValues(technique),
 			pigment: getHierarchicalValues(pigment),
 			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
-			repository: item.repository?._?.trim() ?? undefined
+			repository
 		};
 	});
 
