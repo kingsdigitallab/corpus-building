@@ -174,7 +174,6 @@ function getHierarchicalValues(value, discardRoot = true) {
 		parts = parts.slice(1);
 	}
 
-	// if all the parts are empty, return empty placeholder
 	if (parts.every((part) => part === '')) {
 		return ['No data'];
 	}
