@@ -76,6 +76,18 @@ export const searchConfig = {
 			size: 200,
 			sort: 'key'
 		},
+		publicationAuthors: {
+			title: 'Publication author',
+			hide_zero_doc_count: true,
+			size: 1000,
+			sort: 'key'
+		},
+		publicationYears: {
+			title: 'Publication year',
+			hide_zero_doc_count: true,
+			size: 1000,
+			sort: 'key'
+		},
 		status: {
 			title: 'Status',
 			hide_zero_doc_count: true,
@@ -125,7 +137,7 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			? item.layoutDesc.layout.rs[0]?.ana
 			: item.layoutDesc?.layout?.rs?.ana;
 		const pigment = Array.isArray(item.layoutDesc?.layout?.rs)
-			? item.layoutDesc.layout.rs.find((rs) => rs.ana.includes('#execution.rubrication'))?.ana
+			? item.layoutDesc.layout.rs.find((rs) => rs?.ana?.includes('#execution.rubrication'))?.ana
 			: item.layoutDesc?.layout?.rs?.ana === '#execution.rubrication'
 				? '#execution.rubrication'
 				: undefined;
@@ -146,7 +158,9 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			technique: getHierarchicalValues(technique),
 			pigment: getHierarchicalValues(pigment),
 			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
-			repository
+			repository,
+			publicationAuthors: item.publicationAuthors,
+			publicationYears: item.publicationYears
 		};
 	});
 

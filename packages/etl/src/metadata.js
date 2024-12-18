@@ -40,6 +40,24 @@ export async function extractMetadata(xmlString) {
   };
 
   metadata.provenance = metadata.places[0]?._;
+
+  const bibliography = Array.isArray(metadata.bibliographyEdition?.bibl)
+    ? metadata.bibliographyEdition?.bibl
+    : [metadata.bibliographyEdition?.bibl];
+
+  metadata.publicationAuthors = [
+    ...new Set(
+      bibliography
+        ?.map((b) => b?.author)
+        .filter((a) => a)
+        .map((a) => a.trim())
+    ),
+  ];
+
+  metadata.publicationYears = [
+    ...new Set(bibliography?.map((b) => b?.date).filter((a) => a)),
+  ];
+
   metadata.keywords = getKeywords(metadata);
 
   return metadata;
