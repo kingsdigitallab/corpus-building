@@ -155,13 +155,7 @@
 					{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
 					<dt>Map</dt>
 					<dd>
-						<MapLibre
-							center={lngLat}
-							zoom={7}
-							class="map"
-							standardControls
-							style="https://api.maptiler.com/maps/positron/style.json?key=brTBbnRxuiKp6PgjwFPr"
-						>
+						<MapLibre center={lngLat} zoom={7} class="map" standardControls style={config.mapStyle}>
 							<DefaultMarker {lngLat}>
 								<Popup offset={[0, -10]}>
 									<div class="popup">
