@@ -26,3 +26,5 @@ export const digitalEditionUrls = /** @type {const} */ ({
 	TM: 'https://www.trismegistos.org/text/',
 	URI: ''
 });
+
+export const mapStyle = 'https://api.maptiler.com/maps/outdoor/style.json?key=brTBbnRxuiKp6PgjwFPr';
