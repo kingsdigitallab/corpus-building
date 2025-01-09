@@ -48,9 +48,9 @@ export async function extractMetadata(xmlString) {
   metadata.publicationAuthors = [
     ...new Set(
       bibliography
-        ?.map((b) => b?.author)
+        ?.flatMap((b) => b?.author)
         .filter((a) => a)
-        .map((a) => a.trim())
+        .map((a) => (typeof a === "string" ? a.trim() : a))
     ),
   ];
 
@@ -309,7 +309,35 @@ function getMsIdentifier(xml) {
 }
 
 function getTextLang(xml) {
-  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents.textLang;
+  const textLang =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.msContents.textLang;
+
+  if (!textLang) return null;
+
+  const otherLangs = textLang.otherLangs ? textLang.otherLangs.split(" ") : [];
+
+  textLang.languages = [
+    getLangName(textLang.mainLang),
+    ...otherLangs.map(getLangName),
+  ];
+
+  return textLang;
+}
+
+function getLangName(langCode) {
+  const langMap = {
+    cms: "Messapic",
+    grc: "Ancient Greek",
+    he: "Hebrew",
+    heb: "Hebrew",
+    la: "Latin",
+    osc: "Oscan",
+    scx: "Sikel",
+    xly: "Elymian",
+    xpu: "Punic",
+  };
+
+  return langMap[langCode] || langCode;
 }
 
 function getBibliography(xml, bibliographyType = "edition") {
