@@ -1,4 +1,5 @@
 <script>
+	import * as config from '$lib/config';
 	import maplibregl from 'maplibre-gl';
 	import { onDestroy, onMount } from 'svelte';
 	import 'maplibre-gl/dist/maplibre-gl.css';
@@ -12,7 +13,7 @@
 	 */
 
 	/** @type {Props} */
-	let { inscriptions, show = true } = $props();
+	let { inscriptions, mapStyle = config.mapStyle, show = true } = $props();
 
 	let map = $state();
 
@@ -123,7 +124,7 @@
 	onMount(async () => {
 		map = new Map({
 			container: mapContainer,
-			style: 'https://api.maptiler.com/maps/positron/style.json?key=brTBbnRxuiKp6PgjwFPr',
+			style: mapStyle,
 			center: [14.01535, 37.59999],
 			zoom: 7
 		});
