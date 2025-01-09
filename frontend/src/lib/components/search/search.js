@@ -28,6 +28,12 @@ export const searchConfig = {
 			size: 200,
 			sort: 'key'
 		},
+		languageCert: {
+			title: 'Language certainty',
+			hide_zero_doc_count: true,
+			size: 10,
+			sort: 'key'
+		},
 		provenance: {
 			title: 'Provenance',
 			hide_zero_doc_count: true,
@@ -151,7 +157,8 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			...item,
 			notAfter: item.notAfter ?? undefined,
 			notBefore: item.notBefore ?? undefined,
-			language: item.textLang?._?.trim() ?? undefined,
+			language: item.textLang?.languages ?? undefined,
+			languageCert: item.textLang?.cert ?? undefined,
 			inscriptionType: getHierarchicalValues(item.type?.ana),
 			objectType: getHierarchicalValues(item.objectType?.ana),
 			material: getHierarchicalValues(item.material?.ana),
