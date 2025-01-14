@@ -88,6 +88,12 @@ export const searchConfig = {
 			size: 1000,
 			sort: 'key'
 		},
+		publicationTitles: {
+			title: 'Publication title',
+			hide_zero_doc_count: true,
+			size: 1500,
+			sort: 'key'
+		},
 		publicationYears: {
 			title: 'Publication year',
 			hide_zero_doc_count: true,
@@ -167,6 +173,7 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
 			repository,
 			publicationAuthors: item.publicationAuthors,
+			publicationTitles: item.publicationTitles,
 			publicationYears: item.publicationYears
 		};
 	});
