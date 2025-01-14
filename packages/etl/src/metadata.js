@@ -1,4 +1,5 @@
 import xml2js from "xml2js";
+import museums from "../../../data/processed/museums.json" assert { type: "json" };
 
 /**
  * Extracts metadata from an XML string.
@@ -312,8 +313,25 @@ function getMsIdentifier(xml) {
     country: msIdentifier.country?.trim(),
     region: msIdentifier.region?.trim(),
     settlement: msIdentifier.settlement?.trim(),
-    repository: msIdentifier.repository,
+    repository: getRepository(msIdentifier),
     idno: msIdentifier.idno,
+  };
+}
+
+function getRepository(msIdentifier) {
+  const ref = msIdentifier.repository?.ref;
+
+  if (!ref) return msIdentifier.repository;
+
+  const museum = museums.find((m) => m.uri === ref);
+
+  if (!museum) return msIdentifier.repository;
+
+  return {
+    _: museum.name,
+    role: museum.type,
+    ref: museum.uri,
+    museum,
   };
 }
 
