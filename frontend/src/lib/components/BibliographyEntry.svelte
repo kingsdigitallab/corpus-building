@@ -10,20 +10,24 @@
 			} | string;
 			ptr?: { target: string };
 			ref?: { target: string };
+			title?: string;
+			citation?: string;
 		};
 	}} */
 	let { entry } = $props();
 </script>
 
-{#if entry.type === 'bulletin' || entry.type === 'corpus'}
+{#if entry.citation}
+	{@html entry.citation}{#if entry.citedRange},{:else}.{/if}
+{:else if entry.type === 'bulletin' || entry.type === 'corpus'}
 	<span>{entry.n} {entry.author ? `${entry.author} (${entry.date})` : ''}</span>
 {:else}
 	<span>{entry.author} ({entry.date})</span>
 {/if}
 {#if typeof entry.citedRange === 'object' && entry.citedRange?.ref}
-	<a href={entry.citedRange.ref.target}>{entry.citedRange.ref._}</a>
+	at <a href={entry.citedRange.ref.target}>{entry.citedRange.ref._}</a>
 {:else if entry.citedRange}
-	<span>{entry.citedRange}</span>
+	at <span>{entry.citedRange}</span>
 {/if}
 {#if entry.ptr?.target}
 	<a href={entry.ptr?.target}>Zotero</a>
