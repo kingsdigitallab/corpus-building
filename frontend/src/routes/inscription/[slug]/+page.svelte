@@ -224,9 +224,11 @@
 					<dd>
 						<ul class="bibliography-list">
 							{#each metadata.bibliographyEdition.bibl as entry}
-								<li>
-									<BibliographyEntry {entry} />
-								</li>
+								{#if entry}
+									<li>
+										<BibliographyEntry {entry} />
+									</li>
+								{/if}
 							{/each}
 						</ul>
 					</dd>
