@@ -35,8 +35,8 @@ export async function extractMetadata(xmlString) {
     facsimile: getFacsimile(xml),
     ...getMsIdentifier(xml),
     textLang: getTextLang(xml),
-    bibliographyEdition: getBibliography(xml, "edition"),
-    bibliographyDiscussion: getBibliography(xml, "discussion"),
+    bibliographyEdition: await getBibliography(xml, "edition"),
+    bibliographyDiscussion: await getBibliography(xml, "discussion"),
   };
 
   metadata.provenance = metadata.places[0]?._;
@@ -49,6 +49,15 @@ export async function extractMetadata(xmlString) {
     ...new Set(
       bibliography
         ?.flatMap((b) => b?.author)
+        .filter((a) => a)
+        .map((a) => (typeof a === "string" ? a.trim() : a))
+    ),
+  ];
+
+  metadata.publicationTitles = [
+    ...new Set(
+      bibliography
+        ?.flatMap((b) => b?.title)
         .filter((a) => a)
         .map((a) => (typeof a === "string" ? a.trim() : a))
     ),
@@ -340,7 +349,7 @@ function getLangName(langCode) {
   return langMap[langCode] || langCode;
 }
 
-function getBibliography(xml, bibliographyType = "edition") {
+async function getBibliography(xml, bibliographyType = "edition") {
   let bibliography = xml.TEI.text.body.div.find(
     (div) => div.type === "bibliography"
   )?.listBibl;
@@ -351,7 +360,63 @@ function getBibliography(xml, bibliographyType = "edition") {
     bibliography = [bibliography];
   }
 
-  return bibliography.find((listBibl) => listBibl.type === bibliographyType);
+  let items = bibliography.find(
+    (listBibl) => listBibl.type === bibliographyType
+  );
+
+  if (!items) return {};
+
+  if (!Array.isArray(items.bibl)) {
+    items.bibl = [items.bibl];
+  }
+
+  items.bibl = await Promise.all(
+    items.bibl.map(async (item) => {
+      if (item.ptr?.target) {
+        const zoteroData = await getZoteroData(
+          item.ptr.target.split("/").at(-1)
+        );
+
+        item = {
+          ...item,
+          ...zoteroData,
+        };
+      }
+
+      return item;
+    })
+  );
+
+  return items;
+}
+
+const zoteroDataMap = new Map();
+
+async function getZoteroData(itemKey) {
+  const cacheKey = itemKey;
+
+  if (!itemKey) return Promise.resolve("");
+  if (zoteroDataMap.has(cacheKey)) {
+    return Promise.resolve(zoteroDataMap.get(cacheKey));
+  }
+
+  const url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=citation,data&style=chicago-fullnote-bibliography`;
+
+  return fetch(url)
+    .then((response) => (response.ok ? response.json() : null))
+    .then((json) => {
+      const data = {
+        title: json.data.title?.trim() || "",
+        citation: json.citation.replace(".</span>", "</span>"),
+      };
+      zoteroDataMap.set(cacheKey, data);
+
+      return data;
+    })
+    .catch(() => {
+      zoteroDataMap.set(cacheKey, null);
+      return null;
+    });
 }
 
 function getKeywords(metadata) {
