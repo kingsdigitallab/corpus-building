@@ -3,7 +3,6 @@ import fs from "fs/promises";
 import path from "path";
 import SaxonJS from "saxon-js";
 import { fileURLToPath } from "url";
-import xml2js from "xml2js";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { extractMetadata } from "./metadata.js";
