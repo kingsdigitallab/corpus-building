@@ -184,8 +184,30 @@
 					</dd>
 					<dt>Autopsy</dt>
 					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
-					<dt>Map</dt>
-					<dd>TODO: use the geo information in the museums dataset</dd>
+					{#if metadata.repository.museum.latitude && metadata.repository.museum.longitude}
+						<dt>Map</dt>
+						{@const lngLat = [
+							metadata.repository.museum.longitude,
+							metadata.repository.museum.latitude
+						]}
+						<dd>
+							<MapLibre
+								center={lngLat}
+								zoom={7}
+								class="map"
+								standardControls
+								style={config.mapStyle}
+							>
+								<DefaultMarker {lngLat}>
+									<Popup offset={[0, -10]}>
+										<div class="popup">
+											{metadata.repository.museum.name}
+										</div>
+									</Popup>
+								</DefaultMarker>
+							</MapLibre>
+						</dd>
+					{/if}
 				</dl>
 			{/if}
 		</section>
@@ -325,5 +347,16 @@
 	/* Epidoc styles */
 	:global(.linenumber) {
 		margin-right: var(--size-4);
+	}
+
+	/* Map styles */
+	:global(.maplibregl-popup-anchor-bottom .maplibregl-popup-tip) {
+		border-top-color: var(--surface-1);
+	}
+	:global(.maplibregl-popup-content) {
+		background-color: var(--surface-1);
+		color: var(--text-1);
+		font-family: var(--font-family);
+		font-size: var(--font-size-fluid-0);
 	}
 </style>
