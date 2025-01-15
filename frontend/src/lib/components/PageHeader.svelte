@@ -17,7 +17,7 @@
 	<nav>
 		<BaseLink href="/" class="title">{config.title}</BaseLink>
 		<ul>
-			<li>About</li>
+			<li><BaseLink href="/about">About</BaseLink></li>
 			<li>Guide</li>
 			{#if debug}
 				<li><BaseLink href="/_qa">QA</BaseLink></li>
