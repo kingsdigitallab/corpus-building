@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import dotenv from 'dotenv';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
+import { mdsvex } from 'mdsvex';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,8 +18,15 @@ if (!existsSync(errorFilePath)) {
 	writeFileSync(errorFilePath, '{}');
 }
 
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+	extensions: ['.md', '.svx'],
+	smartypants: true
+};
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: [...mdsvexOptions.extensions, '.svelte'],
 	kit: {
 		adapter: adapter(),
 		alias: {
@@ -58,7 +66,7 @@ const config = {
 			}
 		}
 	},
-	preprocess: [vitePreprocess()]
+	preprocess: [mdsvex(mdsvexOptions), vitePreprocess()]
 };
 
 export default config;
