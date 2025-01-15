@@ -184,11 +184,11 @@
 					</dd>
 					<dt>Autopsy</dt>
 					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
-					{#if metadata.repository.museum.latitude && metadata.repository.museum.longitude}
+					{#if metadata.repository.museum.location.geo}
 						<dt>Map</dt>
 						{@const lngLat = [
-							metadata.repository.museum.longitude,
-							metadata.repository.museum.latitude
+							metadata.repository.museum.location.geo.lon,
+							metadata.repository.museum.location.geo.lat
 						]}
 						<dd>
 							<MapLibre
