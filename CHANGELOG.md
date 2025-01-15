@@ -1,5 +1,37 @@
 
 
+# [0.12.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.11.0...v0.12.0) (2025-01-15)
+
+
+### Bug Fixes
+
+* **etl:** remove unused import ([bb51cfe](https://github.com/kingsdigitallab/corpus-building/commit/bb51cfefd3033fa081de0e980cd67ef05832e6a9))
+* **frontend:** check bibliography entry ([d1900c0](https://github.com/kingsdigitallab/corpus-building/commit/d1900c077ad8019ccd9d531a97954f6908faba03))
+* **inscriptionmap:** ensure popups are updated when data changes ([aa00f41](https://github.com/kingsdigitallab/corpus-building/commit/aa00f410843fe0d80c9effacb7c59f52f911f778))
+
+
+### Features
+
+* **bibliographyentry:** render information from Zotero ([a8f7b3d](https://github.com/kingsdigitallab/corpus-building/commit/a8f7b3dead84b27250babd39229134e6d24d5748))
+* **config:** add setting to store map style ([de6a1e3](https://github.com/kingsdigitallab/corpus-building/commit/de6a1e3a463b82f439a5c72c724cd5ea08ce65cf))
+* **etl:** add museum data from museum authority list ([55839ab](https://github.com/kingsdigitallab/corpus-building/commit/55839ab5f9a305da9ee58c1804d89c531fb3e941))
+* **etl:** add script to convert museums al to json ([a286b50](https://github.com/kingsdigitallab/corpus-building/commit/a286b5065ec0233b217141291681700e78dc964d))
+* **etl:** add script to convert museums data to tei ([fee547e](https://github.com/kingsdigitallab/corpus-building/commit/fee547e96af46dda9437b54dfb1fb64f7e079115))
+* **facetedsearch:** change the view to a quey param ([002764d](https://github.com/kingsdigitallab/corpus-building/commit/002764dd41cf1e7b8db14784e9cd87c092fe12bc))
+* **frontend:** add about page ([1f7bd17](https://github.com/kingsdigitallab/corpus-building/commit/1f7bd17017c0720b0229c8ddb653b3172329ca16))
+* **inscription:** display map for current location ([96670af](https://github.com/kingsdigitallab/corpus-building/commit/96670af9ca283facde6b2dec7cdfe2a57b921cc4))
+* **inscription:** use the map style setting ([54b3842](https://github.com/kingsdigitallab/corpus-building/commit/54b38427bee495fcffbc6ed7c06d98b7d6e848c3))
+* **metadata:** import bibliography information from Zotero ([8d4b1c9](https://github.com/kingsdigitallab/corpus-building/commit/8d4b1c9d66a01179346e5bdf56e2e6b2e9bf1941))
+* **search:** add facet for language certainty ([85b1ee1](https://github.com/kingsdigitallab/corpus-building/commit/85b1ee13298b897291a3eb8c949ade4e7f3a9b3e))
+* **search:** add publication author and year to the search filters ([c0cb846](https://github.com/kingsdigitallab/corpus-building/commit/c0cb84659e65c5efef46e04d0e01961b4afdbc7d))
+* **search:** add publication title filter ([642f9f2](https://github.com/kingsdigitallab/corpus-building/commit/642f9f2e83f66912149ad8bfcf518476c13cbaae))
+* **search:** set repository facet to private ([e3e48f6](https://github.com/kingsdigitallab/corpus-building/commit/e3e48f660de3042eb434ed4ff50dec5ddb3351d3))
+
+
+### Performance Improvements
+
+* **facetedsearch:** only update data for map view when in map view ([3f87eda](https://github.com/kingsdigitallab/corpus-building/commit/3f87edada7ff27c5138d2b38e77d410a0b471094))
+
 # [0.11.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.10.1...v0.11.0) (2024-12-10)
 
 
