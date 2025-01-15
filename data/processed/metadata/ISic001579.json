@@ -32,6 +32,7 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A small plaque of white marble, intact on the left but broken on the other three sides. Possible traces of a wreath or similar incised decoration on the upper edge.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -42,38 +43,48 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "17",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "13.8",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "1.9-3",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Text has sections marked out by the positioning of the first line of each section to the left, but nonetheless maintains an irregular left margin. Slight gap between the two sections of text.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Letters have pronounced terminal serifs. Alpha with straight bar; epsilon with shorter middle bar; mu with vertical first and last, shorter mid-strokes; xsi in form of Z with crossbar; omega distinctive as small circle joined to horizontal foot by a small vertical connector; ",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-10",
         "from": "line1",
-        "to": "line1",
+        "to": "line10",
+        "h": "14-17",
         "unit": "mm"
       },
       {
@@ -86,8 +97,8 @@
     ]
   },
   "notBefore": -150,
-  "notAfter": -50,
-  "precision": "low",
+  "notAfter": -1,
+  "evidence": "lettering",
   "places": [
     {
       "_": "Syracusae",
@@ -107,12 +118,17 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in the area of S. Lucia in Siracusa, in spring 1897.",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1897",
+    "geo": [
+      37.0725853,
+      15.2867681
+    ]
   },
   "provenanceObserved": {
-    "_": "None",
+    "_": "observed but not formally autopsied in Palermo museum",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -127,20 +143,23 @@
   "settlement": "Palermo",
   "repository": {
     "_": "Museo Archeologico Regionale Antonino Salinas",
-    "role": "MUSEUM",
+    "role": "museum",
     "ref": "http://sicily.classics.ox.ac.uk/museum/064",
     "museum": {
+      "type": "museum",
       "name": "Museo Archeologico Regionale Antonino Salinas",
+      "uri": "http://sicily.classics.ox.ac.uk/museum/064",
       "description": "Partially reopened following extensive restoration work. Comprehensive collection of archaeological material, predominantly from the West of the island, with an important Etruscan collection.",
-      "type": "MUSEUM",
-      "latitude": 38.120964,
-      "longitude": 13.361024,
-      "town": "Palermo",
-      "province": "Palermo",
-      "country": "Italy",
-      "address": "Centre of Palermo, Piazza Olivella 24, 90100 - Palermo",
-      "pleiades": "",
-      "uri": "http://sicily.classics.ox.ac.uk/museum/064"
+      "location": {
+        "settlement": "Palermo",
+        "region": "Palermo",
+        "country": "Italy",
+        "address": "Centre of Palermo, Piazza Olivella 24, 90100 - Palermo",
+        "geo": {
+          "lat": 38.120964,
+          "lon": 13.361024
+        }
+      }
     }
   },
   "idno": {
@@ -322,7 +341,7 @@
     "plaque",
     "marble",
     "-150",
-    "-50",
+    "-1",
     "syracusae",
     "siracusa",
     "italy",
