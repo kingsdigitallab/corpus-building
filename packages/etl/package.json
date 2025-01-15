@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "etl": "node src/index.js",
+    "museums": "node src/museums.js",
     "sef": "cd ../../xslt && npx xslt3 -xsl:epidoc/start-edition.xsl -export:start-edition.sef.json -t && cd -",
     "test": "vitest"
   },
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/kingsdigitallab/corpus-building#readme",
   "devDependencies": {
     "@vitest/coverage-v8": "^2.0.2",
+    "csv-parse": "^5.6.0",
     "vitest": "^2.0.2"
   },
   "dependencies": {
