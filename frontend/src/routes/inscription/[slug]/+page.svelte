@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
+	import { LucideExternalLink } from 'lucide-svelte';
 
 	/**
 	 * @typedef {Object} Props
@@ -50,25 +51,38 @@
 </script>
 
 <article>
-	<hgroup>
+	<section id="overview">
 		<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
-		<p>
-			{metadata.textLang._},
-			<a href={metadata.type.ref}>{metadata.type._}</a>{#if metadata.objectType},
-				<a href={metadata.objectType.ref}>{metadata.objectType._}</a>{/if}
-		</p>
-		<p>
-			{metadata.status},
-			<a href="{config.publicUrl}inscription/{slug}" target="inscription">View in current site</a>
-		</p>
-	</hgroup>
-	<div class="sections">
 		<figure id="facsimile-images">
 			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
 			<figcaption>{curImageTitle}</figcaption>
 		</figure>
-
-		<section id="edition">{@html edition.html}</section>
+		<dl>
+			<dt>Language</dt>
+			<dd>{metadata.textLang._}</dd>
+			<dt>Text type</dt>
+			<dd><a href={metadata.type.ref}>{metadata.type._}</a></dd>
+			<dt>Object type</dt>
+			{#if metadata.objectType}
+				<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+			{/if}
+			<dt>ID</dt>
+			<dd>{metadata.file}</dd>
+			<dt>Status</dt>
+			<dd>{metadata.status}</dd>
+			<dt>Links</dt>
+			<dd>
+				<a class="button" href="{config.publicUrl}inscription/{slug}" target="inscription">
+					View in current site <LucideExternalLink />
+				</a>
+			</dd>
+		</dl>
+	</section>
+	<section id="content">
+		<section id="edition">
+			<h2>Edition</h2>
+			{@html edition.html}
+		</section>
 
 		<section id="apparatus">{@html apparatus.html}</section>
 
@@ -265,7 +279,7 @@
 				<dd>{metadata.citation || config.EMPTY_PLACEHOLDER}</dd>
 			</dl>
 		</section>
-	</div>
+	</section>
 </article>
 
 <style>
@@ -274,10 +288,12 @@
 		max-inline-size: none;
 	}
 
-	div.sections {
+	article {
 		display: grid;
 		gap: var(--size-8);
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		height: calc(100vh - var(--size-11));
+		overflow: hidden;
 
 		:global(h2::first-letter),
 		:global(h3::first-letter),
@@ -288,28 +304,91 @@
 		}
 	}
 
-	#facsimile-images {
+	#overview {
 		border: var(--border-size-1) solid var(--gray-2);
+		height: 100%;
+		overflow-y: auto;
+		margin-top: 0;
+		padding-inline: var(--size-4);
+		padding-top: 0;
+		position: sticky;
+		top: 0;
+	}
+
+	#content {
+		height: 100%;
+		margin-top: 0;
+		overflow-y: auto;
+		padding-right: var(--size-4);
+	}
+
+	#overview h1 {
+		border-bottom: var(--border-size-1) solid var(--gray-2);
+		padding-block: var(--size-4);
+		text-align: center;
+	}
+
+	#overview #facsimile-images {
 		grid-column: 1;
 		grid-row: 1;
+		margin: 0 auto;
+		padding-inline: var(--size-2);
+		width: 100%;
+	}
+
+	#overview #facsimile-images figcaption {
+		border-top: var(--border-size-1) solid var(--gray-2);
+		border-bottom: var(--border-size-1) solid var(--gray-2);
+		font-size: var(--font-size-0);
+		max-inline-size: none;
+		padding-block: var(--size-4);
+		text-align: center;
+		text-wrap: balance;
+		width: 100%;
+	}
+
+	#overview dl {
+		column-count: 2;
+		column-gap: var(--size-4);
+		padding-block: var(--size-4);
+	}
+
+	#overview dl dt,
+	#overview dl dd {
+		display: inline;
+		margin: 0;
+	}
+
+	#overview dl dt::after {
+		content: ': ';
+	}
+
+	#overview dl dd::after {
+		content: '';
+		display: block;
+		margin-bottom: var(--size-2);
+	}
+
+	#overview dl dd a {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--size-2);
 	}
 
 	#edition {
 		font-family: var(--font-antique);
 		grid-column: 2;
 		grid-row: 1;
+		margin-top: 0;
+		padding-block: var(--size-4);
 	}
 
-	div.sections > *:not(#facsimile-images):not(#edition) {
-		grid-column: 1 / -1;
+	#edition h2 {
+		font-family: var(--font-family);
 	}
 
 	section {
 		margin-block: var(--size-4);
-	}
-
-	figcaption {
-		max-inline-size: none;
 	}
 
 	:global(.map) {
@@ -326,21 +405,25 @@
 	}
 
 	@media (max-width: 768px) {
-		div.sections {
-			grid-template-columns: 1fr;
+		article {
+			display: block;
+			height: auto;
+			overflow: visible;
 		}
 
-		#facsimile-images,
-		#edition {
-			grid-column: 1;
+		#overview {
+			position: relative;
+			height: auto;
+			margin-bottom: var(--size-8);
 		}
 
-		#edition {
-			grid-row: 2;
+		#content {
+			height: auto;
+			overflow: visible;
 		}
 
-		section {
-			margin-block: var(--size-2);
+		#overview dl {
+			column-count: 1;
 		}
 	}
 
