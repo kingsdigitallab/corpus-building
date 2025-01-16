@@ -1,4 +1,4 @@
-import{a,t as i}from"../chunks/disclose-version.DcaOGNfW.js";import"../chunks/legacy.gAK5gMZW.js";import{n as o}from"../chunks/runtime.B0uei5AR.js";var n=i(`<h1>About</h1> <p>I.Sicily is a long-term project to construct and maintain a digital corpus of
+import{a,t as i}from"../chunks/disclose-version.DTG0FDK3.js";import"../chunks/legacy.o-EImAlt.js";import{n as o}from"../chunks/runtime.uqDDTF6C.js";var n=i(`<h1>About</h1> <p>I.Sicily is a long-term project to construct and maintain a digital corpus of
 the inscriptions of ancient Sicily. The project aims to provide free open access
 data, and to follow the principles of Linked Open Data wherever possible.The
 online corpus, live since 2017, can be found at: <a href="http://sicily.classics.ox.ac.uk" rel="nofollow">http://sicily.classics.ox.ac.uk</a>.</p> <p>The I.Sicily project aims to include all types of inscribed text, in all languages,
