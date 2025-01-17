@@ -129,6 +129,8 @@ html {
 }
 
 html {
+	--border-color: var(--gray-5);
+
 	accent-color: var(--brand);
 	background-color: var(--surface-1);
 	block-size: 100%;
@@ -159,6 +161,42 @@ img {
 	color: var(--brand, var(--link));
 }
 
+/* Map styles */
+.map {
+	border: var(--border-size-1) solid var(--border-color);
+	font-family: var(--font-family);
+	height: 300px;
+	width: 100%;
+
+	:global(.maplibregl-popup-content .popup) {
+		max-height: 200px;
+		max-width: 200px;
+		overflow: scroll;
+	}
+}
+
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+	border-top-color: var(--surface-1) !important;
+}
+.maplibregl-popup-anchor-left .maplibregl-popup-tip {
+	border-right-color: var(--surface-1) !important;
+}
+.maplibregl-popup-anchor-right .maplibregl-popup-tip {
+	border-left-color: var(--surface-1) !important;
+}
+.maplibregl-popup-anchor-top .maplibregl-popup-tip {
+	border-bottom-color: var(--surface-1) !important;
+}
+
+.maplibregl-popup-content {
+	background-color: var(--surface-1) !important;
+	color: var(--text-1);
+	font-family: var(--font-family);
+	font-size: var(--font-size-fluid-0);
+}
+/* End of Map styles */
+
+/* Slider styles */
 .slider {
 	width: 100%;
 	margin-block: var(--size-3);
@@ -224,3 +262,4 @@ img {
 	pointer-events: none;
 	opacity: 0.5;
 }
+/* End of Slider styles */
