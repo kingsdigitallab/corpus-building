@@ -84,6 +84,12 @@
 		font-size: var(--font-size-0);
 	}
 
+	@media (max-width: 1279px) {
+		.layout {
+			padding-inline: var(--size-2);
+		}
+	}
+
 	@media (min-width: 1280px) {
 		.layout {
 			padding-inline: 0;
