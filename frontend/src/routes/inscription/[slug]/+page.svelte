@@ -2,11 +2,12 @@
 	import { base } from '$app/paths';
 	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
+	import EditionEntry from '$lib/components/EditionEntry.svelte';
 	import * as config from '$lib/config';
+	import { Button } from 'bits-ui';
+	import { LucideExternalLink, LucideMaximize2, LucideMinimize2 } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
-	import EditionEntry from '$lib/components/EditionEntry.svelte';
-	import { LucideExternalLink } from 'lucide-svelte';
 
 	/**
 	 * @typedef {Object} Props
@@ -31,6 +32,8 @@
 
 	let OpenSeaDragon;
 
+	let isExpanded = $state(false);
+
 	onMount(async () => {
 		OpenSeaDragon = (await import('openseadragon')).default;
 
@@ -50,9 +53,18 @@
 	});
 </script>
 
-<article>
+<article class:expanded={isExpanded}>
 	<section id="overview">
-		<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
+		<div class="overview-header">
+			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
+			<Button.Root class="expand-button surface-1" onclick={() => (isExpanded = !isExpanded)}>
+				{#if isExpanded}
+					<LucideMinimize2 />
+				{:else}
+					<LucideMaximize2 />
+				{/if}
+			</Button.Root>
+		</div>
 		<figure id="facsimile-images">
 			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
 			<figcaption>{curImageTitle}</figcaption>
@@ -72,7 +84,7 @@
 			<dd>{metadata.status}</dd>
 			<dt>Links</dt>
 			<dd>
-				<a class="button" href="{config.publicUrl}inscription/{slug}" target="inscription">
+				<a href="{config.publicUrl}inscription/{slug}" target="inscription">
 					View in current site <LucideExternalLink />
 				</a>
 			</dd>
@@ -322,6 +334,28 @@
 		padding-right: var(--size-4);
 	}
 
+	.overview-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: var(--border-size-1) solid var(--gray-2);
+	}
+
+	@media (min-width: 769px) {
+		article.expanded {
+			display: block;
+			grid-template-columns: unset;
+		}
+
+		article.expanded #overview {
+			width: 100%;
+		}
+
+		article.expanded #content {
+			display: none;
+		}
+	}
+
 	#overview h1 {
 		border-bottom: var(--border-size-1) solid var(--gray-2);
 		padding-block: var(--size-4);
@@ -415,6 +449,10 @@
 			position: relative;
 			height: auto;
 			margin-bottom: var(--size-8);
+		}
+
+		.expand-button {
+			display: none;
 		}
 
 		#content {
