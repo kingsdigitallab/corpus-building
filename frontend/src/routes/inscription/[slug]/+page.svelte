@@ -108,59 +108,55 @@
 
 		<section id="physical-description">
 			<h2>Physical description</h2>
-			<section>
-				<h3>Support</h3>
-				<dl>
-					<dt>Description</dt>
-					<dd>{metadata.support || config.EMPTY_PLACEHOLDER}</dd>
-					<dt>Object type</dt>
-					{#if metadata.objectType}
-						<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
-					{:else}
-						<dd>{config.EMPTY_PLACEHOLDER}</dd>
-					{/if}
-					<dt>Material</dt>
-					<dd><a href={metadata.material.ref}>{metadata.material._}</a></dd>
-					<dt>Condition</dt>
-					{#if metadata.condition?.ana}
-						<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
-					{:else}
-						<dd>{metadata.condition._ || config.EMPTY_PLACEHOLDER}</dd>
-					{/if}
-					<dt>Dimensions</dt>
+			<h3>Support</h3>
+			<dl>
+				<dt>Description</dt>
+				<dd>{metadata.support || config.EMPTY_PLACEHOLDER}</dd>
+				<dt>Object type</dt>
+				{#if metadata.objectType}
+					<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+				{:else}
+					<dd>{config.EMPTY_PLACEHOLDER}</dd>
+				{/if}
+				<dt>Material</dt>
+				<dd><a href={metadata.material.ref}>{metadata.material._}</a></dd>
+				<dt>Condition</dt>
+				{#if metadata.condition?.ana}
+					<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
+				{:else}
+					<dd>{metadata.condition._ || config.EMPTY_PLACEHOLDER}</dd>
+				{/if}
+				<dt>Dimensions</dt>
+				<dd>
+					{#each metadata.dimensions as dimension, index}
+						{dimension.dimension}: {dimension._}
+						{dimension.unit}{#if index < metadata.dimensions.length - 1},&#160;{/if}
+					{/each}
+				</dd>
+			</dl>
+			<h3>Inscription</h3>
+			<dl>
+				<dt>Layout</dt>
+				<dd>{metadata.layoutDesc.layout.p || config.EMPTY_PLACEHOLDER}</dd>
+				<dt>Text condition</dt>
+				{#if metadata.layoutDesc.layout.damage.ana}
+					<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
+				{:else}
+					<dd>{metadata.layoutDesc.layout.damage._ || config.EMPTY_PLACEHOLDER}</dd>
+				{/if}
+				<dt>Lettering</dt>
+				<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
+				<dt>Letter heights</dt>
+				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
+					<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
+				{/each}
+				<dt>Interlinear heights</dt>
+				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
 					<dd>
-						{#each metadata.dimensions as dimension, index}
-							{dimension.dimension}: {dimension._}
-							{dimension.unit}{#if index < metadata.dimensions.length - 1},&#160;{/if}
-						{/each}
+						{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
 					</dd>
-				</dl>
-			</section>
-			<section>
-				<h3>Inscription</h3>
-				<dl>
-					<dt>Layout</dt>
-					<dd>{metadata.layoutDesc.layout.p || config.EMPTY_PLACEHOLDER}</dd>
-					<dt>Text condition</dt>
-					{#if metadata.layoutDesc.layout.damage.ana}
-						<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
-					{:else}
-						<dd>{metadata.layoutDesc.layout.damage._ || config.EMPTY_PLACEHOLDER}</dd>
-					{/if}
-					<dt>Lettering</dt>
-					<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
-					<dt>Letter heights</dt>
-					{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
-						<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
-					{/each}
-					<dt>Interlinear heights</dt>
-					{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
-						<dd>
-							{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
-						</dd>
-					{/each}
-				</dl>
-			</section>
+				{/each}
+			</dl>
 		</section>
 
 		<section id="provenance">
@@ -295,11 +291,6 @@
 </article>
 
 <style>
-	h1 {
-		font-size: var(--font-size-fluid-1);
-		max-inline-size: none;
-	}
-
 	article {
 		display: grid;
 		gap: var(--size-8);
@@ -317,7 +308,7 @@
 	}
 
 	#overview {
-		border: var(--border-size-1) solid var(--gray-2);
+		border: var(--border-size-1) solid var(--border-color);
 		height: 100%;
 		overflow-y: auto;
 		margin-top: 0;
@@ -331,14 +322,13 @@
 		height: 100%;
 		margin-top: 0;
 		overflow-y: auto;
-		padding-right: var(--size-4);
 	}
 
 	.overview-header {
-		display: flex;
 		align-items: center;
+		border-bottom: var(--border-size-1) solid var(--border-color);
+		display: flex;
 		justify-content: space-between;
-		border-bottom: var(--border-size-1) solid var(--gray-2);
 	}
 
 	@media (min-width: 769px) {
@@ -357,7 +347,8 @@
 	}
 
 	#overview h1 {
-		border-bottom: var(--border-size-1) solid var(--gray-2);
+		font-size: var(--font-size-fluid-1);
+		max-inline-size: none;
 		padding-block: var(--size-4);
 		text-align: center;
 	}
@@ -371,8 +362,8 @@
 	}
 
 	#overview #facsimile-images figcaption {
-		border-top: var(--border-size-1) solid var(--gray-2);
-		border-bottom: var(--border-size-1) solid var(--gray-2);
+		border-top: var(--border-size-1) solid var(--border-color);
+		border-bottom: var(--border-size-1) solid var(--border-color);
 		font-size: var(--font-size-0);
 		max-inline-size: none;
 		padding-block: var(--size-4);
@@ -409,33 +400,23 @@
 		gap: var(--size-2);
 	}
 
+	#content h2,
+	#content h3 {
+		font-family: var(--font-family);
+		padding-block: var(--size-2);
+	}
+
+	#content > section {
+		border-bottom: var(--border-size-1) solid var(--border-color);
+		padding-bottom: var(--size-8);
+	}
+
 	#edition {
 		font-family: var(--font-antique);
 		grid-column: 2;
 		grid-row: 1;
+		margin-bottom: var(--size-4);
 		margin-top: 0;
-		padding-block: var(--size-4);
-	}
-
-	#edition h2 {
-		font-family: var(--font-family);
-	}
-
-	section {
-		margin-block: var(--size-4);
-	}
-
-	:global(.map) {
-		border: var(--border-size-1) solid var(--text-1);
-		font-family: var(--font-family);
-		height: 300px;
-		width: 100%;
-
-		:global(.maplibregl-popup-content .popup) {
-			max-height: 200px;
-			max-width: 200px;
-			overflow: scroll;
-		}
 	}
 
 	@media (max-width: 768px) {
@@ -451,7 +432,7 @@
 			margin-bottom: var(--size-8);
 		}
 
-		.expand-button {
+		:global(.expand-button) {
 			display: none;
 		}
 
@@ -468,16 +449,5 @@
 	/* Epidoc styles */
 	:global(.linenumber) {
 		margin-right: var(--size-4);
-	}
-
-	/* Map styles */
-	:global(.maplibregl-popup-anchor-bottom .maplibregl-popup-tip) {
-		border-top-color: var(--surface-1);
-	}
-	:global(.maplibregl-popup-content) {
-		background-color: var(--surface-1);
-		color: var(--text-1);
-		font-family: var(--font-family);
-		font-size: var(--font-size-fluid-0);
 	}
 </style>
