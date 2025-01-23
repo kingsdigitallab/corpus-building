@@ -20,7 +20,9 @@
 	let { slug, metadata, images, html } = data;
 	let curImageTitle = $state(images[0].desc);
 
-	const edition = html.divs.find((div) => div.id === 'edition');
+	const editions = html.divs.find((div) => div.id === 'editions');
+	let editionDivs = $state([]);
+
 	const apparatus = html.divs.find((div) => div.id === 'apparatus');
 	const translations = html.divs.filter((div) => div.id === 'translation');
 	const commentary = html.divs.find((div) => div.id === 'commentary');
@@ -33,6 +35,7 @@
 	let OpenSeaDragon;
 
 	let isExpanded = $state(false);
+	let activeEditionTab = $state(0);
 
 	onMount(async () => {
 		OpenSeaDragon = (await import('openseadragon')).default;
@@ -50,7 +53,29 @@
 			const image = images[event.page];
 			curImageTitle = `${image.surfaceType}, ${image.desc}`;
 		});
+
+		if (editions) {
+			editionDivs = parseEditionDivs(editions.html);
+			activeEditionTab = 0;
+		}
 	});
+
+	/**
+	 * @param {string} htmlString
+	 */
+	function parseEditionDivs(htmlString) {
+		if (typeof window === 'undefined') {
+			return [];
+		}
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(htmlString, 'text/html');
+		const editionDivs = Array.from(doc.querySelectorAll('[id^="edition-"]'));
+		return editionDivs.map((div) => ({
+			id: div.id,
+			type: div.id.replace('edition-', ''),
+			html: div.outerHTML
+		}));
+	}
 </script>
 
 <article class:expanded={isExpanded}>
@@ -70,6 +95,8 @@
 			<figcaption>{curImageTitle}</figcaption>
 		</figure>
 		<dl>
+			<dt>ID</dt>
+			<dd>{metadata.file}</dd>
 			<dt>Language</dt>
 			<dd>{metadata.textLang._}</dd>
 			<dt>Text type</dt>
@@ -78,8 +105,6 @@
 			{#if metadata.objectType}
 				<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
 			{/if}
-			<dt>ID</dt>
-			<dd>{metadata.file}</dd>
 			<dt>Status</dt>
 			<dd>{metadata.status}</dd>
 			<dt>Links</dt>
@@ -93,7 +118,19 @@
 	<section id="content">
 		<section id="edition">
 			<h2>Edition</h2>
-			{@html edition.html}
+			<div class="tabs">
+				{#each editionDivs as div, index}
+					<Button.Root
+						class={activeEditionTab === index ? 'active' : ''}
+						onclick={() => (activeEditionTab = index)}
+					>
+						{div.type}
+					</Button.Root>
+				{/each}
+			</div>
+			<div class="edition-content">
+				{@html editionDivs[activeEditionTab]?.html || ''}
+			</div>
 		</section>
 
 		<section id="apparatus">{@html apparatus.html}</section>
@@ -293,7 +330,7 @@
 <style>
 	article {
 		display: grid;
-		gap: var(--size-8);
+		gap: var(--size-4);
 		grid-template-columns: 1fr 1fr;
 		height: calc(100vh - var(--size-11));
 		overflow: hidden;
@@ -321,6 +358,7 @@
 	#content {
 		height: 100%;
 		margin-top: 0;
+		padding-inline: var(--size-4);
 		overflow-y: auto;
 	}
 
@@ -417,6 +455,23 @@
 		grid-row: 1;
 		margin-bottom: var(--size-4);
 		margin-top: 0;
+	}
+
+	.tabs {
+		border-bottom: var(--border-size-1) solid var(--surface-4);
+		display: flex;
+		font-family: var(--font-family);
+		gap: var(--size-2);
+		margin-block: var(--size-4);
+	}
+
+	.tabs :global(button) {
+		margin-block-end: var(--size-2);
+		text-transform: capitalize;
+	}
+
+	.tabs :global(.active) {
+		background-color: var(--surface-4);
 	}
 
 	@media (max-width: 768px) {
