@@ -418,7 +418,32 @@ async function getZoteroData(itemKey) {
     return Promise.resolve(zoteroDataMap.get(cacheKey));
   }
 
-  const url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=citation,data&style=chicago-fullnote-bibliography`;
+  let url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=data`;
+
+  let locale = "en-GB";
+
+  const language = await fetch(url)
+    .then((response) => response.json())
+    .then((json) => json.data.language.toLowerCase())
+    .catch(() => "english");
+
+  if (language.indexOf("ge") === 0 || language.indexOf("german") === 0) {
+    locale = "de-DE";
+  } else if (
+    language.indexOf("it") === 0 ||
+    language.indexOf("italian") === 0
+  ) {
+    locale = "it-IT";
+  } else if (language.indexOf("fr") === 0 || language.indexOf("french") === 0) {
+    locale = "fr-FR";
+  } else if (
+    language.indexOf("es") === 0 ||
+    language.indexOf("spanish") === 0
+  ) {
+    locale = "es-ES";
+  }
+
+  url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=citation,data&style=chicago-fullnote-bibliography&linkwrap=1&locale=${locale}`;
 
   return fetch(url)
     .then((response) => (response.ok ? response.json() : null))
