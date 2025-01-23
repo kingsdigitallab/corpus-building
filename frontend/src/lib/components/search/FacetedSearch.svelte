@@ -142,7 +142,7 @@
 		e.preventDefault();
 		$searchQuery = '';
 		$searchPage = 1;
-		$searchLimit = config.search.limit;
+		$searchLimit = $searchView === 'map' ? config.search.maxLimit : config.search.limit;
 
 		selectedDateRange = initDateRange();
 		selectedFilters = initFilters();
