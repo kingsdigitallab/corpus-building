@@ -1,21 +1,21 @@
 <script>
-	let { inscription } = $props();
+	let { date } = $props();
 
 	let dates = [];
 
 	for (const key of ['notBefore', 'notAfter']) {
-		if (inscription[key]) {
-			if (inscription[key] < 0) {
-				dates.push(`${Math.abs(inscription[key])} BC`);
+		if (date[key]) {
+			if (date[key] < 0) {
+				dates.push(`${Math.abs(date[key])} BC`);
 			} else {
-				dates.push(`AD ${inscription[key]}`);
+				dates.push(`AD ${date[key]}`);
 			}
 		} else {
 			dates.push('Unknown');
 		}
 	}
 
-	let date = $derived(dates.join(' – '));
+	let dateString = $derived(dates.join(' – '));
 </script>
 
-<span class="inscription-date">{date}</span>
+<span class="inscription-date">{dateString}</span>
