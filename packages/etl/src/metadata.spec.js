@@ -394,7 +394,7 @@ describe("getMaterial function", () => {
 });
 
 describe("getDates function", () => {
-  it("should return correct notBefore and notAfter dates when origDate is present", async () => {
+  it("should return complete date information when origDate is present", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -403,7 +403,7 @@ describe("getDates function", () => {
               <msDesc>
                 <history>
                   <origin>
-                    <origDate notBefore-custom="0100" notAfter-custom="0200"></origDate>
+                    <origDate notBefore-custom="0100" notAfter-custom="0200" evidence="lettering" precision="low">First to second century CE</origDate>
                   </origin>
                 </history>
               </msDesc>
@@ -414,12 +414,15 @@ describe("getDates function", () => {
     `);
 
     expect(metadataExtractors.getDates(xml)).toEqual({
+      _: "First to second century CE",
       notBefore: 100,
       notAfter: 200,
+      evidence: "lettering",
+      precision: "low",
     });
   });
 
-  it("should return null for notBefore and notAfter when origDate is not present", async () => {
+  it("should return null values when origDate is not present", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -442,7 +445,7 @@ describe("getDates function", () => {
     });
   });
 
-  it("should return null for missing notBefore-custom or notAfter-custom", async () => {
+  it("should handle partial date information", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -451,7 +454,7 @@ describe("getDates function", () => {
               <msDesc>
                 <history>
                   <origin>
-                    <origDate notBefore-custom="0100"></origDate>
+                    <origDate notBefore-custom="0100" evidence="lettering">Early second century CE</origDate>
                   </origin>
                 </history>
               </msDesc>
@@ -462,8 +465,11 @@ describe("getDates function", () => {
     `);
 
     expect(metadataExtractors.getDates(xml)).toEqual({
+      _: "Early second century CE",
       notBefore: 100,
       notAfter: null,
+      evidence: "lettering",
+      precision: undefined,
     });
   });
 
@@ -476,7 +482,7 @@ describe("getDates function", () => {
               <msDesc>
                 <history>
                   <origin>
-                    <origDate notBefore-custom="abc" notAfter-custom="def"></origDate>
+                    <origDate notBefore-custom="abc" notAfter-custom="def">Invalid date</origDate>
                   </origin>
                 </history>
               </msDesc>
@@ -487,8 +493,11 @@ describe("getDates function", () => {
     `);
 
     expect(metadataExtractors.getDates(xml)).toEqual({
+      _: "Invalid date",
       notBefore: NaN,
       notAfter: NaN,
+      evidence: undefined,
+      precision: undefined,
     });
   });
 
@@ -501,7 +510,7 @@ describe("getDates function", () => {
               <msDesc>
                 <history>
                   <origin>
-                    <origDate notBefore-custom="" notAfter-custom=""></origDate>
+                    <origDate notBefore-custom="" notAfter-custom="">Undated inscription</origDate>
                   </origin>
                 </history>
               </msDesc>
@@ -512,8 +521,11 @@ describe("getDates function", () => {
     `);
 
     expect(metadataExtractors.getDates(xml)).toEqual({
+      _: "Undated inscription",
       notBefore: null,
       notAfter: null,
+      evidence: undefined,
+      precision: undefined,
     });
   });
 });
@@ -766,6 +778,7 @@ describe("getTextLang function", () => {
     `);
     expect(metadataExtractors.getTextLang(xml)).toEqual({
       _: "Latin",
+      languages: ["Latin"],
       mainLang: "la",
     });
   });
@@ -785,7 +798,7 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
-    expect(metadataExtractors.getTextLang(xml)).toBeUndefined();
+    expect(metadataExtractors.getTextLang(xml)).toBeNull();
   });
 
   it("should return the textLang object with only mainLang", async () => {
@@ -796,7 +809,7 @@ describe("getTextLang function", () => {
             <sourceDesc>
               <msDesc>
                 <msContents>
-                  <textLang mainLang="gr"/>
+                  <textLang mainLang="grc"/>
                 </msContents>
               </msDesc>
             </sourceDesc>
@@ -804,7 +817,10 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
-    expect(metadataExtractors.getTextLang(xml)).toEqual({ mainLang: "gr" });
+    expect(metadataExtractors.getTextLang(xml)).toEqual({
+      mainLang: "grc",
+      languages: ["Ancient Greek"],
+    });
   });
 
   it("should return an empty object when textLang is present but empty", async () => {
@@ -823,7 +839,7 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
-    expect(metadataExtractors.getTextLang(xml)).toEqual("");
+    expect(metadataExtractors.getTextLang(xml)).toBeNull();
   });
 });
 
