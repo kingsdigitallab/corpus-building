@@ -161,8 +161,8 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 
 		return {
 			...item,
-			notAfter: item.notAfter ?? undefined,
-			notBefore: item.notBefore ?? undefined,
+			notAfter: item.date.notAfter ?? undefined,
+			notBefore: item.date.notBefore ?? undefined,
 			language: item.textLang?.languages ?? undefined,
 			languageCert: item.textLang?.cert ?? undefined,
 			inscriptionType: getHierarchicalValues(item.type?.ana),
