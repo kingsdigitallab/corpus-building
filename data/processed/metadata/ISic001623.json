@@ -1,8 +1,8 @@
 {
   "file": "ISic001623",
   "uri": "ISic001623",
-  "title": "I.Sicily inscription 001623",
-  "status": "unchecked",
+  "title": "Dedication to Apollo",
+  "status": "draft",
   "editions": [
     {
       "_": "171043",
@@ -27,43 +27,58 @@
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html",
     "cert": "low"
   },
+  "support": "A large limestone block, intact above, below and to the right, broken on the left.",
+  "objectType": {
+    "_": "block",
+    "ana": "#object.block",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/189.html"
+  },
   "material": {
-    "_": "\n                                        limestone (conchiferous)\n                                    ",
+    "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "55",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "92",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "52",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Two lines with clear vacats above and below, uniform right margin",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
+        "to": "line2",
+        "h": "60-90",
         "unit": "mm"
       },
       {
@@ -75,9 +90,12 @@
       }
     ]
   },
-  "notBefore": -300,
-  "notAfter": -200,
-  "precision": "low",
+  "date": {
+    "_": "mid-3rd century BCE",
+    "notBefore": -288,
+    "notAfter": -225,
+    "evidence": "textual-context"
+  },
   "places": [
     {
       "_": "Messana",
@@ -97,12 +115,17 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Described by Orsi as found in proximity to the railway bridge which carries the railway over via S. Cecilia 'in proximity to the 'ex molino romano', at a depth of 2 metres.",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1912",
+    "geo": [
+      38.179586,
+      15.5568933
+    ]
   },
   "provenanceObserved": {
-    "_": "None",
+    "_": "Observed on display in the museum, no formal autopsy.",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -110,17 +133,41 @@
   "provenanceLost": null,
   "facsimile": {
     "url": "ISic001623_tiled.tif",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana"
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2006-04-24"
   },
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
-  "repository": "",
+  "repository": {
+    "_": "Museo regionale interdisciplinare di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/147",
+    "museum": {
+      "type": "museum",
+      "name": "Museo regionale interdisciplinare di Messina",
+      "uri": "http://sicily.classics.ox.ac.uk/museum/147",
+      "description": "The collection is focused on finds made within the city of Messina itself (the warship ram from Acqualadroni being one of the only notable exceptions). Beginning with the prehistoric periods (a single case) it progresses through the different areas and periods of the city, focusing at the end on the sculpture and inscriptions. The accompanying boards set the objects into a clear historical context. One of the highlights of the collection is the aforementioned warship ram. Two other objects given prominence are two of the four Oscan inscriptions in the collection, from the time of Mamertine domination. The principle display cases focus on the cemeteries and religious areas of the city. The grounds of the museum contain a number of monuments and architectural pieces (many from the post-medieval city that was destroyed in the 1908 earthquake) but some earlier as well, principally Roman in date",
+      "location": {
+        "settlement": "Messina",
+        "region": "Messina",
+        "country": "Italy",
+        "address": "Viale della Liberta 465, Messina",
+        "geo": {
+          "lat": 38.2166927,
+          "lon": 15.5639472
+        }
+      }
+    }
+  },
+  "idno": {
+    "_": "A554",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Oscan",
-    "mainLang": "xx",
+    "mainLang": "osc",
     "languages": [
-      "xx"
+      "Oscan"
     ]
   },
   "bibliographyEdition": {
@@ -152,7 +199,31 @@
           "target": "https://biblio.inscriptiones.org/epig10001701"
         },
         "title": "Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915",
-        "citation": "<span>Paolo Orsi, “Messana. La Necropoli Romana Di S. Placido e Di Altre Scoperte Avvenute Nel 1910-1915,” <i>Monumenti Antichi</i> 24 (1916): 121–218</span>"
+        "citation": "<span>Paolo Orsi, ‘Messana. La Necropoli Romana Di S. Placido e Di Altre Scoperte Avvenute Nel 1910-1915’, <i>Monumenti Antichi</i> 24 (1916): 121–218</span>"
+      },
+      {
+        "author": "Parlangèli",
+        "date": "1956",
+        "citedRange": "37-38",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/AFQ8FDTW"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001684",
+          "target": "https://biblio.inscriptiones.org/epig10001684"
+        },
+        "title": "Le iscrizioni osche (mamertine) di Messina",
+        "citation": "<span>O. Parlangèli, «Le iscrizioni osche (mamertine) di Messina», <i>Bollettino Centro di Studi Filologici e Linguistici Siciliani</i> 4 (1956): 28–38</span>"
+      },
+      {
+        "author": "Mastelloni",
+        "date": "2005",
+        "citedRange": "277 fig. 2",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/NLNL64ZE"
+        },
+        "title": "Messana e i Mamertini",
+        "citation": "<span>M. A. Mastelloni, ‘Messana e i Mamertini’, in <i>Lo Stretto Di Messina Nell’Antichità</i>, ed. F. Ghedini et al. (Rome: Quasar, 2005), 275–92</span>"
       },
       {
         "author": "Crawford",
@@ -166,7 +237,7 @@
           "target": "https://biblio.inscriptiones.org/epig10001376"
         },
         "title": "Imagines Italicae. A Corpus of Italic Inscriptions",
-        "citation": "<span>M.H. Crawford, <i>Imagines Italicae. A Corpus of Italic Inscriptions</i>, 3 vols., Bulletin of the Institute of Classical Studies Supplement 111 (London: institute of Classical Studies, 2011)</span>"
+        "citation": "<span>M.H. Crawford, <i>Imagines Italicae. A Corpus of Italic Inscriptions</i>, 3 vols, Bulletin of the Institute of Classical Studies Supplement 111 (London: institute of Classical Studies, 2011)</span>"
       }
     ]
   },
@@ -180,32 +251,38 @@
   "publicationAuthors": [
     "Vetter",
     "Orsi",
+    "Parlangèli",
+    "Mastelloni",
     "Crawford"
   ],
   "publicationTitles": [
     "Handbuch der italischen Dialekte",
     "Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915",
+    "Le iscrizioni osche (mamertine) di Messina",
+    "Messana e i Mamertini",
     "Imagines Italicae. A Corpus of Italic Inscriptions"
   ],
   "publicationYears": [
     "1953",
     "1916",
+    "1956",
+    "2005",
     "2011"
   ],
   "keywords": [
     "isic001623",
-    "i.sicily inscription 001623",
-    "unchecked",
+    "dedication to apollo",
+    "draft",
     "dedication",
-    "limestone (conchiferous)",
-    "-300",
-    "-200",
+    "block",
+    "limestone",
     "messana",
     "messina",
     "italy",
     "sicily",
     "messina",
+    "museo regionale interdisciplinare di messina",
     "oscan",
-    "xx"
+    "osc"
   ]
 }
