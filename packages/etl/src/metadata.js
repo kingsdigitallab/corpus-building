@@ -194,7 +194,7 @@ function getDates(xml) {
     notAfter: origDate["notAfter-custom"]
       ? parseInt(origDate["notAfter-custom"])
       : null,
-    evidence: origDate.evidence,
+    evidence: origDate.evidence?.replaceAll(" ", ", "),
     precision: origDate.precision,
   };
 }

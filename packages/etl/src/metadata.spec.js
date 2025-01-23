@@ -403,7 +403,7 @@ describe("getDates function", () => {
               <msDesc>
                 <history>
                   <origin>
-                    <origDate notBefore-custom="0100" notAfter-custom="0200" evidence="lettering" precision="low">First to second century CE</origDate>
+                    <origDate notBefore-custom="0100" notAfter-custom="0200" evidence="lettering and-another-evidence" precision="low">First to second century CE</origDate>
                   </origin>
                 </history>
               </msDesc>
@@ -417,7 +417,7 @@ describe("getDates function", () => {
       _: "First to second century CE",
       notBefore: 100,
       notAfter: 200,
-      evidence: "lettering",
+      evidence: "lettering, and-another-evidence",
       precision: "low",
     });
   });
