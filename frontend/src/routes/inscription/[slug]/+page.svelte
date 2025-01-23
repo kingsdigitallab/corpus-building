@@ -434,6 +434,10 @@
 		margin-top: 0;
 	}
 
+	.edition-content {
+		overflow-x: scroll;
+	}
+
 	.tabs {
 		border-bottom: var(--border-size-1) solid var(--surface-4);
 		display: flex;
