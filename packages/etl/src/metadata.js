@@ -28,7 +28,7 @@ export async function extractMetadata(xmlString) {
     dimensions: getDimensions(xml),
     layoutDesc: getLayoutDesc(xml),
     handNote: getHandNote(xml),
-    ...getDates(xml),
+    date: getDates(xml),
     ...getPlaces(xml),
     provenanceFound: getProvenance(xml, "found"),
     provenanceObserved: getProvenance(xml, "observed"),
@@ -187,6 +187,7 @@ function getDates(xml) {
   if (!origDate) return { notBefore: null, notAfter: null };
 
   return {
+    _: origDate._,
     notBefore: origDate["notBefore-custom"]
       ? parseInt(origDate["notBefore-custom"])
       : null,
