@@ -1,8 +1,5 @@
 <script>
 	import InscriptionTableRow from './InscriptionTableRow.svelte';
-	import InscriptionDate from './InscriptionDate.svelte';
-	import InscriptionLink from './InscriptionLink.svelte';
-	import InscriptionPlace from './InscriptionPlace.svelte';
 
 	let { inscriptions } = $props();
 </script>
