@@ -9,7 +9,7 @@
 <tr>
 	<td><InscriptionLink id={inscription.file}>{inscription.file}</InscriptionLink></td>
 	<td><InscriptionLink id={inscription.file}>{inscription.title}</InscriptionLink></td>
-	<td><InscriptionDate {inscription} /></td>
+	<td><InscriptionDate date={inscription.date} /></td>
 	<td><InscriptionPlace {inscription} /></td>
 	<td>{inscription.status}</td>
 	<td>

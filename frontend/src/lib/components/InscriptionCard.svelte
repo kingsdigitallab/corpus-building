@@ -26,7 +26,7 @@
 		>
 	</div>
 	<div class="inscription-date-place">
-		<InscriptionDate {inscription} />
+		<InscriptionDate date={inscription.date} />
 		<InscriptionPlace {inscription} />
 	</div>
 	<dl>
