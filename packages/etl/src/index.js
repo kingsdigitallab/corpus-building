@@ -145,7 +145,7 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         delete result.provenanceFound;
         delete result.provenanceObserved;
         delete result.provenanceLost;
-        delete result.repository.museum;
+        delete result?.repository?.museum;
         delete result.bibliographyEdition;
         delete result.bibliographyDiscussion;
 
