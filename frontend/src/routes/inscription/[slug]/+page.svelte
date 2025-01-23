@@ -5,7 +5,7 @@
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
-	import { LucideExternalLink, LucideMaximize2, LucideMinimize2 } from 'lucide-svelte';
+	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 
@@ -34,7 +34,6 @@
 
 	let OpenSeaDragon;
 
-	let isExpanded = $state(false);
 	let activeEditionTab = $state(0);
 
 	onMount(async () => {
@@ -78,17 +77,10 @@
 	}
 </script>
 
-<article class:expanded={isExpanded}>
+<article>
 	<section id="overview">
 		<div class="overview-header">
 			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
-			<Button.Root class="expand-button surface-1" onclick={() => (isExpanded = !isExpanded)}>
-				{#if isExpanded}
-					<LucideMinimize2 />
-				{:else}
-					<LucideMaximize2 />
-				{/if}
-			</Button.Root>
 		</div>
 		<figure id="facsimile-images">
 			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
@@ -369,21 +361,6 @@
 		justify-content: space-between;
 	}
 
-	@media (min-width: 769px) {
-		article.expanded {
-			display: block;
-			grid-template-columns: unset;
-		}
-
-		article.expanded #overview {
-			width: 100%;
-		}
-
-		article.expanded #content {
-			display: none;
-		}
-	}
-
 	#overview h1 {
 		font-size: var(--font-size-fluid-1);
 		max-inline-size: none;
@@ -485,10 +462,6 @@
 			position: relative;
 			height: auto;
 			margin-bottom: var(--size-8);
-		}
-
-		:global(.expand-button) {
-			display: none;
 		}
 
 		#content {
