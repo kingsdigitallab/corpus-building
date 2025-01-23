@@ -236,10 +236,10 @@
 
 		<section id="date">
 			<h2>Date</h2>
-			<InscriptionDate inscription={metadata} />
+			{metadata.date._} (<InscriptionDate date={metadata.date} />)
 			<dl>
 				<dt>Evidence</dt>
-				<dd>{metadata.evidence || config.EMPTY_PLACEHOLDER}</dd>
+				<dd>{metadata.date.evidence || config.EMPTY_PLACEHOLDER}</dd>
 			</dl>
 		</section>
 
