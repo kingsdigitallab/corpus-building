@@ -63,14 +63,14 @@ export function getYearSpan(inscriptions) {
 
 	const minYear = Math.min(
 		...inscriptions
-			.filter((inscription) => inscription.notBefore)
-			.map((inscription) => inscription.notBefore)
+			.filter((inscription) => inscription.date.notBefore)
+			.map((inscription) => inscription.date.notBefore)
 	);
 
 	const maxYear = Math.max(
 		...inscriptions
-			.filter((inscription) => inscription.notAfter)
-			.map((inscription) => inscription.notAfter)
+			.filter((inscription) => inscription.date.notAfter)
+			.map((inscription) => inscription.date.notAfter)
 	);
 
 	return maxYear - minYear;
