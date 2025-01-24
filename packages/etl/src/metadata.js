@@ -1,4 +1,4 @@
-import xml2js from "xml2js";
+import xml2js, { Builder } from "xml2js";
 import museums from "../../../data/processed/museums.json" assert { type: "json" };
 
 /**
@@ -33,13 +33,15 @@ export async function extractMetadata(xmlString) {
     provenanceFound: getProvenance(xml, "found"),
     provenanceObserved: getProvenance(xml, "observed"),
     provenanceLost: getProvenance(xml, "not-observed", "lost"),
-    facsimile: getFacsimile(xml),
+    graphics: getGraphics(xml),
     ...getMsIdentifier(xml),
     textLang: getTextLang(xml),
     bibliographyEdition: await getBibliography(xml, "edition"),
     bibliographyDiscussion: await getBibliography(xml, "discussion"),
+    xml: await getXML(xmlString),
   };
 
+  metadata.facsimile = metadata.graphics[0];
   metadata.provenance = metadata.places[0]?._;
 
   const bibliography = Array.isArray(metadata.bibliographyEdition?.bibl)
@@ -73,8 +75,18 @@ export async function extractMetadata(xmlString) {
   return metadata;
 }
 
-async function parseXML(xmlString) {
-  const parser = new xml2js.Parser({ explicitArray: false, mergeAttrs: true });
+/**
+ * @param {string | xml2js.convertableToString} xmlString
+ * @param {Object} options https://github.com/Leonidas-from-XIV/node-xml2js?tab=readme-ov-file#options
+ * @param {boolean} options.explicitArray
+ * @param {boolean} options.mergeAttrs
+ * @returns {Promise<Object>}
+ */
+async function parseXML(
+  xmlString,
+  options = { explicitArray: false, mergeAttrs: true }
+) {
+  const parser = new xml2js.Parser(options);
   try {
     return await parser.parseStringPromise(xmlString);
   } catch (error) {
@@ -291,16 +303,28 @@ function getProvenance(xml, provenanceType, subtype = null) {
   return found;
 }
 
-function getFacsimile(xml) {
-  let surface = xml.TEI.facsimile?.surface;
+function getGraphics(xml) {
+  let surfaces = xml.TEI.facsimile?.surface;
 
-  if (surface && Array.isArray(surface)) {
-    surface = surface[0];
+  if (!surfaces) return [];
+  if (surfaces && !Array.isArray(surfaces)) {
+    surfaces = [surfaces];
   }
 
-  const facsimile = surface?.graphic?.find((g) => g.url.endsWith(".tif"));
+  const graphics = surfaces.flatMap(
+    (/** @type {{ graphic: any[]; desc: string; type: string; }} */ surface) =>
+      surface.graphic
+        ?.map((graphic) => {
+          return {
+            ...graphic,
+            desc: graphic.desc,
+            surfaceType: surface.type,
+          };
+        })
+        .filter((image) => image.n === "screen")
+  );
 
-  return facsimile ? { url: facsimile.url, desc: facsimile.desc } : null;
+  return graphics;
 }
 
 function getMsIdentifier(xml) {
@@ -463,6 +487,22 @@ async function getZoteroData(itemKey) {
     });
 }
 
+async function getXML(xmlString) {
+  const inscription = await parseXML(xmlString, {
+    mergeAttrs: false,
+    normalize: true,
+    trim: true,
+  });
+
+  return new Builder({
+    allowSurrogateChars: true,
+    headless: false,
+    renderOpts: { pretty: true },
+    rootName: "div",
+    xmldec: { version: "1.0", encoding: "UTF-8" },
+  }).buildObject(inscription.TEI.text[0].body[0].div[0]);
+}
+
 function getKeywords(metadata) {
   return [
     metadata.uri,
@@ -501,7 +541,7 @@ export const metadataExtractors = {
   getHandNote,
   getDates,
   getPlaces,
-  getFacsimile,
+  getFacsimile: getGraphics,
   getMsIdentifier,
   getTextLang,
   getKeywords,
