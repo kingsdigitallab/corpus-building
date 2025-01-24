@@ -9,6 +9,7 @@
 	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
+	import { goto } from '$app/navigation';
 
 	/**
 	 * @typedef {Object} Props
@@ -111,6 +112,21 @@
 		};
 	}
 </script>
+
+<svelte:window
+	onkeydown={(e) => {
+		if (e.ctrlKey || e.metaKey) {
+			if (e.key.toLowerCase() === 'l' || e.key.toLowerCase() === 'h') {
+				e.preventDefault();
+
+				const direction = e.key.toLowerCase() === 'l' ? 1 : -1;
+				goto(
+					`${slug.split('0')[0]}${String(Number(slug.split('ISic')[1]) + direction).padStart(6, '0')}`
+				);
+			}
+		}
+	}}
+/>
 
 <article>
 	<section id="overview">
