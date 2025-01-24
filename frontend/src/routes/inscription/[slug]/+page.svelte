@@ -4,11 +4,11 @@
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
 	import * as config from '$lib/config';
+	import { codeToHtml } from '$lib/shiki.bundle';
 	import { Button } from 'bits-ui';
 	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
-	import { codeToHtml } from 'shiki';
 
 	/**
 	 * @typedef {Object} Props
