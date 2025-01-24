@@ -119,7 +119,7 @@
 			if (e.key.toLowerCase() === 'j' || e.key.toLowerCase() === 'k') {
 				e.preventDefault();
 
-				const direction = e.key.toLowerCase() === 'j' ? 1 : -1;
+				const direction = e.key.toLowerCase() === 'j' ? -1 : 1;
 				goto(
 					`${slug.split('0')[0]}${String(Number(slug.split('ISic')[1]) + direction).padStart(6, '0')}`
 				);
@@ -495,6 +495,10 @@
 
 	.edition-content {
 		overflow-x: scroll;
+	}
+
+	.edition-content :global(pre) {
+		white-space: pre-wrap;
 	}
 
 	.tabs {
