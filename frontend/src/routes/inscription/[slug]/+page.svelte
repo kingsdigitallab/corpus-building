@@ -27,6 +27,8 @@
 
 	const apparatus = html.divs.find((div) => div.id === 'apparatus');
 	const translations = html.divs.filter((div) => div.id === 'translation');
+	let translationDivs = $state([]);
+
 	const commentary = html.divs.find((div) => div.id === 'commentary');
 
 	let tileSources = images.map(
@@ -37,7 +39,7 @@
 	let OpenSeaDragon;
 
 	let activeEditionTab = $state(0);
-
+	let activeTranslationTab = $state(0);
 	onMount(async () => {
 		OpenSeaDragon = (await import('openseadragon')).default;
 
@@ -70,6 +72,10 @@
 			];
 			activeEditionTab = 0;
 		}
+
+		if (translations) {
+			translationDivs = translations.map((translation) => parseTranslation(translation));
+		}
 	});
 
 	/**
@@ -82,11 +88,27 @@
 		const parser = new DOMParser();
 		const doc = parser.parseFromString(htmlString, 'text/html');
 		const editionDivs = Array.from(doc.querySelectorAll('[id^="edition-"]'));
+
 		return editionDivs.map((div) => ({
 			id: div.id,
 			type: div.id.replace('edition-', ''),
 			html: div.outerHTML
 		}));
+	}
+
+	/**
+	 * @param {{ html: string; }} translation
+	 */
+	function parseTranslation(translation) {
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(translation.html, 'text/html');
+		const id = doc.querySelector('h2')?.textContent?.replace(/\s+translation/i, '');
+
+		return {
+			id: id?.toLowerCase(),
+			type: id,
+			html: translation.html.replace(/<h2.*?<\/h2>/g, '')
+		};
 	}
 </script>
 
@@ -138,13 +160,24 @@
 			</div>
 		</section>
 
-		<section id="apparatus">{@html apparatus.html}</section>
+		<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
 
-		{#if translations.length}
+		{#if translationDivs.length}
 			<section id="translations">
-				{#each translations as translation}
-					{@html translation.html}
-				{/each}
+				<h2>Translations</h2>
+				<div class="tabs">
+					{#each translationDivs as div, index}
+						<Button.Root
+							class={activeTranslationTab === index ? 'active' : ''}
+							onclick={() => (activeTranslationTab = index)}
+						>
+							{div.type}
+						</Button.Root>
+					{/each}
+				</div>
+				<div class="translation-content">
+					{@html translationDivs[activeTranslationTab]?.html || ''}
+				</div>
 			</section>
 		{/if}
 
