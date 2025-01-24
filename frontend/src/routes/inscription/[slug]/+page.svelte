@@ -116,10 +116,10 @@
 <svelte:window
 	onkeydown={(e) => {
 		if (e.ctrlKey || e.metaKey) {
-			if (e.key.toLowerCase() === 'l' || e.key.toLowerCase() === 'h') {
+			if (e.key.toLowerCase() === 'j' || e.key.toLowerCase() === 'k') {
 				e.preventDefault();
 
-				const direction = e.key.toLowerCase() === 'l' ? 1 : -1;
+				const direction = e.key.toLowerCase() === 'j' ? 1 : -1;
 				goto(
 					`${slug.split('0')[0]}${String(Number(slug.split('ISic')[1]) + direction).padStart(6, '0')}`
 				);
