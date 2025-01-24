@@ -8,6 +8,7 @@
 	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
+	import { codeToHtml } from 'shiki';
 
 	/**
 	 * @typedef {Object} Props
@@ -17,8 +18,9 @@
 	/** @type {Props} */
 	let { data } = $props();
 
-	let { slug, metadata, images, html } = data;
+	let { slug, metadata, images, html, xml } = data;
 	let curImageTitle = $state(images[0].desc);
+	let highlightedXml = $state('');
 
 	const editions = html.divs.find((div) => div.id === 'editions');
 	let editionDivs = $state([]);
@@ -53,8 +55,19 @@
 			curImageTitle = `${image.surfaceType}, ${image.desc}`;
 		});
 
+		highlightedXml = await codeToHtml(xml, {
+			lang: 'xml',
+			themes: {
+				light: 'rose-pine-dawn',
+				dark: 'rose-pine-moon'
+			}
+		});
+
 		if (editions) {
-			editionDivs = parseEditionDivs(editions.html);
+			editionDivs = [
+				...parseEditionDivs(editions.html),
+				{ id: 'epidoc', type: 'Epidoc', html: highlightedXml }
+			];
 			activeEditionTab = 0;
 		}
 	});
