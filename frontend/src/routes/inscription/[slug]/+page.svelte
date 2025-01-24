@@ -368,10 +368,7 @@
 	}
 
 	.overview-header {
-		align-items: center;
 		border-bottom: var(--border-size-1) solid var(--border-color);
-		display: flex;
-		justify-content: space-between;
 	}
 
 	#overview h1 {
