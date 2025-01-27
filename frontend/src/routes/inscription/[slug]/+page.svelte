@@ -75,7 +75,9 @@
 		}
 
 		if (translations) {
-			translationDivs = translations.map((translation) => parseTranslation(translation));
+			translationDivs = translations
+				.map((translation) => parseTranslation(translation))
+				.filter(Boolean);
 		}
 	});
 
@@ -104,6 +106,10 @@
 		const parser = new DOMParser();
 		const doc = parser.parseFromString(translation.html, 'text/html');
 		const id = doc.querySelector('h2')?.textContent?.replace(/\s+translation/i, '');
+
+		if (!id) {
+			return null;
+		}
 
 		return {
 			id: id?.toLowerCase(),
