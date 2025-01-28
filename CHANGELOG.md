@@ -1,5 +1,43 @@
 
 
+# [0.13.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.12.0...v0.13.0) (2025-01-28)
+
+
+### Bug Fixes
+
+* **etl:** check object exists before deleting ([81feebf](https://github.com/kingsdigitallab/corpus-building/commit/81feebf7dd769fb3b83be251e2c9ddef42c85799))
+* **etl:** ensure the xml snipet keeps the content order ([07b9d62](https://github.com/kingsdigitallab/corpus-building/commit/07b9d62806a52f270642bd9207736bbd2e602d5f))
+* **facetedsearch:** reset search limit according to search view ([1584fc0](https://github.com/kingsdigitallab/corpus-building/commit/1584fc0cb422a1599945f4588c41965d837d3760))
+* **inscription:** check image has description ([c2ffa40](https://github.com/kingsdigitallab/corpus-building/commit/c2ffa408334f01232808aa45f20e9a0b52d0f45b))
+* **inscription:** do not display translation section when xml is empty ([bf4c92d](https://github.com/kingsdigitallab/corpus-building/commit/bf4c92d9f6ad44fced3a9332e88799d883b7ec3d))
+* **inscription:** scroll wide edition content ([3108a6b](https://github.com/kingsdigitallab/corpus-building/commit/3108a6b5744edbb845a4aaa24a1f86d660190d69))
+* **layout:** set padding for smaller screens ([a0ab196](https://github.com/kingsdigitallab/corpus-building/commit/a0ab196ed0aaf8d6e912620a8fc569cdff93da32))
+
+
+### Features
+
+* **etl:** extract all the images and the xml of the edition ([2d86008](https://github.com/kingsdigitallab/corpus-building/commit/2d8600857b85d5012766c0b5d69f0e0a1f386901))
+* **etl:** join date evidence values with a comma ([6aff1bd](https://github.com/kingsdigitallab/corpus-building/commit/6aff1bd30503d57f53a6bbc7fad14d178e4b0465))
+* **etl:** request zotero citation according to resource language ([cd65dda](https://github.com/kingsdigitallab/corpus-building/commit/cd65ddaa078d76b8aae8ab665a262385dbdd044c))
+* **inscription:** add button to expand the overview section ([78fc378](https://github.com/kingsdigitallab/corpus-building/commit/78fc3781f403e87241ee86d678de6bde813a6a6a))
+* **inscription:** add date text to date section ([57baf3e](https://github.com/kingsdigitallab/corpus-building/commit/57baf3e631382f806c7a064bf054091afbcef04b))
+* **inscription:** add display option to render the epidoc edition ([1a618ad](https://github.com/kingsdigitallab/corpus-building/commit/1a618adfd204364808bf4eec6d61ac7ce5fd0e4f))
+* **inscription:** add keyboard shortcut to navigate to next/previous inscription ([cb5e34e](https://github.com/kingsdigitallab/corpus-building/commit/cb5e34e5f3372971dd42cf9fd8d43cc8f900a3a3))
+* **inscription:** add separators between content sections ([2d8725b](https://github.com/kingsdigitallab/corpus-building/commit/2d8725bf1da7dadaf05cbc8b9a8e230646309ef3))
+* **inscription:** add translations toggle ([7530185](https://github.com/kingsdigitallab/corpus-building/commit/75301852f8742dc2d981ce2929d6ae14adcd8d46))
+* **inscription:** display different edition types ([8280e99](https://github.com/kingsdigitallab/corpus-building/commit/8280e991f96692bd35e077390ee3ff2e04d3172e))
+* **inscription:** start implementing inscription page design ([7600f9f](https://github.com/kingsdigitallab/corpus-building/commit/7600f9fb6e1dd09276a98f51e9e358c6aae1c60e))
+* **xslt:** extract different edition types ([19f9759](https://github.com/kingsdigitallab/corpus-building/commit/19f97593ac286dc1f60e67806999e486bbb4b815))
+* **xslt:** extract translation authors ([092d041](https://github.com/kingsdigitallab/corpus-building/commit/092d041898b68d4339ca0cd6b7ca7a1a52cdd657))
+
+
+### Performance Improvements
+
+* **inscription:** move data extraction to etl pre-processing ([d134545](https://github.com/kingsdigitallab/corpus-building/commit/d134545d7cea401c0dd28198dca8095d83c055ee))
+* **inscription:** use the shiki bundle highlighter ([ca1a9ae](https://github.com/kingsdigitallab/corpus-building/commit/ca1a9ae10beac00b5040696793b9696dca7d5bb4))
+* **inscription:** wrap the epidoc xml view ([2d71194](https://github.com/kingsdigitallab/corpus-building/commit/2d7119439c81a53d3149cfd74b417cd9d71ee913))
+* **shiki:** add optimised shiki bundle ([af75438](https://github.com/kingsdigitallab/corpus-building/commit/af75438d9a10a1fda5ff0832704282e6987429a8))
+
 # [0.12.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.11.0...v0.12.0) (2025-01-15)
 
 
