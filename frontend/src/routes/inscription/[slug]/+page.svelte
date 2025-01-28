@@ -20,7 +20,7 @@
 	let { data } = $props();
 
 	let { slug, metadata, images, html, xml } = data;
-	let curImageTitle = $state(images[0].desc);
+	let curImageTitle = $state(images[0]?.desc || '');
 	let highlightedXml = $state('');
 
 	const editions = html.divs.find((div) => div.id === 'editions');
@@ -303,7 +303,7 @@
 					</dd>
 					<dt>Autopsy</dt>
 					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
-					{#if metadata.repository.museum.location.geo}
+					{#if metadata.repository.museum?.location.geo}
 						<dt>Map</dt>
 						{@const lngLat = [
 							metadata.repository.museum.location.geo.lon,
