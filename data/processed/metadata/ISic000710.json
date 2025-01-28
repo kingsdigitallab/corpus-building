@@ -1,7 +1,7 @@
 {
   "file": "ISic000710",
   "uri": "ISic000710",
-  "title": "I.Sicily inscription 000710",
+  "title": "Epitaph of Grattia Paulla",
   "status": "draft",
   "editions": [
     {
@@ -23,47 +23,87 @@
     }
   ],
   "type": {
-    "_": "funerary; honorific",
-    "ana": "#function.funerary #function.honorific",
+    "_": "funerary",
+    "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Described as 'calcare' by Manganaro, a fine plaque  missing the upper right and lower right corners, and with the surviving upper right portion broken but still connecting.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
-    "_": "limestone\n                                    ",
+    "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "46",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "55",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "3",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "seven lines of large fine Latin letters, lines 1-2 larger and central (all lines centred), with the final line reduced and less regular (due to lack of space).",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Several of the letter T are taller than other letters; use of apices and interpuncts.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
+        "to": "line2",
+        "h": "65",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "55",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5-6",
+        "from": "line5",
+        "to": "line6",
+        "h": "40",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 7",
+        "from": "line7",
+        "to": "line7",
+        "h": "25",
         "unit": "mm"
       },
       {
@@ -100,10 +140,14 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Recovered c.1960 in course of construction of S. Bambino\n                            hospital; cf. Korhonen 2003, p.74 fig.2, no. 7 on the plan.",
+    "_": "Recovered c.1960 in course of construction of S. Bambino hospital (so Manganaro)",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "when": "1960",
+    "geo": [
+      37.5060446,
+      15.0809441
+    ]
   },
   "provenanceObserved": {
     "_": "None",
@@ -111,17 +155,13 @@
     "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000710_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "provenanceLost": {
+    "_": "Lost? The piece was described by Manganaro 1989 as being in the Museo Civico Castel Ursino, but neither Korhonen not the EpiCUM project have located it there; some inscriptions in this group have since been located in the storage of the Catania Parco Archeologico in the ex-manifattura tabacchi, but not this one and we have so far been unable to locate it.",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
+  },
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
@@ -187,15 +227,7 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\" resp=\"#TNS\">\n  <ab>\n    <lb n=\"1\"/><name>Grattia</name> <name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <expan><abbr>f</abbr><ex>ilia</ex></expan>\n    <lb n=\"2\"/><name>Paulla</name>\n    <lb n=\"3\"/>uxor <name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <name>Ofill<hi rend=\"apex\">i</hi></name> mater <name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <name>Ofill<supplied reason=\"lost\"><hi rend=\"apex\">i</hi></supplied></name>\n    <lb n=\"4\"/><name>V<hi rend=\"apex\">e</hi>ri</name> <roleName type=\"civic\" subtype=\"duumvir\">d<hi rend=\"apex\">u</hi>mviralium</roleName>\n    <lb n=\"5\"/>funere publico elata et l<unclear>o</unclear><supplied reason=\"lost\">co</supplied>\n    <lb n=\"6\"/>publico sepulta et sta<supplied reason=\"lost\">tua</supplied>\n    <lb n=\"7\"/>data in foro <space unit=\"character\" quantity=\"2\"/> <roleName type=\"civic\" subtype=\"decurio\"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName> <expan><abbr><unclear>d</unclear></abbr><ex>ecreto</ex></expan>\n  </ab>\n</div>",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000710_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
+  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\" resp=\"#TNS #JP\">\n  <ab>\n    <lb n=\"1\"/><persName type=\"attested\"><name>Grattia</name> <g ref=\"#interpunct\">·</g> <name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <g ref=\"#interpunct\">·</g> <expan><abbr>f</abbr><ex>ilia</ex></expan><g ref=\"#interpunct\">·</g>\n    <lb n=\"2\"/><name>Paulla</name></persName>\n    <lb n=\"3\"/>uxor <g ref=\"#interpunct\">·</g> <persName type=\"attested\"><name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <g ref=\"#interpunct\">·</g> <name>Ofill<hi rend=\"apex\">i</hi></name></persName> <g ref=\"#interpunct\">·</g> ma<hi rend=\"tall\">t</hi>er <g ref=\"#interpunct\">·</g> <persName type=\"attested\"><name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <g ref=\"#interpunct\">·</g> <name>Ofill<supplied reason=\"lost\"><hi rend=\"apex\">i</hi></supplied></name>\n    <lb n=\"4\"/><name>V<hi rend=\"apex\">e</hi>ri</name></persName> <g ref=\"#interpunct\">·</g> <roleName type=\"civic\" subtype=\"duumvir\">d<hi rend=\"apex\">u</hi>mviralium</roleName>\n    <lb n=\"5\"/><hi rend=\"tall\">f</hi>unere <g ref=\"#interpunct\">·</g> publico <g ref=\"#interpunct\">·</g> elata <g ref=\"#interpunct\">·</g> e<hi rend=\"tall\">t</hi> <g ref=\"#interpunct\">·</g> l<unclear>o</unclear><supplied reason=\"lost\">co</supplied>\n    <lb n=\"6\"/>publico <g ref=\"#interpunct\">·</g> sepulta <g ref=\"#interpunct\">·</g> e<hi rend=\"tall\">t</hi> <g ref=\"#interpunct\">·</g> st<unclear>a</unclear><supplied reason=\"lost\">tua</supplied>\n    <lb n=\"7\"/>data <g ref=\"#interpunct\">·</g> in <g ref=\"#interpunct\">·</g> foro <space unit=\"character\" quantity=\"2\"/> <roleName type=\"civic\" subtype=\"decurio\"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName> <g ref=\"#interpunct\">·</g> <expan><abbr><unclear>d</unclear></abbr><ex>ecreto</ex></expan>\n  </ab>\n</div>",
   "provenance": "Catina",
   "publicationAuthors": [
     "Manganaro"
@@ -211,9 +243,10 @@
   ],
   "keywords": [
     "isic000710",
-    "i.sicily inscription 000710",
+    "epitaph of grattia paulla",
     "draft",
-    "funerary; honorific",
+    "funerary",
+    "plaque",
     "limestone",
     "catina",
     "catania",
