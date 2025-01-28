@@ -27,6 +27,9 @@ You can preview the production build with `npm run preview`.
 
 - "@unpic/svelte": "^0.0.53",
 - "bits-ui": "^0.21.12",
+- "itemsjs": "^2.1.25",
 - "lucide-svelte": "^0.408.0",
+- "mdsvex": "^0.12.3",
 - "open-props": "^1.7.5",
-- "openseadragon": "^4.1.1"
+- "openseadragon": "^4.1.1",
+- "svelte-maplibre": "^0.9.14"
