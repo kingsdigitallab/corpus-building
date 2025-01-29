@@ -8,7 +8,9 @@
 <footer>
 	<BaseLink href="/">{config.title}</BaseLink>
 
-	<a href="https://github.com/kingsdigitallab/corpus-building/blob/v{version}/CHANGELOG.md"
+	<a
+		class="version"
+		href="https://github.com/kingsdigitallab/corpus-building/blob/v{version}/CHANGELOG.md"
 		>v{version}</a
 	>
 </footer>
