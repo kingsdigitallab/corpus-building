@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import BaseLink from '$lib/components/BaseLink.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/PageHeader.svelte';
 	import Transition from '$lib/components/PageTransition.svelte';
 	import * as config from '$lib/config';
@@ -45,14 +45,8 @@
 		</Transition>
 	</main>
 
-	<footer>
-		<BaseLink href="/">{config.title}</BaseLink>
-		<code class="version">
-			<a href="https://github.com/kingsdigitallab/corpus-building/blob/v{version}/CHANGELOG.md"
-				>v{version}</a
-			>
-		</code>
-	</footer>
+	
+	<Footer />
 </div>
 
 <style>
@@ -71,17 +65,6 @@
 
 	main {
 		padding-block: var(--size-4);
-	}
-
-	footer {
-		border-top: var(--border-size-1) solid var(--gray-2);
-		display: flex;
-		justify-content: space-between;
-		padding-block: var(--size-4);
-	}
-
-	.version {
-		font-size: var(--font-size-0);
 	}
 
 	@media (max-width: 1279px) {
