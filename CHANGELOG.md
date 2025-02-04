@@ -1,5 +1,17 @@
 
 
+# [0.14.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.13.0...v0.14.0) (2025-02-04)
+
+
+### Bug Fixes
+
+* **css:** update shiki variable names ([22353e7](https://github.com/kingsdigitallab/corpus-building/commit/22353e7c009f14cac7ef9e1847a0637283014df8))
+
+
+### Features
+
+* **components:** add a component for the footer ([ed63c7c](https://github.com/kingsdigitallab/corpus-building/commit/ed63c7c3abc20bee4246cd622d8e02a8cb6604ea))
+
 # [0.13.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.12.0...v0.13.0) (2025-01-28)
 
 
