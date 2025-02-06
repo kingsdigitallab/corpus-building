@@ -27,5 +27,6 @@ export const digitalEditionUrls = /** @type {const} */ ({
 	URI: ''
 });
 
-export const mapStyle =
-	'https://api.maptiler.com/maps/9e2a14f9-e024-4ae4-97f8-2cb320835962/style.json?key=679dKSf11rkW5OwDMgMR';
+export const mapStyle = dev
+	? 'https://api.maptiler.com/maps/outdoor-v2/style.json?key=brTBbnRxuiKp6PgjwFPr'
+	: 'https://api.maptiler.com/maps/9e2a14f9-e024-4ae4-97f8-2cb320835962/style.json?key=679dKSf11rkW5OwDMgMR';
