@@ -21,8 +21,6 @@
 	/** @type {Props} */
 	let { data, children } = $props();
 
-	const version = import.meta.env.APP_VERSION;
-
 	let { url } = $derived(data);
 
 	const children_render = $derived(children);
