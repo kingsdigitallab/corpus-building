@@ -45,7 +45,6 @@
 		</Transition>
 	</main>
 
-	
 	<Footer />
 </div>
 
