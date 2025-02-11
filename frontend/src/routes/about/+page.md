@@ -1,4 +1,12 @@
-# About
+---
+title: About
+excerpt: I.Sicily is a long-term project to construct and maintain a digital corpus of the inscriptions of ancient Sicily.
+tags:
+  - about
+  - project
+  - sicily
+  - inscriptions
+---
 
 I.Sicily is a long-term project to construct and maintain a digital corpus of
 the inscriptions of ancient Sicily. The project aims to provide free open access
