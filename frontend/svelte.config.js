@@ -21,6 +21,9 @@ if (!existsSync(errorFilePath)) {
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md', '.svx'],
+	layout: {
+		_: 'src/lib/mdsvex/BaseLayout.svelte'
+	},
 	smartypants: true
 };
 
