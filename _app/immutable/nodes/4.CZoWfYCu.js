@@ -1,4 +1,4 @@
-import{a,t as i}from"../chunks/disclose-version.CYVpJj12.js";import"../chunks/legacy.tKC0cpMT.js";import{n as o}from"../chunks/runtime.PBc5Cn6G.js";var n=i(`<h1>About</h1> <p>I.Sicily is a long-term project to construct and maintain a digital corpus of
+import{e as b,a as n,t as r,b as y}from"../chunks/disclose-version.VHGwb3kd.js";import"../chunks/legacy.BmvcquLV.js";import{p as w,t as s,o as v,x,w as h,$ as _,q as d,v as u,y as j}from"../chunks/utils.CRPEv3Yk.js";import{l as S,s as k}from"../chunks/props.CtS2GRE0.js";import{a as E,s as m}from"../chunks/attributes.Cqg4EsG_.js";import{t as T}from"../chunks/config.Cg1wKqLQ.js";var $=r('<meta name="description"> <meta name="tags">',1),z=r("<article><h1> </h1> <!></article>");function I(i,e){w(e,!0);var t=z();b(f=>{var c=$(),p=x(c),g=h(p,2);s(()=>m(g,"content",e.tags.join(", "))),s(()=>{_.title=`${e.title??""} | ${T??""}`,m(p,"content",e.excerpt)}),n(f,c)});var a=d(t),l=d(a,!0);u(a);var o=h(a,2);E(o,e,"default",{},null),u(t),s(()=>y(l,e.title)),n(i,t),v()}const L={title:"About",excerpt:"I.Sicily is a long-term project to construct and maintain a digital corpus of the inscriptions of ancient Sicily.",tags:["about","project","sicily","inscriptions"]};var D=r(`<p>I.Sicily is a long-term project to construct and maintain a digital corpus of
 the inscriptions of ancient Sicily. The project aims to provide free open access
 data, and to follow the principles of Linked Open Data wherever possible.The
 online corpus, live since 2017, can be found at: <a href="http://sicily.classics.ox.ac.uk" rel="nofollow">http://sicily.classics.ox.ac.uk</a>.</p> <p>The I.Sicily project aims to include all types of inscribed text, in all languages,
@@ -25,4 +25,4 @@ Data is standardised and made potentially interopable by means of the use of
 recognised vocabularies, such as the [Pleiades gazetteer of ancient
 vocabularies, such as the <a href="https://pleiades.stoa.org/" rel="nofollow">Pleiades gazetteer of ancient
 places</a> and the <a href="https://www.eagle-network.eu/resources/vocabularies/" rel="nofollow">EAGLE epigraphic
-vocabularies</a>.</p>`,1);function c(e){var t=n();o(6),a(e,t)}export{c as component};
+vocabularies</a>.</p>`,1);function H(i,e){const t=S(e,["children","$$slots","$$events","$$legacy"]);I(i,k(()=>t,L,{children:(a,l)=>{var o=D();j(4),n(a,o)},$$slots:{default:!0}}))}export{H as component};
