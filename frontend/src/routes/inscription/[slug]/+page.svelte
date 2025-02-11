@@ -134,6 +134,16 @@
 	}}
 />
 
+<svelte:head>
+	<title>{metadata.file}: {metadata.title} | {config.title}</title>
+	<meta name="description" content={metadata.title} />
+	<meta
+		name="tags"
+		content="sicily, inscription, {metadata.textLang._}, {metadata.type._}, {metadata.objectType
+			?._}"
+	/>
+</svelte:head>
+
 <article>
 	<section id="overview">
 		<div class="overview-header">
