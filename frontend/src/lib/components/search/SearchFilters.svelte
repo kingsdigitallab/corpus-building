@@ -163,7 +163,12 @@
 								{#each filterBuckets(aggregations[key].buckets, key) as bucket}
 									<li>
 										<label>
-											<input type="checkbox" value={bucket.key} bind:group={selectedFilters[key]} />
+											<input
+												type="checkbox"
+												value={bucket.key}
+												bind:group={selectedFilters[key]}
+												disabled={bucket.doc_count === 0}
+											/>
 											{getBucketDisplayValue(bucket.key)} ({bucket.doc_count})
 										</label>
 									</li>
