@@ -1,5 +1,22 @@
 
 
+# [0.15.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.14.0...v0.15.0) (2025-02-24)
+
+
+### Features
+
+* **about:** add frontmatter ([066569a](https://github.com/kingsdigitallab/corpus-building/commit/066569a12b4c9a17a75a0a2fd3f6074988c010a1))
+* **frontend:** add base layout for markdown content ([c088c2e](https://github.com/kingsdigitallab/corpus-building/commit/c088c2eaa5d2ff9b6999ec289a78c8b3ac7aa827))
+* **frontend:** use different map keys for dev/prod ([0a43dcc](https://github.com/kingsdigitallab/corpus-building/commit/0a43dcca018781b974a8ad9727f6c9b244aa13c2))
+* **inscription:** add meta tags ([dd513df](https://github.com/kingsdigitallab/corpus-building/commit/dd513df3691d098b7b4eda3a42806eb87bc48657))
+* **inscription:** add scroll spy navigation component ([df4992a](https://github.com/kingsdigitallab/corpus-building/commit/df4992acbbbead324aefdabb196c2363d7f7818e))
+* **search:** disable empty filter options ([8be1707](https://github.com/kingsdigitallab/corpus-building/commit/8be1707cba1ee51776080e8c0400b76a0ff36d99))
+
+
+### Performance Improvements
+
+* **layout:** remove unused variables ([8f47f9d](https://github.com/kingsdigitallab/corpus-building/commit/8f47f9df4c52325f504d7c6ae9bfeb884f17048f))
+
 # [0.14.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.13.0...v0.14.0) (2025-02-04)
 
 
