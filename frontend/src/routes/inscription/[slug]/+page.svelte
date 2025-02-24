@@ -10,6 +10,7 @@
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 	import { goto } from '$app/navigation';
+	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 
 	/**
 	 * @typedef {Object} Props
@@ -395,13 +396,22 @@
 			</dl>
 		</section>
 	</section>
+
+	<section id="page-navigation">
+		<ScrollSpy
+			root="#content"
+			displayStyle="dots"
+			excludeIds={['overview', 'image-viewer', 'content', 'page-navigation']}
+			headingSelectors={['h2']}
+		/>
+	</section>
 </article>
 
 <style>
 	article {
 		display: grid;
 		gap: var(--size-4);
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 4fr 4fr 0.1fr;
 		height: calc(100vh - var(--size-11));
 		overflow: hidden;
 
@@ -532,6 +542,10 @@
 
 	.tabs :global(.active) {
 		background-color: var(--surface-4);
+	}
+
+	#page-navigation {
+		margin-block: unset;
 	}
 
 	@media (max-width: 768px) {
