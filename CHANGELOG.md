@@ -1,5 +1,12 @@
 
 
+## [0.15.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.15.0...v0.15.1) (2025-02-24)
+
+
+### Features
+
+* **scrollspy:** add hover tooltip for section navigation ([39a5cdf](https://github.com/kingsdigitallab/corpus-building/commit/39a5cdfe7d8e4bb91816c4fc6fecb6a6936e9e9d))
+
 # [0.15.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.14.0...v0.15.0) (2025-02-24)
 
 
