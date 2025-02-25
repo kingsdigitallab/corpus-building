@@ -120,8 +120,8 @@
 								max={1830}
 								step={1}
 								bind:value={currentDateRange}
-								let:thumbs
 							>
+							{#snippet children({ thumbs })}
 								<span class="slider-track">
 									<Slider.Range class="slider-range" />
 								</span>
@@ -132,6 +132,7 @@
 										aria-label={`${index === 0 ? 'Not before' : 'Not after'}`}
 									/>
 								{/each}
+							{/snippet}
 							</Slider.Root>
 						</div>
 						<div class="date-inputs">
