@@ -119,15 +119,16 @@
 								min={-700}
 								max={1830}
 								step={1}
+								type="multiple"
 								bind:value={currentDateRange}
 							>
 							{#snippet children({ thumbs })}
 								<span class="slider-track">
 									<Slider.Range class="slider-range" />
 								</span>
-								{#each thumbs as thumb, index}
+								{#each thumbs as index}
 									<Slider.Thumb
-										{thumb}
+										{index}
 										class="slider-thumb"
 										aria-label={`${index === 0 ? 'Not before' : 'Not after'}`}
 									/>
