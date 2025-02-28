@@ -1,6 +1,5 @@
 <script>
     import { Slider } from 'bits-ui';
-    import debounce from 'lodash.debounce';
 
     let {
         title = 'Range slider',
@@ -12,15 +11,9 @@
         selectedRange = $bindable([0, 0])
     } = $props();
 
-    let currentRange = $state(selectedRange);
-
-    const updateSelectedRange = debounce((newValue) => {
-        selectedRange = newValue;
-    }, 200);
-
-    $effect(() => {
-        updateSelectedRange([...currentRange]);
-    });
+    function handleValueCommit(value) {
+        selectedRange = [...value];
+    }
 </script>
 
 <h3>{title}</h3>
@@ -30,8 +23,10 @@
         {min}
         {max}
         {step}
+        value={selectedRange}
         type="multiple"
-        bind:value={currentRange}
+        autoSort={true}
+        onValueCommit={handleValueCommit}
     >
     {#snippet children({ thumbs })}
         <span class="slider-track">
@@ -50,11 +45,11 @@
 <div class="range-inputs">
     <label>
         {startLabel}
-        <input type="number" bind:value={currentRange[0]} {min} {max} />
+        <input type="number" bind:value={selectedRange[0]} {min} {max} />
     </label>
     <span>–</span>
     <label>
-        <input type="number" bind:value={currentRange[1]} {min} {max} />
+        <input type="number" bind:value={selectedRange[1]} {min} {max} />
         {endLabel}
     </label>
 </div>
