@@ -116,17 +116,11 @@
 	}
 
 	function initDateRange() {
-		return [
-			searchAggregations?.notBefore?.facet_stats.min ?? config.search.minDate,
-			searchAggregations?.notAfter?.facet_stats.max ?? config.search.maxDate
-		];
+		return [config.search.minDate, config.search.maxDate];
 	}
 
 	function initLetterHeightRange() {
-		return [
-			searchAggregations?.letterHeightAtLeast?.facet_stats.min ?? config.search.minLetterHeight,
-			searchAggregations?.letterHeightAtMost?.facet_stats.max ?? config.search.maxLetterHeight
-		];
+		return [config.search.minLetterHeight, config.search.maxLetterHeight];
 	}
 
 	function initFilters() {
@@ -152,13 +146,14 @@
 
 	async function handleReset(/** @type {Event} */ e) {
 		e.preventDefault();
+
 		$searchQuery = '';
 		$searchPage = 1;
 		$searchLimit = $searchView === 'map' ? config.search.maxLimit : config.search.limit;
 
-		selectedDateRange = initDateRange();
-		selectedLetterHeightRange = initLetterHeightRange();
-		selectedFilters = initFilters();
+		selectedDateRange = [...initDateRange()];
+		selectedLetterHeightRange = [...initLetterHeightRange()];
+		selectedFilters = { ...initFilters() };
 	}
 
 	function hasActiveFilters() {
