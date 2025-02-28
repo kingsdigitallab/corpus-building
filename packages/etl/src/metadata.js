@@ -44,6 +44,13 @@ export async function extractMetadata(xmlString) {
   metadata.facsimile = metadata.graphics[0];
   metadata.provenance = metadata.places[0]?._;
 
+  metadata.letterHeights = metadata.handNote?.dimensions
+    .filter((d) => d?.atLeast && d?.atMost)
+    .map((d) => ({
+      atLeast: parseFloat(d.atLeast),
+      atMost: parseFloat(d.atMost),
+    }));
+
   const bibliography = Array.isArray(metadata.bibliographyEdition?.bibl)
     ? metadata.bibliographyEdition?.bibl
     : [metadata.bibliographyEdition?.bibl];
