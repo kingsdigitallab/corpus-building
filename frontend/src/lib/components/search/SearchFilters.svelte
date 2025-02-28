@@ -227,6 +227,7 @@
 		border-radius: var(--radius-2);
 		list-style: none;
 		max-height: calc(5 * var(--size-6));
+		min-height: calc(5 * var(--size-6));
 		overflow-y: auto;
 		padding: 0;
 		scrollbar-width: thin;
