@@ -1,7 +1,7 @@
 {
   "file": "ISic000040",
   "uri": "ISic000040",
-  "title": "I.Sicily inscription 000040",
+  "title": "Funerary altar for Quintus Caecilius Pulcher",
   "status": "draft",
   "editions": [
     {
@@ -27,37 +27,52 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A funerary altar (described as a 'base' in CIL, and as a 'cippus' in ILPalermo), with mouldings top and bottom (extending around the sides); the upper surface has a central gable with volutes to each side. Worn relief decoration on the sides (seemingly a jug on the left, a patera on the right). The front face contains a large recessed square epigraphic field within a frame (43.5 x 45 cm). The face is heavily worn, making the reading difficult.",
+  "objectType": {
+    "_": "funerary altar",
+    "ana": "#object.funerary_monument.altar",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/34.html"
+  },
   "material": {
     "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
+      "_": "111",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "65",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "45",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The visible text is set out over four lines, with the text poorly spaced and cramped against the right margin in lines 2-4. Theoretically a first line above the visible lines is possible, given the space, but the damage to the top part of the face has removed any possible traces. ",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.deteriorated"
+      }
     }
   },
   "handNote": {
+    "lettering": "Thinly cut strokes, with serifs.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -76,15 +91,21 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "Roman imperial, first or earlier second century CE",
+    "notBefore": 1,
+    "notAfter": 150,
+    "evidence": "lettering"
   },
   "places": [
     {
-      "_": "Sant'Agata di Militello",
+      "_": "Calacte",
+      "type": "ancient",
+      "ref": "http://pleiades.stoa.org/places/462123"
+    },
+    {
+      "_": "Caronia",
       "type": "modern",
-      "ref": "http://pleiades.stoa.org/places/880325202"
+      "ref": "http://sws.geonames.org/2525344/"
     }
   ],
   "geo": [
@@ -94,12 +115,17 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "According to the writings of a local figure, Luigi Volpe (reported by Fiore), the piece was found  'vicino al torrente ov'e eretta la chiesetta dedicata a SS. Maria Annunziata, a pochi metri dalla spiaggia', in Marina di Caronia, below modern Caronia, site of ancient Calacte",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1840",
+    "geo": [
+      38.0355581,
+      14.4433583
+    ]
   },
   "provenanceObserved": {
-    "_": "None",
+    "_": "Observed in the museum courtyard and photographed (most recently December 2024, Prag), but no formal autopsy record",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -109,10 +135,34 @@
     {
       "n": "screen",
       "url": "ISic000040_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000040_detail1_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000040_detail2_tiled.tif",
+      "height": "4080px",
+      "width": "3072px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag  2024-12-03",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000040_left_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
+      "surfaceType": "left"
     }
   ],
   "country": "Italy",
@@ -186,7 +236,54 @@
         "title": "Iscrizioni latine lapidarie del Museo di Palermo",
         "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>"
       },
-      ""
+      {
+        "author": "Fiore",
+        "date": "1971",
+        "citedRange": "50-53",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/DCPLB5XQ"
+        },
+        "title": "Il cippo di Quinto Cecilio Calactense e la zona archeologica dell'antica Calacta",
+        "citation": "<span>Pietro Fiore, «Il cippo di Quinto Cecilio Calactense e la zona archeologica dell’antica Calacta», <i>Sicilia Archeologica</i> 4, fasc. 13 (1971): 50–53</span>"
+      },
+      {
+        "author": "Bivona",
+        "date": "1971",
+        "citedRange": "",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/"
+        }
+      },
+      {
+        "author": "Fiore",
+        "date": "1971",
+        "citedRange": "56-58",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/XY5AF3SJ"
+        },
+        "title": "Contributo all'individuazione della zona archeologica dell'antica Calacta",
+        "citation": "<span>Pietro Fiore, «Contributo all’individuazione della zona archeologica dell’antica Calacta», <i>Sicilia Archeologica</i> 4, fasc. 16 (1971): 54–61</span>"
+      },
+      {
+        "author": "Fiore",
+        "date": "1972",
+        "citedRange": "75-82",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/NHGZAG44"
+        },
+        "title": "Ancora sul cippo di Quinto Cecilio",
+        "citation": "<span>Pietro Fiore, «Ancora sul cippo di Quinto Cecilio», <i>Sicilia Archeologica</i> 5, fasc. 18–20 (1972): 75–82</span>"
+      },
+      {
+        "author": "Rocco",
+        "date": "1974",
+        "citedRange": "73-78",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GAAKQN7X"
+        },
+        "title": "Il cippo funerario di \"Quintus Caecilius Pulcher\"",
+        "citation": "<span>Benedetto Rocco, «Il cippo funerario di “Quintus Caecilius Pulcher”», <i>Sicilia Archeologica</i> 7, fasc. 24–25 (1974): 73–78</span>"
+      }
     ]
   },
   "bibliographyDiscussion": {
@@ -195,29 +292,44 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\">\n  <ab>\n    <lb n=\"1\"/>Quintus\n    <lb n=\"2\"/><orig>CV</orig><gap reason=\"lost\" extent=\"2\" unit=\"character\"/><orig>PL</orig>\n    <lb n=\"3\"/><gap reason=\"lost\" extent=\"4\" unit=\"character\"/><orig>IT</orig>\n    <lb n=\"4\"/>a<gap reason=\"lost\" extent=\"4\" unit=\"character\"/><orig>II</orig>\n  </ab>\n</div>",
+  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\" resp=\"#JP\">\n  <ab>\n    <lb n=\"1\"/><persName type=\"attested\"><name>Quintus</name>\n    <lb n=\"2\"/><name>C<unclear>aec</unclear><supplied reason=\"lost\">ilius</supplied></name> <name>Pul\n    <lb n=\"3\"/>ch<unclear>e</unclear><supplied reason=\"lost\">r</supplied></name></persName> <supplied reason=\"lost\">vix</supplied>it\n    <lb n=\"4\"/>an<unclear>nis</unclear> <num value=\"18\"><unclear>XVI</unclear>II</num>\n  </ab>\n</div>",
   "facsimile": {
     "n": "screen",
     "url": "ISic000040_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "5520px",
+    "width": "3680px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
     "surfaceType": "front"
   },
-  "provenance": "Sant'Agata di Militello",
-  "publicationAuthors": [],
+  "provenance": "Calacte",
+  "letterHeights": [],
+  "publicationAuthors": [
+    "Fiore",
+    "Bivona",
+    "Rocco"
+  ],
   "publicationTitles": [
     "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
-    "Iscrizioni latine lapidarie del Museo di Palermo"
+    "Iscrizioni latine lapidarie del Museo di Palermo",
+    "Il cippo di Quinto Cecilio Calactense e la zona archeologica dell'antica Calacta",
+    "Contributo all'individuazione della zona archeologica dell'antica Calacta",
+    "Ancora sul cippo di Quinto Cecilio",
+    "Il cippo funerario di \"Quintus Caecilius Pulcher\""
   ],
-  "publicationYears": [],
+  "publicationYears": [
+    "1971",
+    "1972",
+    "1974"
+  ],
   "keywords": [
     "isic000040",
-    "i.sicily inscription 000040",
+    "funerary altar for quintus caecilius pulcher",
     "draft",
     "funerary",
+    "funerary altar",
     "limestone",
-    "sant'agata di militello",
+    "calacte",
+    "caronia",
     "italy",
     "sicily",
     "palermo",

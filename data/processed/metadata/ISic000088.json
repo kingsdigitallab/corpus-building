@@ -39,7 +39,9 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments"
+  },
   "dimensions": [
     {
       "unit": "cm",
@@ -62,7 +64,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -115,12 +119,7 @@
     "notAfter": "1624",
     "geo": null
   },
-  "provenanceObserved": {
-    "_": "None",
-    "type": "observed",
-    "subtype": "autopsied",
-    "geo": null
-  },
+  "provenanceObserved": null,
   "provenanceLost": {
     "_": "Lost.",
     "type": "not-observed",
@@ -154,7 +153,7 @@
           "target": "https://biblio.inscriptiones.org/epig10002388"
         },
         "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
-        "citation": "<span>G. Gualtherus, <i>Siciliae Obiacentium Insular et Bruttiorum Antiquae Tabulae Cum Animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>"
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>"
       },
       {
         "author": "Gualtherus",
@@ -173,7 +172,7 @@
           "target": "https://biblio.inscriptiones.org/epig10001931"
         },
         "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
-        "citation": "<span>G. Gualtherus, <i>Siciliæ Obiacentium Insular. et Bruttiorum Antiquæ Tabulæ, Cum Animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>"
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>"
       },
       {
         "author": "Castelli",
@@ -187,7 +186,7 @@
           "target": "https://biblio.inscriptiones.org/epig10002084"
         },
         "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
-        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et Objacentium Insularum Veterum Inscriptionum Nova Collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>"
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>"
       },
       {
         "author": "Castelli",
@@ -201,7 +200,7 @@
           "target": "https://biblio.inscriptiones.org/epig10002083"
         },
         "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
-        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et Objacentium Insularum Veterum Inscriptionum Nova Collectio Prolegomenis et Notis Illustrata, et Iterum Cum Emendationibus, &#38; Auctariis Evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>"
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>"
       },
       {
         "type": "corpus",
@@ -246,9 +245,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        },
-        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>"
+        }
       },
       {
         "author": "Manganaro",
@@ -274,6 +271,7 @@
   },
   "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\" resp=\"#TA\">\n  <ab>\n    <lb n=\"1\"/>ara\n    <lb n=\"2\"/><roleName type=\"supracivic\" subtype=\"imperator\"><expan><abbr>imp</abbr><ex>eratori</ex></expan></roleName> <g ref=\"#interpunct\">·</g> Cae<supplied reason=\"lost\">sari</supplied> <supplied reason=\"lost\">Augusto</supplied>\n    <lb n=\"3\"/>et <g ref=\"#interpunct\">·</g> <unclear>L</unclear>iv<unclear>i</unclear><supplied reason=\"lost\">ae</supplied>\n    <lb n=\"4\"/>matri <supplied reason=\"lost\"><expan><abbr>Ti</abbr><ex>beri</ex></expan></supplied> <supplied reason=\"lost\"><expan><abbr>Caes</abbr><ex>aris</ex></expan></supplied>\n    <lb n=\"5\"/><roleName type=\"supracivic\" subtype=\"imperator\"><expan><abbr>imp</abbr><ex>eratoris</ex></expan></roleName> <expan><abbr>Cae<supplied reason=\"lost\">s</supplied></abbr><supplied reason=\"lost\"><ex>aris</ex></supplied></expan> <supplied reason=\"lost\">filii</supplied> <gap reason=\"lost\" extent=\"unknown\" unit=\"character\"/>\n  </ab>\n</div>",
   "provenance": "Thermae Himeraeae",
+  "letterHeights": [],
   "publicationAuthors": [
     "Gualtherus",
     "Castelli",
@@ -286,7 +284,6 @@
     "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
     "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
     "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
-    "Iscrizioni Latine nuove e vecchie della Sicilia",
     "La Sicilia da Sesto Pompeo a Diocleziano"
   ],
   "publicationYears": [

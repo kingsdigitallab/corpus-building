@@ -39,7 +39,9 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
       "_": "101",
@@ -65,7 +67,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -76,7 +80,9 @@
         "from": "line1",
         "to": "line18",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -113,8 +119,10 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Seen by Mommsen in the civic museum, and Mommsen references B. Romano, antichita trovate in\n                            Sicilia (1854), p.21 [non vidi]",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1854",
     "geo": null
   },
   "provenanceObserved": {
@@ -224,6 +232,12 @@
     "surfaceType": "front"
   },
   "provenance": "Thermae Himeraeae",
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publicationAuthors": [],
   "publicationTitles": [
     "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",

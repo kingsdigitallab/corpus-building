@@ -40,7 +40,9 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
       "_": "25.5 at greatest extent",
@@ -66,7 +68,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -78,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "58-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "58",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -86,7 +92,8 @@
         "from": "line2",
         "to": "line2",
         "h": "58",
-        "unit": "mm"
+        "unit": "mm",
+        "quantity": "58"
       },
       {
         "type": "interlinear",
@@ -100,7 +107,8 @@
   "date": {
     "_": "Bivona (1994) suggests an early imperial date based on the appearance of the letters",
     "notBefore": 1,
-    "notAfter": 200
+    "notAfter": 200,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -204,9 +212,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        },
-        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
-        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>"
+        }
       },
       {
         "type": "corpus",
@@ -260,11 +266,16 @@
     "surfaceType": "front"
   },
   "provenance": "Thermae Himeraeae",
+  "letterHeights": [
+    {
+      "atLeast": 58,
+      "atMost": 60
+    }
+  ],
   "publicationAuthors": [
     "Romano"
   ],
   "publicationTitles": [
-    "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
     "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
     "Iscrizioni latine lapidarie del museo civico di Termini Imerese"
   ],

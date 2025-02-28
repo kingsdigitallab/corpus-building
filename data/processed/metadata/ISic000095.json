@@ -39,7 +39,9 @@
     "ana": "#material.stone.breccia",
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
       "_": "125.5",
@@ -65,7 +67,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
@@ -77,7 +81,9 @@
         "from": "line1",
         "to": "line1",
         "h": "48-58",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "48",
+        "atMost": "58"
       },
       {
         "type": "letterHeight",
@@ -85,7 +91,9 @@
         "from": "line2",
         "to": "line2",
         "h": "42-48",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "42",
+        "atMost": "48"
       },
       {
         "type": "letterHeight",
@@ -93,7 +101,9 @@
         "from": "line3",
         "to": "line3",
         "h": "40-44",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "44"
       },
       {
         "type": "interlinear",
@@ -101,7 +111,9 @@
         "from": "line1",
         "to": "line2",
         "h": "30-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -109,7 +121,8 @@
         "from": "line2",
         "to": "line3",
         "h": "32",
-        "unit": "mm"
+        "unit": "mm",
+        "quantity": "32"
       }
     ]
   },
@@ -335,6 +348,24 @@
     "surfaceType": "front"
   },
   "provenance": "Thermae Himeraeae",
+  "letterHeights": [
+    {
+      "atLeast": 48,
+      "atMost": 58
+    },
+    {
+      "atLeast": 42,
+      "atMost": 48
+    },
+    {
+      "atLeast": 40,
+      "atMost": 44
+    },
+    {
+      "atLeast": 30,
+      "atMost": 35
+    }
+  ],
   "publicationAuthors": [
     "Fiorelli",
     "Wilson"
