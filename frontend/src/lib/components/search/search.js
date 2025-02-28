@@ -70,6 +70,20 @@ export const searchConfig = {
 			size: 200,
 			sort: 'key'
 		},
+		letterHeightAtLeast: {
+			title: 'Letter height at least',
+			hide_zero_doc_count: true,
+			show_facet_stats: true,
+			size: 1000,
+			sort: 'key'
+		},
+		letterHeightAtMost: {
+			title: 'Letter height at most',
+			hide_zero_doc_count: true,
+			show_facet_stats: true,
+			size: 1000,
+			sort: 'key'
+		},
 		damage: {
 			title: 'Damage',
 			hide_zero_doc_count: true,
@@ -153,6 +167,10 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			: item.layoutDesc?.layout?.rs?.ana === '#execution.rubrication'
 				? '#execution.rubrication'
 				: undefined;
+		const letterHeights =
+			item.letterHeights && item.letterHeights.length > 0
+				? item.letterHeights.map((d) => ({ atLeast: d.atLeast ?? 0, atMost: d.atMost ?? 100 }))
+				: [{ atLeast: 0, atMost: 100 }];
 		const repository =
 			item.repository?.role?.toLowerCase().indexOf('private') !== -1 ||
 			item.repository?._?.toLowerCase().indexOf('private') !== -1
@@ -170,6 +188,8 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			material: getHierarchicalValues(item.material?.ana),
 			technique: getHierarchicalValues(technique),
 			pigment: getHierarchicalValues(pigment),
+			letterHeightAtLeast: Math.min(...letterHeights.map((d) => d.atLeast)),
+			letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
 			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
 			repository,
 			publicationAuthors: item.publicationAuthors,
@@ -242,7 +262,8 @@ export function search({
 	query = '',
 	sort = 'file_asc',
 	filters = {},
-	dateRange = [undefined, undefined]
+	dateRange = [undefined, undefined],
+	letterHeightRange = [undefined, undefined]
 }) {
 	if (!searchEngine) load();
 	return searchEngine.search({
@@ -252,11 +273,15 @@ export function search({
 		sort,
 		filters,
 		filter: function (item) {
-			if (!dateRange[0] && !dateRange[1]) return true;
-			return (
-				(!dateRange[0] || item.notBefore >= dateRange[0]) &&
-				(!dateRange[1] || item.notAfter <= dateRange[1])
-			);
+			const matchesDateRange =
+				(!dateRange[0] && !dateRange[1]) ||
+				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
+
+			const matchesLetterHeightRange =
+				item.letterHeightAtLeast >= letterHeightRange[0] &&
+				item.letterHeightAtMost <= letterHeightRange[1];
+
+			return matchesDateRange && matchesLetterHeightRange;
 		}
 	});
 }
