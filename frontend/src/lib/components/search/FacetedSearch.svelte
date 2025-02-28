@@ -60,7 +60,7 @@
 	});
 
 	let selectedDateRange = $state(initDateRange());
-
+	let selectedLetterHeightRange = $state(initLetterHeightRange());
 	/** @type {{ [key: string]: string[] }} */
 	let selectedFilters = $state(initFilters());
 
@@ -108,19 +108,31 @@
 					query: $searchQuery,
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
 					filters,
-					dateRange: [...selectedDateRange]
+					dateRange: [...selectedDateRange],
+					letterHeightRange: [...selectedLetterHeightRange]
 				}
 			});
 		}
 	}
 
 	function initDateRange() {
-		return [-700, 1830];
+		return [
+			searchAggregations?.notBefore?.facet_stats.min ?? config.search.minDate,
+			searchAggregations?.notAfter?.facet_stats.max ?? config.search.maxDate
+		];
+	}
+
+	function initLetterHeightRange() {
+		return [
+			searchAggregations?.letterHeightAtLeast?.facet_stats.min ?? config.search.minLetterHeight,
+			searchAggregations?.letterHeightAtMost?.facet_stats.max ?? config.search.maxLetterHeight
+		];
 	}
 
 	function initFilters() {
 		return Object.keys(searchConfig.aggregations)
 			.filter((k) => k.indexOf('not') < 0)
+			.filter((k) => k.indexOf('letterHeight') < 0)
 			.reduce((acc, cur) => {
 				acc[cur] = [];
 				return acc;
@@ -145,15 +157,18 @@
 		$searchLimit = $searchView === 'map' ? config.search.maxLimit : config.search.limit;
 
 		selectedDateRange = initDateRange();
+		selectedLetterHeightRange = initLetterHeightRange();
 		selectedFilters = initFilters();
 	}
 
 	function hasActiveFilters() {
 		const initialDateRange = initDateRange();
+		const initialLetterHeightRange = initLetterHeightRange();
 
 		return (
 			$searchQuery !== '' ||
 			selectedDateRange.some((value, index) => value !== initialDateRange[index]) ||
+			selectedLetterHeightRange.some((value, index) => value !== initialLetterHeightRange[index]) ||
 			Object.keys(selectedFilters).some((key) => selectedFilters[key].length > 0)
 		);
 	}
@@ -255,6 +270,9 @@
 			<SearchSummary
 				{total}
 				dateRange={selectedDateRange}
+				defaultDateRange={[config.search.minDate, config.search.maxDate]}
+				letterHeightRange={selectedLetterHeightRange}
+				defaultLetterHeightRange={[config.search.minLetterHeight, config.search.maxLetterHeight]}
 				{numberOfLocations}
 				query={$searchQuery}
 				filters={selectedFilters}
@@ -342,6 +360,7 @@
 	aggregations={searchAggregations}
 	bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
 	bind:selectedDateRange
+	bind:selectedLetterHeightRange
 	bind:selectedFilters
 />
 
