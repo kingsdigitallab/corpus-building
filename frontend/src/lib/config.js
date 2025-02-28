@@ -8,7 +8,11 @@ export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
 export const search = {
 	limit: 20,
-	maxLimit: 5000
+	maxLimit: 5000,
+	minDate: -700,
+	maxDate: 1830,
+	minLetterHeight: 0,
+	maxLetterHeight: 100
 };
 
 export const imageServer =
