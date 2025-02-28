@@ -1,13 +1,14 @@
 <script>
-	import { Button, Slider } from 'bits-ui';
-	import debounce from 'lodash.debounce';
+	import { Button } from 'bits-ui';
 	import { slide } from 'svelte/transition';
+	import RangeSlider from './RangeSlider.svelte';
 
 	let {
 		show = false,
 		aggregations = {},
 		sortAggregationsBy = $bindable('key'),
-		selectedDateRange = $bindable([-700, 1830]),
+		selectedDateRange = $bindable([0, 0]),
+		selectedLetterHeightRange = $bindable([0, 0]),
 		selectedFilters = $bindable({})
 	} = $props();
 
@@ -15,16 +16,6 @@
 		{ label: 'Value', value: 'key' },
 		{ label: 'Count', value: 'count' }
 	];
-
-	let currentDateRange = $state(selectedDateRange);
-
-	const updateSelectedDateRange = debounce((newValue) => {
-		selectedDateRange = newValue;
-	}, 300);
-
-	$effect(() => {
-		updateSelectedDateRange([...currentDateRange]);
-	});
 
 	/** @type {Record<string, string>} */
 	let filterContains = $state({});
@@ -111,42 +102,15 @@
 			<section class="filters-groups">
 				{#if aggregations?.notBefore}
 					<section class="filter-group">
-						<h3>Date</h3>
-
-						<div class="slider">
-							<Slider.Root
-								class="slider-root"
-								min={-700}
-								max={1830}
-								step={1}
-								type="multiple"
-								bind:value={currentDateRange}
-							>
-							{#snippet children({ thumbs })}
-								<span class="slider-track">
-									<Slider.Range class="slider-range" />
-								</span>
-								{#each thumbs as index}
-									<Slider.Thumb
-										{index}
-										class="slider-thumb"
-										aria-label={`${index === 0 ? 'Not before' : 'Not after'}`}
-									/>
-								{/each}
-							{/snippet}
-							</Slider.Root>
-						</div>
-						<div class="date-inputs">
-							<label>
-								Not before
-								<input type="number" bind:value={currentDateRange[0]} min={-700} max={1811} />
-							</label>
-							<span>–</span>
-							<label>
-								<input type="number" bind:value={currentDateRange[1]} min={-675} max={1830} />
-								Not after
-							</label>
-						</div>
+						<RangeSlider
+							title="Date"
+							min={-700}
+							max={1830}
+							step={1}
+							startLabel="Not before"
+							endLabel="Not after"
+							bind:selectedRange={selectedDateRange}
+						/>
 					</section>
 				{/if}
 				{#each Object.keys(selectedFilters) as key}
@@ -176,6 +140,20 @@
 									</li>
 								{/each}
 							</ul>
+						</section>
+					{/if}
+
+					{#if key == 'pigment' && aggregations?.letterHeightAtLeast}
+						<section class="filter-group">
+							<RangeSlider
+								title="Letter height"
+								min={0}
+								max={100}
+								step={1}
+								startLabel="At least"
+								endLabel="At most"
+								bind:selectedRange={selectedLetterHeightRange}
+							/>
 						</section>
 					{/if}
 				{/each}
@@ -232,7 +210,7 @@
 		min-width: 200px;
 	}
 
-	h3 {
+	:global(h3) {
 		font-size: var(--font-size-2);
 		margin-block-end: var(--size-2);
 	}
