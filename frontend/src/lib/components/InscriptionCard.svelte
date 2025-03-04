@@ -9,65 +9,150 @@
 </script>
 
 <div class="inscription-card">
-	{#if inscription.facsimile}
-		<InscriptionLink id={inscription.file} title={inscription.title}>
-			<Image
-				src="{config.imageServer}{inscription.file}/{inscription.facsimile
-					.url}/{config.imageThumbParams}"
-				alt={inscription.facsimile.desc}
-				width={400}
-				height={200}
-			/>
+	<div class="card-header">
+		<InscriptionLink id={inscription.file} class="inscription-id">
+			ID: {inscription.file}
 		</InscriptionLink>
-	{/if}
-	<div class="inscription-title">
-		<InscriptionLink id={inscription.file} title={inscription.title}
-			>{inscription.title}</InscriptionLink
-		>
+		<div class="card-image">
+			{#if inscription.facsimile}
+				<InscriptionLink id={inscription.file} title={inscription.title}>
+					<Image
+						src="{config.imageServer}{inscription.file}/{inscription.facsimile
+							.url}/{config.imageThumbParams}"
+						alt={inscription.facsimile.desc}
+						width={400}
+						height={200}
+					/>
+				</InscriptionLink>
+			{:else}
+				<div class="card-image-placeholder"></div>
+			{/if}
+		</div>
 	</div>
-	<div class="inscription-date-place">
-		<InscriptionDate date={inscription.date} />
-		<InscriptionPlace {inscription} />
+
+	<div class="card-body">
+		<div class="inscription-title">
+			<InscriptionLink id={inscription.file} title={inscription.title}
+				>{inscription.title}</InscriptionLink
+			>
+		</div>
+		<div class="inscription-date-place">
+			<InscriptionDate date={inscription.date} />
+			<InscriptionPlace {inscription} />
+		</div>
 	</div>
-	<dl>
-		<dt>ID</dt>
-		<dd>
-			<small>
-				<InscriptionLink id={inscription.file}>{inscription.file}</InscriptionLink>
-			</small>
-		</dd>
-		<dt>Status</dt>
-		<dd>{inscription.status}</dd>
-		<dt>Type</dt>
-		{#if inscription.type?.ref}
-			<dd><a href={inscription.type.ref}>{inscription.type?._}</a></dd>
-		{:else}
-			<dd>{inscription.type?._ || 'N/A'}</dd>
-		{/if}
-		<dt>Object type</dt>
-		{#if inscription.objectType?.ref}
-			<dd><a href={inscription.objectType.ref}>{inscription.objectType?._}</a></dd>
-		{:else}
-			<dd>{inscription.objectType?._ || 'N/A'}</dd>
-		{/if}
-		<dt>Language</dt>
-		<dd>{inscription.textLang?._ || 'N/A'}</dd>
-	</dl>
+	<div class="card-footer">
+		<dl>
+			<dt>Status</dt>
+			<dd>{inscription.status}</dd>
+			<dt>Type</dt>
+			<dd class="badge strong">
+				{#if inscription.type?.ref}
+					<a href={inscription.type.ref}>{inscription.type?._}</a>
+				{:else}
+					{inscription.type?._ || 'N/A'}
+				{/if}
+			</dd>
+		</dl>
+		<dl>
+			<dt>Object type</dt>
+			<dd class="badge strong">
+				{#if inscription.rawObjectType?.ref}
+					<a href={inscription.rawObjectType.ref}>{inscription.rawObjectType?._}</a>
+				{:else}
+					{inscription.rawObjectType?._ || 'N/A'}
+				{/if}
+			</dd>
+			<dt>Language</dt>
+			<dd>{inscription.textLang?._ || 'N/A'}</dd>
+		</dl>
+	</div>
 </div>
 
 <style>
-	.inscription-title {
-		font-weight: bolder;
-		margin-block: var(--size-2);
+	.inscription-card {
+		border: 1px solid var(--border-color);
+		height: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
 	}
 
-	dl {
-		display: grid;
-		grid-template-columns: auto auto;
-		margin-block-start: var(--size-2);
+	.card-header {
+		padding-block: var(--size-2);
+	}
+
+	:global(.inscription-id) {
+		color: var(--text-1);
+		font-size: var(--font-size-3);
+		font-weight: normal;
+	}
+
+	.card-image {
+		padding: var(--size-8) var(--size-4) 0 var(--size-4);
+	}
+
+	.card-image-placeholder {
+		background-color: var(--surface-2);
+		height: 200px;
+		width: 100%;
+	}
+
+	.card-body {
+		padding-block: var(--size-4);
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	.inscription-title {
+		font-size: var(--font-size-3);
+		font-weight: bold;
+		margin-top: var(--size-2);
+	}
+
+	:global(.inscription-title a) {
+		color: var(--text-1);
+	}
+
+	:global(.inscription-date) {
+		font-size: var(--font-size-1);
+	}
+
+	:global(.inscription-place) {
+		font-size: var(--font-size-1);
+	}
+
+	.card-footer {
+		border-top: 1px solid var(--border-color);
+		bottom: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-block: var(--size-4);
+		padding-inline: var(--size-4);
+		text-align: left;
+	}
+
+	dl:last-of-type {
+		text-align: right;
 	}
 
 	dt {
-		margin-block-start: unset;
+		font-size: var(--font-size-1);
+		font-weight: normal;
+	}
+
+	dt:not(:first-of-type) {
+		margin-block-start: var(--size-2);
+	}
+
+	dd {
+		font-weight: bold;
+	}
+
+	dd::first-letter {
+		text-transform: capitalize;
 	}
 </style>
