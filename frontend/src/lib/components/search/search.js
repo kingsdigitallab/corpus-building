@@ -179,6 +179,9 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 
 		return {
 			...item,
+			// raw values, because the original are converted to facet values
+			rawObjectType: item.objectType,
+			// facet values
 			notAfter: item.date.notAfter ?? undefined,
 			notBefore: item.date.notBefore ?? undefined,
 			language: item.textLang?.languages ?? undefined,
