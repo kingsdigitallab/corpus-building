@@ -24,7 +24,6 @@
 
 		& li {
 			border-radius: var(--radius-2);
-			box-shadow: var(--shadow-2);
 			flex-basis: 95%;
 			padding-inline-start: unset;
 
