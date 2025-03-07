@@ -165,38 +165,42 @@
 			{#each Object.keys(selectedFilters) as key}
 				{#if key in aggregations && aggregations[key].title}
 					<section class="filters-group">
-						<hgroup>
-							<h3>{aggregations[key].title}</h3>
-							<small
-								>Options: {aggregations[key].buckets.filter((b) => b.doc_count > 0).length}</small
-							>
-						</hgroup>
-						{#if aggregations[key].buckets.length > 20}
-							<input
-								type="text"
-								placeholder="Filter options..."
-								bind:value={filterContains[key]}
-								class="filter-input"
-							/>
-						{/if}
-						<ul>
-							{#each filterBuckets(aggregations[key].buckets, key) as bucket}
-								<li>
-									<label>
-										<input
-											type="checkbox"
-											value={bucket.key}
-											bind:group={selectedFilters[key]}
-											disabled={bucket.doc_count === 0}
-										/>
-										<div>
-											<span>{getBucketDisplayValue(bucket.key)}</span>
-											<small>matches: {bucket.doc_count.toLocaleString()}</small>
-										</div>
-									</label>
-								</li>
-							{/each}
-						</ul>
+						<details>
+							<summary>
+								<h3>{aggregations[key].title}</h3>
+							</summary>
+							<div>
+								<small
+									>Options: {aggregations[key].buckets.filter((b) => b.doc_count > 0).length}
+								</small>
+								{#if aggregations[key].buckets.length > 20}
+									<input
+										type="text"
+										placeholder="Filter options..."
+										bind:value={filterContains[key]}
+										class="filter-input"
+									/>
+								{/if}
+								<ul>
+									{#each filterBuckets(aggregations[key].buckets, key) as bucket}
+										<li>
+											<label>
+												<input
+													type="checkbox"
+													value={bucket.key}
+													bind:group={selectedFilters[key]}
+													disabled={bucket.doc_count === 0}
+												/>
+												<div>
+													<span>{getBucketDisplayValue(bucket.key)}</span>
+													<small>matches: {bucket.doc_count.toLocaleString()}</small>
+												</div>
+											</label>
+										</li>
+									{/each}
+								</ul>
+							</div>
+						</details>
 					</section>
 				{/if}
 
@@ -316,7 +320,7 @@
 		position: relative;
 	}
 
-	:global(.filters-by .filter-button::after) {
+	:global(.filters-by .remove-filter-button::after) {
 		content: '×';
 		position: absolute;
 		right: var(--size-1);
@@ -329,11 +333,37 @@
 		flex: 1;
 		min-width: 200px;
 		padding-block-start: var(--size-4);
-		padding-block-end: var(--size-2);
+		/* padding-block-end: var(--size-2); */
 	}
 
-	.filters-group hgroup {
-		margin-block-end: var(--size-2);
+	.filters-group details,
+	.filters-group summary {
+		background: none;
+		padding-block: unset;
+		padding-inline: unset;
+	}
+
+	.filters-group summary {
+		align-items: baseline;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		padding-inline: var(--size-3);
+	}
+
+	.filters-group details[open] summary {
+		margin-bottom: var(--size-00);
+	}
+
+	.filters-group summary::after {
+		content: '+';
+		font-size: var(--font-size-4);
+		transition: transform 0.2s;
+	}
+
+	.filters-group details[open] summary::after {
+		transform: rotate(45deg);
 	}
 
 	.filters-group .filter-input {
