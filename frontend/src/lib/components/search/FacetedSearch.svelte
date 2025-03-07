@@ -353,6 +353,7 @@
 <SearchFilters
 	show={showFilters}
 	aggregations={searchAggregations}
+	{total}
 	bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
 	bind:selectedDateRange
 	bind:selectedLetterHeightRange
