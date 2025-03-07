@@ -44,13 +44,12 @@
 </div>
 <div class="range-inputs">
     <label>
-        {startLabel}
+        <span>{startLabel}</span>
         <input type="number" bind:value={selectedRange[0]} {min} {max} />
     </label>
-    <span>–</span>
     <label>
+        <span>{endLabel}</span>
         <input type="number" bind:value={selectedRange[1]} {min} {max} />
-        {endLabel}
     </label>
 </div>
 
@@ -60,5 +59,17 @@
         gap: var(--size-2);
         justify-content: space-between;
         width: 100%;
+    }
+
+    .range-inputs label {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-1);
+    }
+
+    .range-inputs label input {
+        background: transparent;
+        border: 1px solid var(--border-color);
+
     }
 </style> 
