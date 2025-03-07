@@ -24,49 +24,49 @@ export const searchConfig = {
 		},
 		language: {
 			title: 'Language',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		languageCert: {
 			title: 'Language certainty',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 10,
 			sort: 'key'
 		},
 		provenance: {
 			title: 'Provenance',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		inscriptionType: {
 			title: 'Inscription type',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		objectType: {
 			title: 'Object type',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		material: {
 			title: 'Material',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		technique: {
 			title: 'Technique',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		pigment: {
 			title: 'Pigment',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
@@ -86,37 +86,37 @@ export const searchConfig = {
 		},
 		damage: {
 			title: 'Damage',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 100,
 			sort: 'key'
 		},
 		repository: {
 			title: 'Repository',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 200,
 			sort: 'key'
 		},
 		publicationAuthors: {
 			title: 'Publication author',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 1000,
 			sort: 'key'
 		},
 		publicationTitles: {
 			title: 'Publication title',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 1500,
 			sort: 'key'
 		},
 		publicationYears: {
 			title: 'Publication year',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			size: 1000,
 			sort: 'key'
 		},
 		status: {
 			title: 'Status',
-			hide_zero_doc_count: true,
+			hide_zero_doc_count: false,
 			sort: 'key'
 		}
 	},
