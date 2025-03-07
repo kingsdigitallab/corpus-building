@@ -10,7 +10,11 @@
 		filters
 	} = $props();
 
-	let hasSelectedFilters = $derived(Object.values(filters).some((filter) => filter.length > 0));
+	let hasSelectedFilters = $derived(
+		Object.values(filters).some((filter) => filter.length > 0) ||
+			letterHeightRange[0] !== defaultLetterHeightRange[0] ||
+			letterHeightRange[1] !== defaultLetterHeightRange[1]
+	);
 </script>
 
 <h2>
@@ -22,8 +26,7 @@
 	<em>{numberOfLocations.toLocaleString()}</em>
 	locations{#if query}, matching
 		<em>{query.split(' ').join(', ')}</em>
-	{/if}{#if hasSelectedFilters || letterHeightRange[0] !== defaultLetterHeightRange[0] || letterHeightRange[1] !== defaultLetterHeightRange[1]},
-		filtered by
+	{/if}{#if hasSelectedFilters}, filtered by
 		<span class="selected-filters">
 			{#each Object.entries(filters).filter(([_, value]) => value.length > 0) as [key, value]}
 				<span>
