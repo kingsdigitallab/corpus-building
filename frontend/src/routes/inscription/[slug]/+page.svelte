@@ -222,12 +222,14 @@
 				<dd>{metadata.support || config.EMPTY_PLACEHOLDER}</dd>
 				<dt>Object type</dt>
 				{#if metadata.objectType}
-					<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+					<dd>
+						<a class="badge strong" href={metadata.objectType.ref}>{metadata.objectType._}</a>
+					</dd>
 				{:else}
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Material</dt>
-				<dd><a href={metadata.material.ref}>{metadata.material._}</a></dd>
+				<dd><a class="badge strong" href={metadata.material.ref}>{metadata.material._}</a></dd>
 				<dt>Condition</dt>
 				{#if metadata.condition?.ana}
 					<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
@@ -274,7 +276,7 @@
 				{#if metadata.places.length}
 					<dd>
 						{metadata.places[0].offset || ''}
-						<a href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+						<a class="badge strong" href={metadata.places[0].ref}>{metadata.places[0]._}</a>
 					</dd>
 				{:else}
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
@@ -353,7 +355,7 @@
 
 		<section id="text-type">
 			<h2>Text type</h2>
-			<p><a href={metadata.type.ref}>{metadata.type._}</a></p>
+			<p><a class="badge strong" href={metadata.type.ref}>{metadata.type._}</a></p>
 		</section>
 
 		<section id="commentary">
