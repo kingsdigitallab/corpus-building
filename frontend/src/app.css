@@ -1,7 +1,9 @@
+@import '@fontsource/source-sans-pro';
 @import 'lib/css/shiki.css';
 
 html {
 	--font-family: var(--font-classical-humanist);
+	--font-family-greek: 'Source Sans Pro', var(--font-antique);
 
 	/* light */
 	--brand-light: #b2975d;
@@ -270,13 +272,19 @@ img {
 .badge {
 	background-color: var(--surface-2);
 	border-radius: var(--radius-1);
+	color: var(--text-1);
 	padding-block: var(--size-1);
 	padding-inline: var(--size-2);
 	text-align: center;
 }
 
-.badge a {
+.badge a,
+a.badge {
 	color: var(--text-1);
+}
+
+.badge::first-letter {
+	text-transform: uppercase;
 }
 
 .strong {
