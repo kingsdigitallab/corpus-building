@@ -512,7 +512,8 @@
 	}
 
 	#edition {
-		font-family: var(--font-antique);
+		font-family: var(--font-family-greek);
+		font-weight: 500;
 		grid-column: 2;
 		grid-row: 1;
 		margin-bottom: var(--size-4);
