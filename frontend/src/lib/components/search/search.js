@@ -84,6 +84,12 @@ export const searchConfig = {
 			size: 1000,
 			sort: 'key'
 		},
+		condition: {
+			title: 'Condition',
+			hide_zero_doc_count: false,
+			size: 100,
+			sort: 'key'
+		},
 		damage: {
 			title: 'Damage',
 			hide_zero_doc_count: false,
@@ -193,6 +199,7 @@ export function load({ sortAggregationsBy = 'key' } = {}) {
 			pigment: getHierarchicalValues(pigment),
 			letterHeightAtLeast: Math.min(...letterHeights.map((d) => d.atLeast)),
 			letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
+			condition: getHierarchicalValues(item.condition?.ana),
 			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
 			repository,
 			publicationAuthors: item.publicationAuthors,
