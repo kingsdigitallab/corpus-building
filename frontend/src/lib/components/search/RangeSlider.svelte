@@ -8,12 +8,9 @@
         step = 1,
         startLabel = 'From',
         endLabel = 'To',
-        selectedRange = $bindable([0, 0])
+        selectedRange = $bindable([0, 0]),
+        rangeChange
     } = $props();
-
-    function handleValueCommit(value) {
-        selectedRange = [...value];
-    }
 </script>
 
 <h3>{title}</h3>
@@ -23,10 +20,10 @@
         {min}
         {max}
         {step}
-        value={selectedRange}
+        bind:value={selectedRange}
         type="multiple"
         autoSort={true}
-        onValueCommit={handleValueCommit}
+        onValueCommit={rangeChange}
     >
     {#snippet children({ thumbs })}
         <span class="slider-track">
@@ -45,11 +42,11 @@
 <div class="range-inputs">
     <label>
         <span>{startLabel}</span>
-        <input type="number" bind:value={selectedRange[0]} {min} {max} />
+        <input type="number" bind:value={selectedRange[0]} {min} {max} oninput={rangeChange} />
     </label>
     <label>
         <span>{endLabel}</span>
-        <input type="number" bind:value={selectedRange[1]} {min} {max} />
+        <input type="number" bind:value={selectedRange[1]} {min} {max} oninput={rangeChange} />
     </label>
 </div>
 
