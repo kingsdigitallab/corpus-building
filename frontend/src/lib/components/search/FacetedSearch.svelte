@@ -77,6 +77,7 @@
 
 				if (type === 'ready') {
 					searchStatus = 'ready';
+					postSearchMessage();
 				}
 
 				if (type === 'results') {
@@ -90,11 +91,16 @@
 		});
 	}
 
-	$effect(() => {
-		postSearchMessage();
-	});
+	/**
+	 * @param {number | null | undefined} [page]
+	 */
+	async function postSearchMessage(page) {
+		let currentPage = $searchPage;
 
-	async function postSearchMessage() {
+		if (page) {
+			currentPage = page;
+		}
+
 		if (searchStatus === 'ready') {
 			const filters = Object.fromEntries(
 				Object.keys(selectedFilters).map((key) => [key, [...selectedFilters[key]]])
@@ -104,7 +110,7 @@
 				type: 'search',
 				data: {
 					limit: $searchLimit,
-					page: $searchPage,
+					page: currentPage,
 					query: $searchQuery,
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
 					filters,
@@ -140,8 +146,16 @@
 		return searchAggregations.provenance.buckets.length;
 	}
 
+	async function handleSearchInput(/** @type {Event} */ e) {
+		e.preventDefault();
+		$searchPage = 1;
+		postSearchMessage();
+	}
+
 	async function handleSearch(/** @type {Event} */ e) {
 		e.preventDefault();
+		$searchPage = 1;
+		postSearchMessage();
 	}
 
 	async function handleReset(/** @type {Event} */ e) {
@@ -154,6 +168,24 @@
 		selectedDateRange = [...initDateRange()];
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
+
+		postSearchMessage();
+	}
+
+	async function handleSortAggregationsByChange() {
+		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchWorker.postMessage({
+				type: 'load',
+				data: { sortAggregationsBy: searchOptions.sortAggregationsBy }
+			});
+
+			postSearchMessage();
+		}
+	}
+
+	async function handleSearchFiltersChange() {
+		$searchPage = 1;
+		postSearchMessage();
 	}
 
 	function hasActiveFilters() {
@@ -167,17 +199,6 @@
 			Object.keys(selectedFilters).some((key) => selectedFilters[key].length > 0)
 		);
 	}
-
-	$effect(() => {
-		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
-			searchWorker.postMessage({
-				type: 'load',
-				data: { sortAggregationsBy: searchOptions.sortAggregationsBy }
-			});
-
-			postSearchMessage();
-		}
-	});
 
 	/**
 	 * @param {'cards' | 'map' | 'table'} newView
@@ -200,17 +221,22 @@
 		}
 
 		$searchView = newView;
+
+		postSearchMessage();
 	}
 
 	async function handleSortResultsOrderToggle() {
 		searchOptions.sortResultsOrder = searchOptions.sortResultsOrder === 'asc' ? 'desc' : 'asc';
+
+		postSearchMessage();
 	}
 
 	/**
-	 * @param {number | null} page
+	 * @param {number} page
 	 */
 	async function handlePageChange(page) {
 		$searchPage = page;
+		postSearchMessage(page);
 	}
 
 	onMount(() => {
@@ -243,6 +269,7 @@
 				name="q"
 				id="q"
 				placeholder="Search inscriptions metadata"
+				oninput={handleSearchInput}
 				bind:value={$searchQuery}
 			/>
 			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
@@ -358,6 +385,8 @@
 	bind:selectedDateRange
 	bind:selectedLetterHeightRange
 	bind:selectedFilters
+	sortAggregationsByChange={handleSortAggregationsByChange}
+	searchFiltersChange={handleSearchFiltersChange}
 />
 
 <style>
