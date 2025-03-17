@@ -10,10 +10,12 @@
 		sortAggregationsBy = $bindable('key'),
 		selectedDateRange = $bindable([0, 0]),
 		selectedLetterHeightRange = $bindable([0, 0]),
-		selectedFilters = $bindable({})
+		selectedFilters = $bindable({}),
+		sortAggregationsByChange,
+		searchFiltersChange
 	} = $props();
 
-	let hasSelectedFilters = $derived(
+	const hasSelectedFilters = $derived(
 		Object.values(selectedFilters).some((filter) => filter.length > 0)
 	);
 
@@ -23,7 +25,7 @@
 	];
 
 	/** @type {Record<string, string>} */
-	let filterContains = $state({});
+	const filterContains = $state({});
 
 	/** @type {HTMLElement | null} */
 	let previousFocusElement = $state(null);
@@ -48,6 +50,7 @@
 
 	function handleClearFilters() {
 		selectedFilters = Object.fromEntries(Object.keys(selectedFilters).map((key) => [key, []]));
+		searchFiltersChange();
 	}
 
 	/**
@@ -55,6 +58,7 @@
 	 */
 	function handleRemoveFilter(key) {
 		selectedFilters[key] = [];
+		searchFiltersChange();
 	}
 
 	/**
@@ -108,6 +112,7 @@
 							name="sort-aggregations"
 							value={option.value}
 							bind:group={sortAggregationsBy}
+							onchange={() => sortAggregationsByChange()}
 						/>
 						{option.label}
 					</label>
@@ -159,6 +164,7 @@
 						startLabel="No earlier than"
 						endLabel="No later than"
 						bind:selectedRange={selectedDateRange}
+						rangeChange={() => searchFiltersChange()}
 					/>
 				</section>
 			{/if}
@@ -190,6 +196,7 @@
 													value={bucket.key}
 													bind:group={selectedFilters[key]}
 													disabled={bucket.doc_count === 0}
+													onchange={() => searchFiltersChange()}
 												/>
 												<div>
 													<span>{getBucketDisplayValue(bucket.key)}</span>
@@ -214,6 +221,7 @@
 							startLabel="At least"
 							endLabel="At most"
 							bind:selectedRange={selectedLetterHeightRange}
+							rangeChange={() => searchFiltersChange()}
 						/>
 					</section>
 				{/if}
@@ -376,7 +384,7 @@
 	}
 
 	.filters-group ul {
-		border: 1px solid var(--border-color);
+		background-color: hsl(var(--brown-1-hsl) / 40%);
 		border-radius: var(--radius-2);
 		list-style: none;
 		max-height: calc(5 * var(--size-6));
