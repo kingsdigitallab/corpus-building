@@ -11,7 +11,7 @@
 </script>
 
 {#if count > 0}
-	<Pagination.Root {page} {count} {perPage} {onPageChange}  >
+	<Pagination.Root {page} {count} {perPage} {onPageChange}>
 		{#snippet children({ pages, range })}
 				<div class="pagination">
 				<Pagination.PrevButton><ChevronLeft /></Pagination.PrevButton>
