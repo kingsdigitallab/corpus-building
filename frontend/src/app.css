@@ -6,37 +6,26 @@ html {
 	--font-family-greek: 'Source Sans Pro', var(--font-antique);
 
 	/* light */
-	--brand-light: #b2975d;
-	--text-1-light: #2b2b2b;
-	--text-2-light: var(--text-1-light);
-	--surface-1-light: #faf9f6;
-	--surface-2-light: #eae0bb;
-	--surface-3-light: var(--gray-2);
-	--surface-4-light: var(--gray-3);
-	--surface-shadow-light: var(--gray-8-hsl);
+	--brand-light: var(--brown-9);
+	--text-1-light: var(--sand-11);
+	--text-2-light: var(--sand-11);
+	--surface-1-light: var(--sand-0);
+	--surface-2-light: var(--brown-1);
+	--surface-3-light: var(--brown-5);
+	--surface-4-light: var(--brown-0);
+	--surface-shadow-light: var(--sand-8);
 	--shadow-strength-light: 2%;
 
 	/* dark */
-	--brand-dark: var(--orange-2);
-	--text-1-dark: var(--gray-3);
-	--text-2-dark: var(--gray-5);
-	--surface-1-dark: var(--gray-12);
-	--surface-2-dark: var(--gray-11);
-	--surface-3-dark: var(--gray-10);
-	--surface-4-dark: var(--gray-9);
-	--surface-shadow-dark: var(--gray-12-hsl);
+	--brand-dark: var(--choco-1);
+	--text-1-dark: var(--sand-0);
+	--text-2-dark: var(--gray-10);
+	--surface-1-dark: var(--gray-10);
+	--surface-2-dark: var(--brown-2);
+	--surface-3-dark: var(--choco-1);
+	--surface-4-dark: var(--brown-2);
+	--surface-shadow-dark: var(--gray-12);
 	--shadow-strength-dark: 80%;
-
-	/* dim */
-	--brand-dim: var(--orange-4);
-	--text-1-dim: var(--gray-3);
-	--text-2-dim: var(--gray-4);
-	--surface-1-dim: var(--gray-8);
-	--surface-2-dim: var(--gray-7);
-	--surface-3-dim: var(--gray-6);
-	--surface-4-dim: var(--gray-5);
-	--surface-shadow-dim: var(--gray-9-hsl);
-	--shadow-strength-dim: 20%;
 }
 
 :root {
@@ -70,7 +59,7 @@ html {
 	}
 }
 
-[color-scheme='light'] {
+[data-color-scheme='light'] {
 	color-scheme: light;
 
 	--brand: var(--brand-light);
@@ -84,7 +73,7 @@ html {
 	--shadow-strength: var(--shadow-strength-light);
 }
 
-[color-scheme='dark'] {
+[data-color-scheme='dark'] {
 	color-scheme: dark;
 
 	--brand: var(--brand-dark);
@@ -98,23 +87,9 @@ html {
 	--shadow-strength: var(--shadow-strength-dark);
 }
 
-[color-scheme='dim'] {
-	color-scheme: dark;
-
-	--brand: var(--brand-dim);
-	--text-1: var(--text-1-dim);
-	--text-2: var(--text-2-dim);
-	--surface-1: var(--surface-1-dim);
-	--surface-2: var(--surface-2-dim);
-	--surface-3: var(--surface-3-dim);
-	--surface-4: var(--surface-4-dim);
-	--surface-shadow: var(--surface-shadow-dim);
-	--shadow-strength: var(--shadow-strength-dim);
-}
-
 .surface-1 {
 	background-color: var(--surface-1);
-	color: var(--text-2);
+	color: var(--text-1);
 }
 
 .surface-2 {
@@ -124,12 +99,28 @@ html {
 
 .surface-3 {
 	background-color: var(--surface-3);
-	color: var(--text-1);
+	color: var(--text-2);
 }
 
 .surface-4 {
 	background-color: var(--surface-4);
+	color: var(--text-2);
+}
+
+.text-1 {
 	color: var(--text-1);
+}
+
+.text-2 {
+	color: var(--text-2);
+}
+
+.font-default {
+	font-family: var(--font-family);
+}
+
+.font-greek {
+	font-family: var(--font-family-greek);
 }
 
 html {
@@ -161,9 +152,47 @@ img {
 	width: 1px !important;
 }
 
+a {
+	color: var(--brand, var(--link));
+	text-decoration-color: var(--brand, var(--link));
+}
+
 :visited {
 	color: var(--brand, var(--link));
 }
+
+button {
+	border-color: var(--border-color);
+	border-radius: var(--radius-1);
+	border-width: var(--border-size-1);
+	box-shadow: none;
+	text-shadow: none;
+}
+
+/* Utility classes */
+.badge {
+	background-color: var(--surface-2);
+	border-radius: var(--radius-1);
+	color: var(--text-2);
+	padding-block: var(--size-1);
+	padding-inline: var(--size-2);
+	text-align: center;
+}
+
+.badge a,
+a.badge {
+	color: var(--text-2);
+	text-decoration-color: var(--text-2);
+}
+
+.badge::first-letter {
+	text-transform: uppercase;
+}
+
+.strong {
+	font-weight: bold;
+}
+/* End of Utility classes */
 
 /* Map styles */
 .map {
@@ -267,27 +296,3 @@ img {
 	opacity: 0.5;
 }
 /* End of Slider styles */
-
-/* Utility classes */
-.badge {
-	background-color: var(--surface-2);
-	border-radius: var(--radius-1);
-	color: var(--text-1);
-	padding-block: var(--size-1);
-	padding-inline: var(--size-2);
-	text-align: center;
-}
-
-.badge a,
-a.badge {
-	color: var(--text-1);
-}
-
-.badge::first-letter {
-	text-transform: uppercase;
-}
-
-.strong {
-	font-weight: bold;
-}
-/* End of Utility classes */
