@@ -384,7 +384,7 @@
 	}
 
 	.filters-group ul {
-		background-color: hsl(var(--brown-1-hsl) / 40%);
+		background-color: var(--surface-4);
 		border-radius: var(--radius-2);
 		list-style: none;
 		max-height: calc(5 * var(--size-6));
