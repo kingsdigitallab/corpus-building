@@ -1,14 +1,13 @@
 <script>
-	const surfaces = ['surface-1', 'surface-2', 'surface-3', 'surface-4'];
 	const themes = ['light', 'dark'];
 </script>
 
-<div class="style-guide">
+<article class="style-guide">
 	<h1>Style Guide</h1>
 
 	<div class="theme-columns">
 		{#each themes as theme}
-			<div class="theme-column surface-1" data-color-scheme={theme}>
+			<section class="theme-column surface-1" data-color-scheme={theme}>
 				<h2>{theme.charAt(0).toUpperCase() + theme.slice(1)} theme</h2>
 
 				<section class="component-section">
@@ -32,26 +31,30 @@
 				<section class="component-section">
 					<h3>Typography</h3>
 					<div class="component-grid">
-						<div class="font-default">Default font</div>
-						<div class="font-greek surface-2">Greek font on surface 2</div>
+						<div class="font-default">
+							--font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+						</div>
+						<div class="font-greek surface-2">
+							--font-family-greek: 'Source Sans Pro', var(--font-antique);
+						</div>
 					</div>
 				</section>
 
 				<section class="component-section">
-					<h3>Links</h3>
+					<h3 id="links">Links</h3>
 					<div class="component-grid">
-						<div><a href="#">Default link</a></div>
-						<div><a class="strong" href="#">Strong link</a></div>
+						<div><a href="#links">Default link</a></div>
+						<div><a class="strong" href="#links">Strong link</a></div>
 					</div>
 				</section>
 
 				<section class="component-section">
-					<h3>Badges</h3>
+					<h3 id="badges">Badges</h3>
 					<div class="component-grid">
 						<div class="badge">Default badge</div>
 						<div class="badge strong">Strong badge</div>
-						<a href="#" class="badge">Link badge</a>
-						<a href="#" class="badge strong">Strong link badge</a>
+						<a href="#badges" class="badge">Link badge</a>
+						<a href="#badges" class="badge strong">Strong link badge</a>
 					</div>
 				</section>
 
@@ -78,12 +81,10 @@
 						</div>
 					</div>
 				</section>
-
-				<!-- Add more component sections as needed -->
-			</div>
+			</section>
 		{/each}
 	</div>
-</div>
+</article>
 
 <style>
 	.theme-columns {
