@@ -26,7 +26,7 @@
 	}
 
 	function setTheme() {
-		document.documentElement.setAttribute('color-scheme', theme);
+		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
 	}
 
@@ -46,7 +46,7 @@
 			theme = 'dark';
 		}
 
-		document.documentElement.setAttribute('color-scheme', theme);
+		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
 	</script>
 </svelte:head>
