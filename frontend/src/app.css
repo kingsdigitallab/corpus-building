@@ -169,6 +169,16 @@ button {
 	text-shadow: none;
 }
 
+button:disabled {
+	opacity: 0.5;
+}
+
+input,
+label input {
+	background: transparent;
+	border: 1px solid var(--border-color);
+}
+
 /* Utility classes */
 .badge {
 	background-color: var(--surface-2);
@@ -276,7 +286,7 @@ a.badge {
 }
 
 .slider-thumb:hover {
-	border-color: var(--surface-4);
+	border-color: var(--surface-3);
 }
 
 .slider-thumb:focus-visible {
