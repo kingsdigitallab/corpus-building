@@ -63,10 +63,4 @@
         flex-direction: column;
         gap: var(--size-1);
     }
-
-    .range-inputs label input {
-        background: transparent;
-        border: 1px solid var(--border-color);
-
-    }
 </style> 
