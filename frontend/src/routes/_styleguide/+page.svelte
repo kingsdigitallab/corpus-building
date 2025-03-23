@@ -81,6 +81,18 @@
 						</div>
 					</div>
 				</section>
+
+				<section class="component-section">
+					<h3>Inputs</h3>
+					<div class="component-grid">
+						<div>
+							<label>
+								<span>Label</span>
+								<input type="text" />
+							</label>
+						</div>
+					</div>
+				</section>
 			</section>
 		{/each}
 	</div>
