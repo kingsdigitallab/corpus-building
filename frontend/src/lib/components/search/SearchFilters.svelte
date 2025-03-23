@@ -267,7 +267,7 @@
 		background: none;
 		border: none;
 		box-shadow: none;
-		color: var(--surface-2);
+		color: var(--surface-3);
 		font-size: var(--font-size-4);
 		margin: 0;
 		padding: 0;
@@ -312,7 +312,7 @@
 		background: transparent;
 		border: none;
 		box-shadow: none;
-		color: var(--surface-2);
+		color: var(--surface-3);
 		font-size: var(--font-size-1);
 		font-weight: normal;
 		padding-inline: var(--size-4);
