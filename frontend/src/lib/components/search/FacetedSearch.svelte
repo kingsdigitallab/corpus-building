@@ -93,12 +93,18 @@
 
 	/**
 	 * @param {number | null | undefined} [page]
+	 * @param {string | null | undefined} [query]
 	 */
-	async function postSearchMessage(page) {
+	async function postSearchMessage(page, query) {
 		let currentPage = $searchPage;
+		let currentQuery = $searchQuery;
 
 		if (page) {
 			currentPage = page;
+		}
+
+		if (query !== undefined && query !== null) {
+			currentQuery = query;
 		}
 
 		if (searchStatus === 'ready') {
@@ -111,7 +117,7 @@
 				data: {
 					limit: $searchLimit,
 					page: currentPage,
-					query: $searchQuery,
+					query: currentQuery,
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
 					filters,
 					dateRange: [...selectedDateRange],
@@ -149,7 +155,8 @@
 	async function handleSearchInput(/** @type {Event} */ e) {
 		e.preventDefault();
 		$searchPage = 1;
-		postSearchMessage();
+		$searchQuery = e.target?.value ?? '';
+		postSearchMessage(1, e.target?.value ?? '');
 	}
 
 	async function handleSearch(/** @type {Event} */ e) {
@@ -270,7 +277,6 @@
 				id="q"
 				placeholder="Search inscriptions metadata"
 				oninput={handleSearchInput}
-				bind:value={$searchQuery}
 			/>
 			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
 			<Button.Root class="surface-1" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
