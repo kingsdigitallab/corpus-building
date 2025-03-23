@@ -11,9 +11,9 @@
 				{#if place}
 					{#if place.offset}<em>{place.offset}</em>{/if}
 					{#if place.ref}
-						<a href={place.ref}>{place._}</a>
+						<a class="strong" href={place.ref}>{place._}</a>
 					{:else}
-						{place._}
+						<span class="strong">{place._}</span>
 					{/if}
 					({place.type})
 				{/if}
@@ -29,10 +29,5 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
-	}
-
-	a {
-		color: var(--text-1) !important;
-		font-weight: bold;
 	}
 </style>
