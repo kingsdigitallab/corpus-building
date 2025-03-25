@@ -1,6 +1,17 @@
 <script>
+	import StyleBlock from './StyleBlock.svelte';
 	const themes = ['light', 'dark'];
 </script>
+
+<svelte:head>
+	{#each themes as theme}
+		<style>
+			[data-color-scheme='{theme}'] .show-class {
+				--class-names: attr(class);
+			}
+		</style>
+	{/each}
+</svelte:head>
 
 <article class="style-guide">
 	<h1>Style Guide</h1>
@@ -8,34 +19,49 @@
 	<div class="theme-columns">
 		{#each themes as theme}
 			<section class="theme-column surface-1" data-color-scheme={theme}>
-				<h2>{theme.charAt(0).toUpperCase() + theme.slice(1)} theme</h2>
+				<h2 class="brand">{theme.charAt(0).toUpperCase() + theme.slice(1)} theme</h2>
 
 				<section class="component-section">
 					<h3>Surfaces</h3>
 					<div class="component-grid">
-						<div class="surface-1">Surface 1</div>
-						<div class="surface-2">Surface 2</div>
-						<div class="surface-3">Surface 3</div>
-						<div class="surface-4">Surface 4</div>
+						<StyleBlock classes="surface-1">Surface 1</StyleBlock>
+						<StyleBlock classes="surface-2">Surface 2</StyleBlock>
+						<StyleBlock classes="surface-3">Surface 3</StyleBlock>
+						<StyleBlock classes="surface-4">Surface 4</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Text colours</h3>
 					<div class="component-grid">
-						<div class="text-1">Text 1</div>
-						<div class="text-2 surface-4">Text 2 on surface 4</div>
+						<StyleBlock classes="text-1">Text 1</StyleBlock>
+						<StyleBlock classes="text-2 surface-2">Text 2 on surface 2</StyleBlock>
+						<StyleBlock classes="text-2 surface-4">Text 2 on surface 4</StyleBlock>
+						<StyleBlock classes="text-3 surface-3">Text 3 on surface 3</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Typography</h3>
 					<div class="component-grid">
-						<div class="font-default">
-							--font-classical-humanist: Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
-						</div>
-						<div class="font-greek surface-2">
-							--font-family-greek: 'Source Sans Pro', var(--font-antique);
+						<StyleBlock classes="font-default">
+							Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+						</StyleBlock>
+						<StyleBlock classes="font-greek surface-2">
+							Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia,
+							serif;
+						</StyleBlock>
+						<div>
+							<h1>Heading 1</h1>
+							<h2>Heading 2</h2>
+							<h3>Heading 3</h3>
+							<h4>Heading 4</h4>
+							<h5>Heading 5</h5>
+							<h6>Heading 6</h6>
+							<p>Paragraph</p>
+							<strong>Strong</strong>
+							<br />
+							<em>Emphasis</em>
 						</div>
 					</div>
 				</section>
@@ -43,42 +69,42 @@
 				<section class="component-section">
 					<h3 id="links">Links</h3>
 					<div class="component-grid">
-						<div><a href="#links">Default link</a></div>
-						<div><a class="strong" href="#links">Strong link</a></div>
+						<StyleBlock><a href="#links">Default link</a></StyleBlock>
+						<StyleBlock><a class="strong" href="#links">Strong link</a></StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3 id="badges">Badges</h3>
 					<div class="component-grid">
-						<div class="badge">Default badge</div>
-						<div class="badge strong">Strong badge</div>
-						<a href="#badges" class="badge">Link badge</a>
-						<a href="#badges" class="badge strong">Strong link badge</a>
+						<StyleBlock classes="badge">Default badge</StyleBlock>
+						<StyleBlock classes="badge strong">Strong badge</StyleBlock>
+						<StyleBlock tag="a" classes="badge" href="#badges">Link badge</StyleBlock>
+						<StyleBlock tag="a" classes="badge strong" href="#badges">Strong link badge</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Buttons</h3>
 					<div class="component-grid">
-						<div><button class="surface-1">Surface 1</button></div>
-						<div><button class="surface-2">Surface 2</button></div>
-						<div><button class="surface-3">Surface 3</button></div>
-						<div><button class="surface-4">Surface 4</button></div>
+						<StyleBlock tag="button" classes="surface-1">Surface 1</StyleBlock>
+						<StyleBlock tag="button" classes="surface-2">Surface 2</StyleBlock>
+						<StyleBlock tag="button" classes="surface-3">Surface 3</StyleBlock>
+						<StyleBlock tag="button" classes="surface-4">Surface 4</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Slider</h3>
 					<div class="component-grid">
-						<div class="slider">
+						<StyleBlock classes="slider">
 							<div class="slider-root">
 								<div class="slider-track">
 									<div class="slider-range" style="width: 50%"></div>
 								</div>
 								<div class="slider-thumb" style="left: 50%"></div>
 							</div>
-						</div>
+						</StyleBlock>
 					</div>
 				</section>
 
@@ -139,5 +165,14 @@
 		.theme-columns {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	.show-class::after {
+		content: var(--class-names);
+		display: block;
+		font-family: var(--font-monospace-code);
+		font-size: var(--font-size-0);
+		margin-top: var(--size-2);
+		opacity: 0.7;
 	}
 </style>
