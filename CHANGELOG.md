@@ -1,5 +1,44 @@
 
 
+# [0.16.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.15.1...v0.16.0) (2025-03-25)
+
+
+### Bug Fixes
+
+* **config:** change initial error file format from object to array ([8621c91](https://github.com/kingsdigitallab/corpus-building/commit/8621c9134b03c9352349e68769a65ed15963bbbd))
+* **FacetedSearch:**  workaround query-params issue with svelte 5 ([72bbcd9](https://github.com/kingsdigitallab/corpus-building/commit/72bbcd9396a21780f7d425157f0c13869f0a908f))
+* **pagination:** add aria-labels to previous and next buttons for improved accessibility ([b1e3ca5](https://github.com/kingsdigitallab/corpus-building/commit/b1e3ca56af518553e567ac059e412e077a803475))
+* **search:** ensure consistent height for filter dropdown lists ([b8b7c9a](https://github.com/kingsdigitallab/corpus-building/commit/b8b7c9af0c1e7ecae3efd826ed72e23cedef15de))
+* **searchfilters:** update Slider component type and thumb rendering ([4a421cd](https://github.com/kingsdigitallab/corpus-building/commit/4a421cd15b8b3f4fb33563ea69f45f11a0de61a0))
+* **SearchFilters:** update text color variables for improved a11y ([170799f](https://github.com/kingsdigitallab/corpus-building/commit/170799f5ce7104e3887edeaaf62f629dda9721f6))
+* **themetoggle:** update attribute for color scheme from 'color-scheme' to 'data-color-scheme' ([949102f](https://github.com/kingsdigitallab/corpus-building/commit/949102fc0c288af3bcd759cedf22aa3896d31248))
+
+
+### Features
+
+* **app.css:** add default button and input styles ([4e6c9c0](https://github.com/kingsdigitallab/corpus-building/commit/4e6c9c0e5555af1eec44e060dc2050694c00a8eb))
+* **app.css:** expand color variables and styles for improved theming ([f20099a](https://github.com/kingsdigitallab/corpus-building/commit/f20099a307b66432b7470e91ced3026ec2908bc3))
+* **config:** add date and letter height search parameters ([4e75325](https://github.com/kingsdigitallab/corpus-building/commit/4e753251a35274be644d964756948f02f545fd42))
+* **inscription:** improve place display with badge-like list styling ([ada6b2e](https://github.com/kingsdigitallab/corpus-building/commit/ada6b2e075883054108d3c1b67900b5377c4e039))
+* **layout:** import colors-hsl from open-props for enhanced color management ([fab2c18](https://github.com/kingsdigitallab/corpus-building/commit/fab2c183ddb8642e8b26afa5c48d5ed27e236ed2))
+* **metadata:** extract letter heights from handNote dimensions ([714c624](https://github.com/kingsdigitallab/corpus-building/commit/714c624d416c45fd42390007bb356b271f7c54bc))
+* **pageheader:** add Style Guide link for debug mode ([57b9fd9](https://github.com/kingsdigitallab/corpus-building/commit/57b9fd93af5f8a9023651077ba85ed69a09c4628))
+* **RangeSlider:** add unit display to range slider title ([dd47ec9](https://github.com/kingsdigitallab/corpus-building/commit/dd47ec957d1c975f52defc4e5a188c7ccaaa33f3))
+* **search:** add condition field to search ([8cd6d3b](https://github.com/kingsdigitallab/corpus-building/commit/8cd6d3bfc055bbe3ec57d07d02908c0f3ffcf43a))
+* **search:** add letter height filtering to search functionality ([c86c5c5](https://github.com/kingsdigitallab/corpus-building/commit/c86c5c5aea767d9196f883a236899778742b49d3))
+* **search:** add letter height range filtering to search functionality ([e0500c7](https://github.com/kingsdigitallab/corpus-building/commit/e0500c77e49058ce17d430a489ab870588b24634))
+* **search:** add range slider filter for letter height ([25174bb](https://github.com/kingsdigitallab/corpus-building/commit/25174bbe0618518d9fecb58e84cfac4d796db794))
+* **search:** create reusable RangeSlider component for search filters ([28ef0f6](https://github.com/kingsdigitallab/corpus-building/commit/28ef0f6640d10a5c33dddf4a5a14eacaa946a41d))
+* **search:** display letter height filter in search summary ([573e1c7](https://github.com/kingsdigitallab/corpus-building/commit/573e1c7a89b9297229833fff9e74b4b1818a50a5))
+* **SearchFilters:** add unit display for letter height in range slider ([a8cf1ea](https://github.com/kingsdigitallab/corpus-building/commit/a8cf1ea2d9aa889b55f76ddd6f0b891e98b813cb))
+* **search:** pass total results count to SearchFilters component ([3b062f9](https://github.com/kingsdigitallab/corpus-building/commit/3b062f99e88ff99a02f132bbb19e28b557efbb7f))
+* **search:** preserve raw object type in search results ([3f6c663](https://github.com/kingsdigitallab/corpus-building/commit/3f6c663cf0cdaf786f7617ddf71eb3251f601413))
+* **styleguide:** add input component section to style guide ([2edae8f](https://github.com/kingsdigitallab/corpus-building/commit/2edae8f2fd6cb96b3d62c29de438f40aeab577a0))
+* **styleguide:** add select component to style guide ([91cb8c1](https://github.com/kingsdigitallab/corpus-building/commit/91cb8c1085ef822eabdf4406b2c196c3e71ccb7d))
+* **styleguide:** add style guide route ([31a3861](https://github.com/kingsdigitallab/corpus-building/commit/31a386127116007025d2471cc927032c7a494ae3))
+* **styleguide:** add StyleBlock integration ([9f180fe](https://github.com/kingsdigitallab/corpus-building/commit/9f180fe52dae389245ff077a8ec7c6a162dc7ceb))
+* **styleguide:** introduce StyleBlock component for flexible styling ([c8960f9](https://github.com/kingsdigitallab/corpus-building/commit/c8960f9e34f257b93d8db29850d9868e628ae9e1))
+
 ## [0.15.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.15.0...v0.15.1) (2025-02-24)
 
 
