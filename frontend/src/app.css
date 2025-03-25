@@ -9,9 +9,10 @@ html {
 	--brand-light: var(--brown-9);
 	--text-1-light: var(--sand-11);
 	--text-2-light: var(--sand-11);
+	--text-3-light: var(--sand-0);
 	--surface-1-light: var(--sand-0);
 	--surface-2-light: var(--brown-1);
-	--surface-3-light: var(--brown-5);
+	--surface-3-light: var(--brown-9);
 	--surface-4-light: var(--brown-0);
 	--surface-shadow-light: var(--sand-8);
 	--shadow-strength-light: 2%;
@@ -20,10 +21,11 @@ html {
 	--brand-dark: var(--choco-1);
 	--text-1-dark: var(--sand-0);
 	--text-2-dark: var(--gray-10);
+	--text-3-dark: var(--gray-10);
 	--surface-1-dark: var(--gray-10);
 	--surface-2-dark: var(--brown-2);
-	--surface-3-dark: var(--choco-1);
-	--surface-4-dark: var(--brown-2);
+	--surface-3-dark: var(--brown-2);
+	--surface-4-dark: var(--choco-1);
 	--surface-shadow-dark: var(--gray-12);
 	--shadow-strength-dark: 80%;
 }
@@ -35,6 +37,7 @@ html {
 	--brand: var(--brand-light);
 	--text-1: var(--text-1-light);
 	--text-2: var(--text-2-light);
+	--text-3: var(--text-3-light);
 	--surface-1: var(--surface-1-light);
 	--surface-2: var(--surface-2-light);
 	--surface-3: var(--surface-3-light);
@@ -50,6 +53,7 @@ html {
 		--brand: var(--brand-dark);
 		--text-1: var(--text-1-dark);
 		--text-2: var(--text-2-dark);
+		--text-3: var(--text-3-dark);
 		--surface-1: var(--surface-1-dark);
 		--surface-2: var(--surface-2-dark);
 		--surface-3: var(--surface-3-dark);
@@ -65,6 +69,7 @@ html {
 	--brand: var(--brand-light);
 	--text-1: var(--text-1-light);
 	--text-2: var(--text-2-light);
+	--text-3: var(--text-3-light);
 	--surface-1: var(--surface-1-light);
 	--surface-2: var(--surface-2-light);
 	--surface-3: var(--surface-3-light);
@@ -79,6 +84,7 @@ html {
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
+	--text-3: var(--text-3-dark);
 	--surface-1: var(--surface-1-dark);
 	--surface-2: var(--surface-2-dark);
 	--surface-3: var(--surface-3-dark);
@@ -87,9 +93,18 @@ html {
 	--shadow-strength: var(--shadow-strength-dark);
 }
 
+.brand {
+	color: var(--brand);
+}
+
 .surface-1 {
 	background-color: var(--surface-1);
 	color: var(--text-1);
+}
+
+.surface-1-inverted {
+	background-color: var(--text-1);
+	color: var(--surface-1);
 }
 
 .surface-2 {
@@ -99,7 +114,7 @@ html {
 
 .surface-3 {
 	background-color: var(--surface-3);
-	color: var(--text-2);
+	color: var(--text-3);
 }
 
 .surface-4 {
@@ -113,6 +128,10 @@ html {
 
 .text-2 {
 	color: var(--text-2);
+}
+
+.text-3 {
+	color: var(--text-3);
 }
 
 .font-default {
@@ -162,6 +181,7 @@ a {
 }
 
 button {
+	background: transparent;
 	border-color: var(--border-color);
 	border-radius: var(--radius-1);
 	border-width: var(--border-size-1);
@@ -174,7 +194,7 @@ button:disabled {
 }
 
 input,
-label input {
+select {
 	background: transparent;
 	border: 1px solid var(--border-color);
 }
