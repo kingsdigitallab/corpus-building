@@ -3,6 +3,7 @@
 
     let {
         title = 'Range slider',
+        unit = '',
         min = 0,
         max = 100,
         step = 1,
@@ -13,7 +14,7 @@
     } = $props();
 </script>
 
-<h3>{title}</h3>
+<h3>{title}{#if unit}&#160;<small>({unit})</small>{/if}</h3>
 <div class="slider">
     <Slider.Root
         class="slider-root"
