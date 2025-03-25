@@ -215,6 +215,7 @@
 					<section class="filters-group">
 						<RangeSlider
 							title="Letter height"
+							unit="mm"
 							min={0}
 							max={100}
 							step={1}
