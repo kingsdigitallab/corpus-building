@@ -24,8 +24,8 @@ html {
 	--text-3-dark: var(--gray-10);
 	--surface-1-dark: var(--gray-10);
 	--surface-2-dark: var(--brown-2);
-	--surface-3-dark: var(--brown-2);
-	--surface-4-dark: var(--choco-1);
+	--surface-3-dark: var(--choco-1);
+	--surface-4-dark: hsl(var(--brown-2-hsl) / 0.3);
 	--surface-shadow-dark: var(--gray-12);
 	--shadow-strength-dark: 80%;
 }
@@ -119,7 +119,7 @@ html {
 
 .surface-4 {
 	background-color: var(--surface-4);
-	color: var(--text-2);
+	color: var(--text-1);
 }
 
 .text-1 {
@@ -197,6 +197,11 @@ input,
 select {
 	background: transparent;
 	border: 1px solid var(--border-color);
+}
+
+details,
+summary {
+	background-color: unset;
 }
 
 /* Utility classes */
