@@ -164,6 +164,19 @@
 						</StyleBlock>
 					</div>
 				</section>
+
+				<section class="component-section">
+					<h3>Edition</h3>
+					<div class="component-grid">
+						<StyleBlock>
+							<div class="surface-4 font-greek">
+								<div>1 line 1</div>
+								<div>2 line 2</div>
+								<div>3 line 3</div>
+							</div>
+						</StyleBlock>
+					</div>
+				</section>
 			</section>
 		{/each}
 	</div>
