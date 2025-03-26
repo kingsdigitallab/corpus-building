@@ -1,17 +1,8 @@
 <script>
 	import StyleBlock from './StyleBlock.svelte';
+
 	const themes = ['light', 'dark'];
 </script>
-
-<svelte:head>
-	{#each themes as theme}
-		<style>
-			[data-color-scheme='{theme}'] .show-class {
-				--class-names: attr(class);
-			}
-		</style>
-	{/each}
-</svelte:head>
 
 <article class="style-guide">
 	<h1>Style Guide</h1>
@@ -24,45 +15,59 @@
 				<section class="component-section">
 					<h3>Surfaces</h3>
 					<div class="component-grid">
-						<StyleBlock classes="surface-1">Surface 1</StyleBlock>
-						<StyleBlock classes="surface-2">Surface 2</StyleBlock>
-						<StyleBlock classes="surface-3">Surface 3</StyleBlock>
-						<StyleBlock classes="surface-4">Surface 4</StyleBlock>
+						<StyleBlock>
+							<div class="surface-1">Surface 1</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div class="surface-2">Surface 2</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div class="surface-3">Surface 3</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div class="surface-4">Surface 4</div>
+						</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Text colours</h3>
 					<div class="component-grid">
-						<StyleBlock classes="text-1">Text 1</StyleBlock>
-						<StyleBlock classes="text-2 surface-2">Text 2 on surface 2</StyleBlock>
-						<StyleBlock classes="text-2 surface-4">Text 2 on surface 4</StyleBlock>
-						<StyleBlock classes="text-3 surface-3">Text 3 on surface 3</StyleBlock>
+						<StyleBlock><div class="text-1">Text 1</div></StyleBlock>
+						<StyleBlock><div class="text-2 surface-2">Text 2 on surface 2</div></StyleBlock>
+						<StyleBlock><div class="text-2 surface-4">Text 2 on surface 4</div></StyleBlock>
+						<StyleBlock><div class="text-3 surface-3">Text 3 on surface 3</div></StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Typography</h3>
 					<div class="component-grid">
-						<StyleBlock classes="font-default">
-							Optima, Candara, Noto Sans, source-sans-pro, sans-serif;
+						<StyleBlock>
+							<div class="font-default">
+								Optima, Candara, Noto Sans, source-sans-pro, sans-serif
+							</div>
 						</StyleBlock>
-						<StyleBlock classes="font-greek surface-2">
-							Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia,
-							serif;
+						<StyleBlock>
+							<div class="font-greek">
+								Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia,
+								serif
+							</div>
 						</StyleBlock>
-						<div>
-							<h1>Heading 1</h1>
-							<h2>Heading 2</h2>
-							<h3>Heading 3</h3>
-							<h4>Heading 4</h4>
-							<h5>Heading 5</h5>
-							<h6>Heading 6</h6>
-							<p>Paragraph</p>
-							<strong>Strong</strong>
-							<br />
-							<em>Emphasis</em>
-						</div>
+						<StyleBlock>
+							<div>
+								<h1>Heading 1</h1>
+								<h2>Heading 2</h2>
+								<h3>Heading 3</h3>
+								<h4>Heading 4</h4>
+								<h5>Heading 5</h5>
+								<h6>Heading 6</h6>
+								<p>Paragraph</p>
+								<strong>Strong</strong>
+								<br />
+								<em>Emphasis</em>
+							</div>
+						</StyleBlock>
 					</div>
 				</section>
 
@@ -77,27 +82,51 @@
 				<section class="component-section">
 					<h3 id="badges">Badges</h3>
 					<div class="component-grid">
-						<StyleBlock classes="badge">Default badge</StyleBlock>
-						<StyleBlock classes="badge strong">Strong badge</StyleBlock>
-						<StyleBlock tag="a" classes="badge" href="#badges">Link badge</StyleBlock>
-						<StyleBlock tag="a" classes="badge strong" href="#badges">Strong link badge</StyleBlock>
+						<StyleBlock>
+							<div class="badge">Default badge</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div class="badge strong">Strong badge</div>
+						</StyleBlock>
+						<StyleBlock>
+							<a class="badge" href="#badges">Link badge</a>
+						</StyleBlock>
+						<StyleBlock>
+							<a class="badge strong" href="#badges">Strong link badge</a>
+						</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Buttons</h3>
 					<div class="component-grid">
-						<StyleBlock tag="button" classes="surface-1">Surface 1</StyleBlock>
-						<StyleBlock tag="button" classes="surface-2">Surface 2</StyleBlock>
-						<StyleBlock tag="button" classes="surface-3">Surface 3</StyleBlock>
-						<StyleBlock tag="button" classes="surface-4">Surface 4</StyleBlock>
+						<StyleBlock>
+							<div>
+								<button class="surface-1">Surface 1</button>
+							</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div>
+								<button class="surface-2">Surface 2</button>
+							</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div>
+								<button class="surface-3">Surface 3</button>
+							</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div>
+								<button class="surface-4">Surface 4</button>
+							</div>
+						</StyleBlock>
 					</div>
 				</section>
 
 				<section class="component-section">
 					<h3>Slider</h3>
 					<div class="component-grid">
-						<StyleBlock classes="slider">
+						<StyleBlock>
 							<div class="slider-root">
 								<div class="slider-track">
 									<div class="slider-range" style="width: 50%"></div>
@@ -111,22 +140,26 @@
 				<section class="component-section">
 					<h3>Inputs</h3>
 					<div class="component-grid">
-						<div>
-							<label>
-								<span>Label</span>
-								<input type="text" />
-							</label>
-						</div>
-						<div>
-							<label>
-								<span>Label</span>
-								<select>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-								</select>
-							</label>
-						</div>
+						<StyleBlock>
+							<div>
+								<label>
+									<span>Label</span>
+									<input type="text" />
+								</label>
+							</div>
+						</StyleBlock>
+						<StyleBlock>
+							<div>
+								<label>
+									<span>Label</span>
+									<select>
+										<option value="1">Option 1</option>
+										<option value="2">Option 2</option>
+										<option value="3">Option 3</option>
+									</select>
+								</label>
+							</div>
+						</StyleBlock>
 					</div>
 				</section>
 			</section>
@@ -148,7 +181,7 @@
 	}
 
 	.component-section {
-		margin-block: var(--size-4);
+		border-bottom: 1px solid var(--border-color);
 	}
 
 	.component-grid {
