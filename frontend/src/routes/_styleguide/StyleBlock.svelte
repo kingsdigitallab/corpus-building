@@ -1,35 +1,47 @@
 <script>
-	const { tag = 'div', classes = '', children, ...rest } = $props();
+	const { children } = $props();
 
-	const displayClasses = $derived(
-		classes
-			.split(' ')
-			.filter((c) => c !== 'show-class')
-			.join(' ')
-	);
+	/**
+	 * @param {HTMLElement} node
+	 */
+	function escapeHtml(node) {
+		const content = node.innerHTML;
+		node.textContent = content.replaceAll('<!---->', '').replaceAll(/\s?s-\w+\b/g, '').replaceAll(' class=""', '');
+
+		return {
+			update() {
+				node.textContent = node.innerHTML;
+			}
+		};
+	}
 </script>
 
-<svelte:element
-    this={tag}
-    class="{classes} style-block"
-    data-classes={displayClasses}
-    {...rest}
->
-    {@render children?.()}
-</svelte:element>
+<div class="style-block">
+	<div class="style-block-content">
+		{@render children?.()}
+	</div>
+
+{#if children}
+	<details>
+		<summary>Code</summary>
+		<pre class="surface-4"><code use:escapeHtml>{@render children?.()}</code></pre>
+	</details>
+{/if}
+</div>
 
 <style>
-	.style-block {
+	:global(.style-block-content > *) {
 		padding: var(--size-3);
 		border-radius: var(--radius-1);
 	}
 
-	.style-block::after {
-		content: attr(data-classes);
-		display: block;
-		font-family: var(--font-monospace-code);
+    pre {
+        border-radius: var(--radius-1);
+        padding: var(--size-2);
+    }
+
+	code {
+		font-family: var(--font-monospace);
 		font-size: var(--font-size-0);
-		margin-top: var(--size-2);
-		opacity: 0.7;
 	}
 </style>
