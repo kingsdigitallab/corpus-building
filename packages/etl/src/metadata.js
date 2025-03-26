@@ -495,18 +495,7 @@ async function getZoteroData(itemKey) {
 }
 
 async function getXML(xmlString) {
-  const match = xmlString.match(
-    /<div[^>]*type="edition"[^>]*>([\s\S]*?)<\/div>/
-  );
-  if (!match) return "";
-
-  return match[0]
-    .replace(/\s*<div/, "<div")
-    .replace(/\s*<ab>/g, "\n  <ab>")
-    .replace(/\s*<lb/g, "\n    <lb")
-    .replace(/\s*<\/ab>/g, "\n  </ab>")
-    .replace(/\s*<\/div>/g, "\n</div>")
-    .replace(/\n\n/, "\n");
+  return xmlString;
 }
 
 function getKeywords(metadata) {
