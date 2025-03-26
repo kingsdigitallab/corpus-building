@@ -188,7 +188,7 @@
 					</Button.Root>
 				{/each}
 			</div>
-			<div class="edition-content">
+			<div class="surface-4 edition-content {editionDivs[activeEditionTab]?.type.toLowerCase()}">
 				{@html editionDivs[activeEditionTab]?.html || ''}
 			</div>
 		</section>
@@ -529,6 +529,17 @@
 
 	.edition-content :global(pre) {
 		white-space: pre-wrap;
+	}
+
+	.edition-content.epidoc {
+		padding-left: unset;
+		max-height: 75vh;
+		overflow-y: auto;
+	}
+
+	.edition-content.epidoc :global(pre) {
+		padding-block: var(--size-2);
+		padding-inline: var(--size-3);
 	}
 
 	.tabs {
