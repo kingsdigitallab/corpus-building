@@ -45,13 +45,15 @@
 					<div class="component-grid">
 						<StyleBlock>
 							<div class="font-default">
+								<h4>Default font</h4>
 								Optima, Candara, Noto Sans, source-sans-pro, sans-serif
 							</div>
 						</StyleBlock>
 						<StyleBlock>
 							<div class="font-greek">
-								Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia,
-								serif
+								<h4>Greek font/edition font</h4>
+								source-sans-pro, Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia
+								Pro, Georgia, serif
 							</div>
 						</StyleBlock>
 						<StyleBlock>
