@@ -54,7 +54,7 @@
 			preserveViewport: true
 		});
 
-		viewer.addHandler('page', function (/** @type {{ page: number; }} */ event) {
+		viewer.addHandler('page', (/** @type {{ page: number; }} */ event) => {
 			const image = images[event.page];
 			curImageTitle = `${image.surfaceType}, ${image.desc}`;
 		});
@@ -524,6 +524,7 @@
 
 	.edition-content {
 		overflow-x: scroll;
+		padding-left: var(--size-7);
 	}
 
 	.edition-content :global(pre) {
@@ -576,6 +577,10 @@
 
 	/* Epidoc styles */
 	:global(.linenumber) {
-		margin-right: var(--size-4);
+		display: inline-block;
+		margin-left: calc(-1 * var(--size-9));
+		margin-right: var(--size-3);
+		text-align: right;
+		width: var(--size-8);
 	}
 </style>
