@@ -427,7 +427,8 @@
 	}
 
 	#overview {
-		border: var(--border-size-1) solid var(--border-color);
+		border-left: var(--border-size-1) solid var(--border-color);
+		border-right: var(--border-size-1) solid var(--border-color);
 		height: 100%;
 		overflow-y: auto;
 		margin-top: 0;
