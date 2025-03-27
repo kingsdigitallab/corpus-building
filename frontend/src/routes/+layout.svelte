@@ -61,10 +61,6 @@
 			color 0.25s ease-in-out;
 	}
 
-	main {
-		padding-block: var(--size-4);
-	}
-
 	@media (max-width: 1279px) {
 		.layout {
 			padding-inline: var(--size-2);
