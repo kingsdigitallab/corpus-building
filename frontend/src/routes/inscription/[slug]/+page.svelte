@@ -524,8 +524,11 @@
 	}
 
 	.edition-content {
+		border-radius: var(--radius-2);
 		overflow-x: scroll;
-		padding-left: var(--size-7);
+		padding-block: var(--size-4);
+		padding-left: var(--size-8);
+		padding-right: var(--size-3);
 	}
 
 	.edition-content :global(pre) {
@@ -533,18 +536,18 @@
 	}
 
 	.edition-content.epidoc {
+		padding-block: unset;
 		padding-left: unset;
 		max-height: 75vh;
 		overflow-y: auto;
 	}
 
 	.edition-content.epidoc :global(pre) {
-		padding-block: var(--size-2);
+		padding-block: var(--size-4);
 		padding-inline: var(--size-3);
 	}
 
 	.tabs {
-		border-bottom: var(--border-size-1) solid var(--surface-4);
 		display: flex;
 		font-family: var(--font-family);
 		gap: var(--size-2);
