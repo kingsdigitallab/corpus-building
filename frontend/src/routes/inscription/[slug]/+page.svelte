@@ -520,7 +520,6 @@
 		grid-column: 2;
 		grid-row: 1;
 		margin-bottom: var(--size-4);
-		margin-top: 0;
 	}
 
 	.edition-content {
