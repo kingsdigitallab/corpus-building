@@ -563,7 +563,8 @@
 	}
 
 	#page-navigation {
-		margin-block: unset;
+		margin-top: var(--size-9);
+		margin-bottom: var(--size-0);
 	}
 
 	@media (max-width: 768px) {
