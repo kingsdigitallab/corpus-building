@@ -115,7 +115,7 @@
 	}
 
 	.dots li:not(:last-child)::after {
-		background-color: var(--border-color);
+		background-color: var(--surface-2);
 		content: '';
 		height: 100%;
 		left: 50%;
@@ -150,7 +150,7 @@
 	}
 
 	.dot {
-		background-color: var(--text-1);
+		background-color: var(--surface-2);
 		border-radius: 50%;
 		display: block;
 		height: var(--size-2);
