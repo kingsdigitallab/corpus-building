@@ -15,7 +15,11 @@ export async function load({ params }) {
 		const htmlFileContent = await fs.readFile(htmlFilePath, 'utf8');
 		const html = JSON.parse(htmlFileContent);
 
-		return { slug, metadata, images: metadata.graphics, html, xml: metadata.xml };
+		const xmlFilePath = `src/data/inscriptions/${slug}.xml`;
+		const xmlFileContent = await fs.readFile(xmlFilePath, 'utf8');
+		const xml = xmlFileContent;
+
+		return { slug, metadata, images: metadata.graphics, html, xml };
 	} catch (err) {
 		if (err instanceof Error) {
 			error(404, `Error loading ${params.slug}: ${err.message}`);
