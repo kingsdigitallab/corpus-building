@@ -5,6 +5,9 @@ html {
 	--font-family: var(--font-classical-humanist);
 	--font-family-greek: 'Source Sans Pro', var(--font-antique);
 
+	--border-color: var(--gray-5);
+	--radius: var(--size-px-1);
+
 	/* light */
 	--brand-light: var(--brown-9);
 	--text-1-light: var(--sand-11);
@@ -143,8 +146,6 @@ html {
 }
 
 html {
-	--border-color: var(--gray-5);
-
 	accent-color: var(--brand);
 	background-color: var(--surface-1);
 	block-size: 100%;
@@ -196,17 +197,34 @@ a {
 	color: var(--brand, var(--link));
 }
 
+a[role='button'] {
+	align-items: center;
+	border: var(--border-size-1) solid var(--border-color);
+	border-radius: var(--radius);
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	padding-block: var(--size-2);
+	padding-inline: var(--size-3);
+}
+
 button {
 	background: transparent;
 	border-color: var(--border-color);
-	border-radius: var(--radius-2);
+	border-radius: var(--radius);
 	border-width: var(--border-size-1);
 	box-shadow: none;
 	text-shadow: none;
+	text-transform: capitalize;
 }
 
 button:disabled {
 	opacity: 0.5;
+}
+
+button.active {
+	background-color: var(--surface-2);
+	color: var(--text-2);
 }
 
 input,
