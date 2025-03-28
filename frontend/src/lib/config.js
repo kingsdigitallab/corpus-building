@@ -15,6 +15,9 @@ export const search = {
 	maxLetterHeight: 100
 };
 
+export const xmlServerPath =
+	'https://raw.githubusercontent.com/ISicily/ISicily/refs/heads/master/inscriptions/';
+
 export const imageServer =
 	'https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=inscription_images/';
 export const imageThumbParams = 'full/400,/0/default.jpg';
