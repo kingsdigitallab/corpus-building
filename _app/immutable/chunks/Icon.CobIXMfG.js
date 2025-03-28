@@ -1,4 +1,4 @@
-import{a as v,n as A,d as P}from"./disclose-version.Dw-NIXzT.js";import"./legacy.BtdvxiIN.js";import{I as j,J as _,K as y,R as B,M as E,O as M,N as O,P as R,g as k,S as q}from"./runtime.DTRzDVFm.js";import{e as G,i as J}from"./snippet.BCbyx8Wz.js";import{s as K}from"./config.DJ1U7xco.js";import{e as U}from"./button.CEEF5KsV.js";import{a as p}from"./attributes.xqhhQL1Y.js";import{i as V}from"./lifecycle.D0GncDga.js";import{l as b,p as o}from"./props.BW7XOFvU.js";/**
+import{a as v,n as A,d as P}from"./disclose-version.Dw-NIXzT.js";import"./legacy.BtdvxiIN.js";import{I as j,J as _,K as y,R as B,M as E,O as M,N as O,P as R,g as k,S as q}from"./runtime.DTRzDVFm.js";import{e as G,i as J}from"./snippet.BCbyx8Wz.js";import{s as K}from"./config.BNGOUgIV.js";import{e as U}from"./button.B3T1HBMX.js";import{a as p}from"./attributes.DywAOfu8.js";import{i as V}from"./lifecycle.D0GncDga.js";import{l as b,p as o}from"./props.BW7XOFvU.js";/**
  * @license lucide-svelte v0.408.0 - ISC
  *
  * This source code is licensed under the ISC license.
