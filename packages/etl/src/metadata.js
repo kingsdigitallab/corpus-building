@@ -38,7 +38,6 @@ export async function extractMetadata(xmlString) {
     textLang: getTextLang(xml),
     bibliographyEdition: await getBibliography(xml, "edition"),
     bibliographyDiscussion: await getBibliography(xml, "discussion"),
-    xml: await getXML(xmlString),
   };
 
   metadata.facsimile = metadata.graphics[0];

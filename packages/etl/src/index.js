@@ -148,7 +148,6 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         delete result?.repository?.museum;
         delete result.bibliographyEdition;
         delete result.bibliographyDiscussion;
-        delete result.xml;
         results.push(result);
 
         console.log(`Processed ${filePath} successfully.`);
