@@ -131,20 +131,6 @@
 				</section>
 
 				<section class="component-section">
-					<h3>Slider</h3>
-					<div class="component-grid">
-						<StyleBlock>
-							<div class="slider-root">
-								<div class="slider-track">
-									<div class="slider-range" style="width: 50%"></div>
-								</div>
-								<div class="slider-thumb" style="left: 50%"></div>
-							</div>
-						</StyleBlock>
-					</div>
-				</section>
-
-				<section class="component-section">
 					<h3>Inputs</h3>
 					<div class="component-grid">
 						<StyleBlock>
@@ -171,6 +157,20 @@
 				</section>
 
 				<section class="component-section">
+					<h3>Slider</h3>
+					<div class="component-grid">
+						<StyleBlock>
+							<div class="slider-root">
+								<div class="slider-track">
+									<div class="slider-range" style="width: 50%"></div>
+								</div>
+								<div class="slider-thumb" style="left: 50%"></div>
+							</div>
+						</StyleBlock>
+					</div>
+				</section>
+
+				<section class="component-section">
 					<h3>Edition</h3>
 					<div class="component-grid">
 						<StyleBlock>
@@ -178,6 +178,19 @@
 								<div>1 line 1</div>
 								<div>2 line 2</div>
 								<div>3 line 3</div>
+							</div>
+						</StyleBlock>
+					</div>
+				</section>
+
+				<section class="component-section">
+					<h3>Tabs</h3>
+					<div class="component-grid">
+						<StyleBlock>
+							<div class="tabs">
+								<button>Tab 1</button>
+								<button>Tab 2</button>
+								<button>Tab 3</button>
 							</div>
 						</StyleBlock>
 					</div>
