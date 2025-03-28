@@ -6,7 +6,7 @@
 	import * as config from '$lib/config';
 	import { codeToHtml } from '$lib/shiki.bundle';
 	import { Button } from 'bits-ui';
-	import { LucideExternalLink } from 'lucide-svelte';
+	import { LucideExternalLink, LucideDownload } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 	import { goto } from '$app/navigation';
@@ -187,6 +187,16 @@
 						{div.type}
 					</Button.Root>
 				{/each}
+				<a
+					href={`${config.xmlServerPath}${slug}.xml`}
+					role="button"
+					aria-label="Download Epidoc XML for {slug}"
+					download
+					target="download_epidoc"
+					rel="noopener noreferrer"
+				>
+					<LucideDownload />
+				</a>
 			</div>
 			<div class="surface-4 edition-content {editionDivs[activeEditionTab]?.type.toLowerCase()}">
 				{@html editionDivs[activeEditionTab]?.html || ''}
@@ -551,15 +561,6 @@
 		font-family: var(--font-family);
 		gap: var(--size-2);
 		margin-block: var(--size-4);
-	}
-
-	.tabs :global(button) {
-		margin-block-end: var(--size-2);
-		text-transform: capitalize;
-	}
-
-	.tabs :global(.active) {
-		background-color: var(--surface-4);
 	}
 
 	#page-navigation {
