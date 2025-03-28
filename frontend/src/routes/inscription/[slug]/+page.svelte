@@ -4,12 +4,12 @@
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
 	import * as config from '$lib/config';
-	import { codeToHtml } from '$lib/shiki.bundle';
 	import { Button } from 'bits-ui';
-	import { LucideExternalLink, LucideDownload } from 'lucide-svelte';
+	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 	import { goto } from '$app/navigation';
+	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
 	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 
 	/**
@@ -22,10 +22,8 @@
 
 	let { slug, metadata, images, html, xml } = data;
 	let curImageTitle = $state(images[0]?.desc || '');
-	let highlightedXml = $state('');
 
 	const editions = html.divs.find((div) => div.id === 'editions');
-	let editionDivs = $state([]);
 
 	const apparatus = html.divs.find((div) => div.id === 'apparatus');
 	const translations = html.divs.filter((div) => div.id === 'translation');
@@ -40,8 +38,8 @@
 
 	let OpenSeaDragon;
 
-	let activeEditionTab = $state(0);
 	let activeTranslationTab = $state(0);
+
 	onMount(async () => {
 		OpenSeaDragon = (await import('openseadragon')).default;
 
@@ -59,46 +57,12 @@
 			curImageTitle = `${image.surfaceType}, ${image.desc}`;
 		});
 
-		highlightedXml = await codeToHtml(xml, {
-			lang: 'xml',
-			themes: {
-				light: 'rose-pine-dawn',
-				dark: 'rose-pine-moon'
-			}
-		});
-
-		if (editions) {
-			editionDivs = [
-				...parseEditionDivs(editions.html),
-				{ id: 'epidoc', type: 'Epidoc', html: highlightedXml }
-			];
-			activeEditionTab = 0;
-		}
-
 		if (translations) {
 			translationDivs = translations
 				.map((translation) => parseTranslation(translation))
 				.filter(Boolean);
 		}
 	});
-
-	/**
-	 * @param {string} htmlString
-	 */
-	function parseEditionDivs(htmlString) {
-		if (typeof window === 'undefined') {
-			return [];
-		}
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(htmlString, 'text/html');
-		const editionDivs = Array.from(doc.querySelectorAll('[id^="edition-"]'));
-
-		return editionDivs.map((div) => ({
-			id: div.id,
-			type: div.id.replace('edition-', ''),
-			html: div.outerHTML
-		}));
-	}
 
 	/**
 	 * @param {{ html: string; }} translation
@@ -176,42 +140,7 @@
 		</dl>
 	</section>
 	<section id="content">
-		<section id="edition">
-			<h2>Edition</h2>
-			{#if metadata.editionAuthor}
-				<div class="edition-author">
-					{#if metadata.editionAuthor.citation}
-						{@html metadata.editionAuthor.citation}
-						<a href={metadata.editionAuthor.ref}>Zotero</a>
-					{:else}
-						<a href={metadata.editionAuthor.ref}>{metadata.editionAuthor.name}</a>
-					{/if}
-				</div>
-			{/if}
-			<div class="tabs">
-				{#each editionDivs as div, index}
-					<Button.Root
-						class={activeEditionTab === index ? 'active' : ''}
-						onclick={() => (activeEditionTab = index)}
-					>
-						{div.type}
-					</Button.Root>
-				{/each}
-				<a
-					href={`${config.xmlServerPath}${slug}.xml`}
-					role="button"
-					aria-label="Download Epidoc XML for {slug}"
-					download
-					target="download_epidoc"
-					rel="noopener noreferrer"
-				>
-					<LucideDownload />
-				</a>
-			</div>
-			<div class="surface-4 edition-content {editionDivs[activeEditionTab]?.type.toLowerCase()}">
-				{@html editionDivs[activeEditionTab]?.html || ''}
-			</div>
-		</section>
+		<InscriptionEdition {slug} {metadata} {xml} {editions} />
 
 		<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
 
@@ -536,49 +465,6 @@
 		padding-bottom: var(--size-8);
 	}
 
-	#edition {
-		font-family: var(--font-family-greek);
-		font-weight: 500;
-		grid-column: 2;
-		grid-row: 1;
-		margin-bottom: var(--size-4);
-	}
-
-	.edition-author {
-		margin-bottom: var(--size-4);
-	}
-
-	.edition-content {
-		border-radius: var(--radius-2);
-		overflow-x: scroll;
-		padding-block: var(--size-4);
-		padding-left: var(--size-8);
-		padding-right: var(--size-3);
-	}
-
-	.edition-content :global(pre) {
-		white-space: pre-wrap;
-	}
-
-	.edition-content.epidoc {
-		padding-block: unset;
-		padding-left: unset;
-		max-height: 75vh;
-		overflow-y: auto;
-	}
-
-	.edition-content.epidoc :global(pre) {
-		padding-block: var(--size-4);
-		padding-inline: var(--size-3);
-	}
-
-	.tabs {
-		display: flex;
-		font-family: var(--font-family);
-		gap: var(--size-2);
-		margin-block: var(--size-4);
-	}
-
 	#page-navigation {
 		margin-top: var(--size-9);
 		margin-bottom: var(--size-0);
@@ -605,14 +491,5 @@
 		#overview dl {
 			column-count: 1;
 		}
-	}
-
-	/* Epidoc styles */
-	:global(.linenumber) {
-		display: inline-block;
-		margin-left: calc(-1 * var(--size-9));
-		margin-right: var(--size-3);
-		text-align: right;
-		width: var(--size-8);
 	}
 </style>
