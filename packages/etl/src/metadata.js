@@ -20,6 +20,7 @@ export async function extractMetadata(xmlString) {
     title: getTitle(xml),
     status: getStatus(xml),
     editions: getEditions(xml),
+    editionAuthor: await getEditionAuthor(xml),
     type: getType(xml),
     support: getSupport(xml),
     objectType: getObjectType(xml),
@@ -121,6 +122,33 @@ function getEditions(xml) {
     ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type)
   );
 }
+async function getEditionAuthor(xml) {
+  const edition = xml.TEI.text.body.div.find((div) => div.type === "edition");
+
+  if (!edition) return null;
+
+  const source = edition.source;
+
+  if (!source) return null;
+
+  if (source.includes("zotero")) {
+    const itemKey = source.split("/").at(-1);
+    const zoteroData = await getZoteroData(itemKey);
+    zoteroData.ref = source;
+    return zoteroData;
+  }
+
+  const respStmt = xml.TEI.teiHeader.fileDesc.titleStmt.respStmt;
+
+  if (!respStmt) return null;
+
+  const author = respStmt.find((rs) => rs.name["xml:id"] === source);
+
+  if (!author) return null;
+
+  return author;
+}
+
 function getType(xml) {
   return xml.TEI.teiHeader.profileDesc.textClass?.keywords?.term;
 }
