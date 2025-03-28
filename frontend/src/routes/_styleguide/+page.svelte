@@ -100,7 +100,7 @@
 				</section>
 
 				<section class="component-section">
-					<h3>Buttons</h3>
+					<h3 id="buttons">Buttons</h3>
 					<div class="component-grid">
 						<StyleBlock>
 							<div>
@@ -124,7 +124,7 @@
 						</StyleBlock>
 						<StyleBlock>
 							<div>
-								<a role="button">Link as button</a>
+								<a role="button" href="#buttons">Link as button</a>
 							</div>
 						</StyleBlock>
 					</div>
@@ -218,14 +218,5 @@
 		.theme-columns {
 			grid-template-columns: 1fr;
 		}
-	}
-
-	.show-class::after {
-		content: var(--class-names);
-		display: block;
-		font-family: var(--font-monospace-code);
-		font-size: var(--font-size-0);
-		margin-top: var(--size-2);
-		opacity: 0.7;
 	}
 </style>
