@@ -178,6 +178,16 @@
 	<section id="content">
 		<section id="edition">
 			<h2>Edition</h2>
+			{#if metadata.editionAuthor}
+				<div class="edition-author">
+					{#if metadata.editionAuthor.citation}
+						{@html metadata.editionAuthor.citation}
+						<a href={metadata.editionAuthor.ref}>Zotero</a>
+					{:else}
+						<a href={metadata.editionAuthor.ref}>{metadata.editionAuthor.name}</a>
+					{/if}
+				</div>
+			{/if}
 			<div class="tabs">
 				{#each editionDivs as div, index}
 					<Button.Root
@@ -320,13 +330,15 @@
 					<dt>Place</dt>
 					<dd>{metadata.settlement}, {metadata.country}</dd>
 					<dt>Repository</dt>
-					<dd>
-						<a href={metadata.repository.ref}>{metadata.repository._}</a>{#if metadata.idno},
-							{metadata.idno._}{/if}
-					</dd>
+					{#if metadata.repository}
+						<dd>
+							<a href={metadata.repository.ref}>{metadata.repository._}</a>{#if metadata.idno},
+								{metadata.idno._}{/if}
+						</dd>
+					{/if}
 					<dt>Autopsy</dt>
 					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
-					{#if metadata.repository.museum?.location.geo}
+					{#if metadata?.repository?.museum?.location?.geo}
 						<dt>Map</dt>
 						{@const lngLat = [
 							metadata.repository.museum.location.geo.lon,
@@ -529,6 +541,10 @@
 		font-weight: 500;
 		grid-column: 2;
 		grid-row: 1;
+		margin-bottom: var(--size-4);
+	}
+
+	.edition-author {
 		margin-bottom: var(--size-4);
 	}
 
