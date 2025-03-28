@@ -122,6 +122,11 @@
 								<button class="surface-4">Surface 4</button>
 							</div>
 						</StyleBlock>
+						<StyleBlock>
+							<div>
+								<a role="button">Link as button</a>
+							</div>
+						</StyleBlock>
 					</div>
 				</section>
 
