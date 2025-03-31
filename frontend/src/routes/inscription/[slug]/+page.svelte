@@ -196,12 +196,12 @@
 			<h3>Inscription</h3>
 			<dl>
 				<dt>Layout</dt>
-				<dd>{metadata.layoutDesc.layout.p || config.EMPTY_PLACEHOLDER}</dd>
+				<dd>{metadata?.layoutDesc?.layout?.p || config.EMPTY_PLACEHOLDER}</dd>
 				<dt>Text condition</dt>
-				{#if metadata.layoutDesc.layout.damage.ana}
+				{#if metadata?.layoutDesc?.layout?.damage?.ana}
 					<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
 				{:else}
-					<dd>{metadata.layoutDesc.layout.damage._ || config.EMPTY_PLACEHOLDER}</dd>
+					<dd>{metadata?.layoutDesc?.layout?.damage?._ || config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Lettering</dt>
 				<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
