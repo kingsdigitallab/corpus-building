@@ -121,7 +121,21 @@
 	}
 
 	/* Epidoc styles */
-	:global(.linenumber) {
+	:global(.textpartnumber) {
+		display: block;
+		font-weight: 600;
+		margin-left: calc(-1 * var(--size-6));
+	}
+
+	:global(.textpartnumber:not(:first-of-type)) {
+		margin-top: var(--size-4);
+	}
+
+	:global(.textpartnumber:not(:has(+ br))) {
+		margin-bottom: var(--size-4);
+	}
+
+	:global(.textpart .linenumber) {
 		display: inline-block;
 		margin-left: calc(-1 * var(--size-9));
 		margin-right: var(--size-3);
