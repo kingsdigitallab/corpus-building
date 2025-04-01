@@ -19,6 +19,12 @@
 		Object.values(selectedFilters).some((filter) => filter.length > 0)
 	);
 
+	const selectedFiltersEntries = $derived(
+		Object.entries(selectedFilters)
+			.filter(([_, value]) => value.length > 0)
+			.flatMap(([key, value]) => value.map((v) => [key, v]))
+	);
+
 	const sortAggregationsOptions = [
 		{ label: 'Name', value: 'key' },
 		{ label: 'Count', value: 'count' }
@@ -55,9 +61,10 @@
 
 	/**
 	 * @param {string} key
+	 * @param {string} value
 	 */
-	function handleRemoveFilter(key) {
-		selectedFilters[key] = [];
+	function handleRemoveFilter(key, value) {
+		selectedFilters[key] = selectedFilters[key].filter((v) => v !== value);
 		searchFiltersChange();
 	}
 
@@ -137,14 +144,14 @@
 				{/if}
 			</div>
 			<ul>
-				{#each Object.entries(selectedFilters).filter(([_, value]) => value.length > 0) as [key, value]}
-					{@const displayValue = value.join(', ').replaceAll('_', ' ').replaceAll(':::', ' ')}
+				{#each selectedFiltersEntries as [key, value]}
+					{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
 					<li>
 						<Button.Root
 							class="remove-filter-button"
 							aria-label="Remove {key} filter with value {displayValue}"
 							title="Remove {key} filter with value {displayValue}"
-							onclick={() => handleRemoveFilter(key)}
+							onclick={() => handleRemoveFilter(key, value)}
 						>
 							{displayValue}
 						</Button.Root>
