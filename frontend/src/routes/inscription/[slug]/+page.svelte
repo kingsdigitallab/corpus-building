@@ -29,6 +29,23 @@
 	const translations = html.divs.filter((div) => div.id === 'translation');
 	let translationDivs = $state([]);
 
+	const bibliographyEdition = $derived(
+		metadata.bibliographyEdition?.bibl
+			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
+			.sort(
+				(/** @type {{ date: number | null; }} */ a, /** @type {{ date: number | null; }} */ b) =>
+					(a.date || 0) - (b.date || 0)
+			)
+	);
+	const bibliographyDiscussion = $derived(
+		metadata.bibliographyDiscussion?.bibl
+			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
+			.sort(
+				(/** @type {{ date: number | null; }} */ a, /** @type {{ date: number | null; }} */ b) =>
+					(a.date || 0) - (b.date || 0)
+			)
+	);
+
 	const commentary = html.divs.find((div) => div.id === 'commentary');
 
 	let tileSources = images.map(
@@ -324,11 +341,25 @@
 						{/each}
 					</ul>
 				</dd>
-				{#if metadata.bibliographyEdition?.bibl?.length}
+				{#if bibliographyEdition.length}
 					<dt>Printed editions</dt>
 					<dd>
 						<ul class="bibliography-list">
-							{#each metadata.bibliographyEdition.bibl as entry}
+							{#each bibliographyEdition as entry}
+								{#if entry}
+									<li>
+										<BibliographyEntry {entry} />
+									</li>
+								{/if}
+							{/each}
+						</ul>
+					</dd>
+				{/if}
+				{#if bibliographyDiscussion.length}
+					<dt>Discussion</dt>
+					<dd>
+						<ul class="bibliography-list">
+							{#each bibliographyDiscussion as entry}
 								{#if entry}
 									<li>
 										<BibliographyEntry {entry} />
