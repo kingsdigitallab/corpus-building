@@ -8,7 +8,7 @@
     "etl": "node src/index.js",
     "museums": "node src/museums.js",
     "museums-json": "node src/museums-json.js",
-    "sef": "cd ../../xslt && npx xslt3 -xsl:epidoc/start-edition.xsl -export:start-edition.sef.json -t && cd -",
+    "sef": "npx xslt3 -xsl:../../xslt/epidoc/start-edition.xsl -export:../../xslt/epidoc/start-edition.sef.json -relocate:on -nogo -t",
     "test": "vitest"
   },
   "repository": {
