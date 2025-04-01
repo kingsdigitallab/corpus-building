@@ -228,6 +228,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 			{ ...agg, sort: sortAggregationsBy }
 		])
 	);
+	searchConfig.aggregations.language.conjunction = languageConjunction;
 
 	searchEngine = itemsjs(processedCorpus, searchConfig);
 }
