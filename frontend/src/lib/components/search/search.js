@@ -191,10 +191,14 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 			item.letterHeights && item.letterHeights.length > 0
 				? item.letterHeights.map((d) => ({ atLeast: d.atLeast ?? 0, atMost: d.atMost ?? 100 }))
 				: [{ atLeast: 0, atMost: 100 }];
+
+		let repositoryRole = item.repository?.role?.toLowerCase() ?? undefined;
+		repositoryRole = repositoryRole?.indexOf('private') !== -1 ? 'private' : repositoryRole;
+
 		const repository =
-			item.repository?.role?.toLowerCase().indexOf('private') !== -1 ||
+			repositoryRole?.indexOf('private') !== -1 ||
 			item.repository?._?.toLowerCase().indexOf('private') !== -1
-				? 'Private'
+				? 'private'
 				: (item.repository?._?.trim() ?? undefined);
 
 		return {
@@ -215,7 +219,10 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 			letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
 			condition: getHierarchicalValues(item.condition?.ana),
 			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
-			repository,
+			repository:
+				repositoryRole && repository !== repositoryRole
+					? [repositoryRole, `${repositoryRole}:::${repository}`]
+					: repository,
 			publicationAuthors: item.publicationAuthors,
 			publicationTitles: item.publicationTitles,
 			publicationYears: item.publicationYears
