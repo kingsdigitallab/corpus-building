@@ -24,51 +24,58 @@ export const searchConfig = {
 		},
 		language: {
 			title: 'Language',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		languageCert: {
 			title: 'Language certainty',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 10,
 			sort: 'key'
 		},
 		provenance: {
 			title: 'Provenance',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		inscriptionType: {
 			title: 'Inscription type',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		objectType: {
 			title: 'Object type',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		material: {
 			title: 'Material',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		technique: {
 			title: 'Technique',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		pigment: {
 			title: 'Pigment',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		letterHeightAtLeast: {
 			title: 'Letter height at least',
@@ -86,44 +93,51 @@ export const searchConfig = {
 		},
 		condition: {
 			title: 'Condition',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 100,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		damage: {
 			title: 'Damage',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 100,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		repository: {
 			title: 'Repository',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 200,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		publicationAuthors: {
 			title: 'Publication author',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 1000,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		publicationTitles: {
 			title: 'Publication title',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 1500,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		publicationYears: {
 			title: 'Publication year',
-			hide_zero_doc_count: false,
+			hide_zero_doc_count: true,
 			size: 1000,
-			sort: 'key'
+			sort: 'key',
+			conjunction: false
 		},
 		status: {
 			title: 'Status',
-			hide_zero_doc_count: false,
-			sort: 'key'
+			hide_zero_doc_count: true,
+			sort: 'key',
+			conjunction: false
 		}
 	},
 	searchableFields: ['keywords', 'title', 'text'],
@@ -163,7 +177,7 @@ export const searchConfig = {
 	}
 };
 
-export function load({ sortAggregationsBy = 'key' } = {}) {
+export function load({ sortAggregationsBy = 'key', languageConjunction = true } = {}) {
 	const processedCorpus = corpus.map((item) => {
 		const technique = Array.isArray(item.layoutDesc?.layout?.rs)
 			? item.layoutDesc.layout.rs[0]?.ana
