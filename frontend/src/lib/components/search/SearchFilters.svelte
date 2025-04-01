@@ -7,11 +7,13 @@
 		show = false,
 		aggregations = {},
 		total = 0,
+		languageConjunction = $bindable(true),
 		sortAggregationsBy = $bindable('key'),
 		selectedDateRange = $bindable([0, 0]),
 		selectedLetterHeightRange = $bindable([0, 0]),
 		selectedFilters = $bindable({}),
 		sortAggregationsByChange,
+		languageConjunctionChange,
 		searchFiltersChange
 	} = $props();
 
@@ -186,6 +188,18 @@
 								<small
 									>Options: {aggregations[key].buckets.filter((b) => b.doc_count > 0).length}
 								</small>
+								{#if key === 'language'}
+									<div class="conjunction-options">
+										<label>
+											<input
+												type="checkbox"
+												bind:checked={languageConjunction}
+												onchange={() => languageConjunctionChange()}
+											/>
+											Match all selected languages (AND)
+										</label>
+									</div>
+								{/if}
 								{#if aggregations[key].buckets.length > 20}
 									<input
 										type="text"
@@ -380,6 +394,10 @@
 
 	.filters-group details[open] summary::after {
 		transform: rotate(45deg);
+	}
+
+	.filters-group .conjunction-options {
+		margin-block: var(--size-2);
 	}
 
 	.filters-group .filter-input {

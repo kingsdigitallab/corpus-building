@@ -53,8 +53,9 @@
 
 	let showFilters = $state(false);
 
-	let searchOptions = $state({
+	const searchOptions = $state({
 		sortAggregationsBy: 'key',
+		languageConjunction: true,
 		sortResultsBy: 'file',
 		sortResultsOrder: 'asc'
 	});
@@ -183,7 +184,24 @@
 		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
 			searchWorker.postMessage({
 				type: 'load',
-				data: { sortAggregationsBy: searchOptions.sortAggregationsBy }
+				data: {
+					sortAggregationsBy: searchOptions.sortAggregationsBy,
+					languageConjunction: searchOptions.languageConjunction
+				}
+			});
+
+			postSearchMessage();
+		}
+	}
+
+	async function handleLanguageConjunctionToggle() {
+		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchWorker.postMessage({
+				type: 'load',
+				data: {
+					sortAggregationsBy: searchOptions.sortAggregationsBy,
+					languageConjunction: searchOptions.languageConjunction
+				}
 			});
 
 			postSearchMessage();
@@ -388,10 +406,12 @@
 	aggregations={searchAggregations}
 	{total}
 	bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
+	bind:languageConjunction={searchOptions.languageConjunction}
 	bind:selectedDateRange
 	bind:selectedLetterHeightRange
 	bind:selectedFilters
 	sortAggregationsByChange={handleSortAggregationsByChange}
+	languageConjunctionChange={handleLanguageConjunctionToggle}
 	searchFiltersChange={handleSearchFiltersChange}
 />
 
