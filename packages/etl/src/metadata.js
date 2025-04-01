@@ -509,6 +509,7 @@ async function getZoteroData(itemKey) {
     .then((json) => {
       const data = {
         title: json.data.title?.trim() || "",
+        date: json.data.date?.trim() || null,
         citation: json.citation.replace(".</span>", "</span>"),
       };
       zoteroDataMap.set(cacheKey, data);
