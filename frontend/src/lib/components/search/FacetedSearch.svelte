@@ -4,8 +4,10 @@
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
+	import { downloadInscriptionsCSV } from '$lib/utils/download';
 	import { Button } from 'bits-ui';
 	import {
+		DownloadIcon,
 		FilterIcon,
 		LayoutGridIcon,
 		LucideArrowDown,
@@ -259,6 +261,38 @@
 		postSearchMessage();
 	}
 
+	async function handleDownload() {
+		searchWorker.postMessage({
+			type: 'search',
+			data: {
+				limit: -1,
+				page: 1,
+				query: $searchQueryParam,
+				sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
+				filters: Object.fromEntries(
+					Object.entries(selectedFilters)
+						.filter(([_, values]) => values && values.length > 0)
+						.map(([key, values]) => [key, [...values]])
+				),
+				dateRange: [...selectedDateRange],
+				letterHeightRange: [...selectedLetterHeightRange]
+			}
+		});
+
+		const downloadHandler = (event) => {
+			const { type, data } = event.data;
+			if (type === 'results') {
+				downloadInscriptionsCSV(data.data.items);
+
+				searchWorker.removeEventListener('message', downloadHandler);
+
+				postSearchMessage();
+			}
+		};
+
+		searchWorker.addEventListener('message', downloadHandler);
+	}
+
 	async function handleSortResultsOrderToggle() {
 		searchOptions.sortResultsOrder = searchOptions.sortResultsOrder === 'asc' ? 'desc' : 'asc';
 
@@ -352,6 +386,9 @@
 						onclick={() => handleViewChange('table')}
 					>
 						<TableIcon />View table
+					</Button.Root>
+					<Button.Root class="surface-2" disabled={!hasActiveFilters()} onclick={handleDownload}>
+						<DownloadIcon />Download
 					</Button.Root>
 				</div>
 				<div class="sort-controls">
