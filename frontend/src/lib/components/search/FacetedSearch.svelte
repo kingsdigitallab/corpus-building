@@ -21,11 +21,12 @@
 	import { searchConfig } from './search';
 	import SearchWorker from './worker.js?worker';
 
-	const searchQuery = queryParam('q', ssp.string(''));
-	const searchPage = queryParam('page', ssp.number(1));
-	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
+	const searchQueryParam = queryParam('q', ssp.string(''));
+	const searchPageParam = queryParam('page', ssp.number(1));
+	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
 	/** @property {'cards' | 'map' | 'table'} */
-	const searchView = queryParam('view', ssp.string('cards'));
+	const searchViewParam = queryParam('view', ssp.string('cards'));
+	const searchFiltersParam = queryParam('filters', ssp.object({}));
 
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
@@ -41,7 +42,7 @@
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
 	let inscriptionsGeo = $derived(
-		$searchView === 'map'
+		$searchViewParam === 'map'
 			? inscriptions?.map((inscription) => ({
 					file: inscription.file,
 					title: inscription.title,
@@ -97,8 +98,8 @@
 	 * @param {string | null | undefined} [query]
 	 */
 	async function postSearchMessage(page, query) {
-		let currentPage = $searchPage;
-		let currentQuery = $searchQuery;
+		let currentPage = $searchPageParam;
+		let currentQuery = $searchQueryParam;
 
 		if (page) {
 			currentPage = page;
@@ -116,7 +117,7 @@
 			searchWorker.postMessage({
 				type: 'search',
 				data: {
-					limit: $searchLimit,
+					limit: $searchLimitParam,
 					page: currentPage,
 					query: currentQuery,
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
@@ -141,7 +142,7 @@
 			.filter((k) => k.indexOf('not') < 0)
 			.filter((k) => k.indexOf('letterHeight') < 0)
 			.reduce((acc, cur) => {
-				acc[cur] = [];
+				acc[cur] = $searchFiltersParam[cur] ? [...$searchFiltersParam[cur]] : [];
 				return acc;
 			}, {});
 	}
@@ -155,24 +156,24 @@
 
 	async function handleSearchInput(/** @type {Event} */ e) {
 		e.preventDefault();
-		$searchPage = 1;
-		$searchQuery = e.target?.value ?? '';
+		$searchPageParam = 1;
+		$searchQueryParam = e.target?.value ?? '';
 		postSearchMessage(1, e.target?.value ?? '');
 	}
 
 	async function handleSearch(/** @type {Event} */ e) {
 		e.preventDefault();
-		$searchPage = 1;
+		$searchPageParam = 1;
 		postSearchMessage();
 	}
 
 	async function handleReset(/** @type {Event} */ e) {
 		e.preventDefault();
 
-		$searchQuery = '';
-		$searchPage = 1;
-		$searchLimit = $searchView === 'map' ? config.search.maxLimit : config.search.limit;
-
+		$searchQueryParam = '';
+		$searchPageParam = 1;
+		$searchLimitParam = $searchViewParam === 'map' ? config.search.maxLimit : config.search.limit;
+		$searchFiltersParam = '';
 		selectedDateRange = [...initDateRange()];
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
@@ -209,7 +210,15 @@
 	}
 
 	async function handleSearchFiltersChange() {
-		$searchPage = 1;
+		$searchPageParam = 1;
+
+		const filters = Object.fromEntries(
+			Object.entries(selectedFilters)
+				.filter(([_, values]) => values && values.length > 0)
+				.map(([key, values]) => [key, [...values]])
+		);
+		$searchFiltersParam = filters;
+
 		postSearchMessage();
 	}
 
@@ -218,7 +227,7 @@
 		const initialLetterHeightRange = initLetterHeightRange();
 
 		return (
-			$searchQuery !== '' ||
+			$searchQueryParam !== '' ||
 			selectedDateRange.some((value, index) => value !== initialDateRange[index]) ||
 			selectedLetterHeightRange.some((value, index) => value !== initialLetterHeightRange[index]) ||
 			Object.keys(selectedFilters).some((key) => selectedFilters[key].length > 0)
@@ -230,8 +239,8 @@
 	 */
 	async function handleViewChange(newView) {
 		if (newView === 'map') {
-			$searchLimit = config.search.maxLimit;
-		} else if ($searchView === 'map') {
+			$searchLimitParam = config.search.maxLimit;
+		} else if ($searchViewParam === 'map') {
 			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
 			searchResults = {
 				...searchResults,
@@ -241,11 +250,11 @@
 				}
 			};
 
-			$searchLimit = config.search.limit;
-			$searchPage = 1;
+			$searchLimitParam = config.search.limit;
+			$searchPageParam = 1;
 		}
 
-		$searchView = newView;
+		$searchViewParam = newView;
 
 		postSearchMessage();
 	}
@@ -260,7 +269,7 @@
 	 * @param {number} page
 	 */
 	async function handlePageChange(page) {
-		$searchPage = page;
+		$searchPageParam = page;
 		postSearchMessage(page);
 	}
 
@@ -296,7 +305,8 @@
 				placeholder="Search inscriptions metadata"
 				oninput={handleSearchInput}
 			/>
-			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
+			<Button.Root class="surface-4" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
+			>
 			<Button.Root class="surface-1" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
 		</form>
 		<div class="filters-toggle">
@@ -320,25 +330,25 @@
 				letterHeightRange={selectedLetterHeightRange}
 				defaultLetterHeightRange={[config.search.minLetterHeight, config.search.maxLetterHeight]}
 				{numberOfLocations}
-				query={$searchQuery}
+				query={$searchQueryParam}
 				filters={selectedFilters}
 			/>
 			<section class="controls">
 				<div class="toggles">
 					<Button.Root
-						class={`${$searchView === 'cards' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchViewParam === 'cards' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('cards')}
 					>
 						<LayoutGridIcon />View cards
 					</Button.Root>
 					<Button.Root
-						class={`${$searchView === 'map' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchViewParam === 'map' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('map')}
 					>
 						<MapIcon />View map
 					</Button.Root>
 					<Button.Root
-						class={`${$searchView === 'table' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchViewParam === 'table' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('table')}
 					>
 						<TableIcon />View table
@@ -366,24 +376,24 @@
 					</Button.Root>
 				</div>
 			</section>
-			{#if $searchView === 'map'}
+			{#if $searchViewParam === 'map'}
 				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
 					<InscriptionMap inscriptions={inscriptionsGeo} />
 				</div>
 			{:else}
 				<InscriptionPagination
-					page={$searchPage}
+					page={$searchPageParam}
 					count={total}
-					perPage={$searchLimit}
+					perPage={$searchLimitParam}
 					onPageChange={handlePageChange}
 				/>
-				{#key $searchView}
+				{#key $searchViewParam}
 					<div
 						class="transition-container"
 						in:fade={{ duration: 500 }}
 						out:fade={{ duration: 250 }}
 					>
-						{#if $searchView === 'table'}
+						{#if $searchViewParam === 'table'}
 							<InscriptionTable {inscriptions} />
 						{:else}
 							<InscriptionList {inscriptions} />
@@ -391,9 +401,9 @@
 					</div>
 				{/key}
 				<InscriptionPagination
-					page={$searchPage}
+					page={$searchPageParam}
 					count={total}
-					perPage={$searchLimit}
+					perPage={$searchLimitParam}
 					onPageChange={handlePageChange}
 				/>
 			{/if}
