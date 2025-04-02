@@ -190,4 +190,19 @@
 		text-align: right;
 		width: var(--size-8);
 	}
+
+	:global(.miniapp) {
+		margin-block-start: var(--size-6);
+		position: relative;
+	}
+
+	:global(.miniapp::before) {
+		/* or '†' or '※' */
+		content: '¶';
+		left: calc(-1 * var(--size-9));
+		margin-right: var(--size-3);
+		position: absolute;
+		text-align: right;
+		width: var(--size-8);
+	}
 </style>
