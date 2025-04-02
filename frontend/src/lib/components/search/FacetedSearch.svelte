@@ -33,6 +33,7 @@
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
 	let isLoading = $derived(['idle', 'load'].includes(searchStatus));
+	let isDownloading = $state(false);
 
 	let searchWorker = $state();
 	let searchResults = $state({});
@@ -262,6 +263,8 @@
 	}
 
 	async function handleDownload() {
+		isDownloading = true;
+
 		searchWorker.postMessage({
 			type: 'search',
 			data: {
@@ -279,12 +282,15 @@
 			}
 		});
 
-		const downloadHandler = (event) => {
+		const downloadHandler = (
+			/** @type {{ data: { type: import('./worker.js').WorkerStatus; data: any; }}} */ event
+		) => {
 			const { type, data } = event.data;
 			if (type === 'results') {
 				downloadInscriptionsCSV(data.data.items);
 
 				searchWorker.removeEventListener('message', downloadHandler);
+				isDownloading = false;
 
 				postSearchMessage();
 			}
@@ -387,8 +393,13 @@
 					>
 						<TableIcon />View table
 					</Button.Root>
-					<Button.Root class="surface-2" disabled={!hasActiveFilters()} onclick={handleDownload}>
-						<DownloadIcon />Download
+					<Button.Root
+						class="surface-2"
+						aria-label="Download inscription data as a CSV file"
+						disabled={!hasActiveFilters() || isDownloading}
+						onclick={handleDownload}
+					>
+						<DownloadIcon />CSV
 					</Button.Root>
 				</div>
 				<div class="sort-controls">
@@ -413,7 +424,9 @@
 					</Button.Root>
 				</div>
 			</section>
-			{#if $searchViewParam === 'map'}
+			{#if isDownloading}
+				<h3 aria-busy="true">Downloading inscriptions...</h3>
+			{:else if $searchViewParam === 'map'}
 				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
 					<InscriptionMap inscriptions={inscriptionsGeo} />
 				</div>
