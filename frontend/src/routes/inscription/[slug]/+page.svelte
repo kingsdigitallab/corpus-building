@@ -129,7 +129,12 @@
 <article>
 	<section id="overview">
 		<div class="overview-header">
-			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
+			<hgroup>
+				<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
+				{#if metadata.status === 'deprecated'}
+					<p class="badge strong warning">This inscription is deprecated</p>
+				{/if}
+			</hgroup>
 		</div>
 		<figure id="facsimile-images">
 			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
