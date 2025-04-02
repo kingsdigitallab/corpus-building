@@ -178,56 +178,58 @@ export const searchConfig = {
 };
 
 export function load({ sortAggregationsBy = 'key', languageConjunction = true } = {}) {
-	const processedCorpus = corpus.map((item) => {
-		const technique = Array.isArray(item.layoutDesc?.layout?.rs)
-			? item.layoutDesc.layout.rs[0]?.ana
-			: item.layoutDesc?.layout?.rs?.ana;
-		const pigment = Array.isArray(item.layoutDesc?.layout?.rs)
-			? item.layoutDesc.layout.rs.find((rs) => rs?.ana?.includes('#execution.rubrication'))?.ana
-			: item.layoutDesc?.layout?.rs?.ana === '#execution.rubrication'
-				? '#execution.rubrication'
-				: undefined;
-		const letterHeights =
-			item.letterHeights && item.letterHeights.length > 0
-				? item.letterHeights.map((d) => ({ atLeast: d.atLeast ?? 0, atMost: d.atMost ?? 100 }))
-				: [{ atLeast: 0, atMost: 100 }];
+	const processedCorpus = corpus
+		.filter((item) => item.status !== 'deprecated')
+		.map((item) => {
+			const technique = Array.isArray(item.layoutDesc?.layout?.rs)
+				? item.layoutDesc.layout.rs[0]?.ana
+				: item.layoutDesc?.layout?.rs?.ana;
+			const pigment = Array.isArray(item.layoutDesc?.layout?.rs)
+				? item.layoutDesc.layout.rs.find((rs) => rs?.ana?.includes('#execution.rubrication'))?.ana
+				: item.layoutDesc?.layout?.rs?.ana === '#execution.rubrication'
+					? '#execution.rubrication'
+					: undefined;
+			const letterHeights =
+				item.letterHeights && item.letterHeights.length > 0
+					? item.letterHeights.map((d) => ({ atLeast: d.atLeast ?? 0, atMost: d.atMost ?? 100 }))
+					: [{ atLeast: 0, atMost: 100 }];
 
-		let repositoryRole = item.repository?.role?.toLowerCase() ?? undefined;
-		repositoryRole = repositoryRole?.indexOf('private') !== -1 ? 'private' : repositoryRole;
+			let repositoryRole = item.repository?.role?.toLowerCase() ?? undefined;
+			repositoryRole = repositoryRole?.indexOf('private') !== -1 ? 'private' : repositoryRole;
 
-		const repository =
-			repositoryRole?.indexOf('private') !== -1 ||
-			item.repository?._?.toLowerCase().indexOf('private') !== -1
-				? 'private'
-				: (item.repository?._?.trim() ?? undefined);
+			const repository =
+				repositoryRole?.indexOf('private') !== -1 ||
+				item.repository?._?.toLowerCase().indexOf('private') !== -1
+					? 'private'
+					: (item.repository?._?.trim() ?? undefined);
 
-		return {
-			...item,
-			// raw values, because the original are converted to facet values
-			rawObjectType: item.objectType,
-			// facet values
-			notAfter: item.date.notAfter ?? undefined,
-			notBefore: item.date.notBefore ?? undefined,
-			language: item.textLang?.languages ?? undefined,
-			languageCert: item.textLang?.cert ?? undefined,
-			inscriptionType: getHierarchicalValues(item.type?.ana),
-			objectType: getHierarchicalValues(item.objectType?.ana),
-			material: getHierarchicalValues(item.material?.ana),
-			technique: getHierarchicalValues(technique),
-			pigment: getHierarchicalValues(pigment),
-			letterHeightAtLeast: Math.min(...letterHeights.map((d) => d.atLeast)),
-			letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
-			condition: getHierarchicalValues(item.condition?.ana),
-			damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
-			repository:
-				repositoryRole && repository !== repositoryRole
-					? [repositoryRole, `${repositoryRole}:::${repository}`]
-					: repository,
-			publicationAuthors: item.publicationAuthors,
-			publicationTitles: item.publicationTitles,
-			publicationYears: item.publicationYears
-		};
-	});
+			return {
+				...item,
+				// raw values, because the original are converted to facet values
+				rawObjectType: item.objectType,
+				// facet values
+				notAfter: item.date.notAfter ?? undefined,
+				notBefore: item.date.notBefore ?? undefined,
+				language: item.textLang?.languages ?? undefined,
+				languageCert: item.textLang?.cert ?? undefined,
+				inscriptionType: getHierarchicalValues(item.type?.ana),
+				objectType: getHierarchicalValues(item.objectType?.ana),
+				material: getHierarchicalValues(item.material?.ana),
+				technique: getHierarchicalValues(technique),
+				pigment: getHierarchicalValues(pigment),
+				letterHeightAtLeast: Math.min(...letterHeights.map((d) => d.atLeast)),
+				letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
+				condition: getHierarchicalValues(item.condition?.ana),
+				damage: getHierarchicalValues(item.layoutDesc?.layout?.damage?.ana ?? undefined, false),
+				repository:
+					repositoryRole && repository !== repositoryRole
+						? [repositoryRole, `${repositoryRole}:::${repository}`]
+						: repository,
+				publicationAuthors: item.publicationAuthors,
+				publicationTitles: item.publicationTitles,
+				publicationYears: item.publicationYears
+			};
+		});
 
 	searchConfig.aggregations = Object.fromEntries(
 		Object.entries(searchConfig.aggregations).map(([key, agg]) => [
