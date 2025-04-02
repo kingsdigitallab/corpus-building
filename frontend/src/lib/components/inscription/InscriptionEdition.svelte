@@ -1,12 +1,46 @@
 <script>
 	import { Button } from 'bits-ui';
-	import { LucideDownload } from 'lucide-svelte';
+	import { LucideDownload, LucideX, LucidePlus } from 'lucide-svelte';
 	import * as config from '$lib/config';
 	import { codeToHtml } from '$lib/shiki.bundle';
 
 	const { slug, metadata, xml, editions } = $props();
 
-	const highlightedXml = $derived(highlightXml());
+	/**
+	 * @param {string} htmlString
+	 * @returns {Array<{id: string, type: string, html: string, isExpandable: boolean}>}
+	 */
+	function parseEditionDivs(htmlString) {
+		try {
+			if (!htmlString) return [];
+
+			const div = document.createElement('div');
+			div.innerHTML = htmlString;
+			const editionDivs = Array.from(div.querySelectorAll('[id^="edition-"]'));
+
+			return editionDivs.map((div) => ({
+				id: div.id,
+				type: div.id.replace('edition-', '').split('-').join(' '),
+				html: div.outerHTML,
+				isExpandable: (div.outerHTML.match(/<span/g) || []).length > 10
+			}));
+		} catch (e) {
+			console.error('Error parsing edition divs:', e);
+			return [];
+		}
+	}
+
+	/**
+	 * @type {Array<{id: string, type: string, html: Promise<string> | string, isExpandable: boolean}>}
+	 */
+	let editionDivs = $state([]);
+
+	$effect(() => {
+		editionDivs = [
+			...parseEditionDivs(editions.html),
+			{ id: 'epidoc', type: 'Epidoc', html: highlightXml(), isExpandable: true }
+		];
+	});
 
 	async function highlightXml() {
 		return await codeToHtml(xml, {
@@ -18,30 +52,8 @@
 		});
 	}
 
-	const editionDivs = $derived([
-		...parseEditionDivs(editions.html),
-		{ id: 'epidoc', type: 'Epidoc', html: highlightXml() }
-	]);
-
-	/**
-	 * @param {string} htmlString
-	 */
-	function parseEditionDivs(htmlString) {
-		if (typeof window === 'undefined') {
-			return [];
-		}
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(htmlString, 'text/html');
-		const editionDivs = Array.from(doc.querySelectorAll('[id^="edition-"]'));
-
-		return editionDivs.map((div) => ({
-			id: div.id,
-			type: div.id.replace('edition-', '').split('-').join(' '),
-			html: div.outerHTML
-		}));
-	}
-
 	let activeEditionTab = $state(0);
+	let isExpanded = $state(false);
 </script>
 
 <section id="edition">
@@ -56,31 +68,54 @@
 			{/if}
 		</div>
 	{/if}
-	<div class="tabs">
-		{#each editionDivs as div, index}
-			<Button.Root
-				class={activeEditionTab === index ? 'active' : ''}
-				onclick={() => (activeEditionTab = index)}
+	{#if editionDivs.length > 0}
+		{#await editionDivs[activeEditionTab]?.html}
+			<div aria-busy="true" aria-live="polite">Loading...</div>
+		{:then html}
+			<div class="tabs">
+				{#each editionDivs as div, index}
+					<Button.Root
+						class={activeEditionTab === index ? 'active' : ''}
+						onclick={() => (activeEditionTab = index)}
+					>
+						{div.type}
+					</Button.Root>
+				{/each}
+				<a
+					href={`${config.xmlServerPath}${slug}.xml`}
+					role="button"
+					aria-label="Download Epidoc XML for {slug}"
+					download
+					target="download_epidoc"
+					rel="noopener noreferrer"
+				>
+					<LucideDownload />
+				</a>
+			</div>
+			<div
+				class="surface-4 edition-content {editionDivs[activeEditionTab]?.type.toLowerCase()}"
+				class:expanded={isExpanded}
 			>
-				{div.type}
-			</Button.Root>
-		{/each}
-		<a
-			href={`${config.xmlServerPath}${slug}.xml`}
-			role="button"
-			aria-label="Download Epidoc XML for {slug}"
-			download
-			target="download_epidoc"
-			rel="noopener noreferrer"
-		>
-			<LucideDownload />
-		</a>
-	</div>
-	<div class="surface-4 edition-content {editionDivs[activeEditionTab]?.type.toLowerCase()}">
-		{#await editionDivs[activeEditionTab]?.html then html}
-			{@html html}
+				{@html html}
+			</div>
+			<div style="display: {editionDivs[activeEditionTab]?.isExpandable ? 'block' : 'none'}">
+				<Button.Root
+					class="edition-expand-button {isExpanded ? 'expanded' : ''}"
+					onclick={() => (isExpanded = !isExpanded)}
+				>
+					{#if isExpanded}
+						<LucideX />
+						Collapse and show less
+					{:else}
+						<LucidePlus />
+						Expand to view all content
+					{/if}
+				</Button.Root>
+			</div>
 		{/await}
-	</div>
+	{:else}
+		<div aria-busy="true" aria-live="polite">Loading...</div>
+	{/if}
 </section>
 
 <style>
@@ -98,10 +133,14 @@
 	.edition-content {
 		border-radius: var(--radius-2);
 		font-family: var(--font-family-greek);
+		max-height: 50vh;
 		overflow-x: scroll;
+		overflow-y: scroll;
 		padding-block: var(--size-4);
 		padding-left: var(--size-8);
 		padding-right: var(--size-3);
+		position: relative;
+		transition: max-height 0.3s ease-in-out;
 	}
 
 	.edition-content :global(pre) {
@@ -111,13 +150,22 @@
 	.edition-content.epidoc {
 		padding-block: unset;
 		padding-left: unset;
-		max-height: 75vh;
 		overflow-y: auto;
 	}
 
 	.edition-content.epidoc :global(pre) {
 		padding-block: var(--size-4);
 		padding-inline: var(--size-3);
+	}
+
+	.edition-content.expanded {
+		max-height: none;
+	}
+
+	:global(.edition-expand-button) {
+		background-color: var(--surface-4);
+		margin-block: var(--size-4);
+		text-transform: unset;
 	}
 
 	/* Epidoc styles */
