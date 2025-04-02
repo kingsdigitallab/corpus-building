@@ -19,6 +19,7 @@ html {
 	--surface-4-light: var(--brown-0);
 	--surface-shadow-light: var(--sand-8);
 	--shadow-strength-light: 2%;
+	--warning-light: var(--orange-4);
 
 	/* dark */
 	--brand-dark: var(--choco-1);
@@ -31,6 +32,7 @@ html {
 	--surface-4-dark: hsl(var(--brown-2-hsl) / 0.3);
 	--surface-shadow-dark: var(--gray-12);
 	--shadow-strength-dark: 80%;
+	--warning-dark: var(--orange-7);
 }
 
 :root {
@@ -47,6 +49,7 @@ html {
 	--surface-4: var(--surface-4-light);
 	--surface-shadow: var(--surface-shadow-light);
 	--shadow-strength: var(--shadow-strength-light);
+	--warning: var(--warning-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,6 +66,7 @@ html {
 		--surface-4: var(--surface-4-dark);
 		--surface-shadow: var(--surface-shadow-dark);
 		--shadow-strength: var(--shadow-strength-dark);
+		--warning: var(--warning-dark);
 	}
 }
 
@@ -79,6 +83,7 @@ html {
 	--surface-4: var(--surface-4-light);
 	--surface-shadow: var(--surface-shadow-light);
 	--shadow-strength: var(--shadow-strength-light);
+	--warning: var(--warning-light);
 }
 
 [data-color-scheme='dark'] {
@@ -94,6 +99,7 @@ html {
 	--surface-4: var(--surface-4-dark);
 	--surface-shadow: var(--surface-shadow-dark);
 	--shadow-strength: var(--shadow-strength-dark);
+	--warning: var(--warning-dark);
 }
 
 .brand {
@@ -266,6 +272,10 @@ a.badge {
 
 .strong {
 	font-weight: bold;
+}
+
+.warning {
+	background-color: var(--warning);
 }
 
 .tabs {
