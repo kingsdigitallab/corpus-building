@@ -147,7 +147,9 @@ async function getEditionAuthor(xml) {
 
   if (!respStmt) return null;
 
-  const author = respStmt.find((rs) => rs.name["xml:id"] === source);
+  const author = respStmt.find(
+    (rs) => rs.name["xml:id"] === source.split("#").at(-1)
+  );
 
   if (!author) return null;
 
