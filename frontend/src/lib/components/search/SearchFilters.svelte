@@ -84,7 +84,8 @@
 	 * @returns {string}
 	 */
 	function getBucketDisplayValue(bucket) {
-		if (bucket.indexOf(':::') == -1) return bucket;
+		if (bucket.indexOf(':::') === -1) return bucket;
+
 		const parts = bucket.split(':::');
 		const levels = parts.length;
 
