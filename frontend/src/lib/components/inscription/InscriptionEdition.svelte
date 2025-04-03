@@ -191,12 +191,16 @@
 		width: var(--size-8);
 	}
 
-	:global(.miniapp) {
+	:global(.miniapp:not(:empty)) {
 		margin-block-start: var(--size-6);
 		position: relative;
 	}
 
-	:global(.miniapp::before) {
+	:global(.miniapp:empty) {
+		display: none;
+	}
+
+	:global(.miniapp:not(:empty)::before) {
 		/* or '†' or '※' */
 		content: '¶';
 		left: calc(-1 * var(--size-9));
