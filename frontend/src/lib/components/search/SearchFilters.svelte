@@ -457,4 +457,14 @@
 		padding-inline-end: var(--size-2);
 		width: 100%;
 	}
+
+	.filters-group ul li label div span {
+		text-wrap: balance;
+		padding-inline-end: var(--size-1);
+	}
+
+	.filters-group ul li label div small {
+		overflow-wrap: balance;
+		white-space: nowrap;
+	}
 </style>
