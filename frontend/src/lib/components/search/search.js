@@ -6,7 +6,7 @@ import itemsjs from 'itemsjs';
  */
 let searchEngine;
 
-export const searchConfig = {
+const searchConfig = {
 	aggregations: {
 		notAfter: {
 			title: 'Not after',
@@ -140,7 +140,7 @@ export const searchConfig = {
 			conjunction: false
 		}
 	},
-	searchableFields: ['keywords', 'title', 'text'],
+	searchableFields: [],
 	sortings: {
 		file_asc: {
 			field: 'file',
@@ -176,6 +176,16 @@ export const searchConfig = {
 		}
 	}
 };
+
+searchConfig.searchableFields = [
+	'file',
+	'keywords',
+	'title',
+	'text',
+	...Object.keys(searchConfig.aggregations).map((key) => key)
+];
+
+export { searchConfig };
 
 export function load({ sortAggregationsBy = 'key', languageConjunction = true } = {}) {
 	const processedCorpus = corpus
