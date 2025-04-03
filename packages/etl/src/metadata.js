@@ -55,27 +55,32 @@ export async function extractMetadata(xmlString) {
     ? metadata.bibliographyEdition?.bibl
     : [metadata.bibliographyEdition?.bibl];
 
-  metadata.publicationAuthors = [
-    ...new Set(
-      bibliography
-        ?.flatMap((b) => b?.author)
-        .filter((a) => a)
-        .map((a) => (typeof a === "string" ? a.trim() : a))
-    ),
-  ];
+  metadata.publications = bibliography
+    .filter((b) => b)
+    .map((b) => {
+      const author = b.author;
+      const title = b.type === "corpus" ? b.n : b.title;
+      const year = b.date;
 
-  metadata.publicationTitles = [
-    ...new Set(
-      bibliography
-        ?.flatMap((b) => b?.title)
-        .filter((a) => a)
-        .map((a) => (typeof a === "string" ? a.trim() : a))
-    ),
-  ];
+      let publication = "";
 
-  metadata.publicationYears = [
-    ...new Set(bibliography?.map((b) => b?.date).filter((a) => a)),
-  ];
+      if (author) {
+        publication = author;
+        if (year) {
+          publication += `, ${year}`;
+        }
+        if (title) {
+          publication += `, ${title}`;
+        }
+      } else {
+        publication = title;
+        if (year) {
+          publication += `, ${year}`;
+        }
+      }
+
+      return publication;
+    });
 
   metadata.keywords = getKeywords(metadata);
 
