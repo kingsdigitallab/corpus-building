@@ -226,10 +226,10 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 				// raw values, because the original are converted to facet values
 				rawObjectType: item.objectType,
 				// facet values
-				notAfter: item.date.notAfter ?? undefined,
-				notBefore: item.date.notBefore ?? undefined,
-				language: item.textLang?.languages ?? undefined,
-				languageCert: item.textLang?.cert ?? undefined,
+				notAfter: item?.date?.notAfter ?? undefined,
+				notBefore: item?.date?.notBefore ?? undefined,
+				language: item?.textLang?.languages ?? undefined,
+				languageCert: item?.textLang?.cert ?? undefined,
 				inscriptionType: getHierarchicalValues(item.type?.ana),
 				objectType: getHierarchicalValues(item.objectType?.ana),
 				material: getHierarchicalValues(item.material?.ana),
@@ -263,7 +263,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 /**
  *
  * @param {string} value
- * @param {string | null} leaf
+ * @param {boolean} discardRoot
  * @returns {string[] | undefined}
  */
 function getHierarchicalValues(value, discardRoot = true) {
@@ -304,6 +304,7 @@ function getHierarchicalValues(value, discardRoot = true) {
  *   sort?: string;
  *   filters?: Record<string, any>;
  *   dateRange?: [number | undefined, number | undefined];
+ *   letterHeightRange?: [number | undefined, number | undefined];
  * }} SearchOptions
  *
  * @param {SearchOptions} options
@@ -324,7 +325,7 @@ export function search({
 		query,
 		sort,
 		filters,
-		filter: function (item) {
+		filter: (item) => {
 			const matchesDateRange =
 				(!dateRange[0] && !dateRange[1]) ||
 				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
