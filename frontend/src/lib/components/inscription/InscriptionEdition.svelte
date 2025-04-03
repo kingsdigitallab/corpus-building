@@ -201,8 +201,8 @@
 	}
 
 	:global(.miniapp:not(:empty)::before) {
-		/* or '†' or '※' */
-		content: '¶';
+		/* or '†' or '¶' */
+		content: '※';
 		left: calc(-1 * var(--size-9));
 		margin-right: var(--size-3);
 		position: absolute;
