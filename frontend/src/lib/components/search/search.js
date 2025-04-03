@@ -120,24 +120,10 @@ const searchConfig = {
 			sort: 'key',
 			conjunction: false
 		},
-		publicationAuthors: {
-			title: 'Publication author',
+		publications: {
+			title: 'Publication',
 			hide_zero_doc_count: true,
-			size: 1000,
-			sort: 'key',
-			conjunction: false
-		},
-		publicationTitles: {
-			title: 'Publication title',
-			hide_zero_doc_count: true,
-			size: 1500,
-			sort: 'key',
-			conjunction: false
-		},
-		publicationYears: {
-			title: 'Publication year',
-			hide_zero_doc_count: true,
-			size: 1000,
+			size: 2000,
 			sort: 'key',
 			conjunction: false
 		},
@@ -243,9 +229,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 					repositoryRole && repository !== repositoryRole
 						? [repositoryRole, `${repositoryRole}:::${repository}`]
 						: repository,
-				publicationAuthors: item.publicationAuthors,
-				publicationTitles: item.publicationTitles,
-				publicationYears: item.publicationYears
+				publications: item.publications
 			};
 		});
 
