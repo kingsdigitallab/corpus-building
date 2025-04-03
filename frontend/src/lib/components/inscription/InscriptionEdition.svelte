@@ -64,7 +64,7 @@
 				{@html metadata.editionAuthor.citation}
 				<a href={metadata.editionAuthor.ref}>Zotero</a>
 			{:else}
-				<a href={metadata.editionAuthor.ref}>{metadata.editionAuthor.name}</a>
+				<a href={metadata.editionAuthor.name.ref}>{metadata.editionAuthor.name._}</a>
 			{/if}
 		</div>
 	{/if}
