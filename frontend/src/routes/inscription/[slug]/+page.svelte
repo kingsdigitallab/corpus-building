@@ -146,10 +146,10 @@
 			<dt>Language</dt>
 			<dd>{metadata.textLang._}</dd>
 			<dt>Text type</dt>
-			<dd><a href={metadata.type.ref}>{metadata.type._}</a></dd>
+			<dd><a class="badge strong" href={metadata.type.ref}>{metadata.type._}</a></dd>
 			<dt>Object type</dt>
 			{#if metadata.objectType}
-				<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+				<dd><a class="badge strong" href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
 			{/if}
 			<dt>Status</dt>
 			<dd>{metadata.status}</dd>
