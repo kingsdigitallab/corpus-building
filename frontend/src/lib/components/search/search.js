@@ -6,6 +6,14 @@ import itemsjs from 'itemsjs';
  */
 let searchEngine;
 
+/**
+ * @typedef {Object} SearchConfig
+ * @property {Object} aggregations
+ * @property {string[]} searchableFields
+ * @property {Object} sortings
+ */
+
+/** @type {SearchConfig} */
 const searchConfig = {
 	aggregations: {
 		notAfter: {
@@ -182,7 +190,7 @@ searchConfig.searchableFields = [
 	'keywords',
 	'title',
 	'text',
-	...Object.keys(searchConfig.aggregations).map((key) => key)
+	...Object.keys(searchConfig.aggregations)
 ];
 
 export { searchConfig };
