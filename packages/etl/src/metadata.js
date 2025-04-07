@@ -119,7 +119,25 @@ function getTitle(xml) {
 }
 
 function getStatus(xml) {
-  return xml.TEI.teiHeader.revisionDesc.status;
+  const status = xml.TEI.teiHeader.revisionDesc.status;
+
+  if (status.toLowerCase() === "deprecated") {
+    const changeNote = getChangeNote(xml, status);
+    return {
+      _: status,
+      changeNote,
+    };
+  }
+
+  return { _: status };
+}
+
+function getChangeNote(xml, status) {
+  const changes = xml.TEI.teiHeader.revisionDesc.listChange.change;
+
+  if (!changes) return null;
+
+  return changes.find((change) => change["xml:id"] === status);
 }
 
 function getEditions(xml) {
