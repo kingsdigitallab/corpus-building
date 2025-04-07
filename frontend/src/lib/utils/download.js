@@ -1,6 +1,6 @@
 /**
  * Creates and downloads a CSV file from inscription data
- * @param {Array<{ file: string; title: string; notBefore: number; notAfter: number; places: Array<{ offset: string; _: string; type: string; }>; status: string; type: { _: string; }; objectType: { _: string; }; language: { _: string; }; settlement: { _: string; }; }>} inscriptions - Array of inscription objects
+ * @param {Array<{ file: string; title: string; notBefore: number; notAfter: number; places: Array<{ offset: string; _: string; type: string; }>; status: { _: string; }; type: { _: string; }; objectType: { _: string; }; language: { _: string; }; settlement: { _: string; }; }>} inscriptions - Array of inscription objects
  */
 export function downloadInscriptionsCSV(inscriptions) {
 	const headers =
@@ -14,7 +14,7 @@ export function downloadInscriptionsCSV(inscriptions) {
 				inscription.notBefore,
 				inscription.notAfter,
 				`"${getInscriptionPlace(inscription)}"`,
-				inscription.status,
+				inscription.status._,
 				`"${getInscriptionType(inscription)}"`,
 				`"${getInscriptionObjectType(inscription)}"`,
 				`"${getInscriptionLanguage(inscription)}"`,
