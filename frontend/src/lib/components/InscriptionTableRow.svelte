@@ -15,7 +15,7 @@
 	</td>
 	<td><InscriptionDate date={inscription.date} /></td>
 	<td><InscriptionPlace {inscription} /></td>
-	<td>{inscription.status}</td>
+	<td>{inscription.status._}</td>
 	<td>
 		{#if inscription.type?.ref}
 			<a class="badge" href={inscription.type.ref}>{inscription.type?._}</a>
