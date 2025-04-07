@@ -44,7 +44,7 @@
 	<div class="card-footer">
 		<dl>
 			<dt>Status</dt>
-			<dd>{inscription.status}</dd>
+			<dd>{inscription.status._}</dd>
 			<dt>Type</dt>
 			<dd class="badge strong">
 				{#if inscription.type?.ref}
