@@ -183,7 +183,7 @@ export { searchConfig };
 
 export function load({ sortAggregationsBy = 'key', languageConjunction = true } = {}) {
 	const processedCorpus = corpus
-		.filter((item) => item.status._ !== 'deprecated')
+		.filter((item) => item?.status?._ !== 'deprecated')
 		.map((item) => {
 			const technique = Array.isArray(item.layoutDesc?.layout?.rs)
 				? item.layoutDesc.layout.rs[0]?.ana
@@ -209,7 +209,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 
 			return {
 				...item,
-				status: item.status._ ?? undefined,
+				status: item?.status?._ ?? undefined,
 				// raw values, because the original are converted to facet values
 				rawObjectType: item.objectType,
 				// facet values
