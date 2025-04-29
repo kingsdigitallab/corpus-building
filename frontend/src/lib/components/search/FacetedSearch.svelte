@@ -99,10 +99,12 @@
 	/**
 	 * @param {number | null | undefined} [page]
 	 * @param {string | null | undefined} [query]
+	 * @param {number | null | undefined} [limit]
 	 */
-	async function postSearchMessage(page, query) {
+	async function postSearchMessage(page, query, limit) {
 		let currentPage = $searchPageParam;
 		let currentQuery = $searchQueryParam;
+		let currentLimit = $searchLimitParam;
 
 		if (page) {
 			currentPage = page;
@@ -110,6 +112,10 @@
 
 		if (query !== undefined && query !== null) {
 			currentQuery = query;
+		}
+
+		if (limit) {
+			currentLimit = limit;
 		}
 
 		if (searchStatus === 'ready') {
@@ -120,7 +126,7 @@
 			searchWorker.postMessage({
 				type: 'search',
 				data: {
-					limit: $searchLimitParam,
+					limit: currentLimit,
 					page: currentPage,
 					query: currentQuery,
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
@@ -241,8 +247,10 @@
 	 * @param {'cards' | 'map' | 'table'} newView
 	 */
 	async function handleViewChange(newView) {
+		let currentLimit = $searchLimitParam;
+
 		if (newView === 'map') {
-			$searchLimitParam = config.search.maxLimit;
+			currentLimit = config.search.maxLimit;
 		} else if ($searchViewParam === 'map') {
 			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
 			searchResults = {
@@ -253,13 +261,14 @@
 				}
 			};
 
-			$searchLimitParam = config.search.limit;
+			currentLimit = config.search.limit;
 			$searchPageParam = 1;
 		}
 
+		$searchLimitParam = currentLimit;
 		$searchViewParam = newView;
 
-		postSearchMessage();
+		postSearchMessage(1, $searchQueryParam, currentLimit);
 	}
 
 	async function handleDownload() {
