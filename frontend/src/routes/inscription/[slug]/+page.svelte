@@ -32,12 +32,14 @@
 
 	const bibliographyEdition = $derived(
 		metadata.bibliographyEdition?.bibl
+			.filter((b) => b)
 			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
 			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
 
 	const bibliographyDiscussion = $derived(
 		metadata.bibliographyDiscussion?.bibl
+			.filter((b) => b)
 			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
 			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
