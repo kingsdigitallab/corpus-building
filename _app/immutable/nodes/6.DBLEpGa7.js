@@ -1,0 +1,1 @@
+import"../chunks/disclose-version.S9e8yxtK.js";import"../chunks/legacy.BEquwpF-.js";import{l as r,s as t}from"../chunks/props.DwcSZ7-u.js";import{B as e}from"../chunks/BaseLayout.BHkWyCbl.js";function $(o,s){const p=r(s,["children","$$slots","$$events","$$legacy"]);e(o,t(()=>p))}export{$ as component};
