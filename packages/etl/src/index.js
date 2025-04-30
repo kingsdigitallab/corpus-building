@@ -15,21 +15,22 @@ const __dirname = path.dirname(__filename);
  *
  * @async
  * @function transformToHtml
- * @param {string} xmlString - The XML content to be transformed.
+ * @param {string} filePath - The path to the XML file to be transformed.
  * @returns {Promise<string>} A promise that resolves to the transformed HTML content.
  * @throws {Error} If there's an error during the transformation process.
  */
-async function transformToHtml(xmlString) {
+async function transformToHtml(filePath) {
   const xsltPath = path.resolve(
     __dirname,
     "../../../",
     "xslt",
+    "epidoc",
     "start-edition.sef.json"
   );
 
   const result = await SaxonJS.transform({
     stylesheetLocation: xsltPath,
-    sourceText: xmlString,
+    sourceFileName: filePath,
     destination: "serialized",
   });
 
@@ -104,7 +105,7 @@ async function processFile(filePath, outputPath, options = {}) {
   }
 
   if (shouldTransformToHtml) {
-    const html = await transformToHtml(xmlString);
+    const html = await transformToHtml(filePath, xmlString);
 
     await fs.mkdir(htmlOutputPath, { recursive: true });
     await fs.writeFile(htmlOutputFile, JSON.stringify(html, null, 2));
@@ -139,7 +140,6 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
 
         delete result.editions;
         delete result.support;
-        delete result.condition;
         delete result.dimensions;
         delete result.handNote;
         delete result.provenanceFound;
@@ -149,7 +149,6 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         delete result?.repository?.museum;
         delete result.bibliographyEdition;
         delete result.bibliographyDiscussion;
-        delete result.xml;
         results.push(result);
 
         console.log(`Processed ${filePath} successfully.`);

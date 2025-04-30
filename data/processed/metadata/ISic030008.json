@@ -2,7 +2,9 @@
   "file": "ISic030008",
   "uri": "ISic030008",
   "title": "ISic030008",
-  "status": "draft",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "696117",
@@ -27,6 +29,7 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": null,
   "type": {
     "_": "defixio",
     "ana": "#function.defixio",
@@ -143,9 +146,25 @@
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
-    "_": "Museo Archeologico Regionale Antonio Salinas",
+    "_": "Museo Archeologico Regionale Antonino Salinas",
     "role": "museum",
-    "ref": "http://sicily.classics.ox.ac.uk/isicily/museums/064"
+    "ref": "http://sicily.classics.ox.ac.uk/museum/064",
+    "museum": {
+      "type": "museum",
+      "name": "Museo Archeologico Regionale Antonino Salinas",
+      "uri": "http://sicily.classics.ox.ac.uk/museum/064",
+      "description": "Partially reopened following extensive restoration work. Comprehensive collection of archaeological material, predominantly from the West of the island, with an important Etruscan collection.",
+      "location": {
+        "settlement": "Palermo",
+        "region": "Palermo",
+        "country": "Italy",
+        "address": "Centre of Palermo, Piazza Olivella 24, 90100 - Palermo",
+        "geo": {
+          "lat": 38.120964,
+          "lon": 13.361024
+        }
+      }
+    }
   },
   "idno": {
     "_": "42564",
@@ -173,9 +192,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000638",
           "target": "https://biblio.inscriptiones.org/epig10000638"
-        },
-        "title": "Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte",
-        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Arcaiche Di Sicilia e Magna Grecia. Iscrizioni Di Sicilia. I. Megara e Selinunte</i>, 1st ed., vol. 1 (Milano: Istituto Editoriale Cisalpino - La Goliardica, 1989)</span>"
+        }
       },
       {
         "author": "Comparetti",
@@ -189,7 +206,7 @@
           "target": "https://biblio.inscriptiones.org/epig10002434"
         },
         "title": "Defissioni di Selinunte e di Cuma",
-        "citation": "<span>Domenico Comparetti, ‘Defissioni Di Selinunte e Di Cuma’, <i>Rendiconti Della Classe Di Scienze Morali, Storiche e Filologiche Dell’Accademia Dei Lincei</i>, 5, 27 (1918): 193–206</span>"
+        "citation": "<span>Domenico Comparetti, «Defissioni di Selinunte e di Cuma», <i>Rendiconti della Classe di Scienze morali, storiche e filologiche dell’Accademia dei Lincei</i>, 5, 27 (1918): 193–206</span>"
       },
       {
         "type": "corpus",
@@ -210,7 +227,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "citation": "<span>L. Dubois, <i>Inscriptions Grecques Dialectales de Sicile : Contribution à l’étude Du Vocabulaire Grec Colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
       },
       {
         "author": "López-Jimeno",
@@ -238,7 +255,7 @@
           "target": "https://biblio.inscriptiones.org/epig10001388"
         },
         "title": "Corpus delle defixiones di Selinunte: edizione e commento",
-        "citation": "<span>L. Bettarini, <i>Corpus Delle Defixiones Di Selinunte: Edizione e Commento</i>, Hellenica (Alessandria: Edizioni dell’Orso, 2005)</span>"
+        "citation": "<span>L. Bettarini, <i>Corpus delle defixiones di Selinunte: edizione e commento</i>, Hellenica (Alessandria: Edizioni dell’Orso, 2005)</span>"
       }
     ]
   },
@@ -275,7 +292,6 @@
       }
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"grc\" resp=\"#SN\">\n  <ab>\n                    <cb n=\"1\"/>\n    <lb n=\"1\"/><persName type=\"attested\"><name type=\"idionym\">Πολυκλε͂ς</name></persName>\n    <lb n=\"2\"/><persName type=\"attested\"><name type=\"idionym\">Ὀνε̄́ρο̄ν</name></persName>\n    <lb n=\"3\"/><expan><abbr><am><g ref=\"#diple\">&gt;</g></am></abbr><ex cert=\"low\">γράφο̄</ex></expan>\n                                <persName type=\"attested\"><name type=\"idionym\">Ἀδείμαντος</name></persName>\n    <lb n=\"4\"/><persName type=\"attested\"><name type=\"idionym\">Μύχα</name></persName>\n    <lb n=\"5\"/><persName type=\"attested\"><name type=\"idionym\">Μειχύλος</name></persName>\n                                \n                    <cb n=\"2\"/>\n    <lb n=\"6\"/><persName type=\"attested\"><name type=\"idionym\">Ἀρειάδας</name></persName>\n    <lb n=\"7\"/><persName type=\"attested\"><name type=\"idionym\">Ἐξάκεστος</name></persName>\n    <lb n=\"8\"/><space extent=\"unknown\" unit=\"character\"/>\n    <lb n=\"9\"/><space extent=\"unknown\" unit=\"character\"/>\n    <lb n=\"10\"/><persName type=\"attested\"><name type=\"idionym\">ℎιστίαρχος</name></persName>\n  </ab>\n</div>",
   "facsimile": {
     "n": "screen",
     "url": "ISic030008_tiled.tif",
@@ -285,30 +301,20 @@
     "surfaceType": "front"
   },
   "provenance": "Selinus",
-  "publicationAuthors": [
-    "Arena",
-    "Comparetti",
-    "Dubois",
-    "López-Jimeno",
-    "Bettarini"
-  ],
-  "publicationTitles": [
-    "Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte",
-    "Defissioni di Selinunte e di Cuma",
-    "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-    "Las tabellae defixionis de la Sicilia griega",
-    "Corpus delle defixiones di Selinunte: edizione e commento"
-  ],
-  "publicationYears": [
-    "1989",
-    "1918",
-    "1991",
-    "2005"
+  "letterHeights": [],
+  "publications": [
+    "Arena, 1989, IGASM1",
+    "Comparetti, 1918, Defissioni di Selinunte e di Cuma",
+    "Dubois, 1989, IGDS1",
+    "López-Jimeno, 1991, Las tabellae defixionis de la Sicilia griega",
+    "Bettarini, 2005, Corpus delle defixiones di Selinunte: edizione e commento"
   ],
   "keywords": [
     "isic030008",
     "isic030008",
-    "draft",
+    {
+      "_": "draft"
+    },
     "defixio",
     "lamina",
     "lead",
@@ -317,7 +323,7 @@
     "italy",
     "sicily",
     "palermo",
-    "museo archeologico regionale antonio salinas",
+    "museo archeologico regionale antonino salinas",
     "ancient greek",
     "grc"
   ]

@@ -2,7 +2,9 @@
   "file": "ISic001254",
   "uri": "ISic001254",
   "title": "I.Sicily inscription 001254",
-  "status": "unchecked",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "492860",
@@ -27,39 +29,54 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": null,
   "type": {
     "_": "accounts",
     "ana": "#function.account",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/410.html"
   },
-  "material": {
-    "_": "breccia",
-    "ana": "#material.stone.breccia",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
+  "support": "A large rectangular block, uneven behind, presumably forming part of a terracing wall. The upper right corner is lost, and the lower right corner has been broken from the left half, but is preserved.",
+  "objectType": {
+    "_": "block",
+    "ana": "#object.block",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/189.htm"
   },
-  "condition": "",
+  "material": {
+    "_": "limestone",
+    "ana": "#material.stone.limestone",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+  },
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "34.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "62.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "34",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The text is set out over two columns across the face of the block.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -81,10 +98,9 @@
     ]
   },
   "date": {
-    "_": "2nd — 1st century BCE",
+    "_": "second or earlier first century BCE",
     "notBefore": -200,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -46
   },
   "places": [
     {
@@ -105,8 +121,10 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in 1833 along with 3 other blocks; subsequently transported to Messina; now in the theatre antiquarium",
     "type": "found",
+    "subtype": "discovered",
+    "when": "1833",
     "geo": null
   },
   "provenanceObserved": {
@@ -121,9 +139,9 @@
     {
       "n": "screen",
       "url": "ISic001254_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "2304px",
+      "width": "3072px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo 2009-10-16.",
       "surfaceType": "front"
     }
   ],
@@ -162,6 +180,16 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Franz",
+        "date": "1838",
+        "citedRange": "71-72 no.3",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/T72WXM6R"
+        },
+        "title": "Iscrizioni taormitane",
+        "citation": "<span>Johann Franz, «Iscrizioni taormitane», <i>Annali dell’Instituto di corrispondenza archeologica</i> 10, fasc. 1 (1838): 65–79</span>"
+      },
+      {
         "type": "corpus",
         "n": "IG",
         "citedRange": {
@@ -173,11 +201,9 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
         "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "date": "1890",
         "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, Additis Graecis Galliae Hispaniae, Britanniae, Germaniae Inscriptionibus</i>, Inscriptiones Graecae Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>"
       },
       {
@@ -192,6 +218,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "date": "1923-",
         "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
       },
       {
@@ -206,6 +233,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "date": "1923-",
         "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
       },
       {
@@ -220,6 +248,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "date": "1923-",
         "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
       },
       {
@@ -234,6 +263,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "date": "1923-",
         "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
       },
       {
@@ -248,7 +278,7 @@
           "target": "https://biblio.inscriptiones.org/epig10001378"
         },
         "title": "Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes",
-        "citation": "<span>V. Arangio Ruiz e A. Olivieri, <i>Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes</i> (Milan, 1925)</span>"
+        "citation": "<span>V. Arangio Ruiz and A. Olivieri, <i>Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes</i> (Milan, 1925)</span>"
       },
       {
         "type": "corpus",
@@ -262,7 +292,8 @@
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
         "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung Der Griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "date": "1884-1915",
+        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
       },
       {
         "type": "corpus",
@@ -276,6 +307,7 @@
           "target": "https://biblio.inscriptiones.org/epig10001252"
         },
         "title": "Corpus Inscriptionum Graecarum",
+        "date": "1828-1887",
         "citation": "<span>A. Boeckh et al., <i>Corpus Inscriptionum Graecarum</i>, 4 vols (Berlin: Ex Officina Academica, 1828)</span>"
       },
       {
@@ -300,38 +332,37 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" subtype=\"PHI\" n=\"PHI140742\">\n  <ab>\n    <lb n=\"1\"/>\n                    <supplied reason=\"lost\">Ἀπελλαίου <roleName type=\"civic\" subtype=\"prytanis\">πρ(ύτανις)</roleName> Ἀ\n                    </supplied>\n                    μμ<supplied reason=\"lost\">ώ</supplied>νιος Ἀ<supplied reason=\"lost\">γ</supplied>άθωνος Σπ<unclear>\n                    α</unclear>ρ(—). ἱερομνα<supplied reason=\"lost\">μόνοις ἔσοδος — — — — λίτραι</supplied>,\n    <lb n=\"2\"/>\n                    πέντε τεσσαράκοντα ἑκατὸν τάλαντα· ἔξοδος ἕνδεκα <supplied reason=\"lost\">λίτ</supplied>ραι,\n                    <supplied reason=\"lost\">— — — — —</supplied>\n    <lb n=\"3\"/>κοντα τάλαντα· λοιπὸν δύο τεσσα<supplied reason=\"omitted\">ρά</supplied>κοντα λίτραι, ἑπτὰ\n                    ὀγδοήκοντα ὀκτακόσια\n    <lb n=\"4\"/>τρισχίλια μύρια τάλαντα. <roleName type=\"civic\" subtype=\"tamias\">ταμίαις</roleName> ἔσοδος τρεῖς τριάκοντα λίτραι, ἓξ\n                    τεσσαράκον-\n    <lb n=\"5\"/>\n                    <supplied reason=\"lost\">τ</supplied>α δισχίλια τάλαντα· ἔξοδος δύω πεντήκοντα λίτραι, τέσσαρα ἴκοσι\n                    ἑξακόσια χί-\n    <lb n=\"6\"/>\n                    <supplied reason=\"lost\">λι</supplied>α τάλαντα· λοιπὸν τέσσαρες τριάκοντα λίτραι, τέσσαρα ἐνενήκοντα\n                    ἑξακισχί-\n    <lb n=\"7\"/>λια τάλαντα. <roleName type=\"civic\" subtype=\"sitophylax\">σιτοφυλάκοις</roleName> κυάμων λοιπὸν τὸ ἴσον. σιτωνίῳ Φρύνιος λοιπὸν τὸ\n    <lb n=\"8\"/>ἴσον. σιτωνίῳ Εὐκλείδα λοιπὸν τὸ ἴσον. σιτωνίῳ παρὰ τῶν ἐπαγγειλαμένων λοιπὸν τὸ ἴσον.\n    <lb n=\"9\"/>Ἀπελλαίου δευτέρου\n                    <expan>\n                        <abbr>πρ</abbr>\n                        <ex>ύτανις?</ex>\n                    </expan>\n                    πάντες. <roleName type=\"civic.religious\" subtype=\"hieromnamon\">ἱερομναμόνοις</roleName> ἔσοδος ἑξήκοντα λίτραι, δύω\n    <lb n=\"10\"/>ἑξήκοντα τάλαντα· ἔξοδος ὀγδοήκοντα\n                    λίτραι, τέσσαρα πεντήκοντα διακό\n                    <supplied reason=\"lost\">σια</supplied>\n    <lb n=\"11\"/>τάλαντα· λοιπὸν δύω ἴκοσι λίτραι, πέντε ἐνενήκοντα ἑξακόσια τρισχίλια μύρια\n    <lb n=\"12\"/>\n                    τάλαντα. <roleName type=\"civic\" subtype=\"tamias\">ταμίαις</roleName> ἔσοδος τρεῖς ἴκοσι λίτραι, ἑπτὰ τεσσαράκοντα δισχίλια τάλαν<supplied reason=\"lost\">\n                    τα</supplied>·\n    <lb n=\"13\"/>\n                    <supplied reason=\"lost\">ἔ</supplied>ξοδος δύω τεσσαράκοντα λίτραι, ἴκοσι πεντακόσια χίλια τάλαντα·\n                    λοιπὸν πέ<unclear>ν</unclear>-\n    <lb n=\"14\"/>τε δέκα λίτραι, ἓν ἴκοσι ἑξακόσια ἑξακισχίλια τάλαντα.\n                    <roleName type=\"civic\" subtype=\"sitophylax\">σιτοφυλάκοις</roleName> κυάμων\n    <lb n=\"15\"/>λοιπὸν τὸ ἴσον. σιτωνίῳ Φρύνιος λοιπὸν τὸ ἴσον. σιτωνίῳ Εὐκλείδα\n                    λοιπὸν τὸ ἴσον.\n    <lb n=\"16\"/>σιτωνίῳ πα<supplied reason=\"lost\">ρὰ</supplied> τῶν ἐπαγγειλαμένων λοιπὸν\n                    τὸ ἴσον.\n    <lb n=\"17\"/>\n                    <supplied reason=\"lost\">Ἰ</supplied>τω<unclear>ν</unclear>ίου\n                    <roleName type=\"civic\" subtype=\"prytanis\"><expan>\n                        <abbr>πρ</abbr>\n                        <ex>ύτανις?</ex>\n                    </expan></roleName>\n                    <supplied reason=\"lost\">Νι</supplied>κίας Λυσία Παμ(—). <roleName  type=\"civic.religious\" subtype=\"hieromnamon\">ἱερομναμόνοις</roleName> ἔσοδος ἑκατὸν λίτραι, ἑκατὸν\n    <lb n=\"18\"/>τάλαντα· ἔξ<supplied reason=\"lost\">οδ</supplied>ος τέσσαρ<supplied reason=\"omitted\">\n                    ε</supplied>ς τεσσαράκοντα λίτραι, ἓξ ἑβδομήκοντα ἑξακόσια\n    <lb n=\"19\"/>τάλαντα· λοιπὸν ὀκτὼ δέκα\n                    λίτραι, ἴκοσι ἑκατὸν τρισχίλια μύρια τάλαντα.\n    <lb n=\"20\"/>ταμίαις ἔσοδος πέντε πεντήκοντα λίτραι,\n                    τριάκοντα τετρακόσια δισχί-\n    <lb n=\"21\"/>λια μύρια τάλαντα· ἔξοδος ἓξ ἑβδομήκοντα λίτραι, τέσσαρα\n                    ἐνενήκοντα\n    <lb n=\"22\"/>τετρακόσια τετρακισχίλια τάλαντα· λοιπὸν τέσσαρ<supplied reason=\"omitted\">\n                    ε</supplied>ς δέκα ἑκατὸν λίτραι,\n    <lb n=\"23\"/>ἑπτὰ πεντήκοντα πεντακόσια τετρακισχίλια μύρια τάλαντα.\n                    <roleName type=\"civic\" subtype=\"sitophylax\">σιτοφυλάκοις</roleName>\n    <lb n=\"24\"/>κυάμων λοιπὸν τὸ ἴσον. σιτωνίῳ Φρύνιος λοιπὸν τὸ ἴσον. σιτωνίῳ Εὐκλείδα\n    <lb n=\"25\"/>λοιπὸν τὸ ἴσον. σιτωνίῳ παρὰ τῶν ἐπαγγειλαμένων λοιπὸν τὸ ἴσον.\n    <lb n=\"26\"/>Καρνείου\n                    <roleName type=\"civic\" subtype=\"prytanis\"><expan>\n                        <abbr>πρ</abbr>\n                        <ex>ύτανις?</ex>\n                    </expan></roleName>\n                    Σωτέλης Σωτέλεος Παρ(—). <roleName type=\"civic.religious\" subtype=\"hieromnamon\">ἱερομναμόνοις</roleName> ἔσοδος ἑξήκοντα λίτραι,\n    <lb n=\"27\"/>δύω ἐνενήκοντα τάλαντα·\n                    ἔξοδος ὀγδοήκοντα <supplied reason=\"lost\">λί</supplied>τρ<supplied reason=\"lost\">αι</supplied>,\n                    τριάκοντα ἑπτακό-\n    <lb n=\"28\"/>σια ὀκτακισχίλια τάλαντα· λοιπὸν ὀκτὼ δέκα λ<supplied reason=\"lost\">\n                    ίτρ</supplied>αι,\n                    <unclear>ἓ</unclear>\n                    <supplied reason=\"lost\">ν</supplied>\n                    ὀ<unclear>γ</unclear>δοήκοντα τετρα-\n    <lb n=\"29\"/>κόσια τετρακισχίλια τάλαντα. <roleName type=\"civic\" subtype=\"tamias\">ταμίαις</roleName> ἔσοδος μία\n                    ἑκατὸν λίτραι, ἓξ δέκα\n    <lb n=\"30\"/>διακόσια ἑπτακισχίλια δισμύρια τάλαντα· ἔξοδος πέντε ἐνενήκοντα\n                    λίτραι,\n    <lb n=\"31\"/>ἓξ ἴκοσι ὀκτακισχίλια τρισμύρια τάλαντα· λοιπὸν ὀκτὼ τεσσαράκοντα ἑπτακό-\n    <lb n=\"32\"/>σια τρισχίλια τάλαντα. <roleName type=\"civic\" subtype=\"sitophylax\">σιτοφυλάκοις</roleName> κυάμων λοιπὸν τὸ ἴσον. σιτωνίῳ Φρύνιος\n    <lb n=\"33\"/>λο<supplied reason=\"lost\">ιπὸν\n                </supplied> τὸ ἴσον. σιτωνίῳ Εὐκλείδα λοιπὸν τὸ ἴσον. σιτω<supplied reason=\"lost\">νίῳ πα</supplied>ρὰ\n                    τῶν ἐπαγγει-\n    <lb n=\"34\"/>λα<supplied reason=\"lost\">μένων</supplied> λοιπὸν τὸ ἴσον.\n    <lb n=\"35\"/>\n                    <supplied reason=\"lost\">— — — — — — — — — — — — — — — — — — — — — — — — — <roleName type=\"civic\" subtype=\"sitophylax\">σιτοφυλάκοις</roleName></supplied>\n    <lb n=\"36\"/>κυάμ\n                    <supplied reason=\"lost\">ων — — — — — — — — — — — —. σιτωνίῳ — — — — — — — —· λοιπὸν</supplied>\n    <lb n=\"37\"/>τὸ ἴσον. σ<supplied reason=\"lost\">ιτωνίῳ — — — — — — — — — — — — — — — — —· λοιπὸν τὸ\n                    ἴσον</supplied>.\n    <lb n=\"38\"/>Λανότρου\n                    \n                    <supplied reason=\"lost\">πρ(ύτανις) — — — — —. <roleName type=\"civic\" subtype=\"hieromnamon\">ἱερομναμόνοις</roleName> ἔσοδος — — — — —\n                        — —\n                    </supplied>\n    <lb n=\"39\"/>ἑβδομ<supplied reason=\"lost\">ήκοντα — — — — — — — τάλαντα· ἔξοδος — — — — — — — — — —\n                    τά</supplied>-\n    <lb n=\"40\"/>λαντα· <supplied reason=\"lost\">λοιπὸν</supplied> ὀκτ\n                    <supplied reason=\"lost\">ὼ — — — — — — λίτραι, — — — — — — — — — — — — —</supplied>\n    <lb n=\"41\"/>τάλαντ\n                    <supplied reason=\"lost\">α.</supplied> <roleName type=\"civic\" subtype=\"tamias\"><supplied reason=\"lost\">ταμί</supplied>\n                    <unclear>α</unclear>ις</roleName> ἔσοδος ․․․․․\n                    <supplied reason=\"lost\">— — — — — — — — — — — — — — — — —</supplied>\n    <lb n=\"42\"/>πεντακ<supplied reason=\"lost\">ισχ</supplied>ίλια τά<supplied reason=\"lost\">λ</supplied>αντα·\n                    ἔξοδος #⁷#⁷\n                    <supplied reason=\"lost\">— — — — — — — — — — — — — — —</supplied>\n    <lb n=\"43\"/>κόσια ἑξακισχίλι<supplied reason=\"lost\">α</supplied> τάλα<supplied reason=\"lost\">\n                    ν</supplied>τα· λοιπὸν τρεῖς τε<supplied reason=\"lost\">σ</supplied>σ<supplied reason=\"lost\">αράκοντα\n                    λίτραι, — —κό</supplied>-\n    <lb n=\"44\"/>σια δισχίλια τάλ<supplied reason=\"lost\">αν</supplied>τα.\n                    <roleName type=\"civic\" subtype=\"sitophylax\">σιτοφυλάκοις</roleName> κυάμων ἔξο<supplied reason=\"lost\">δος τ</supplied>έσσαρα ἡμί\n                    <supplied reason=\"lost\">εκτα — —</supplied>\n    <lb n=\"45\"/>τετρακόσιοι μέδ<supplied reason=\"lost\">ι</supplied>μνοι· λοιπὸν ἡμέδιμνος ἐννέα ἑ\n                    <supplied reason=\"lost\">ξ</supplied>\n                    <unclear>ή</unclear>\n                    <supplied reason=\"lost\">κο</supplied>\n                    <unclear>ντ</unclear>α\n                    \n                    ἐ<supplied reason=\"lost\" cert=\"low\">ν</supplied>ακόσιοι μ<supplied reason=\"lost\">έδιμνοι. σιτωνίῳ\n                    Φρύ</supplied>-\n    <lb n=\"46\"/>νιος λοιπὸν τὸ ἴσον. σιτωνίῳ Εὐκλείδα λοιπὸ<supplied reason=\"lost\">ν\n                </supplied> τ<supplied reason=\"lost\">ὸ ἴ</supplied>σον. σιτωνίῳ π<supplied reason=\"lost\">αρ</supplied>ὰ <supplied reason=\"lost\">τῶν ἐπαγγειλα</supplied>-\n    <lb n=\"47\"/>μέν<supplied reason=\"omitted\">ω</supplied>ν\n                    λοιπὸν τὸ ἴσον.\n    <lb n=\"48\"/>Ἀπολλωνίου\n                    <roleName type=\"civic\" subtype=\"prytanis\"><expan>\n                        <abbr>πρ</abbr>\n                        <ex>ύτανις?</ex>\n                    </expan></roleName>\n                    Φιλιστίων Ἀγ<supplied reason=\"omitted\">έ</supplied>α Σπαρ(—). <roleName type=\"civic.religious\" subtype=\"hieromnamon\">ἱερομναμόνοι</roleName><supplied reason=\"lost\">\n                    ς\n                </supplied> ἔσοδος τρεῖς δ\n                    <supplied reason=\"lost\">έκα\n                        \n                        λίτραι, — —\n                    </supplied>\n    <lb n=\"49\"/>ἑ<supplied reason=\"lost\">βδομή</supplied>κοντα\n                    \n                    ἑκατὸν δισχίλια τάλαντα· ἔξοδος <unclear>ὀ</unclear>κτ\n                    <supplied reason=\"lost\">ὼ — — λίτραι, — —</supplied>\n    <lb n=\"50\"/>ήκοντα ἑπ<supplied reason=\"lost\">τ</supplied>ακόσια πεντακισχίλια τάλαντα· λ\n                    <supplied reason=\"lost\">οιπὸν — — — — — — — — —</supplied>\n    <lb n=\"51\"/>λίτραι, ἐνν<supplied reason=\"lost\">έ</supplied>α δέκα ἑπτακόσια Ν․\n                    <supplied reason=\"lost\">— — τάλαντα. ταμίαις ἔσοδος — — — —</supplied>\n    <lb n=\"52\"/>λίτραι, πεντήκοντα πεντακισχίλι\n                    <supplied reason=\"lost\">α τάλαντα· ἔξοδος — — — λίτραι, — — —</supplied>\n    <lb n=\"53\"/>τριακόσια ἑπ<supplied reason=\"lost\">τακισχί</supplied>λια τάλα<supplied reason=\"lost\">\n                    ντα· λοιπὸν — — — λίτραι, — — — — ἑβδο</supplied>-\n    <lb n=\"54\"/>μήκοντα Χ․<supplied reason=\"lost\">— —\n                    τά</supplied>λαντα. <roleName type=\"civic\" subtype=\"sitophylax\">σιτο\n                    <supplied reason=\"lost\">φυλάκοις</supplied></roleName> <supplied reason=\"lost\">κυάμων ἔξοδος — — — — — —</supplied>\n    <lb n=\"55\"/>πεντακόσ<supplied reason=\"lost\">ιοι μέδιμνοι· λ</supplied>οιπὸν\n                    <supplied reason=\"lost\">— — — — — — — — — — — — — — — — —</supplied>\n    <lb n=\"56\"/>#⁷\n                    <supplied reason=\"lost\">— — — — — — — — — — — — — — — — — — — — — — — — — — — — —</supplied>\n    <lb n=\"57\"/>\n  </ab>\n</div>",
   "facsimile": {
     "n": "screen",
     "url": "ISic001254_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "2304px",
+    "width": "3072px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo 2009-10-16.",
     "surfaceType": "front"
   },
   "provenance": "Tauromenium",
-  "publicationAuthors": [
-    "Arangio Ruiz and Olivieri",
-    "Manganaro"
-  ],
-  "publicationTitles": [
-    "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
-    "Supplementum epigraphicum graecum",
-    "Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes",
-    "Sammlung der griechischen Dialekt-Inschriften",
-    "Corpus Inscriptionum Graecarum",
-    "Le tavole finanziare di Tauromenion"
-  ],
-  "publicationYears": [
-    "1925",
-    "1988"
+  "letterHeights": [],
+  "publications": [
+    "Franz, 1838, Iscrizioni taormitane",
+    "IG, 1890",
+    "Supplementum epigraphicum graecum, 1923-",
+    "Supplementum epigraphicum graecum, 1923-",
+    "Supplementum epigraphicum graecum, 1923-",
+    "Supplementum epigraphicum graecum, 1923-",
+    "Arangio Ruiz and Olivieri, 1925, Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes",
+    "SGDI, 1884-1915",
+    "CIG, 1828-1887",
+    "Manganaro, 1988, Le tavole finanziare di Tauromenion"
   ],
   "keywords": [
     "isic001254",
     "i.sicily inscription 001254",
-    "unchecked",
+    {
+      "_": "draft"
+    },
     "accounts",
-    "breccia",
+    "block",
+    "limestone",
     "tauromenium",
     "taormina",
     "italy",

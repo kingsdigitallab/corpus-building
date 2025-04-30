@@ -15,7 +15,7 @@ const debug = process.env.DEBUG === 'true';
 
 const errorFilePath = 'src/lib/prerender-errors.json';
 if (!existsSync(errorFilePath)) {
-	writeFileSync(errorFilePath, '{}');
+	writeFileSync(errorFilePath, '[]');
 }
 
 /** @type {import('mdsvex').MdsvexOptions} */

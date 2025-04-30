@@ -1,8 +1,10 @@
 {
   "file": "ISic001373",
   "uri": "ISic001373",
-  "title": "I.Sicily inscription 001373",
-  "status": "unchecked",
+  "title": "Fragmentary funerary inscription",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "492986",
@@ -23,17 +25,31 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": {
+    "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+    "date": "1890",
+    "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, Additis Graecis Galliae Hispaniae, Britanniae, Germaniae Inscriptionibus</i>, Inscriptiones Graecae Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+    "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
+  },
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+  },
+  "support": "No description preserved, but it appears the left side of the inscription was preserved, broken on the right.",
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
   "material": {
     "_": "stone",
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
       "unit": "cm",
@@ -55,7 +71,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -77,9 +95,10 @@
     ]
   },
   "date": {
-    "_": "Enthade keitai (?)",
+    "_": "later Roman, seemingly with quadrate letters",
     "notBefore": 200,
-    "notAfter": 600
+    "notAfter": 600,
+    "evidence": "textual-context"
   },
   "places": [
     {
@@ -100,8 +119,10 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Recorded by Amico in the museum of Ignatius Paterno",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1741",
     "geo": null
   },
   "provenanceObserved": {
@@ -110,17 +131,13 @@
     "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001373_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "provenanceLost": {
+    "_": "Already lost in the time of Kaibel",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
+  },
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
@@ -136,6 +153,20 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Amico",
+        "date": "1741",
+        "citedRange": "276",
+        "ptr": {
+          "target": "http://zotero.org/groups/382445/items/F5INCW3T"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002186",
+          "target": "https://biblio.inscriptiones.org/epig10002186"
+        },
+        "title": "Catana Ilustrata",
+        "citation": "<span>V. and Statella Amico E., <i>Catana Ilustrata</i>, vol. 3 (Catanae, 1741)</span>"
+      },
+      {
         "type": "corpus",
         "n": "IG",
         "citedRange": {
@@ -147,11 +178,9 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
         "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "date": "1890",
         "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, Additis Graecis Galliae Hispaniae, Britanniae, Germaniae Inscriptionibus</i>, Inscriptiones Graecae Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>"
       },
       {
@@ -166,6 +195,7 @@
           "target": "https://biblio.inscriptiones.org/epig10001252"
         },
         "title": "Corpus Inscriptionum Graecarum",
+        "date": "1828-1887",
         "citation": "<span>A. Boeckh et al., <i>Corpus Inscriptionum Graecarum</i>, 4 vols (Berlin: Ex Officina Academica, 1828)</span>"
       },
       {
@@ -180,7 +210,8 @@
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
         "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung Der Griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "date": "1884-1915",
+        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
       }
     ]
   },
@@ -190,28 +221,22 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" subtype=\"PHI\" n=\"PHI140878\">\n  <ab>\n    <lb n=\"1\"/>\n\n                    ἐνθά\n                    <supplied reason=\"lost\">δε κεῖται — —</supplied>\n    <lb n=\"2\"/>ΞΕΝΑΠΟ\n                    <supplied reason=\"lost\">— — — — —</supplied>\n    <lb n=\"3\"/>ΚΟΙ\n                    <supplied reason=\"lost\">— — — — — — —</supplied>\n    <lb n=\"4\"/>καὶ εἴ τ\n                    <supplied reason=\"lost\">ις τολμήσει</supplied>\n    <lb n=\"5\"/>ἀνῦξ\n                    <supplied reason=\"lost\">αι — — — — —</supplied>\n    <lb n=\"6\"/>\n  </ab>\n</div>",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001373_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Catina",
-  "publicationAuthors": [],
-  "publicationTitles": [
-    "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
-    "Corpus Inscriptionum Graecarum",
-    "Sammlung der griechischen Dialekt-Inschriften"
+  "letterHeights": [],
+  "publications": [
+    "Amico, 1741, Catana Ilustrata",
+    "IG, 1890",
+    "CIG, 1828-1887",
+    "SGDI, 1884-1915"
   ],
-  "publicationYears": [],
   "keywords": [
     "isic001373",
-    "i.sicily inscription 001373",
-    "unchecked",
+    "fragmentary funerary inscription",
+    {
+      "_": "draft"
+    },
     "funerary",
+    "unknown",
     "stone",
     "catina",
     "catania",

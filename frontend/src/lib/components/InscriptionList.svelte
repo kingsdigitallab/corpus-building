@@ -17,16 +17,15 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: var(--size-4);
+		gap: var(--size-1);
 		justify-content: space-between;
 		list-style: none;
 		padding-inline-start: 0;
 
 		& li {
 			border-radius: var(--radius-2);
-			box-shadow: var(--shadow-2);
 			flex-basis: 95%;
-			padding: var(--size-fluid-3);
+			padding-inline-start: unset;
 
 			@media (--motionOK) {
 				animation: var(--animation-fade-in);
@@ -37,7 +36,7 @@
 			}
 
 			@media (min-width: 1024px) {
-				flex-basis: 30%;
+				flex-basis: 33%;
 			}
 		}
 

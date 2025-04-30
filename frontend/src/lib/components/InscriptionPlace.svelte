@@ -5,23 +5,29 @@
 </script>
 
 <div class="inscription-place">
-	{#each places as place}
-		{#if place}
-			<span
-				>{#if place.offset}<em>{place.offset}</em>{/if}
-				{#if place.ref}
-					<a href={place.ref}>{place._}</a>
-				{:else}
-					{place._}
+	<ul>
+		{#each places as place}
+			<li class="badge">
+				{#if place}
+					{#if place.offset}<em>{place.offset}</em>{/if}
+					{#if place.ref}
+						<a class="strong" href={place.ref}>{place._}</a>
+					{:else}
+						<span class="strong">{place._}</span>
+					{/if}
+					({place.type})
 				{/if}
-				({place.type})</span
-			>
-		{/if}
-	{/each}
+			</li>
+		{/each}
+	</ul>
 </div>
 
 <style>
-	span + span::before {
-		content: ', ';
+	ul {
+		display: inline-flex;
+		gap: var(--size-2);
+		list-style: none;
+		padding: 0;
+		margin: 0;
 	}
 </style>

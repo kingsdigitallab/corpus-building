@@ -38,7 +38,7 @@
         "git.autofetch": true,
         "svelte.enable-ts-plugin": true,
         "window.autoDetectColorScheme": true,
-        "workbench.activityBar.location": "hidden",
+        "workbench.activityBar.location": "default",
         "workbench.colorTheme": "Rosé Pine Moon",
         "workbench.editorAssociations": {
           "*.json": "default"
@@ -99,6 +99,7 @@
       }
     }
   },
+  "forwardPorts": [5173],
   "postCreateCommand": "npm install",
-  "postStartCommand": "npm run frontend:dev"
+  "postStartCommand": "npm run -w frontend dev -- --host 0.0.0.0"
 }

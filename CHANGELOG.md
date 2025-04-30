@@ -1,5 +1,104 @@
 
 
+# [0.17.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.16.0...v0.17.0) (2025-04-29)
+
+
+### Bug Fixes
+
+* **inscription:** add optional chaining to metadata access in inscription page ([af9ca6c](https://github.com/kingsdigitallab/corpus-building/commit/af9ca6cb62223b508bb63303150cc19b29c77020))
+* **inscription:** correct author reference in citation link ([32d6e29](https://github.com/kingsdigitallab/corpus-building/commit/32d6e29dd7ba3fb689ec0cbf070ae53836b2fb79))
+* **inscription:** filter out empty values in bibliography ([682c764](https://github.com/kingsdigitallab/corpus-building/commit/682c7643d3472b0da308bd8953727d5a748d5288))
+* **inscription:** handle optional chaining for status properties ([41a4277](https://github.com/kingsdigitallab/corpus-building/commit/41a427783cbb4f5789bc91774f8cf78181d334bc))
+* **inscription:** hide miniapp marker if section is empty ([d933c92](https://github.com/kingsdigitallab/corpus-building/commit/d933c92f2237a8a48bdce25dbfcbd624740c59ac))
+* **metadata:** update author extraction logic to handle fragment identifiers ([ffcb87b](https://github.com/kingsdigitallab/corpus-building/commit/ffcb87b9d848c53defb540c2c22f382706eddee1))
+* **search:** update bucket display value check for strict equality ([fa99caf](https://github.com/kingsdigitallab/corpus-building/commit/fa99cafc25d7d5d8b26c10fa3af4185acbb1adb5))
+* **styleguide:** add anchor link to Buttons section in style guide ([23aa36e](https://github.com/kingsdigitallab/corpus-building/commit/23aa36e0a103817c569cd4554357b6410c654f73))
+
+
+### Features
+
+* **app.css:** add style for link with role button ([89318d0](https://github.com/kingsdigitallab/corpus-building/commit/89318d0a67ec152d1c53d8d5ae56f72932e5e463))
+* **app.css:** add styles for tabs component ([c6da958](https://github.com/kingsdigitallab/corpus-building/commit/c6da95873d3509e5491261ce308caa77e969e8ae))
+* **app.css:** add warning color variables and styles for alerts ([6d1fb03](https://github.com/kingsdigitallab/corpus-building/commit/6d1fb031047877816bbbdc04a679f5b5d9af8459))
+* **app.css:** define heading sizes for improved typography ([21c84d7](https://github.com/kingsdigitallab/corpus-building/commit/21c84d7195b6bc7eba3471d0d0d6e94b27ef1f74))
+* **app.css:** style pre and code using --font-monospace-code ([573f282](https://github.com/kingsdigitallab/corpus-building/commit/573f282ced02dc6cc82ac8ae50d90d06632e8572))
+* **bibliography:** add derived state for bibliography edition and discussion ([b5ffa56](https://github.com/kingsdigitallab/corpus-building/commit/b5ffa567e637e65aec04b502ad220112e50328aa))
+* **download:** add function to create and download CSV from inscription data ([4d77d92](https://github.com/kingsdigitallab/corpus-building/commit/4d77d92b55a90e185179327ed2ad2e40c317db78))
+* **download:** enhance CSV download functionality for inscriptions ([025a317](https://github.com/kingsdigitallab/corpus-building/commit/025a317ebfae47fd31a54b68326d11535b633746))
+* **download:** implement CSV download functionality for search results ([9d47164](https://github.com/kingsdigitallab/corpus-building/commit/9d471641a7e50e3dc97e690cecf65cf0ac988b9f))
+* **frontend:** add xmlServerPath to config for direct access to GitHub XML files ([60eabdd](https://github.com/kingsdigitallab/corpus-building/commit/60eabddd5806f28d8ed275eaa1245c3aef8d67ec))
+* **inscription:** add badge styling to text and object types ([c38d442](https://github.com/kingsdigitallab/corpus-building/commit/c38d4423e2b7a3c1b45bfcdba7e37653dead70bc))
+* **inscription:** add deprecation warning for deprecated inscriptions ([eef4a8a](https://github.com/kingsdigitallab/corpus-building/commit/eef4a8ac0cf2d6783660b51a82e1692c49c644c8))
+* **inscription:** add expand/collapse functionality for long inscriptions ([fdc4fda](https://github.com/kingsdigitallab/corpus-building/commit/fdc4fdabd12c28b5ec184c07df18775c76f9f995))
+* **inscription:** add InscriptionEdition component for displaying and downloading editions ([0a686a7](https://github.com/kingsdigitallab/corpus-building/commit/0a686a7ea6c054abcd10584fc8fc6066a8a52f73))
+* **inscription:** add link to download epidoc xml directly from github ([a8d24f7](https://github.com/kingsdigitallab/corpus-building/commit/a8d24f75eb29d87c2ee044b530d5be14c693d00b))
+* **inscription:** add styling for miniapp section ([c05fe86](https://github.com/kingsdigitallab/corpus-building/commit/c05fe8607b617c822695229518f7782bf098d898))
+* **inscription:** add XML file loading to inscription page ([0de71ef](https://github.com/kingsdigitallab/corpus-building/commit/0de71ef303212a8299fe760756a6ec861c53eb96))
+* **inscription:** display edition author information and improve repository metadata handling ([fff5093](https://github.com/kingsdigitallab/corpus-building/commit/fff509392d7e5313f34b79b757d98b5c7d5f2d02))
+* **inscriptionedition:** add styles for text part numbers ([ed6c676](https://github.com/kingsdigitallab/corpus-building/commit/ed6c676f660c1cd615cedee4c6e661205425c30a))
+* **inscriptionoverview:** create InscriptionOverview component ([fe1679c](https://github.com/kingsdigitallab/corpus-building/commit/fe1679ced27ecb435fddedf16a8ed6e5f9626105))
+* **metadata:** add date field to bibliography data ([99e7fc0](https://github.com/kingsdigitallab/corpus-building/commit/99e7fc0c27e0d915d968cc50de8467e271110dd3))
+* **metadata:** expand status extraction to include deprecation change notes ([9a21597](https://github.com/kingsdigitallab/corpus-building/commit/9a2159732244cd5c856933371d30ab271362812a))
+* **metadata:** extract and add edition author to metadata ([8484d80](https://github.com/kingsdigitallab/corpus-building/commit/8484d8074bc7ca220a2ab7b6f62c0329760725ce))
+* **search:** add language conjunction configuration to search settings ([e8a245c](https://github.com/kingsdigitallab/corpus-building/commit/e8a245ca534b75a6bca56584047396b9aafa82f8))
+* **search:** add loading state for CSV download ([fb838b9](https://github.com/kingsdigitallab/corpus-building/commit/fb838b9bfa6485cb24c7fbb27022aba163c1a538))
+* **search:** add search query parameter for selected filters ([74b5c43](https://github.com/kingsdigitallab/corpus-building/commit/74b5c439e112097cff219af6132ae3c97f07d2a8))
+* **search:** enhance filter handling and display in search filters component ([d021528](https://github.com/kingsdigitallab/corpus-building/commit/d021528d6faf01faea77ed58ad4fcae0bb03be23))
+* **search:** filter out deprecated items from the search ([2f089c6](https://github.com/kingsdigitallab/corpus-building/commit/2f089c68ec57c3570e2d7bdafbb1a246f8903aa6))
+* **search:** implement language conjunction toggle in search filters and update search options ([08159bf](https://github.com/kingsdigitallab/corpus-building/commit/08159bf8ff84d4c6f6a14c752442cbc3043a7ab0))
+* **search:** update search configuration to hide zero document counts and default conjunction to false ([6ac80bd](https://github.com/kingsdigitallab/corpus-building/commit/6ac80bdff0de419afa735b944f7f730c9a6b12e5))
+* **styleguide:** add Edition section to style guide ([4473851](https://github.com/kingsdigitallab/corpus-building/commit/4473851c82562278e81a25d10ca05ae0d03e8a2b))
+* **styleguide:** add link styled as button in style guide ([906abaf](https://github.com/kingsdigitallab/corpus-building/commit/906abaf0190525bb9482b877e2c156261960ed3a))
+* **styleguide:** add tabs component sections ([81e7985](https://github.com/kingsdigitallab/corpus-building/commit/81e7985ff88b040bfbe2b9cfc527dae2d02b71d6))
+* **xslt:** add template to render milestones with unit face ([c19a871](https://github.com/kingsdigitallab/corpus-building/commit/c19a8717491df33951fd25c381c881eb4c8409e8))
+* **xslt:** extract edition subtype ([6e33eba](https://github.com/kingsdigitallab/corpus-building/commit/6e33eba3eb4f608091a1cdc94233a2cba66ee4cc))
+
+# [0.16.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.15.1...v0.16.0) (2025-03-25)
+
+
+### Bug Fixes
+
+* **config:** change initial error file format from object to array ([8621c91](https://github.com/kingsdigitallab/corpus-building/commit/8621c9134b03c9352349e68769a65ed15963bbbd))
+* **FacetedSearch:**  workaround query-params issue with svelte 5 ([72bbcd9](https://github.com/kingsdigitallab/corpus-building/commit/72bbcd9396a21780f7d425157f0c13869f0a908f))
+* **pagination:** add aria-labels to previous and next buttons for improved accessibility ([b1e3ca5](https://github.com/kingsdigitallab/corpus-building/commit/b1e3ca56af518553e567ac059e412e077a803475))
+* **search:** ensure consistent height for filter dropdown lists ([b8b7c9a](https://github.com/kingsdigitallab/corpus-building/commit/b8b7c9af0c1e7ecae3efd826ed72e23cedef15de))
+* **searchfilters:** update Slider component type and thumb rendering ([4a421cd](https://github.com/kingsdigitallab/corpus-building/commit/4a421cd15b8b3f4fb33563ea69f45f11a0de61a0))
+* **SearchFilters:** update text color variables for improved a11y ([170799f](https://github.com/kingsdigitallab/corpus-building/commit/170799f5ce7104e3887edeaaf62f629dda9721f6))
+* **themetoggle:** update attribute for color scheme from 'color-scheme' to 'data-color-scheme' ([949102f](https://github.com/kingsdigitallab/corpus-building/commit/949102fc0c288af3bcd759cedf22aa3896d31248))
+
+
+### Features
+
+* **app.css:** add default button and input styles ([4e6c9c0](https://github.com/kingsdigitallab/corpus-building/commit/4e6c9c0e5555af1eec44e060dc2050694c00a8eb))
+* **app.css:** expand color variables and styles for improved theming ([f20099a](https://github.com/kingsdigitallab/corpus-building/commit/f20099a307b66432b7470e91ced3026ec2908bc3))
+* **config:** add date and letter height search parameters ([4e75325](https://github.com/kingsdigitallab/corpus-building/commit/4e753251a35274be644d964756948f02f545fd42))
+* **inscription:** improve place display with badge-like list styling ([ada6b2e](https://github.com/kingsdigitallab/corpus-building/commit/ada6b2e075883054108d3c1b67900b5377c4e039))
+* **layout:** import colors-hsl from open-props for enhanced color management ([fab2c18](https://github.com/kingsdigitallab/corpus-building/commit/fab2c183ddb8642e8b26afa5c48d5ed27e236ed2))
+* **metadata:** extract letter heights from handNote dimensions ([714c624](https://github.com/kingsdigitallab/corpus-building/commit/714c624d416c45fd42390007bb356b271f7c54bc))
+* **pageheader:** add Style Guide link for debug mode ([57b9fd9](https://github.com/kingsdigitallab/corpus-building/commit/57b9fd93af5f8a9023651077ba85ed69a09c4628))
+* **RangeSlider:** add unit display to range slider title ([dd47ec9](https://github.com/kingsdigitallab/corpus-building/commit/dd47ec957d1c975f52defc4e5a188c7ccaaa33f3))
+* **search:** add condition field to search ([8cd6d3b](https://github.com/kingsdigitallab/corpus-building/commit/8cd6d3bfc055bbe3ec57d07d02908c0f3ffcf43a))
+* **search:** add letter height filtering to search functionality ([c86c5c5](https://github.com/kingsdigitallab/corpus-building/commit/c86c5c5aea767d9196f883a236899778742b49d3))
+* **search:** add letter height range filtering to search functionality ([e0500c7](https://github.com/kingsdigitallab/corpus-building/commit/e0500c77e49058ce17d430a489ab870588b24634))
+* **search:** add range slider filter for letter height ([25174bb](https://github.com/kingsdigitallab/corpus-building/commit/25174bbe0618518d9fecb58e84cfac4d796db794))
+* **search:** create reusable RangeSlider component for search filters ([28ef0f6](https://github.com/kingsdigitallab/corpus-building/commit/28ef0f6640d10a5c33dddf4a5a14eacaa946a41d))
+* **search:** display letter height filter in search summary ([573e1c7](https://github.com/kingsdigitallab/corpus-building/commit/573e1c7a89b9297229833fff9e74b4b1818a50a5))
+* **SearchFilters:** add unit display for letter height in range slider ([a8cf1ea](https://github.com/kingsdigitallab/corpus-building/commit/a8cf1ea2d9aa889b55f76ddd6f0b891e98b813cb))
+* **search:** pass total results count to SearchFilters component ([3b062f9](https://github.com/kingsdigitallab/corpus-building/commit/3b062f99e88ff99a02f132bbb19e28b557efbb7f))
+* **search:** preserve raw object type in search results ([3f6c663](https://github.com/kingsdigitallab/corpus-building/commit/3f6c663cf0cdaf786f7617ddf71eb3251f601413))
+* **styleguide:** add input component section to style guide ([2edae8f](https://github.com/kingsdigitallab/corpus-building/commit/2edae8f2fd6cb96b3d62c29de438f40aeab577a0))
+* **styleguide:** add select component to style guide ([91cb8c1](https://github.com/kingsdigitallab/corpus-building/commit/91cb8c1085ef822eabdf4406b2c196c3e71ccb7d))
+* **styleguide:** add style guide route ([31a3861](https://github.com/kingsdigitallab/corpus-building/commit/31a386127116007025d2471cc927032c7a494ae3))
+* **styleguide:** add StyleBlock integration ([9f180fe](https://github.com/kingsdigitallab/corpus-building/commit/9f180fe52dae389245ff077a8ec7c6a162dc7ceb))
+* **styleguide:** introduce StyleBlock component for flexible styling ([c8960f9](https://github.com/kingsdigitallab/corpus-building/commit/c8960f9e34f257b93d8db29850d9868e628ae9e1))
+
+## [0.15.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.15.0...v0.15.1) (2025-02-24)
+
+
+### Features
+
+* **scrollspy:** add hover tooltip for section navigation ([39a5cdf](https://github.com/kingsdigitallab/corpus-building/commit/39a5cdfe7d8e4bb91816c4fc6fecb6a6936e9e9d))
+
 # [0.15.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.14.0...v0.15.0) (2025-02-24)
 
 

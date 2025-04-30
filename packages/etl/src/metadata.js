@@ -20,6 +20,7 @@ export async function extractMetadata(xmlString) {
     title: getTitle(xml),
     status: getStatus(xml),
     editions: getEditions(xml),
+    editionAuthor: await getEditionAuthor(xml),
     type: getType(xml),
     support: getSupport(xml),
     objectType: getObjectType(xml),
@@ -38,37 +39,48 @@ export async function extractMetadata(xmlString) {
     textLang: getTextLang(xml),
     bibliographyEdition: await getBibliography(xml, "edition"),
     bibliographyDiscussion: await getBibliography(xml, "discussion"),
-    xml: await getXML(xmlString),
   };
 
   metadata.facsimile = metadata.graphics[0];
   metadata.provenance = metadata.places[0]?._;
 
+  metadata.letterHeights = metadata.handNote?.dimensions
+    .filter((d) => d?.atLeast && d?.atMost)
+    .map((d) => ({
+      atLeast: parseFloat(d.atLeast),
+      atMost: parseFloat(d.atMost),
+    }));
+
   const bibliography = Array.isArray(metadata.bibliographyEdition?.bibl)
     ? metadata.bibliographyEdition?.bibl
     : [metadata.bibliographyEdition?.bibl];
 
-  metadata.publicationAuthors = [
-    ...new Set(
-      bibliography
-        ?.flatMap((b) => b?.author)
-        .filter((a) => a)
-        .map((a) => (typeof a === "string" ? a.trim() : a))
-    ),
-  ];
+  metadata.publications = bibliography
+    .filter((b) => b)
+    .map((b) => {
+      const author = b.author;
+      const title = b.type === "corpus" ? b.n : b.title;
+      const year = b.date;
 
-  metadata.publicationTitles = [
-    ...new Set(
-      bibliography
-        ?.flatMap((b) => b?.title)
-        .filter((a) => a)
-        .map((a) => (typeof a === "string" ? a.trim() : a))
-    ),
-  ];
+      let publication = "";
 
-  metadata.publicationYears = [
-    ...new Set(bibliography?.map((b) => b?.date).filter((a) => a)),
-  ];
+      if (author) {
+        publication = author;
+        if (year) {
+          publication += `, ${year}`;
+        }
+        if (title) {
+          publication += `, ${title}`;
+        }
+      } else {
+        publication = title;
+        if (year) {
+          publication += `, ${year}`;
+        }
+      }
+
+      return publication;
+    });
 
   metadata.keywords = getKeywords(metadata);
 
@@ -107,7 +119,25 @@ function getTitle(xml) {
 }
 
 function getStatus(xml) {
-  return xml.TEI.teiHeader.revisionDesc.status;
+  const status = xml.TEI.teiHeader.revisionDesc.status;
+
+  if (status.toLowerCase() === "deprecated") {
+    const changeNote = getChangeNote(xml, status);
+    return {
+      _: status,
+      changeNote,
+    };
+  }
+
+  return { _: status };
+}
+
+function getChangeNote(xml, status) {
+  const changes = xml.TEI.teiHeader.revisionDesc.listChange.change;
+
+  if (!changes) return null;
+
+  return changes.find((change) => change["xml:id"] === status);
 }
 
 function getEditions(xml) {
@@ -115,6 +145,35 @@ function getEditions(xml) {
     ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type)
   );
 }
+async function getEditionAuthor(xml) {
+  const edition = xml.TEI.text.body.div.find((div) => div.type === "edition");
+
+  if (!edition) return null;
+
+  const source = edition.source;
+
+  if (!source) return null;
+
+  if (source.includes("zotero")) {
+    const itemKey = source.split("/").at(-1);
+    const zoteroData = await getZoteroData(itemKey);
+    zoteroData.ref = source;
+    return zoteroData;
+  }
+
+  const respStmt = xml.TEI.teiHeader.fileDesc.titleStmt.respStmt;
+
+  if (!respStmt) return null;
+
+  const author = respStmt.find(
+    (rs) => rs.name["xml:id"] === source.split("#").at(-1)
+  );
+
+  if (!author) return null;
+
+  return author;
+}
+
 function getType(xml) {
   return xml.TEI.teiHeader.profileDesc.textClass?.keywords?.term;
 }
@@ -475,6 +534,7 @@ async function getZoteroData(itemKey) {
     .then((json) => {
       const data = {
         title: json.data.title?.trim() || "",
+        date: json.data.date?.trim() || null,
         citation: json.citation.replace(".</span>", "</span>"),
       };
       zoteroDataMap.set(cacheKey, data);
@@ -488,18 +548,7 @@ async function getZoteroData(itemKey) {
 }
 
 async function getXML(xmlString) {
-  const match = xmlString.match(
-    /<div[^>]*type="edition"[^>]*>([\s\S]*?)<\/div>/
-  );
-  if (!match) return "";
-
-  return match[0]
-    .replace(/\s*<div/, "<div")
-    .replace(/\s*<ab>/g, "\n  <ab>")
-    .replace(/\s*<lb/g, "\n    <lb")
-    .replace(/\s*<\/ab>/g, "\n  </ab>")
-    .replace(/\s*<\/div>/g, "\n</div>")
-    .replace(/\n\n/, "\n");
+  return xmlString;
 }
 
 function getKeywords(metadata) {

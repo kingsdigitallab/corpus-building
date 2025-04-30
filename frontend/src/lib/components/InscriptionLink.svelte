@@ -9,11 +9,11 @@
 	 */
 
 	/** @type {Props} */
-	let { id, title = '', children } = $props();
+	let { id, title = '', children, ...rest } = $props();
 
 	const children_render = $derived(children);
 </script>
 
-<BaseLink href={`/inscription/${id}`} title={title || id}>
+<BaseLink href={`/inscription/${id}`} title={title || id} {...rest}>
 	{@render children_render?.()}
 </BaseLink>

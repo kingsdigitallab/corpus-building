@@ -1,8 +1,10 @@
 {
   "file": "ISic000019",
   "uri": "ISic000019",
-  "title": "I.Sicily inscription 000019",
-  "status": "draft",
+  "title": "Fragment of an inscription referencing one of the emperors styled Marcus Aurelius",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "491779",
@@ -23,28 +25,39 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": null,
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
-  "objectType": "",
+  "support": "A fragment of compact limestone, seemingly cut down or damaged on all sides.",
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
-    "_": "limestone\n                                    ",
+    "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "22",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "48",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "6",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -56,16 +69,20 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Tall and very narrow letters, fairly crudely carved, with AV in ligature.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
+        "h": "105",
         "unit": "mm"
       },
       {
@@ -78,10 +95,10 @@
     ]
   },
   "date": {
-    "_": "218—222 CE; Torremuzza, by\n                                letters",
-    "notBefore": 218,
-    "notAfter": 222,
-    "evidence": "lettering"
+    "_": "The reference could be to one of several emperors from Marcus Aurelius (161 CE) onwards, although a third century date is more likely given the form of the letters.",
+    "notBefore": 161,
+    "notAfter": 300,
+    "evidence": "lettering, prosopography"
   },
   "places": [
     {
@@ -102,8 +119,10 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "First recorded in Torremuzza 1762, said to be in the courtyard of the Palazzo Senatorio.",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1762",
     "geo": null
   },
   "provenanceObserved": {
@@ -113,16 +132,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000019_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
@@ -162,6 +172,18 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Castelli",
+        "date": "1762",
+        "citedRange": "13 no.xxiv",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/4JP8QJ5H"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002085",
+          "target": "https://biblio.inscriptiones.org/epig10002085"
+        }
+      },
+      {
         "type": "corpus",
         "n": "CIL",
         "citedRange": {
@@ -178,6 +200,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000589"
         },
         "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "date": "1883",
         "citation": "<span>Th. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars Posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editum, 10.2 (Berlin: G. Reimer, 1883)</span>"
       },
       {
@@ -190,9 +213,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        },
-        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
-        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>"
+        }
       },
       ""
     ]
@@ -203,27 +224,21 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\">\n  <ab>\n    <lb n=\"1\"/><roleName type=\"supracivic\" subtype=\"imperator\"><expan><abbr>Imp</abbr><ex>erator</ex><ex cert=\"low\"/></expan></roleName> <g ref=\"#interpunct\">·</g> <expan><abbr>Caes</abbr><ex>ar</ex><ex cert=\"low\"/></expan> <g ref=\"#interpunct\">·</g> <expan><abbr>M</abbr><ex>arco</ex></expan> <g ref=\"#interpunct\">·</g> Au<unclear>re</unclear><supplied reason=\"lost\">lio</supplied><gap reason=\"lost\" extent=\"unknown\" unit=\"character\"/>\n  </ab>\n</div>",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000019_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Panhormus",
-  "publicationAuthors": [],
-  "publicationTitles": [
-    "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
-    "Iscrizioni latine lapidarie del Museo di Palermo"
+  "letterHeights": [],
+  "publications": [
+    "Castelli, 1762",
+    "CIL, 1883",
+    "ILMusPalermo"
   ],
-  "publicationYears": [],
   "keywords": [
     "isic000019",
-    "i.sicily inscription 000019",
-    "draft",
+    "fragment of an inscription referencing one of the emperors styled marcus aurelius",
+    {
+      "_": "draft"
+    },
     "honorific",
+    "unknown",
     "limestone",
     "panhormus",
     "palermo",

@@ -8,6 +8,7 @@
 	import 'open-props/style';
 	import 'open-props/normalize';
 	import 'open-props/buttons';
+	import 'open-props/colors-hsl';
 
 	import '../app.css';
 
@@ -58,10 +59,6 @@
 		transition:
 			background-color 0.25s ease-in-out,
 			color 0.25s ease-in-out;
-	}
-
-	main {
-		padding-block: var(--size-4);
 	}
 
 	@media (max-width: 1279px) {

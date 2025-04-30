@@ -2,7 +2,9 @@
   "file": "ISic000005",
   "uri": "ISic000005",
   "title": "Funerary inscription for Marcus Avianius Pistianus, Maria Eupraxia and Marius Eutychianus",
-  "status": "draft",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "491502",
@@ -22,49 +24,100 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": null,
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
-  "objectType": "",
+  "support": "Marble plaque, with some pitting to the upper part of the front face, corrosion to the lower front face, and some damage / loss to the lower right corner; the text is complete.",
+  "objectType": [
+    {
+      "_": "plaque",
+      "ana": "#object.plaque",
+      "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+    },
+    ""
+  ],
   "material": {
     "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "30",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "44",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "1.0-3.5",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The text is set out over 8 lines, approximately centred, decreasing in size from top to bottom.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "use of serifs and interpuncts, with some instances of tall and small letters, and ligatures.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2-3",
+        "from": "line2",
+        "to": "line3",
+        "h": "25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "23-25",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "20-23",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 6-8",
+        "from": "line6",
+        "to": "line8",
+        "h": "20",
         "unit": "mm"
       },
       {
@@ -77,9 +130,10 @@
     ]
   },
   "date": {
-    "_": "Imperial",
-    "notBefore": 1,
-    "notAfter": 300
+    "_": "later first or second century CE",
+    "notBefore": 51,
+    "notAfter": 200,
+    "evidence": "lettering, textual-context"
   },
   "places": [
     {
@@ -100,8 +154,10 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in Centuripe and sold to Palermo museum in 1879 by one sig. Salvatore Fallica di Catania",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1879",
     "geo": null
   },
   "provenanceObserved": {
@@ -111,16 +167,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000005_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
@@ -176,6 +223,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000589"
         },
         "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "date": "1883",
         "citation": "<span>Th. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars Posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editum, 10.2 (Berlin: G. Reimer, 1883)</span>"
       },
       {
@@ -188,9 +236,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        },
-        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
-        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>"
+        }
       },
       ""
     ]
@@ -201,26 +247,18 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\" resp=\"#JP\">\n  <ab>\n    <lb n=\"1\"/><w><expan><abbr>D</abbr><ex>is</ex></expan></w> <g ref=\"#interpunct\">·</g> <w><expan><abbr>M</abbr><ex>anibus</ex></expan></w> <g ref=\"#interpunct\">·</g> <w><expan><abbr>S</abbr><ex>acrum</ex></expan></w> <g ref=\"#interpunct\">·</g>\n    <lb n=\"2\"/><persName type=\"attested\"><name type=\"praenomen\"><expan><abbr>M</abbr><ex>arcus</ex></expan></name> <g ref=\"#interpunct\">·</g> <name type=\"nomen\">Avianius</name> <name type=\"cognomen\">Pistianus</name></persName>\n    <lb n=\"3\"/><w>et</w> <g ref=\"#interpunct\">·</g> <persName type=\"attested\"><name type=\"nomen\">Maria</name> <name type=\"cognomen\">Eupraxia</name></persName> <w>vi\n    <lb n=\"4\" break=\"no\"/>vi</w> <g ref=\"#interpunct\">·</g> <w>sibi</w> <g ref=\"#interpunct\">·</g> <w>et</w> <g ref=\"#interpunct\">·</g> <w>suis</w> <g ref=\"#interpunct\">·</g> <w>fece<hi rend=\"ligature\">ru</hi><hi rend=\"ligature\">nt</hi></w>\n    <lb n=\"5\"/><w>et</w> <g ref=\"#interpunct\">·</g> <persName type=\"attested\"><name type=\"nomen\">Mario</name> <name type=\"cognomen\">Eutychiano</name></persName> <g ref=\"#interpunct\">·</g> <w>fili\n    <lb n=\"6\" break=\"no\"/>o</w> <w>suo</w> <w>pi<hi rend=\"tall\">i</hi>ssimo</w> <g ref=\"#interpunct\">·</g> <w>non</w> <w>digno</w>\n    <lb n=\"7\"/><w>priori</w> <w>qu<hi rend=\"tall\">i</hi></w> <w><expan><abbr>vix</abbr><ex>it</ex></expan></w> <w><expan><abbr>ann</abbr><ex>is</ex></expan></w> <num value=\"17\">XVII</num>\n    <lb n=\"8\"/><w><expan><abbr>mens</abbr><ex>is</ex></expan></w> <g ref=\"#interpunct\">·</g> <num value=\"11\">XI</num> <w><expan><abbr>dieb</abbr><ex>us</ex></expan></w> <num value=\"16\">XVI</num>\n  </ab>\n</div>",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000005_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Centuripae",
-  "publicationAuthors": [],
-  "publicationTitles": [
-    "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
-    "Iscrizioni latine lapidarie del Museo di Palermo"
+  "letterHeights": [],
+  "publications": [
+    "CIL, 1883",
+    "ILMusPalermo"
   ],
-  "publicationYears": [],
   "keywords": [
     "isic000005",
     "funerary inscription for marcus avianius pistianus, maria eupraxia and marius eutychianus",
-    "draft",
+    {
+      "_": "draft"
+    },
     "funerary",
     "marble",
     "centuripae",

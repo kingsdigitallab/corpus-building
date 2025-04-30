@@ -2,7 +2,9 @@
   "file": "ISic000536",
   "uri": "ISic000536",
   "title": "I.Sicily inscription 000536",
-  "status": "draft",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "491759",
@@ -22,48 +24,65 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": null,
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "Fragment of a marble plaque, broken left and right; unclear whether intact or broken above and below.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
-    "_": "\n                                        marble (white)\n                                    ",
+    "_": "marble (white)",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "11.1",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "8",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "1.8",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Two widely separated lines of monumental letters, possibly with guidelines.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Monumenal v-cut letters with serifs, fairly wide module/spacing",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
+        "to": "line2",
+        "h": "20-25",
         "unit": "mm"
       },
       {
@@ -71,15 +90,16 @@
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
+        "h": "30",
         "unit": "mm"
       }
     ]
   },
   "date": {
-    "_": "Imperial 1st — 2nd century CE",
+    "_": "first century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 100,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -100,7 +120,7 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Original discovery not recorded",
     "type": "found",
     "geo": null
   },
@@ -111,16 +131,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000536_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Trapani",
@@ -176,6 +187,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000589"
         },
         "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "date": "1883",
         "citation": "<span>Th. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars Posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editum, 10.2 (Berlin: G. Reimer, 1883)</span>"
       },
       {
@@ -200,31 +212,20 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\" resp=\"#AA\">\n  <ab>\n    <lb n=\"1\"/><gap reason=\"lost\" extent=\"unknown\" unit=\"character\"/><orig>AGNAI</orig><gap reason=\"lost\" extent=\"unknown\" unit=\"character\"/>\n    <lb n=\"2\"/><gap reason=\"lost\" extent=\"unknown\" unit=\"character\"/>ana <g ref=\"#interpunct\">·</g> <abbr>L</abbr> <g ref=\"#interpunct\">·</g> M<gap reason=\"lost\" extent=\"unknown\" unit=\"character\"/>\n  </ab>\n</div>",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000536_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Drepanum",
-  "publicationAuthors": [
-    "Oliveri"
-  ],
-  "publicationTitles": [
-    "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
-    "Le iscrizioni latine"
-  ],
-  "publicationYears": [
-    "2009"
+  "letterHeights": [],
+  "publications": [
+    "CIL, 1883",
+    "Oliveri, 2009, Le iscrizioni latine"
   ],
   "keywords": [
     "isic000536",
     "i.sicily inscription 000536",
-    "draft",
+    {
+      "_": "draft"
+    },
     "unknown",
+    "plaque",
     "marble (white)",
     "drepanum",
     "trapani",

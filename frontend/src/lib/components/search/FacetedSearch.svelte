@@ -4,8 +4,10 @@
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
+	import { downloadInscriptionsCSV } from '$lib/utils/download';
 	import { Button } from 'bits-ui';
 	import {
+		DownloadIcon,
 		FilterIcon,
 		LayoutGridIcon,
 		LucideArrowDown,
@@ -21,15 +23,17 @@
 	import { searchConfig } from './search';
 	import SearchWorker from './worker.js?worker';
 
-	const searchQuery = queryParam('q', ssp.string(''));
-	const searchPage = queryParam('page', ssp.number(1));
-	const searchLimit = queryParam('limit', ssp.number(config.search.limit));
+	const searchQueryParam = queryParam('q', ssp.string(''));
+	const searchPageParam = queryParam('page', ssp.number(1));
+	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
 	/** @property {'cards' | 'map' | 'table'} */
-	const searchView = queryParam('view', ssp.string('cards'));
+	const searchViewParam = queryParam('view', ssp.string('cards'));
+	const searchFiltersParam = queryParam('filters', ssp.object({}));
 
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
 	let isLoading = $derived(['idle', 'load'].includes(searchStatus));
+	let isDownloading = $state(false);
 
 	let searchWorker = $state();
 	let searchResults = $state({});
@@ -41,7 +45,7 @@
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
 	let inscriptionsGeo = $derived(
-		$searchView === 'map'
+		$searchViewParam === 'map'
 			? inscriptions?.map((inscription) => ({
 					file: inscription.file,
 					title: inscription.title,
@@ -53,14 +57,15 @@
 
 	let showFilters = $state(false);
 
-	let searchOptions = $state({
+	const searchOptions = $state({
 		sortAggregationsBy: 'key',
+		languageConjunction: true,
 		sortResultsBy: 'file',
 		sortResultsOrder: 'asc'
 	});
 
 	let selectedDateRange = $state(initDateRange());
-
+	let selectedLetterHeightRange = $state(initLetterHeightRange());
 	/** @type {{ [key: string]: string[] }} */
 	let selectedFilters = $state(initFilters());
 
@@ -77,6 +82,7 @@
 
 				if (type === 'ready') {
 					searchStatus = 'ready';
+					postSearchMessage();
 				}
 
 				if (type === 'results') {
@@ -90,11 +96,28 @@
 		});
 	}
 
-	$effect(() => {
-		postSearchMessage();
-	});
+	/**
+	 * @param {number | null | undefined} [page]
+	 * @param {string | null | undefined} [query]
+	 * @param {number | null | undefined} [limit]
+	 */
+	async function postSearchMessage(page, query, limit) {
+		let currentPage = $searchPageParam;
+		let currentQuery = $searchQueryParam;
+		let currentLimit = $searchLimitParam;
 
-	async function postSearchMessage() {
+		if (page) {
+			currentPage = page;
+		}
+
+		if (query !== undefined && query !== null) {
+			currentQuery = query;
+		}
+
+		if (limit) {
+			currentLimit = limit;
+		}
+
 		if (searchStatus === 'ready') {
 			const filters = Object.fromEntries(
 				Object.keys(selectedFilters).map((key) => [key, [...selectedFilters[key]]])
@@ -103,26 +126,32 @@
 			searchWorker.postMessage({
 				type: 'search',
 				data: {
-					limit: $searchLimit,
-					page: $searchPage,
-					query: $searchQuery,
+					limit: currentLimit,
+					page: currentPage,
+					query: currentQuery,
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
 					filters,
-					dateRange: [...selectedDateRange]
+					dateRange: [...selectedDateRange],
+					letterHeightRange: [...selectedLetterHeightRange]
 				}
 			});
 		}
 	}
 
 	function initDateRange() {
-		return [-700, 1830];
+		return [config.search.minDate, config.search.maxDate];
+	}
+
+	function initLetterHeightRange() {
+		return [config.search.minLetterHeight, config.search.maxLetterHeight];
 	}
 
 	function initFilters() {
 		return Object.keys(searchConfig.aggregations)
 			.filter((k) => k.indexOf('not') < 0)
+			.filter((k) => k.indexOf('letterHeight') < 0)
 			.reduce((acc, cur) => {
-				acc[cur] = [];
+				acc[cur] = $searchFiltersParam[cur] ? [...$searchFiltersParam[cur]] : [];
 				return acc;
 			}, {});
 	}
@@ -134,48 +163,95 @@
 		return searchAggregations.provenance.buckets.length;
 	}
 
+	async function handleSearchInput(/** @type {Event} */ e) {
+		e.preventDefault();
+		$searchPageParam = 1;
+		$searchQueryParam = e.target?.value ?? '';
+		postSearchMessage(1, e.target?.value ?? '');
+	}
+
 	async function handleSearch(/** @type {Event} */ e) {
 		e.preventDefault();
+		$searchPageParam = 1;
+		postSearchMessage();
 	}
 
 	async function handleReset(/** @type {Event} */ e) {
 		e.preventDefault();
-		$searchQuery = '';
-		$searchPage = 1;
-		$searchLimit = $searchView === 'map' ? config.search.maxLimit : config.search.limit;
 
-		selectedDateRange = initDateRange();
-		selectedFilters = initFilters();
+		$searchQueryParam = '';
+		$searchPageParam = 1;
+		$searchLimitParam = $searchViewParam === 'map' ? config.search.maxLimit : config.search.limit;
+		$searchFiltersParam = '';
+		selectedDateRange = [...initDateRange()];
+		selectedLetterHeightRange = [...initLetterHeightRange()];
+		selectedFilters = { ...initFilters() };
+
+		postSearchMessage();
 	}
 
-	function hasActiveFilters() {
-		const initialDateRange = initDateRange();
-
-		return (
-			$searchQuery !== '' ||
-			selectedDateRange.some((value, index) => value !== initialDateRange[index]) ||
-			Object.keys(selectedFilters).some((key) => selectedFilters[key].length > 0)
-		);
-	}
-
-	$effect(() => {
+	async function handleSortAggregationsByChange() {
 		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
 			searchWorker.postMessage({
 				type: 'load',
-				data: { sortAggregationsBy: searchOptions.sortAggregationsBy }
+				data: {
+					sortAggregationsBy: searchOptions.sortAggregationsBy,
+					languageConjunction: searchOptions.languageConjunction
+				}
 			});
 
 			postSearchMessage();
 		}
-	});
+	}
+
+	async function handleLanguageConjunctionToggle() {
+		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchWorker.postMessage({
+				type: 'load',
+				data: {
+					sortAggregationsBy: searchOptions.sortAggregationsBy,
+					languageConjunction: searchOptions.languageConjunction
+				}
+			});
+
+			postSearchMessage();
+		}
+	}
+
+	async function handleSearchFiltersChange() {
+		$searchPageParam = 1;
+
+		const filters = Object.fromEntries(
+			Object.entries(selectedFilters)
+				.filter(([_, values]) => values && values.length > 0)
+				.map(([key, values]) => [key, [...values]])
+		);
+		$searchFiltersParam = filters;
+
+		postSearchMessage();
+	}
+
+	function hasActiveFilters() {
+		const initialDateRange = initDateRange();
+		const initialLetterHeightRange = initLetterHeightRange();
+
+		return (
+			$searchQueryParam !== '' ||
+			selectedDateRange.some((value, index) => value !== initialDateRange[index]) ||
+			selectedLetterHeightRange.some((value, index) => value !== initialLetterHeightRange[index]) ||
+			Object.keys(selectedFilters).some((key) => selectedFilters[key].length > 0)
+		);
+	}
 
 	/**
 	 * @param {'cards' | 'map' | 'table'} newView
 	 */
 	async function handleViewChange(newView) {
+		let currentLimit = $searchLimitParam;
+
 		if (newView === 'map') {
-			$searchLimit = config.search.maxLimit;
-		} else if ($searchView === 'map') {
+			currentLimit = config.search.maxLimit;
+		} else if ($searchViewParam === 'map') {
 			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
 			searchResults = {
 				...searchResults,
@@ -185,22 +261,65 @@
 				}
 			};
 
-			$searchLimit = config.search.limit;
-			$searchPage = 1;
+			currentLimit = config.search.limit;
+			$searchPageParam = 1;
 		}
 
-		$searchView = newView;
+		$searchLimitParam = currentLimit;
+		$searchViewParam = newView;
+
+		postSearchMessage(1, $searchQueryParam, currentLimit);
+	}
+
+	async function handleDownload() {
+		isDownloading = true;
+
+		searchWorker.postMessage({
+			type: 'search',
+			data: {
+				limit: -1,
+				page: 1,
+				query: $searchQueryParam,
+				sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
+				filters: Object.fromEntries(
+					Object.entries(selectedFilters)
+						.filter(([_, values]) => values && values.length > 0)
+						.map(([key, values]) => [key, [...values]])
+				),
+				dateRange: [...selectedDateRange],
+				letterHeightRange: [...selectedLetterHeightRange]
+			}
+		});
+
+		const downloadHandler = (
+			/** @type {{ data: { type: import('./worker.js').WorkerStatus; data: any; }}} */ event
+		) => {
+			const { type, data } = event.data;
+			if (type === 'results') {
+				downloadInscriptionsCSV(data.data.items);
+
+				searchWorker.removeEventListener('message', downloadHandler);
+				isDownloading = false;
+
+				postSearchMessage();
+			}
+		};
+
+		searchWorker.addEventListener('message', downloadHandler);
 	}
 
 	async function handleSortResultsOrderToggle() {
 		searchOptions.sortResultsOrder = searchOptions.sortResultsOrder === 'asc' ? 'desc' : 'asc';
+
+		postSearchMessage();
 	}
 
 	/**
-	 * @param {number | null} page
+	 * @param {number} page
 	 */
 	async function handlePageChange(page) {
-		$searchPage = page;
+		$searchPageParam = page;
+		postSearchMessage(page);
 	}
 
 	onMount(() => {
@@ -233,9 +352,10 @@
 				name="q"
 				id="q"
 				placeholder="Search inscriptions metadata"
-				bind:value={$searchQuery}
+				oninput={handleSearchInput}
 			/>
-			<Button.Root class="surface-4" type="submit" disabled={!$searchQuery}>Search</Button.Root>
+			<Button.Root class="surface-4" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
+			>
 			<Button.Root class="surface-1" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
 		</form>
 		<div class="filters-toggle">
@@ -255,29 +375,40 @@
 			<SearchSummary
 				{total}
 				dateRange={selectedDateRange}
+				defaultDateRange={[config.search.minDate, config.search.maxDate]}
+				letterHeightRange={selectedLetterHeightRange}
+				defaultLetterHeightRange={[config.search.minLetterHeight, config.search.maxLetterHeight]}
 				{numberOfLocations}
-				query={$searchQuery}
+				query={$searchQueryParam}
 				filters={selectedFilters}
 			/>
 			<section class="controls">
 				<div class="toggles">
 					<Button.Root
-						class={`${$searchView === 'cards' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchViewParam === 'cards' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('cards')}
 					>
 						<LayoutGridIcon />View cards
 					</Button.Root>
 					<Button.Root
-						class={`${$searchView === 'map' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchViewParam === 'map' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('map')}
 					>
 						<MapIcon />View map
 					</Button.Root>
 					<Button.Root
-						class={`${$searchView === 'table' ? 'surface-4' : 'surface-1'}`}
+						class={`${$searchViewParam === 'table' ? 'surface-4' : 'surface-1'}`}
 						onclick={() => handleViewChange('table')}
 					>
 						<TableIcon />View table
+					</Button.Root>
+					<Button.Root
+						class="surface-2"
+						aria-label="Download inscription data as a CSV file"
+						disabled={!hasActiveFilters() || isDownloading}
+						onclick={handleDownload}
+					>
+						<DownloadIcon />CSV
 					</Button.Root>
 				</div>
 				<div class="sort-controls">
@@ -302,24 +433,26 @@
 					</Button.Root>
 				</div>
 			</section>
-			{#if $searchView === 'map'}
+			{#if isDownloading}
+				<h3 aria-busy="true">Downloading inscriptions...</h3>
+			{:else if $searchViewParam === 'map'}
 				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
 					<InscriptionMap inscriptions={inscriptionsGeo} />
 				</div>
 			{:else}
 				<InscriptionPagination
-					page={$searchPage}
+					page={$searchPageParam}
 					count={total}
-					perPage={$searchLimit}
+					perPage={$searchLimitParam}
 					onPageChange={handlePageChange}
 				/>
-				{#key $searchView}
+				{#key $searchViewParam}
 					<div
 						class="transition-container"
 						in:fade={{ duration: 500 }}
 						out:fade={{ duration: 250 }}
 					>
-						{#if $searchView === 'table'}
+						{#if $searchViewParam === 'table'}
 							<InscriptionTable {inscriptions} />
 						{:else}
 							<InscriptionList {inscriptions} />
@@ -327,9 +460,9 @@
 					</div>
 				{/key}
 				<InscriptionPagination
-					page={$searchPage}
+					page={$searchPageParam}
 					count={total}
-					perPage={$searchLimit}
+					perPage={$searchLimitParam}
 					onPageChange={handlePageChange}
 				/>
 			{/if}
@@ -340,9 +473,15 @@
 <SearchFilters
 	show={showFilters}
 	aggregations={searchAggregations}
+	{total}
 	bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
+	bind:languageConjunction={searchOptions.languageConjunction}
 	bind:selectedDateRange
+	bind:selectedLetterHeightRange
 	bind:selectedFilters
+	sortAggregationsByChange={handleSortAggregationsByChange}
+	languageConjunctionChange={handleLanguageConjunctionToggle}
+	searchFiltersChange={handleSearchFiltersChange}
 />
 
 <style>

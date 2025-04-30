@@ -1,6 +1,6 @@
 {
   "name": "@corpus-building/etl",
-  "version": "0.15.0",
+  "version": "0.17.0",
   "description": "An ETL (Extract, Transform, Load) package for processing TEI XML files. It extracts data from TEI XML documents, transforms them using XSLT stylesheets, and generates JSON and HTML outputs for use in the web application.",
   "main": "src/index.js",
   "type": "module",
@@ -8,7 +8,7 @@
     "etl": "node src/index.js",
     "museums": "node src/museums.js",
     "museums-json": "node src/museums-json.js",
-    "sef": "cd ../../xslt && npx xslt3 -xsl:epidoc/start-edition.xsl -export:start-edition.sef.json -t && cd -",
+    "sef": "npx xslt3 -xsl:../../xslt/epidoc/start-edition.xsl -export:../../xslt/epidoc/start-edition.sef.json -relocate:on -nogo -t",
     "test": "vitest"
   },
   "repository": {

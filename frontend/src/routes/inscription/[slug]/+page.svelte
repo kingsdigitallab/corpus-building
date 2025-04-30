@@ -4,12 +4,12 @@
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
 	import * as config from '$lib/config';
-	import { codeToHtml } from '$lib/shiki.bundle';
 	import { Button } from 'bits-ui';
-	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 	import { goto } from '$app/navigation';
+	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
+	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
 	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 
 	/**
@@ -19,89 +19,45 @@
 
 	/** @type {Props} */
 	let { data } = $props();
-
 	let { slug, metadata, images, html, xml } = data;
-	let curImageTitle = $state(images[0]?.desc || '');
-	let highlightedXml = $state('');
 
-	const editions = html.divs.find((div) => div.id === 'editions');
-	let editionDivs = $state([]);
+	const editions = $derived(html.divs.find((div) => div.id === 'editions'));
+	const apparatus = $derived(html.divs.find((div) => div.id === 'apparatus'));
+	const translations = $derived(html.divs.filter((div) => div.id === 'translation'));
 
-	const apparatus = html.divs.find((div) => div.id === 'apparatus');
-	const translations = html.divs.filter((div) => div.id === 'translation');
+	/**
+	 * @type {{ id: string; type: string; html: string; }[]}
+	 */
 	let translationDivs = $state([]);
 
-	const commentary = html.divs.find((div) => div.id === 'commentary');
-
-	let tileSources = images.map(
-		(/** @type Object<String, string> */ image) =>
-			`${config.imageServer}${slug}/${image.url}/info.json`
+	const bibliographyEdition = $derived(
+		metadata.bibliographyEdition?.bibl
+			.filter((b) => b)
+			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
+			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
 
-	let OpenSeaDragon;
+	const bibliographyDiscussion = $derived(
+		metadata.bibliographyDiscussion?.bibl
+			.filter((b) => b)
+			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
+			.sort((a, b) => (a.date || 0) - (b.date || 0))
+	);
 
-	let activeEditionTab = $state(0);
+	const commentary = $derived(html.divs.find((div) => div.id === 'commentary'));
 	let activeTranslationTab = $state(0);
+
 	onMount(async () => {
-		OpenSeaDragon = (await import('openseadragon')).default;
-
-		const viewer = OpenSeaDragon({
-			id: 'image-viewer',
-			prefixUrl: `${base}/openseadragon/images/`,
-			tileSources,
-			sequenceMode: true,
-			showReferenceStrip: true,
-			preserveViewport: true
-		});
-
-		viewer.addHandler('page', function (/** @type {{ page: number; }} */ event) {
-			const image = images[event.page];
-			curImageTitle = `${image.surfaceType}, ${image.desc}`;
-		});
-
-		highlightedXml = await codeToHtml(xml, {
-			lang: 'xml',
-			themes: {
-				light: 'rose-pine-dawn',
-				dark: 'rose-pine-moon'
-			}
-		});
-
-		if (editions) {
-			editionDivs = [
-				...parseEditionDivs(editions.html),
-				{ id: 'epidoc', type: 'Epidoc', html: highlightedXml }
-			];
-			activeEditionTab = 0;
-		}
-
 		if (translations) {
 			translationDivs = translations
-				.map((translation) => parseTranslation(translation))
+				.map((/** @type {{ html: string; }} */ translation) => parseTranslation(translation))
 				.filter(Boolean);
 		}
 	});
 
 	/**
-	 * @param {string} htmlString
-	 */
-	function parseEditionDivs(htmlString) {
-		if (typeof window === 'undefined') {
-			return [];
-		}
-		const parser = new DOMParser();
-		const doc = parser.parseFromString(htmlString, 'text/html');
-		const editionDivs = Array.from(doc.querySelectorAll('[id^="edition-"]'));
-
-		return editionDivs.map((div) => ({
-			id: div.id,
-			type: div.id.replace('edition-', ''),
-			html: div.outerHTML
-		}));
-	}
-
-	/**
 	 * @param {{ html: string; }} translation
+	 * @returns {{ id: string; type: string; html: string; }}
 	 */
 	function parseTranslation(translation) {
 		const parser = new DOMParser();
@@ -146,52 +102,10 @@
 </svelte:head>
 
 <article>
-	<section id="overview">
-		<div class="overview-header">
-			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
-		</div>
-		<figure id="facsimile-images">
-			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
-			<figcaption>{curImageTitle}</figcaption>
-		</figure>
-		<dl>
-			<dt>ID</dt>
-			<dd>{metadata.file}</dd>
-			<dt>Language</dt>
-			<dd>{metadata.textLang._}</dd>
-			<dt>Text type</dt>
-			<dd><a href={metadata.type.ref}>{metadata.type._}</a></dd>
-			<dt>Object type</dt>
-			{#if metadata.objectType}
-				<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
-			{/if}
-			<dt>Status</dt>
-			<dd>{metadata.status}</dd>
-			<dt>Links</dt>
-			<dd>
-				<a href="{config.publicUrl}inscription/{slug}" target="inscription">
-					View in current site <LucideExternalLink />
-				</a>
-			</dd>
-		</dl>
-	</section>
+	<InscriptionOverview {slug} {metadata} {images} />
+
 	<section id="content">
-		<section id="edition">
-			<h2>Edition</h2>
-			<div class="tabs">
-				{#each editionDivs as div, index}
-					<Button.Root
-						class={activeEditionTab === index ? 'active' : ''}
-						onclick={() => (activeEditionTab = index)}
-					>
-						{div.type}
-					</Button.Root>
-				{/each}
-			</div>
-			<div class="edition-content">
-				{@html editionDivs[activeEditionTab]?.html || ''}
-			</div>
-		</section>
+		<InscriptionEdition {slug} {metadata} {xml} {editions} />
 
 		<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
 
@@ -222,12 +136,14 @@
 				<dd>{metadata.support || config.EMPTY_PLACEHOLDER}</dd>
 				<dt>Object type</dt>
 				{#if metadata.objectType}
-					<dd><a href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+					<dd>
+						<a class="badge strong" href={metadata.objectType.ref}>{metadata.objectType._}</a>
+					</dd>
 				{:else}
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Material</dt>
-				<dd><a href={metadata.material.ref}>{metadata.material._}</a></dd>
+				<dd><a class="badge strong" href={metadata.material.ref}>{metadata.material._}</a></dd>
 				<dt>Condition</dt>
 				{#if metadata.condition?.ana}
 					<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
@@ -245,12 +161,12 @@
 			<h3>Inscription</h3>
 			<dl>
 				<dt>Layout</dt>
-				<dd>{metadata.layoutDesc.layout.p || config.EMPTY_PLACEHOLDER}</dd>
+				<dd>{metadata?.layoutDesc?.layout?.p || config.EMPTY_PLACEHOLDER}</dd>
 				<dt>Text condition</dt>
-				{#if metadata.layoutDesc.layout.damage.ana}
+				{#if metadata?.layoutDesc?.layout?.damage?.ana}
 					<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
 				{:else}
-					<dd>{metadata.layoutDesc.layout.damage._ || config.EMPTY_PLACEHOLDER}</dd>
+					<dd>{metadata?.layoutDesc?.layout?.damage?._ || config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Lettering</dt>
 				<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
@@ -274,7 +190,7 @@
 				{#if metadata.places.length}
 					<dd>
 						{metadata.places[0].offset || ''}
-						<a href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+						<a class="badge strong" href={metadata.places[0].ref}>{metadata.places[0]._}</a>
 					</dd>
 				{:else}
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
@@ -308,13 +224,15 @@
 					<dt>Place</dt>
 					<dd>{metadata.settlement}, {metadata.country}</dd>
 					<dt>Repository</dt>
-					<dd>
-						<a href={metadata.repository.ref}>{metadata.repository._}</a>{#if metadata.idno},
-							{metadata.idno._}{/if}
-					</dd>
+					{#if metadata.repository}
+						<dd>
+							<a href={metadata.repository.ref}>{metadata.repository._}</a>{#if metadata.idno},
+								{metadata.idno._}{/if}
+						</dd>
+					{/if}
 					<dt>Autopsy</dt>
 					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
-					{#if metadata.repository.museum?.location.geo}
+					{#if metadata?.repository?.museum?.location?.geo}
 						<dt>Map</dt>
 						{@const lngLat = [
 							metadata.repository.museum.location.geo.lon,
@@ -353,7 +271,7 @@
 
 		<section id="text-type">
 			<h2>Text type</h2>
-			<p><a href={metadata.type.ref}>{metadata.type._}</a></p>
+			<p><a class="badge strong" href={metadata.type.ref}>{metadata.type._}</a></p>
 		</section>
 
 		<section id="commentary">
@@ -371,11 +289,25 @@
 						{/each}
 					</ul>
 				</dd>
-				{#if metadata.bibliographyEdition?.bibl?.length}
+				{#if bibliographyEdition.length}
 					<dt>Printed editions</dt>
 					<dd>
 						<ul class="bibliography-list">
-							{#each metadata.bibliographyEdition.bibl as entry}
+							{#each bibliographyEdition as entry}
+								{#if entry}
+									<li>
+										<BibliographyEntry {entry} />
+									</li>
+								{/if}
+							{/each}
+						</ul>
+					</dd>
+				{/if}
+				{#if bibliographyDiscussion.length}
+					<dt>Discussion</dt>
+					<dd>
+						<ul class="bibliography-list">
+							{#each bibliographyDiscussion as entry}
 								{#if entry}
 									<li>
 										<BibliographyEntry {entry} />
@@ -424,80 +356,11 @@
 		}
 	}
 
-	#overview {
-		border: var(--border-size-1) solid var(--border-color);
-		height: 100%;
-		overflow-y: auto;
-		margin-top: 0;
-		padding-inline: var(--size-4);
-		padding-top: 0;
-		position: sticky;
-		top: 0;
-	}
-
 	#content {
 		height: 100%;
 		margin-top: 0;
 		padding-inline: var(--size-4);
 		overflow-y: auto;
-	}
-
-	.overview-header {
-		border-bottom: var(--border-size-1) solid var(--border-color);
-	}
-
-	#overview h1 {
-		font-size: var(--font-size-fluid-1);
-		max-inline-size: none;
-		padding-block: var(--size-4);
-		text-align: center;
-	}
-
-	#overview #facsimile-images {
-		grid-column: 1;
-		grid-row: 1;
-		margin: 0 auto;
-		padding-inline: var(--size-2);
-		width: 100%;
-	}
-
-	#overview #facsimile-images figcaption {
-		border-top: var(--border-size-1) solid var(--border-color);
-		border-bottom: var(--border-size-1) solid var(--border-color);
-		font-size: var(--font-size-0);
-		max-inline-size: none;
-		padding-block: var(--size-4);
-		text-align: center;
-		text-wrap: balance;
-		width: 100%;
-	}
-
-	#overview dl {
-		column-count: 2;
-		column-gap: var(--size-4);
-		padding-block: var(--size-4);
-	}
-
-	#overview dl dt,
-	#overview dl dd {
-		display: inline;
-		margin: 0;
-	}
-
-	#overview dl dt::after {
-		content: ': ';
-	}
-
-	#overview dl dd::after {
-		content: '';
-		display: block;
-		margin-bottom: var(--size-2);
-	}
-
-	#overview dl dd a {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--size-2);
 	}
 
 	#content h2,
@@ -511,41 +374,9 @@
 		padding-bottom: var(--size-8);
 	}
 
-	#edition {
-		font-family: var(--font-antique);
-		grid-column: 2;
-		grid-row: 1;
-		margin-bottom: var(--size-4);
-		margin-top: 0;
-	}
-
-	.edition-content {
-		overflow-x: scroll;
-	}
-
-	.edition-content :global(pre) {
-		white-space: pre-wrap;
-	}
-
-	.tabs {
-		border-bottom: var(--border-size-1) solid var(--surface-4);
-		display: flex;
-		font-family: var(--font-family);
-		gap: var(--size-2);
-		margin-block: var(--size-4);
-	}
-
-	.tabs :global(button) {
-		margin-block-end: var(--size-2);
-		text-transform: capitalize;
-	}
-
-	.tabs :global(.active) {
-		background-color: var(--surface-4);
-	}
-
 	#page-navigation {
-		margin-block: unset;
+		margin-top: var(--size-9);
+		margin-bottom: var(--size-0);
 	}
 
 	@media (max-width: 768px) {
@@ -555,24 +386,9 @@
 			overflow: visible;
 		}
 
-		#overview {
-			position: relative;
-			height: auto;
-			margin-bottom: var(--size-8);
-		}
-
 		#content {
 			height: auto;
 			overflow: visible;
 		}
-
-		#overview dl {
-			column-count: 1;
-		}
-	}
-
-	/* Epidoc styles */
-	:global(.linenumber) {
-		margin-right: var(--size-4);
 	}
 </style>

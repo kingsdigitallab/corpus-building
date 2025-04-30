@@ -14,7 +14,7 @@
 			citation?: string;
 		};
 	}} */
-	let { entry } = $props();
+	const { entry } = $props();
 </script>
 
 {#if entry.citation}

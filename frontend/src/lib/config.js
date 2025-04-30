@@ -8,8 +8,15 @@ export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
 export const search = {
 	limit: 20,
-	maxLimit: 5000
+	maxLimit: 5000,
+	minDate: -700,
+	maxDate: 1830,
+	minLetterHeight: 0,
+	maxLetterHeight: 100
 };
+
+export const xmlServerPath =
+	'https://raw.githubusercontent.com/ISicily/ISicily/refs/heads/master/inscriptions/';
 
 export const imageServer =
 	'https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=inscription_images/';

@@ -11,10 +11,10 @@
 </script>
 
 {#if count > 0}
-	<Pagination.Root {page} {count} {perPage} {onPageChange}  >
+	<Pagination.Root {page} {count} {perPage} {onPageChange}>
 		{#snippet children({ pages, range })}
 				<div class="pagination">
-				<Pagination.PrevButton><ChevronLeft /></Pagination.PrevButton>
+				<Pagination.PrevButton aria-label="Previous page"><ChevronLeft /></Pagination.PrevButton>
 				<div class="pages">
 					{#each pages as page (page.key)}
 						{#if page.type === 'ellipsis'}
@@ -26,7 +26,7 @@
 						{/if}
 					{/each}
 				</div>
-				<Pagination.NextButton><ChevronRight /></Pagination.NextButton>
+				<Pagination.NextButton aria-label="Next page"><ChevronRight /></Pagination.NextButton>
 			</div>
 			<p>
 				Showing {range.start + 1} - {range.end}

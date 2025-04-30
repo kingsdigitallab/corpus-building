@@ -2,7 +2,9 @@
   "file": "ISic000024",
   "uri": "ISic000024",
   "title": "I.Sicily inscription 000024",
-  "status": "draft",
+  "status": {
+    "_": "draft"
+  },
   "editions": [
     {
       "_": "491784",
@@ -23,27 +25,39 @@
       "type": "PHI"
     }
   ],
+  "editionAuthor": null,
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
+  },
+  "support": "A large slab of compact limestone, heavily worn on the left side",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
     "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "55",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "56.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "4",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -55,7 +69,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.deteriorated"
+      }
     }
   },
   "handNote": {
@@ -77,7 +93,7 @@
     ]
   },
   "date": {
-    "_": "285 CE (slight quibble from R-C)",
+    "_": "285 CE, 2nd consulship of Diocletian",
     "notBefore": 285,
     "notAfter": 285,
     "evidence": "office"
@@ -101,9 +117,14 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Said to have been found in 1618 in vico Celsi (equivalent to via del Celso?)",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1618",
+    "geo": [
+      38.1162501,
+      13.3539811
+    ]
   },
   "provenanceObserved": {
     "_": "None",
@@ -112,16 +133,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000024_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
@@ -161,6 +173,46 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "no. 22",
+        "ptr": {
+          "target": "http://zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002388",
+          "target": "https://biblio.inscriptiones.org/epig10002388"
+        },
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "no. 198",
+        "ptr": {
+          "target": "http://zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001931",
+          "target": "https://biblio.inscriptiones.org/epig10001931"
+        },
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>"
+      },
+      {
+        "author": "Castelli",
+        "date": "1762",
+        "citedRange": "no. xxv",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/4JP8QJ5H"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002085",
+          "target": "https://biblio.inscriptiones.org/epig10002085"
+        }
+      },
+      {
         "type": "corpus",
         "n": "CIL",
         "citedRange": {
@@ -177,6 +229,7 @@
           "target": "https://biblio.inscriptiones.org/epig10000589"
         },
         "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "date": "1883",
         "citation": "<span>Th. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars Posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editum, 10.2 (Berlin: G. Reimer, 1883)</span>"
       },
       {
@@ -189,9 +242,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        },
-        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
-        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>"
+        }
       },
       {
         "author": "Raepsaet-Charlier",
@@ -203,9 +254,7 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001648",
           "target": "https://biblio.inscriptiones.org/epig10001648"
-        },
-        "title": "A propos du récent catalogue d'inscriptions latines du musée de Palerme",
-        "citation": "<span>M.-Th. Raepsaet-Charlier, « A propos du récent catalogue d’inscriptions latines du musée de Palerme », <i>Latomus</i> 33 (1974): 124‑27</span>"
+        }
       }
     ]
   },
@@ -215,32 +264,24 @@
       ""
     ]
   },
-  "xml": "<div type=\"edition\" xml:space=\"preserve\" xml:lang=\"la\">\n  <ab>\n    <lb n=\"1\"/><roleName type=\"supracivic\" subtype=\"imperator\"><expan><abbr><supplied reason=\"lost\">I</supplied>mp</abbr><ex>eratori</ex></expan></roleName> <expan><abbr>Caes</abbr><ex>ari</ex></expan> <expan><abbr>G</abbr><ex>aio</ex></expan> Valerio\n    <lb n=\"2\"/><supplied reason=\"lost\">D</supplied><unclear>io</unclear>cletiano Pio <expan><abbr>Fel</abbr><ex>ici</ex></expan>\n    <lb n=\"3\"/><expan><abbr><supplied reason=\"lost\">in</supplied>v</abbr><ex>icto</ex></expan> <expan><abbr>Aug</abbr><ex>usto</ex></expan> <roleName type=\"supracivic.religious\" subtype=\"pontifex.maximus\"><expan><abbr>pontif</abbr><ex>ici</ex></expan> <expan><abbr>max</abbr><ex>imo</ex></expan></roleName>\n    <lb n=\"4\"/><roleName type=\"supracivic\" subtype=\"tribunicia.potestas\"><expan><abbr><supplied reason=\"lost\">tr</supplied>ib</abbr><ex>unicia</ex></expan> <expan><abbr>pot</abbr><ex>estate</ex></expan></roleName> <roleName type=\"supracivic\" subtype=\"consul\"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></roleName> <num value=\"2\">II</num> <roleName type=\"supracivic\" subtype=\"pater.patriae\"><expan><abbr>p</abbr><ex>atri</ex></expan> <expan><abbr>p</abbr><ex>atriae</ex></expan></roleName> <roleName type=\"supracivic\" subtype=\"proconsul\"><expan><abbr>proco</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></roleName>\n    <lb n=\"5\"/>res  <expan><abbr>p</abbr><ex>ublica</ex></expan> <expan><abbr>Panhorm</abbr><ex>itanorum</ex></expan> <expan><abbr>d</abbr><ex>evota</ex></expan> <expan><abbr>n</abbr><ex>umini</ex></expan> <expan><abbr>m</abbr><ex>aiestati</ex><abbr>q</abbr><ex>ue</ex></expan> eius <roleName type=\"civic\" subtype=\"decurio\"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName> <expan><abbr>d</abbr><ex>ecreto</ex></expan>\n  </ab>\n</div>",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000024_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Panhormus",
-  "publicationAuthors": [
-    "Raepsaet-Charlier"
-  ],
-  "publicationTitles": [
-    "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
-    "Iscrizioni latine lapidarie del Museo di Palermo",
-    "A propos du récent catalogue d'inscriptions latines du musée de Palerme"
-  ],
-  "publicationYears": [
-    "1974"
+  "letterHeights": [],
+  "publications": [
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Castelli, 1762",
+    "CIL, 1883",
+    "ILMusPalermo",
+    "Raepsaet-Charlier, 1974"
   ],
   "keywords": [
     "isic000024",
     "i.sicily inscription 000024",
-    "draft",
+    {
+      "_": "draft"
+    },
     "honorific",
+    "plaque",
     "limestone",
     "panhormus",
     "palermo",

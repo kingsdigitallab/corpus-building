@@ -17,7 +17,7 @@
 
 <style>
 	footer {
-		border-top: var(--border-size-1) solid var(--gray-2);
+		border-top: var(--border-size-1) solid var(--border-color);
 		display: flex;
 		justify-content: space-between;
 		padding-block: var(--size-4);

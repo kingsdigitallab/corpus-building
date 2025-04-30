@@ -20,6 +20,7 @@
 			<li><BaseLink href="/about">About</BaseLink></li>
 			<li>Guide</li>
 			{#if debug}
+				<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>
 				<li><BaseLink href="/_qa">QA</BaseLink></li>
 			{/if}
 			<li>
@@ -32,7 +33,7 @@
 <style>
 	nav {
 		align-items: center;
-		border-bottom: var(--border-size-1) solid var(--gray-2);
+		border-bottom: var(--border-size-1) solid var(--border-color);
 		display: flex;
 		justify-content: space-between;
 		padding-block: var(--size-2);
