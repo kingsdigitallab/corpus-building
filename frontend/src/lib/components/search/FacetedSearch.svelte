@@ -351,7 +351,7 @@
 	}}
 />
 
-<article>
+<article id="faceted-search">
 	<section>
 		<form onsubmit={handleSearch} onreset={handleReset}>
 			<label class="visually-hidden" for="q">Search query:</label>
