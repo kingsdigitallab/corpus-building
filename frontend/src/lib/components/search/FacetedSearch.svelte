@@ -365,14 +365,6 @@
 			<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root>
 			<Button.Root class="secondary" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
 		</form>
-		<div class="filters-toggle">
-			<Button.Root
-				class={showFilters ? 'secondary' : 'primary'}
-				onclick={() => (showFilters = !showFilters)}
-			>
-				<FilterIcon />Filters
-			</Button.Root>
-		</div>
 	</section>
 
 	<section class="inscriptions">
@@ -389,33 +381,42 @@
 				query={$searchQueryParam}
 				filters={selectedFilters}
 			/>
-			<section class="controls">
-				<div class="toggles">
+			<section class="reduced-block-margin">
+				<Button.Root
+					class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
+					onclick={() => handleViewChange('cards')}
+				>
+					<LayoutGridIcon />View cards
+				</Button.Root>
+				<Button.Root
+					class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
+					onclick={() => handleViewChange('map')}
+				>
+					<MapIcon />View map
+				</Button.Root>
+				<Button.Root
+					class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
+					onclick={() => handleViewChange('table')}
+				>
+					<TableIcon />View table
+				</Button.Root>
+				<Button.Root
+					class="secondary"
+					aria-label="Download inscription data as a CSV file"
+					disabled={!hasActiveFilters() || isDownloading}
+					onclick={handleDownload}
+				>
+					<DownloadIcon />CSV
+				</Button.Root>
+			</section>
+			<section class="reduced-block-margin controls">
+				<p>{total.toLocaleString()} Inscriptions</p>
+				<div class="filters-toggle">
 					<Button.Root
-						class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('cards')}
+						class={showFilters ? 'secondary' : 'primary'}
+						onclick={() => (showFilters = !showFilters)}
 					>
-						<LayoutGridIcon />View cards
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('map')}
-					>
-						<MapIcon />View map
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('table')}
-					>
-						<TableIcon />View table
-					</Button.Root>
-					<Button.Root
-						class="secondary"
-						aria-label="Download inscription data as a CSV file"
-						disabled={!hasActiveFilters() || isDownloading}
-						onclick={handleDownload}
-					>
-						<DownloadIcon />CSV
+						<FilterIcon />Explore filters
 					</Button.Root>
 				</div>
 				<div class="sort-controls">
@@ -447,12 +448,6 @@
 					<InscriptionMap inscriptions={inscriptionsGeo} />
 				</div>
 			{:else}
-				<InscriptionPagination
-					page={$searchPageParam}
-					count={total}
-					perPage={$searchLimitParam}
-					onPageChange={handlePageChange}
-				/>
 				{#key $searchViewParam}
 					<div
 						class="transition-container"
@@ -494,8 +489,9 @@
 <style>
 	form {
 		display: flex;
-		gap: var(--size-2);
-		margin-inline: var(--size-12);
+		gap: var(--size-4);
+		justify-content: space-between;
+		width: 100%;
 
 		& input {
 			flex-grow: 1;
@@ -518,17 +514,18 @@
 		text-align: center;
 	}
 
-	.filters-toggle {
-		display: flex;
-		justify-content: center;
-		margin-block: var(--size-4);
+	.reduced-block-margin {
+		margin-block: var(--size-3);
 	}
 
 	.controls {
+		align-items: center;
 		border-bottom: var(--border-size-1) solid var(--gray-4);
+		border-top: var(--border-size-1) solid var(--gray-4);
 		display: flex;
 		justify-content: space-between;
-		margin-block: var(--size-4);
+		padding-block: var(--size-2);
+		margin-block-end: var(--size-6);
 		width: 100%;
 
 		& .toggles {
