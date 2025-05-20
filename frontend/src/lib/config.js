@@ -4,6 +4,8 @@ export const publicUrl = 'http://sicily.classics.ox.ac.uk/';
 
 export const title = 'I.Sicily';
 export const description = `${title} is dedicated to the inscribed texts from ancient Sicily, combining an open access digital corpus with news, blogs and other resources.`;
+export const heroImageDescription =
+	'A small horned altar of limestone, damaged across the top from front to back between the horns. The altar has mouldings around the base and the top on all four sides, with a smooth field in between on all four faces';
 export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
 export const search = {
