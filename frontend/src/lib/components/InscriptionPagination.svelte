@@ -37,7 +37,8 @@
 
 <style>
 	:global([data-pagination-root]) {
-		margin-block: var(--size-2);
+		margin-block-start: var(--size-8);
+		margin-block-end: var(--size-4);
 	}
 
 	:global([data-selected]) {
