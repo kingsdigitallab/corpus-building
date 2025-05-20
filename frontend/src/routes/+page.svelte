@@ -1,7 +1,7 @@
 <script>
-	import * as config from '$lib/config';
-	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
 	import heroImage from '$lib/assets/images/hero.png';
+	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
+	import * as config from '$lib/config';
 </script>
 
 <section class="hero">
@@ -12,12 +12,12 @@
 		</hgroup>
 		<a class="discover-link" href="#faceted-search">
 			<span class="arrow">↓</span>
-			<span class="discover-link-text">Discover all inscriptions</span>
+			<span class="discover-link-text">Discover the inscriptions</span>
 		</a>
 	</div>
 	<div class="hero-right">
 		<picture>
-			<img src={heroImage} alt="Hero image" />
+			<img src={heroImage} alt={config.heroImageDescription} />
 		</picture>
 	</div>
 </section>
