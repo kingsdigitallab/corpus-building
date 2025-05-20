@@ -75,7 +75,7 @@
 			<div class="tabs">
 				{#each editionDivs as div, index}
 					<Button.Root
-						class={activeEditionTab === index ? 'active' : ''}
+						class={activeEditionTab === index ? 'secondary' : 'secondary-inverse'}
 						onclick={() => (activeEditionTab = index)}
 					>
 						{div.type}
@@ -100,7 +100,7 @@
 			</div>
 			<div style="display: {editionDivs[activeEditionTab]?.isExpandable ? 'block' : 'none'}">
 				<Button.Root
-					class="edition-expand-button {isExpanded ? 'expanded' : ''}"
+					class="edition-expand-button secondary {isExpanded ? 'expanded' : ''}"
 					onclick={() => (isExpanded = !isExpanded)}
 				>
 					{#if isExpanded}
@@ -163,7 +163,6 @@
 	}
 
 	:global(.edition-expand-button) {
-		background-color: var(--surface-4);
 		margin-block: var(--size-4);
 		text-transform: unset;
 	}

@@ -5,34 +5,38 @@ html {
 	--font-family: var(--font-classical-humanist);
 	--font-family-greek: 'Source Sans Pro', var(--font-antique);
 
-	--border-color: var(--gray-5);
 	--radius: var(--size-px-1);
 
 	/* light */
-	--brand-light: var(--brown-9);
+	--brand-light: var(--brown-10);
 	--text-1-light: var(--sand-11);
-	--text-2-light: var(--sand-11);
-	--text-3-light: var(--sand-0);
+	--text-2-light: var(--sand-0);
+	--text-3-light: var(--brown-8);
+	--text-4-light: var(--brown-9);
 	--surface-1-light: var(--sand-0);
-	--surface-2-light: var(--brown-1);
-	--surface-3-light: var(--brown-9);
+	--surface-2-light: var(--sand-11);
+	--surface-3-light: var(--brown-8);
 	--surface-4-light: var(--brown-0);
 	--surface-shadow-light: var(--sand-8);
 	--shadow-strength-light: 2%;
 	--warning-light: var(--orange-4);
+	--focus-color-light: var(--yellow-10);
 
 	/* dark */
 	--brand-dark: var(--choco-1);
 	--text-1-dark: var(--sand-0);
 	--text-2-dark: var(--gray-10);
-	--text-3-dark: var(--gray-10);
+	--text-3-dark: var(--brown-2);
+	--text-4-dark: var(--choco-1);
 	--surface-1-dark: var(--gray-10);
-	--surface-2-dark: var(--brown-2);
-	--surface-3-dark: var(--choco-1);
-	--surface-4-dark: hsl(var(--brown-2-hsl) / 0.3);
+	--surface-2-dark: var(--sand-0);
+	--surface-3-dark: var(--brown-2);
+	--surface-4-dark: var(--stone-9);
 	--surface-shadow-dark: var(--gray-12);
 	--shadow-strength-dark: 80%;
 	--warning-dark: var(--orange-7);
+	--focus-color-dark: var(--yellow-4);
+	--border-color: var(--surface-2-light);
 }
 
 :root {
@@ -43,6 +47,7 @@ html {
 	--text-1: var(--text-1-light);
 	--text-2: var(--text-2-light);
 	--text-3: var(--text-3-light);
+	--text-4: var(--text-4-light);
 	--surface-1: var(--surface-1-light);
 	--surface-2: var(--surface-2-light);
 	--surface-3: var(--surface-3-light);
@@ -50,6 +55,9 @@ html {
 	--surface-shadow: var(--surface-shadow-light);
 	--shadow-strength: var(--shadow-strength-light);
 	--warning: var(--warning-light);
+
+	--border-color: var(--surface-2-dark);
+	--focus-color: var(--focus-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +68,7 @@ html {
 		--text-1: var(--text-1-dark);
 		--text-2: var(--text-2-dark);
 		--text-3: var(--text-3-dark);
+		--text-4: var(--text-4-dark);
 		--surface-1: var(--surface-1-dark);
 		--surface-2: var(--surface-2-dark);
 		--surface-3: var(--surface-3-dark);
@@ -67,6 +76,9 @@ html {
 		--surface-shadow: var(--surface-shadow-dark);
 		--shadow-strength: var(--shadow-strength-dark);
 		--warning: var(--warning-dark);
+
+		--border-color: var(--surface-2-dark);
+		--focus-color: var(--focus-color-dark);
 	}
 }
 
@@ -77,6 +89,7 @@ html {
 	--text-1: var(--text-1-light);
 	--text-2: var(--text-2-light);
 	--text-3: var(--text-3-light);
+	--text-4: var(--text-4-light);
 	--surface-1: var(--surface-1-light);
 	--surface-2: var(--surface-2-light);
 	--surface-3: var(--surface-3-light);
@@ -84,6 +97,9 @@ html {
 	--surface-shadow: var(--surface-shadow-light);
 	--shadow-strength: var(--shadow-strength-light);
 	--warning: var(--warning-light);
+
+	--border-color: var(--surface-2-light);
+	--focus-color: var(--focus-color-light);
 }
 
 [data-color-scheme='dark'] {
@@ -93,6 +109,7 @@ html {
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
 	--text-3: var(--text-3-dark);
+	--text-4: var(--text-4-dark);
 	--surface-1: var(--surface-1-dark);
 	--surface-2: var(--surface-2-dark);
 	--surface-3: var(--surface-3-dark);
@@ -100,6 +117,9 @@ html {
 	--surface-shadow: var(--surface-shadow-dark);
 	--shadow-strength: var(--shadow-strength-dark);
 	--warning: var(--warning-dark);
+
+	--border-color: var(--surface-2-dark);
+	--focus-color: var(--focus-color-dark);
 }
 
 .brand {
@@ -111,11 +131,6 @@ html {
 	color: var(--text-1);
 }
 
-.surface-1-inverted {
-	background-color: var(--text-1);
-	color: var(--surface-1);
-}
-
 .surface-2 {
 	background-color: var(--surface-2);
 	color: var(--text-2);
@@ -123,7 +138,7 @@ html {
 
 .surface-3 {
 	background-color: var(--surface-3);
-	color: var(--text-3);
+	color: var(--text-2);
 }
 
 .surface-4 {
@@ -141,6 +156,10 @@ html {
 
 .text-3 {
 	color: var(--text-3);
+}
+
+.text-4 {
+	color: var(--text-4);
 }
 
 .font-default {
@@ -194,6 +213,11 @@ img {
 	width: 1px !important;
 }
 
+:focus-visible {
+	outline: var(--border-size-2) solid var(--focus-color);
+}
+
+/** Link styles */
 a {
 	color: var(--brand, var(--link));
 	text-decoration-color: var(--brand, var(--link));
@@ -205,7 +229,7 @@ a {
 
 a[role='button'] {
 	align-items: center;
-	border: var(--border-size-1) solid var(--border-color);
+	/* border: var(--border-size-1) solid var(--border-color); */
 	border-radius: var(--radius);
 	cursor: pointer;
 	display: inline-flex;
@@ -213,7 +237,9 @@ a[role='button'] {
 	padding-block: var(--size-2);
 	padding-inline: var(--size-3);
 }
+/** End of Link styles */
 
+/** Button styles */
 button {
 	background: transparent;
 	border-color: var(--border-color);
@@ -233,6 +259,59 @@ button.active {
 	color: var(--text-2);
 }
 
+button.primary {
+	background-color: var(--surface-2);
+	color: var(--text-2);
+}
+
+button.primary-inverse {
+	background-color: var(--text-2);
+	color: var(--surface-2);
+}
+
+button.primary:hover {
+	border-color: var(--surface-3);
+	border-width: var(--border-size-1);
+}
+
+button.primary:active {
+	background-color: var(--surface-1);
+	border-color: var(--text-1);
+	color: var(--text-1);
+}
+
+button.primary:disabled {
+	border-color: var(--surface-2);
+}
+
+button.secondary {
+	background-color: var(--surface-3);
+	border-color: var(--surface-3);
+	color: var(--text-2);
+}
+
+button.secondary-inverse {
+	background-color: var(--text-2);
+	border-color: var(--surface-3);
+	color: var(--surface-3);
+}
+
+button.secondary:hover {
+	border-color: var(--text-1);
+	border-width: var(--border-size-1);
+}
+
+button.secondary:active {
+	background-color: var(--surface-1);
+	color: var(--text-1);
+}
+
+button.secondary:disabled {
+	border-color: var(--surface-3);
+}
+/** End of Button styles */
+
+/** Input and select styles */
 input,
 select {
 	background: transparent;
@@ -243,16 +322,18 @@ details,
 summary {
 	background-color: unset;
 }
+/** End of Input and select styles */
 
+/** Code styles */
 pre,
 code {
 	font-family: var(--font-monospace-code);
 	font-size: var(--font-size-0);
 }
-
+/** End of Code styles */
 /* Utility classes */
 .badge {
-	background-color: var(--surface-2);
+	background-color: var(--surface-3);
 	border-radius: var(--radius-1);
 	color: var(--text-2);
 	padding-block: var(--size-1);

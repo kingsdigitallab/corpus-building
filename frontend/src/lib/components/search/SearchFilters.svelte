@@ -99,7 +99,7 @@
 
 {#if show}
 	<aside
-		class="filters"
+		class="filters surface-1"
 		tabindex="-1"
 		transition:slide={{ axis: 'x', duration: 300 }}
 		onintroend={handleIntroEnd}
@@ -151,7 +151,7 @@
 					{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
 					<li>
 						<Button.Root
-							class="remove-filter-button"
+							class="remove-filter-button surface-3"
 							aria-label="Remove {key} filter with value {displayValue}"
 							title="Remove {key} filter with value {displayValue}"
 							onclick={() => handleRemoveFilter(key, value)}
@@ -255,9 +255,8 @@
 
 <style>
 	.filters {
-		background: var(--surface-1);
 		border-radius: var(--radius-2);
-		border: var(--border-size-1) solid var(--surface-3);
+		border: var(--border-size-1) solid var(--border-color);
 		box-shadow: var(--shadow-4);
 		height: 100vh;
 		left: 0;
@@ -290,7 +289,7 @@
 		background: none;
 		border: none;
 		box-shadow: none;
-		color: var(--surface-3);
+		color: var(--text-3);
 		font-size: var(--font-size-4);
 		margin: 0;
 		padding: 0;
@@ -335,7 +334,7 @@
 		background: transparent;
 		border: none;
 		box-shadow: none;
-		color: var(--surface-3);
+		color: var(--text-4);
 		font-size: var(--font-size-1);
 		font-weight: normal;
 		padding-inline: var(--size-4);
@@ -343,7 +342,6 @@
 	}
 
 	:global(.filters-by .remove-filter-button) {
-		background: var(--surface-2);
 		border: none;
 		box-shadow: none;
 		font-size: var(--font-size-1);
@@ -438,11 +436,13 @@
 	}
 
 	.filters-group ul li:hover {
-		background: var(--surface-2);
+		background: var(--surface-3);
+		color: var(--text-2);
 	}
 
 	.filters-group ul li:has(input:checked) {
-		background: var(--surface-2);
+		background: var(--surface-3);
+		color: var(--text-2);
 	}
 
 	.filters-group ul li label {

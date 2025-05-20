@@ -354,13 +354,12 @@
 				placeholder="Search inscriptions metadata"
 				oninput={handleSearchInput}
 			/>
-			<Button.Root class="surface-4" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
-			>
-			<Button.Root class="surface-1" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
+			<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root>
+			<Button.Root class="secondary" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
 		</form>
 		<div class="filters-toggle">
 			<Button.Root
-				class={showFilters ? 'surface-4' : 'surface-1'}
+				class={showFilters ? 'secondary' : 'primary'}
 				onclick={() => (showFilters = !showFilters)}
 			>
 				<FilterIcon />Filters
@@ -385,25 +384,25 @@
 			<section class="controls">
 				<div class="toggles">
 					<Button.Root
-						class={`${$searchViewParam === 'cards' ? 'surface-4' : 'surface-1'}`}
+						class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
 						onclick={() => handleViewChange('cards')}
 					>
 						<LayoutGridIcon />View cards
 					</Button.Root>
 					<Button.Root
-						class={`${$searchViewParam === 'map' ? 'surface-4' : 'surface-1'}`}
+						class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
 						onclick={() => handleViewChange('map')}
 					>
 						<MapIcon />View map
 					</Button.Root>
 					<Button.Root
-						class={`${$searchViewParam === 'table' ? 'surface-4' : 'surface-1'}`}
+						class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
 						onclick={() => handleViewChange('table')}
 					>
 						<TableIcon />View table
 					</Button.Root>
 					<Button.Root
-						class="surface-2"
+						class="secondary"
 						aria-label="Download inscription data as a CSV file"
 						disabled={!hasActiveFilters() || isDownloading}
 						onclick={handleDownload}

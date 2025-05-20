@@ -115,7 +115,7 @@
 				<div class="tabs">
 					{#each translationDivs as div, index}
 						<Button.Root
-							class={activeTranslationTab === index ? 'active' : ''}
+							class={activeTranslationTab === index ? 'secondary' : 'secondary-inverse'}
 							onclick={() => (activeTranslationTab = index)}
 						>
 							{div.type}

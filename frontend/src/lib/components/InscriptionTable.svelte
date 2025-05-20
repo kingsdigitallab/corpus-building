@@ -5,17 +5,17 @@
 </script>
 
 <table>
-	<thead>
+	<thead class="surface-1">
 		<tr>
-			<th>ID</th>
-			<th>Title</th>
-			<th>Date</th>
-			<th>Place</th>
-			<th>Status</th>
-			<th>Type</th>
-			<th>Object type</th>
-			<th>Language</th>
-			<th>Settlement</th>
+			<th class="surface-4">ID</th>
+			<th class="surface-4">Title</th>
+			<th class="surface-4">Date</th>
+			<th class="surface-4">Place</th>
+			<th class="surface-4">Status</th>
+			<th class="surface-4">Type</th>
+			<th class="surface-4">Object type</th>
+			<th class="surface-4">Language</th>
+			<th class="surface-4">Settlement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -39,7 +39,6 @@
 
 	thead {
 		border-start-start-radius: unset;
-		background-color: var(--surface-2);
 		font-size: var(--font-size-1);
 	}
 

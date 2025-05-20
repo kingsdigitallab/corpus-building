@@ -41,7 +41,8 @@
 	}
 
 	:global([data-selected]) {
-		background: var(--surface-4) !important;
+		background: var(--surface-1) !important;
+		border: var(--border-size-1) solid var(--border-color) !important;
 		color: var(--text-1);
 	}
 

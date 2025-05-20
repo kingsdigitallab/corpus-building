@@ -35,8 +35,8 @@
 					<div class="component-grid">
 						<StyleBlock><div class="text-1">Text 1</div></StyleBlock>
 						<StyleBlock><div class="text-2 surface-2">Text 2 on surface 2</div></StyleBlock>
-						<StyleBlock><div class="text-2 surface-4">Text 2 on surface 4</div></StyleBlock>
-						<StyleBlock><div class="text-3 surface-3">Text 3 on surface 3</div></StyleBlock>
+						<StyleBlock><div class="text-2 surface-3">Text 2 on surface 3</div></StyleBlock>
+						<StyleBlock><div class="text-1 surface-4">Text 1 on surface 4</div></StyleBlock>
 					</div>
 				</section>
 
