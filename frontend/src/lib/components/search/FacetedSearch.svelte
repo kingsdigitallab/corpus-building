@@ -179,6 +179,10 @@
 	async function handleReset(/** @type {Event} */ e) {
 		e.preventDefault();
 
+		if (document.getElementById('q')) {
+			document.getElementById('q').value = '';
+		}
+
 		$searchQueryParam = '';
 		$searchPageParam = 1;
 		$searchLimitParam = $searchViewParam === 'map' ? config.search.maxLimit : config.search.limit;
@@ -187,7 +191,11 @@
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
 
-		postSearchMessage();
+		postSearchMessage(
+			1,
+			'',
+			$searchViewParam === 'map' ? config.search.maxLimit : config.search.limit
+		);
 	}
 
 	async function handleSortAggregationsByChange() {
