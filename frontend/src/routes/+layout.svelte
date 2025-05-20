@@ -10,7 +10,7 @@
 	import 'open-props/buttons';
 	import 'open-props/colors-hsl';
 
-	import '../app.css';
+	import '$lib/assets/styles/app.css';
 
 	
 	/**
