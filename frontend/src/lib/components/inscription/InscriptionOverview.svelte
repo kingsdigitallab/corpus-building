@@ -44,19 +44,16 @@
 		<hgroup>
 			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
 			{#if metadata.status._ === 'deprecated'}
-				<p class="badge strong warning">
-					This inscription is deprecated
+				<p class="deprecated">
+					<strong>This inscription is deprecated.</strong>
 					{#if metadata.status.changeNote}
 						{@const changeNote = metadata.status.changeNote}
-						<small>
-							{#if changeNote.ref}
-								<a href={changeNoteTarget}>
-									{changeNote._.replace('  ', ` ${changeNote.ref._} `)}
-								</a>
-							{:else}
-								{changeNote._}
-							{/if}
-						</small>
+						<small>{changeNote._.replace('  ', ` ${changeNote.ref._} `)}</small>
+						{#if changeNote.ref}
+							<a href={changeNoteTarget}>
+								View inscription {changeNote.ref._}
+							</a>
+						{/if}
 					{/if}
 				</p>
 			{/if}
