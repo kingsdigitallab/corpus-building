@@ -95,10 +95,6 @@
 		padding: var(--size-2);
 	}
 
-	.active {
-		background-color: var(--surface-4);
-	}
-
 	.dots {
 		align-items: center;
 		display: flex;
@@ -115,7 +111,7 @@
 	}
 
 	.dots li:not(:last-child)::after {
-		background-color: var(--surface-2);
+		background-color: var(--surface-3);
 		content: '';
 		height: 100%;
 		left: 50%;
@@ -150,7 +146,7 @@
 	}
 
 	.dot {
-		background-color: var(--surface-2);
+		background-color: var(--surface-3);
 		border-radius: 50%;
 		display: block;
 		height: var(--size-2);
