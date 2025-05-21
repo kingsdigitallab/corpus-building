@@ -364,11 +364,14 @@ a.badge {
 	display: flex;
 	flex-direction: column;
 	gap: var(--size-2);
-	max-inline-size: unset;
 	padding-block: var(--size-4);
 	padding-inline: var(--size-2);
 	text-align: center;
 	text-wrap: balance;
+
+	& small {
+		max-inline-size: unset;
+	}
 }
 
 .tabs {
