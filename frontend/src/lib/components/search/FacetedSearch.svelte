@@ -304,7 +304,32 @@
 		) => {
 			const { type, data } = event.data;
 			if (type === 'results') {
-				downloadInscriptionsCSV(data.data.items);
+				let summary = `${data.data.items.length.toLocaleString()} Inscriptions between `;
+
+				summary += `${selectedDateRange[0] > 0 ? `AD ${selectedDateRange[0]}` : `${Math.abs(selectedDateRange[0])} BC`} – `;
+				summary += `${selectedDateRange[1] > 0 ? `AD ${selectedDateRange[1]}` : `${Math.abs(selectedDateRange[1])} BC`}`;
+
+				summary += ` across ${numberOfLocations.toLocaleString()} locations`;
+
+				if ($searchQueryParam) {
+					summary += `, matching ${$searchQueryParam.split(' ').join(', ')}`;
+				}
+
+				const hasSelectedFilters = Object.values(selectedFilters).some(
+					(filter) => filter.length > 0
+				);
+				if (hasSelectedFilters) {
+					summary += ', filtered by ';
+					const filterLabels = Object.entries(selectedFilters)
+						.filter(([_, values]) => values && values.length > 0)
+						.map(
+							([key, values]) =>
+								`${key}: ${values.join(', ').replaceAll('_', ' ').replaceAll(':::', ' ')}`
+						);
+					summary += filterLabels.join(', ');
+				}
+
+				downloadInscriptionsCSV(summary, data.data.items);
 
 				searchWorker.removeEventListener('message', downloadHandler);
 				isDownloading = false;
