@@ -31,6 +31,7 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Fragment of a limestone plaque, of the sort used for covering loculi; text is complete",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -41,38 +42,48 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "16.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "19",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "4.2",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Filling the available space, with vacat below",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "lunate sigma and epsilon, uncial omega, alpha of the cursive variety; upsilon without stem",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
+        "to": "line4",
+        "h": "28",
         "unit": "mm"
       },
       {
@@ -85,10 +96,10 @@
     ]
   },
   "date": {
-    "_": "4th century CE (?)",
+    "_": "4th century CE",
     "notBefore": 301,
     "notAfter": 400,
-    "precision": "low"
+    "evidence": "lettering, textual-context"
   },
   "places": [
     {
@@ -109,14 +120,19 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Hypogeum in contrada Treppiedi",
+    "_": "Found in the Hypogeum of Dionysa, contrada Treppiedi (first identified 1980), and now in the Modica museo civico",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "when": "1980",
+    "geo": [
+      36.8343091,
+      14.7756843
+    ]
   },
   "provenanceObserved": {
-    "_": "On display.",
+    "_": "None",
     "type": "observed",
+    "subtype": "autopsied",
     "geo": null
   },
   "provenanceLost": null,
@@ -129,6 +145,7 @@
     "role": "museum",
     "ref": "http://sicily.classics.ox.ac.uk/museum/094",
     "museum": {
+      "slug": "094-museo-archeologico-belgiorno",
       "type": "museum",
       "name": "Museo Archeologico Belgiorno",
       "uri": "http://sicily.classics.ox.ac.uk/museum/094",
@@ -172,7 +189,7 @@
         },
         "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
         "date": "1888-",
-        "citation": "<span>‘L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine.’, <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>"
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>"
       },
       {
         "type": "bulletin",
@@ -199,7 +216,9 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002032",
           "target": "https://biblio.inscriptiones.org/epig10002032"
-        }
+        },
+        "title": "Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988",
+        "citation": "<span>G. Di Stefano, «Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988», in <i>1983-1993, dieci anni di archeologia cristiana in Italia: atti del VII Congresso nazionale di archeologia cristiana ; Cassino, 20-24 settembre 1993</i>, a c. di E. Russo, vol. 2, 3 voll. (Cassino: Edizioni dell’Università degli Studi di Cassino, 2003), 887–89</span>"
       },
       {
         "author": "Rizzone and Sammito",
@@ -211,7 +230,9 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001629",
           "target": "https://biblio.inscriptiones.org/epig10001629"
-        }
+        },
+        "title": "Nuovi documenti epigrafici dal circondario di Modica",
+        "citation": "<span>Vittorio Giovanni Rizzone e Annamaria Sammito, «Nuovi documenti epigrafici dal circondario di Modica», in <i>Da abitato in abitato. In itinere fra le più antiche testimonianze cristiane degli Iblei</i>, a c. di F.P. Rizzo (Rome: Istituti editoriali e poligrafici internazionali, 2005), 45–62</span>"
       },
       {
         "author": "Rizzone",
@@ -220,10 +241,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/8ENX9UZ5"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001633",
-          "target": "https://biblio.inscriptiones.org/epig10001633"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/8ENX9UZ5",
+        "title": "La catacomba A e le iscrizioni di Treppiedi",
+        "citation": "<span>Vittorio Giovanni Rizzone, «La catacomba A e le iscrizioni di Treppiedi», in <i>La necropoli di Treppiedi a Modica</i>, a c. di G. Di Stefano (Palermo: Sellerio, 2009), 52–58</span>"
+      },
+      {
+        "author": "Rizzone, Sammito, Sirugo",
+        "date": "2009",
+        "citedRange": "78 fig. 48",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/63PABBLY"
+        },
+        "title": "Il museo civico di Modica \"F.L. Belgiorno\"",
+        "citation": "<span>Vittorio Giovanni Rizzone, Annamaria Sammito, e Simona Sirugo, a c. di, <i>Il museo civico di Modica «F.L. Belgiorno»</i> (Monza: Polimetrica, 2009)</span>"
       }
     ]
   },
@@ -238,9 +268,10 @@
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
-    "Di Stefano, 2003",
-    "Rizzone and Sammito, 2005",
-    "Rizzone, 2009"
+    "Di Stefano, 2003, Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988",
+    "Rizzone and Sammito, 2005, Nuovi documenti epigrafici dal circondario di Modica",
+    "Rizzone, 2009, La catacomba A e le iscrizioni di Treppiedi",
+    "Rizzone, Sammito, Sirugo, 2009, Il museo civico di Modica \"F.L. Belgiorno\""
   ],
   "keywords": [
     "isic003565",

@@ -25,7 +25,14 @@
       "type": "PHI"
     }
   ],
-  "editionAuthor": null,
+  "editionAuthor": {
+    "name": {
+      "_": "Livia Tagliapietra",
+      "xml:id": "LT",
+      "ref": "https://orcid.org/0000-0002-2850-1064"
+    },
+    "resp": "improved reading in the text, modified apparatus and translation"
+  },
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -82,7 +89,9 @@
         "from": "line1",
         "to": "line1",
         "h": "20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "20"
       },
       {
         "type": "letterHeight",
@@ -90,7 +99,9 @@
         "from": "line2",
         "to": "line2",
         "h": "15-18",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "18"
       },
       {
         "type": "letterHeight",
@@ -98,7 +109,9 @@
         "from": "line3",
         "to": "line4",
         "h": "10-15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "15"
       },
       {
         "type": "interlinear",
@@ -113,8 +126,7 @@
     "_": "3rd century CE",
     "notBefore": 201,
     "notAfter": 300,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -170,6 +182,7 @@
     "role": "museum",
     "ref": "http://sicily.classics.ox.ac.uk/museum/064",
     "museum": {
+      "slug": "064-museo-archeologico-regionale-antonino-salinas",
       "type": "museum",
       "name": "Museo Archeologico Regionale Antonino Salinas",
       "uri": "http://sicily.classics.ox.ac.uk/museum/064",
@@ -218,7 +231,7 @@
         },
         "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
         "date": "1883",
-        "citation": "<span>Th. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars Posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, Consilio et Auctoritate Academiae Litterarum Regiae Borussicae Editum, 10.2 (Berlin: G. Reimer, 1883)</span>"
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>"
       },
       {
         "type": "corpus",
@@ -230,7 +243,10 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        },
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "date": "1970",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>"
       },
       {
         "author": "Alessi",
@@ -242,7 +258,9 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002538",
           "target": "https://biblio.inscriptiones.org/epig10002538"
-        }
+        },
+        "title": "III. Giuseppe Alessi al chiarissimo segretario dell'instituto archeologico, salute.",
+        "citation": "<span>Giuseppe Alessi, «III. Giuseppe Alessi al chiarissimo segretario dell’instituto archeologico, salute.», <i>Giornale di scienze, lettere e arti per la Sicilia</i> 42, fasc. 126 (1833): 225–35, <a href=\"http://digitale.bnc.roma.sbn.it/tecadigitale/giornale/UFI0049392/1833/T.42/00000257\">http://digitale.bnc.roma.sbn.it/tecadigitale/giornale/UFI0049392/1833/T.42/00000257</a></span>"
       },
       {
         "author": "Alessi",
@@ -275,11 +293,24 @@
     "surfaceType": "front"
   },
   "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 20
+    },
+    {
+      "atLeast": 15,
+      "atMost": 18
+    },
+    {
+      "atLeast": 10,
+      "atMost": 15
+    }
+  ],
   "publications": [
     "CIL, 1883",
-    "ILMusPalermo",
-    "Alessi, 1833",
+    "ILMusPalermo, 1970",
+    "Alessi, 1833, III. Giuseppe Alessi al chiarissimo segretario dell'instituto archeologico, salute.",
     "Alessi, 1833, Scavi di Catania"
   ],
   "keywords": [

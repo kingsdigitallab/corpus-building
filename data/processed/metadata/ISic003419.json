@@ -31,6 +31,7 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Although damaged around the edges, the block appears essentially intact top, left and below, but appears to have been cut down on the right, with a significant part of the text (same block or a second block?) missing from the right. The stone is a soft coarse stone of poor quality and the surface is not well preserved. The block was found in re-use in a later wall.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -41,38 +42,80 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "33",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "39",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "89",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Five lines of Greek text. Interlineation suggests a clear vacat below the fifth line (40-60mm). Left margin of the text is irregular (varies between 15 and 70 mm), and appears original, suggesting that the text was approximately centred on the stone.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Lunate epislon and sigma, with broken bar alpha, xsi of the form of I with extended cross-bars. Letters of a plain, regular and wide module.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
+        "h": "30-37",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "30-35",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "28-30",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "30-33",
         "unit": "mm"
       },
       {
@@ -80,6 +123,31 @@
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
+        "h": "20-25",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "23",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "20-23",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 4 to 5",
+        "from": "line4",
+        "to": "line5",
+        "h": "18-20",
         "unit": "mm"
       }
     ]
@@ -87,7 +155,8 @@
   "date": {
     "_": "76—75 BCE",
     "notBefore": -76,
-    "notAfter": -75
+    "notAfter": -75,
+    "evidence": "prosopography"
   },
   "places": [
     {
@@ -108,25 +177,32 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Found winter 2006/7within the wall of the building of the 'altar with\n                            three betyls' by the agora (38.093374, 13.531964)\n                        ",
+    "_": "Found winter 2006/7, following partial collapse of the rear wall of room b of the building of the so-called 'altar with three betyls' immediately to the south of the agora",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "when": "2006",
+    "geo": [
+      38.093374,
+      13.531964
+    ]
   },
   "provenanceObserved": {
-    "_": "None",
+    "_": "Prag 2017-07-18. autopsy of plaster cast, Palermo Soprintendenza",
     "type": "observed",
     "subtype": "autopsied",
+    "xml:id": "autopsy",
+    "resp": "#JP",
+    "when": "2017-07-18",
     "geo": null
   },
   "provenanceLost": null,
   "graphics": [
     {
       "n": "screen",
-      "url": "ISic003419_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "url": "ISic003419_cast_tiled.tif",
+      "height": "2772px",
+      "width": "3165px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-28",
       "surfaceType": "front"
     }
   ],
@@ -138,6 +214,7 @@
     "role": "museum",
     "ref": "http://sicily.classics.ox.ac.uk/museum/070",
     "museum": {
+      "slug": "070-area-archeologica-e-antiquarium-di-solunto",
       "type": "museum",
       "name": "Area Archeologica e Antiquarium di Solunto",
       "uri": "http://sicily.classics.ox.ac.uk/museum/070",
@@ -188,7 +265,9 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001368",
           "target": "https://biblio.inscriptiones.org/epig10001368"
-        }
+        },
+        "title": "Un nuovo documento epigrafico da Solunto",
+        "citation": "<span>A. M. G. Calascibetta e L. Di Leonardo, «Un nuovo documento epigrafico da Solunto», in <i>Sicilia occidentale. Studi, rassegne, ricerche</i>, a c. di Carmine Ampolo (Pisa: Edizioni della Normale, 2012), 37–47</span>"
       }
     ]
   },
@@ -200,17 +279,17 @@
   },
   "facsimile": {
     "n": "screen",
-    "url": "ISic003419_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "url": "ISic003419_cast_tiled.tif",
+    "height": "2772px",
+    "width": "3165px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-28",
     "surfaceType": "front"
   },
   "provenance": "Soluntum",
   "letterHeights": [],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "Calascibetta and Di Leonardo, 2012"
+    "Calascibetta and Di Leonardo, 2012, Un nuovo documento epigrafico da Solunto"
   ],
   "keywords": [
     "isic003419",

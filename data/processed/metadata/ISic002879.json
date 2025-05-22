@@ -1,9 +1,9 @@
 {
   "file": "ISic002879",
   "uri": "ISic002879",
-  "title": "I.Sicily inscription 002879",
+  "title": "Epitaph for Sekounda",
   "status": {
-    "_": "unchecked"
+    "_": "draft"
   },
   "editions": [
     {
@@ -31,43 +31,64 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
-  "material": {
-    "_": "stone",
-    "ana": "#material.stone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
+  "support": {
+    "_": "an irregular stele of rough sandstone, inscribed on both faces of the upper part, each inscription split over two lines, with damage to one edge. Inscription on the reverse is ISic003561.",
+    "ref": {
+      "sameAs": "ISic003561.xml"
+    }
   },
-  "condition": "",
+  "objectType": {
+    "_": "stele",
+    "ana": "#object.stele",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/250"
+  },
+  "material": {
+    "_": "sandstone",
+    "ana": "#material.stone.sandstone",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
+  },
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "67.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "34",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "10",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The single name is split over two lines.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "lunate sigma, alpha tending to cursive, rhomboid omicron in ligature with kappa, nu reversed.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
-        "from": "line1",
-        "to": "line1",
+        "l": "Line 1-2",
+        "from": "1",
+        "to": "2",
+        "h": "60-80",
         "unit": "mm"
       },
       {
@@ -83,7 +104,7 @@
     "_": "4th century CE",
     "notBefore": 301,
     "notAfter": 400,
-    "precision": "low"
+    "evidence": "archaeological-context"
   },
   "places": [
     {
@@ -105,10 +126,15 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Tomb 11, west cemetery, Sofiana (37.31424, 14.29943)",
+    "_": "Found in re-use as the base of Tomb 11, west cemetery, Sofiana ",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "notBefore": "1954",
+    "notAfter": "1961",
+    "geo": [
+      37.3196431,
+      14.2903833
+    ]
   },
   "provenanceObserved": {
     "_": "None",
@@ -117,16 +143,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic002879_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Gela",
@@ -135,6 +152,7 @@
     "role": "museum",
     "ref": "http://sicily.classics.ox.ac.uk/museum/010",
     "museum": {
+      "slug": "010-museo-archeologico-regionale-di-gela",
       "type": "museum",
       "name": "Museo Archeologico Regionale di Gela",
       "uri": "http://sicily.classics.ox.ac.uk/museum/010",
@@ -178,7 +196,7 @@
         },
         "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
         "date": "1888-",
-        "citation": "<span>‘L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine.’, <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>"
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>"
       },
       {
         "type": "bulletin",
@@ -205,7 +223,9 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002127",
           "target": "https://biblio.inscriptiones.org/epig10002127"
-        }
+        },
+        "title": "Cimiteri paleocristiani di Sofiana (retroterra di Gela)",
+        "citation": "<span>L. Bonomi, «Cimiteri paleocristiani di Sofiana (retroterra di Gela)», <i>Rivista di Archeologia Cristiana</i> 40 (1964): 169–220</span>"
       },
       {
         "author": "Manganaro",
@@ -230,7 +250,7 @@
         },
         "ref": "https://www.zotero.org/groups/382445/items/I6XXZEB6",
         "title": "Le iscrizioni",
-        "citation": "<span>Antonietta Brugnone, ‘Le iscrizioni’, in <i>La Sicilia centro-merdionale tra il II ed il VI sec. d.C.</i>, ed. R.M. Bonacasa Carra and R. Panvini (Caltanissetta: Salvatore Sciascia editore, 2002), 295–301</span>"
+        "citation": "<span>Antonietta Brugnone, «Le iscrizioni», in <i>La Sicilia centro-merdionale tra il II ed il VI sec. d.C.</i>, a c. di R.M. Bonacasa Carra e R. Panvini (Caltanissetta: Salvatore Sciascia editore, 2002), 295–301</span>"
       }
     ]
   },
@@ -240,31 +260,24 @@
       ""
     ]
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic002879_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Philosophiana",
   "letterHeights": [],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
-    "Bonomi, 1964",
+    "Bonomi, 1964, Cimiteri paleocristiani di Sofiana (retroterra di Gela)",
     "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
     "Brugnone, 2002, Le iscrizioni"
   ],
   "keywords": [
     "isic002879",
-    "i.sicily inscription 002879",
+    "epitaph for sekounda",
     {
-      "_": "unchecked"
+      "_": "draft"
     },
     "funerary",
-    "stone",
+    "stele",
+    "sandstone",
     "philosophiana",
     "mazzarino",
     "italy",
