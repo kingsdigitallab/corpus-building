@@ -1,3 +1,4 @@
+import { base } from '$app/paths';
 import JSZip from 'jszip';
 
 /**
@@ -92,7 +93,7 @@ export async function downloadInscriptionsXML(summary, inscriptions) {
 
 	for (const inscription of inscriptions) {
 		try {
-			const response = await fetch(`/api/inscription/${inscription.file}`);
+			const response = await fetch(`${base}/api/inscription/${inscription.file}`);
 			if (!response.ok) {
 				console.warn(`Failed to fetch XML for ${inscription.file}`);
 				continue;
