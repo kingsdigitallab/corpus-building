@@ -38,7 +38,7 @@ export async function getInscriptions(query, page = 1, limit = config.search.lim
 			file: inscription.file,
 			title: inscription.title,
 			places: inscription.places,
-			geo: inscription.geo[0]
+			geo: inscription?.geo?.[0]
 		}))
 	};
 
@@ -63,14 +63,14 @@ export function getYearSpan(inscriptions) {
 
 	const minYear = Math.min(
 		...inscriptions
-			.filter((inscription) => inscription.date.notBefore)
-			.map((inscription) => inscription.date.notBefore)
+			.filter((inscription) => inscription?.date?.notBefore)
+			.map((inscription) => inscription?.date?.notBefore)
 	);
 
 	const maxYear = Math.max(
 		...inscriptions
-			.filter((inscription) => inscription.date.notAfter)
-			.map((inscription) => inscription.date.notAfter)
+			.filter((inscription) => inscription?.date?.notAfter)
+			.map((inscription) => inscription?.date?.notAfter)
 	);
 
 	return maxYear - minYear;
