@@ -44,6 +44,14 @@ async function transformToHtml(filePath) {
     }))
     .get();
 
+  const editions = $("div#editions > div")
+    .map((i, div) => ({
+      id: $(div).attr("id"),
+      lang: $(div).attr("lang"),
+      html: $(div).html().trim(),
+    }))
+    .get();
+
   const images = $("div#facsimile-images > a")
     .map((i, a) => ({
       image: $(a).attr("href"),
@@ -56,6 +64,7 @@ async function transformToHtml(filePath) {
     title: $("title").text(),
     body: $("body").html(),
     divs,
+    editions,
     images,
   };
 }
