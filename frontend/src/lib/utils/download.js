@@ -7,7 +7,7 @@ import JSZip from 'jszip';
  * @param {string} summary - The summary of the search
  * @param {Array<{ file: string; title: string; notBefore: number; notAfter: number; places: Array<{ offset: string; _: string; type: string; }>; status: { _: string; }; type: { _: string; }; objectType: { _: string; }; language: { _: string; }; settlement: { _: string; }; }>} inscriptions - Array of inscription objects
  */
-export function downloadInscriptionsCSV(summary, inscriptions) {
+export async function downloadInscriptionsCSV(summary, inscriptions) {
 	const headers =
 		'ID,Title,"Not before","No earlier than","No later than",Place,Status,Type,Object type,Language,Settlement\n';
 

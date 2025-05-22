@@ -306,10 +306,11 @@
 			if (type === 'results') {
 				const summary = getSearchSummary(data.data.items);
 
-				downloadInscriptionsCSV(summary, data.data.items);
+				downloadInscriptionsCSV(summary, data.data.items).then(() => {
+					isDownloading = false;
+				});
 
 				searchWorker.removeEventListener('message', downloadHandler);
-				isDownloading = false;
 
 				postSearchMessage();
 			}
@@ -372,10 +373,11 @@
 			if (type === 'results') {
 				const summary = getSearchSummary(data.data.items);
 
-				downloadInscriptionsXML(summary, data.data.items);
+				downloadInscriptionsXML(summary, data.data.items).then(() => {
+					isDownloading = false;
+				});
 
 				searchWorker.removeEventListener('message', downloadHandler);
-				isDownloading = false;
 
 				postSearchMessage();
 			}
@@ -473,6 +475,7 @@
 					aria-label="Download inscription data as a CSV file"
 					disabled={isDownloading}
 					onclick={handleCSVDownload}
+					aria-busy={isDownloading}
 				>
 					<DownloadIcon />CSV
 				</Button.Root>
@@ -481,6 +484,7 @@
 					aria-label="Download inscriptions as XML"
 					disabled={!hasActiveFilters() || isDownloading}
 					onclick={handleXMLDownload}
+					aria-busy={isDownloading}
 				>
 					<DownloadIcon />Epidoc
 				</Button.Root>
@@ -517,9 +521,7 @@
 					</Button.Root>
 				</div>
 			</section>
-			{#if isDownloading}
-				<h3 aria-busy="true">Downloading inscriptions...</h3>
-			{:else if $searchViewParam === 'map'}
+			{#if $searchViewParam === 'map'}
 				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
 					<InscriptionMap inscriptions={inscriptionsGeo} />
 				</div>
