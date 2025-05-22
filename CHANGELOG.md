@@ -1,5 +1,32 @@
 
 
+# [0.18.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.17.0...v0.18.0) (2025-05-22)
+
+
+### Bug Fixes
+
+* **download:** update fetch URL to use base path for inscriptions API ([6de663c](https://github.com/kingsdigitallab/corpus-building/commit/6de663cc7aa0783451087eca5af99991a1b1c7d1))
+* **hero:** update hero section text and improve image alt attribute for better accessibility ([e47a05c](https://github.com/kingsdigitallab/corpus-building/commit/e47a05c17ae5759dc8706ab044c38d82dfd283cd))
+* **inscription:** enable prerendering for inscription API endpoint ([f3dc39d](https://github.com/kingsdigitallab/corpus-building/commit/f3dc39d18b2908815766ae8ad13b6b6e07e06ade))
+* **inscriptions:** add optional chaining to safely access properties ([f7c3ee2](https://github.com/kingsdigitallab/corpus-building/commit/f7c3ee250cd76af955da5ec51ae2bc1b74fc1fb5))
+* **search:** add id to article element for improved accessibility ([483747f](https://github.com/kingsdigitallab/corpus-building/commit/483747f1331780109bbf20760bdf2f1283743fcf))
+* **search:** handle download state correctly and improve accessibility for download buttons ([22a071b](https://github.com/kingsdigitallab/corpus-building/commit/22a071b10a8c7dd52eee60319f62f832d795c50f))
+* **search:** reset search input value on reset and update postSearchMessage parameters ([a43aa18](https://github.com/kingsdigitallab/corpus-building/commit/a43aa186e142cbc86579f5104e92542b4c6e1028))
+* **styles:** hide visually hidden elements to improve accessibility ([41607ef](https://github.com/kingsdigitallab/corpus-building/commit/41607efc3957cac43fe480828ee85fd7cf313228))
+
+
+### Features
+
+* **config:** add hero image description ([d67fe51](https://github.com/kingsdigitallab/corpus-building/commit/d67fe518c1f0cd4a43893734ffc9e2811a8fa304))
+* **download:** add function to download inscriptions as a ZIP file ([fd88d96](https://github.com/kingsdigitallab/corpus-building/commit/fd88d966df33e6de5aa2f5e43925de2b1b83fc57))
+* **inscription:** add API endpoint to serve inscriptions metadata ([03dc63b](https://github.com/kingsdigitallab/corpus-building/commit/03dc63b9a2d2443a4d0a18ced709c230b2dc30cf))
+* **inscription:** add API endpoint to serve XML files based on slug ([3688849](https://github.com/kingsdigitallab/corpus-building/commit/36888492ecd1ed63c93bd4a50401db4b064ccd87))
+* **inscription:** add entries function to derive slugs from corpus data ([3873a6a](https://github.com/kingsdigitallab/corpus-building/commit/3873a6af8d7712b7ca3af370dceddac7df2cbf89))
+* **landing:** implement hero section according to design ([1457ccd](https://github.com/kingsdigitallab/corpus-building/commit/1457ccdd18ec9d653dbe59a787c714bd9e9bce15))
+* **search:** add search summary to the CSV download ([d591a91](https://github.com/kingsdigitallab/corpus-building/commit/d591a91d2463a03229c1b639e4808390a817552b))
+* **search:** add XML download functionality ([e4832c2](https://github.com/kingsdigitallab/corpus-building/commit/e4832c2b0e0b89980da36d74bf16f3213da86728))
+* **styles:** add loading spinner for elements with aria-busy attribute ([2efe8b2](https://github.com/kingsdigitallab/corpus-building/commit/2efe8b246b118879e6e3142d8899f6870ff5e496))
+
 # [0.17.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.16.0...v0.17.0) (2025-04-29)
 
 
