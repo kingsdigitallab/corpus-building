@@ -4,7 +4,7 @@
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
-	import { downloadInscriptionsCSV } from '$lib/utils/download';
+	import { downloadInscriptionsCSV, downloadInscriptionsXML } from '$lib/utils/download';
 	import { Button } from 'bits-ui';
 	import {
 		DownloadIcon,
@@ -279,13 +279,13 @@
 		postSearchMessage(1, $searchQueryParam, currentLimit);
 	}
 
-	async function handleDownload() {
+	async function handleCSVDownload() {
 		isDownloading = true;
 
 		searchWorker.postMessage({
 			type: 'search',
 			data: {
-				limit: -1,
+				limit: config.search.maxLimit,
 				page: 1,
 				query: $searchQueryParam,
 				sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
@@ -304,32 +304,75 @@
 		) => {
 			const { type, data } = event.data;
 			if (type === 'results') {
-				let summary = `${data.data.items.length.toLocaleString()} Inscriptions between `;
-
-				summary += `${selectedDateRange[0] > 0 ? `AD ${selectedDateRange[0]}` : `${Math.abs(selectedDateRange[0])} BC`} – `;
-				summary += `${selectedDateRange[1] > 0 ? `AD ${selectedDateRange[1]}` : `${Math.abs(selectedDateRange[1])} BC`}`;
-
-				summary += ` across ${numberOfLocations.toLocaleString()} locations`;
-
-				if ($searchQueryParam) {
-					summary += `, matching ${$searchQueryParam.split(' ').join(', ')}`;
-				}
-
-				const hasSelectedFilters = Object.values(selectedFilters).some(
-					(filter) => filter.length > 0
-				);
-				if (hasSelectedFilters) {
-					summary += ', filtered by ';
-					const filterLabels = Object.entries(selectedFilters)
-						.filter(([_, values]) => values && values.length > 0)
-						.map(
-							([key, values]) =>
-								`${key}: ${values.join(', ').replaceAll('_', ' ').replaceAll(':::', ' ')}`
-						);
-					summary += filterLabels.join(', ');
-				}
+				const summary = getSearchSummary(data.data.items);
 
 				downloadInscriptionsCSV(summary, data.data.items);
+
+				searchWorker.removeEventListener('message', downloadHandler);
+				isDownloading = false;
+
+				postSearchMessage();
+			}
+		};
+
+		searchWorker.addEventListener('message', downloadHandler);
+	}
+
+	function getSearchSummary(inscriptions) {
+		let summary = `${inscriptions.length.toLocaleString()} Inscriptions between `;
+
+		summary += `${selectedDateRange[0] > 0 ? `AD ${selectedDateRange[0]}` : `${Math.abs(selectedDateRange[0])} BC`} – `;
+		summary += `${selectedDateRange[1] > 0 ? `AD ${selectedDateRange[1]}` : `${Math.abs(selectedDateRange[1])} BC`}`;
+
+		summary += ` across ${numberOfLocations.toLocaleString()} locations`;
+
+		if ($searchQueryParam) {
+			summary += `, matching ${$searchQueryParam.split(' ').join(', ')}`;
+		}
+
+		const hasSelectedFilters = Object.values(selectedFilters).some((filter) => filter.length > 0);
+		if (hasSelectedFilters) {
+			summary += ', filtered by ';
+			const filterLabels = Object.entries(selectedFilters)
+				.filter(([_, values]) => values && values.length > 0)
+				.map(
+					([key, values]) =>
+						`${key}: ${values.join(', ').replaceAll('_', ' ').replaceAll(':::', ' ')}`
+				);
+			summary += filterLabels.join(', ');
+		}
+
+		return summary;
+	}
+
+	async function handleXMLDownload() {
+		isDownloading = true;
+
+		searchWorker.postMessage({
+			type: 'search',
+			data: {
+				limit: config.search.maxLimit,
+				page: 1,
+				query: $searchQueryParam,
+				sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
+				filters: Object.fromEntries(
+					Object.entries(selectedFilters)
+						.filter(([_, values]) => values && values.length > 0)
+						.map(([key, values]) => [key, [...values]])
+				),
+				dateRange: [...selectedDateRange],
+				letterHeightRange: [...selectedLetterHeightRange]
+			}
+		});
+
+		const downloadHandler = (
+			/** @type {{ data: { type: import('./worker.js').WorkerStatus; data: any; }}} */ event
+		) => {
+			const { type, data } = event.data;
+			if (type === 'results') {
+				const summary = getSearchSummary(data.data.items);
+
+				downloadInscriptionsXML(summary, data.data.items);
 
 				searchWorker.removeEventListener('message', downloadHandler);
 				isDownloading = false;
@@ -428,10 +471,18 @@
 				<Button.Root
 					class="secondary"
 					aria-label="Download inscription data as a CSV file"
-					disabled={!hasActiveFilters() || isDownloading}
-					onclick={handleDownload}
+					disabled={isDownloading}
+					onclick={handleCSVDownload}
 				>
 					<DownloadIcon />CSV
+				</Button.Root>
+				<Button.Root
+					class="secondary"
+					aria-label="Download inscriptions as XML"
+					disabled={!hasActiveFilters() || isDownloading}
+					onclick={handleXMLDownload}
+				>
+					<DownloadIcon />Epidoc
 				</Button.Root>
 			</section>
 			<section class="reduced-block-margin controls">
@@ -552,10 +603,6 @@
 		padding-block: var(--size-2);
 		margin-block-end: var(--size-6);
 		width: 100%;
-
-		& .toggles {
-			margin-block-end: var(--size-2);
-		}
 	}
 
 	.sort-controls {
