@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 001040</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001040</idno>
+                <idno type="TM">492667</idno>
+                <idno type="EDR">136341</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">39102193</idno>
+                <idno type="PHI">140518</idno>
+                <idno type="PHI">175429</idno>
+                <idno type="PHI">333747</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001040</idno>
+                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385377</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
+                        <idno type="inventory">65724</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragments"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                            <damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                </offset>
+                            	<geo>37.05780, 14.89346</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" precision="low">2nd — 1st century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="1873">Found in 1873 in the course of surface survey</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.epigram" ref="http://www.eagle-network.eu/voc/typeins/lod/368.html">epigram</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-28" who="#JP">Jonathan Prag added an image</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	           <change when="2021-03-02" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change> 	
+                <change when="2023-09-24" who="#JP">Jonathan Prag corrected language tagging</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001040_tiled.tif" height="2584px" width="3582px">
+                <desc>Photo J. Prag, courtesy of  Museo Archeologico Regionale Antonino Salinas, Palermo</desc>
+            </graphic>
+            <graphic n="print" url="ISic001040.jpg" height="2584px" width="3582px">
+                <desc>Photo J. Prag, courtesy of  Museo Archeologico Regionale Antonino Salinas, Palermo</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <div type="textpart" subtype="fragment-physical" n="a">
+                    <ab>
+                        <lb n="1" xml:id="BEAAK"/><gap reason="lost" quantity="1" unit="line" xml:id="BEAAU"/>
+                        <lb n="2" xml:id="BEAAe"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAAo"/><g ref="#interpunct" xml:id="BEAAy">·</g> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAAΙ"/>
+                        <lb n="3" xml:id="BEAAΤ"/><gap reason="lost" quantity="1" unit="line" xml:id="BEAAε"/>
+                        <lb n="4" xml:id="BEAAο"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEABA"/><w xml:id="BEABK"><supplied reason="lost" xml:id="BEABU">ἱ</supplied>λαροῦ</w> <w xml:id="BEABe">β<supplied reason="lost" cert="low" xml:id="BEABo">ιότου</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEABy"/>
+                        <lb n="5" xml:id="BEABΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEABΤ"/><w xml:id="BEABε"><supplied reason="lost" xml:id="BEABο">ο</supplied><unclear xml:id="BEACA">λ</unclear>βα</w> <w xml:id="BEACK">χορευ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEACU"/>
+                        <lb n="6" xml:id="BEACe"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEACo"/><w xml:id="BEACy">ἐμπνεύσῃ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEACΙ"/>
+                        <lb n="7" xml:id="BEACΤ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEACε"/><w xml:id="BEACο">δος</w> <w xml:id="BEADA">ἀρετᾶς</w> <w xml:id="BEADK">μ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEADU"/>
+                        <lb n="8" xml:id="BEADe"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEADo"/><w xml:id="BEADy"><supplied reason="lost" cert="low" xml:id="BEADΙ">λαμπρ</supplied>ὸν</w> <w xml:id="BEADΤ">φάο<supplied reason="lost" cert="low" xml:id="BEADε">ς</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEADο"/>
+                    </ab>
+                </div>
+                
+                <div type="textpart" subtype="fragment-physical" n="b">
+                    <ab>
+                        <lb n="1" xml:id="BEAEA"/><gap reason="lost" quantity="1" unit="line" xml:id="BEAEK"/>
+                        <lb n="2" xml:id="BEAEU"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAEe"/><orig xml:id="BEAEo">ΝΚΕΔΝΟ</orig><gap reason="lost" extent="unknown" unit="character" xml:id="BEAEy"/>
+                        <lb n="3" xml:id="BEAEΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAEΤ"/><orig xml:id="BEAEε">Ν</orig><w xml:id="BEAEο">τέλος</w> <w xml:id="BEAFA">δ<unclear xml:id="BEAFK">ὲ</unclear></w> <w xml:id="BEAFU">μολπα<supplied reason="lost" xml:id="BEAFe">ῖσι</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAFo"/>
+                        <lb n="4" xml:id="BEAFy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAFΙ"/><orig xml:id="BEAFΤ">ΙΝ</orig><w xml:id="BEAFε">ὅρος</w> <w xml:id="BEAFο">ἐπείγεται</w> <orig xml:id="BEAGA">Λ</orig><gap reason="lost" extent="unknown" unit="character" xml:id="BEAGK"/>
+                        <lb n="5" xml:id="BEAGU"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAGe"/><w xml:id="BEAGo">ὑδατώλενοι</w> <w xml:id="BEAGy">νύμφ<supplied reason="lost" xml:id="BEAGΙ">αι</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAGΤ"/>
+                        <lb n="6" xml:id="BEAGε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAGο"/><w xml:id="BEAHA">ρουσι</w> <w xml:id="BEAHK">σὺν</w> <w xml:id="BEAHU">δὲ</w> <w xml:id="BEAHe">αὐταῖς</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAHo"/>
+                        <lb n="7" xml:id="BEAHy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAHΙ"/><w xml:id="BEAHΤ">θεῶν</w> <w xml:id="BEAHε">ἅπαν</w> <w xml:id="BEAHο">δὲ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAIA"/>
+                        <lb n="8" xml:id="BEAIK"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAIU"/><w xml:id="BEAIe">ος</w> <w xml:id="BEAIo">δὲ</w> <w xml:id="BEAIy">ἀρχαία</w> <orig xml:id="BEAIΙ">Τ</orig><gap reason="lost" extent="unknown" unit="character" xml:id="BEAIΤ"/>
+                        <lb n="9" xml:id="BEAIε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAIο"/><w xml:id="BEAJA"><supplied reason="lost" xml:id="BEAJK">χ</supplied>ορὸν</w> <w xml:id="BEAJU">θεῶν</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAJe"/>
+                        <lb n="10" xml:id="BEAJo"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAJy"/><orig xml:id="BEAJΙ">ΤΑΙΚΥΚ</orig><gap reason="lost" extent="unknown" unit="character" xml:id="BEAJΤ"/>
+                        <lb n="11" xml:id="BEAJε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BEAJο"/><w xml:id="BEAKA"><supplied reason="lost" cert="low" xml:id="BEAKK">πολύ</supplied>στειοι</w> <w xml:id="BEAKU"><supplied reason="subaudible" xml:id="BEAKe">ποταμοί</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BEAKo"/>
+                    </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text after Pugliese Carratelli 1956 with slight changes based on Kaibel's edition.</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--'perexiguis litteris scripta'; part of a carmen melica; repub. by Mang, with new suggestions; rediscovered in stores and republished again by Brugnone (who attributes numbers of 18a and 18b to PC, whereas he just numbers 18a with fr. I and II after Kaibel) - now in three fragments, of which two join.  Kaibel's apograph seems to show first three lines as possibly being Latin letters, whence P-C only prints line 4ff. Brugnone reads all as Greek.--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0219</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>44.0738.23</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>31.0823</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl>
+                        <author>Pugliese Carratelli</author>
+                        <date>1956</date>
+                        <citedRange>no.18a</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PJDRZH66"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001394">https://biblio.inscriptiones.org/epig10001394</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1981</date>
+                        <citedRange>1079-1082</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4RHZUP7V"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001411">https://biblio.inscriptiones.org/epig10001411</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1994</date>
+                        <citedRange>112-115 no. 23</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/532NF7SV"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001825">https://biblio.inscriptiones.org/epig10001825</ref></bibl>
+                    <bibl>
+                        <author>Brugnone</author>
+                        <date>2014</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/J9ISUCNR"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001370">https://biblio.inscriptiones.org/epig10001370</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

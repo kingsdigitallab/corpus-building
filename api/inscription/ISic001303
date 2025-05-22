@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Epitaph for Ioulia Germana</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>EpiDoc editing and English translation</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001303</idno>
+                <idno type="TM">492908</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS">39101673</idno>
+                <idno type="PHI">140795</idno>
+                <idno type="PHI">316226</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001303</idno>
+                <idno type="DOI" when="2020-12-18">10.5281/zenodo.4353399</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Catania</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
+                        <idno type="inventory">257</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Four joining fragments of a marble plaque, of which the lower corners lost (and currently only two fragments located).</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <p>Overall dimensions:
+                                        <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">20</height>
+                                        <width unit="cm">23.5</width>
+                                        <depth unit="cm">1.5</depth>
+                                    </dimensions>
+                                   </p>
+                                </support>
+                                <condition ana="#condition.fragments.contiguous"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.incomplete"/>
+                                	</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Rhomboid Ο, Θ, Φ; Α with broken bar. Presence of interpuncts and of a ligature of ΜΗ at l. 3</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line5">Lines 1-5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">16-30</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">not registered</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
+                            	<geo>37.49223, 15.07041</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200" precision="low">1st — 2nd century CE ('La datazione è difficile', Korhonen 2004: 214)</origDate>
+                        </origin>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed">Observed by Ferrara and Kaibel in Museo Biscari, who saw the lower corners also; later observed by Korhonen in magazzino del cortile e magazzino superiore, Collezione Biscari (formerly sala VI.65).</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-07-15" who="#AA">Alex Antoniou Epidoc editing and English translation</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-05-17" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, apparatus, translations and commentary</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001303_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001303.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name>Ἰουλία</name> <name>Γε<unclear>ρ</unclear><supplied reason="lost">μᾶ</supplied><lb n="2" break="no"/>να</name></persName> <g ref="#interpunct">·</g> <w>ἡ</w> <w>θεοφιλὴς</w> <w>ἔζη<supplied reason="lost">σεν</supplied></w>
+                    <lb n="3"/><w>ἔτη</w> <g ref="#interpunct">·</g> <hi rend="supraline"><num value="14">ιδ</num></hi> <g ref="#interpunct">·</g> <w><expan><abbr><hi rend="ligature">μῆ</hi></abbr><ex>νας</ex></expan></w> <g ref="#interpunct">·</g> <hi rend="supraline"><num value="11">ια</num></hi> <g ref="#interpunct">·</g> <w><expan><abbr>ἡ</abbr><ex>μέρας</ex></expan></w> <g ref="#interpunct">·</g> <hi rend="supraline"><num value="15"><choice><corr>ι</corr><sic>η</sic></choice>ε</num></hi> <g ref="#interpunct">·</g> <persName type="attested"><name>Ἰο<supplied reason="lost">ύλι</supplied><lb n="4" break="no"/><supplied reason="undefined" evidence="previouseditor">ος</supplied></name> <supplied reason="undefined" evidence="previouseditor"><g ref="#interpunct">·</g></supplied> <name><supplied reason="undefined" evidence="previouseditor">Γ</supplied>ερμᾶ<supplied reason="undefined" evidence="previouseditor">νος</supplied></name></persName> <supplied reason="undefined" evidence="previouseditor"><g ref="#interpunct">·</g></supplied> <w><supplied reason="undefined" evidence="previouseditor">γλυκυτά</supplied><lb n="5" break="no"/><supplied reason="undefined" evidence="previouseditor">τῃ</supplied></w> <w><supplied reason="undefined" evidence="previouseditor">θ</supplied>υγατ<supplied reason="undefined" evidence="previouseditor">ρὶ</supplied></w> <w><supplied reason="undefined" evidence="previouseditor">ἐποίη</supplied><supplied reason="lost">σεν</supplied></w>
+                </ab>
+            </div>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs and Kaibel's transcription</note></app>
+                    <app loc="line 3"><note>lapis, Ferrara, Kaibel: ΗΕ; Kaibel: η⟨ε⟩ (i.e. suppressed the E); Korhonen: ιε (or κε)</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Ioulia Germana, dear to the gods, lived for 14 years, 11 months and 15 days. Ioulios Germanos made this for his sweetest daughter.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Ioulia Germana, cara agli dèi, visse 14 anni, 11 mesi e 15 giorni. Giulio Germano realizzò questo per la sua dolcissima figlia.</p>
+            </div>
+            <div type="commentary">
+                <p>The structure of the epitaph is the traditional one for pagan epitaphs, with the name of the deceased (and an attribute), his/her age, the name of the dedicant, a noun describing the deceased (which often expresses the degree of kinship with the dedicant) in dative and the dedication verb (<foreign xml:lang="grc">ποιέω</foreign> in the aorist form), for which see Korhonen (2004: 85-87). The attribute <foreign xml:lang="grc">θεοφιλής</foreign> attributed to the deceased is uncommon in pagan Greek epigraphy, more frequent in Christian epigraphy in the superlative form as an attribute of bishops and emperors.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0480</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                    <bibl type="corpus" n="IMusCatania">
+                        <citedRange>100</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                    <bibl>
+                        <author>Ferrara</author>
+                        <date>1829</date>
+                        <citedRange>390 no. 3</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref></bibl>
+                    <bibl/>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl type="corpus" n="IMusCatania">
+                    <citedRange>85-87</citedRange>
+                    <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

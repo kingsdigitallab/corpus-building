@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISicily 030279</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>EpiDoc template development</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	</titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030279</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030279</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Campania</region>
+                        <settlement>Napoli</settlement>
+                        <repository role="museum" ref="https://mannapoli.it/">Museo archeologico nazionale di Napoli</repository>
+                        <idno type="inventory"/>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p/>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
+                                    <dimensions>
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.damaged"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p/>
+                                    <rs ana="#execution.engraved" ref="http://www.eagle-network.eu/voc/writing/lod/3">engraved</rs>
+                                	<damage ana="#text_condition.complete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p/>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">not measured</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
+                                <geo>37.32084, 13.58876</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0100" evidence="lettering textual-context" cert="low">later third or second century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered"/>
+                        <provenance type="observed" subtype="autopsied" resp="#JP"/>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.decree" ref="http://www.eagle-network.eu/voc/typeins/lod/384.html">decree</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2021-10-25" who="#JP">Jonathan Prag created initial stub file</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic030279_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic030279.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+        </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/>Ἐπί <roleName type="civic.religious" subtype="hierothutes">ἱεροθύτᾶ</roleName>
+                    <lb n="2"/><persName type="attested"><name>Νυμφοδώρου</name> τοῦ <persName type="attested"><name type="patronym">Φίλωνος</name></persName></persName>
+                    <lb n="3"/><roleName type="civic" subtype="paraprostates"><expan><abbr>παραπροστά</abbr><ex>τα</ex></expan></roleName> τᾶς βουλᾶς,
+                    <lb n="4"/>προεδρευούσας τᾶς φυλᾶς
+                    <lb n="5"/>τῶν <orgName type="tribe">Ὑλλέων</orgName>, <roleName type="civic" subtype="proagoros">προαγοροῦντος</roleName>
+                    <lb n="6"/><persName type="attested"><name>Διοκλέος</name> τοῦ <persName type="attested"><name type="patronym">Διοκλέος</name></persName></persName>,
+                    <lb n="7"/><roleName type="civic" subtype="grammateus">γραμματεύοντος</roleName> <persName type="attested"><name>Ἀδρανίωνος</name> <persName type="attested"><name type="patronym">Ἀλεξάνδρου</name></persName></persName>,
+                    <lb n="8"/>ἁλίασμα ἕκτας διμήνου, <rs type="month">Καρνείου</rs> ἐξήκο<supplied reason="lost">ντ</supplied>ος παντᾶι,
+                    <lb n="9"/>ὑπὲρ <roleName type="paracivic" subtype="proxenos">προξενίας</roleName> <persName type="attested"><name>Δημητρίωι</name> <persName type="attested"><name type="patronym">Διοδότου</name></persName> <placeName type="ethnic">Συρακοσίωι</placeName></persName>.
+                    <lb n="10"/>Ἔδοξε τᾶι ἁλίαι καθὰ καὶ τᾶι συγκλήτωι <num value="110">ρι</num>  ἐπειδὴ ἀνάγ
+                    <lb n="11" break="no"/>γελλον ὁι <roleName type="civic" subtype="presbys">πρέσβεες</roleName> οἱ ἐς <placeName>Ῥώμαν</placeName> πορευθέντες, <persName type="attested"><name>Πασίων</name>
+                    <lb n="12"/><persName type="attested"><name type="patronym">Πασίωνος</name></persName> <persName type="attested"><name type="papponym">Κότητος</name></persName></persName> καὶ <persName type="attested"><name>Θεόδωρος</name> <persName type="attested"><name type="patronym">Θεοδώρου</name></persName> <persName type="attested"><name type="papponym">Ξηνιάδα</name></persName></persName>,
+                    <lb n="13"/><persName type="attested"><name>Δημήτριον</name> <persName type="attested"><name type="patronym">Διοδότου</name></persName> <placeName type="ethnic">Συρακόσιον</placeName></persName> πολλὰς καὶ μεγάλας χρείας
+                    <lb n="14"/>παρεισχῆσθαι τῶι ἁμῶι δάμωι καὶ μεγάλων ἀγαθῶν παραίτιο<supplied reason="omitted">ν</supplied>
+                    <lb n="15"/>γεγόνειν, τοῖς δὲ <placeName type="ethnic">Ἀκραγαντίνοις</placeName> πάτριόν ἐστι καὶ ἐκ προγόνων
+                    <lb n="16"/>παραδεδομένον τιμεῖν τοὺς ἀγαθοὺς ἄνδρας καὶ προισταμέ
+                    <lb n="17" break="no"/>νους τοῦ ἁμοῦ δάμου ταῖς καταξίοις τιμαῖς,
+                    <lb n="18"/>δεδόχθαι ἐπί ἀγαθᾶι τύχαι καὶ σωτηρίαι τοῦ δάμου τῶν <placeName type="ethnic">Ἀκραγαντίνων</placeName>
+                    <lb n="19"/>εἴμειν πρόξενον καὶ εὐεργέταν <persName type="attested"><name>Δημήτριον</name> <persName type="attested"><name type="patronym">Διοδότου</name></persName> <placeName type="ethnic">Συρακόσι
+                    <lb n="20" break="no"/>ον</placeName></persName>, ὅπως πᾶσι φανερὸν ἦ ὅτι ὁ δᾶμος τῶν <placeName type="ethnic">Ἀκραγαντίνων</placeName> ἐπί
+                    <lb n="21" break="no"/>σταται χάριτας ἀπονέμειν καταξίας τοῖς εὐεργετεῖν προαι
+                    <lb n="22" break="no"/>ρουμένοις αὐτόν · τὸ δὲ δόγμα τόδε κολάψαντας ἐς χαλκώ
+                    <lb n="23" break="no"/>ματα δύο, τὸ μὲν ἓν ἀναθέμειν εἰς τὸ βουλευτήριον, τὸ δὲ
+                    <lb n="24"/>ἄλλο ἀποδόμειν <persName type="attested"><name>Δημητρίωι</name> <persName type="attested"><name type="patronym">Διοδότου</name></persName> <placeName type="ethnic">Συρακοσίωι</placeName></persName> ὑπό
+                    <lb n="25" break="no"/>μναμα τᾶς ποτὶ τὸν δᾶμον εὐνοίας · τοὺς δὲ <roleName type="civic" subtype="tamias">ταμίας</roleName>
+                    <lb n="26"/>ἐξοδιάξαι ἐς τὰ προγεγραμμένα ὅσον κα χρεία ἦ καὶ φέ
+                    <lb n="27" break="no"/>ρειν τᾶν ἔξοδον διὰ τῶν ἀπολόγων.
+                    <lb n="28"/>Ὁμογνώμονες τοῦ συνεδρίου πάντες.
+                </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app><note>Text after IGDS no.185</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p/>
+            </div>
+            <div type="translation" xml:lang="it" resp="#JP">
+                <p/>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>.</p>
+                </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0952</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                    <bibl type="corpus" n="SGDI">
+                        <citedRange>4254</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                    <bibl type="corpus" n="IGDS1">
+                        <citedRange>
+                            <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">185</ref>
+                        </citedRange>
+                    </bibl>
+                        <bibl type="corpus" n="IGUR">
+                            <author>Moretti</author>
+                            <date>1968-1990</date>
+                            <citedRange>2</citedRange>
+                            <ptr target="https://www.zotero.org/groups/382445/items/MCBAPQH7"/>
+                            <ref target="https://biblio.inscriptiones.org/epig10000015">https://biblio.inscriptiones.org/epig10000015</ref>
+                    </bibl>
+                    <bibl>
+                        <author>De Waele</author>
+                        <date>1971</date>
+                        <citedRange>34-37 no.5, 174-182 pl. 6</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CXHAXNBQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002040">https://biblio.inscriptiones.org/epig10002040</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Manganaro</author>
+	           <date>1963</date>
+	           <citedRange>passim fig. LXIII</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/EEMEBTIG"/>
+	       <ref target="https://biblio.inscriptiones.org/epig10001847">https://biblio.inscriptiones.org/epig10001847</ref></bibl>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

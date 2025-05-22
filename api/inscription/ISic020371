@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISic020371</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                     <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                     <resp>project direction, template development and general editor</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>original data collection and editing, encoding text in Epidoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic020371</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic020371</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
+                        <idno type="inventory">34472</idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek<certainty locus="value" match="../@mainLang" assertedValue="xly"><desc>Elymian</desc></certainty></textLang>    
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Fragment of foot of a black-glaze lekythos.</p>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <objectType ana="#object.vessel.lekythos" ref="http://kerameikos.org/id/lekythos">lekythos</objectType> <!-- ref="https://www.eagle-network.eu/voc/objtyp/lod/305.html" -->
+                                    <dimensions>
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
+                                    <p>Two texts placed on the underside and on the upper part of the foot respectively, on two lines and in a circular arrangement.</p>
+                                    <damage ana="#text_condition.incomplete text_condition.legible"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote xml:id="h1">
+                                <!-- Based on Glyph table: (a) alpha04; gamma02(?); reverse gamma02 (?); epsilon23; heta05; iota01; omicron04; mu02; nu05; rho17; sigma03; tau07 -->
+                                <p>
+                                    Types list:
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html">Α type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.1.html">Α type1.1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.1.1.html">Α type1.1.1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Γ-type1.html">Γ type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.2.html">Ε type2.2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Θ-type1.html">Θ type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Θ-type1.4.html">Θ type1.4</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html">Ι type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Λ-type2.html">Λ type2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.html">Μ type2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.2.html">Μ type2.2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.2.html">Μ type2.2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type2.html">Ν type2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type2.2.html">Ν type2.2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type4.html">Ο type4</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.html">Ρ type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.6.html">Ρ type1.6</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.html">Ρ type2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.6.html">Ρ type2.6</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type1.html">Τ type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type1.1.html">Τ type1.1</ref>
+                                </p>
+                                <locus from="line1" to="line1">Face a</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">5-8</height>
+                                </dimensions>
+                            </handNote>
+                            <handNote xml:id="h2">
+                                <!-- Based on Glyph table: (b) alpha04; heta05; epsilon25; epsilon17; nu05; omicron04; rho19; sigma03; upsilon03. -->
+                                <p>
+                                    Types list:
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html">Α type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.1.html">Α type1.1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.1.1.html">Α type1.1.1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.2.html">Ε type2.2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.html">Μ type2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.1.html">Μ type2.1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.html">Ν type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.2.html">Ν type1.2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type4.html">Ο type4</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.html">Ρ type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.4.html">Ρ type1.4</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.html">Ρ type2</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.4.html">Ρ type2.4</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type1.html">Υ type1</ref>
+                                </p>
+                                <locus from="line1" to="line1">Face b</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">4-7</height>
+                                </dimensions>
+                            </handNote>   
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>
+                                <placeName type="modern"/>
+                                <geo>37.94171, 12.83649</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0480">500—480 BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" from="1957" to="1977">Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro<geo>37.94240, 12.84509</geo>, 1.9km east of temple of Segesta.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.unknown" ref="https://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-02-01" who="#VM">Valentina Mignosa added metadata, text</change>
+                <change when="2025-04-24" who="#SS">added letterform types to handNote</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic020371_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic020371.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic020371_rear_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic020371_rear.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="xly-Grek" resp="#VM">
+                <div type="textpart" subtype="section" n="a">
+                    <ab>
+                        <lb n="1" xml:id="UlKAU"/><gap reason="lost" extent="unknown" unit="character" xml:id="UlKAe"/><w xml:id="UlKAo">ΙΛΕΣΕΘΑΡΟΝ<unclear xml:id="UlKAy">Γ</unclear>ΟΤΑΣ<unclear xml:id="UlKAΙ">h</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="UlKAΤ"/>
+                        <lb n="2" xml:id="UlKAε"/><gap reason="lost" extent="unknown" unit="character" xml:id="UlKAο"/><w xml:id="UlKBA">ΙΕΜΑΤΟΑ<unclear xml:id="UlKBK">Ν</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="UlKBU"/>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="section" n="b">
+                    <ab>
+                        <lb n="1" xml:id="UlKBy"/><gap reason="lost" extent="unknown" unit="character" xml:id="UlKBΙ"/><w xml:id="UlKBΤ">ͱΕΡΜΟΝΟΣ</w> <w xml:id="UlKBε">Ε<unclear xml:id="UlKBο">Μ</unclear><supplied reason="lost" xml:id="UlKCA">Ι</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="UlKCK"/>
+                        <lb n="2" xml:id="UlKCU"/><gap reason="lost" extent="unknown" unit="character" xml:id="UlKCe"/><w xml:id="UlKCo">ΥΑͱΕΡΑ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="UlKCy"/>
+                        <lb n="3" xml:id="UlKCΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="UlKCΤ"/><gap reason="illegible" quantity="1" unit="character" xml:id="UlKCε"/><gap reason="lost" extent="unknown" unit="character" xml:id="UlKCο"/>
+                    </ab>
+                </div>
+            </div>
+            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">                 
+                <ab/>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text after Agostiniani 1977 (IAS I) with slight changes based on photograph</note>
+                    </app>
+                    <app loc="b1">
+                        <note>Agostiniani: Ἕρμονός εἰμι</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p><!--No translation currently agreed--></p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p><!--No translation currently agreed--></p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p/>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IAS1">
+                        <author>Agostiniani</author>
+                        <date>1977</date>
+                        <citedRange>371</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/QR2S9AJ9"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002201">https://biblio.inscriptiones.org/epig10002201</ref></bibl>
+                    <bibl>
+                        <author>Tusa</author>
+                        <date>1975</date>
+                        <citedRange>38a-b</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/DPKBD88S"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001532">https://biblio.inscriptiones.org/epig10001532</ref></bibl>
+                </listBibl>
+                <listBibl type="discussion"><bibl/>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
