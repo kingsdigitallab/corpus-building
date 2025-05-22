@@ -218,6 +218,22 @@ img {
 	outline: var(--border-size-2) solid var(--focus-color);
 }
 
+[aria-busy='true'] {
+	cursor: progress;
+
+	&::before {
+		content: '';
+		animation: spin 0.75s linear infinite;
+		border: var(--border-size-3) solid currentColor;
+		border-radius: 50%;
+		border-right-color: transparent;
+		display: inline-block;
+		height: var(--size-3);
+		margin-inline-end: var(--size-2);
+		width: var(--size-3);
+	}
+}
+
 /** Link styles */
 a {
 	color: var(--brand, var(--link));
@@ -332,6 +348,7 @@ code {
 	font-size: var(--font-size-0);
 }
 /** End of Code styles */
+
 /* Utility classes */
 .badge {
 	background-color: var(--surface-3);
