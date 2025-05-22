@@ -1,6 +1,8 @@
 import { error } from '@sveltejs/kit';
 import fs from 'node:fs/promises';
 
+export const prerender = true;
+
 /** @type {import('./$types').RequestHandler} */
 export async function GET({ params: { slug } }) {
 	try {
