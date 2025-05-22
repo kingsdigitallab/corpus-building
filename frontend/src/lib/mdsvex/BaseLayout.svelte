@@ -1,7 +1,7 @@
 <script>
 	import * as config from '$lib/config';
 
-	let { title, excerpt, tags } = $props();
+	const { title, excerpt, tags } = $props();
 </script>
 
 <svelte:head>
