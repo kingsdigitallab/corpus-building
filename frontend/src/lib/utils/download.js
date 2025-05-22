@@ -1,3 +1,5 @@
+import JSZip from 'jszip';
+
 /**
  * Creates and downloads a CSV file from inscription data
  *
@@ -75,4 +77,40 @@ function getInscriptionLanguage(inscription) {
  */
 function getInscriptionSettlement(inscription) {
 	return inscription.settlement || 'N/A';
+}
+
+/**
+ * Creates and downloads a ZIP file from inscription XML files
+ *
+ * @param {string} summary - The summary of the search
+ * @param {Array<{ file: string; title: string; notBefore: number; notAfter: number; places: Array<{ offset: string; _: string; type: string; }>; status: { _: string; }; type: { _: string; }; objectType: { _: string; }; language: { _: string; }; settlement: { _: string; }; }>} inscriptions - Array of inscription objects
+ */
+export async function downloadInscriptionsXML(summary, inscriptions) {
+	const zip = new JSZip();
+
+	zip.file('summary.txt', summary);
+
+	for (const inscription of inscriptions) {
+		try {
+			const response = await fetch(`/api/inscription/${inscription.file}`);
+			if (!response.ok) {
+				console.warn(`Failed to fetch XML for ${inscription.file}`);
+				continue;
+			}
+			const xmlContent = await response.text();
+			zip.file(`${inscription.file}.xml`, xmlContent);
+		} catch (error) {
+			console.error(`Error fetching XML for ${inscription.file}:`, error);
+		}
+	}
+
+	const content = await zip.generateAsync({ type: 'blob' });
+
+	const a = document.createElement('a');
+	a.href = URL.createObjectURL(content);
+	a.download = 'inscriptions.zip';
+	a.click();
+	a.remove();
+
+	URL.revokeObjectURL(a.href);
 }
