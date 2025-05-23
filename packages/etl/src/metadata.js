@@ -1,4 +1,4 @@
-import xml2js, { Builder } from "xml2js";
+import xml2js from "xml2js";
 import museums from "../../../data/processed/museums.json" assert { type: "json" };
 
 /**
