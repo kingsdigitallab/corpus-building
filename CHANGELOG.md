@@ -1,5 +1,20 @@
 
 
+# [0.19.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.18.0...v0.19.0) (2025-05-23)
+
+
+### Bug Fixes
+
+* **InscriptionTableRow:** improve handling of optional status property ([34cbbff](https://github.com/kingsdigitallab/corpus-building/commit/34cbbff64e19931c2fe9d61b6352f5da8551bd00))
+
+
+### Features
+
+* **api:** add API endpoints to get inscriptions and edtions text ([86b3a77](https://github.com/kingsdigitallab/corpus-building/commit/86b3a7720806fb1945cfbd0a98cc6e6b48dae04b))
+* **etl:** extract editions text ([52821e7](https://github.com/kingsdigitallab/corpus-building/commit/52821e7ffc8a7a562e5da77861358b36c4741039))
+* **inscription:** add link to museum detail page ([a9a81cf](https://github.com/kingsdigitallab/corpus-building/commit/a9a81cfa8ed1b64050346dad78649f962e5fbcf2))
+* **museum:** add museum detail page ([7cb5afe](https://github.com/kingsdigitallab/corpus-building/commit/7cb5afe867f10c8211f9383a5faf11713c5ed22d))
+
 # [0.18.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.17.0...v0.18.0) (2025-05-22)
 
 
