@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
@@ -30,8 +31,8 @@
 	let translationDivs = $state([]);
 
 	const bibliographyEdition = $derived(
-		metadata.bibliographyEdition?.bibl
-			.filter((b) => b)
+		metadata?.bibliographyEdition?.bibl
+			?.filter((b) => b)
 			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
 			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
@@ -225,7 +226,9 @@
 					<dt>Repository</dt>
 					{#if metadata.repository}
 						<dd>
-							<a href={metadata.repository.ref}>{metadata.repository._}</a>{#if metadata.idno},
+							<a href={`${base}/museum/${metadata.repository.museum.slug}`}
+								>{metadata.repository._}</a
+							>{#if metadata.idno},
 								{metadata.idno._}{/if}
 						</dd>
 					{/if}
@@ -288,7 +291,7 @@
 						{/each}
 					</ul>
 				</dd>
-				{#if bibliographyEdition.length}
+				{#if bibliographyEdition && bibliographyEdition.length}
 					<dt>Printed editions</dt>
 					<dd>
 						<ul class="bibliography-list">
