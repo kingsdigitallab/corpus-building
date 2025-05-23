@@ -1,6 +1,6 @@
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import xml2js from "xml2js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -22,10 +22,14 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
 
   // Extract museums from TEI structure
   const museums = xml.TEI.text[0].body[0].listOrg[0].org.map((org) => {
+    const uri = org.orgName[0].$.ref;
+    const slug = uri.split("/").pop();
+
     const museum = {
+      slug,
       type: org.$.type,
       name: org.orgName[0]._.replace(/\s{2,}/g, " "),
-      uri: org.orgName[0].$.ref,
+      uri,
       description: org.desc ? org.desc[0]?.replace(/\s{2,}/g, " ") : "",
       location: {
         settlement: org.location[0].settlement[0]?.replace(/\s{2,}/g, " "),
