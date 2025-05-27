@@ -17,7 +17,7 @@ export async function load({ params: { slug } }) {
 		 * 		settlement: string,
 		 * 		region: string,
 		 * 		country: string,
-		 * 		geo: { lon: number, lat: number }
+		 * 		geo: { lon: number | null, lat: number | null }
 		 * 	}
 		 * } | undefined}
 		 */
