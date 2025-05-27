@@ -93,7 +93,7 @@
 			return parts.pop() || '';
 		}
 
-		return `${'+'.repeat(levels - 1)} ${parts.pop()}`;
+		return `${'  '.repeat(levels - 1)} └─ ${parts.pop()}`;
 	}
 </script>
 
@@ -462,6 +462,7 @@
 	.filters-group ul li label div span {
 		text-wrap: balance;
 		padding-inline-end: var(--size-1);
+		white-space: pre;
 	}
 
 	.filters-group ul li label div small {
