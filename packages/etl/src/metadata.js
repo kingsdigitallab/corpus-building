@@ -1,5 +1,5 @@
 import xml2js from "xml2js";
-import museums from "../../../data/processed/museums.json" assert { type: "json" };
+import museums from "../../../data/processed/museums.json" with { type: "json" };
 
 /**
  * Extracts metadata from an XML string.
@@ -94,7 +94,7 @@ export async function extractMetadata(xmlString) {
  * @param {boolean} options.mergeAttrs
  * @returns {Promise<Object>}
  */
-async function parseXML(
+export async function parseXML(
   xmlString,
   options = { explicitArray: false, mergeAttrs: true }
 ) {
