@@ -5,7 +5,7 @@ import SaxonJS from "saxon-js";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { extractMetadata } from "./metadata.js";
+import { extractMetadata, parseXML } from "./metadata.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -69,6 +69,17 @@ async function transformToHtml(filePath) {
   };
 }
 
+async function extractLemmas(xmlString) {
+  const xml = await parseXML(xmlString);
+  const edition = xml.TEI.text.body.div.find(
+    (div) => div.subtype === "simple-lemmatized"
+  );
+  const lemmas = edition?.ab?.w?.map((w) => w.lemma) ?? [];
+  const text = edition?.ab?.w?.map((w) => w._) ?? [];
+
+  return { lemmas, text };
+}
+
 /**
  * Processes a single XML file, extracting metadata and/or transforming to HTML
  * based on the provided options.
@@ -90,6 +101,7 @@ async function processFile(filePath, outputPath, options = {}) {
   const {
     extractMetadata: shouldExtractMetadata = true,
     transformToHtml: shouldTransformToHtml = true,
+    extractLemmas: shouldExtractLemmas = true,
   } = options;
   const baseName = path.basename(filePath, ".xml");
   const xmlString = await fs.readFile(filePath, "utf-8");
@@ -99,6 +111,9 @@ async function processFile(filePath, outputPath, options = {}) {
 
   const htmlOutputPath = path.join(outputPath, "html");
   const htmlOutputFile = path.join(htmlOutputPath, `${baseName}.json`);
+
+  const lemmasOutputPath = path.join(outputPath, "lemmas");
+  const lemmasOutputFile = path.join(lemmasOutputPath, `${baseName}.json`);
 
   let result = {
     file: baseName,
@@ -120,6 +135,15 @@ async function processFile(filePath, outputPath, options = {}) {
     await fs.writeFile(htmlOutputFile, JSON.stringify(html, null, 2));
   }
 
+  if (shouldExtractLemmas) {
+    const lemmas = await extractLemmas(xmlString);
+
+    result = { ...result, ...lemmas };
+
+    await fs.mkdir(lemmasOutputPath, { recursive: true });
+    await fs.writeFile(lemmasOutputFile, JSON.stringify(lemmas, null, 2));
+  }
+
   return result;
 }
 
@@ -134,18 +158,28 @@ async function processFile(filePath, outputPath, options = {}) {
  * @param {Object} [options={}] - An object containing processing options.
  * @param {boolean} [options.extractMetadata] - Whether to extract metadata from the XML files.
  * @param {boolean} [options.transformToHtml] - Whether to transform the XML files to HTML.
+ * @param {boolean} [options.extractLemmas] - Whether to extract lemmas from the XML files.
  * @returns {Promise<Array>} A promise that resolves to an array of objects, each containing the processing results for a single file.
  * @throws {Error} If there's an error reading the directory or processing files.
  */
 async function processTeiFiles(inputPath, outputPath, options = {}) {
   const files = await fs.readdir(inputPath);
   const results = [];
+  const lemmas = [];
 
   for (const file of files) {
     if (file.endsWith(".xml")) {
       const filePath = path.join(inputPath, file);
       try {
         const result = await processFile(filePath, outputPath, options);
+        lemmas.push({
+          file: result.file,
+          lemmas: result.lemmas,
+          text: result.text,
+        });
+
+        delete result.lemmas;
+        delete result.text;
 
         delete result.editions;
         delete result.support;
@@ -158,6 +192,7 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         delete result?.repository?.museum;
         delete result.bibliographyEdition;
         delete result.bibliographyDiscussion;
+
         results.push(result);
 
         console.log(`Processed ${filePath} successfully.`);
@@ -170,6 +205,11 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   if (options.extractMetadata) {
     const metadataOutputFile = path.join(outputPath, "corpus.json");
     await fs.writeFile(metadataOutputFile, JSON.stringify(results, null, 2));
+  }
+
+  if (options.extractLemmas) {
+    const lemmasOutputFile = path.join(outputPath, "lemmas.json");
+    await fs.writeFile(lemmasOutputFile, JSON.stringify(lemmas, null, 2));
   }
 
   return results;
@@ -215,6 +255,11 @@ async function main() {
       description: "Transform to HTML",
       default: true,
     })
+    .option("lemmas", {
+      type: "boolean",
+      description: "Extract lemmas",
+      default: true,
+    })
     .help()
     .alias("help", "h")
     .parse();
@@ -226,6 +271,7 @@ async function main() {
   const options = {
     extractMetadata: argv.metadata,
     transformToHtml: argv.html,
+    extractLemmas: argv.lemmas,
   };
 
   try {
