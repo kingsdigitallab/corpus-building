@@ -1,5 +1,5 @@
 <script>
-	import { browser } from '$app/environment';
+	import { dev } from '$app/environment';
 	import BaseLink from '$lib/components/BaseLink.svelte';
 	import * as config from '$lib/config';
 	import ThemeToggle from './ThemeToggle.svelte';
@@ -15,7 +15,14 @@
 
 <header>
 	<nav>
-		<BaseLink href="/" class="title">{config.title}</BaseLink>
+		<ul>
+			<li>
+				<BaseLink href="/" class="title">{config.title}</BaseLink>
+			</li>
+			{#if dev}
+				<li><mark>dev</mark></li>
+			{/if}
+		</ul>
 		<ul>
 			<li><BaseLink href="/about">About</BaseLink></li>
 			<li>Guide</li>
@@ -44,6 +51,11 @@
 		display: flex;
 		gap: var(--size-2);
 		list-style: none;
+		padding-inline-start: 0;
+	}
+
+	ul:first-child li:first-child {
+		padding-inline-start: 0;
 	}
 
 	li {
