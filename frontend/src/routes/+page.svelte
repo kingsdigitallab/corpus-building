@@ -1,7 +1,10 @@
 <script>
-	import heroImage from '$lib/assets/images/hero.png';
+	import heroImage1 from '$lib/assets/images/hero1.png';
+	import heroImage2 from '$lib/assets/images/hero2.png';
 	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
 	import * as config from '$lib/config';
+
+	const heroImage = $derived(Math.random() > 0.5 ? heroImage1 : heroImage2);
 </script>
 
 <section class="hero">
@@ -87,7 +90,7 @@
 		height: 110%;
 		object-fit: cover;
 		object-position: left;
-		width: 100%;
+		width: auto;
 	}
 
 	.hero-spacer {
