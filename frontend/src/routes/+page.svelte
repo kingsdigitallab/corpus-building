@@ -3,8 +3,13 @@
 	import heroImage2 from '$lib/assets/images/hero2.png';
 	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
 	import * as config from '$lib/config';
+	import { onMount } from 'svelte';
 
-	const heroImage = $derived(Math.random() > 0.5 ? heroImage1 : heroImage2);
+	let heroImage = $state(heroImage1);
+
+	onMount(() => {
+		heroImage = Math.random() > 0.5 ? heroImage1 : heroImage2;
+	});
 </script>
 
 <section class="hero">
