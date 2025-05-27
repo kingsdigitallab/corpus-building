@@ -1,4 +1,5 @@
 import corpus from '../../../data/corpus.json';
+import lemmas from '../../../data/lemmas.json';
 import itemsjs from 'itemsjs';
 
 /**
@@ -176,6 +177,7 @@ searchConfig.searchableFields = [
 	'keywords',
 	'title',
 	'text',
+	'lemmas',
 	...Object.keys(searchConfig.aggregations)
 ];
 
@@ -209,6 +211,8 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 
 			return {
 				...item,
+				lemmas: lemmas.find((l) => l.file === item.file)?.lemmas ?? [],
+				text: lemmas.find((l) => l.file === item.file)?.text ?? [],
 				status: item?.status?._ ?? undefined,
 				// raw values, because the original are converted to facet values
 				rawObjectType: item.objectType,
