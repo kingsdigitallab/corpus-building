@@ -11,7 +11,8 @@
 	<div class="hero-left">
 		<hgroup>
 			<h1>{config.title}</h1>
-			<h2>{config.description}</h2>
+			<h2>{config.subtitle}</h2>
+			<p>{config.description}</p>
 		</hgroup>
 		<a class="discover-link" href="#faceted-search">
 			<span class="arrow">↓</span>
@@ -54,8 +55,15 @@
 	}
 
 	.hero-left h2 {
-		font-weight: 600;
+		margin-block-end: var(--size-2);
+		text-wrap: balance;
+	}
+
+	.hero-left p {
+		font-size: var(--font-size-2);
+		font-weight: 500;
 		max-inline-size: 100%;
+		text-wrap: balance;
 	}
 
 	.discover-link {
