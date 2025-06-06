@@ -5,7 +5,39 @@
 	import InscriptionPlace from './InscriptionPlace.svelte';
 	import InscriptionLink from './InscriptionLink.svelte';
 
-	let { inscription } = $props();
+	const { inscription, view = 'image', query } = $props();
+
+	/**
+	 * @param {string} html
+	 */
+	function highlightText(html) {
+		if (!query) return html;
+
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(html, 'text/html');
+		const elements = doc.querySelectorAll('[data-lemma], [data-text]');
+		const queryWords = query.toLowerCase().split(/\s+/).filter(Boolean);
+
+		for (const element of elements) {
+			const lemma = element.getAttribute('data-lemma');
+			const text = element.getAttribute('data-text');
+			const shouldHighlight = queryWords.some(
+				(/** @type {string} */ word) =>
+					lemma?.toLowerCase().includes(word) || text?.toLowerCase().includes(word)
+			);
+
+			if (shouldHighlight) {
+				const mark = document.createElement('mark');
+				for (const attr of element.attributes) {
+					mark.setAttribute(attr.name, attr.value);
+				}
+				mark.innerHTML = element.innerHTML;
+				element.replaceWith(mark);
+			}
+		}
+
+		return doc.body.innerHTML;
+	}
 </script>
 
 <div class="inscription-card">
@@ -13,24 +45,32 @@
 		<InscriptionLink id={inscription.file} class="inscription-id">
 			ID: {inscription.file}
 		</InscriptionLink>
-		<div class="card-image">
-			{#if inscription.facsimile}
-				<InscriptionLink id={inscription.file} title={inscription.title}>
-					<Image
-						src="{config.imageServer}{inscription.file}/{inscription.facsimile
-							.url}/{config.imageThumbParams}"
-						alt={inscription.facsimile.desc}
-						width={400}
-						height={200}
-					/>
-				</InscriptionLink>
-			{:else}
-				<div class="card-image-placeholder"></div>
-			{/if}
-		</div>
+
+		{#if view === 'image'}
+			<div class="card-image">
+				{#if inscription.facsimile}
+					<InscriptionLink id={inscription.file} title={inscription.title}>
+						<Image
+							src="{config.imageServer}{inscription.file}/{inscription.facsimile
+								.url}/{config.imageThumbParams}"
+							alt={inscription.facsimile.desc}
+							width={400}
+							height={200}
+						/>
+					</InscriptionLink>
+				{:else}
+					<div class="card-image-placeholder"></div>
+				{/if}
+			</div>
+		{/if}
 	</div>
 
 	<div class="card-body">
+		{#if view === 'text'}
+			<div class="surface-4 edition-content">
+				{@html highlightText(inscription.html)}
+			</div>
+		{/if}
 		<div class="inscription-title">
 			<InscriptionLink id={inscription.file} title={inscription.title}
 				>{inscription.title}</InscriptionLink
@@ -103,7 +143,25 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: space-between;
+	}
+
+	.edition-content {
+		border-radius: var(--radius-2);
+		font-family: var(--font-family-greek);
+		font-size: var(--font-size-1);
+		height: 100%;
+		max-height: 200px;
+		min-height: 200px;
+		margin-inline: var(--size-2);
+		overflow-x: scroll;
+		overflow-y: scroll;
+		padding-block: var(--size-4);
+		padding-left: var(--size-8);
+		padding-right: var(--size-3);
+		position: relative;
+		text-align: start;
+		transition: max-height 0.3s ease-in-out;
 	}
 
 	.inscription-title {
