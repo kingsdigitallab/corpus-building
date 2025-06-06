@@ -8,7 +8,7 @@
 	let heroImage = $state(heroImage1);
 
 	onMount(() => {
-		heroImage = Math.random() > 0.5 ? heroImage1 : heroImage2;
+		heroImage = Math.random() * 2 < 1 ? heroImage1 : heroImage2;
 	});
 </script>
 
