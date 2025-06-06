@@ -157,7 +157,7 @@ async function processFile(filePath, outputPath, options = {}) {
     const json = JSON.parse(html);
 
     try {
-      const words = await extractLemmas(json.editions[1].html);
+      const words = await extractLemmas(json.editions[0].html);
       result = { ...result, ...words };
 
       await fs.mkdir(lemmasOutputPath, { recursive: true });
@@ -207,17 +207,17 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         result.lemmas = undefined;
         result.text = undefined;
 
-        delete result.editions;
-        delete result.support;
-        delete result.dimensions;
-        delete result.handNote;
-        delete result.provenanceFound;
-        delete result.provenanceObserved;
-        delete result.provenanceLost;
-        delete result.graphics;
-        delete result?.repository?.museum;
-        delete result.bibliographyEdition;
-        delete result.bibliographyDiscussion;
+        result.editions = undefined;
+        result.support = undefined;
+        result.dimensions = undefined;
+        result.handNote = undefined;
+        result.provenanceFound = undefined;
+        result.provenanceObserved = undefined;
+        result.provenanceLost = undefined;
+        result.graphics = undefined;
+        result.repository.museum = undefined;
+        result.bibliographyEdition = undefined;
+        result.bibliographyDiscussion = undefined;
 
         results.push(result);
 
