@@ -226,10 +226,16 @@
 					<dt>Repository</dt>
 					{#if metadata.repository}
 						<dd>
-							<a href={`${base}/museum/${metadata.repository.museum.slug}`}
-								>{metadata.repository._}</a
-							>{#if metadata.idno},
-								{metadata.idno._}{/if}
+							{#if metadata.repository.museum}
+								<a href={`${base}/museum/${metadata.repository.museum.slug}`}>
+									{metadata.repository.museum.name}
+								</a>
+							{:else}
+								{metadata.repository._}
+							{/if}
+							{#if metadata.idno}
+								, {metadata.idno._}
+							{/if}
 						</dd>
 					{/if}
 					<dt>Autopsy</dt>
