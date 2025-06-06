@@ -13,7 +13,8 @@
 		LucideArrowDown,
 		LucideArrowUp,
 		MapIcon,
-		TableIcon
+		TableIcon,
+		TextIcon
 	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
@@ -26,7 +27,7 @@
 	const searchQueryParam = queryParam('q', ssp.string(''));
 	const searchPageParam = queryParam('page', ssp.number(1));
 	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
-	/** @property {'cards' | 'map' | 'table'} */
+	/** @property {'cards' | 'map' | 'table' | 'text'} */
 	const searchViewParam = queryParam('view', ssp.string('cards'));
 	const searchFiltersParam = queryParam('filters', ssp.object({}));
 
@@ -252,7 +253,7 @@
 	}
 
 	/**
-	 * @param {'cards' | 'map' | 'table'} newView
+	 * @param {'cards' | 'map' | 'table' | 'text'} newView
 	 */
 	async function handleViewChange(newView) {
 		let currentLimit = $searchLimitParam;
@@ -459,6 +460,12 @@
 					<LayoutGridIcon />View cards
 				</Button.Root>
 				<Button.Root
+					class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
+					onclick={() => handleViewChange('text')}
+				>
+					<TextIcon />View text
+				</Button.Root>
+				<Button.Root
 					class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
 					onclick={() => handleViewChange('map')}
 				>
@@ -535,7 +542,11 @@
 						{#if $searchViewParam === 'table'}
 							<InscriptionTable {inscriptions} />
 						{:else}
-							<InscriptionList {inscriptions} />
+							<InscriptionList
+								{inscriptions}
+								view={$searchViewParam === 'text' ? 'text' : 'image'}
+								query={$searchQueryParam}
+							/>
 						{/if}
 					</div>
 				{/key}
