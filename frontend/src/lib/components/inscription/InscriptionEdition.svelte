@@ -166,46 +166,4 @@
 		margin-block: var(--size-4);
 		text-transform: unset;
 	}
-
-	/* Epidoc styles */
-	:global(.textpartnumber) {
-		display: block;
-		font-weight: 600;
-		margin-left: calc(-1 * var(--size-6));
-	}
-
-	:global(.textpartnumber:not(:first-of-type)) {
-		margin-top: var(--size-4);
-	}
-
-	:global(.textpartnumber:not(:has(+ br))) {
-		margin-bottom: var(--size-4);
-	}
-
-	:global(.textpart .linenumber) {
-		display: inline-block;
-		margin-left: calc(-1 * var(--size-9));
-		margin-right: var(--size-3);
-		text-align: right;
-		width: var(--size-8);
-	}
-
-	:global(.miniapp:not(:empty)) {
-		margin-block-start: var(--size-6);
-		position: relative;
-	}
-
-	:global(.miniapp:empty) {
-		display: none;
-	}
-
-	:global(.miniapp:not(:empty)::before) {
-		/* or '†' or '¶' */
-		content: '※';
-		left: calc(-1 * var(--size-9));
-		margin-right: var(--size-3);
-		position: absolute;
-		text-align: right;
-		width: var(--size-8);
-	}
 </style>
