@@ -1,7 +1,7 @@
 <script>
 	import InscriptionCard from './InscriptionCard.svelte';
 
-	let { inscriptions, view = 'image', query } = $props();
+	const { inscriptions, view = 'image', query } = $props();
 </script>
 
 <ol class="inscription-list">
