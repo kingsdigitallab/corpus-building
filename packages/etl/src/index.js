@@ -53,7 +53,7 @@ async function transformToHtml(filePath) {
     .get();
 
   const images = $("div#facsimile-images > a")
-    .map((i, a) => ({
+    .map((_, a) => ({
       image: $(a).attr("href"),
       thumb: $(a).find("img").attr("src"),
       title: $(a).find("img").attr("title"),
@@ -69,15 +69,32 @@ async function transformToHtml(filePath) {
   };
 }
 
-async function extractLemmas(xmlString) {
-  const xml = await parseXML(xmlString);
-  const edition = xml.TEI.text.body.div.find(
-    (div) => div.subtype === "simple-lemmatized"
-  );
-  const lemmas = edition?.ab?.w?.map((w) => w.lemma) ?? [];
-  const text = edition?.ab?.w?.map((w) => w._) ?? [];
+async function extractLemmas(html) {
+  if (!html || typeof html !== "string") {
+    throw new Error("HTML input must be a non-empty string");
+  }
 
-  return { lemmas, text };
+  try {
+    const $ = cheerio.load(html);
+
+    const result = {
+      lemmas: [],
+      text: [],
+      html,
+    };
+
+    $("span").each((_, span) => {
+      const text = $(span).attr("data-text");
+      const lemma = $(span).attr("data-lemma");
+
+      if (text) result.text.push(text.replace(/\s+/g, " ").trim());
+      if (lemma) result.lemmas.push(lemma);
+    });
+
+    return result;
+  } catch (error) {
+    throw new Error(`Failed to extract lemmas: ${error.message}`);
+  }
 }
 
 /**
@@ -136,12 +153,20 @@ async function processFile(filePath, outputPath, options = {}) {
   }
 
   if (shouldExtractLemmas) {
-    const lemmas = await extractLemmas(xmlString);
+    const html = await fs.readFile(htmlOutputFile, "utf-8");
+    const json = JSON.parse(html);
 
-    result = { ...result, ...lemmas };
+    try {
+      const words = await extractLemmas(json.editions[1].html);
+      result = { ...result, ...words };
 
-    await fs.mkdir(lemmasOutputPath, { recursive: true });
-    await fs.writeFile(lemmasOutputFile, JSON.stringify(lemmas, null, 2));
+      await fs.mkdir(lemmasOutputPath, { recursive: true });
+      await fs.writeFile(lemmasOutputFile, JSON.stringify(words, null, 2));
+    } catch (error) {
+      console.error(
+        `Error extracting lemmas for ${baseName}: ${error.message}`
+      );
+    }
   }
 
   return result;
@@ -176,10 +201,11 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
           file: result.file,
           lemmas: result.lemmas,
           text: result.text,
+          html: result.html,
         });
 
-        delete result.lemmas;
-        delete result.text;
+        result.lemmas = undefined;
+        result.text = undefined;
 
         delete result.editions;
         delete result.support;
