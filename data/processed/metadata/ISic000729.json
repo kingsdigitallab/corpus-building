@@ -3,7 +3,7 @@
   "uri": "ISic000729",
   "title": "I.Sicily inscription 000729",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -26,63 +26,88 @@
   ],
   "editionAuthor": null,
   "type": {
-    "_": "funerary",
-    "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "_": "funerary or honorific",
+    "ana": "#function.funerary #function.honorific",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
-  "objectType": "",
+  "support": "Large fragment of a thick slab of blue-grey stone (marble; the inventory speculates African). Top and left sides preserved intact. Top edge and rear left has receiving hold for a clamp to attach to another block behind. Rear is finished, but not smoothed. Broken below and to the right.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
-    "_": "marble\n                                    ",
+    "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "22.1",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "29.7",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "7.5 (top) - 8.4 (base)",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Larve vacat at top and to left, with three lines of Latin text preserved (the third broken below), of which the second line significantly indented below the first. The text shows signs of decreasing in size and becoming more compressed by line 3.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Very regular and neat Latin letters with simple straight line serifs on terminal and thin v-cut. Interpuncts in the form of a hollow triangle.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line\n                                    1\n                                ",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
+        "to": "line2",
+        "h": "28-29",
         "unit": "mm"
       },
       {
         "type": "interlinear",
-        "l": "Interlineation line 1 to\n                                    2\n                                ",
+        "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
+        "h": "14-15",
+        "unit": "mm"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "11-13",
         "unit": "mm"
       }
     ]
   },
   "date": {
-    "_": "Imperial (?)",
+    "_": "First century CE",
     "notBefore": 1,
-    "notAfter": 300
+    "notAfter": 100,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -103,14 +128,21 @@
     ]
   ],
   "provenanceFound": {
-    "_": "Catacomb of S.Lucia",
+    "_": "According to the inventory, acquired 23 October 1922, coming from S. Lucia, from the vicinity of the Villa Landolina",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "when": "1922",
+    "geo": [
+      37.0749961,
+      15.2861587
+    ]
   },
   "provenanceObserved": {
-    "_": "Depositi, Mag B, new cass.18",
+    "_": "Prag, 2015-01-16, Depositi, Mag B, new cass.18",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -120,8 +152,24 @@
       "url": "ISic000729_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-16",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000729_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-16",
+      "surfaceType": "rear"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000729_top_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-16",
+      "surfaceType": "top"
     }
   ],
   "country": "Italy",
@@ -219,7 +267,7 @@
     "url": "ISic000729_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-16",
     "surfaceType": "front"
   },
   "provenance": "Syracusae",
@@ -233,9 +281,10 @@
     "isic000729",
     "i.sicily inscription 000729",
     {
-      "_": "draft"
+      "_": "edited"
     },
-    "funerary",
+    "funerary or honorific",
+    "plaque",
     "marble",
     "syracusae",
     "siracusa",
