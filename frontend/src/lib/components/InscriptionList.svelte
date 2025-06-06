@@ -1,13 +1,13 @@
 <script>
 	import InscriptionCard from './InscriptionCard.svelte';
 
-	let { inscriptions } = $props();
+	let { inscriptions, view = 'image', query } = $props();
 </script>
 
 <ol class="inscription-list">
 	{#each inscriptions as inscription}
 		<li>
-			<InscriptionCard {inscription} />
+			<InscriptionCard {inscription} {view} {query} />
 		</li>
 	{/each}
 </ol>
