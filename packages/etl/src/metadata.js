@@ -39,6 +39,7 @@ export async function extractMetadata(xmlString) {
     textLang: getTextLang(xml),
     bibliographyEdition: await getBibliography(xml, "edition"),
     bibliographyDiscussion: await getBibliography(xml, "discussion"),
+    citation: getCitation(xml),
   };
 
   metadata.facsimile = metadata.graphics[0];
@@ -549,6 +550,23 @@ async function getZoteroData(itemKey) {
 
 async function getXML(xmlString) {
   return xmlString;
+}
+
+function getCitation(xml) {
+  const titleStmt = xml.TEI.teiHeader.fileDesc.titleStmt;
+  const revisionDesc = xml.TEI.teiHeader.revisionDesc;
+
+  if (!titleStmt) return null;
+
+  const editor = titleStmt.editor;
+  const principal = titleStmt.principal;
+  const contributors = titleStmt.respStmt.map((rs) => rs.name);
+
+  const change = Array.isArray(revisionDesc?.listChange?.change)
+    ? revisionDesc.listChange.change.at(-1)
+    : revisionDesc?.listChange?.change || null;
+
+  return { editor, principal, contributors, change };
 }
 
 function getKeywords(metadata) {

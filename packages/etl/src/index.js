@@ -215,9 +215,15 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         result.provenanceObserved = undefined;
         result.provenanceLost = undefined;
         result.graphics = undefined;
-        result.repository.museum = undefined;
+
+        if (result.repository && typeof result.repository === "object") {
+          result.repository.museum = undefined;
+          result.repository.repository = undefined;
+        }
+
         result.bibliographyEdition = undefined;
         result.bibliographyDiscussion = undefined;
+        result.citation = undefined;
 
         results.push(result);
 
