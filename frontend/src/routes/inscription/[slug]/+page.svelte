@@ -133,7 +133,7 @@
 			<h3>Support</h3>
 			<dl>
 				<dt>Description</dt>
-				<dd>{metadata.support || config.EMPTY_PLACEHOLDER}</dd>
+				<dd>{metadata.support?._ || metadata.support || config.EMPTY_PLACEHOLDER}</dd>
 				<dt>Object type</dt>
 				{#if metadata.objectType}
 					<dd>
