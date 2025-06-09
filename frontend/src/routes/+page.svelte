@@ -1,14 +1,19 @@
 <script>
-	import heroImage1 from '$lib/assets/images/hero1.png';
-	import heroImage2 from '$lib/assets/images/hero2.png';
 	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 
-	let heroImage = $state(heroImage1);
+	let heroImage = $state(config.heroImages[0]);
+	let heroImageSrc = $state(heroImage.image);
+	let isHeroLoading = $state(true);
 
-	onMount(() => {
-		heroImage = Math.random() * 2 < 1 ? heroImage1 : heroImage2;
+	onMount(async () => {
+		heroImage = config.heroImages[Math.floor(Math.random() * config.heroImages.length)];
+
+		const heroImageSrcModule = await import(`../lib/assets/images/hero/${heroImage.image}`);
+		heroImageSrc = heroImageSrcModule.default;
+
+		isHeroLoading = false;
 	});
 </script>
 
@@ -26,7 +31,16 @@
 	</div>
 	<div class="hero-right">
 		<picture>
-			<img src={heroImage} alt={config.heroImageDescription} />
+			{#if isHeroLoading}
+				<div class="hero-loading-placeholder" />
+			{:else}
+				<img
+					src={heroImageSrc}
+					alt={heroImage.description}
+					style="opacity: 0"
+					onload={(e) => e.target && (e.target.style.opacity = 1)}
+				/>
+			{/if}
 		</picture>
 	</div>
 </section>
@@ -98,12 +112,31 @@
 		z-index: -1;
 	}
 
+	.hero-loading-placeholder {
+		width: 100%;
+		height: 100%;
+		background: var(--surface-4);
+		animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 0.75;
+		}
+		50% {
+			opacity: 0.5;
+		}
+	}
+
 	.hero-right img {
 		display: block;
 		height: 110%;
 		object-fit: cover;
 		object-position: left;
 		width: auto;
+		transition: opacity 0.5s ease-in-out;
 	}
 
 	.hero-spacer {
