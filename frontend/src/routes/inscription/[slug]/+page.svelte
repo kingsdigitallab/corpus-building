@@ -331,8 +331,38 @@
 		<section id="citation-and-status">
 			<h2>Citation and editorial status</h2>
 			<dl>
-				<dt>Citation</dt>
-				<dd>{metadata.citation || config.EMPTY_PLACEHOLDER}</dd>
+				<dt>Editor</dt>
+				<dd>
+					{metadata.citation.editor?._ || config.EMPTY_PLACEHOLDER}
+				</dd>
+				<dt>Principal</dt>
+				<dd>
+					{metadata.citation.principal?._ || config.EMPTY_PLACEHOLDER}
+				</dd>
+				<dt>Contributors</dt>
+				<dd>
+					{#if metadata.citation.contributors.length}
+						<ul class="contributors">
+							{#each metadata.citation.contributors as contributor}
+								<li>
+									{#if contributor.ref}
+										<a href={contributor.ref}>{contributor._}</a>
+									{:else}
+										<span>{contributor._}</span>
+									{/if}
+								</li>
+							{/each}
+						</ul>
+					{:else}
+						{config.EMPTY_PLACEHOLDER}
+					{/if}
+				</dd>
+				<dt>Last revision</dt>
+				<dd>
+					{metadata.citation.change?.when
+						? new Date(metadata.citation.change.when).toLocaleDateString()
+						: config.EMPTY_PLACEHOLDER}
+				</dd>
 			</dl>
 		</section>
 	</section>
@@ -380,6 +410,22 @@
 	#content > section {
 		border-bottom: var(--border-size-1) solid var(--border-color);
 		padding-bottom: var(--size-8);
+	}
+
+	.contributors {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-1);
+		padding-left: 0;
+	}
+
+	.contributors li {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.contributors li:not(:last-child)::after {
+		content: ',';
 	}
 
 	#page-navigation {
