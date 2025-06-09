@@ -1,17 +1,41 @@
 <script>
+	import heroImage1 from '$lib/assets/images/hero/ISic000147_tiled.png';
+	import heroImage2 from '$lib/assets/images/hero/ISic000668_tiled_HALF.png';
+	import heroImage3 from '$lib/assets/images/hero/ISic000827_tiled_HALF.png';
+	import heroImage4 from '$lib/assets/images/hero/ISic000879_tiled.png';
+	import heroImage5 from '$lib/assets/images/hero/ISic002945_tiled.png';
+	import heroImage6 from '$lib/assets/images/hero/ISic003362.png';
+
 	import FacetedSearch from '$lib/components/search/FacetedSearch.svelte';
 	import * as config from '$lib/config';
 	import { onMount } from 'svelte';
 
-	let heroImage = $state(config.heroImages[0]);
-	let heroImageSrc = $state(heroImage.image);
+	let heroImage = $state(heroImage1);
+	let heroImageNumber = $state(0);
 	let isHeroLoading = $state(true);
 
 	onMount(async () => {
-		heroImage = config.heroImages[Math.floor(Math.random() * config.heroImages.length)];
-
-		const heroImageSrcModule = await import(`../lib/assets/images/hero/${heroImage.image}`);
-		heroImageSrc = heroImageSrcModule.default;
+		heroImageNumber = Math.floor(Math.random() * config.heroImages.length);
+		switch (heroImageNumber) {
+			case 0:
+				heroImage = heroImage1;
+				break;
+			case 1:
+				heroImage = heroImage2;
+				break;
+			case 2:
+				heroImage = heroImage3;
+				break;
+			case 3:
+				heroImage = heroImage4;
+				break;
+			case 4:
+				heroImage = heroImage5;
+				break;
+			case 5:
+				heroImage = heroImage6;
+				break;
+		}
 
 		isHeroLoading = false;
 	});
@@ -32,11 +56,11 @@
 	<div class="hero-right">
 		<picture>
 			{#if isHeroLoading}
-				<div class="hero-loading-placeholder" />
+				<div class="hero-loading-placeholder"></div>
 			{:else}
 				<img
-					src={heroImageSrc}
-					alt={heroImage.description}
+					src={heroImage}
+					alt={config.heroImages[heroImageNumber].description}
 					style="opacity: 0"
 					onload={(e) => e.target && (e.target.style.opacity = 1)}
 				/>
