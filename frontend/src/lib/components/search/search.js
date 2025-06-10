@@ -12,6 +12,7 @@ let searchEngine;
  * @property {Object} aggregations
  * @property {string[]} searchableFields
  * @property {Object} sortings
+ * @property {boolean} isExactSearch
  */
 
 /** @type {SearchConfig} */
@@ -169,7 +170,8 @@ const searchConfig = {
 			field: 'title',
 			order: 'desc'
 		}
-	}
+	},
+	isExactSearch: false
 };
 
 searchConfig.searchableFields = [
