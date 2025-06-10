@@ -62,7 +62,11 @@
 					src={heroImage}
 					alt={config.heroImages[heroImageNumber].description}
 					style="opacity: 0"
-					onload={(e) => e.target && (e.target.style.opacity = 1)}
+					onload={(e) => {
+						if (e.target) {
+							e.target.style.opacity = 1;
+						}
+					}}
 				/>
 			{/if}
 		</picture>
