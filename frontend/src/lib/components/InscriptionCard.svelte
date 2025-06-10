@@ -1,5 +1,6 @@
 <script>
 	import * as config from '$lib/config.js';
+	import { fuzzyMatch } from '$lib/utils/fuzzy.js';
 	import { Image } from '@unpic/svelte';
 	import InscriptionDate from './InscriptionDate.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
@@ -23,7 +24,7 @@
 			const text = element.getAttribute('data-text');
 			const shouldHighlight = queryWords.some(
 				(/** @type {string} */ word) =>
-					lemma?.toLowerCase().includes(word) || text?.toLowerCase().includes(word)
+					(lemma && fuzzyMatch(word, lemma)) || (text && fuzzyMatch(word, text))
 			);
 
 			if (shouldHighlight) {
