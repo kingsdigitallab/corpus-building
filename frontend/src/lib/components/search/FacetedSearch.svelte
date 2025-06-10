@@ -430,7 +430,7 @@
 				type="text"
 				name="q"
 				id="q"
-				placeholder="Search inscriptions metadata"
+				placeholder="Search inscriptions"
 				oninput={handleSearchInput}
 			/>
 			<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root>
