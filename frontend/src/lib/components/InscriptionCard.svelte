@@ -68,7 +68,7 @@
 
 	<div class="card-body">
 		{#if view === 'text'}
-			<div class="surface-4 edition-content">
+			<div class="surface-4 edition-content interpretive">
 				{@html highlightText(inscription.html)}
 			</div>
 		{/if}
@@ -151,6 +151,7 @@
 		border-radius: var(--radius-2);
 		font-family: var(--font-family-greek);
 		font-size: var(--font-size-1);
+		font-weight: 500;
 		height: 100%;
 		max-height: 200px;
 		min-height: 200px;
