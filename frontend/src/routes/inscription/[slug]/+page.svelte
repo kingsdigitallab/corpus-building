@@ -335,7 +335,7 @@
 				<dd>
 					{metadata.citation.editor?._ || config.EMPTY_PLACEHOLDER}
 				</dd>
-				<dt>Principal</dt>
+				<dt>Principal contributor</dt>
 				<dd>
 					{metadata.citation.principal?._ || config.EMPTY_PLACEHOLDER}
 				</dd>
