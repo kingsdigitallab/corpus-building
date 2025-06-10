@@ -422,160 +422,191 @@
 	}}
 />
 
-<article id="faceted-search">
-	<section>
-		<form onsubmit={handleSearch} onreset={handleReset}>
-			<label class="visually-hidden" for="q">Search query:</label>
-			<input
-				type="text"
-				name="q"
-				id="q"
-				placeholder="Search inscriptions"
-				oninput={handleSearchInput}
-			/>
-			<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root>
-			<Button.Root class="secondary" type="reset" disabled={!hasActiveFilters()}>Reset</Button.Root>
-		</form>
-	</section>
+<div class="search-layout">
+	<SearchFilters
+		show={showFilters}
+		aggregations={searchAggregations}
+		{total}
+		bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
+		bind:languageConjunction={searchOptions.languageConjunction}
+		bind:selectedDateRange
+		bind:selectedLetterHeightRange
+		bind:selectedFilters
+		sortAggregationsByChange={handleSortAggregationsByChange}
+		languageConjunctionChange={handleLanguageConjunctionToggle}
+		searchFiltersChange={handleSearchFiltersChange}
+	/>
 
-	<section class="inscriptions">
-		{#if isLoading}
-			<h2 aria-busy="true">Loading inscriptions...</h2>
-		{:else}
-			<SearchSummary
-				{total}
-				dateRange={selectedDateRange}
-				defaultDateRange={[config.search.minDate, config.search.maxDate]}
-				letterHeightRange={selectedLetterHeightRange}
-				defaultLetterHeightRange={[config.search.minLetterHeight, config.search.maxLetterHeight]}
-				{numberOfLocations}
-				query={$searchQueryParam}
-				filters={selectedFilters}
-			/>
-			<section class="reduced-block-margin">
-				<Button.Root
-					class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
-					onclick={() => handleViewChange('cards')}
+	<article id="faceted-search">
+		<section>
+			<form onsubmit={handleSearch} onreset={handleReset}>
+				<label class="visually-hidden" for="q">Search query:</label>
+				<input
+					type="text"
+					name="q"
+					id="q"
+					placeholder="Search inscriptions"
+					oninput={handleSearchInput}
+				/>
+				<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
 				>
-					<LayoutGridIcon />View cards
-				</Button.Root>
-				<Button.Root
-					class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
-					onclick={() => handleViewChange('text')}
+				<Button.Root class="secondary" type="reset" disabled={!hasActiveFilters()}
+					>Reset</Button.Root
 				>
-					<TextIcon />View text
-				</Button.Root>
-				<Button.Root
-					class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
-					onclick={() => handleViewChange('map')}
-				>
-					<MapIcon />View map
-				</Button.Root>
-				<Button.Root
-					class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
-					onclick={() => handleViewChange('table')}
-				>
-					<TableIcon />View table
-				</Button.Root>
-				<Button.Root
-					class="secondary"
-					aria-label="Download inscription data as a CSV file"
-					disabled={isDownloading}
-					onclick={handleCSVDownload}
-					aria-busy={isDownloading}
-				>
-					<DownloadIcon />CSV
-				</Button.Root>
-				<Button.Root
-					class="secondary"
-					aria-label="Download inscriptions as XML"
-					disabled={!hasActiveFilters() || isDownloading}
-					onclick={handleXMLDownload}
-					aria-busy={isDownloading}
-				>
-					<DownloadIcon />Epidoc
-				</Button.Root>
-			</section>
-			<section class="reduced-block-margin controls">
-				<p>{total.toLocaleString()} Inscriptions</p>
-				<div class="filters-toggle">
-					<Button.Root
-						class={showFilters ? 'secondary' : 'primary'}
-						onclick={() => (showFilters = !showFilters)}
-					>
-						<FilterIcon />Explore filters
-					</Button.Root>
-				</div>
-				<div class="sort-controls">
-					<label for="sort-select">Sort by:</label>
-					<select id="sort-select" bind:value={searchOptions.sortResultsBy}>
-						<option value="file">File</option>
-						<option value="notBefore">Not before</option>
-						<option value="notAfter">Not after</option>
-						<option value="title">Title</option>
-					</select>
+			</form>
+		</section>
 
-					<Button.Root
-						class="order-toggle"
-						onclick={() => handleSortResultsOrderToggle()}
-						aria-label="Toggle sort order from ascending to descending to no order"
-					>
-						{#if searchOptions.sortResultsOrder === 'asc'}
-							<LucideArrowUp aria-label="Ascending" />
-						{:else}
-							<LucideArrowDown aria-label="Descending" />
-						{/if}
-					</Button.Root>
-				</div>
-			</section>
-			{#if $searchViewParam === 'map'}
-				<div class="transition-container" in:fade={{ duration: 500 }} out:fade={{ duration: 250 }}>
-					<InscriptionMap inscriptions={inscriptionsGeo} />
-				</div>
+		<section class="inscriptions">
+			{#if isLoading}
+				<h2 aria-busy="true">Loading inscriptions...</h2>
 			{:else}
-				{#key $searchViewParam}
+				<SearchSummary
+					{total}
+					dateRange={selectedDateRange}
+					defaultDateRange={[config.search.minDate, config.search.maxDate]}
+					letterHeightRange={selectedLetterHeightRange}
+					defaultLetterHeightRange={[config.search.minLetterHeight, config.search.maxLetterHeight]}
+					{numberOfLocations}
+					query={$searchQueryParam}
+					filters={selectedFilters}
+				/>
+				<section class="reduced-block-margin">
+					<Button.Root
+						class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
+						onclick={() => handleViewChange('cards')}
+					>
+						<LayoutGridIcon />View cards
+					</Button.Root>
+					<Button.Root
+						class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
+						onclick={() => handleViewChange('text')}
+					>
+						<TextIcon />View text
+					</Button.Root>
+					<Button.Root
+						class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
+						onclick={() => handleViewChange('map')}
+					>
+						<MapIcon />View map
+					</Button.Root>
+					<Button.Root
+						class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
+						onclick={() => handleViewChange('table')}
+					>
+						<TableIcon />View table
+					</Button.Root>
+					<Button.Root
+						class="secondary"
+						aria-label="Download inscription data as a CSV file"
+						disabled={isDownloading}
+						onclick={handleCSVDownload}
+						aria-busy={isDownloading}
+					>
+						<DownloadIcon />CSV
+					</Button.Root>
+					<Button.Root
+						class="secondary"
+						aria-label="Download inscriptions as XML"
+						disabled={!hasActiveFilters() || isDownloading}
+						onclick={handleXMLDownload}
+						aria-busy={isDownloading}
+					>
+						<DownloadIcon />Epidoc
+					</Button.Root>
+				</section>
+				<section class="reduced-block-margin controls">
+					<p>{total.toLocaleString()} Inscriptions</p>
+					<div class="filters-toggle">
+						<Button.Root
+							class={showFilters ? 'secondary' : 'primary'}
+							onclick={() => (showFilters = !showFilters)}
+						>
+							<FilterIcon />Explore filters
+						</Button.Root>
+					</div>
+					<div class="sort-controls">
+						<label for="sort-select">Sort by:</label>
+						<select id="sort-select" bind:value={searchOptions.sortResultsBy}>
+							<option value="file">File</option>
+							<option value="notBefore">Not before</option>
+							<option value="notAfter">Not after</option>
+							<option value="title">Title</option>
+						</select>
+
+						<Button.Root
+							class="order-toggle"
+							onclick={() => handleSortResultsOrderToggle()}
+							aria-label="Toggle sort order from ascending to descending to no order"
+						>
+							{#if searchOptions.sortResultsOrder === 'asc'}
+								<LucideArrowUp aria-label="Ascending" />
+							{:else}
+								<LucideArrowDown aria-label="Descending" />
+							{/if}
+						</Button.Root>
+					</div>
+				</section>
+				{#if $searchViewParam === 'map'}
 					<div
 						class="transition-container"
 						in:fade={{ duration: 500 }}
 						out:fade={{ duration: 250 }}
 					>
-						{#if $searchViewParam === 'table'}
-							<InscriptionTable {inscriptions} />
-						{:else}
-							<InscriptionList
-								{inscriptions}
-								view={$searchViewParam === 'text' ? 'text' : 'image'}
-								query={$searchQueryParam}
-							/>
-						{/if}
+						<InscriptionMap inscriptions={inscriptionsGeo} />
 					</div>
-				{/key}
-				<InscriptionPagination
-					page={$searchPageParam}
-					count={total}
-					perPage={$searchLimitParam}
-					onPageChange={handlePageChange}
-				/>
+				{:else}
+					{#key $searchViewParam}
+						<div
+							class="transition-container"
+							in:fade={{ duration: 500 }}
+							out:fade={{ duration: 250 }}
+						>
+							{#if $searchViewParam === 'table'}
+								<InscriptionTable {inscriptions} />
+							{:else}
+								<InscriptionList
+									{inscriptions}
+									view={$searchViewParam === 'text' ? 'text' : 'image'}
+									query={$searchQueryParam}
+								/>
+							{/if}
+						</div>
+					{/key}
+					<InscriptionPagination
+						page={$searchPageParam}
+						count={total}
+						perPage={$searchLimitParam}
+						onPageChange={handlePageChange}
+					/>
+				{/if}
 			{/if}
-		{/if}
-	</section>
-</article>
-
-<SearchFilters
-	show={showFilters}
-	aggregations={searchAggregations}
-	{total}
-	bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
-	bind:languageConjunction={searchOptions.languageConjunction}
-	bind:selectedDateRange
-	bind:selectedLetterHeightRange
-	bind:selectedFilters
-	sortAggregationsByChange={handleSortAggregationsByChange}
-	languageConjunctionChange={handleLanguageConjunctionToggle}
-	searchFiltersChange={handleSearchFiltersChange}
-/>
+		</section>
+	</article>
+</div>
 
 <style>
+	.search-layout {
+		display: flex;
+		gap: var(--size-2);
+	}
+
+	@media (max-width: 992px) {
+		.search-layout {
+			flex-direction: column;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.search-layout {
+			flex-direction: row;
+		}
+
+		.search-layout > article {
+			flex: 1;
+			min-width: 0;
+		}
+	}
+
 	form {
 		display: flex;
 		gap: var(--size-4);

@@ -259,13 +259,28 @@
 		border: var(--border-size-1) solid var(--border-color);
 		box-shadow: var(--shadow-4);
 		height: 100vh;
-		left: 0;
 		overflow-y: auto;
+		max-width: 450px;
+		min-width: 400px;
 		padding: var(--size-4);
-		position: fixed;
-		top: 0;
-		width: min(500px, 100vw);
 		z-index: 10;
+	}
+
+	@media (max-width: 992px) {
+		.filters {
+			left: 0;
+			max-width: 90vw;
+			position: fixed;
+			top: 0;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.filters {
+			height: calc(100vh - 2 * var(--size-4));
+			position: sticky;
+			top: var(--size-4);
+		}
 	}
 
 	section {
