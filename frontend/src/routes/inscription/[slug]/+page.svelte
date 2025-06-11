@@ -168,8 +168,19 @@
 				{:else}
 					<dd>{metadata?.layoutDesc?.layout?.damage?._ || config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
-				<dt>Lettering</dt>
-				<dd>{metadata.handNote.lettering || config.EMPTY_PLACEHOLDER}</dd>
+				{#if metadata?.handNote?.lettering}
+					<dt>Lettering</dt>
+					<dd>
+						<p>{metadata.handNote.lettering._}</p>
+						{#if metadata.handNote.lettering?.ref}
+							<ul>
+								{#each metadata.handNote.lettering.ref as aref}
+									<li><a href="{aref.target}">{aref._}</a></li>
+								{/each}				
+							</ul>
+						{/if}
+					</dd>
+				{/if}
 				<dt>Letter heights</dt>
 				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
 					<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
