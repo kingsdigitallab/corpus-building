@@ -37,41 +37,47 @@ const searchConfig = {
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		languageCert: {
 			title: 'Language certainty',
 			hide_zero_doc_count: true,
 			size: 10,
-			sort: 'key'
+			sort: 'key',
+			chosen_filters_on_top: false
 		},
 		provenance: {
 			title: 'Provenance',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		inscriptionType: {
 			title: 'Inscription type',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		objectType: {
 			title: 'Object type',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		material: {
 			title: 'Material',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		technique: {
 			title: 'Technique',
@@ -85,14 +91,16 @@ const searchConfig = {
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		lettering: {
 			title: 'Lettering',
 			hide_zero_doc_count: true,
 			size: 500,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		letterHeightAtLeast: {
 			title: 'Letter height at least',
@@ -113,34 +121,39 @@ const searchConfig = {
 			hide_zero_doc_count: true,
 			size: 100,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		damage: {
 			title: 'Damage',
 			hide_zero_doc_count: true,
 			size: 100,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		repository: {
 			title: 'Repository',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		publications: {
 			title: 'Publication',
 			hide_zero_doc_count: true,
 			size: 2000,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		},
 		status: {
 			title: 'Status',
 			hide_zero_doc_count: true,
 			sort: 'key',
-			conjunction: false
+			conjunction: false,
+			chosen_filters_on_top: false
 		}
 	},
 	searchableFields: [],
@@ -259,20 +272,19 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 	searchEngine = itemsjs(processedCorpus, searchConfig);
 }
 
-
 /**
  *
  * @param {object[]} metadataRefs
  * @returns {string[]}
  */
 function getLetteringOptions(metadataRefs) {
-	let ret = []
+	let ret = [];
 
 	if (metadataRefs) {
-		ret = metadataRefs.map(ref => ref._)
+		ret = metadataRefs.map((ref) => ref._);
 	}
 
-	return ret
+	return ret;
 }
 
 /**
