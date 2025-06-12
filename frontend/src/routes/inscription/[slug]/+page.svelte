@@ -39,7 +39,7 @@
 
 	const bibliographyDiscussion = $derived(
 		metadata.bibliographyDiscussion?.bibl
-			.filter((b) => b)
+			?.filter((b) => b)
 			.map((a) => ({ ...a, date: a.date ? Number.parseInt(a.date) : null }))
 			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
@@ -61,7 +61,7 @@
 	 */
 	function parseTranslation(translation) {
 		const parser = new DOMParser();
-		const doc = parser.parseFromString(translation.html, 'text/html');
+		const doc = parser.parseFromString(translation?.html || '', 'text/html');
 		const id = doc.querySelector('h2')?.textContent?.replace(/\s+translation/i, '');
 
 		if (!id) {
@@ -71,7 +71,7 @@
 		return {
 			id: id?.toLowerCase(),
 			type: id,
-			html: translation.html.replace(/<h2.*?<\/h2>/g, '')
+			html: translation?.html?.replace(/<h2.*?<\/h2>/g, '') || ''
 		};
 	}
 </script>
@@ -96,7 +96,7 @@
 	<meta name="description" content={metadata.title} />
 	<meta
 		name="tags"
-		content="sicily, inscription, {metadata.textLang._}, {metadata.type._}, {metadata.objectType
+		content="sicily, inscription, {metadata.textLang?._}, {metadata.type?._}, {metadata.objectType
 			?._}"
 	/>
 </svelte:head>
@@ -107,7 +107,9 @@
 	<section id="content">
 		<InscriptionEdition {slug} {metadata} {xml} {editions} />
 
-		<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
+		{#if apparatus?.html}
+			<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
+		{/if}
 
 		{#if translationDivs.length}
 			<section id="translations">
@@ -137,18 +139,32 @@
 				<dt>Object type</dt>
 				{#if metadata.objectType}
 					<dd>
-						<a class="badge strong" href={metadata.objectType.ref}>{metadata.objectType._}</a>
+						{#if metadata.objectType?.ref}
+							<a class="badge strong" href={metadata.objectType.ref}
+								>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
+							>
+						{:else}
+							{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}
+						{/if}
 					</dd>
 				{:else}
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Material</dt>
-				<dd><a class="badge strong" href={metadata.material.ref}>{metadata.material._}</a></dd>
+				<dd>
+					{#if metadata.material?.ref}
+						<a class="badge strong" href={metadata.material.ref}
+							>{metadata.material?._ || config.EMPTY_PLACEHOLDER}</a
+						>
+					{:else}
+						{metadata.material?._ || config.EMPTY_PLACEHOLDER}
+					{/if}
+				</dd>
 				<dt>Condition</dt>
 				{#if metadata.condition?.ana}
 					<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
 				{:else}
-					<dd>{metadata.condition._ || config.EMPTY_PLACEHOLDER}</dd>
+					<dd>{metadata.condition?._ || config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 				<dt>Dimensions</dt>
 				<dd>
@@ -175,8 +191,8 @@
 						{#if metadata.handNote.lettering?.ref}
 							<ul>
 								{#each metadata.handNote.lettering.ref as aref}
-									<li><a href="{aref.target}">{aref._}</a></li>
-								{/each}				
+									<li><a href={aref.target}>{aref._}</a></li>
+								{/each}
 							</ul>
 						{/if}
 					</dd>
@@ -201,7 +217,11 @@
 				{#if metadata.places.length}
 					<dd>
 						{metadata.places[0].offset || ''}
-						<a class="badge strong" href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+						{#if metadata.places[0]?.ref}
+							<a class="badge strong" href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+						{:else}
+							{metadata.places[0]?._ || config.EMPTY_PLACEHOLDER}
+						{/if}
 					</dd>
 				{:else}
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
@@ -290,12 +310,22 @@
 
 		<section id="text-type">
 			<h2>Text type</h2>
-			<p><a class="badge strong" href={metadata.type.ref}>{metadata.type._}</a></p>
+			<p>
+				{#if metadata.type?.ref}
+					<a class="badge strong" href={metadata.type.ref}
+						>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
+					>
+				{:else}
+					{metadata.type?._ || config.EMPTY_PLACEHOLDER}
+				{/if}
+			</p>
 		</section>
 
-		<section id="commentary">
-			{@html commentary.html}
-		</section>
+		{#if commentary?.html}
+			<section id="commentary">
+				{@html commentary.html}
+			</section>
+		{/if}
 
 		<section id="bibliography">
 			<h2>Bibliography</h2>
@@ -322,7 +352,7 @@
 						</ul>
 					</dd>
 				{/if}
-				{#if bibliographyDiscussion.length}
+				{#if bibliographyDiscussion?.length}
 					<dt>Discussion</dt>
 					<dd>
 						<ul class="bibliography-list">
