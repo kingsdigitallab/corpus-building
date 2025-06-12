@@ -184,6 +184,7 @@ async function processFile(filePath, outputPath, options = {}) {
  * @param {boolean} [options.extractMetadata] - Whether to extract metadata from the XML files.
  * @param {boolean} [options.transformToHtml] - Whether to transform the XML files to HTML.
  * @param {boolean} [options.extractLemmas] - Whether to extract lemmas from the XML files.
+ * @param {string} [options.inscriptionFilter] - Process inscriptions matching that pattern.
  * @returns {Promise<Array>} A promise that resolves to an array of objects, each containing the processing results for a single file.
  * @throws {Error} If there's an error reading the directory or processing files.
  */
@@ -194,6 +195,10 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
 
   for (const file of files) {
     if (file.endsWith(".xml")) {
+      if (options.inscriptionFilter && !file.includes(options.inscriptionFilter)) {
+        continue
+      }
+
       const filePath = path.join(inputPath, file);
       try {
         const result = await processFile(filePath, outputPath, options);
@@ -210,7 +215,6 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         result.editions = undefined;
         result.support = undefined;
         result.dimensions = undefined;
-        result.handNote = undefined;
         result.provenanceFound = undefined;
         result.provenanceObserved = undefined;
         result.provenanceLost = undefined;
@@ -292,6 +296,12 @@ async function main() {
       description: "Extract lemmas",
       default: true,
     })
+    .option("filter", {
+      alias: 'f',
+      type: "string",
+      description: "Pattern to filter which inscriptions to process",
+      default: null,
+    })
     .help()
     .alias("help", "h")
     .parse();
@@ -304,6 +314,7 @@ async function main() {
     extractMetadata: argv.metadata,
     transformToHtml: argv.html,
     extractLemmas: argv.lemmas,
+    inscriptionFilter: argv.filter
   };
 
   try {
