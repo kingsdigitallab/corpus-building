@@ -87,6 +87,13 @@ const searchConfig = {
 			sort: 'key',
 			conjunction: false
 		},
+		lettering: {
+			title: 'Lettering',
+			hide_zero_doc_count: true,
+			size: 500,
+			sort: 'key',
+			conjunction: false
+		},
 		letterHeightAtLeast: {
 			title: 'Letter height at least',
 			hide_zero_doc_count: true,
@@ -228,6 +235,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 				material: getHierarchicalValues(item.material?.ana),
 				technique: getHierarchicalValues(technique),
 				pigment: getHierarchicalValues(pigment),
+				lettering: getLetteringOptions(item?.handNote?.lettering?.ref),
 				letterHeightAtLeast: Math.min(...letterHeights.map((d) => d.atLeast)),
 				letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
 				condition: getHierarchicalValues(item.condition?.ana),
@@ -249,6 +257,22 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 	searchConfig.aggregations.language.conjunction = languageConjunction;
 
 	searchEngine = itemsjs(processedCorpus, searchConfig);
+}
+
+
+/**
+ *
+ * @param {object[]} metadataRefs
+ * @returns {string[]}
+ */
+function getLetteringOptions(metadataRefs) {
+	let ret = []
+
+	if (metadataRefs) {
+		ret = metadataRefs.map(ref => ref._)
+	}
+
+	return ret
 }
 
 /**
