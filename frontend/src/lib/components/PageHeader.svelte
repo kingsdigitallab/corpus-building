@@ -26,7 +26,7 @@
 		<ul>
 			<li><BaseLink href="/about">About</BaseLink></li>
 			<li>Guide</li>
-			{#if debug}
+			{#if dev && debug}
 				<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>
 				<li><BaseLink href="/_qa">QA</BaseLink></li>
 			{/if}
