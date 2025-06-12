@@ -10,7 +10,7 @@
 	const tileSources = $derived(
 		images.map(
 			(/** @type Object<String, string> */ image) =>
-				`${config.imageServer}${slug}/${image.url}/info.json`
+				`${config.imageServer}${slug}/${image?.url || ''}/info.json`
 		)
 	);
 
@@ -67,15 +67,31 @@
 		<dt>ID</dt>
 		<dd>{metadata.file}</dd>
 		<dt>Language</dt>
-		<dd>{metadata.textLang._}</dd>
+		<dd>{metadata.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
-		<dd><a class="badge strong" href={metadata.type.ref}>{metadata.type._}</a></dd>
+		<dd>
+			{#if metadata.type?.ref}
+				<a class="badge strong" href={metadata.type.ref}
+					>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
+				>
+			{:else}
+				{metadata.type?._ || config.EMPTY_PLACEHOLDER}
+			{/if}
+		</dd>
 		<dt>Object type</dt>
 		{#if metadata.objectType}
-			<dd><a class="badge strong" href={metadata.objectType.ref}>{metadata.objectType._}</a></dd>
+			<dd>
+				{#if metadata.objectType?.ref}
+					<a class="badge strong" href={metadata.objectType.ref}
+						>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
+					>
+				{:else}
+					{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}
+				{/if}
+			</dd>
 		{/if}
 		<dt>Status</dt>
-		<dd>{metadata._}</dd>
+		<dd>{metadata._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Links</dt>
 		<dd>
 			<a href="{config.publicUrl}inscription/{slug}" target="inscription">
