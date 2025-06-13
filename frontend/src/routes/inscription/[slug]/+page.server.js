@@ -11,6 +11,15 @@ export async function load({ params }) {
 		const metadataFileContent = await fs.readFile(metadataFilePath, 'utf8');
 		const metadata = JSON.parse(metadataFileContent);
 
+		// Filter out the refs embedded 
+		// in the introduction paragraph of the <handnote>.
+		// Only keep the list of refs with a type format.
+		metadata.lettering_types = []
+		if (Array.isArray(metadata?.handNote?.lettering?.ref)) {
+			metadata.lettering_types = metadata?.handNote?.lettering?.ref
+				.filter(ref => ref._.match(/ type[\d.]+$/))
+		}
+
 		const htmlFilePath = `src/data/html/${slug}.json`;
 		const htmlFileContent = await fs.readFile(htmlFilePath, 'utf8');
 		const html = JSON.parse(htmlFileContent);

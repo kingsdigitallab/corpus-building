@@ -188,9 +188,9 @@
 					<dt>Lettering</dt>
 					<dd>
 						<p>{metadata.handNote.lettering._}</p>
-						{#if metadata.handNote.lettering?.ref}
+						{#if metadata.lettering_types}
 							<ul>
-								{#each metadata.handNote.lettering.ref as aref}
+								{#each metadata.lettering_types as aref}
 									<li><a href={aref.target}>{aref._}</a></li>
 								{/each}
 							</ul>
