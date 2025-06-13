@@ -13,7 +13,7 @@
 	let { debug = false } = $props();
 </script>
 
-<header>
+<header id="top">
 	<nav>
 		<ul>
 			<li>
