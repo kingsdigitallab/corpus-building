@@ -272,6 +272,10 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 	searchEngine = itemsjs(processedCorpus, searchConfig);
 }
 
+function capitalizeFirstLetter(val) {
+	return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+}
+
 /**
  *
  * @param {object[]} metadataRefs
@@ -281,7 +285,16 @@ function getLetteringOptions(metadataRefs) {
 	let ret = [];
 
 	if (metadataRefs) {
-		ret = metadataRefs.map((ref) => ref._);
+		// {
+		// 	 "_": "Α type1.1.1",
+		//   "target": "https://kingsdigital[...]/types/greek-Α-type1.1.html"
+		// }
+		// =>
+		// "Greek Α type1.1.1"
+		ret = metadataRefs.map((ref) => {
+			let script = ref.target.replace(/^.*\/types\/(\w+)-.*$/g, '$1');
+			return `${capitalizeFirstLetter(script)} ${ref._}`;
+		});
 	}
 
 	return ret;
