@@ -1,5 +1,52 @@
 
 
+# [0.20.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.19.0...v0.20.0) (2025-06-13)
+
+
+### Bug Fixes
+
+* **download:** fix API endpoint for individual inscription XML ([c034375](https://github.com/kingsdigitallab/corpus-building/commit/c034375d05c60334fdd70d7944d9ee00e7aaeac2))
+* **etl:** choose correct edition for lemmas extraction ([52c84e7](https://github.com/kingsdigitallab/corpus-building/commit/52c84e79aa83987e0657013ceb2d6b485324936a))
+* **hero:** refine hero image selection logic on mount for improved randomness ([05e9a8d](https://github.com/kingsdigitallab/corpus-building/commit/05e9a8dc9082d0c9288797a979255e7b856597a5))
+* **inscription-card:** set font weight for greek font ([0b142cb](https://github.com/kingsdigitallab/corpus-building/commit/0b142cb0fd6d63efe4136af0f8d27634748e9d5f))
+* **inscription-overview:** improve metadata rendering with fallback values ([274fe74](https://github.com/kingsdigitallab/corpus-building/commit/274fe74cb1a75c4267f205f80c7210f7d4537f50))
+* **inscription-page:** add conditional rendering for metadata and apparatus sections ([bc34094](https://github.com/kingsdigitallab/corpus-building/commit/bc3409413fb54f709aa8df5bf52f17aac544a00d))
+* **inscription:** improve support description rendering with optional chaining ([55dc8bd](https://github.com/kingsdigitallab/corpus-building/commit/55dc8bd4167e052121052c42cee4e56ff525fd4e))
+* **inscription:** under Lettering, now exclude the refs which don't refer to an allograph type. They were part of the intro paragraph in the TEI. ([f3231ba](https://github.com/kingsdigitallab/corpus-building/commit/f3231ba5c6b71912330d5230c6c3c9e9c6825857))
+* **inscription:** update repository link display logic to handle missing museum data ([765aca4](https://github.com/kingsdigitallab/corpus-building/commit/765aca4f61c6ce4b37919ed4da7dbce79613f21f))
+* **landing:** ensure hero images load on build ([f071ef3](https://github.com/kingsdigitallab/corpus-building/commit/f071ef39c76e8613764ae32f8ab110f614e0bcad))
+* **landing:** improve image load opacity handling ([6a27484](https://github.com/kingsdigitallab/corpus-building/commit/6a27484c6cec0a234a43495e22db3d9b615de965))
+* **metadata:** update import syntax and export parseXML function ([b66ea52](https://github.com/kingsdigitallab/corpus-building/commit/b66ea52ac95f39151d7a32ea078689cf0382a079))
+* **museum:** update geo property types to allow null values ([d3b07da](https://github.com/kingsdigitallab/corpus-building/commit/d3b07dad98b6b8e972e7574ac45d01b54e058cf6))
+* **search:** In the Lettering facet options, prefix the character with the script to avoid ambiguity between similar looking lating and greek symbols ([0362b54](https://github.com/kingsdigitallab/corpus-building/commit/0362b548f391926e3de3a4d2f2e8e78e838add19))
+* **search:** pushed corpus.json with the lettering metadata. Lettering facet now filters out refs which are not types in the list. Also don't assume the ref property is always an array. ([805c65d](https://github.com/kingsdigitallab/corpus-building/commit/805c65d441a97143075fcdc942522f1938591cff))
+
+
+### Features
+
+* **app.css:** add new styles for text part numbers and miniapp elements ([38653be](https://github.com/kingsdigitallab/corpus-building/commit/38653bea7616d84e526151eedfbbf04a4ac8727f))
+* **base-layout:** implement centred layout ([662beff](https://github.com/kingsdigitallab/corpus-building/commit/662beff3c06e2f2e4dac4d1a1ce9e17ce3f9f395))
+* **config:** add hero images and descriptions ([d596e35](https://github.com/kingsdigitallab/corpus-building/commit/d596e35d942dba7bf55e81216b7cde005715867f))
+* **etl:** add lemmas extraction ([1f7903d](https://github.com/kingsdigitallab/corpus-building/commit/1f7903df55ada6a714c8ac0450c42a967b0ee773))
+* **faceted-search:** add text view option to search component ([4ce2242](https://github.com/kingsdigitallab/corpus-building/commit/4ce22422227a561e37894029b78690da0618a27d))
+* **footer:** add footer component with navigation, social media links, policies, and logos ([a6398a3](https://github.com/kingsdigitallab/corpus-building/commit/a6398a3077b0eeead64620c0b57b98721524c38c))
+* **fuzzy:** add fuzzy matching functions ([e148b0b](https://github.com/kingsdigitallab/corpus-building/commit/e148b0b9d59fe36675c66cdb13136b680d485151))
+* **hero:** add new hero images and implement random selection in the hero section ([718b47b](https://github.com/kingsdigitallab/corpus-building/commit/718b47b26417ed6e1fd75b5befd6394254fc0b8f))
+* **hero:** improve hero image loading ([17b3b42](https://github.com/kingsdigitallab/corpus-building/commit/17b3b428097eac0c6effc85ff10763461ade732e))
+* **inscription-card:** add fuzzy matching for search highlighting ([a386a2c](https://github.com/kingsdigitallab/corpus-building/commit/a386a2cb599b820c4fa0622af02846bf05d53d03))
+* **inscription-card:** implement text highlighting and conditional rendering based on view prop ([39f8a83](https://github.com/kingsdigitallab/corpus-building/commit/39f8a8377aaf5fb066f25fb04e04d0e165bb5813))
+* **inscription-list:** add view and query props to InscriptionCard ([aa95203](https://github.com/kingsdigitallab/corpus-building/commit/aa952039c9a8a4f4f8fd8dbb7cfa833c02528848))
+* **inscription:** display inscription citation data ([7a6b5bc](https://github.com/kingsdigitallab/corpus-building/commit/7a6b5bced36aae1d280e0b532408c185b801e9fd))
+* **inscription:** List all allograph types (handNote//ref) under the Lettering heading. ([6521a9e](https://github.com/kingsdigitallab/corpus-building/commit/6521a9e43612b67b7fdd9a54c100a961d2e9584f))
+* **landing:** add subtitle to configuration and update page layout to display subtitle and description ([e9aab3f](https://github.com/kingsdigitallab/corpus-building/commit/e9aab3f5bd5e3cfd945800b07553848d4aafadf2))
+* **logos:** add logo images for footer ([3d0cd60](https://github.com/kingsdigitallab/corpus-building/commit/3d0cd60449141efd488a71c56f566730f66ad2f2))
+* **metadata:** extract citation data for each inscription ([27470c2](https://github.com/kingsdigitallab/corpus-building/commit/27470c2ab1a397d0a1ef3569aec1af22e0303e9b))
+* **page-header:** add id attribute to header ([58174b1](https://github.com/kingsdigitallab/corpus-building/commit/58174b1607978897b66c98bab2d1a072bf74c2ee))
+* **PageHeader:** display 'dev' label in header when in development mode ([715c8d3](https://github.com/kingsdigitallab/corpus-building/commit/715c8d34fa50a0dc55d45f95a2cd3c15f0810bf8))
+* **search:** add 'chosen_filters_on_top' option to search configuration facets ([87d3795](https://github.com/kingsdigitallab/corpus-building/commit/87d3795baeb4b872ee572017f76a2229dc7d1141))
+* **search:** add lemmas data into search index and search fields ([5aeab18](https://github.com/kingsdigitallab/corpus-building/commit/5aeab18cce2a33e3c8b9d10ba11e0e8753eb3c0f))
+* **search:** Added Leterring / allograph types as a new facet to the search ([2ff73f3](https://github.com/kingsdigitallab/corpus-building/commit/2ff73f3bc724cbeb4ec77d82002b8ffcd68811d2))
+
 # [0.19.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.18.0...v0.19.0) (2025-05-23)
 
 
