@@ -231,6 +231,8 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 					? 'private'
 					: (item.repository?._?.trim() ?? undefined);
 
+			console.log(item)
+
 			return {
 				...item,
 				lemmas: lemmas.find((l) => l.file === item.file)?.lemmas ?? [],
@@ -284,17 +286,24 @@ function capitalizeFirstLetter(val) {
 function getLetteringOptions(metadataRefs) {
 	let ret = [];
 
-	if (metadataRefs) {
+	if (metadataRefs && Array.isArray(metadataRefs)) {
 		// {
 		// 	 "_": "Α type1.1.1",
 		//   "target": "https://kingsdigital[...]/types/greek-Α-type1.1.html"
 		// }
 		// =>
 		// "Greek Α type1.1.1"
-		ret = metadataRefs.map((ref) => {
-			let script = ref.target.replace(/^.*\/types\/(\w+)-.*$/g, '$1');
-			return `${capitalizeFirstLetter(script)} ${ref._}`;
-		});
+		console.log(metadataRefs)
+		ret = metadataRefs
+			// Filter out the refs embedded in the introduction paragraph.
+			// Only keep the list of refs with a type format.
+			.filter(ref => ref._.match(/ type[\d.]+$/))
+			.map((ref) => {
+				// Extract the script from the url and display it in the option.
+				// Otherwise user can't tell latin A from greek A.
+				let script = ref.target.replace(/^.*\/types\/(\w+)-.*$/, '$1');
+				return `${capitalizeFirstLetter(script)} ${ref._}`;
+			});
 	}
 
 	return ret;
