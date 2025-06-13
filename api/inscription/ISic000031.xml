@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 000031</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic000031</idno>
+                <idno type="TM">491797</idno>
+                <idno type="EDR">138294</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">22000881</idno>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000031</idno>
+                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333839</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
+                        <idno type="inventory">3531</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
+                            	<geo>38.13205, 13.33561</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" precision="low">2nd century CE</origDate>
+                        </origin>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2017-11-16" who="#JP">Jonathan Prag edited a bibl element</change>
+                <change when="2018-05-03" who="#TA">Tuuli Ahlholm cleaned up the autogenerated EpiDoc and added an apparatus</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-03-01" who="#JP">Jonathan Prag added images</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic000031_tiled.tif" height="4128px" width="6192px">
+                <desc>Photo V. Mignosa, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="print" url="ISic000031.jpg" height="4128px" width="6291px">
+                <desc>Photo V. Mignosa, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="screen" url="ISic000031_copy1_tiled.tif" height="4128px" width="6192px">
+                <desc>Photo V. Mignosa, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="print" url="ISic000031_copy1.jpg" height="4128px" width="6291px">
+                <desc>Photo V. Mignosa, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" cert="low"><roleName type="civic" subtype="curator">curatori</roleName></supplied> <supplied reason="lost">kalendarii</supplied> <gap reason="lost" extent="unknown" unit="character"/>iani <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> mera <g ref="#interpunct">·</g> fide <g ref="#interpunct">·</g> admi
+                    <lb n="2" break="no"/><supplied reason="lost">nistravit</supplied> <supplied reason="lost"><g ref="#interpunct">·</g></supplied> <supplied reason="lost">eodemque</supplied> <supplied reason="lost"><g ref="#interpunct">·</g></supplied> <supplied reason="lost">tempore</supplied> <g ref="#interpunct">·</g> <roleName type="civic" subtype="curator"><expan><abbr>cur</abbr><ex>ator</ex></expan></roleName> <g ref="#interpunct">·</g> portensis <g ref="#interpunct">·</g> <expan><abbr>kal</abbr><ex>endarii</ex></expan> <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> singulari
+                    <lb n="3"/><supplied reason="lost">diligentia</supplied> <supplied reason="lost">tractavit</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">l</supplied>audabili <g ref="#interpunct">·</g> munerario <g ref="#interpunct">·</g> qui <g ref="#interpunct">·</g> indulgentia
+                    <lb n="4"/><supplied reason="lost">sacra</supplied> <supplied reason="lost">cum</supplied> <supplied reason="lost">munus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ex</supplied>hibuit <g ref="#interpunct">·</g> <choice><orig>illut</orig><reg>illud</reg></choice> <g ref="#interpunct">·</g> meruit <g ref="#interpunct">·</g> optando <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> voluit
+                    <lb n="5"/><supplied reason="lost">et</supplied> <supplied reason="lost">universis</supplied> <supplied reason="lost">civibus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">e</supplied>ditionem <g ref="#interpunct">·</g> gratissimam <g ref="#interpunct">·</g> reddidit <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> die
+                    <lb n="6" break="no"/><supplied reason="lost">bus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">populum</supplied> <supplied reason="lost">per</supplied> <supplied reason="lost">multa</supplied>s <g ref="#interpunct">·</g> horas <g ref="#interpunct">·</g> theatri <g ref="#interpunct">·</g> voluptas <g ref="#interpunct">·</g> tenuit <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> hilaris
+                    <lb n="7"/><supplied reason="lost">totus</supplied> <supplied reason="lost">in</supplied> <supplied reason="lost">harenam</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">inde</supplied> <supplied reason="lost">a</supplied> <supplied reason="lost">m</supplied>eridie <g ref="#interpunct">·</g> transiit <g ref="#interpunct">·</g> in <g ref="#interpunct">·</g> qua <g ref="#interpunct">·</g> miratus <g ref="#interpunct">·</g> honestissimum
+                    <lb n="8"/><supplied reason="lost">apparatum</supplied> <supplied reason="lost">instructum</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">omni</supplied> genere <g ref="#interpunct">·</g> herbariarum <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> numerosas <g ref="#interpunct">·</g> orientales
+                    <lb n="9"/><supplied reason="lost">bestias</supplied> <supplied reason="lost">versatusque</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">inde</supplied> <supplied reason="lost">a</supplied> meridie <g ref="#interpunct">·</g> in <g ref="#interpunct">·</g> utriusque <g ref="#interpunct">·</g> caveis <g ref="#interpunct">·</g> <choice><orig>varis</orig><reg>variis</reg></choice> <g ref="#interpunct">·</g> missionibus
+                    <lb n="10"/><supplied reason="lost">delectatus</supplied> <supplied reason="lost">est</supplied> <supplied reason="lost">idemque</supplied> <supplied reason="lost">ex</supplied> <supplied reason="lost">indulg</supplied>entia <g ref="#interpunct">·</g> sacra <g ref="#interpunct">·</g> specialiter <g ref="#interpunct">·</g> meruit <g ref="#interpunct">·</g> at <g ref="#interpunct">·</g> cultum
+                    <lb n="11"/><supplied reason="lost">epulum</supplied> <supplied reason="lost">instructumque</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">a</supplied>mplissimo <g ref="#interpunct">·</g> apparatu <g ref="#interpunct">·</g> <roleName type="civic" subtype="civis">cives</roleName> <g ref="#interpunct">·</g> suos <g ref="#interpunct">·</g> universos
+                    <lb n="12"/><supplied reason="lost">ut</supplied> <supplied reason="lost">vocaret</supplied> <supplied reason="lost">cui</supplied> <supplied reason="lost">cum</supplied> <supplied reason="lost">populus</supplied> <supplied reason="lost">propter</supplied> voluptates <g ref="#interpunct">·</g> honeste <g ref="#interpunct">·</g> exhibitas <g ref="#interpunct">·</g> ad <g ref="#interpunct">·</g> augendam
+                    <lb n="13"/><supplied reason="lost">optimi</supplied> <supplied reason="lost">viri</supplied> <supplied reason="lost">honorificentiam</supplied> <supplied reason="lost">frequ</supplied>entissimis <g ref="#interpunct">·</g> vocibus <g ref="#interpunct">·</g> bigas <g ref="#interpunct">·</g> centuriatim
+                    <lb n="14"/><supplied reason="lost">postulasset</supplied> <supplied reason="lost">motus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">verec</supplied>undia <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> esset <g ref="#interpunct">·</g> duabus <g ref="#interpunct">·</g> bigiis <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> <expan><abbr>equestri</abbr><ex>bus</ex></expan>
+                    <lb n="15"/><supplied reason="lost" cert="low">statuis</supplied> <supplied reason="lost">tribus</supplied> <supplied reason="lost">contentus</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text of <hi rend="italic">IMusPalermo</hi></note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p><!--Tentative translation resp="#TA"> 
+                    ...(to) [-]ianus [the curator kalendarii, 'the curator of the account-books'?, the office which?] he adminstrated with true loyalty [at the same time as] 
+                    (being) the curator portensis kalendarii (i.e. something to do with overseeing the accounts of port expenses or taxes?), office which he [conducted with] 
+                    exceptional [diligence]; the praiseworthy munerarius, who with the sacred indulgence (of the emperor?) organised public games, which 
+                    he was worthy of as expected (*I'm not at all sure about the optando here, perhaps as an ablative of respect, 'in respect to the desired/expected'?*) and which he wanted,
+                    and he gave back to all the citizens a most pleasing production which for [... days and many hours held the people] in the pleasures of theatre, and [then the whole
+                    crowd] in their merriness moved [to the arena at] midday, where it marvelled at the most distinguished [(display of the) prepared arrangements....every] type of 
+                    plant-eating animals and oriental beasts; and, having sat down, from midday the crowd in both auditoria [enjoyed] varied types of entertainment. [And likewise
+                    thanks to] the sacred indulgence (of the emperor), he proved himself particularly worthy as he invited all his fellow citizens to the most elegant [banquet which he had provided
+                    for] with the most splendid abundance. When the people, on account of the public shows (he had) virtuously organised, demanded with very frequent pleads that two-horse chariot
+                    statues (be erected) in each centurial district for this most excellent man in order to increase his honours, he in his modesty [was content] with 
+                    two chariot-statues and [three?] equestrian [statues...] --></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="CIL">
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650791">10.7295</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                    <bibl type="corpus" n="ILMusPalermo">
+                        <citedRange>31</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
+                    <bibl type="corpus" n="ILS">
+                        <citedRange>5055</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/XHMS9K6S"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000352">https://biblio.inscriptiones.org/epig10000352</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>43</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

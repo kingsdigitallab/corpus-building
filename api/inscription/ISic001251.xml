@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 001251</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001251</idno>
+                <idno type="TM">492857</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS">39101619</idno>
+                <idno type="PHI">140739</idno>
+                <idno type="PHI">329616</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001251</idno>
+                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385685</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Taormina</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/062">Antiquarium del Teatro Antico</repository>
+                        <!--No inventory number found-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.breccia" ref="http://www.eagle-network.eu/voc/material/lod/73.html">breccia</material>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions>
+                                        <height unit="cm">40.5</height>
+                                        <width unit="cm">82</width>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
+                            	<geo>37.85358, 15.28851</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" precision="low">2nd — 1st century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="1864">Found in the area of the ancient theatre c.1864</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2009.10.06</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.account" ref="http://www.eagle-network.eu/voc/typeins/lod/410.html">accounts</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-11-20" who="#MB">encoded text</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001251_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001251.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <ab>
+                    <cb n="1" xml:id="BZKAK"/>
+                    <lb n="1" xml:id="BZKAU"/><w xml:id="BZKAe"><supplied reason="lost" xml:id="BZKAo"><roleName type="civic" subtype="sitophylax" xml:id="BZKAy">σιτοφυλάκοις</roleName>κυάμων λοι</supplied>
+                    <lb n="2" break="no" xml:id="BZKAΙ"/>πὸν</w> <num value="5" xml:id="BZKAΤ">π<supplied reason="lost" xml:id="BZKAε">έντε</supplied></num> <w xml:id="BZKAο"><supplied reason="lost" xml:id="BZKBA">ἡμίεκτα</supplied>,</w> <num value="1512" xml:id="BZKBK"><supplied reason="lost" xml:id="BZKBU">δύο δέκα πεν</supplied>
+                    <lb n="3" break="no" xml:id="BZKBe"/>τακ<supplied reason="lost" xml:id="BZKBo">όσιοι χίλιοι</supplied></num> <w xml:id="BZKBy"><supplied reason="lost" xml:id="BZKBΙ">μέ</supplied>δ<supplied reason="lost" xml:id="BZKBΤ">ιμνοι. σιτω</supplied>
+                    <lb n="4" break="no" xml:id="BZKBε"/>νίωι</w> <persName xml:id="BZKBο"><name xml:id="BZKCA">Φρύνιος</name></persName> <w xml:id="BZKCK">λοιπὸν</w> <num value="40" xml:id="BZKCU">τεσ<supplied reason="lost" xml:id="BZKCe">σαράκον</supplied>
+                    <lb n="5" break="no" xml:id="BZKCo"/>τα</num> <w xml:id="BZKCy">λίτραι,</w> <num value="13333" xml:id="BZKCΙ">τρία τριάκοντα <supplied reason="lost" xml:id="BZKCΤ">τριακό</supplied>
+                    <lb n="6" break="no" xml:id="BZKCε"/>σια τρισχίλια μύρια</num> <w xml:id="BZKCο">τάλαντα.</w> <w xml:id="BZKDA"><supplied reason="lost" xml:id="BZKDK">σιτω</supplied>
+                    <lb n="7" break="no" xml:id="BZKDU"/>νίω<supplied reason="omitted" xml:id="BZKDe">ι</supplied></w> <persName xml:id="BZKDo"><name xml:id="BZKDy">Εὐκλείδα</name></persName> <w xml:id="BZKDΙ">λοιπὸν</w> <num value="100" xml:id="BZKDΤ">ἑκατὸν</num> <w xml:id="BZKDε"><supplied reason="lost" xml:id="BZKDο">λί</supplied>
+                    <lb n="8" break="no" xml:id="BZKEA"/>τραι,</w> <num value="21445" xml:id="BZKEK">πέντε τεσσαράκοντα τε<supplied reason="lost" xml:id="BZKEU">τρα</supplied>
+                    <lb n="9" break="no" xml:id="BZKEe"/>κόσια<supplied reason="lost" xml:id="BZKEo">χί</supplied>λ<supplied reason="lost" xml:id="BZKEy">ια δισ</supplied>μύρια</num> <w xml:id="BZKEΙ">τά<supplied reason="lost" xml:id="BZKEΤ">λα</supplied>ντα.</w> 
+                    <lb n="10" xml:id="BZKEε"/><w xml:id="BZKEο">ἀγορᾶ<supplied reason="lost" xml:id="BZKFA">ν</supplied></w> <w xml:id="BZKFK">δι<supplied reason="lost" xml:id="BZKFU">ὰ πω</supplied>λημάτων</w> <num value="15660" xml:id="BZKFe">ἑ<supplied reason="lost" xml:id="BZKFo">ξήκον</supplied>
+                    <lb n="11" break="no" xml:id="BZKFy"/>τα ἑξακόσια πεντακισχ<supplied reason="lost" xml:id="BZKFΙ">ίλια μύρια</supplied></num> 
+                    <lb n="12" xml:id="BZKFΤ"/><w xml:id="BZKFε">τάλαντα.</w> <w xml:id="BZKFο">ζωπ<unclear xml:id="BZKGA">ώ</unclear>λ<supplied reason="lost" xml:id="BZKGK">ι</supplied>δος</w> <orig xml:id="BZKGU">I</orig><gap reason="illegible" quantity="4" unit="character" xml:id="BZKGe"/>
+                    <lb n="13" xml:id="BZKGo"/><orig xml:id="BZKGy">ΑΑΙΡΑΟ</orig><num value="12700" xml:id="BZKGΙ">ἑπτακόσια δισχί<unclear xml:id="BZKGΤ">λ</unclear><supplied reason="lost" xml:id="BZKGε">ι</supplied><unclear xml:id="BZKGο">α</unclear><unclear xml:id="BZKHA">μ</unclear><supplied reason="lost" xml:id="BZKHK">ύρι</supplied>α</num> <w xml:id="BZKHU">τάλαντα.</w> <w xml:id="BZKHe"><seg part="I" xml:id="BZKHo">ζμη<unclear xml:id="BZKHy">γ</unclear>
+                    <lb n="13" break="no" xml:id="BZKHΙ"/><supplied reason="lost" xml:id="BZKHΤ">ματ</supplied></seg><gap reason="lost" extent="unknown" unit="character" xml:id="BZKHε"/></w> <orig xml:id="BZKHο">ΕΔ</orig><gap reason="lost" extent="unknown" unit="character" xml:id="BZKIA"/>
+                    <lb n="14" xml:id="BZKIK"/><num value="15020" xml:id="BZKIU">εἴκοσι πεντακισχίλια <supplied reason="lost" xml:id="BZKIe">μύρια</supplied></num> <w xml:id="BZKIo"><supplied reason="lost" xml:id="BZKIy">τά</supplied>
+                    <lb n="15" break="no" xml:id="BZKIΙ"/>λαντα.</w> <space extent="unknown" unit="line" xml:id="BZKIΤ"/><cb n="2" xml:id="BZKIε"/>
+                    <lb n="0-a" xml:id="BZKIο"/><gap reason="lost" extent="unknown" unit="line" xml:id="BZKJA"/>
+                    <lb n="1" xml:id="BZKJK"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKJU"/><num xml:id="BZKJe">άκοντα</num> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKJo"/><supplied reason="lost" xml:id="BZKJy">σιτωνίωι <persName xml:id="BZKJΙ"><name xml:id="BZKJΤ">Φρύνιος</name></persName></supplied><w xml:id="BZKJε">λοιπὸν</w> 
+                    <lb n="2" xml:id="BZKJο"/><num value="40" xml:id="BZKKA">τεσσερά<supplied reason="lost" xml:id="BZKKK">κοντα</supplied></num> <w xml:id="BZKKU"><supplied reason="lost" xml:id="BZKKe">λίτραι</supplied></w> <num value="3333" xml:id="BZKKo"><supplied reason="lost" xml:id="BZKKy">τρία τριάκοντα τριακόσια</supplied>τρισχίλια</num> 
+                    <lb n="3" xml:id="BZKKΙ"/><w xml:id="BZKKΤ"><supplied reason="lost" xml:id="BZKKε">μύρια τάλαντα</supplied></w> 
+                    <lb n="4" xml:id="BZKKο"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKLA"/><num atLeast="100" xml:id="BZKLK">ἑκατὸν</num> <w xml:id="BZKLU">λίτ<supplied reason="lost" xml:id="BZKLe">ραι</supplied></w> 
+                    <lb n="0-b" xml:id="BZKLo"/><gap reason="lost" extent="unknown" unit="line" xml:id="BZKLy"/>
+                    <lb n="5" xml:id="BZKLΙ"/><w xml:id="BZKLΤ">Ἐ<supplied reason="lost" xml:id="BZKLε">λλ</supplied>ο<supplied reason="lost" cert="low" xml:id="BZKLο">κίου</supplied></w> <w xml:id="BZKMA"><supplied reason="lost" xml:id="BZKMK"><abbr xml:id="BZKMU">πρ</abbr></supplied></w> <persName xml:id="BZKMe"><name xml:id="BZKMo">Θε<supplied reason="lost" xml:id="BZKMy">ό</supplied>φ<supplied reason="lost" xml:id="BZKMΙ">ιλος</supplied></name> <persName xml:id="BZKMΤ"><name xml:id="BZKMε">Θεοχρήστου</name></persName></persName> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKMο"/><roleName type="civic.religious" subtype="hieromnamon" xml:id="BZKNA"><w xml:id="BZKNK"><supplied reason="lost" xml:id="BZKNU">ἱερομνα</supplied>
+                    <lb n="6" break="no" xml:id="BZKNe"/>μόνοις</w></roleName> <w xml:id="BZKNo">ἔσοδος</w> <num value="90" xml:id="BZKNy">ἐνενήκοντα </num> <w xml:id="BZKNΙ">λίτραι,</w> <num value="66" xml:id="BZKNΤ">ἓξ ἑ<supplied reason="lost" xml:id="BZKNε">ξ</supplied>ήκοντα</num> 
+                    <lb n="7" xml:id="BZKNο"/><w xml:id="BZKOA">τάλαντα</w> <g ref="#interpunct" xml:id="BZKOK">·</g> <w xml:id="BZKOU">ἔξοδος</w> <num value="18" xml:id="BZKOe">ὀκτ<unclear xml:id="BZKOo">ὼ</unclear>δέκα</num> <w xml:id="BZKOy">λίτραι,</w> <num value="128" xml:id="BZKOΙ">ὀ<unclear xml:id="BZKOΤ">κ</unclear><supplied reason="lost" xml:id="BZKOε">τὼ ε</supplied>ἴκοσι
+                    <lb n="8" xml:id="BZKOο"/>ἑκατὸν</num> <w xml:id="BZKPA">τάλαντα</w> <g ref="#interpunct" xml:id="BZKPK">·</g> <w xml:id="BZKPU">λοιπὸν</w> <num value="57" xml:id="BZKPe">ἑπτὰ πεντήκοντα</num> <w xml:id="BZKPo">λίτραι,</w> 
+                    <lb n="9" xml:id="BZKPy"/><num value="193" xml:id="BZKPΙ">τρία ἐνενήκοντα ἑκατὸν</num> <w xml:id="BZKPΤ">τάλαντα.</w> <roleName type="civic" subtype="tamias" xml:id="BZKPε"><w xml:id="BZKPο">ταμία</w> <w xml:id="BZKQA"><supplied reason="lost" xml:id="BZKQK">ις</supplied></w></roleName> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKQU"/><cb n="3" xml:id="BZKQe"/>
+                    <lb n="0" xml:id="BZKQo"/><gap reason="lost" extent="unknown" unit="line" xml:id="BZKQy"/>
+                    <lb n="1" xml:id="BZKQΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKQΤ"/><num atLeast="90" xml:id="BZKQε"><supplied reason="lost" xml:id="BZKQο">ἐν</supplied>ενή<unclear xml:id="BZKRA">κ</unclear><supplied reason="lost" xml:id="BZKRK">ο</supplied>ν<unclear xml:id="BZKRU">τ</unclear>α</num> 
+                    <lb n="2" xml:id="BZKRe"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKRo"/><w xml:id="BZKRy"><supplied reason="lost" xml:id="BZKRΙ">τάλ</supplied>αντα</w> <g ref="#interpunct" xml:id="BZKRΤ">·</g> <w xml:id="BZKRε">λο<supplied reason="lost" xml:id="BZKRο">ιπὸν</supplied></w> 
+                    <lb n="3" xml:id="BZKSA"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKSK"/><num value="63" xml:id="BZKSU">τρία ἑξήκοντα</num> 
+                    <lb n="4" xml:id="BZKSe"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKSo"/><w xml:id="BZKSy"><supplied reason="lost" xml:id="BZKSΙ">τάλαν</supplied>τα.</w> <roleName type="civic" subtype="sitophylax" xml:id="BZKSΤ"><w xml:id="BZKSε">σιτοφυλάκοις</w></roleName> <w xml:id="BZKSο">κυάμων</w> 
+                    <lb n="5" xml:id="BZKTA"/><w xml:id="BZKTK"><supplied reason="lost" xml:id="BZKTU">λοιπ</supplied>ὸν</w> <num value="5" xml:id="BZKTe">πέντε</num> <w xml:id="BZKTo">ἡμίεκτα,</w> <num value="1512" xml:id="BZKTy">δύο δέκα πεντακόσι
+                    <lb n="6" break="no" xml:id="BZKTΙ"/><supplied reason="lost" xml:id="BZKTΤ">οι χίλιοι</supplied></num> <w xml:id="BZKTε"><supplied reason="lost" xml:id="BZKTο">μέδιμ</supplied>νοι.</w> <w xml:id="BZKUA">σιτωνίω<supplied reason="omitted" xml:id="BZKUK">ι</supplied></w> <persName xml:id="BZKUU"><name xml:id="BZKUe">Φρύνιος</name></persName> <w xml:id="BZKUo">λοιπὸν</w> 
+                    <lb n="7" xml:id="BZKUy"/><num value="40" xml:id="BZKUΙ"><supplied reason="lost" xml:id="BZKUΤ">τεσσαρ</supplied>άκοντα</num> <w xml:id="BZKUε">λίτραι,</w> <num value="13333" xml:id="BZKUο">τρία τρ<supplied reason="lost" xml:id="BZKVA">ιάκοντα τριακόσια</supplied>
+                    <lb n="8" xml:id="BZKVK"/>τρισ<supplied reason="lost" xml:id="BZKVU">χίλ</supplied>ια μ<supplied reason="lost" xml:id="BZKVe">ύρια</supplied></num> <w xml:id="BZKVo">τάλ<supplied reason="lost" xml:id="BZKVy">α</supplied>ντα.</w> <w xml:id="BZKVΙ">σιτωνίω<supplied reason="omitted" xml:id="BZKVΤ">ι</supplied></w> <persName xml:id="BZKVε"><name xml:id="BZKVο">Εὐκλ<supplied reason="omitted" xml:id="BZKWA">ε</supplied>ίδα</name></persName> 
+                    <lb n="9" xml:id="BZKWK"/><w xml:id="BZKWU">λοιπὸν</w> <num value="100" xml:id="BZKWe">ἑ<supplied reason="lost" xml:id="BZKWo">κ</supplied>α<supplied reason="lost" xml:id="BZKWy">τὸν</supplied></num> <w xml:id="BZKWΙ"><supplied reason="lost" xml:id="BZKWΤ">λί</supplied>τραι,</w> <num value="21445" xml:id="BZKWε"><supplied reason="lost" xml:id="BZKWο">π</supplied>έντε τεσσαράκοντα<supplied reason="lost" xml:id="BZKXA">τετρ</supplied>α
+                    <lb n="10" break="no" xml:id="BZKXK"/>κόσ<supplied reason="lost" xml:id="BZKXU">ι</supplied><unclear xml:id="BZKXe">α</unclear><supplied reason="lost" xml:id="BZKXo">χίλια δισμύρ</supplied>ια</num> <w xml:id="BZKXy"><supplied reason="lost" xml:id="BZKXΙ">τ</supplied>άλ<supplied reason="lost" xml:id="BZKXΤ">α</supplied>ντα.</w> <w xml:id="BZKXε">τούτου</w> <w xml:id="BZKXο">ση<supplied reason="lost" xml:id="BZKYA">σαυρισθὲν</supplied></w> 
+                    <lb n="11" xml:id="BZKYK"/><num value="53" xml:id="BZKYU"><supplied reason="lost" xml:id="BZKYe">τρεῖς<unclear xml:id="BZKYo">π</unclear>ε</supplied>ντήκον<supplied reason="lost" xml:id="BZKYy">τα</supplied></num> <w xml:id="BZKYΙ"><supplied reason="lost" xml:id="BZKYΤ">λίτραι</supplied></w> <num value="19464" xml:id="BZKYε"><supplied reason="lost" xml:id="BZKYο">τέσσαρα ἑξήκοντα τετρακόσια
+                    <lb n="12" xml:id="BZKZA"/>ἐνα</supplied>κισχίλια<supplied reason="lost" xml:id="BZKZK">μύρια</supplied></num> <w xml:id="BZKZU"><supplied reason="lost" xml:id="BZKZe">τά</supplied>λαντα.</w> 
+                    <lb n="13" xml:id="BZKZo"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKZy"/><w xml:id="BZKZΙ">ρίου</w> <w xml:id="BZKZΤ"><abbr xml:id="BZKZε">πρ</abbr></w> <w xml:id="BZKZο">Μι</w> <gap reason="illegible" quantity="2" unit="character" xml:id="BZKaA"/><w xml:id="BZKaK">οσ</w> <gap reason="illegible" quantity="1" unit="character" xml:id="BZKaU"/><w xml:id="BZKae">ο</w> <gap reason="illegible" quantity="2" unit="character" xml:id="BZKao"/><w xml:id="BZKay">ου</w> <gap reason="illegible" quantity="1" unit="character" xml:id="BZKaΙ"/><roleName type="civic.religious" subtype="hieromnamon" xml:id="BZKaΤ"><w xml:id="BZKaε">ἱερομ</w> <w xml:id="BZKaο"><supplied reason="lost" xml:id="BZKbA">ναμ</supplied></w> <w xml:id="BZKbK">όνοις</w></roleName> 
+                    <lb n="14" xml:id="BZKbU"/><w xml:id="BZKbe"><supplied reason="lost" xml:id="BZKbo">ἔσοδος</supplied></w> <num xml:id="BZKby">τε<supplied reason="lost" xml:id="BZKbΙ">σσαρ</supplied></num> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKbΤ"/>
+                    <lb n="15" xml:id="BZKbε"/><gap reason="lost" quantity="1" unit="line" xml:id="BZKbο"/>
+                    <lb n="16" xml:id="BZKcA"/><gap reason="lost" quantity="1" unit="line" xml:id="BZKcK"/>
+                    <lb n="17" xml:id="BZKcU"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKce"/><roleName type="civic" subtype="tamias" xml:id="BZKco"><w xml:id="BZKcy"><supplied reason="lost" xml:id="BZKcΙ">τ</supplied></w> <w xml:id="BZKcΤ">αμίαις</w></roleName> 
+                    <lb n="18" xml:id="BZKcε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKcο"/><w xml:id="BZKdA">ήκοντα</w> 
+                    <lb n="19" xml:id="BZKdK"/><gap reason="lost" quantity="1" unit="line" xml:id="BZKdU"/>
+                    <lb n="20" xml:id="BZKde"/><gap reason="lost" quantity="1" unit="line" xml:id="BZKdo"/>
+                    <lb n="21" xml:id="BZKdy"/><gap reason="lost" quantity="1" unit="line" xml:id="BZKdΙ"/>
+                    <lb n="22" xml:id="BZKdΤ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKdε"/><roleName type="civic" subtype="sitophylax" xml:id="BZKdο"><w xml:id="BZKeA"><supplied reason="lost" xml:id="BZKeK">σι</supplied></w> <w xml:id="BZKeU">τοφυλά
+                    <lb n="23" break="no" xml:id="BZKee"/></w> <w xml:id="BZKeo"><supplied reason="lost" xml:id="BZKey">κοις</supplied></w></roleName> <supplied reason="lost" xml:id="BZKeΙ">κυάμων λοιπὸν <num value="5" xml:id="BZKeΤ">πέντε</num> ἡμίεκτα</supplied>,<num value="1512" xml:id="BZKeε"><supplied reason="lost" xml:id="BZKeο">δύο δέκα π</supplied>εντακό
+                    <lb n="24" break="no" xml:id="BZKfA"/><supplied reason="lost" xml:id="BZKfK">σιοι χίλιοι</supplied></num> <supplied reason="lost" xml:id="BZKfU">μέδιμνοι. σιτωνίῳ <persName xml:id="BZKfe"><name xml:id="BZKfo">Φρύνιος</name></persName> λοιπὸν</supplied><num value="40" xml:id="BZKfy"><supplied reason="lost" xml:id="BZKfΙ">τ</supplied>εσσα
+                    <lb n="25" break="no" xml:id="BZKfΤ"/><supplied reason="lost" xml:id="BZKfε">ράκοντα</supplied></num> <w xml:id="BZKfο"><supplied reason="lost" xml:id="BZKgA">λίτραι</supplied>,</w> <num value="13333" xml:id="BZKgK"><supplied reason="lost" xml:id="BZKgU">τρία τριάκοντα τριακόσια τρισχί</supplied>λια
+                    <lb n="26" xml:id="BZKge"/><supplied reason="lost" xml:id="BZKgo">μύρια</supplied></num> <supplied reason="lost" xml:id="BZKgy">τάλαντα. σιτωνίῳ <persName xml:id="BZKgΙ"><name xml:id="BZKgΤ">Εὐκλείδα</name></persName> λοιπὸ</supplied>ν<num value="100" xml:id="BZKgε">ἑκατὸν</num> 
+                    <lb n="27" xml:id="BZKgο"/><w xml:id="BZKhA"><supplied reason="lost" xml:id="BZKhK">λίτραι</supplied>,</w> <num value="21445" xml:id="BZKhU"><supplied reason="lost" xml:id="BZKhe">πέντε τεσσαράκοντα τετρακόσια</supplied>χίλια δισμύ
+                    <lb n="28" break="no" xml:id="BZKho"/><supplied reason="lost" xml:id="BZKhy">ρια</supplied></num> <w xml:id="BZKhΙ"><supplied reason="lost" xml:id="BZKhΤ">τάλαντα. τούτου θησαυρισθὲν</supplied></w> <num value="53" xml:id="BZKhε"><supplied reason="lost" xml:id="BZKhο">τρεῖς πεντή</supplied>κοντα</num> <w xml:id="BZKiA">λίτραι,</w> 
+                    <lb n="29" xml:id="BZKiK"/><num value="19464" xml:id="BZKiU"><supplied reason="lost" xml:id="BZKie">τέσσαρα ἑξήκοντα τετρακόσια ἐνακισχί</supplied>λια μύρια</num> <w xml:id="BZKio">τάλαντα.</w> 
+                    <lb n="30" xml:id="BZKiy"/><w xml:id="BZKiΙ"><supplied reason="lost" xml:id="BZKiΤ">Πανάμου<abbr xml:id="BZKiε">πρ</abbr></supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKiο"/><name type="demotic" xml:id="BZKjA"><abbr xml:id="BZKjK"><supplied reason="lost" xml:id="BZKjU">Ἀ</supplied>λκ</abbr></name> <roleName type="civic.religious" subtype="hieromnamon" xml:id="BZKje"><w xml:id="BZKjo">ἱερομνα
+                    <lb n="31" break="no" xml:id="BZKjy"/></w> <w xml:id="BZKjΙ"><supplied reason="lost" xml:id="BZKjΤ">μόνοις</supplied></w></roleName> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKjε"/><num value="100" xml:id="BZKjο"><supplied reason="lost" xml:id="BZKkA">ἑ</supplied>κατὸν</num> <w xml:id="BZKkK">λίτραι,</w> 
+                    <lb n="32" xml:id="BZKkU"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKke"/><num atLeast="4000" xml:id="BZKko"><unclear xml:id="BZKky">α</unclear>κ<supplied reason="lost" xml:id="BZKkΙ">ισ</supplied>χίλια</num> <w xml:id="BZKkΤ">τάλαν
+                    <lb n="33" break="no" xml:id="BZKkε"/><supplied reason="lost" xml:id="BZKkο">τα· ἔξοδ</supplied>ος</w> <num xml:id="BZKlA">τ<gap reason="lost" extent="unknown" unit="character" xml:id="BZKlK"/>οντα</num> <w xml:id="BZKlU">λίτραι,</w> <num value="6136" xml:id="BZKle">ἓξ τριά
+                    <lb n="34" break="no" xml:id="BZKlo"/>κ<supplied reason="lost" xml:id="BZKly">οντα ἑκ</supplied>ατ<supplied reason="lost" xml:id="BZKlΙ">ὸ</supplied><unclear xml:id="BZKlΤ">ν</unclear>ἑξα<unclear xml:id="BZKlε">κ</unclear><supplied reason="lost" xml:id="BZKlο">ι</supplied>σχίλια</num> <w xml:id="BZKmA">τάλαντα</w> <g ref="#interpunct" xml:id="BZKmK">·</g> <w xml:id="BZKmU">λοιπὸν</w> <num value="87" xml:id="BZKme">ἑπτὰ
+                    <lb n="35" xml:id="BZKmo"/>ὀγδοήκοντα</num> <w xml:id="BZKmy">λίτραι,</w> <num value="706" xml:id="BZKmΙ">ἓξ ἑπτακόσια</num> <w xml:id="BZKmΤ">τάλαντα.</w> <roleName type="civic" subtype="tamias" xml:id="BZKmε"><w xml:id="BZKmο">ταμί
+                    <lb n="36" break="no" xml:id="BZKnA"/>αις</w></roleName> <w xml:id="BZKnK">ἔσοδος</w> <num value="64" xml:id="BZKnU">τέσσαρας ἑξήκοντα</num> <w xml:id="BZKne">λίτραι,</w> <num value="10252" xml:id="BZKno">δύο πε<unclear xml:id="BZKny">ν</unclear><supplied reason="lost" xml:id="BZKnΙ">τήκον</supplied>
+                    <lb n="37" break="no" xml:id="BZKnΤ"/>τα διακ<supplied reason="lost" xml:id="BZKnε">όσια</supplied>μύρια</num> <w xml:id="BZKnο">τάλ<supplied reason="lost" xml:id="BZKoA">α</supplied>ντα</w> <g ref="#interpunct" xml:id="BZKoK">·</g> <w xml:id="BZKoU"><unclear xml:id="BZKoe">ἔξο</unclear><supplied reason="lost" xml:id="BZKoo">δος</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKoy"/><cb n="4" xml:id="BZKoΙ"/>
+                    <lb n="0" xml:id="BZKoΤ"/><gap reason="lost" extent="unknown" unit="line" xml:id="BZKoε"/>
+                    <lb n="1" xml:id="BZKoο"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKpA"/><num atLeast="4000" xml:id="BZKpK"><supplied reason="lost" xml:id="BZKpU">α</supplied>κισχίλια</num> <w xml:id="BZKpe">τ<supplied reason="lost" xml:id="BZKpo">άλαντα· λοιπὸν</supplied></w> 
+                    <lb n="2" xml:id="BZKpy"/><num value="64" xml:id="BZKpΙ">τέσσαρας ἑξήκοντα</num> <w xml:id="BZKpΤ"><supplied reason="lost" xml:id="BZKpε">λίτραι</supplied>,</w> <num value="4767" xml:id="BZKpο"><supplied reason="lost" xml:id="BZKqA">ἑπτὰ ἑ</supplied>
+                    <lb n="3" break="no" xml:id="BZKqK"/>ξήκοντα ἑπτακόσια τετρακισχί<supplied reason="lost" xml:id="BZKqU">λια</supplied></num> <w xml:id="BZKqe"><supplied reason="lost" xml:id="BZKqo">τάλαν</supplied>
+                    <lb n="4" break="no" xml:id="BZKqy"/>τα.</w> <w xml:id="BZKqΙ">σιτοφυλάκοις</w> <w xml:id="BZKqΤ">κυάμων</w> <w xml:id="BZKqε">λοιπὸν</w> <num value="5" xml:id="BZKqο">πέντε</num> <w xml:id="BZKrA">ἡμίε
+                    <lb n="5" break="no" xml:id="BZKrK"/>κτα,</w> <num value="1512" xml:id="BZKrU">δύο δέκα πεντακόσιοι χίλιοι</num> <w xml:id="BZKre">μέδιμνοι.</w> <w xml:id="BZKro">σιτ<unclear xml:id="BZKry">ω</unclear><supplied reason="lost" xml:id="BZKrΙ">νί</supplied>
+                    <lb n="6" break="no" xml:id="BZKrΤ"/>ω<supplied reason="omitted" xml:id="BZKrε">ι</supplied></w> <persName xml:id="BZKrο"><name xml:id="BZKsA">Φρύνιος</name></persName> <w xml:id="BZKsK">λοιπὸν</w> <num value="40" xml:id="BZKsU">τεσσαράκοντα</num> <w xml:id="BZKse">λίτραι,</w> <num value="13333" xml:id="BZKso">τρία τριάκο<supplied reason="lost" xml:id="BZKsy">ν</supplied>
+                    <lb n="7" break="no" xml:id="BZKsΙ"/>τα τριακόσια τρισχίλια μύρια</num> <w xml:id="BZKsΤ">τάλαντα.</w> <w xml:id="BZKsε">σιτωνίω<supplied reason="omitted" xml:id="BZKsο">ι</supplied></w> <persName xml:id="BZKtA"><name xml:id="BZKtK">Εὐ
+                    <lb n="8" break="no" xml:id="BZKtU"/>κλείδα</name></persName>λοιπὸν <num value="100" xml:id="BZKte">ἑκατὸν</num> <w xml:id="BZKto">λίτραι,</w> <num value="21445" xml:id="BZKty">πέντε τεσσαράκοντα
+                    <lb n="9" xml:id="BZKtΙ"/>τετρακόσια χίλια δισμύρια</num> <w xml:id="BZKtΤ">τάλαντα</w> <g ref="#interpunct" xml:id="BZKtε">·</g> <w xml:id="BZKtο">τούτου</w> <w xml:id="BZKuA">θησαυρι<unclear xml:id="BZKuK">σ</unclear><supplied reason="lost" xml:id="BZKuU">θὲν</supplied></w> 
+                    <lb n="10" xml:id="BZKue"/><num value="53" xml:id="BZKuo">τρεῖς πεντήκοντα</num> <w xml:id="BZKuy">λίτραι,</w> <num value="19464" xml:id="BZKuΙ">τέσσαρα ἑξήκοντα τετρακό
+                    <lb n="11" break="no" xml:id="BZKuΤ"/>σια ἐνακισχίλια μύρια</num> <w xml:id="BZKuε">τάλαντα.</w> 
+                    <lb n="12" xml:id="BZKuο"/><w xml:id="BZKvA">Ἀπ<unclear xml:id="BZKvK">ε</unclear><supplied reason="lost" xml:id="BZKvU">λλ</supplied>αίου</w> <w xml:id="BZKve"><abbr xml:id="BZKvo">πρ</abbr></w> <persName xml:id="BZKvy"><name xml:id="BZKvΙ">Νικόστρατος</name> <persName xml:id="BZKvΤ"><name xml:id="BZKvε">Νικοστράτου</name></persName> <name type="demotic" xml:id="BZKvο"><abbr xml:id="BZKwA">Ἰδομ</abbr></name></persName> <w xml:id="BZKwK">ἱερομνα
+                    <lb n="13" break="no" xml:id="BZKwU"/>μόνοις</w> <w xml:id="BZKwe">ἔσοδος</w> <num value="80" xml:id="BZKwo">ὀγδοήκοντα</num> <w xml:id="BZKwy">λίτραι,</w> <num value="599" xml:id="BZKwΙ">ἐννέα ἐνενήκον
+                    <lb n="14" break="no" xml:id="BZKwΤ"/>τα<supplied reason="lost" xml:id="BZKwε">πε</supplied>ντακόσια</num> <w xml:id="BZKwο">τάλαντ<unclear xml:id="BZKxA">α</unclear></w> <g ref="#interpunct" xml:id="BZKxK">·</g> <w xml:id="BZKxU">ἔξοδος</w> <num value="68" xml:id="BZKxe">ὀκτὼ ἑξήκοντα</num> <w xml:id="BZKxo">λί
+                    <lb n="15" break="no" xml:id="BZKxy"/>τ<unclear xml:id="BZKxΙ">ρ</unclear>αι,</w> <num value="660" xml:id="BZKxΤ"><unclear xml:id="BZKxε">ἑ</unclear><supplied reason="lost" xml:id="BZKxο">ξ</supplied>ήκ<supplied reason="lost" xml:id="BZKyA">ον</supplied><unclear xml:id="BZKyK">τ</unclear>α ἑξακόσια</num> <w xml:id="BZKyU">τάλαντα</w> <g ref="#interpunct" xml:id="BZKye">·</g> <w xml:id="BZKyo">λοιπὸν</w> <num value="99" xml:id="BZKyy">ἐννέα
+                    <lb n="16" xml:id="BZKyΙ"/>ἐνενήκο<supplied reason="lost" xml:id="BZKyΤ">ντ</supplied>α</num> <w xml:id="BZKyε">λίτραι,</w> <num value="645" xml:id="BZKyο">πέντε τεσσαράκοντα ἑ<unclear xml:id="BZKzA">ξ</unclear>ακόσι
+                    <lb n="17" break="no" xml:id="BZKzK"/>α</num> <w xml:id="BZKzU">τά<unclear xml:id="BZKze">λ</unclear><supplied reason="lost" xml:id="BZKzo">αντ</supplied><unclear xml:id="BZKzy">α</unclear>.</w> <w xml:id="BZKzΙ">ταμίαις</w> <w xml:id="BZKzΤ">ἔσοδος</w> <num value="1" xml:id="BZKzε">μία</num> <w xml:id="BZKzο">λίτρα,</w> <num value="5033" xml:id="BZKΑA">τρία τριάκον
+                    <lb n="18" break="no" xml:id="BZKΑK"/>τα πεντακ<supplied reason="lost" xml:id="BZKΑU">ισ</supplied>χίλια</num> <w xml:id="BZKΑe">τάλαντα</w> <g ref="#interpunct" xml:id="BZKΑo">·</g> <w xml:id="BZKΑy">ἔξοδος</w> <num value="99" xml:id="BZKΑΙ">ἐννέα ἐνενή
+                    <lb n="19" break="no" xml:id="BZKΑΤ"/>κοντα</num> <w xml:id="BZKΑε">λίτρ<unclear xml:id="BZKΑο">αι</unclear>,</w> <num value="9280" xml:id="BZKΒA">ὀγδοήκοντα διακόσια ἐνακισχίλι
+                    <lb n="20" xml:id="BZKΒK"/>α</num> <w xml:id="BZKΒU">τάλαντα</w> <g ref="#interpunct" xml:id="BZKΒe">·</g> <w xml:id="BZKΒo">λοιπὸν</w> <num value="86" xml:id="BZKΒy">ἓξ ὀγδοήκοντα</num> <w xml:id="BZKΒΙ">λίτραι,</w> <num value="519" xml:id="BZKΒΤ">ἐνν<supplied reason="lost" xml:id="BZKΒε">έ</supplied>
+                    <lb n="21" break="no" xml:id="BZKΒο"/>α δέκα πεντα<unclear xml:id="BZKΓA">κ</unclear><supplied reason="lost" xml:id="BZKΓK">όσ</supplied>ια</num> <w xml:id="BZKΓU">τάλαντα.</w> 
+                    <lb n="22" xml:id="BZKΓe"/><gap reason="lost" quantity="1" unit="line" xml:id="BZKΓo"/>
+                    <lb n="23" xml:id="BZKΓy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKΓΙ"/><w xml:id="BZKΓΤ">σιτο<supplied reason="lost" xml:id="BZKΓε">φυλάκοις κυάμων λοιπὸν</supplied></w> <num value="5" xml:id="BZKΓο"><supplied reason="lost" xml:id="BZKΔA">πέν</supplied>
+                    <lb n="24" break="no" xml:id="BZKΔK"/>τε</num> <w xml:id="BZKΔU">ἡμίεκτα,</w> <num value="1512" xml:id="BZKΔe">δύο δέκα πε<supplied reason="lost" xml:id="BZKΔo">ντακόσιοι χίλιοι</supplied></num> <w xml:id="BZKΔy"><supplied reason="lost" xml:id="BZKΔΙ">μέ</supplied></w> 
+                    <lb n="25" xml:id="BZKΔΤ"/><w xml:id="BZKΔε">διμνοι.</w> <w xml:id="BZKΔο">σιτωνίω<supplied reason="omitted" xml:id="BZKΕA">ι</supplied></w> <persName xml:id="BZKΕK"><name xml:id="BZKΕU">Φρύνιος</name></persName> <w xml:id="BZKΕe"><supplied reason="lost" xml:id="BZKΕo">λοιπὸν</supplied></w> <num value="40" xml:id="BZKΕy"><supplied reason="lost" xml:id="BZKΕΙ">τεσσαράκον</supplied>
+                    <lb n="26" break="no" xml:id="BZKΕΤ"/>τα</num> <w xml:id="BZKΕε">λίτραι,</w> <num value="13333" xml:id="BZKΕο">τρία τριάκοντα
+                    τριακόσια τ<supplied reason="lost" xml:id="BZKΖA">ρισχίλια μύ</supplied>
+                    <lb n="27" break="no" xml:id="BZKΖK"/>ρια</num> <w xml:id="BZKΖU">τάλαντα.</w> <w xml:id="BZKΖe">σιτωνίω<supplied reason="omitted" xml:id="BZKΖo">ι</supplied></w> <persName xml:id="BZKΖy"><name xml:id="BZKΖΙ">Εὐκλείδα</name></persName> <w xml:id="BZKΖΤ"><supplied reason="lost" xml:id="BZKΖε">λοιπὸν</supplied></w> <num value="100" xml:id="BZKΖο"><supplied reason="lost" xml:id="BZKΗA">ἑκα</supplied>
+                    <lb n="28" break="no" xml:id="BZKΗK"/>τὸν</num> <w xml:id="BZKΗU">λίτραι,</w> <num value="21445" xml:id="BZKΗe">πέν<supplied reason="lost" xml:id="BZKΗo">τε</supplied>τεσσαράκοντα τ<supplied reason="lost" xml:id="BZKΗy">ετρακόσια χίλια</supplied>
+                    <lb n="29" xml:id="BZKΗΙ"/>δισμύρια</num> <w xml:id="BZKΗΤ">τάλαντα.</w> <w xml:id="BZKΗε">τούτου</w> <w xml:id="BZKΗο"><unclear xml:id="BZKΘA">θ</unclear><supplied reason="lost" xml:id="BZKΘK">ησαυρισθὲν</supplied></w> <num value="53" xml:id="BZKΘU"><supplied reason="lost" xml:id="BZKΘe">τρεῖς πεντή</supplied>
+                    <lb n="30" break="no" xml:id="BZKΘo"/>κοντα</num> <w xml:id="BZKΘy">λίτραι,</w> <num value="19464" xml:id="BZKΘΙ">τέσσαρα ἑξήκον<supplied reason="lost" xml:id="BZKΘΤ">τα τετρακόσια ἐ</supplied>
+                    <lb n="31" break="no" xml:id="BZKΘε"/>νακισχίλια μύρια</num> <w xml:id="BZKΘο">τάλαντα.</w> 
+                    <lb n="31" xml:id="BZKΙA"/><w xml:id="BZKΙK">Ἰτωνίου</w> <w xml:id="BZKΙU"><abbr xml:id="BZKΙe">πρ</abbr></w> <persName xml:id="BZKΙo"><name xml:id="BZKΙy">Σέαινις</name> <persName xml:id="BZKΙΙ"><name xml:id="BZKΙΤ">Διοδότου</name></persName> <name type="demotic" xml:id="BZKΙε"><abbr xml:id="BZKΙο">Ἀ<gap reason="lost" quantity="2" unit="character" xml:id="BZKΚA"/></abbr></name></persName> <w xml:id="BZKΚK"><supplied reason="lost" xml:id="BZKΚU">ἱερομναμό</supplied>
+                    <lb n="32" break="no" xml:id="BZKΚe"/>νοις</w> <w xml:id="BZKΚo">ἔσοδος</w> <num value="20" xml:id="BZKΚy">ἴκοσι</num> <w xml:id="BZKΚΙ">λίτραι,</w> <num value="354" xml:id="BZKΚΤ">τέσσαρα πεντ<supplied reason="lost" xml:id="BZKΚε">ήκον</supplied>
+                    <lb n="33" break="no" xml:id="BZKΚο"/>τα τριακόσια</num> <w xml:id="BZKΛA">τάλαντα</w> <g ref="#interpunct" xml:id="BZKΛK">·</g> <w xml:id="BZKΛU">ἔξοδος</w> <num value="72" xml:id="BZKΛe">δύο ἑβδομήκον
+                    <lb n="34" break="no" xml:id="BZKΛo"/>τα</num> <w xml:id="BZKΛy">λίτραι,</w> <num value="336" xml:id="BZKΛΙ">ἓξ τριάκοντα τριακόσια</num> <w xml:id="BZKΛΤ">τάλαντα</w> <g ref="#interpunct" xml:id="BZKΛε">·</g> <w xml:id="BZKΛο">λοι
+                    <lb n="35" break="no" xml:id="BZKΜA"/>πὸν</w> <num value="47" xml:id="BZKΜK">ἑπτὰ τεσσαράκοντα</num> <w xml:id="BZKΜU">λίτραι,</w> <num value="663" xml:id="BZKΜe">τρία ἑξήκον
+                    <lb n="36" break="no" xml:id="BZKΜo"/>τα ἑξακόσια</num> <w xml:id="BZKΜy">τάλαντα.</w> <w xml:id="BZKΜΙ">ταμί<unclear xml:id="BZKΜΤ">α</unclear><supplied reason="lost" xml:id="BZKΜε">ις ἔσο</supplied>δ<supplied reason="lost" xml:id="BZKΜο">ος</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKΝA"/>
+                    <lb n="37" xml:id="BZKΝK"/><num value="10" xml:id="BZKΝU">δέκα</num> <w xml:id="BZKΝe">λίτραι,</w> <num value="42" xml:id="BZKΝo">δύο τεσσαράκοντ<supplied reason="lost" xml:id="BZKΝy">α</supplied></num> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKΝΙ"/>
+                    <lb n="38" xml:id="BZKΝΤ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKΝε"/><num xml:id="BZKΝο">ια</num> <w xml:id="BZKΞA">τάλαντα·</w> <w xml:id="BZKΞK">ἔξοδος</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKΞU"/>
+                    <lb n="39" xml:id="BZKΞe"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKΞo"/><num atLeast="5400" xml:id="BZKΞy">ακόσια πεν<supplied reason="lost" xml:id="BZKΞΙ">τακισχίλια</supplied></num> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKΞΤ"/>
+                    <lb n="40" xml:id="BZKΞε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKΞο"/><num atLeast="30" xml:id="BZKΟA">κοντα</num> <w xml:id="BZKΟK">λ<supplied reason="lost" xml:id="BZKΟU">ίτραι</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BZKΟe"/>
+                    <lb n="41" xml:id="BZKΟo"/><gap reason="lost" extent="unknown" unit="character" xml:id="BZKΟy"/><w xml:id="BZKΟΙ"><supplied reason="lost" xml:id="BZKΟΤ">τάλ</supplied>αντα.</w>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text of Arangio Ruiz and Olivieri 1925 no.6</note></app></listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commentary--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0426</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>45.1342</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>04.0053</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl>
+                        <author>Arangio Ruiz and Olivieri</author>
+                        <date>1925</date>
+                        <citedRange>no.6</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5Q2B5T7T"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001378">https://biblio.inscriptiones.org/epig10001378</ref></bibl>
+                    <bibl type="corpus" n="SGDI">
+                        <citedRange>5224</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
