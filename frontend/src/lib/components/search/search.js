@@ -231,8 +231,6 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 					? 'private'
 					: (item.repository?._?.trim() ?? undefined);
 
-			console.log(item)
-
 			return {
 				...item,
 				lemmas: lemmas.find((l) => l.file === item.file)?.lemmas ?? [],
@@ -293,11 +291,10 @@ function getLetteringOptions(metadataRefs) {
 		// }
 		// =>
 		// "Greek Α type1.1.1"
-		console.log(metadataRefs)
 		ret = metadataRefs
 			// Filter out the refs embedded in the introduction paragraph.
 			// Only keep the list of refs with a type format.
-			.filter(ref => ref._.match(/ type[\d.]+$/))
+			.filter((ref) => ref._.match(/ type[\d.]+$/))
 			.map((ref) => {
 				// Extract the script from the url and display it in the option.
 				// Otherwise user can't tell latin A from greek A.
