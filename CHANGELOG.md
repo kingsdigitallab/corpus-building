@@ -1,5 +1,7 @@
 
 
+## [0.20.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.20.0...v0.20.1) (2025-06-14)
+
 # [0.20.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.19.0...v0.20.0) (2025-06-13)
 
 
