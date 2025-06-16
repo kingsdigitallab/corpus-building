@@ -86,7 +86,7 @@ export const footer = {
 			links: [
 				{
 					title: 'Email',
-					href: 'mailto:jonathan.prag@classics.ox.ac.uk'
+					href: 'mailto:isicily@iscriptiones.org'
 				},
 				{
 					title: 'Feedback',
