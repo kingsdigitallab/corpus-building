@@ -30,10 +30,6 @@ export const footer = {
 			title: 'Social Media Links',
 			links: [
 				{
-					title: 'GitHub',
-					href: 'https://github.com/ISicily'
-				},
-				{
 					title: 'Facebook',
 					href: 'https://www.facebook.com/ISicily'
 				},
@@ -71,6 +67,10 @@ export const footer = {
 		{
 			title: 'More Info',
 			links: [
+				{
+					title: 'GitHub',
+					href: 'https://github.com/ISicily'
+				},
 				{
 					title: 'News and Blog',
 					href: 'https://isicily.org/'
