@@ -5,6 +5,8 @@
 	import BaseLink from '$lib/components/BaseLink.svelte';
 
 	const version = import.meta.env.APP_VERSION;
+
+	console.log(`${base}/123`);
 </script>
 
 <footer>
@@ -36,10 +38,18 @@
 				<li>
 					{#if logo.href}
 						<a href={logo.href}>
-							<img src={`${base}${logo.img}`} alt={logo.title} width={logo.width || 75} />
+							<img
+								src={base ? `${base}${logo.img}` : logo.img}
+								alt={logo.title}
+								width={logo.width || 75}
+							/>
 						</a>
 					{:else}
-						<img src={`${base}${logo.img}`} alt={logo.title} width={logo.width || 75} />
+						<img
+							src={base ? `${base}${logo.img}` : logo.img}
+							alt={logo.title}
+							width={logo.width || 75}
+						/>
 					{/if}
 				</li>
 			{/each}
