@@ -5,8 +5,6 @@
 	import BaseLink from '$lib/components/BaseLink.svelte';
 
 	const version = import.meta.env.APP_VERSION;
-
-	console.log(`${base}/123`);
 </script>
 
 <footer>
