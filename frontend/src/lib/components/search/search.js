@@ -205,7 +205,11 @@ searchConfig.searchableFields = [
 
 export { searchConfig };
 
-export function load({ sortAggregationsBy = 'key', languageConjunction = true } = {}) {
+export function load({
+	sortAggregationsBy = 'key',
+	languageConjunction = true,
+	isExactSearch = false
+} = {}) {
 	const processedCorpus = corpus
 		.filter((item) => item?.status?._ !== 'deprecated')
 		.map((item) => {
@@ -236,7 +240,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 
 			return {
 				...item,
-				lemmas: [...itemLemmas, ...itemLemmas.map((l) => `lemma_${l}`)],
+				lemmas: [...itemLemmas, ...itemLemmas.flatMap((l) => [`lemma_${l}`, `text_${l}`])],
 				text: [...itemText, ...itemText.map((t) => `text_${t}`)],
 				status: item?.status?._ ?? undefined,
 				// raw values, because the original are converted to facet values
@@ -271,6 +275,7 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 		])
 	);
 	searchConfig.aggregations.language.conjunction = languageConjunction;
+	searchConfig.isExactSearch = isExactSearch;
 
 	searchEngine = itemsjs(processedCorpus, searchConfig);
 }
@@ -349,7 +354,7 @@ function getHierarchicalValues(value, discardRoot = true) {
  * @typedef {{
  *   limit?: number;
  *   query?: string;
- *   searchMode?: 'all' | 'lemmas-text-only';
+ *   searchMode?: 'all' | 'lemmas-text-only' | 'lemmas-text-only-exact';
  *   page?: number;
  *   sort?: string;
  *   filters?: Record<string, any>;
@@ -372,8 +377,10 @@ export function search({
 	if (!searchEngine) load();
 
 	let transformedQuery = query;
-	if (searchMode === 'lemmas-text-only' && query.trim()) {
-		transformedQuery = `lemma_${query} text_${query}`;
+	if (query.trim() && searchMode === 'lemmas-text-only-exact') {
+		transformedQuery = `lemma_${query}`;
+	} else if (query.trim() && searchMode === 'lemmas-text-only') {
+		transformedQuery = `text_${query}`;
 	}
 
 	return searchEngine.search({
