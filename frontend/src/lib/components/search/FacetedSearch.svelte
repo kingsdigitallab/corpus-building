@@ -626,6 +626,7 @@
 									{inscriptions}
 									view={$searchViewParam === 'text' ? 'text' : 'image'}
 									query={$searchQueryParam}
+									exactSearch={$searchIsExactSearchParam}
 								/>
 							{/if}
 						</div>

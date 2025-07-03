@@ -6,12 +6,13 @@
 	import InscriptionPlace from './InscriptionPlace.svelte';
 	import InscriptionLink from './InscriptionLink.svelte';
 
-	const { inscription, view = 'image', query } = $props();
+	const { inscription, view = 'image', query, exactSearch = false } = $props();
 
 	/**
 	 * @param {string} html
+	 * @param {boolean} exactSearch
 	 */
-	function highlightText(html) {
+	function highlightText(html, exactSearch) {
 		if (!query) return html;
 
 		const parser = new DOMParser();
@@ -22,10 +23,16 @@
 		for (const element of elements) {
 			const lemma = element.getAttribute('data-lemma');
 			const text = element.getAttribute('data-text');
-			const shouldHighlight = queryWords.some(
-				(/** @type {string} */ word) =>
-					(lemma && fuzzyMatch(word, lemma)) || (text && fuzzyMatch(word, text))
-			);
+			const shouldHighlight = exactSearch
+				? queryWords.some(
+						(/** @type {string} */ word) =>
+							word.toLowerCase() === lemma?.toLowerCase() ||
+							word.toLowerCase() === text?.toLowerCase()
+					)
+				: queryWords.some(
+						(/** @type {string} */ word) =>
+							(lemma && fuzzyMatch(word, lemma)) || (text && fuzzyMatch(word, text))
+					);
 
 			if (shouldHighlight) {
 				const mark = document.createElement('mark');
@@ -69,7 +76,7 @@
 	<div class="card-body">
 		{#if view === 'text'}
 			<div class="surface-4 edition-content interpretive">
-				{@html highlightText(inscription.html)}
+				{@html highlightText(inscription.html, exactSearch)}
 			</div>
 		{/if}
 		<div class="inscription-title">

@@ -1,13 +1,13 @@
 <script>
 	import InscriptionCard from './InscriptionCard.svelte';
 
-	const { inscriptions, view = 'image', query } = $props();
+	const { inscriptions, view = 'image', query, exactSearch = false } = $props();
 </script>
 
 <ol class="inscription-list">
 	{#each inscriptions as inscription}
 		<li>
-			<InscriptionCard {inscription} {view} {query} />
+			<InscriptionCard {inscription} {view} {query} {exactSearch} />
 		</li>
 	{/each}
 </ol>
