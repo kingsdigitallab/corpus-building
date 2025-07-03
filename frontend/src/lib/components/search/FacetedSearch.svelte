@@ -30,6 +30,8 @@
 	/** @property {'cards' | 'map' | 'table' | 'text'} */
 	const searchViewParam = queryParam('view', ssp.string('cards'));
 	const searchFiltersParam = queryParam('filters', ssp.object({}));
+	/** @property {import('./search').SearchOptions['searchMode']} */
+	const searchModeParam = queryParam('mode', ssp.string('all'));
 
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
@@ -101,11 +103,13 @@
 	 * @param {number | null | undefined} [page]
 	 * @param {string | null | undefined} [query]
 	 * @param {number | null | undefined} [limit]
+	 * @param {import('./search').SearchOptions['searchMode'] | null | undefined} [mode]
 	 */
-	async function postSearchMessage(page, query, limit) {
+	async function postSearchMessage(page, query, limit, mode) {
 		let currentPage = $searchPageParam;
 		let currentQuery = $searchQueryParam;
 		let currentLimit = $searchLimitParam;
+		let currentMode = $searchModeParam;
 
 		if (page) {
 			currentPage = page;
@@ -117,6 +121,10 @@
 
 		if (limit) {
 			currentLimit = limit;
+		}
+
+		if (mode) {
+			currentMode = mode;
 		}
 
 		if (searchStatus === 'ready') {
@@ -133,7 +141,8 @@
 					sort: `${searchOptions.sortResultsBy}_${searchOptions.sortResultsOrder}`,
 					filters,
 					dateRange: [...selectedDateRange],
-					letterHeightRange: [...selectedLetterHeightRange]
+					letterHeightRange: [...selectedLetterHeightRange],
+					searchMode: currentMode
 				}
 			});
 		}
@@ -171,10 +180,17 @@
 		postSearchMessage(1, e.target?.value ?? '');
 	}
 
+	async function handleSearchModeChange(/** @type {Event} */ e) {
+		e.preventDefault();
+		$searchPageParam = 1;
+		$searchModeParam = e.target?.value;
+		postSearchMessage(1, $searchQueryParam, $searchLimitParam, e.target?.value);
+	}
+
 	async function handleSearch(/** @type {Event} */ e) {
 		e.preventDefault();
 		$searchPageParam = 1;
-		postSearchMessage();
+		postSearchMessage(1, $searchQueryParam, $searchLimitParam, $searchModeParam);
 	}
 
 	async function handleReset(/** @type {Event} */ e) {
@@ -188,6 +204,7 @@
 		$searchPageParam = 1;
 		$searchLimitParam = $searchViewParam === 'map' ? config.search.maxLimit : config.search.limit;
 		$searchFiltersParam = '';
+		$searchModeParam = 'all';
 		selectedDateRange = [...initDateRange()];
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
@@ -440,14 +457,20 @@
 	<article id="faceted-search">
 		<section>
 			<form onsubmit={handleSearch} onreset={handleReset}>
-				<label class="visually-hidden" for="q">Search query:</label>
+				<label class="visually-hidden" for="q">Search query</label>
 				<input
 					type="text"
 					name="q"
 					id="q"
-					placeholder="Search inscriptions"
+					placeholder={$searchModeParam === 'all'
+						? 'Search inscriptions metadata & text'
+						: 'Search inscriptions text only'}
 					oninput={handleSearchInput}
 				/>
+				<select onchange={handleSearchModeChange} aria-label="Search mode">
+					<option value="all">All data</option>
+					<option value="lemmas-text-only">Text only</option>
+				</select>
 				<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
 				>
 				<Button.Root class="secondary" type="reset" disabled={!hasActiveFilters()}
@@ -609,7 +632,7 @@
 
 	form {
 		display: flex;
-		gap: var(--size-4);
+		gap: var(--size-1);
 		justify-content: space-between;
 		width: 100%;
 
@@ -620,6 +643,13 @@
 				color: var(--text-1);
 				font-style: italic;
 			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		form {
+			flex-direction: column;
+			gap: var(--size-1);
 		}
 	}
 
