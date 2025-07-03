@@ -32,6 +32,7 @@
 	const searchFiltersParam = queryParam('filters', ssp.object({}));
 	/** @property {import('./search').SearchOptions['searchMode']} */
 	const searchModeParam = queryParam('mode', ssp.string('all'));
+	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
 
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
@@ -181,10 +182,42 @@
 	}
 
 	async function handleSearchModeChange(/** @type {Event} */ e) {
+		const mode = e.target?.value;
+
+		if (mode === 'lemmas-text-only-exact') {
+			$searchIsExactSearchParam = true;
+			if (!$searchIsExactSearchParam) {
+				if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+					searchWorker.postMessage({
+						type: 'load',
+						data: {
+							isExactSearch: true
+						}
+					});
+
+					postSearchMessage();
+				}
+			}
+		} else {
+			if ($searchIsExactSearchParam) {
+				$searchIsExactSearchParam = false;
+				if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+					searchWorker.postMessage({
+						type: 'load',
+						data: {
+							isExactSearch: false
+						}
+					});
+
+					postSearchMessage();
+				}
+			}
+		}
+
 		e.preventDefault();
 		$searchPageParam = 1;
-		$searchModeParam = e.target?.value;
-		postSearchMessage(1, $searchQueryParam, $searchLimitParam, e.target?.value);
+		$searchModeParam = mode;
+		postSearchMessage(1, $searchQueryParam, $searchLimitParam, mode);
 	}
 
 	async function handleSearch(/** @type {Event} */ e) {
@@ -462,14 +495,16 @@
 					type="text"
 					name="q"
 					id="q"
+					value={$searchQueryParam}
 					placeholder={$searchModeParam === 'all'
 						? 'Search inscriptions metadata & text'
 						: 'Search inscriptions text only'}
 					oninput={handleSearchInput}
 				/>
-				<select onchange={handleSearchModeChange} aria-label="Search mode">
+				<select onchange={handleSearchModeChange} aria-label="Search mode" value={$searchModeParam}>
 					<option value="all">All data</option>
 					<option value="lemmas-text-only">Text only</option>
+					<option value="lemmas-text-only-exact">Text only (lemma)</option>
 				</select>
 				<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
 				>
