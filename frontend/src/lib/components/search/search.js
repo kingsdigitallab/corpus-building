@@ -209,6 +209,9 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 	const processedCorpus = corpus
 		.filter((item) => item?.status?._ !== 'deprecated')
 		.map((item) => {
+			const itemLemmas = lemmas.find((l) => l.file === item.file)?.lemmas ?? [];
+			const itemText = lemmas.find((l) => l.file === item.file)?.text ?? [];
+
 			const technique = Array.isArray(item.layoutDesc?.layout?.rs)
 				? item.layoutDesc.layout.rs[0]?.ana
 				: item.layoutDesc?.layout?.rs?.ana;
@@ -233,8 +236,8 @@ export function load({ sortAggregationsBy = 'key', languageConjunction = true } 
 
 			return {
 				...item,
-				lemmas: lemmas.find((l) => l.file === item.file)?.lemmas ?? [],
-				text: lemmas.find((l) => l.file === item.file)?.text ?? [],
+				lemmas: [...itemLemmas, ...itemLemmas.map((l) => `lemma_${l}`)],
+				text: [...itemText, ...itemText.map((t) => `text_${t}`)],
 				status: item?.status?._ ?? undefined,
 				// raw values, because the original are converted to facet values
 				rawObjectType: item.objectType,
@@ -346,6 +349,7 @@ function getHierarchicalValues(value, discardRoot = true) {
  * @typedef {{
  *   limit?: number;
  *   query?: string;
+ *   searchMode?: 'all' | 'lemmas-text-only';
  *   page?: number;
  *   sort?: string;
  *   filters?: Record<string, any>;
@@ -359,16 +363,23 @@ export function search({
 	limit = 20,
 	page = 1,
 	query = '',
+	searchMode = 'all',
 	sort = 'file_asc',
 	filters = {},
 	dateRange = [undefined, undefined],
 	letterHeightRange = [undefined, undefined]
 }) {
 	if (!searchEngine) load();
+
+	let transformedQuery = query;
+	if (searchMode === 'lemmas-text-only' && query.trim()) {
+		transformedQuery = `lemma_${query} text_${query}`;
+	}
+
 	return searchEngine.search({
 		per_page: limit,
 		page,
-		query,
+		query: transformedQuery,
 		sort,
 		filters,
 		filter: (item) => {
