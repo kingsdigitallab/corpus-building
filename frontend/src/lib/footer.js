@@ -56,7 +56,7 @@ export const footer = {
 				},
 				{
 					title: 'Credits & Acknowledgements',
-					href: ''
+					href: '/credits'
 				},
 				{
 					title: 'Cookies',
