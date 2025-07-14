@@ -1,5 +1,17 @@
 
 
+# [0.21.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.20.2...v0.21.0) (2025-07-14)
+
+
+### Features
+
+* **credits:** Add Credits & Acknowledgements page ([790ff8e](https://github.com/kingsdigitallab/corpus-building/commit/790ff8ecf991ac7e9740c8f587ab2776b786f34e))
+* **footer:** Add Credits & Acknowledgements link ([04fc68b](https://github.com/kingsdigitallab/corpus-building/commit/04fc68bb75ce2c703f1ba5bcdb34a89dc9ee5c71))
+* **search:** Add exact search option to load and expand search modes ([141eb46](https://github.com/kingsdigitallab/corpus-building/commit/141eb46182e02bc7d95adbc82d399cf2baf659da))
+* **search:** Add exact search to search modes ([229b850](https://github.com/kingsdigitallab/corpus-building/commit/229b85030b45a215254833a3dbdfb0b69d630055))
+* **search:** Implement search mode selection ([7f066b4](https://github.com/kingsdigitallab/corpus-building/commit/7f066b4d1536a0dc75c61adb9adeb319ced6bb43))
+* **search:** Pass exact search parameter to Inscription components ([6e47a19](https://github.com/kingsdigitallab/corpus-building/commit/6e47a19ac97229f0cd9b17ebe9ed4bacd3e5ea07))
+
 ## [0.20.2](https://github.com/kingsdigitallab/corpus-building/compare/v0.20.1...v0.20.2) (2025-06-16)
 
 ## [0.20.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.20.0...v0.20.1) (2025-06-14)
