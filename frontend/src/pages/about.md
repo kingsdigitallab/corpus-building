@@ -8,8 +8,9 @@ tags:
   - inscriptions
 ---
 
-***Please note that you are currently viewing a beta version of the new I.Sicily interface***<br/>
-This interface is currently under development in collaboration with [King's Digital Lab](https://kdl.kcl.ac.uk/projects/crossreads/). The old interface remains online at: <http://sicily.classics.ox.ac.uk>.<br/>
+**_Please note that you are currently viewing a beta version of the new I.Sicily interface_**
+
+This interface is currently under development in collaboration with [King's Digital Lab](https://kdl.kcl.ac.uk/projects/crossreads/). The old interface remains online at: <http://sicily.classics.ox.ac.uk>.
 
 I.Sicily is a long-term project to construct and maintain a digital corpus of
 the inscriptions of ancient Sicily. The project aims to provide free open access
