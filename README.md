@@ -70,21 +70,22 @@ The project should be available at http://localhost:5173/.
 
 ## Adding content to the site
 
-Static pages are added to the site via [markdown files](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Markdown support is implemented in the
-project using [mdsvex](https://mdsvex.pngwn.io/). Pages are added to the site by
-adding a new entry to the [frontend/src/routes/](frontend/src/routes/) directory.
+Static pages are added to the site via [markdown files](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Markdown support is implemented in the project using [mdsvex](https://mdsvex.pngwn.io/).
 
-First, create a new sub-directory in the routes directory. For example, to add
-a new page called "about", create a new directory called `about` and add
-a `+page.md` file to it.
+Pages are added to the site by adding a new markdown file to the [frontend/src/pages/](frontend/src/pages/)
+directory. Nested pages are supported by creating a new directory and adding a child markdown file to it.
 
-The `+page.md` file should contain the markdown content for the page. The page
-will be added to the site and will be accessible at `http://PROJECT_URL/about`.
+The file should contain the markdown content for the page. The page will be added to the site and will be accessible at a URL that mirrors the file structure. For example:
+
+- `frontend/src/pages/about.md` becomes `http://PROJECT_URL/about`
+- `frontend/src/pages/about/periods.md` becomes `http://PROJECT_URL/about/periods`
 
 ## Editorial workflow
 
 New editorial content should be added in the `research` branch. This branch is
-automatically deployed to the preview site in [GitHub Pages](https://kingsdigitallab.github.io/corpus-building/), together with the `develop` and `main` branches.
+automatically deployed to the preview site in [GitHub Pages](https://kingsdigitallab.github.io/corpus-building/),
+together with the `develop` and `main` branches.
 
 Content that needs to be visible to the public should be added to the `main`
 branch. Content to the `main` branch needs to be added via a pull request.
