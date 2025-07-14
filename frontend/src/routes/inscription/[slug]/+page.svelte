@@ -6,6 +6,7 @@
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
 	import { onMount } from 'svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
 	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
 	import { goto } from '$app/navigation';
 	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
@@ -74,6 +75,34 @@
 			html: translation?.html?.replace(/<h2.*?<\/h2>/g, '') || ''
 		};
 	}
+
+	/**
+	 * Copy citation to clipboard
+	 */
+	async function copyCitation() {
+		try {
+			const citation = generateCitation();
+			await navigator.clipboard.writeText(citation);
+			toast.success('Citation copied to clipboard');
+		} catch (err) {
+			console.error('Failed to copy citation:', err);
+		}
+	}
+
+	/**
+	 * Generate citation text for the inscription
+	 * @returns {string}
+	 */
+	function generateCitation() {
+		const editor = metadata.citation.editor?._ || 'Unknown';
+		const contributors = metadata.citation.contributors?.map((c) => c._).filter(Boolean) || [];
+
+		const contributorList = contributors.length > 0 ? `with ${contributors.join(', ')}` : '';
+
+		const currentDate = new Date().toLocaleDateString('en-GB');
+
+		return `${editor} (ed.)${contributorList ? `, ${contributorList}` : ''}. ${config.citationTemplate.yearRange}. ${config.citationTemplate.title}. ${config.citationTemplate.url}. Stable deposit: ${config.citationTemplate.doi} (${currentDate}).`;
+	}
 </script>
 
 <svelte:window
@@ -100,6 +129,8 @@
 			?._}"
 	/>
 </svelte:head>
+
+<Toaster />
 
 <article>
 	<InscriptionOverview {slug} {metadata} {images} />
@@ -405,6 +436,9 @@
 						: config.EMPTY_PLACEHOLDER}
 				</dd>
 			</dl>
+			<div class="citation-actions">
+				<Button.Root class="secondary" onclick={copyCitation}>Copy Citation</Button.Root>
+			</div>
 		</section>
 	</section>
 
@@ -472,6 +506,12 @@
 	#page-navigation {
 		margin-top: var(--size-9);
 		margin-bottom: var(--size-0);
+	}
+
+	.citation-actions {
+		margin-top: var(--size-4);
+		display: flex;
+		justify-content: flex-start;
 	}
 
 	@media (max-width: 768px) {
