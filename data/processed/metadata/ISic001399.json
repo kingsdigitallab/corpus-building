@@ -3,7 +3,7 @@
   "uri": "ISic001399",
   "title": "I.Sicily inscription 001399",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -31,6 +31,7 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A grey marble plaque, intact on the upper and right sides, seemingly damaged on the left and lower sides, although the text appears complete, and the stone tapers to the lower edge (the layout may imply that a balancing hedera is missing upper left, but the clear lack of such on line 3 is probably against this). The rear is rough and uneven, with traces of mortar.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -41,38 +42,56 @@
     "ana": "#material.stone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "20.8",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "25.4",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "2.9 (maximum)",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Five lines, approximately centred on the stone, except for line 5 which is aligned to the left margin.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Letters plain and somewhat crudely v-cut, without serifs, of regular height. Alpha with broken and straight bar; regular quadrate epsilon and sigma; theta close to rhomboid; mu with diagonal strokes, middle strokes meet at half height; nu with diagonal joining well above the baseline; phi is rhomboid and extended; uncial omega.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
+        "to": "line4",
+        "h": "23-26 (omega 22, phi 36)",
+        "unit": "mm"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "18-20",
         "unit": "mm"
       },
       {
@@ -108,10 +127,19 @@
       14.74049
     ]
   ],
-  "provenanceFound": null,
+  "provenanceFound": {
+    "_": "Found in January 1842 between 'la valle della Difesa' and 'le terre nominate di Clerici'; acquired by Giuseppe Polizzi, where seen by a traveller in 1844, and subsequently by Ansalsdi. Kaibel could not locate it. It was purchased by Orsi for the Siracusa museum in 1914. Currently in storage in magazzino B, cassetta 4.",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1842-01",
+    "geo": null
+  },
   "provenanceObserved": {
-    "_": "Depositi, Mag B, new cass.4",
+    "_": "Prag 2014-09-10",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -119,10 +147,18 @@
     {
       "n": "screen",
       "url": "ISic001399_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "2308px",
+      "width": "3006px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001399_rear_tiled.tif",
+      "height": "2308px",
+      "width": "3024px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10",
+      "surfaceType": "rear"
     }
   ],
   "country": "Italy",
@@ -165,20 +201,11 @@
     "type": "edition",
     "bibl": [
       {
-        "type": "corpus",
-        "n": "IG",
-        "citedRange": {
-          "ref": {
-            "_": "14.0580",
-            "target": "https://clio.columbia.edu/catalog/6873760"
-          }
-        },
+        "author": "anonymous",
+        "date": "1844",
+        "citedRange": "992 no.2",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
-        },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
+          "target": "https://www.zotero.org/groups/382445/items/W95DKLZ"
         }
       },
       {
@@ -196,7 +223,26 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002182",
           "target": "https://biblio.inscriptiones.org/epig10002182"
-        }
+        },
+        "title": "I monumenti dell'antica Centuripi",
+        "citation": "<span>F. Ansaldi, <i>I monumenti dell’antica Centuripi</i> (Centuripae, 1851), <a href=\"http://arachne.uni-koeln.de/item/buch/3254\">http://arachne.uni-koeln.de/item/buch/3254</a></span>"
+      },
+      {
+        "type": "corpus",
+        "n": "IG",
+        "citedRange": {
+          "ref": {
+            "_": "14.0580",
+            "target": "https://clio.columbia.edu/catalog/6873760"
+          }
+        },
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>"
       }
     ]
   },
@@ -256,30 +302,31 @@
       }
     ],
     "change": {
-      "_": "Andoni Llamazares added a new text edition",
-      "when": "2021-06-22",
-      "who": "#AL"
+      "_": "Jonathan Prag revised from autopsy and publications",
+      "when": "2025-08-07",
+      "who": "#JP"
     }
   },
   "facsimile": {
     "n": "screen",
     "url": "ISic001399_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "2308px",
+    "width": "3006px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10",
     "surfaceType": "front"
   },
   "provenance": "Centuripae",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "Ansaldi, 1851"
+    "anonymous, 1844",
+    "Ansaldi, 1851, I monumenti dell'antica Centuripi",
+    "IG, 1890"
   ],
   "keywords": [
     "isic001399",
     "i.sicily inscription 001399",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "funerary",
     "plaque",

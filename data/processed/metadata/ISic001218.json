@@ -35,6 +35,11 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
     "_": "stone",
     "ana": "#material.stone",
@@ -84,9 +89,9 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "ancient",
+    "notBefore": -500,
+    "notAfter": 500
   },
   "places": [
     {
@@ -117,17 +122,13 @@
     "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001218_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "provenanceLost": {
+    "_": "Lost.",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
+  },
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
@@ -154,10 +155,10 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>"
       },
       {
         "type": "corpus",
@@ -166,10 +167,10 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "date": "2003",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>"
       },
       {
         "author": "Libertini",
@@ -181,7 +182,9 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001875",
           "target": "https://biblio.inscriptiones.org/epig10001875"
-        }
+        },
+        "title": "Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+        "citation": "<span>Guido Libertini, <i>Le isole eolie nell’antichità greca e romana. Ricerche storiche ed archeologiche</i> (Florence, 1921)</span>"
       }
     ]
   },
@@ -246,20 +249,12 @@
       "who": "#MH"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001218_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "provenance": "Lipara",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "ILipara",
-    "Libertini, 1921"
+    "IG, 1890",
+    "ILipara, 2003",
+    "Libertini, 1921, Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche"
   ],
   "keywords": [
     "isic001218",
@@ -268,6 +263,7 @@
       "_": "draft"
     },
     "funerary",
+    "unknown",
     "stone",
     "lipara",
     "lipari",
