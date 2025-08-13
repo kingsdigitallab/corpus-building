@@ -15,9 +15,7 @@ export async function load({ params: { slug } }) {
 
 		return {
 			slug,
-			title: page.title,
-			excerpt: page.excerpt,
-			tags: page.tags,
+			...page.metadata,
 			content: render(page.default)
 		};
 	} catch (e) {
