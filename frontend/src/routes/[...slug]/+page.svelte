@@ -4,7 +4,28 @@
 	const { title, content } = data;
 </script>
 
-<article>
+<article class="md">
 	<h1>{title}</h1>
-	<div>{@html content.body}</div>
+	{@html content.body}
 </article>
+
+<style>
+	.md {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-4);
+		margin-block: var(--size-8);
+		margin-inline: auto;
+		max-width: 80ch;
+	}
+
+	.md h1 {
+		max-width: 100%;
+		text-align: center;
+	}
+
+	:global(.md p) {
+		max-inline-size: unset;
+		text-align: justify;
+	}
+</style>
