@@ -13,7 +13,7 @@ I.Sicily has been funded by the University of Oxford John Fell Fund, Merton Coll
 
 I.Sicily was created and developed by Jonathan Prag, with the technical support of James Cummings and James Chartrand.
 
-The Crossreads team, directed by Jonathan Prag, consists of: Germana Barone, Alessia Coccato, Chloe Colchester, Robert Crellin, Dmitry Dundua, Victoria Fendel, Ilenia Gradante, Paolo Mazzoleni, Valentina Mignosa, and Sophia Topf Aguiar De Medeiros, together with the development team of King’s Digital Lab [list names?].
+The Crossreads team, directed by Jonathan Prag, consists of: Germana Barone, Alessia Coccato, Chloe Colchester, Robert Crellin, Dmitry Dundua, Victoria Fendel, Ilenia Gradante, Paolo Mazzoleni, Valentina Mignosa, and Sophia Topf Aguiar De Medeiros, together with the development team of King's Digital Lab: Arianna Ciula, Neil Jakeman, Zihao Lu, Geoffroy Noël, Miguel Vieira with contributions from Ryan Heuser, Tiffany Ong, and Ginestra Ferraro.
 
 The original dataset was collected by Jonathan Prag between 2001 and 2012, based upon published material. It was converted to EpiDoc by James Cummings in 2013. Museum data was collected by Michael Metcalfe between c.2013 and 2022. Geographical location data was edited by Valeria Vitale in 2013-2014. Simona Stoyanova provided further template development from 2020 onwards.
 
@@ -23,7 +23,7 @@ EpiDoc files have been edited continuously since 2013 by Jonathan Prag and many 
 
 The original web interface, live since 2017, was constructed by James Chartrand of OpenSky Solutions. This work included the development of a browser-based EpiDoc viewer (<https://github.com/ISicily/epidoc-viewer>), and a GitHub based tool for the documented upload of individual EpiDoc files to the Zenodo repository (<https://github.com/jchartrand/zenodo-git-up>). The first IIIF image server was also developed by James Chartrand of OpenSky solutions. The current IIIF image server was developed by Imran Asif (DiSc, University of Oxford). James Chartrand was also responsible for the implementation of a DTS API for the EpiDoc collection (<https://github.com/ISicily/isicily-dts>).
 
-The new web interface, developed in 2025, was designed and built by King’s Digital Lab, under the direction of Arianna Ciula, with contributions from….
+The new web interface and data processing infrastructure, developed in 2025, was designed and built by King's Digital Lab. This included the development of a comprehensive system for processing TEI XML files, metadata extraction and transformation, lemma processing, and the conversion of raw epigraphic data into structured formats for web presentation. The system processes over 4,700 inscriptions and generates HTML, JSON, and structured data outputs that are used by the web application.
 
 Support, collaboration, and access to materials has been provided by a huge number of Sicilian colleagues and institutions, as well as many other colleagues devoted to the study of Sicily, to all of whom we are indebted, and we attempt to list them all here (if we have omitted you, this was not intentional - please let us know!):
 
