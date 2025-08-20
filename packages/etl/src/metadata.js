@@ -1,5 +1,6 @@
 import xml2js from "xml2js";
 import museums from "../../../data/processed/museums.json" with { type: "json" };
+import zotero from "../../../data/processed/zotero.json" with { type: "json" };
 
 /**
  * Extracts metadata from an XML string.
@@ -48,8 +49,8 @@ export async function extractMetadata(xmlString) {
   metadata.letterHeights = metadata.handNote?.dimensions
     .filter((d) => d?.atLeast && d?.atMost)
     .map((d) => ({
-      atLeast: parseFloat(d.atLeast),
-      atMost: parseFloat(d.atMost),
+      atLeast: Number.parseFloat(d.atLeast),
+      atMost: Number.parseFloat(d.atMost),
     }));
 
   const bibliography = Array.isArray(metadata.bibliographyEdition?.bibl)
@@ -83,6 +84,9 @@ export async function extractMetadata(xmlString) {
       return publication;
     });
 
+  metadata.zotero = bibliography
+    .filter((b) => b?.ptr?.target?.includes("zotero"))
+    .map((b) => b.ptr.target.split("/").at(-1));
   metadata.keywords = getKeywords(metadata);
 
   return metadata;
@@ -261,10 +265,10 @@ function getDates(xml) {
   return {
     _: origDate._,
     notBefore: origDate["notBefore-custom"]
-      ? parseInt(origDate["notBefore-custom"])
+      ? Number.parseInt(origDate["notBefore-custom"])
       : null,
     notAfter: origDate["notAfter-custom"]
-      ? parseInt(origDate["notAfter-custom"])
+      ? Number.parseInt(origDate["notAfter-custom"])
       : null,
     evidence: origDate.evidence?.replaceAll(" ", ", "),
     precision: origDate.precision,
@@ -293,7 +297,7 @@ function getPlaces(xml) {
       place = origPlace.offset.placeName;
       place.offset = origPlace.offset._.trim();
     }
-    if (place && place._) {
+    if (place?._) {
       places.push(place);
     }
   }
@@ -310,7 +314,7 @@ function getPlaces(xml) {
       g
         .split(",")
         .map((g) => g.trim())
-        .map((g) => parseFloat(g))
+        .map((g) => Number.parseFloat(g))
     ),
   };
 }
@@ -341,11 +345,11 @@ function getProvenance(xml, provenanceType, subtype = null) {
 
   // geo can either be a string or an object in the format { _: '37.967227, 13.198435', cert: 'medium' }
   let geo = found.geo;
-  if (geo && geo.cert) {
+  if (geo?.cert) {
     found.geoCert = geo.cert;
     geo = geo._;
   }
-  geo = geo?.split(",").map((g) => parseFloat(g.trim()));
+  geo = geo?.split(",").map((g) => Number.parseFloat(g.trim()));
 
   if (
     geo &&
@@ -463,7 +467,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
     bibliography = [bibliography];
   }
 
-  let items = bibliography.find(
+  const items = bibliography.find(
     (listBibl) => listBibl.type === bibliographyType
   );
 
@@ -474,78 +478,36 @@ async function getBibliography(xml, bibliographyType = "edition") {
   }
 
   items.bibl = await Promise.all(
-    items.bibl.map(async (item) => {
-      if (item.ptr?.target) {
-        const zoteroData = await getZoteroData(
-          item.ptr.target.split("/").at(-1)
-        );
+    items.bibl.map(
+      async (
+        /** @type {{ ptr: { target: string; }; } & Record<string, any>} */ item
+      ) => {
+        if (item.ptr?.target) {
+          const zoteroData = await getZoteroData(
+            item.ptr.target.split("/").at(-1)
+          );
 
-        item = {
-          ...item,
-          ...zoteroData,
-        };
+          return {
+            ...item,
+            ...zoteroData,
+          };
+        }
       }
-
-      return item;
-    })
+    )
   );
 
   return items;
 }
 
-const zoteroDataMap = new Map();
-
 async function getZoteroData(itemKey) {
-  const cacheKey = itemKey;
-
   if (!itemKey) return Promise.resolve("");
-  if (zoteroDataMap.has(cacheKey)) {
-    return Promise.resolve(zoteroDataMap.get(cacheKey));
+
+  if (zotero?.[itemKey]) {
+    return Promise.resolve(zotero[itemKey]);
   }
 
-  let url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=data`;
-
-  let locale = "en-GB";
-
-  const language = await fetch(url)
-    .then((response) => response.json())
-    .then((json) => json.data.language.toLowerCase())
-    .catch(() => "english");
-
-  if (language.indexOf("ge") === 0 || language.indexOf("german") === 0) {
-    locale = "de-DE";
-  } else if (
-    language.indexOf("it") === 0 ||
-    language.indexOf("italian") === 0
-  ) {
-    locale = "it-IT";
-  } else if (language.indexOf("fr") === 0 || language.indexOf("french") === 0) {
-    locale = "fr-FR";
-  } else if (
-    language.indexOf("es") === 0 ||
-    language.indexOf("spanish") === 0
-  ) {
-    locale = "es-ES";
-  }
-
-  url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=citation,data&style=chicago-fullnote-bibliography&linkwrap=1&locale=${locale}`;
-
-  return fetch(url)
-    .then((response) => (response.ok ? response.json() : null))
-    .then((json) => {
-      const data = {
-        title: json.data.title?.trim() || "",
-        date: json.data.date?.trim() || null,
-        citation: json.citation.replace(".</span>", "</span>"),
-      };
-      zoteroDataMap.set(cacheKey, data);
-
-      return data;
-    })
-    .catch(() => {
-      zoteroDataMap.set(cacheKey, null);
-      return null;
-    });
+  console.warn(`Zotero data not found for key: ${itemKey}`);
+  return Promise.resolve(null);
 }
 
 async function getXML(xmlString) {
@@ -577,10 +539,10 @@ function getKeywords(metadata) {
     metadata.type?._,
     metadata.objectType?._,
     metadata.material?._,
-    metadata.notBefore && metadata.notBefore.toString(),
-    metadata.notAfter && metadata.notAfter.toString(),
-    metadata.places && metadata.places[0]?._,
-    metadata.places && metadata.places[1]?._,
+    metadata.notBefore?.toString(),
+    metadata.notAfter?.toString(),
+    metadata.places?.[0]?._,
+    metadata.places?.[1]?._,
     metadata.country,
     metadata.region,
     metadata.settlement,
