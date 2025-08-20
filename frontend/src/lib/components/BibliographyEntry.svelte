@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	/** @type {{
 		entry: {
 			type?: string;
@@ -19,7 +21,7 @@
 
 {#if entry.citation}
 	{#if entry.ptr?.target}
-		<a href={`/bibliography/${entry.ptr.target.split('/').at(-1)}`}>{@html entry.citation}</a
+		<a href={`${base}/bibliography/${entry.ptr.target.split('/').at(-1)}`}>{@html entry.citation}</a
 		>{#if entry.citedRange},{:else}.{/if}
 	{:else}
 		{@html entry.citation}{#if entry.citedRange},{:else}.{/if}
