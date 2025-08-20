@@ -23,3 +23,10 @@ export async function load({ params: { slug } }) {
 		throw error(404, `Error loading bibliography ${slug}`);
 	}
 }
+
+/** @type {import('./$types').Entries} */
+export async function entries() {
+	return Object.keys(zotero).map((slug) => ({
+		slug
+	}));
+}
