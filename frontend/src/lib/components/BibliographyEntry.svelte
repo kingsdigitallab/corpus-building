@@ -18,7 +18,12 @@
 </script>
 
 {#if entry.citation}
-	{@html entry.citation}{#if entry.citedRange},{:else}.{/if}
+	{#if entry.ptr?.target}
+		<a href={`/bibliography/${entry.ptr.target.split('/').at(-1)}`}>{@html entry.citation}</a
+		>{#if entry.citedRange},{:else}.{/if}
+	{:else}
+		{@html entry.citation}{#if entry.citedRange},{:else}.{/if}
+	{/if}
 {:else if entry.type === 'bulletin' || entry.type === 'corpus'}
 	<span>{entry.n} {entry.author ? `${entry.author} (${entry.date})` : ''}</span>
 {:else}
@@ -28,10 +33,4 @@
 	at <a href={entry.citedRange.ref.target}>{entry.citedRange.ref._}</a>
 {:else if entry.citedRange}
 	at <span>{entry.citedRange}</span>
-{/if}
-{#if entry.ptr?.target}
-	<a href={entry.ptr?.target}>Zotero</a>
-{/if}
-{#if entry.ref?.target}
-	<a href={entry.ref.target}>FAIR</a>
 {/if}
