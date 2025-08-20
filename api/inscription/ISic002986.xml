@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Section of the civic accounts of Tauromenion</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic002986</idno>
+                <idno type="TM">645338</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">329611</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002986</idno>
+                <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387871</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Taormina</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/062">Antiquarium del Teatro Antico</repository>
+                        <!--No inventory number found-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions><!--IGSI-->
+                                        <height unit="cm">44</height>
+                                        <width unit="cm">84</width>
+                                        <depth unit="cm">35</depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Lunate epsilon, sigma, uncial omega</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
+                            	<geo>37.85358, 15.28851</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0045" evidence="textual-context">Prior to 45 BCE and the month of Iulius</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found by P. Rizzo in a wall to the east of the ancient theatre</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2009.10.06</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.account" ref="http://www.eagle-network.eu/voc/typeins/lod/410.html">accounts</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-07-18" who="#JP">Jonathan Prag encoded text division and basic metadata</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/><!-- 
+        <surface type="front">
+            <graphic n="screen" url="ISic002986_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic002986.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface> -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <cb n="1"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΟΥ</orig>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΟΙ</orig>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>Π</orig><gap reason="lost" unit="character" quantity="1"/><orig>Λ</orig>
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἕ</supplied>νδεκα
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>ακσιχί
+                    <lb n="6" break="no"/><supplied reason="lost">λιοι</supplied> <gap reason="lost" extent="unknown" unit="character"/><orig>ΝΟ</orig>
+                    <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΑ</orig>
+                    <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΛΟΙ</orig>
+                    <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΜΥ</orig>
+                    <lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΩΝΕ</orig><gap reason="lost" unit="character" quantity="1"/>
+                    <lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><orig>Α</orig><gap reason="lost" unit="character" quantity="1"/><orig>Α</orig>
+                    <lb n="12"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΠΟΝ</orig>
+                    <lb n="13"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΤΟΥ</orig>
+                    <lb n="14"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΣΣΑ</orig>
+                    <lb n="15"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΑΔΕ</orig>
+                    <lb n="16"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΤΩΝΙ</orig><gap reason="lost" unit="character" quantity="1"/>
+                    <lb n="17"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">τέ</supplied>σσαρες
+                    <lb n="18"/><gap reason="lost" extent="unknown" unit="character"/>λοιπὸν
+                    <lb n="19"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἐπαγγ</supplied>ειλαμέ
+                    <lb n="20" break="no"/><supplied reason="lost">νων</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἑ</supplied>πτακόσιοι κα
+                    <lb n="21" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="undefined" evidence="previouseditor">λοιπὸν</supplied>
+                    <lb n="22"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΠΟΝ</orig>
+                 <cb n="2"/>
+                    <lb n="1"/>Ἰουνίο<supplied reason="lost">υ</supplied> <roleName type="civic" subtype="tamias"><supplied reason="lost">τ</supplied>αμ<supplied reason="lost">ίαις</supplied></roleName> <supplied reason="lost">ἔσοδος</supplied> <supplied reason="lost">ν</supplied>όμοι ἑπτακισχίλιοι
+                    <lb n="2"/>ἑπτακόσιοι πεντήκοντα εἷς λίτραι τριάκοντα
+                    <lb n="3"/>μία ἔξοδος νό<supplied reason="lost">μοι</supplied> ὀκτακισχίλιοι ἑπτακόσι
+                    <lb n="4" break="no"/>οι πεντήκοντα ἑπτά λίτ<supplied reason="lost">ραι</supplied> τριάκοντα ὀκτώ
+                    <lb n="5"/>λοιπὸν νόμοι δισχίλιοι πεντακόσιοι ἑξήκοντα
+                    <lb n="6"/>ἑπτὰ <supplied reason="lost">καὶ</supplied> <supplied reason="lost">ἡμ</supplied>ίνομον κυάμων λοιπὸν τὸ ἴσον σι<supplied reason="lost">τω</supplied>
+                    <lb n="7" break="no"/>νίοις πᾶσι λοιπὸν τὸ ἴσον <supplied reason="undefined" evidence="previouseditor">τού</supplied>του παρὰ τοῖς δυοῖς
+                    <lb n="8"/>ἄνδροις τοῖς ἐκπεπορευμένοις νόμων ἓξ μυρι
+                    <lb n="9"/>άδες ὀκτακισχίλιοι ἑξακόσιοι ἴκοσι τέσσαρες
+                    <lb n="10"/>λίτραι τριάκοντα καὶ ἐν θησαυρῷ νόμων μυρι
+                    <lb n="11" break="no"/><supplied reason="undefined" evidence="previouseditor">άδες</supplied> <supplied reason="undefined" evidence="previouseditor">τέσσαρες</supplied> <space unit="character" extent="unknown"/>
+                    <lb n="12"/>Κοϊνκτιλίου <roleName type="civic" subtype="tamias">ταμίαις</roleName> ἔσοδος νόμοι ἑξακι<supplied reason="lost">σ</supplied>
+                    <lb n="13"/>χίλ<supplied reason="lost">ιοι</supplied> τ<supplied reason="lost">ρι</supplied>ακόσιοι ἑξήκοντα εἷς <supplied reason="undefined" evidence="previouseditor">λίτραι</supplied> τριάκο<supplied reason="lost">ν</supplied>
+                    <lb n="14"/>τ<supplied reason="lost">α</supplied><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἔξ</supplied>οδος νόμοι πεντακισχίλιοι ὀκτα
+                    <lb n="15"/>κ<supplied reason="lost">όσιοι</supplied> <supplied reason="lost">τεσσαρ</supplied>άκοντα τέσσα<supplied reason="undefined" evidence="previouseditor">ρες</supplied> <supplied reason="undefined" evidence="previouseditor">λί</supplied>τραι τριάκον
+                    <lb n="16"/>τ<supplied reason="lost">α</supplied> <supplied reason="lost">λοιπὸν</supplied> <supplied reason="lost">ν</supplied>όμοι τρισχίλιοι ὀγδοήκοντα τέσσ<supplied reason="lost">α</supplied>
+                    <lb n="17" break="no"/>ρ<supplied reason="lost">ες</supplied> <supplied reason="lost">λίτραι</supplied> <gap reason="lost" extent="unknown" unit="character"/> τούτου νόμοι δισχίλι<supplied reason="lost">οι</supplied>
+                    <lb n="18"/> δι<supplied reason="lost">ακόσιο</supplied>ι ἴκοσι παρὰ τοῖς <supplied reason="undefined" evidence="previouseditor">πωλ</supplied>ησάντοις <unclear>οἰ</unclear>κί
+                    <lb n="19"/><supplied reason="undefined" evidence="previouseditor">ας</supplied> <supplied reason="undefined" evidence="previouseditor">κ</supplied>αὶ χώρους ξένοις παρὰ <supplied reason="undefined" evidence="previouseditor">τὸ</supplied> <supplied reason="undefined" evidence="previouseditor">δό</supplied>γμα νόμοι
+                    <lb n="20"/>πεντακόσιοι <supplied reason="lost">ἐν</supplied> <unclear>θησ</unclear>α<unclear>υ</unclear><supplied reason="lost">ρῶι</supplied> <supplied reason="lost">καὶ</supplied> νόμοι διακόσι
+                    <lb n="21" break="no"/>οι τεσσαράκοντα <supplied reason="lost">λίτραι</supplied> τέσ<supplied reason="lost">σαρ</supplied>ες <gap reason="lost" unit="character" atLeast="4" atMost="6"/>
+                    <lb n="22"/><orig>των<unclear>ε</unclear>σ<unclear>ω</unclear></orig> <gap reason="lost" unit="character" atLeast="5" atMost="6"/><w part="F"><supplied reason="lost">κ</supplied><unclear>ει</unclear>α</w> κυάμω<supplied reason="lost">ν</supplied> <supplied reason="lost">λοιπὸ</supplied>ν τ<supplied reason="lost">ὸ</supplied> <supplied reason="lost">ἴσ</supplied>ον σιτωνίοις πᾶ
+                    <lb n="23" break="no"/><supplied reason="lost">σι</supplied> <supplied reason="lost">λ</supplied>οιπὸν τὸ ἴσον τ<supplied reason="lost">ούτο</supplied>υ π<supplied reason="lost">αρ</supplied>ὰ τοῖ<supplied reason="undefined" evidence="previouseditor">ς</supplied> <roleName type="civic" subtype="duumvir"><supplied reason="undefined" evidence="previouseditor">δυοῖς</supplied> <supplied reason="lost">ἄνδροις</supplied></roleName>
+                    <lb n="24"/><supplied reason="lost">τ</supplied>οῖς ἐκπεπορευμένοις νόμων <supplied reason="undefined" evidence="previouseditor">ἓξ</supplied> μυρι
+                    <lb n="25" break="no"/>άδες <supplied reason="lost">ὀκτ</supplied>ακισχίλιοι ἑξακόσιοι ἴκ<supplied reason="undefined" evidence="previouseditor">οσι</supplied> <supplied reason="undefined" evidence="previouseditor">τέσσα</supplied>
+                    <lb n="26" break="no"/>ρες <supplied reason="lost">λίτρ</supplied>αι τριάκοντα καὶ ἐν θησαυρῷ νό
+                    <lb n="27" break="no"/><supplied reason="lost">μων</supplied> <supplied reason="lost">μυρ</supplied>ιάδες τέσσαρες <space unit="character" extent="unknown"/>
+                    <lb n="28"/><supplied reason="lost">Σεξτιλίου</supplied> <supplied reason="lost">τ</supplied>αμίαις ἔσοδος νόμοι δισμύριοι
+                    <lb n="29"/><supplied reason="lost">δισχίλιοι</supplied> <gap reason="lost" extent="unknown" unit="character"/><w part="F">κόσιοι</w> ἐνε<supplied reason="lost">νή</supplied>κοντα τρεῖς <supplied reason="lost">λίτραι</supplied>
+                    <lb n="30"/><gap reason="lost" extent="unknown" unit="character"/> ἔξ<supplied reason="lost">οδος</supplied> νόμοι μύριοι τε
+                    <lb n="31"/><supplied reason="lost">τρακισχίλιοι</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">λίτρ</supplied>αι ἴκοσι πέντε
+                    <lb n="32"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">λοι</supplied>πὸν νόμοι μύριοι
+                    <lb n="33"/><supplied reason="lost">χίλιοι</supplied> <supplied reason="lost">ἑξακόσιοι</supplied> <supplied reason="lost">πεντή</supplied>κοντα δύο λίτραι
+                    <lb n="34"/><supplied reason="lost">πέντε</supplied> <supplied reason="lost">κυάμων</supplied> <supplied reason="lost">λοιπὸν</supplied> <supplied reason="lost">τὸ</supplied> ἴσον σιτωνίοις <supplied reason="lost">πᾶ</supplied>
+                    <lb n="35" break="no"/><supplied reason="lost">σι</supplied> <supplied reason="lost">λοιπὸν</supplied> <supplied reason="lost">τὸ</supplied> <supplied reason="lost">ἴσον</supplied> <supplied reason="lost">τούτου</supplied> παρὰ τοῖς δυοῖ<supplied reason="lost">ς</supplied>
+                    <lb n="36"/><supplied reason="lost">ἄνδροις</supplied> <supplied reason="lost">τοῖς</supplied> <supplied reason="lost">ἐκπεπορευμένοις</supplied> ν<supplied reason="lost">όμων</supplied>
+                    <cb n="3"/>
+                    <lb n="1"/>ἓξ <supplied reason="lost">μ</supplied>υριάδες ὀκτακισχίλιοι ἑξακόσιοι ἴκοσι
+                    <lb n="2"/>τέσσα<supplied reason="lost">ρ</supplied>ες λίτραι τριάκοντα καὶ ἐν θησαυρῷ
+                    <lb n="3"/>νόμων μυριάδες τέσσαρες <space unit="character" extent="unknown"/>
+                    <lb n="4"/>Σεπτεμβρίου ταμίαις ἔσοδος νόμοι δισμύριοι
+                    <lb n="5"/>πεντακισχίλιοι διακόσιοι δέκα εἷς λίτραι
+                    <lb n="6"/>τριάκοντα μία ἔξοδος νόμ<supplied reason="lost">οι</supplied> δισμύριοι ἑξα
+                    <lb n="7" break="no"/>κισχίλιοι πεντακόσιοι ὀγδοήκοντα λίτραι ἴκο
+                    <lb n="8"/>σι τέσσα<supplied reason="lost">ρες</supplied> <supplied reason="lost">λοι</supplied>πὸν νόμοι μύριοι διακ<supplied reason="lost">όσι</supplied>οι
+                    <lb n="9"/>ὀγδοήκοντα τρεῖς λίτραι δέκα δύο κυάμ<supplied reason="lost">ων</supplied> λοι
+                    <lb n="10" break="no"/>πὸν τὸ ἴσον σιτω<supplied reason="undefined" evidence="previouseditor">νίοις</supplied> πᾶσι λοιπὸν τὸ ἴσο<supplied reason="lost">ν</supplied> <supplied reason="lost">τ</supplied>ού
+                    <lb n="11" break="no"/><supplied reason="lost">τ</supplied>ου ἐν ἀνδοκείαις νόμων ἓξ μυριάδες <supplied reason="undefined" evidence="previouseditor">ὀκτα</supplied>
+                    <lb n="12" break="no"/><supplied reason="lost">κ</supplied>ισχί<supplied reason="lost">λιο</supplied>ι ἑ<supplied reason="lost">ξα</supplied>κόσιοι ἴκοσι <supplied reason="lost">τέσσαρες</supplied> <supplied reason="lost">λ</supplied>ίτραι τριά
+                    <lb n="13" break="no"/><supplied reason="lost">κον</supplied>τα καὶ ἐν θησαυρῷ νόμων <supplied reason="lost">μυριά</supplied>δες τέσσαρες <space extent="unknown" unit="character"/>
+                    <lb n="14"/><supplied reason="lost">Ὀκτώ</supplied>βρίου <roleName type="civic" subtype="tamias">ταμίαις</roleName> ἔσοδος νόμων <supplied reason="lost">πε</supplied>ν<supplied reason="lost">τ</supplied>ήκοντα
+                    <lb n="15"/><supplied reason="lost">μία</supplied> μυριάδες δισχίλιοι ἑκατὸν πεντήκοντα πέν
+                    <lb n="16"/><supplied reason="lost">τε</supplied> <supplied reason="lost">λίτρ</supplied>αι τριάκοντα μία· ἔ<supplied reason="lost">ξοδος</supplied> <supplied reason="lost">νό</supplied>μων πεντήκον
+                    <lb n="17" break="no"/>τα μία μυριάδες πεν<supplied reason="lost">τακισχίλιοι</supplied> ἐνακόσιοι δέκα
+                    <lb n="18"/>ἕξ λίτραι δέκα πέντε <supplied reason="lost">λοιπὸν</supplied> νόμοι ἑξακισ
+                    <lb n="19"/><supplied reason="lost">χίλιοι</supplied> <supplied reason="lost">πε</supplied>ντακόσιοι τριάκο<supplied reason="lost">ντα</supplied> <supplied reason="lost">δύο</supplied> <supplied reason="lost">λί</supplied>τραι ἴκοσι ὀκτώ τού
+                    <lb n="20"/><supplied reason="lost">του</supplied> <supplied reason="lost">νόμοι</supplied> <supplied reason="lost">πεν</supplied>τακισχίλιοι <supplied reason="lost"> <gap reason="lost" extent="unknown" unit="character"/><w part="F"><supplied reason="lost">κόσι</supplied>οι</w> ἴκοσι πέντε παρὰ
+                   <lb n="21"/><supplied reason="lost">τοῖς</supplied> <supplied reason="lost">πωλησά</supplied>ντοις οἰκίας κ<supplied reason="lost">αὶ</supplied> χώρους ξένοις πα<supplied reason="lost">ρὰ</supplied>
+                   <lb n="22"/><supplied reason="lost">τὸ</supplied> <supplied reason="lost">δόγμα</supplied> <supplied reason="lost">νόμοι</supplied> πεντακόσιοι <supplied reason="lost">ἐν</supplied> <supplied reason="lost">θησαυρῷ</supplied> <supplied reason="lost">καὶ</supplied> νόμοι δια
+                        <lb n="23"/><supplied reason="lost">κόσιοι</supplied> <supplied reason="lost">τεσσαρ</supplied>άκοντα <supplied reason="lost">λίτραι</supplied> <supplied reason="lost">τέσσαρες</supplied> <gap reason="lost" unit="character" extent="unknown"/>
+                        <lb n="24"/><supplied reason="lost"><orig>τωνεσω</orig></supplied><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w part="F">κεια</w></supplied> <supplied reason="lost">κυά</supplied>μων λοιπὸν τὸ ἴσον σιτων<supplied reason="lost">ίοις</supplied>
+                        <lb n="25"/><supplied reason="lost">πᾶσι</supplied> <supplied reason="lost">λοιπὸν</supplied> τὸ ἴσον τούτου ἐν <supplied reason="lost">ἀνδοκ</supplied>είαις νό
+                        <lb n="26" break="no"/>μων ἓξ <supplied reason="lost">μ</supplied><supplied reason="undefined" evidence="previouseditor">υριά</supplied>δες <supplied reason="lost">ὀκ</supplied>τακισχίλιοι <supplied reason="undefined" evidence="previouseditor">ἑξακ</supplied>όσιοι <supplied reason="undefined" evidence="previouseditor">ἴκοσι</supplied>
+                        <lb n="27"/>τέσσαρες λίτραι <supplied reason="lost">τριάκοντα</supplied> <supplied reason="lost">καὶ</supplied> ἐν <supplied reason="undefined" evidence="previouseditor">θησαυρῷ</supplied> <supplied reason="undefined" evidence="previouseditor">νόμων</supplied>
+                        <lb n="28"/>μυριάδες <supplied reason="undefined" evidence="previouseditor">τέσσα</supplied><supplied reason="lost">ρες</supplied> <space unit="character" extent="unknown"/>
+                        <lb n="29"/>Νοϋεμβρίου <roleName type="civic" subtype="tamias"><supplied reason="lost">τα</supplied>μ<supplied reason="lost">ίαις</supplied></roleName> <supplied reason="lost">ἔσοδ</supplied>ος νόμων <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">μυριά</supplied>
+                        <lb n="30" break="no"/>δες ἑπτακισχίλιοι <gap reason="lost" extent="unknown" unit="character"/><w part="F">ακόσιοι</w> ὀγδο<supplied reason="lost">ήκον</supplied>τα <supplied reason="lost">ὀ</supplied><!-- up to here; note that the square bracket placement needs checking, IGSI reprint is poor -->
+                        <lb n="31" break="no"/>κτώ λίτραι δέκα δύο ἔξοδος νόμω<supplied reason="lost">ν</supplied> μυριά-<lb n="92"/> δες δισχίλιοι
+                    ὀκτακόσιοι <supplied reason="lost">— —</supplied>ήκοντα, <supplied reason="lost">λ</supplied>ίτραι
+                    δέκα<lb n="93"/>
+                    <supplied reason="lost">— — — — λοιπὸν νόμων — — — — μυριά</supplied>δες χίλιοι ἐνα-<lb n="94"/>
+                    κόσιοι π<supplied reason="lost">— —, λίτραι ἴκ</supplied>οσι. <supplied reason="lost">
+                    κυάμ</supplied>ων λοιπὸν τὸ ἴσον.<lb n="95"/>
+                    <supplied reason="lost">σιτωνίοις πᾶσι λοι</supplied>πὸν <supplied reason="lost">τὸ ἴσο</supplied>ν·
+                    τούτου ἐν ἀνδοκείαις<lb n="96"/>
+                    <supplied reason="lost">νόμων ἓξ μυριάδες ὀκ</supplied>τακισχίλιοι ἑξακόσιοι ἴκο-<lb n="97"/> σι
+                    τέσσαρ<supplied reason="lost">ες λίτρ</supplied>αι τριάκοντα, καὶ ἐν θησαυρῷ<lb n="98"/> νόμων
+                    τέσσαρες μυριάδες.<lb n="99"/>Δεκεμβρίου. <roleName type="civic" subtype="tamias">ταμίαις</roleName> ἔσοδος νόμων ὀκτὼ μυριάδες<lb n="100"/>
+                    πεντακισχί<supplied reason="lost">λιοι — — — — — — — — —</supplied>ήκοντα ἕξ, λίτραι<lb n="101"/>
+                    ἴκοσι ὀκτώ· ἔξ<supplied reason="lost">οδος νόμων — —</supplied> δύο μυριάδες ἑπτακισ-<lb n="102"/>
+                    χίλιοι <supplied reason="lost">—</supplied>ακόσι<supplied reason="lost">οι — — — — —</supplied> δέκα·
+                    λοιπὸν νόμοι μύ-<lb n="103"/> ριοι ἐνακισχ<supplied reason="lost">ίλιοι — — — — —</supplied> δέκα π<supplied reason="lost">έντε</supplied>, λίτραι τρι-<lb n="104"/> άκοντα ἐννέα. κυάμ<supplied reason="lost">ω</supplied>ν λοιπὸν <supplied reason="lost">τὸ ἴσον</supplied>. σιτωνί-<lb n="105"/> οις πᾶσι λοιπὸν τὸ ἴσ<supplied reason="lost">ον· το</supplied>ύτου ἐν ἀν<supplied reason="lost">δο</supplied>κείαις νό-<lb n="106"/> μων ἓξ μυριάδε<supplied reason="lost">ς
+                    ὀκτακ</supplied>ισχίλιοι ἑξακόσιοι ἴκο-<lb n="107"/> σι τέσσαρες, λίτραι τριάκοντα, καὶ ἐν θησαυρῷ
+                    νό-<lb n="108"/> μων τέσσαρες μυριάδες.<lb n="109"/>Ἰανουαρίου. ταμίαις ἔσοδος νόμων τρεῖς μυριάδες
+                    ἑ-<lb n="110"/> κατὸν ἴκοσι πέ<supplied reason="lost">ντε</supplied>, λίτραι τριάκοντα ὀκτώ· ἔξο-
+                    <lb n="111"/> δος νόμων τρεῖς μυριάδες ὀκτακισχίλιοι δια-<lb n="112"/> κόσιοι πεντή<supplied reason="lost">κοντα, λίτρ</supplied>αι δέκα ὀκτώ· λοι-<lb n="113"/> πὸν νόμοι μύριοι διακόσιοι <supplied reason="lost">πεν</supplied>τήκοντα, λίτραι<lb n="114"/> δέκα ἐννέα. τούτο<supplied reason="lost">υ νό</supplied>μοι ὀκτακισχίλιοι τρι-<lb n="115"/> ακόσιοι ἴκοσ<supplied reason="lost">ι, λ</supplied>ίτραι <supplied reason="lost">— — — — — —</supplied> παρὰ<lb n="116"/> τοῖς πωλησάντοις οἰκίας καὶ χώ<supplied reason="lost">ρου</supplied>ς<lb n="117"/>
+                    ξένοις παρὰ τὸ δ<supplied reason="lost">όγμα</supplied>, νόμοι π<supplied reason="lost">
+                    εν</supplied>-<lb n="118"/> τακόσιοι <supplied reason="lost">ἐν</supplied> θησαυρῷ, <supplied reason="lost">καὶ νό</supplied>μοι δια<supplied reason="lost">κό</supplied>σι-<lb n="119"/> οι
+                    τεσσαράκοντα, λίτ<supplied reason="lost">ραι τέσσα</supplied>ρε<supplied reason="lost">ς
+                    ․c.4․τωνεσω․c.5-6․</supplied>-<lb n="120"/> κεια. κυάμων λοιπ
+                    <supplied reason="lost">ὸν τὸ ἴσον. σιτωνίοις πᾶσι</supplied>
+                    <lb n="121"/> λοιπὸν τὸ ἴσον. τού<supplied reason="lost">του ἐν ἀνδοκείαις νόμ</supplied>ων<lb n="122"/> ἓξ μυριάδες ὀκτ<supplied reason="lost">ακισχίλιοι ἑξακόσιοι ἴκο</supplied>σι<lb n="123"/> τέσσ<supplied reason="lost">αρες</supplied>, λίτραι <supplied reason="lost">
+                    τριάκοντα, καὶ ἐν θησαυρ</supplied>ῷ<lb n="124"/> νόμων <unclear>τέσσα</unclear>ρες <supplied reason="lost">μυριάδες</supplied>.<lb n="125"/>Φε<supplied reason="lost">
+                    βρου</supplied>α<supplied reason="lost">ρί</supplied>ου. <roleName type="civic" subtype="tamias">ταμίαις</roleName> ἔσο<supplied reason="lost">δος
+                    νόμοι — — — —χ</supplied>ί-<lb n="126"/> λιοι πεντακόσιοι δύο, λί
+                    <supplied reason="lost">τραι — — — — ἔξοδος νόμοι</supplied>
+                    <lb n="127"/> μύριοι χίλιοι ἑπτακόσιοι
+                    <supplied reason="lost">— — — — — λίτραι — — — —</supplied>
+                    <lb n="128"/> ἕξ· λοιπὸν νόμοι μύριοι ἑξ
+                    <supplied reason="lost">ακισχίλιοι — — —ακόσιοι</supplied>
+                    <lb n="129"/> ἐνενήκοντα τέσσαρες, λίτραι δέκ<supplied reason="lost">α. κυάμων λο</supplied>ι-<lb n="130"/> πὸν τὸ ἴσον. σιτωνίοις πᾶσι λοιπὸν τὸ ἴσον. τούτου <supplied reason="lost">ἐν
+                    ἀν</supplied>-<lb n="131"/> δοκείαις νόμων ἓξ <supplied reason="lost">μυριάδες</supplied> ὀκτακισχίλιοι
+                    ἑξ<supplied reason="lost">ακόσι</supplied>-<lb n="132"/> οι ἴκοσι τέσσαρες, <supplied reason="lost">λίτραι τριάκοντα, καὶ ἐν θησαυρῷ νόμων μυρ</supplied>-<lb n="133"/> ιάδες
+                    τέσσα<supplied reason="lost">ρες</supplied>.<lb n="134"/>Μ<supplied reason="lost">
+                    α</supplied>ρ<supplied reason="lost">τ</supplied>ίου. <roleName type="civic" subtype="tamias">ταμίαις</roleName> ἔ<supplied reason="lost">σοδος
+                    νό</supplied>μοι πεντακισχίλιοι<lb n="135"/>
+                    <supplied reason="lost">— — — — —</supplied>ακόσιοι τριάκον<supplied reason="lost">τα</supplied>,
+                    λίτραι τ<supplied reason="lost">ρι</supplied>άκ<supplied reason="lost">οντα</supplied>·<lb n="136"/>
+                    ἔξοδος νόμοι μύριοι τρισ<supplied reason="lost">χίλιοι</supplied> ἑξακόσιοι τριάκοντα, λίτραι<lb n="137"/> τριάκοντα· λοιπὸν νόμοι μύριοι ἑξακισχίλιοι ἑπτα-<lb n="138"/> κόσιοι ἐνενήκοντα
+                    ἑπτά, λίτραι δέκα ἑπτά. κυάμων<lb n="139"/>
+                    <supplied reason="lost">λ</supplied>οιπὸν τὸ ἴσον. σιτωνίοις πᾶσι λοιπὸν τὸ ἴσον· τούτου ἐν<lb n="140"/> ἀνδοκείαις νόμων ἓξ μυριάδες ὀκτακισχίλιοι ἑξα-<lb n="141"/>
+                    <supplied reason="lost">κ</supplied>ό<supplied reason="lost">σιοι</supplied> ἴκοσι τέσσαρες, λίτραι
+                    τριάκοντα, καὶ ἐν θησαυρῷ<lb n="142"/> νόμων τέσσαρες μυριάδες.<lb n="143"/>Ἀπ<supplied reason="lost">ρι</supplied>λίου. <roleName type="civic" subtype="tamias">ταμίαις</roleName> ἔσοδος νόμων δέκα τέσσαρες μυριάδ
+                    <supplied reason="lost">ες</supplied>
+                    <lb n="144"/> δισχίλιοι ἑβδομήκοντα, λίτραι <supplied reason="lost">ἴκ</supplied>οσι· ἔξοδος νόμω
+                    <supplied reason="lost">ν</supplied>
+                    <lb n="145"/> δέκα τέσσαρες μυριάδες δισχίλιοι τριακόσιοι, λίτραι<lb n="146"/> ἴκοσι τρεῖς. λοιπὸν
+                    νόμοι μύριοι ἑξακισχίλιοι πε<supplied reason="lost">ντα</supplied>-<lb n="147"/> κόσιοι ἑξήκοντα
+                    ἑπτά, λίτραι δέκα τέσσαρες. τούτου νό
+                    <supplied reason="lost">μοι</supplied>
+                    <lb n="148"/> ἐνακισχίλιοι <supplied reason="lost">— — —</supplied>σιοι τεσσαράκοντα ἐννέα,
+                    λί<supplied reason="lost">τραι τριά</supplied>-<lb n="149"/> κοντα παρὰ τοῖς πωλησάντοις οἰκίας καὶ
+                    χώρους <supplied reason="omitted">ξένοις</supplied> π
+                    <supplied reason="lost">αρὰ τὸ</supplied>
+                    <lb n="150"/> δόγμα, νόμοι πεντακόσιοι <supplied reason="lost">ἐν θησαυρῶι, καὶ</supplied> νόμοι
+                    διακόσι]-<lb n="151"/> οι <supplied reason="lost">τεσσ</supplied>αράκοντα, <supplied reason="lost">
+                    λίτραι τέσσαρες — — — — — — —
+                </supplied> νόμ
+                    <supplied reason="lost">οι</supplied>
+                    <lb n="152"/> πεντακόσιοι πεντήκοντα τρεῖς, λίτραι ἴκοσι
+                    <supplied reason="lost">— — — — — — —</supplied>
+                    <lb n="153"/>
+                    <supplied reason="lost">— — — — — — — — — — — — — — — — — — — — — — — — —</supplied>-<lb n="154"/>
+                    ας τόκος νόμοι τ
+                    <unclear>ετρ</unclear>
+                    <supplied reason="lost">ακόσιοι — — — — — — — — — — — — —</supplied>
+                    <lb n="155"/>
+                    <supplied reason="lost">— — — — — — — — — — — — — — — —</supplied>
+                    πεντακόσιοι τριάκον-<lb n="156"/> τα <supplied reason="lost">— — — — — — — — — — — — — — — —
+                </supplied> νόμοι
+                    <supplied reason="lost">— — — —</supplied>
+                    <lb n="157"/>
+                    <supplied reason="lost">— — — — — — — — — — — — — —</supplied>
+                    κυάμων λοιπὸ
+                    <supplied reason="lost">ν</supplied>
+                    <lb n="158"/>
+                    <supplied reason="lost">— — — — — — — — — — — — — — — — — — — —</supplied>νω
+                    <supplied reason="lost">— —</supplied>
+                    <lb n="159"/>
+                    <supplied reason="lost">— — — — — — — — — — — — — — — — — — — — — — — —</supplied>
+                    <lb n="160"/>
+                    <supplied reason="lost">— — — — — — — — — — — — — τούτου ἐν ἀνδοκείαις</supplied>
+                    <lb n="161"/> νόμων ἓξ μυριάδες ὀκτακισχίλιοι ἑξακόσ
+                    <supplied reason="lost">ιοι ἴκοσι</supplied>
+                    <lb n="162"/> τέσσαρες, λίτραι τριάκοντα, καὶ ἐν θησαυρῷ<lb n="163"/> νόμων τέσσαρες μυριάδες.
+                    <lb n="164"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--main text is IGSI. Notable for Roman months; tamiai (i.e. quaestors). uses litrai and nomoi, in contrast to the earlier tablets (IG XIV 423-30). Also duoi andres, sitonioi. Cf. Manganaro, CronASA 3 (1964), p.55ff for another acc. tablet of the same period (BE 1966.512). Also in contrast to the earlier tablets the numerals operate in descending fashion rather that (pseudo)ascending style. Besides tamiai at lines 7-8 we have "toutou para tois duois | androis tois ekpeporeumenois nomwn hex muri|ades oktakischilioi hexakosioi ikos tessares || litrai triakonta, kai en thesaurw<i> nomwn muri|ades tessares", i.e. those who have held the duumvirate seem to be covering 90%+ of the city's annual costs?--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="AE">
+                        <citedRange>1906.0176</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>04.0048</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl>
+                        <author>Arangio Ruiz and Olivieri</author>
+                        <date>1925</date>
+                        <citedRange>no.13</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5Q2B5T7T"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001378">https://biblio.inscriptiones.org/epig10001378</ref></bibl>
+                    <bibl>
+                        <author>Rizzo</author>
+                        <date>1899</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/C93D5VW4"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001639">https://biblio.inscriptiones.org/epig10001639</ref></bibl>
+                    <bibl>
+                        <author>Willers</author>
+                        <date>1905</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5EAJX28I"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001511">https://biblio.inscriptiones.org/epig10001511</ref></bibl>
+                    <bibl>
+                        <author>Cuntz</author>
+                        <date>1906</date>
+                        <citedRange>467-468</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HHKUDGP6"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002061">https://biblio.inscriptiones.org/epig10002061</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/IXCSBXRM"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001832">https://biblio.inscriptiones.org/epig10001832</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
