@@ -59,6 +59,10 @@ export const footer = {
 					href: '/credits'
 				},
 				{
+					title: 'How to Cite',
+					href: '/how-to-cite'
+				},
+				{
 					title: 'Cookies',
 					href: 'https://www.ox.ac.uk/cookies-privacy-policy'
 				}
