@@ -215,6 +215,23 @@
 				{:else}
 					<dd>{metadata?.layoutDesc?.layout?.damage?._ || config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
+
+				{#if metadata?.layoutDesc?.layout?.rs}
+					{@const rs = metadata.layoutDesc.layout.rs}
+					{@const technique = Array.isArray(rs) ? rs[0] : rs}
+					{@const pigment = Array.isArray(rs) ? rs.slice(-1)[0] : null}
+
+					<dt>Technique</dt>
+					<dd><a class="badge strong" href={technique.ref}>{technique._}</a></dd>
+					<dt>Pigment</dt>
+					<dd>{pigment?._ || config.EMPTY_PLACEHOLDER}</dd>
+				{:else}
+					<dt>Technique</dt>
+					<dd>{config.EMPTY_PLACEHOLDER}</dd>
+					<dt>Pigment</dt>
+					<dd>{config.EMPTY_PLACEHOLDER}</dd>
+				{/if}
+
 				{#if metadata?.handNote?.lettering}
 					<dt>Lettering</dt>
 					<dd>
