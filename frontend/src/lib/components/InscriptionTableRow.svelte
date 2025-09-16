@@ -1,6 +1,7 @@
 <script>
 	import InscriptionDate from './InscriptionDate.svelte';
 	import InscriptionLink from './InscriptionLink.svelte';
+	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
 	let { inscription } = $props();
@@ -15,7 +16,7 @@
 	</td>
 	<td><InscriptionDate date={inscription.date} /></td>
 	<td><InscriptionPlace {inscription} /></td>
-	<td>{inscription?.status?._ || inscription?.status || 'N/A'}</td>
+	<td><InscriptionMaterial material={inscription.material} /></td>
 	<td>
 		{#if inscription.type?.ref}
 			<a class="badge" href={inscription.type.ref}>{inscription.type?._}</a>

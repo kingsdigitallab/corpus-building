@@ -3,8 +3,9 @@
 	import { fuzzyMatch } from '$lib/utils/fuzzy.js';
 	import { Image } from '@unpic/svelte';
 	import InscriptionDate from './InscriptionDate.svelte';
-	import InscriptionPlace from './InscriptionPlace.svelte';
 	import InscriptionLink from './InscriptionLink.svelte';
+	import InscriptionMaterial from './InscriptionMaterial.svelte';
+	import InscriptionPlace from './InscriptionPlace.svelte';
 
 	const { inscription, view = 'image', query, exactSearch = false } = $props();
 
@@ -91,8 +92,8 @@
 	</div>
 	<div class="card-footer">
 		<dl>
-			<dt>Status</dt>
-			<dd>{inscription?.status || 'N/A'}</dd>
+			<dt>Material</dt>
+			<dd><InscriptionMaterial material={inscription.material} /></dd>
 			<dt>Type</dt>
 			<dd class="badge strong">
 				{#if inscription.type?.ref}
@@ -115,6 +116,16 @@
 			<dd>{inscription.textLang?._ || 'N/A'}</dd>
 		</dl>
 	</div>
+	<!-- To list matched fields
+	{#if inscription.matchedFields}
+		<dl>
+			{#each Object.entries(inscription.matchedFields) as [field, value]}
+				<dt>{field}</dt>
+				<dd>{value}</dd>
+			{/each}
+		</dl>
+	{/if}
+	-->
 </div>
 
 <style>
