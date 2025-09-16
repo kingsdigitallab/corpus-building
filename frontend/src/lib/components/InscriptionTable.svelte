@@ -11,7 +11,7 @@
 			<th class="surface-4">Title</th>
 			<th class="surface-4">Date</th>
 			<th class="surface-4">Origin</th>
-			<th class="surface-4">Status</th>
+			<th class="surface-4">Material</th>
 			<th class="surface-4">Type</th>
 			<th class="surface-4">Object type</th>
 			<th class="surface-4">Language</th>
