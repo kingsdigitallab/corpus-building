@@ -10,12 +10,12 @@
 			<th class="surface-4">ID</th>
 			<th class="surface-4">Title</th>
 			<th class="surface-4">Date</th>
-			<th class="surface-4">Place</th>
+			<th class="surface-4">Origin</th>
 			<th class="surface-4">Status</th>
 			<th class="surface-4">Type</th>
 			<th class="surface-4">Object type</th>
 			<th class="surface-4">Language</th>
-			<th class="surface-4">Settlement</th>
+			<th class="surface-4">Current location</th>
 		</tr>
 	</thead>
 	<tbody>
