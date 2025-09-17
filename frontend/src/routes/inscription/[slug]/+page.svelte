@@ -12,6 +12,7 @@
 	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
 	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
 	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
+	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
 
 	/**
 	 * @typedef {Object} Props
@@ -232,19 +233,15 @@
 					<dd>{config.EMPTY_PLACEHOLDER}</dd>
 				{/if}
 
-				{#if metadata?.handNote?.lettering}
-					<dt>Lettering</dt>
-					<dd>
-						<p>{metadata.handNote.lettering._}</p>
-						{#if metadata.lettering_types}
-							<ul>
-								{#each metadata.lettering_types as aref}
-									<li><a href={aref.target}>{aref._}</a></li>
-								{/each}
-							</ul>
-						{/if}
-					</dd>
-				{/if}
+				<dt>Lettering</dt>
+				<dd>
+					{#if metadata?.handNote?.lettering}
+						<InscriptionLettering lettering={metadata.handNote.lettering} />
+					{:else}
+						{config.EMPTY_PLACEHOLDER}
+					{/if}
+				</dd>
+
 				<dt>Letter heights</dt>
 				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
 					<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
