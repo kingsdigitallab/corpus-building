@@ -21,28 +21,12 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
@@ -193,10 +177,11 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-17" who="#AA">edition on basis of autopsy and photographs</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -214,9 +199,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1" xml:id="AMεAK"/><persName type="attested" xml:id="AMεAU"><name xml:id="AMεAe"><w n="5"><expan xml:id="AMεAo"><abbr xml:id="AMεAy">P</abbr><ex xml:id="AMεAΙ">ublius</ex></expan></w></name> <g ref="#interpunct" xml:id="AMεAΤ" n="10">·</g> <name xml:id="AMεAε"><w n="15">Antistius</w></name> <g ref="#interpunct" xml:id="AMεAο" n="20">·</g> <persName xml:id="AMεBA"><name type="patronym" xml:id="AMεBK"><w n="25"><expan xml:id="AMεBU"><abbr xml:id="AMεBe">P</abbr><ex xml:id="AMεBo">ubli</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AMεBy" n="30">·</g> <w xml:id="AMεBΙ" n="35"><expan xml:id="AMεBΤ"><abbr xml:id="AMεBε">f</abbr><ex xml:id="AMεBο">ilius</ex></expan></w>
-                    <lb n="2" xml:id="AMεCA"/><orgName type="tribus" xml:id="AMεCK"><name xml:id="AMεCU"><w n="40"><expan xml:id="AMεCe"><abbr xml:id="AMεCo">Cla</abbr><ex xml:id="AMεCy">udia</ex></expan></w></name> <w xml:id="AMεCΙ" n="45"><supplied reason="subaudible" xml:id="AMεCΤ">tribu</supplied></w></orgName>
-                    <lb n="3" xml:id="AMεCε"/><name xml:id="AMεCο"><w n="50"><expan xml:id="AMεDA"><abbr xml:id="AMεDK">Cavar</abbr><ex xml:id="AMεDU">ianus</ex></expan></w></name></persName>
+                    <lb n="1" xml:id="AMεAK"/><persName type="attested" xml:id="AMεAU"><name><w n="5" xml:id="AMεAe"><expan xml:id="AMεAo"><abbr xml:id="AMεAy">P</abbr><ex xml:id="AMεAΙ">ublius</ex></expan></w></name> <g ref="#interpunct" xml:id="AMεAΤ" n="10">·</g> <name><w n="15" xml:id="AMεAε">Antistius</w></name> <g ref="#interpunct" xml:id="AMεAο" n="20">·</g> <persName xml:id="AMεBA"><name type="patronym"><w n="25" xml:id="AMεBK"><expan xml:id="AMεBU"><abbr xml:id="AMεBe">P</abbr><ex xml:id="AMεBo">ubli</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AMεBy" n="30">·</g> <w xml:id="AMεBΙ" n="35"><expan xml:id="AMεBΤ"><abbr xml:id="AMεBε">f</abbr><ex xml:id="AMεBο">ilius</ex></expan></w>
+                    <lb n="2" xml:id="AMεCA"/><orgName type="tribus" xml:id="AMεCK"><name><w n="40" xml:id="AMεCU"><expan xml:id="AMεCe"><abbr xml:id="AMεCo">Cla</abbr><ex xml:id="AMεCy">udia</ex></expan></w></name> <w xml:id="AMεCΙ" n="45"><supplied reason="subaudible" xml:id="AMεCΤ">tribu</supplied></w></orgName>
+                    <lb n="3" xml:id="AMεCε"/><name><w n="50" xml:id="AMεCο"><expan xml:id="AMεDA"><abbr xml:id="AMεDK">Cavar</abbr><ex xml:id="AMεDU">ianus</ex></expan></w></name></persName>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -251,6 +236,8 @@
                         <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>47</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>

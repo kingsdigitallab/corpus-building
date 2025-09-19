@@ -21,28 +21,12 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
@@ -192,11 +176,12 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-23" who="#JP">Jonathan Prag added image</change>
                 <change when="2024-04-08" who="#JP">Jonathan Prag revised from autopsy</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -228,9 +213,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1" xml:id="AKeAK"/><persName type="attested" xml:id="AKeAU"><name xml:id="AKeAe"><w n="5"><expan xml:id="AKeAo"><abbr xml:id="AKeAy">C</abbr><ex xml:id="AKeAΙ">aio</ex></expan></w></name> <g ref="#interpunct" xml:id="AKeAΤ" n="10">·</g> <name xml:id="AKeAε"><w n="15">Virio</w></name> <g ref="#interpunct" xml:id="AKeAο" n="20">·</g> <persName type="attested" xml:id="AKeBA"><name type="patronym" xml:id="AKeBK"><w n="25"><expan xml:id="AKeBU"><abbr xml:id="AKeBe">C</abbr><ex xml:id="AKeBo">ai</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AKeBy" n="30">·</g> <w xml:id="AKeBΙ" n="35"><expan xml:id="AKeBΤ"><abbr xml:id="AKeBε">f</abbr><ex xml:id="AKeBο">ilio</ex></expan></w> <g ref="#interpunct" xml:id="AKeCA" n="40">·</g> <orgName xml:id="AKeCK"><name xml:id="AKeCU"><w n="45"><expan xml:id="AKeCe"><abbr xml:id="AKeCo">Cla</abbr><ex xml:id="AKeCy">udia</ex></expan></w></name></orgName>
-                    <lb n="2" xml:id="AKeCΙ"/><name xml:id="AKeCΤ"><w n="50">Maximo</w></name></persName> <g ref="#interpunct" xml:id="AKeCε" n="55">·</g> <roleName type="religious" subtype="haruspex" xml:id="AKeCο"><w xml:id="AKeDA" n="60"><expan xml:id="AKeDK"><abbr xml:id="AKeDU">haruspic</abbr><ex xml:id="AKeDe">i</ex></expan></w></roleName>
-                    <lb n="3" xml:id="AKeDo"/><persName type="attested" xml:id="AKeDy"><name xml:id="AKeDΙ"><w n="65">Clodiae</w></name> <g ref="#interpunct" xml:id="AKeDΤ" n="70">·</g> <persName type="attested" xml:id="AKeDε"><name type="libertinatio" xml:id="AKeDο"><w n="75"><expan xml:id="AKeEA"><abbr xml:id="AKeEK">M</abbr><ex xml:id="AKeEU">arci</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AKeEe" n="80">·</g> <w xml:id="AKeEo" n="85"><expan xml:id="AKeEy"><abbr xml:id="AKeEΙ">l</abbr><ex xml:id="AKeEΤ">ibertae</ex></expan></w> <g ref="#interpunct" xml:id="AKeEε" n="90">·</g> <name xml:id="AKeEο"><w n="95">Donatae</w></name></persName> <g ref="#interpunct" xml:id="AKeFA" n="100">·</g> <w xml:id="AKeFK" n="105"><expan xml:id="AKeFU"><abbr xml:id="AKeFe">m</abbr><ex cert="low" xml:id="AKeFo">erentibus</ex></expan></w>
+                    <lb n="1" xml:id="AKeAK"/><persName type="attested" xml:id="AKeAU"><name><w n="5" xml:id="AKeAe"><expan xml:id="AKeAo"><abbr xml:id="AKeAy">C</abbr><ex xml:id="AKeAΙ">aio</ex></expan></w></name> <g ref="#interpunct" xml:id="AKeAΤ" n="10">·</g> <name><w n="15" xml:id="AKeAε">Virio</w></name> <g ref="#interpunct" xml:id="AKeAο" n="20">·</g> <persName type="attested" xml:id="AKeBA"><name type="patronym"><w n="25" xml:id="AKeBK"><expan xml:id="AKeBU"><abbr xml:id="AKeBe">C</abbr><ex xml:id="AKeBo">ai</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AKeBy" n="30">·</g> <w xml:id="AKeBΙ" n="35"><expan xml:id="AKeBΤ"><abbr xml:id="AKeBε">f</abbr><ex xml:id="AKeBο">ilio</ex></expan></w> <g ref="#interpunct" xml:id="AKeCA" n="40">·</g> <orgName xml:id="AKeCK"><name><w n="45" xml:id="AKeCU"><expan xml:id="AKeCe"><abbr xml:id="AKeCo">Cla</abbr><ex xml:id="AKeCy">udia</ex></expan></w></name></orgName>
+                    <lb n="2" xml:id="AKeCΙ"/><name><w n="50" xml:id="AKeCΤ">Maximo</w></name></persName> <g ref="#interpunct" xml:id="AKeCε" n="55">·</g> <roleName type="religious" subtype="haruspex" xml:id="AKeCο"><w xml:id="AKeDA" n="60"><expan xml:id="AKeDK"><abbr xml:id="AKeDU">haruspic</abbr><ex xml:id="AKeDe">i</ex></expan></w></roleName>
+                    <lb n="3" xml:id="AKeDo"/><persName type="attested" xml:id="AKeDy"><name><w n="65" xml:id="AKeDΙ">Clodiae</w></name> <g ref="#interpunct" xml:id="AKeDΤ" n="70">·</g> <persName type="attested" xml:id="AKeDε"><name type="libertinatio"><w n="75" xml:id="AKeDο"><expan xml:id="AKeEA"><abbr xml:id="AKeEK">M</abbr><ex xml:id="AKeEU">arci</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AKeEe" n="80">·</g> <w xml:id="AKeEo" n="85"><expan xml:id="AKeEy"><abbr xml:id="AKeEΙ">l</abbr><ex xml:id="AKeEΤ">ibertae</ex></expan></w> <g ref="#interpunct" xml:id="AKeEε" n="90">·</g> <name><w n="95" xml:id="AKeEο">Donatae</w></name></persName> <g ref="#interpunct" xml:id="AKeFA" n="100">·</g> <w xml:id="AKeFK" n="105"><expan xml:id="AKeFU"><abbr xml:id="AKeFe">m</abbr><ex cert="low" xml:id="AKeFo">erentibus</ex></expan></w>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -282,13 +267,17 @@
                         <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">10.7355</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">7355</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>21</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>

@@ -21,18 +21,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -43,10 +31,6 @@
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Autopsy</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
@@ -187,11 +171,12 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-03-27" who="#JP">Jonathan Prag made initial revisions to file and text from autopsy notes, added images.</change>
                 <change when="2024-04-17" who="#JP">Jonathan Prag consolidated from autopsy notes and publications</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -217,8 +202,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1" xml:id="ANΤAK"/><persName type="attested" xml:id="ANΤAU"><name xml:id="ANΤAe"><w n="5"><expan xml:id="ANΤAo"><abbr xml:id="ANΤAy">L</abbr><ex xml:id="ANΤAΙ">ucio</ex></expan></w></name> <g ref="#interpunct" xml:id="ANΤAΤ" n="10">·</g> <name xml:id="ANΤAε"><w n="15">Aurelio</w></name> <g ref="#interpunct" xml:id="ANΤAο" n="20">·</g>
-                    <lb n="2" xml:id="ANΤBA"/><name xml:id="ANΤBK"><w n="25">Nigro</w></name></persName> <g ref="#interpunct" xml:id="ANΤBU" n="30">·</g>
+                    <lb n="1" xml:id="ANΤAK"/><persName type="attested" xml:id="ANΤAU"><name><w n="5" xml:id="ANΤAe"><expan xml:id="ANΤAo"><abbr xml:id="ANΤAy">L</abbr><ex xml:id="ANΤAΙ">ucio</ex></expan></w></name> <g ref="#interpunct" xml:id="ANΤAΤ" n="10">·</g> <name><w n="15" xml:id="ANΤAε">Aurelio</w></name> <g ref="#interpunct" xml:id="ANΤAο" n="20">·</g>
+                    <lb n="2" xml:id="ANΤBA"/><name><w n="25" xml:id="ANΤBK">Nigro</w></name></persName> <g ref="#interpunct" xml:id="ANΤBU" n="30">·</g>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -244,13 +229,17 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">10.7380</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">7380</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>56</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>

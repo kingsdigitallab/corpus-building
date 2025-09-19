@@ -21,28 +21,12 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
@@ -192,13 +176,14 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-23" who="#JP">Jonathan Prag added images</change>
                 <change when="2024-04-08" who="#JP">Jonathan Prag revised from autopsy</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
                 <change when="2025-07-03" who="#RC">Robert Crellin added local ids to new elements</change>
                 <change when="2025-07-03" who="#RC">Robert Crellin added new elements to the lemmatized edition</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -241,7 +226,7 @@
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
                     <lb n="1" xml:id="AKyAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKyAU" n="2"/> <orig xml:id="AKyAe" n="5">R<unclear xml:id="AKyAo">D</unclear></orig><gap reason="lost" extent="unknown" unit="character" xml:id="AKyAy" n="6"/>
-                    <lb n="2" xml:id="AKyAΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKyAΤ" n="8"/> <num atLeast="2" xml:id="AKyAε"><w n="10"><unclear xml:id="AKyAο">II</unclear></w></num> <g ref="#interpunct" xml:id="AKyBK" n="15">·</g> <w xml:id="AKyBA" n="20">in</w> <w xml:id="AKyBU" n="25" part="I">pub</w><gap reason="lost" extent="unknown" unit="character" xml:id="AKyBe" n="26"/>
+                    <lb n="2" xml:id="AKyAΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKyAΤ" n="8"/> <num atLeast="2"><w n="10" xml:id="AKyAε"><unclear xml:id="AKyAο">II</unclear></w></num> <g ref="#interpunct" xml:id="AKyBK" n="15">·</g> <w xml:id="AKyBA" n="20">in</w> <w xml:id="AKyBU" n="25" part="I">pub</w><gap reason="lost" extent="unknown" unit="character" xml:id="AKyBe" n="26"/>
                     <lb n="3" xml:id="AKyBo"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKyBy" n="28"/> <w xml:id="AKyBΙ" n="30"><unclear xml:id="AKyBΤ">u</unclear>t</w> <w xml:id="AKyBε" n="35"><unclear xml:id="AKyBο">e</unclear>x</w> <w xml:id="AKyCA" n="40" part="I"><unclear xml:id="AKyCK">p</unclear></w><gap reason="lost" extent="unknown" unit="character" xml:id="AKyCU" n="70"/>
                 </ab>
             </div>
@@ -284,6 +269,8 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>23</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>

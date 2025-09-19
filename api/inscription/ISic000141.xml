@@ -21,18 +21,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -43,10 +31,6 @@
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Autopsy</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
@@ -192,10 +176,11 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-04-17" who="#JP">Jonathan Prag revised from autopsy record, image and publication, and added images.</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -221,9 +206,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1" xml:id="AOKAK"/><persName xml:id="AOKAP"><name xml:id="AOKAU"><w n="5">Caninia</w></name>
-                    <lb n="2" xml:id="AOKAe"/><name xml:id="AOKAo"><w n="10">Epit<hi rend="tall" xml:id="AOKAy">y</hi><hi rend="ligature" xml:id="AOKAΙ">ch</hi>ia</w></name></persName>
-                    <lb n="3" xml:id="AOKAΤ"/><w xml:id="AOKAε" n="15"><expan xml:id="AOKAο"><abbr xml:id="AOKBA">v</abbr><ex xml:id="AOKBK">ixit</ex></expan></w> <g ref="#interpunct" xml:id="AOKBU" n="20">·</g> <w xml:id="AOKBe" n="25"><expan xml:id="AOKBo"><abbr xml:id="AOKBy">a</abbr><ex xml:id="AOKBΙ">nnis</ex></expan></w> <g ref="#interpunct" xml:id="AOKBΤ" n="30">·</g> <num value="18" xml:id="AOKBε"><w n="35">XVIII</w></num> <g ref="#interpunct" xml:id="AOKBο" n="40">·</g> <w xml:id="AOKCA" n="45"><expan xml:id="AOKCK"><abbr xml:id="AOKCU">d</abbr><ex xml:id="AOKCe">iebus</ex></expan></w> <g ref="#interpunct" xml:id="AOKCo" n="50">·</g> <num value="13" xml:id="AOKCy"><w n="55">XIII</w></num> <g ref="#interpunct" xml:id="AOKCΙ" n="60">·</g>
+                    <lb n="1" xml:id="AOKAK"/><persName xml:id="AOKAP"><name><w n="5" xml:id="AOKAU">Caninia</w></name>
+                    <lb n="2" xml:id="AOKAe"/><name><w n="10" xml:id="AOKAo">Epit<hi rend="tall" xml:id="AOKAy">y</hi><hi rend="ligature" xml:id="AOKAΙ">ch</hi>ia</w></name></persName>
+                    <lb n="3" xml:id="AOKAΤ"/><w xml:id="AOKAε" n="15"><expan xml:id="AOKAο"><abbr xml:id="AOKBA">v</abbr><ex xml:id="AOKBK">ixit</ex></expan></w> <g ref="#interpunct" xml:id="AOKBU" n="20">·</g> <w xml:id="AOKBe" n="25"><expan xml:id="AOKBo"><abbr xml:id="AOKBy">a</abbr><ex xml:id="AOKBΙ">nnis</ex></expan></w> <g ref="#interpunct" xml:id="AOKBΤ" n="30">·</g> <num value="18"><w n="35" xml:id="AOKBε">XVIII</w></num> <g ref="#interpunct" xml:id="AOKBο" n="40">·</g> <w xml:id="AOKCA" n="45"><expan xml:id="AOKCK"><abbr xml:id="AOKCU">d</abbr><ex xml:id="AOKCe">iebus</ex></expan></w> <g ref="#interpunct" xml:id="AOKCo" n="50">·</g> <num value="13"><w n="55" xml:id="AOKCy">XIII</w></num> <g ref="#interpunct" xml:id="AOKCΙ" n="60">·</g>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -264,6 +249,8 @@
                         <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>60</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>

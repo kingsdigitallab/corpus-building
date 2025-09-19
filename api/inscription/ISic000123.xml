@@ -21,28 +21,12 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
@@ -137,7 +121,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                                 <geo>37.98365, 13.69555</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0250" cert="low" evidence="lettering nomenclature">Imperial</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0051" notAfter-custom="0250" cert="low" evidence="lettering nomenclature">Imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1854">First described by Romano in 1854, found in Termini Imerese; seen by Mommsen, and by Marconi in 1931; Bivona could not locate it.</provenance>
                         <provenance type="observed" subtype="autopsied">Prag 2023-07-07, in the storerooms of the Museo Civico.</provenance>
@@ -192,11 +176,12 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-23" who="#JP">Jonathan Prag added image</change>
                 <change when="2024-04-11" who="#JP">Jonathan Prag revised from autopsy</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -223,9 +208,9 @@
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
                     <lb n="1" xml:id="AMeAK"/><g ref="#interpunct" xml:id="AMeAU" n="5">·</g> <w xml:id="AMeAe" n="10"><expan xml:id="AMeAo"><abbr xml:id="AMeAy">D</abbr><ex xml:id="AMeAΙ">is</ex></expan></w> <g ref="#interpunct" xml:id="AMeAΤ" n="15">·</g> <w xml:id="AMeAε" n="20"><expan xml:id="AMeAο"><abbr xml:id="AMeBA">m</abbr><ex xml:id="AMeBK">anibus</ex></expan></w> <g ref="#interpunct" xml:id="AMeBU" n="25">·</g>
-                    <lb n="2" xml:id="AMeBe"/><persName type="attested" xml:id="AMeBo"><name xml:id="AMeBy"><w n="30"><expan xml:id="AMeBΙ"><abbr xml:id="AMeBΤ">C</abbr><ex xml:id="AMeBε">aius</ex></expan></w></name> <name xml:id="AMeBο"><w n="35"><expan xml:id="AMeCA"><abbr xml:id="AMeCK">Aemil</abbr><ex xml:id="AMeCU">ius</ex></expan></w></name> <g ref="#interpunct" xml:id="AMeCe" n="40">·</g>
-                    <lb n="3" xml:id="AMeCo"/><name xml:id="AMeCy"><w n="45">Bacchio</w></name></persName>
-                    <lb n="4" xml:id="AMeCΙ"/><w xml:id="AMeCΤ" n="50"><expan xml:id="AMeCε"><abbr xml:id="AMeCο">v</abbr><ex xml:id="AMeDA">ixit</ex></expan></w> <g ref="#interpunct" xml:id="AMeDK" n="55">·</g> <w xml:id="AMeDU" n="60"><expan xml:id="AMeDe"><abbr xml:id="AMeDo">a</abbr><ex xml:id="AMeDy">nnis</ex></expan></w> <g ref="#interpunct" xml:id="AMeDΙ" n="65">·</g> <num value="40" xml:id="AMeDΤ"><w n="70">XL</w></num>
+                    <lb n="2" xml:id="AMeBe"/><persName type="attested" xml:id="AMeBo"><name><w n="30" xml:id="AMeBy"><expan xml:id="AMeBΙ"><abbr xml:id="AMeBΤ">C</abbr><ex xml:id="AMeBε">aius</ex></expan></w></name> <name><w n="35" xml:id="AMeBο"><expan xml:id="AMeCA"><abbr xml:id="AMeCK">Aemil</abbr><ex xml:id="AMeCU">ius</ex></expan></w></name> <g ref="#interpunct" xml:id="AMeCe" n="40">·</g>
+                    <lb n="3" xml:id="AMeCo"/><name><w n="45" xml:id="AMeCy">Bacchio</w></name></persName>
+                    <lb n="4" xml:id="AMeCΙ"/><w xml:id="AMeCΤ" n="50"><expan xml:id="AMeCε"><abbr xml:id="AMeCο">v</abbr><ex xml:id="AMeDA">ixit</ex></expan></w> <g ref="#interpunct" xml:id="AMeDK" n="55">·</g> <w xml:id="AMeDU" n="60"><expan xml:id="AMeDe"><abbr xml:id="AMeDo">a</abbr><ex xml:id="AMeDy">nnis</ex></expan></w> <g ref="#interpunct" xml:id="AMeDΙ" n="65">·</g> <num value="40"><w n="70" xml:id="AMeDΤ">XL</w></num>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -259,13 +244,17 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">10.7373</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">7373</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>42</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
