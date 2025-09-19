@@ -35,6 +35,9 @@
 			<a href={museum.uri} target="museum">
 				View in current site <LucideExternalLink />
 			</a>
+			{#if museum.url}
+			<a href={museum.url} target="museum">{museum.url} <LucideExternalLink /></a>
+			{/if}
 		</hgroup>
 	</header>
 
