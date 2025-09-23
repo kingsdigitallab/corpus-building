@@ -9,6 +9,7 @@ export async function load({ params: { slug } }) {
 		 * @type {{
 		 * 	slug: string,
 		 * 	uri: string,
+		 *  url: string | undefined,
 		 * 	name: string,
 		 * 	type: string,
 		 * 	description: string,
