@@ -437,6 +437,15 @@
 		searchWorker.addEventListener('message', downloadHandler);
 	}
 
+	/**
+	 * @param {string} newSortResultsBy
+	 */
+	async function handleSortResultsByChange(newSortResultsBy) {
+		searchOptions.sortResultsBy = newSortResultsBy;
+
+		postSearchMessage();
+	}
+
 	async function handleSortResultsOrderToggle() {
 		searchOptions.sortResultsOrder = searchOptions.sortResultsOrder === 'asc' ? 'desc' : 'asc';
 
@@ -584,7 +593,11 @@
 					</div>
 					<div class="sort-controls">
 						<label for="sort-select">Sort by:</label>
-						<select id="sort-select" bind:value={searchOptions.sortResultsBy}>
+						<select
+							id="sort-select"
+							bind:value={searchOptions.sortResultsBy}
+							onchange={(option) => handleSortResultsByChange(option.target.value)}
+						>
 							<option value="file">File</option>
 							<option value="notBefore">Not before</option>
 							<option value="notAfter">Not after</option>
