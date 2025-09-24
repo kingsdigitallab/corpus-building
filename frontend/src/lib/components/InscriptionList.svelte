@@ -5,7 +5,7 @@
 </script>
 
 <ol class="inscription-list">
-	{#each inscriptions as inscription}
+	{#each inscriptions as inscription (inscription.file)}
 		<li>
 			<InscriptionCard {inscription} {view} {query} {exactSearch} />
 		</li>
