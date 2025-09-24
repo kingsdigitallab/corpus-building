@@ -524,7 +524,9 @@ function getCitation(xml) {
 
   const editor = titleStmt.editor;
   const principal = titleStmt.principal;
-  const contributors = titleStmt.respStmt.map((rs) => rs.name);
+  const contributors = Array.isArray(titleStmt?.respStmt)
+    ? titleStmt.respStmt.map((rs) => rs.name)
+    : [titleStmt.respStmt?.name] || [];
 
   const change = Array.isArray(revisionDesc?.listChange?.change)
     ? revisionDesc.listChange.change.at(-1)
