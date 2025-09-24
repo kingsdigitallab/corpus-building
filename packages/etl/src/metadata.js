@@ -155,11 +155,13 @@ async function getEditionAuthor(xml) {
 
   if (!edition) return null;
 
-  const source = edition.source;
+  let source = edition.source;
 
   if (!source) return null;
 
   if (source.includes("zotero")) {
+    source = source.replace(/^#/, "");
+
     const itemKey = source.split("/").at(-1);
     const zoteroData = await getZoteroData(itemKey);
     zoteroData.ref = source;
