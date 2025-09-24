@@ -501,6 +501,21 @@
 		padding-bottom: var(--size-8);
 	}
 
+	.translation-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-2);
+	}
+
+	:global(.translation-content > :not(.translation-author)) {
+		order: 1;
+	}
+
+	:global(.translation-content > .translation-author) {
+		order: 2;
+		margin-top: var(--size-3);
+	}
+
 	.contributors {
 		display: flex;
 		flex-wrap: wrap;
