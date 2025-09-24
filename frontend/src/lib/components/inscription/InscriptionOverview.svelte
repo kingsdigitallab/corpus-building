@@ -91,7 +91,7 @@
 			</dd>
 		{/if}
 		<dt>Status</dt>
-		<dd>{metadata._ || config.EMPTY_PLACEHOLDER}</dd>
+		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Links</dt>
 		<dd>
 			<a href="{config.publicUrl}inscription/{slug}" target="inscription">
