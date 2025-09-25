@@ -208,6 +208,7 @@ export { searchConfig };
 export function load({
 	sortAggregationsBy = 'key',
 	languageConjunction = true,
+	publicationConjunction = true,
 	isExactSearch = false
 } = {}) {
 	const processedCorpus = corpus
@@ -275,6 +276,7 @@ export function load({
 		])
 	);
 	searchConfig.aggregations.language.conjunction = languageConjunction;
+	searchConfig.aggregations.publications.conjunction = publicationConjunction;
 	searchConfig.isExactSearch = isExactSearch;
 
 	searchEngine = itemsjs(processedCorpus, searchConfig);
@@ -401,4 +403,68 @@ export function search({
 			return matchesDateRange && matchesLetterHeightRange;
 		}
 	});
+
+	// if (query.trim() && searchResults.data?.items) {
+	// 	searchResults.data.items = searchResults.data.items.map((item) => ({
+	// 		...item,
+	// 		matchedFields: analyseMatchedFields(item, query, searchMode)
+	// 	}));
+	// }
+
+	// return searchResults;
+}
+
+/**
+ * Analyse which fields in a search result contain the query terms and returns both field names and values
+ * @param {Object} item - The search result item
+ * @param {string} query - The original search query
+ * @param {string} searchMode - The search mode used
+ * @returns {Object} Object with field names as keys and matching values as values
+ */
+function analyseMatchedFields(item, query, searchMode) {
+	if (!query.trim()) return {};
+
+	const queryTerms = query.toLowerCase().split(/\s+/).filter(Boolean);
+	const matchedFields = {};
+
+	const searchableFields = searchConfig.searchableFields;
+	for (const fieldName of searchableFields) {
+		if (fieldName === 'keywords') {
+			continue;
+		}
+
+		const fieldValue = item[fieldName];
+
+		if (!fieldValue) continue;
+
+		let fieldContent = '';
+		let originalValue = fieldValue;
+
+		if (Array.isArray(fieldValue)) {
+			fieldContent = fieldValue.join(' ').toLowerCase();
+			originalValue = fieldValue;
+		} else if (typeof fieldValue === 'string') {
+			fieldContent = fieldValue.toLowerCase();
+			originalValue = fieldValue;
+		} else if (typeof fieldValue === 'number') {
+			fieldContent = fieldValue.toString().toLowerCase();
+			originalValue = fieldValue;
+		}
+
+		const hasMatch = queryTerms.some((term) => {
+			if (searchMode === 'lemmas-text-only-exact') {
+				return fieldContent.includes(term);
+			}
+			if (['text', 'lemmas', 'title', 'keywords'].includes(fieldName)) {
+				return fieldContent.includes(term);
+			}
+			return fieldContent.includes(term);
+		});
+
+		if (hasMatch) {
+			matchedFields[fieldName] = originalValue;
+		}
+	}
+
+	return matchedFields;
 }

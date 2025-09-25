@@ -8,12 +8,14 @@
 		aggregations = {},
 		total = 0,
 		languageConjunction = $bindable(true),
+		publicationConjunction = $bindable(true),
 		sortAggregationsBy = $bindable('key'),
 		selectedDateRange = $bindable([0, 0]),
 		selectedLetterHeightRange = $bindable([0, 0]),
 		selectedFilters = $bindable({}),
 		sortAggregationsByChange,
 		languageConjunctionChange,
+		publicationConjunctionChange,
 		searchFiltersChange
 	} = $props();
 
@@ -198,6 +200,18 @@
 												onchange={() => languageConjunctionChange()}
 											/>
 											Match all selected languages (AND)
+										</label>
+									</div>
+								{/if}
+								{#if key === 'publications'}
+									<div class="conjunction-options">
+										<label>
+											<input
+												type="checkbox"
+												bind:checked={publicationConjunction}
+												onchange={() => publicationConjunctionChange()}
+											/>
+											Match all selected publications (AND)
 										</label>
 									</div>
 								{/if}

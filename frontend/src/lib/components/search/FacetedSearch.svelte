@@ -64,6 +64,7 @@
 	const searchOptions = $state({
 		sortAggregationsBy: 'key',
 		languageConjunction: true,
+		publicationConjunction: true,
 		sortResultsBy: 'file',
 		sortResultsOrder: 'asc'
 	});
@@ -255,7 +256,8 @@
 				type: 'load',
 				data: {
 					sortAggregationsBy: searchOptions.sortAggregationsBy,
-					languageConjunction: searchOptions.languageConjunction
+					languageConjunction: searchOptions.languageConjunction,
+					publicationConjunction: searchOptions.publicationConjunction
 				}
 			});
 
@@ -269,7 +271,23 @@
 				type: 'load',
 				data: {
 					sortAggregationsBy: searchOptions.sortAggregationsBy,
-					languageConjunction: searchOptions.languageConjunction
+					languageConjunction: searchOptions.languageConjunction,
+					publicationConjunction: searchOptions.publicationConjunction
+				}
+			});
+
+			postSearchMessage();
+		}
+	}
+
+	async function handlePublicationConjunctionToggle() {
+		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchWorker.postMessage({
+				type: 'load',
+				data: {
+					sortAggregationsBy: searchOptions.sortAggregationsBy,
+					languageConjunction: searchOptions.languageConjunction,
+					publicationConjunction: searchOptions.publicationConjunction
 				}
 			});
 
@@ -488,11 +506,13 @@
 		{total}
 		bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
 		bind:languageConjunction={searchOptions.languageConjunction}
+		bind:publicationConjunction={searchOptions.publicationConjunction}
 		bind:selectedDateRange
 		bind:selectedLetterHeightRange
 		bind:selectedFilters
 		sortAggregationsByChange={handleSortAggregationsByChange}
 		languageConjunctionChange={handleLanguageConjunctionToggle}
+		publicationConjunctionChange={handlePublicationConjunctionToggle}
 		searchFiltersChange={handleSearchFiltersChange}
 	/>
 
