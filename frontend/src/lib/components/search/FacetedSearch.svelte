@@ -537,50 +537,56 @@
 					query={$searchQueryParam}
 					filters={selectedFilters}
 				/>
-				<section class="reduced-block-margin">
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('cards')}
-					>
-						<LayoutGridIcon />View cards
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('text')}
-					>
-						<TextIcon />View text
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('map')}
-					>
-						<MapIcon />View map
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('table')}
-					>
-						<TableIcon />View table
-					</Button.Root>
-					<Button.Root
-						class="secondary"
-						aria-label="Download inscription data as a CSV file"
-						disabled={isDownloading}
-						onclick={handleCSVDownload}
-						aria-busy={isDownloading}
-					>
-						<DownloadIcon />CSV
-					</Button.Root>
-					<Button.Root
-						class="secondary"
-						aria-label="Download inscriptions as XML"
-						disabled={!hasActiveFilters() || isDownloading}
-						onclick={handleXMLDownload}
-						aria-busy={isDownloading}
-					>
-						<DownloadIcon />Epidoc
-					</Button.Root>
-				</section>
+
+				<div class="buttons-row">
+					<section class="reduced-block-margin view-buttons">
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('cards')}
+						>
+							<LayoutGridIcon />View cards
+						</Button.Root>
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('text')}
+						>
+							<TextIcon />View text
+						</Button.Root>
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('map')}
+						>
+							<MapIcon />View map
+						</Button.Root>
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'} view-table-btn`}
+							onclick={() => handleViewChange('table')}
+						>
+							<TableIcon />View table
+						</Button.Root>
+					</section>
+					<section class="reduced-block-margin download-buttons">
+						<Button.Root
+							class="secondary"
+							aria-label="Download inscription data as a CSV file"
+							disabled={isDownloading}
+							onclick={handleCSVDownload}
+							aria-busy={isDownloading}
+						>
+							<DownloadIcon />CSV
+						</Button.Root>
+						<Button.Root
+							class="secondary"
+							aria-label="Download inscriptions as XML"
+							disabled={!hasActiveFilters() || isDownloading}
+							onclick={handleXMLDownload}
+							aria-busy={isDownloading}
+						>
+							<DownloadIcon />Epidoc
+						</Button.Root>
+					</section>
+				</div>
+
 				<section class="reduced-block-margin controls">
 					<p>{total.toLocaleString()} Inscriptions</p>
 					<div class="filters-toggle">
@@ -736,5 +742,84 @@
 
 	.transition-container {
 		width: 100%;
+	}
+	/*ZL: disabled Table View*/
+	@media (max-width: 768px) {
+		:global(.view-table-btn) {
+			display: none;
+		}
+	}
+
+	/* ZL: added div and section, in here I tried to make the desktop back to one row*/
+	@media (min-width: 769px) {
+		.buttons-row {
+			display: flex;
+			gap: var(--size-2);
+			justify-content: center;
+			align-items: center;
+		}
+		.view-buttons,
+		.download-buttons {
+			display: flex;
+			gap: var(--size-2);
+			justify-content: center;
+		}
+		.view-buttons :global(button),
+		.download-buttons :global(button) {
+			width: auto;
+		}
+	}
+
+	/*ZL: adjusted the mobile version that making download buttons and view buttons are in different rows*/
+	@media (max-width: 768px) {
+		.buttons-row {
+			display: block;
+		}
+
+		.view-buttons {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: var(--size-1);
+			width: 100%;
+		}
+		.view-buttons :global(button) {
+			width: 100%;
+			padding-inline: var(--size-2);
+			justify-content: center;
+		}
+
+		.download-buttons {
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			gap: var(--size-1);
+			justify-content: center;
+		}
+		.download-buttons :global(button) {
+			width: auto;
+		}
+	}
+
+	/*ZL: disabled the sort by component, placing the Explore Filters on the right side, taking the place*/
+	@media (max-width: 768px) {
+		.controls .sort-controls {
+			display: none;
+		}
+		.controls {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.filter-toggle {
+			margin-left: auto;
+		}
+		.filters-toggle :global(button) {
+			width: auto;
+			padding-inline: var(
+				--size-2
+			); /* ZL: to keep the same compact size 
+			as the above buttons change*/
+			justify-content: center;
+		}
 	}
 </style>
