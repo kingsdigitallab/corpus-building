@@ -172,10 +172,25 @@
 	}
 
 	@media (max-width: 768px) {
+		/* ZL only adjusted under @media, including .hero, .hero-left, .discover-link, .hero-spacer) */
+		/* ZL made changes below */
 		.hero {
 			grid-template-columns: 1fr;
-			height: auto;
+			height: auto; /* ZL adjusted here from auto to unset */
+			min-height: 0;
 		}
+
+		.hero-left {
+			justify-content: initial;
+			gap: var(--size-6);
+			padding-block: var(--size-6);
+			/* padding-block-end: 10; */
+		}
+
+		.discover-link {
+			margin-block-end: var(--size-6);
+		}
+
 		.hero-right {
 			display: none;
 		}
