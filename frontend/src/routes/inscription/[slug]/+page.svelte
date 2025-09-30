@@ -96,14 +96,24 @@
 	 * @returns {string}
 	 */
 	function generateCitation() {
-		const editor = metadata.citation.editor?._ || 'Unknown';
-		const contributors = metadata.citation.contributors?.map((c) => c._).filter(Boolean) || [];
+		const editor = metadata.citation.principal?._ || metadata.citation.editor?._ || null;
+		const contributors =
+			metadata.citation.contributors
+				?.map((c) => c._)
+				.filter(Boolean)
+				.filter((c) => c !== editor) || [];
 
-		const contributorList = contributors.length > 0 ? `with ${contributors.join(', ')}` : '';
+		const contributorList = contributors.length > 0 ? contributors.join(', ') : '';
 
-		const currentDate = new Date().toLocaleDateString('en-GB');
+		const changeDate = metadata.citation.change?.when
+			? new Date(metadata.citation.change.when).toLocaleDateString()
+			: null;
 
-		return `${editor} (ed.)${contributorList ? `, ${contributorList}` : ''}. ${config.citationTemplate.yearRange}. ${config.citationTemplate.title}. ${config.citationTemplate.url}. Stable deposit: ${config.citationTemplate.doi} (${currentDate}).`;
+		return `${editor}${contributorList ? `, ${contributorList}` : ''}.
+		${metadata.file}: ${metadata.title}.
+		${config.citationTemplate.itemUrl}${metadata.file}.
+		${changeDate ? `Last revised: ${changeDate}.` : ''}
+		(Stable deposit: ${config.citationTemplate.doi}, ${config.citationTemplate.doiDate}).`;
 	}
 </script>
 
