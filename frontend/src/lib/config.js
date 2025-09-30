@@ -75,6 +75,8 @@ export const mapStyle = dev
 export const citationTemplate = {
 	title: 'I.Sicily: Inscriptions of Ancient Sicily',
 	url: 'http://sicily.classics.ox.ac.uk/',
+	itemUrl: 'http://sicily.classics.ox.ac.uk/inscription/',
 	doi: 'https://doi.org/10.5281/zenodo.2556743',
+	doiDate: '2020-12-17',
 	yearRange: '2017-2025'
 };
