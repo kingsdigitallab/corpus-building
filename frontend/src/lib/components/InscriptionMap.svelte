@@ -106,7 +106,8 @@
 		let html = `<div class="tooltip">`;
 		const items = Object.entries(inscriptionsByPlace)
 			.map(([place, inscriptions]) => {
-				let dt = `<dt>${place}</dt>`;
+				const filters = encodeURIComponent(JSON.stringify({ provenance: [place] }));
+				let dt = `<dt><a href="?filters=${filters}&view=map" onclick="event.preventDefault(); window.location.search='?filters=${filters}&view=map';">${place}</a></dt>`;
 				let dd = inscriptions
 					.map(
 						(inscription) =>
