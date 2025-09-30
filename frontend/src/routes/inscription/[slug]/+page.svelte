@@ -23,6 +23,7 @@
 	let { data } = $props();
 	let { slug, metadata, images, html, xml } = data;
 
+	const attribution = $derived(html.editions[0]?.html);
 	const editions = $derived(html.divs.find((div) => div.id === 'editions'));
 	const apparatus = $derived(html.divs.find((div) => div.id === 'apparatus'));
 	const translations = $derived(html.divs.filter((div) => div.id === 'translation'));
@@ -137,7 +138,7 @@
 	<InscriptionOverview {slug} {metadata} {images} />
 
 	<section id="content">
-		<InscriptionEdition {slug} {metadata} {xml} {editions} />
+		<InscriptionEdition {slug} {metadata} {xml} {editions} {attribution} />
 
 		{#if apparatus?.html}
 			<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
