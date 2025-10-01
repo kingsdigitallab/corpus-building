@@ -184,6 +184,7 @@ async function processFile(filePath, outputPath, options = {}) {
  * @param {boolean} [options.extractMetadata] - Whether to extract metadata from the XML files.
  * @param {boolean} [options.transformToHtml] - Whether to transform the XML files to HTML.
  * @param {boolean} [options.extractLemmas] - Whether to extract lemmas from the XML files.
+ * @param {boolean} [options.extractBibliography] - Whether to extract bibliography from the XML files.
  * @param {string} [options.inscriptionFilter] - Process inscriptions matching that pattern.
  * @returns {Promise<Array>} A promise that resolves to an array of objects, each containing the processing results for a single file.
  * @throws {Error} If there's an error reading the directory or processing files.
@@ -192,11 +193,15 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   const files = await fs.readdir(inputPath);
   const results = [];
   const lemmas = [];
+  const bibliography = {};
 
   for (const file of files) {
     if (file.endsWith(".xml")) {
-      if (options.inscriptionFilter && !file.includes(options.inscriptionFilter)) {
-        continue
+      if (
+        options.inscriptionFilter &&
+        !file.includes(options.inscriptionFilter)
+      ) {
+        continue;
       }
 
       const filePath = path.join(inputPath, file);
@@ -225,6 +230,22 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
           result.repository.repository = undefined;
         }
 
+        for (const bibl of result.bibliographyEdition.bibl) {
+          const key = bibl?.ptr?.target?.split("/").at(-1);
+
+          if (key) {
+            if (!bibliography[key]) {
+              bibliography[key] = {
+                key,
+                ...bibl,
+                inscriptions: [],
+              };
+            }
+
+            bibliography[key]["inscriptions"].push(result.file);
+          }
+        }
+
         result.bibliographyEdition = undefined;
         result.bibliographyDiscussion = undefined;
         result.citation = undefined;
@@ -246,6 +267,18 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   if (options.extractLemmas) {
     const lemmasOutputFile = path.join(outputPath, "lemmas.json");
     await fs.writeFile(lemmasOutputFile, JSON.stringify(lemmas, null, 2));
+  }
+
+  if (options.extractBibliography) {
+    const bibliographyArray = Object.values(bibliography).sort((a, b) =>
+      a.title.localeCompare(b.title)
+    );
+
+    const bibliographyOutputFile = path.join(outputPath, "bibliography.json");
+    await fs.writeFile(
+      bibliographyOutputFile,
+      JSON.stringify(bibliographyArray, null, 2)
+    );
   }
 
   return results;
@@ -296,8 +329,13 @@ async function main() {
       description: "Extract lemmas",
       default: true,
     })
+    .option("bibliography", {
+      type: "boolean",
+      description: "Extract bibliography",
+      default: true,
+    })
     .option("filter", {
-      alias: 'f',
+      alias: "f",
       type: "string",
       description: "Pattern to filter which inscriptions to process",
       default: null,
@@ -314,7 +352,8 @@ async function main() {
     extractMetadata: argv.metadata,
     transformToHtml: argv.html,
     extractLemmas: argv.lemmas,
-    inscriptionFilter: argv.filter
+    extractBibliography: argv.bibliography,
+    inscriptionFilter: argv.filter,
   };
 
   try {
