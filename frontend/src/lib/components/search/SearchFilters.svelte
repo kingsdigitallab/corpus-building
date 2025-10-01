@@ -235,7 +235,9 @@
 													onchange={() => searchFiltersChange()}
 												/>
 												<div>
-													<span>{getBucketDisplayValue(bucket.key)}</span>
+													<span title={bucket.key.replaceAll(':::', ' > ')}
+														>{getBucketDisplayValue(bucket.key)}</span
+													>
 													<small>matches: {bucket.doc_count.toLocaleString()}</small>
 												</div>
 											</label>
