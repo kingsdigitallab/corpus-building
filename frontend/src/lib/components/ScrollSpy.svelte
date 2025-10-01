@@ -157,4 +157,10 @@
 		height: var(--size-3);
 		width: var(--size-3);
 	}
+
+	@media (max-width: 768px) {
+		nav {
+			display: none;
+		}
+	}
 </style>

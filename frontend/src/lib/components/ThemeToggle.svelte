@@ -71,9 +71,22 @@
 			font-weight: inherit;
 			text-shadow: none;
 
+			/* ZL added new below (adding min-width & height to avoid getting to tiny)*/
+			min-width: 44px;
+			min-height: 44px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
 			&:hover {
 				background: var(--surface-4);
 			}
+		}
+
+		/* ZL added new below (adjusting icon proportions inside the button)*/
+		:global(button svg) {
+			width: 80%;
+			height: 80%;
 		}
 	}
 </style>
