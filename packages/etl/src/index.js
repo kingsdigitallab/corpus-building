@@ -230,8 +230,10 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
           result.repository.repository = undefined;
         }
 
-        for (const bibl of result.bibliographyEdition.bibl) {
-          const key = bibl?.ptr?.target?.split("/").at(-1);
+        for (const bibl of result.bibliographyEdition.bibl.filter(
+          (b) => b?.ptr?.target && b?.title
+        )) {
+          const key = bibl.ptr.target.split("/").at(-1);
 
           if (key) {
             if (!bibliography[key]) {
