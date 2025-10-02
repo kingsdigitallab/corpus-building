@@ -110,10 +110,10 @@
 			: null;
 
 		return `${editor}${contributorList ? `, ${contributorList}` : ''}.
-		${metadata.file}: ${metadata.title}.
-		${config.citationTemplate.itemUrl}${metadata.file}.
-		${changeDate ? `Last revised: ${changeDate}.` : ''}
-		(Stable deposit: ${config.citationTemplate.doi}, ${config.citationTemplate.doiDate}).`;
+${metadata.file}: ${metadata.title}.
+${config.citationTemplate.itemUrl}${metadata.file}.
+${changeDate ? `Last revised: ${changeDate}.` : ''}
+(Stable deposit: ${config.citationTemplate.doi}, ${new Date(config.citationTemplate.doiDate).toLocaleDateString()}).`;
 	}
 </script>
 
