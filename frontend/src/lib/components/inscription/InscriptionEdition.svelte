@@ -112,7 +112,7 @@
 					{/if}
 				</Button.Root>
 			</div>
-			{#if attribution}
+			{#if attribution && attribution !== 'Unknown'}
 				<div class="attribution">
 					{@html attribution}
 				</div>
