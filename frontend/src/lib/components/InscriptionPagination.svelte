@@ -31,8 +31,8 @@
 			<p>
 				Showing {range.start + 1} - {range.end}
 			</p>
-					{/snippet}
-		</Pagination.Root>
+		{/snippet}
+	</Pagination.Root>
 {/if}
 
 <style>
@@ -78,5 +78,6 @@
 		text-align: center;
 		font-size: var(--font-size-0);
 		margin-block: var(--size-2);
+		max-inline-size: unset;
 	}
 </style>
