@@ -278,7 +278,7 @@
 		overflow-y: auto;
 		max-width: 450px;
 		min-width: 400px;
-		padding: var(--size-4);
+		/* padding: var(--size-4); */
 		z-index: 10;
 	}
 
@@ -301,13 +301,20 @@
 
 	section {
 		margin-block: var(--size-4);
+		padding-inline: var(--size-4);
 	}
 
 	.filters-header {
 		align-items: baseline;
+		background: var(--surface-1);
 		display: flex;
 		justify-content: space-between;
 		margin-block-start: 0;
+		padding-block-start: var(--size-4);
+		padding-block-end: var(--size-2);
+		position: sticky;
+		top: 0;
+		z-index: 1;
 	}
 
 	.filters-header h2 {
