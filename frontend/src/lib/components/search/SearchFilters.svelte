@@ -4,7 +4,7 @@
 	import RangeSlider from './RangeSlider.svelte';
 
 	let {
-		show = false,
+		show = $bindable(false),
 		aggregations = {},
 		total = 0,
 		languageConjunction = $bindable(true),

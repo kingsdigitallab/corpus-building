@@ -501,7 +501,7 @@
 
 <div class="search-layout">
 	<SearchFilters
-		show={showFilters}
+		bind:show={showFilters}
 		aggregations={searchAggregations}
 		{total}
 		bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
