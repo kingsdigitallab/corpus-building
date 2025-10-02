@@ -1,16 +1,19 @@
 <script>
 	import * as config from '$lib/config';
+	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
+	import { Button } from 'bits-ui';
+	import { LucideArrowUp, LucideArrowDown, Search } from 'lucide-svelte';
 
 	/** @type {{ data: import('./$types').PageData }} */
 	let { data } = $props();
 	const { bibliography } = data;
 
-	// Controls (runes)
 	let q = $state('');
 	let sortBy = $state('author');
-	let sortDir = $state('asc');
+	let sortDir = $state(1);
 	let page = $state(1);
 	let pageSize = $state(50);
+	const pageSizeOptions = [25, 50, 100];
 
 	const normalize = (s) => (s || '').toString().toLowerCase().normalize('NFKD');
 
@@ -29,19 +32,24 @@
 				title: (x) => normalize(x.title),
 				year: (x) => (x.date || '').toString()
 			};
+
 			const va = fields[sortBy](a);
 			const vb = fields[sortBy](b);
-			if (va < vb) return sortDir === 'asc' ? -1 : 1;
-			if (va > vb) return sortDir === 'asc' ? 1 : -1;
+
+			if (va < vb) return sortDir === 1 ? -1 : 1;
+			if (va > vb) return sortDir === -1 ? 1 : -1;
+
 			return 0;
 		})
 	);
 
 	const total = $derived(sorted.length);
 	const totalPages = $derived(Math.max(1, Math.ceil(total / pageSize)));
+
 	$effect(() => {
 		if (page > totalPages) page = totalPages;
 	});
+
 	const start = $derived((page - 1) * pageSize);
 	const end = $derived(start + pageSize);
 	const pageItems = $derived(sorted.slice(start, end));
@@ -92,73 +100,69 @@
 					<option value="year">Year</option>
 					<option value="title">Title</option>
 				</select>
-			</label>
-			<label>
-				<span>Direction</span>
-				<select
-					value={sortDir}
-					onchange={(e) => {
-						sortDir = e.currentTarget.value;
-					}}
+				<Button.Root
+					class="order-toggle"
+					onclick={() => (sortDir = sortDir * -1)}
+					aria-label="Toggle sort order from ascending to descending to no order"
 				>
-					<option value="asc">Asc</option>
-					<option value="desc">Desc</option>
-				</select>
+					{#if sortDir === 1}
+						<LucideArrowUp aria-label="Ascending" />
+					{:else}
+						<LucideArrowDown aria-label="Descending" />
+					{/if}
+				</Button.Root>
 			</label>
 			<label>
 				<span>Per page</span>
-				<select
-					value={pageSize}
-					onchange={(e) => {
-						pageSize = Number(e.currentTarget.value);
-						page = 1;
-					}}
-				>
-					<option value="25">25</option>
-					<option value="50">50</option>
-					<option value="100">100</option>
+				<select bind:value={pageSize} onchange={() => (page = 1)}>
+					{#each pageSizeOptions as pso}
+						<option value={pso}>{pso}</option>
+					{/each}
 				</select>
 			</label>
 		</div>
 		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 	</section>
 
-	<ul class="bib-list" role="list">
-		{#each pageItems as entry (entry.key)}
-			<li class="bib-item">
-				<a class="title" href={`bibliography/${entry.key}`}>
-					{entry.title}
-				</a>
-				<div class="meta-line">
-					<span class="byline">
-						{entry.author || '—'}{entry.date ? ` • ${entry.date}` : ''}
-					</span>
-					{#if countInscriptions(entry) > 0}
-						<span class="badge" title="Linked inscriptions">
-							{countInscriptions(entry)} inscription{countInscriptions(entry) === 1 ? '' : 's'}
+	<section>
+		<ul class="bib-list" role="list">
+			{#each pageItems as entry (entry.key)}
+				<li class="bib-item">
+					<a class="title" href={`bibliography/${entry.key}`}>
+						{entry.title}
+					</a>
+					<div class="meta-line">
+						<span class="byline">
+							{entry.author || '—'}{entry.date ? ` • ${entry.date}` : ''}
 						</span>
-					{/if}
-				</div>
-				<div class="actions">
-					{#if entry.ptr?.target}
-						<a href={entry.ptr.target} rel="noopener noreferrer" target="_blank">Zotero</a>
-					{/if}
-					{#if entry.ref?.target}
-						<a href={entry.ref.target} rel="noopener noreferrer" target="_blank">Reference</a>
-					{/if}
-				</div>
-			</li>
-		{/each}
-	</ul>
+						{#if countInscriptions(entry) > 0}
+							<span class="badge" title="Linked inscriptions">
+								{countInscriptions(entry)} inscription{countInscriptions(entry) === 1 ? '' : 's'}
+							</span>
+						{/if}
+					</div>
+					<div class="actions">
+						{#if entry.ptr?.target}
+							<a href={entry.ptr.target} rel="noopener noreferrer" target="_blank">Zotero</a>
+						{/if}
+						{#if entry.ref?.target}
+							<a href={entry.ref.target} rel="noopener noreferrer" target="_blank">Reference</a>
+						{/if}
+					</div>
+				</li>
+			{/each}
+		</ul>
+	</section>
 
 	{#if totalPages > 1}
-		<nav class="pager" aria-label="Pagination">
-			<button onclick={() => goto(1)} disabled={page === 1}>« First</button>
-			<button onclick={() => goto(page - 1)} disabled={page === 1}>‹ Prev</button>
-			<span>Page {page} of {totalPages}</span>
-			<button onclick={() => goto(page + 1)} disabled={page === totalPages}>Next ›</button>
-			<button onclick={() => goto(totalPages)} disabled={page === totalPages}>Last »</button>
-		</nav>
+		<section>
+			<InscriptionPagination
+				{page}
+				count={total}
+				perPage={pageSize}
+				onPageChange={(p) => (page = p)}
+			/>
+		</section>
 	{/if}
 </article>
 
@@ -168,12 +172,14 @@
 		gap: var(--size-2);
 		margin-bottom: var(--size-4);
 	}
+
 	.sort {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--size-2) var(--size-4);
 		align-items: center;
 	}
+
 	.sort label {
 		display: inline-flex;
 		align-items: center;
