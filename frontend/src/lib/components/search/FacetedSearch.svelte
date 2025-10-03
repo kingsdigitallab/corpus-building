@@ -830,14 +830,14 @@
 			justify-content: space-between;
 		}
 
-		.filter-toggle {
+		.filters-toggle {
 			margin-left: auto;
 		}
 		.filters-toggle :global(button) {
 			width: auto;
 			padding-inline: var(
 				--size-2
-			); /* ZL: to keep the same compact size 
+			); /* ZL: to keep the same compact size
 			as the above buttons change*/
 			justify-content: center;
 		}
