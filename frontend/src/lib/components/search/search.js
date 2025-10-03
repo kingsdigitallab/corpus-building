@@ -1,11 +1,22 @@
+import { Index } from 'flexsearch';
+import itemsjs from 'itemsjs';
 import corpus from '../../../data/corpus.json';
 import lemmas from '../../../data/lemmas.json';
-import itemsjs from 'itemsjs';
 
 /**
- * @type {itemsjs.ItemsJs<{ keywords: any; title: any; text: any; }, string, "keywords" | "title" | "text">}
+ * Manages the search functionality, combining faceted search with itemsjs
+ * and full-text search with flexsearch.
+ *
+ * The `itemsEngine` is initialized by the `load()` function.
+ *
+ * @type {{itemsEngine: ReturnType<import('itemsjs')> | undefined, flexIndex: import('flexsearch').Index}}
  */
-let searchEngine;
+const searchEngine = {
+	itemsEngine: undefined,
+	flexIndex: new Index({
+		tokenize: 'forward'
+	})
+};
 
 /**
  * @typedef {Object} SearchConfig
@@ -17,6 +28,7 @@ let searchEngine;
 
 /** @type {SearchConfig} */
 const searchConfig = {
+	custom_id_field: 'file',
 	aggregations: {
 		notAfter: {
 			title: 'Not after',
@@ -279,7 +291,18 @@ export function load({
 	searchConfig.aggregations.publications.conjunction = publicationConjunction;
 	searchConfig.isExactSearch = isExactSearch;
 
-	searchEngine = itemsjs(processedCorpus, searchConfig);
+	searchEngine.itemsEngine = itemsjs(processedCorpus, searchConfig);
+
+	for (const item of processedCorpus) {
+		const content = [item.file, ...item.title, ...item.keywords, ...item.text, ...item.lemmas];
+
+		for (const key of Object.keys(searchConfig.aggregations)) {
+			const values = Array.isArray(item[key]) ? item[key] : [item[key]];
+			content.push(...values);
+		}
+
+		searchEngine.flexIndex.add(item.file, content.join(' !! '));
+	}
 }
 
 function capitalizeFirstLetter(val) {
@@ -376,7 +399,13 @@ export function search({
 	dateRange = [undefined, undefined],
 	letterHeightRange = [undefined, undefined]
 }) {
-	if (!searchEngine) load();
+	if (!searchEngine.itemsEngine) {
+		load();
+	}
+
+	if (!searchEngine.itemsEngine) {
+		throw new Error('Error loading itemsjs engine');
+	}
 
 	let transformedQuery = query;
 	if (query.trim() && searchMode === 'lemmas-text-only-exact') {
@@ -385,10 +414,11 @@ export function search({
 		transformedQuery = `text_${query}`;
 	}
 
-	return searchEngine.search({
+	const textSearchResults = searchEngine.flexIndex.search(transformedQuery);
+
+	const searchOptions = {
 		per_page: limit,
 		page,
-		query: transformedQuery,
 		sort,
 		filters,
 		filter: (item) => {
@@ -402,7 +432,13 @@ export function search({
 
 			return matchesDateRange && matchesLetterHeightRange;
 		}
-	});
+	};
+
+	if (transformedQuery) {
+		searchOptions.ids = textSearchResults;
+	}
+
+	return searchEngine.itemsEngine.search(searchOptions);
 
 	// if (query.trim() && searchResults.data?.items) {
 	// 	searchResults.data.items = searchResults.data.items.map((item) => ({
