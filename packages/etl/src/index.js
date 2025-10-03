@@ -25,7 +25,7 @@ async function transformToHtml(filePath) {
     "../../../",
     "xslt",
     "epidoc",
-    "start-edition.sef.json"
+    "start-edition.sef.json",
   );
 
   const result = await SaxonJS.transform({
@@ -157,14 +157,14 @@ async function processFile(filePath, outputPath, options = {}) {
     const json = JSON.parse(html);
 
     try {
-      const words = await extractLemmas(json.editions[0].html);
+      const words = await extractLemmas(json.editions[1].html);
       result = { ...result, ...words };
 
       await fs.mkdir(lemmasOutputPath, { recursive: true });
       await fs.writeFile(lemmasOutputFile, JSON.stringify(words, null, 2));
     } catch (error) {
       console.error(
-        `Error extracting lemmas for ${baseName}: ${error.message}`
+        `Error extracting lemmas for ${baseName}: ${error.message}`,
       );
     }
   }
@@ -231,7 +231,7 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         }
 
         for (const bibl of result.bibliographyEdition.bibl.filter(
-          (b) => b?.ptr?.target && b?.title
+          (b) => b?.ptr?.target && b?.title,
         )) {
           const key = bibl.ptr.target.split("/").at(-1);
 
@@ -273,13 +273,13 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
 
   if (options.extractBibliography) {
     const bibliographyArray = Object.values(bibliography).sort((a, b) =>
-      a.title.localeCompare(b.title)
+      a.title.localeCompare(b.title),
     );
 
     const bibliographyOutputFile = path.join(outputPath, "bibliography.json");
     await fs.writeFile(
       bibliographyOutputFile,
-      JSON.stringify(bibliographyArray, null, 2)
+      JSON.stringify(bibliographyArray, null, 2),
     );
   }
 
@@ -307,7 +307,7 @@ async function main() {
         "../../../",
         "data",
         "raw",
-        "inscriptions"
+        "inscriptions",
       ),
     })
     .option("output", {
