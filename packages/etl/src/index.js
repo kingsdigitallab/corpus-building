@@ -36,7 +36,7 @@ async function transformToHtml(filePath) {
 
   const $ = cheerio.load(result.principalResult);
 
-  const divs = $("body > div:not(#facsimile-images)")
+  const divs = $("body > div:not(#facsimile-images #handnote)")
     .map((i, div) => ({
       id: $(div).attr("id"),
       cls: $(div).attr("class"),
@@ -60,12 +60,21 @@ async function transformToHtml(filePath) {
     }))
     .get();
 
+  const handnote = $("div#handnote p")
+    .first()
+    .map((_, div) => ({
+      id: $(div).attr("id"),
+      html: $(div).html().trim(),
+    }))
+    .get();
+
   return {
     title: $("title").text(),
     body: $("body").html(),
     divs,
     editions,
     images,
+    handnote,
   };
 }
 
@@ -230,21 +239,26 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
           result.repository.repository = undefined;
         }
 
-        for (const bibl of result.bibliographyEdition.bibl.filter(
-          (b) => b?.ptr?.target && b?.title,
-        )) {
-          const key = bibl.ptr.target.split("/").at(-1);
+        const bibls =
+          result?.bibliographyEdition?.bibl?.filter(
+            (b) => b?.ptr?.target && b?.title,
+          ) || [];
 
-          if (key) {
-            if (!bibliography[key]) {
-              bibliography[key] = {
-                key,
-                ...bibl,
-                inscriptions: [],
-              };
+        if (bibls) {
+          for (const bibl of bibls) {
+            const key = bibl.ptr.target.split("/").at(-1);
+
+            if (key) {
+              if (!bibliography[key]) {
+                bibliography[key] = {
+                  key,
+                  ...bibl,
+                  inscriptions: [],
+                };
+              }
+
+              bibliography[key]["inscriptions"].push(result.file);
             }
-
-            bibliography[key]["inscriptions"].push(result.file);
           }
         }
 
