@@ -1,10 +1,10 @@
 <script>
-	const { lettering } = $props();
+	const { lettering, handnoteDesc } = $props();
 
 	const typeOfObj = $derived(Array.isArray(lettering) ? 'array' : lettering?._ ? 'obj' : 'simple');
 </script>
 
-{#snippet typesDetails(refs)}
+{#snippet typesDetails(/** @param {{target: string, _?: string}} */ refs)}
     <details>
 		<summary>Types</summary>
 		<ul>
@@ -21,7 +21,7 @@
 
 	{#if typeof desc === 'object'}
         {#if desc.ref}
-            <p>{desc._}</p>
+            <p>{@html handnoteDesc?.html}</p>
         {:else}
 		    <p>{desc._}</p>
         {/if}

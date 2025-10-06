@@ -247,7 +247,10 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 				<dt>Lettering</dt>
 				<dd>
 					{#if metadata?.handNote?.lettering}
-						<InscriptionLettering lettering={metadata.handNote.lettering} />
+						<InscriptionLettering
+							lettering={metadata.handNote.lettering}
+							handnoteDesc={html.handnote?.[0]}
+						/>
 					{:else}
 						{config.EMPTY_PLACEHOLDER}
 					{/if}
