@@ -9,4 +9,4 @@ tags:
   - inscriptions
 ---
 
-Prag, J.R.W. (ed.), with [LIST OF CONTRIBUTORS]. 2017-2025. I.Sicily: Inscriptions of Ancient Sicily. "[csicily.classics.ox.ac.uk](csicily.classics.ox.ac.uk). Stable deposit: [DOI ISicily/ISicily:work-in-progress](https://doi.org/10.5281/zenodo.2556743) (12-04-2024)."
+Prag, Jonathan R.W. (ed.), with Alex Antoniou, Alessia Coccato, Robert Crellin, Victoria Fendel, Marta Fogagnolo, Ilenia Gradante, Michael Metcalfe, Valentina Mignosa, Francesca Prado, Flavio Santini, Simona Stoyanova, Alfredo Tosques. 2017-2025. *I.Sicily: Inscriptions of Ancient Sicily*. [sicily.classics.ox.ac.uk](sicily.classics.ox.ac.uk). Stable deposit: [DOI ISicily/ISicily:work-in-progress](https://doi.org/10.5281/zenodo.2556743) (12-04-2024).
