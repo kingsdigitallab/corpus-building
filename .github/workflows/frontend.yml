@@ -58,6 +58,28 @@ jobs:
         node-version: [20.x]
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Update symlinks
+        run: |
+          rm -f ./frontend/src/data/inscriptions
+          ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Create .env file
+        run: |
+          touch ./frontend/.env
+          echo DEBUG=true >> ./frontend/.env
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Build
         run: |
           npm run frontend:build
@@ -77,11 +99,28 @@ jobs:
         node-version: [20.x]
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Update symlinks
+        run: |
+          rm -f ./frontend/src/data/inscriptions
+          ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: Update .env file
         run: |
-          rm -f ./frontend/.env && touch ./frontend/.env
+          touch ./frontend/.env
           echo DEBUG=false >> ./frontend/.env
           echo NODE_ENV=production >> ./frontend/.env
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build
         run: |
