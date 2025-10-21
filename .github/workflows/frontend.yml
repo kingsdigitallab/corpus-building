@@ -7,8 +7,8 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-22.04
+  test:
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -49,6 +49,15 @@ jobs:
           commit_message: "ci(frontend): update test results"
           file_pattern: "frontend/src/lib/prerender-errors.json frontend/test-results/*.json"
 
+  pages:
+    needs: test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
       - name: Build
         run: |
           npm run frontend:build
@@ -58,3 +67,31 @@ jobs:
         with:
           publish_dir: ./frontend/build
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  prod:
+    needs: test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: Update .env file
+        run: |
+          rm -f ./frontend/.env && touch ./frontend/.env
+          echo DEBUG=false >> ./frontend/.env
+          echo NODE_ENV=production >> ./frontend/.env
+
+      - name: Build
+        run: |
+          npm run frontend:build
+
+      - name: Deploy to production via SSH
+        uses: easingthemes/ssh-deploy@v5.1.1
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: ./frontend/build
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
