@@ -129,7 +129,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v5.1.1
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: ./frontend/build
+          SOURCE: ./frontend/build/
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
