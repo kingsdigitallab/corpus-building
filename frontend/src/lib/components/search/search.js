@@ -414,7 +414,9 @@ export function search({
 		transformedQuery = `text_${query}`;
 	}
 
-	const textSearchResults = searchEngine.flexIndex.search(transformedQuery);
+	const textSearchResults = searchEngine.flexIndex.search(transformedQuery, {
+		limit: 5000
+	});
 
 	const searchOptions = {
 		per_page: limit,
