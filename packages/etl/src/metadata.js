@@ -101,7 +101,7 @@ export async function extractMetadata(xmlString) {
  */
 export async function parseXML(
   xmlString,
-  options = { explicitArray: false, mergeAttrs: true }
+  options = { explicitArray: false, mergeAttrs: true },
 ) {
   const parser = new xml2js.Parser(options);
   try {
@@ -147,7 +147,7 @@ function getChangeNote(xml, status) {
 
 function getEditions(xml) {
   return xml.TEI.teiHeader.fileDesc.publicationStmt.idno?.filter((idno) =>
-    ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type)
+    ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type),
   );
 }
 async function getEditionAuthor(xml) {
@@ -173,7 +173,7 @@ async function getEditionAuthor(xml) {
   if (!respStmt) return null;
 
   const author = respStmt.find(
-    (rs) => rs.name["xml:id"] === source.split("#").at(-1)
+    (rs) => rs.name["xml:id"] === source.split("#").at(-1),
   );
 
   if (!author) return null;
@@ -191,8 +191,15 @@ function getSupport(xml) {
 }
 
 function getObjectType(xml) {
-  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
-    ?.supportDesc?.support?.objectType;
+  const objectType =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+      ?.supportDesc?.support?.objectType;
+
+  if (Array.isArray(objectType)) {
+    return objectType[0];
+  }
+
+  return objectType;
 }
 
 function getMaterial(xml) {
@@ -252,7 +259,7 @@ function getHandNote(xml) {
           h: heightText,
           ...height,
         };
-      })
+      }),
   );
 
   return { lettering, dimensions };
@@ -316,7 +323,7 @@ function getPlaces(xml) {
       g
         .split(",")
         .map((g) => g.trim())
-        .map((g) => Number.parseFloat(g))
+        .map((g) => Number.parseFloat(g)),
     ),
   };
 }
@@ -340,7 +347,7 @@ function getProvenance(xml, provenanceType, subtype = null) {
   const provenanceArray = Array.isArray(provenance) ? provenance : [provenance];
 
   const found = provenanceArray.find(
-    (p) => p.type === provenanceType && (!subtype || p.subtype === subtype)
+    (p) => p.type === provenanceType && (!subtype || p.subtype === subtype),
   );
 
   if (!found) return null;
@@ -387,7 +394,7 @@ function getGraphics(xml) {
             surfaceType: surface.type,
           };
         })
-        .filter((image) => image.n === "screen")
+        .filter((image) => image.n === "screen"),
   );
 
   return graphics;
@@ -460,7 +467,7 @@ function getLangName(langCode) {
 
 async function getBibliography(xml, bibliographyType = "edition") {
   let bibliography = xml.TEI.text.body.div.find(
-    (div) => div.type === "bibliography"
+    (div) => div.type === "bibliography",
   )?.listBibl;
 
   if (!bibliography) return [];
@@ -470,7 +477,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
   }
 
   const items = bibliography.find(
-    (listBibl) => listBibl.type === bibliographyType
+    (listBibl) => listBibl.type === bibliographyType,
   );
 
   if (!items) return {};
@@ -482,11 +489,11 @@ async function getBibliography(xml, bibliographyType = "edition") {
   items.bibl = await Promise.all(
     items.bibl.map(
       async (
-        /** @type {{ ptr: { target: string; }; } & Record<string, any>} */ item
+        /** @type {{ ptr: { target: string; }; } & Record<string, any>} */ item,
       ) => {
         if (item.ptr?.target) {
           const zoteroData = await getZoteroData(
-            item.ptr.target.split("/").at(-1)
+            item.ptr.target.split("/").at(-1),
           );
 
           return {
@@ -494,8 +501,8 @@ async function getBibliography(xml, bibliographyType = "edition") {
             ...zoteroData,
           };
         }
-      }
-    )
+      },
+    ),
   );
 
   return items;
@@ -556,7 +563,7 @@ function getKeywords(metadata) {
   ]
     .filter((keyword) => keyword)
     .map((keyword) =>
-      typeof keyword === "string" ? keyword.trim().toLowerCase() : keyword
+      typeof keyword === "string" ? keyword.trim().toLowerCase() : keyword,
     );
 }
 
