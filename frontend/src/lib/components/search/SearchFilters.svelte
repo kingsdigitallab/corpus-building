@@ -169,12 +169,16 @@
 			{#if aggregations?.notBefore}
 				<section class="filters-group">
 					<RangeSlider
-						title="Date"
+						title="Date range"
 						min={-700}
 						max={1830}
 						step={1}
-						startLabel="No earlier than"
-						endLabel="No later than"
+						startLabel={selectedDateRange[0] <= 0
+							? `${-1 * selectedDateRange[0]} BC `
+							: `${selectedDateRange[0]} AD`}
+						endLabel={selectedDateRange[1] <= 0
+							? `${-1 * selectedDateRange[1]} BC`
+							: `${selectedDateRange[1]} AD`}
 						bind:selectedRange={selectedDateRange}
 						rangeChange={() => searchFiltersChange()}
 					/>
