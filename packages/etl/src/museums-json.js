@@ -38,7 +38,7 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
         country: org.location[0].country[0]?.replace(/\s{2,}/g, " "),
         address: org.location[0].address[0].addrLine[0]?.replace(
           /\s{2,}/g,
-          " "
+          " ",
         ),
         geo: {
           lat: parseFloat(org.location[0].geo[0].split(",")[0].trim()),
@@ -47,9 +47,11 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
       },
     };
 
-    // Add Pleiades ID if it exists
     if (org.idno) {
-      museum.pleiades = org.idno[0]._;
+      museum.idno = {
+        type: org.idno[0].$.type,
+        url: org.idno[0]._,
+      };
     }
 
     return museum;
@@ -71,7 +73,7 @@ export async function main() {
       "data",
       "raw",
       "alists",
-      "museums.xml"
+      "museums.xml",
     );
 
   const outputPath =
