@@ -203,7 +203,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 						{metadata.material?._ || config.EMPTY_PLACEHOLDER}
 					{/if}
 				</dd>
-				<dt>Condition</dt>
+				<dt>Object condition</dt>
 				{#if metadata.condition?.ana}
 					<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
 				{:else}
