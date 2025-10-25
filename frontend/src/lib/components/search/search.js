@@ -129,7 +129,7 @@ const searchConfig = {
 			sort: 'key'
 		},
 		condition: {
-			title: 'Condition',
+			title: 'Object condition',
 			hide_zero_doc_count: true,
 			size: 100,
 			sort: 'key',
@@ -137,7 +137,7 @@ const searchConfig = {
 			chosen_filters_on_top: false
 		},
 		damage: {
-			title: 'Damage',
+			title: 'Text condition',
 			hide_zero_doc_count: true,
 			size: 100,
 			sort: 'key',
@@ -294,7 +294,13 @@ export function load({
 	searchEngine.itemsEngine = itemsjs(processedCorpus, searchConfig);
 
 	for (const item of processedCorpus) {
-		const content = [item.file, ...item.title, ...item.keywords, ...item.text, ...item.lemmas];
+		const content = [
+			item.file,
+			...(item?.title || []),
+			...(item.keywords || []),
+			...(item.text || []),
+			...(item.lemmas || [])
+		];
 
 		for (const key of Object.keys(searchConfig.aggregations)) {
 			const values = Array.isArray(item[key]) ? item[key] : [item[key]];
