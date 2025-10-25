@@ -46,6 +46,12 @@
 						<a href={museum.url} target="museum">{museum.url} <LucideExternalLink /></a>
 					</li>
 				{/if}
+				{#if museum.idno}
+				{@const idno = museum.idno}
+					<li>
+						<a href={idno.url} target="museum">{idno.type} <LucideExternalLink /></a>
+					</li>
+				{/if}
 			</ul>
 		</section>
 

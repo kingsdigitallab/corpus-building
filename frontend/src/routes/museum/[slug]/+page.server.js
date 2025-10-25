@@ -19,6 +19,10 @@ export async function load({ params: { slug } }) {
 		 * 		region: string,
 		 * 		country: string,
 		 * 		geo: { lon: number | null, lat: number | null }
+		 * 	},
+		 * 	idno: {
+		 * 		type: string,
+		 * 		url: string
 		 * 	}
 		 * } | undefined}
 		 */
