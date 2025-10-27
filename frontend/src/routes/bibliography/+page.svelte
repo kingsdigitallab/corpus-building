@@ -2,7 +2,7 @@
 	import * as config from '$lib/config';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import { Button } from 'bits-ui';
-	import { LucideArrowUp, LucideArrowDown, Search } from 'lucide-svelte';
+	import { LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
 
 	/** @type {{ data: import('./$types').PageData }} */
 	let { data } = $props();
