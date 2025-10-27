@@ -78,7 +78,11 @@
 	 */
 	function filterBuckets(buckets, key) {
 		const filter = filterContains[key]?.toLowerCase() || '';
-		return filter ? buckets.filter((b) => b.key.toLowerCase().includes(filter)) : buckets;
+
+		return buckets.map((bucket) => ({
+			...bucket,
+			found: !filter || bucket.key.toLowerCase().includes(filter)
+		}));
 	}
 
 	/**
@@ -230,7 +234,7 @@
 								<ul>
 									{#each filterBuckets(aggregations[key].buckets, key) as bucket}
 										<li>
-											<label>
+											<label class:active={bucket.found}>
 												<input
 													type="checkbox"
 													value={bucket.key}
@@ -491,6 +495,10 @@
 		align-items: center;
 		display: flex;
 		gap: var(--size-2);
+	}
+
+	.filters-group ul li label:not(.active) {
+		display: none;
 	}
 
 	.filters-group ul li label div {
