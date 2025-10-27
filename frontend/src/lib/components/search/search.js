@@ -321,21 +321,29 @@ export function load({
 
 	searchEngine.itemsEngine = itemsjs(processedCorpus, searchConfig);
 
-	for (const item of processedCorpus) {
-		const content = [
-			item.file,
-			...(item?.title || []),
-			...(item.keywords || []),
-			...(item.text || []),
-			...(item.lemmas || [])
-		];
+	const aggregationKeys = Object.keys(searchConfig.aggregations);
 
-		for (const key of Object.keys(searchConfig.aggregations)) {
-			const values = Array.isArray(item[key]) ? item[key] : [item[key]];
-			content.push(...values);
+	for (const item of processedCorpus) {
+		const contentParts = [];
+
+		contentParts.push(item.file);
+		if (item.title) contentParts.push(...item.title);
+		if (item.keywords) contentParts.push(...item.keywords);
+		if (item.text) contentParts.push(...item.text);
+		if (item.lemmas) contentParts.push(...item.lemmas);
+
+		for (let i = 0; i < aggregationKeys.length; i++) {
+			const value = item[aggregationKeys[i]];
+			if (value !== undefined && value !== null) {
+				if (Array.isArray(value)) {
+					contentParts.push(...value);
+				} else {
+					contentParts.push(value);
+				}
+			}
 		}
 
-		searchEngine.flexIndex.add(item.file, content.join(' !! '));
+		searchEngine.flexIndex.add(item.file, contentParts.join(' !! '));
 	}
 }
 
