@@ -34,6 +34,17 @@
 	const searchModeParam = queryParam('mode', ssp.string('all'));
 	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
 
+	const sortings = $derived(
+		Array.from(
+			new Map(
+				Object.values(searchConfig.sortings).map((sorting) => [
+					sorting.field,
+					{ field: sorting.field, label: sorting.label }
+				])
+			).values()
+		).sort((a, b) => a.field.localeCompare(b.field))
+	);
+
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
 	let isLoading = $derived(['idle', 'load'].includes(searchStatus));
@@ -624,10 +635,9 @@
 							bind:value={searchOptions.sortResultsBy}
 							onchange={(option) => handleSortResultsByChange(option.target.value)}
 						>
-							<option value="file">File</option>
-							<option value="notBefore">Not before</option>
-							<option value="notAfter">Not after</option>
-							<option value="title">Title</option>
+							{#each sortings as sorting}
+								<option value={sorting.field}>{sorting.label}</option>
+							{/each}
 						</select>
 
 						<Button.Root
