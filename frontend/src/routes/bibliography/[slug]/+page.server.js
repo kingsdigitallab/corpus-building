@@ -1,4 +1,6 @@
 import { error } from '@sveltejs/kit';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import corpus from '../../../data/corpus.json';
 import zotero from '../../../data/zotero.json';
 
@@ -11,9 +13,22 @@ export async function load({ params: { slug } }) {
 			throw error(404, `Zotero item ${slug} not found`);
 		}
 
-		const inscriptions = corpus.filter((/** @type {{ zotero: string | any[]; }} */ inscription) =>
-			inscription.zotero?.includes(slug)
-		);
+		const inscriptions = corpus
+			.filter((/** @type {{ zotero: string | any[]; }} */ inscription) =>
+				inscription.zotero?.includes(slug)
+			)
+			.map((inscription) => {
+				const filePath = join(process.cwd(), 'src', 'data', 'metadata', `${inscription.file}.json`);
+				const fileContent = readFileSync(filePath, 'utf-8');
+				const json = JSON.parse(fileContent);
+				const bibl =
+					json?.bibliographyEdition?.bibl?.find((bibl) => bibl?.ptr?.target?.endsWith(slug)) ||
+					null;
+				return {
+					...inscription,
+					bibl
+				};
+			});
 
 		return { zotero: z, inscriptions };
 	} catch (e) {

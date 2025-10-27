@@ -25,7 +25,7 @@
 		</hgroup>
 	</header>
 
-	<InscriptionTable {inscriptions} />
+	<InscriptionTable {inscriptions} showCitedRange={true} />
 </article>
 
 <style>
