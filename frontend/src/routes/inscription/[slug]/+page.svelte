@@ -211,7 +211,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 				{/if}
 				<dt>Dimensions</dt>
 				<dd>
-					{#each metadata.dimensions as dimension, index}
+					{#each metadata?.dimensions as dimension, index}
 						{dimension.dimension}: {dimension._}
 						{dimension.unit}{#if index < metadata.dimensions.length - 1},&#160;{/if}
 					{/each}
@@ -257,11 +257,11 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 				</dd>
 
 				<dt>Letter heights</dt>
-				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
+				{#each metadata?.handNote?.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
 					<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
 				{/each}
 				<dt>Interlinear heights</dt>
-				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
+				{#each metadata?.handNote?.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
 					<dd>
 						{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
 					</dd>
