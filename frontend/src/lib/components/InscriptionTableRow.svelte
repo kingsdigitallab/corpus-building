@@ -4,10 +4,19 @@
 	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	let { inscription } = $props();
+	let { inscription, showCitedRange = false } = $props();
 </script>
 
 <tr>
+	{#if showCitedRange}
+		<td>
+			{#if inscription?.bibl?.citedRange}
+				{inscription.bibl.citedRange}
+			{:else}
+				N/A
+			{/if}
+		</td>
+	{/if}
 	<td class="strong">
 		<InscriptionLink id={inscription.file}>{inscription.file}</InscriptionLink>
 	</td>

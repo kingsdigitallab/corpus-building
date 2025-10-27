@@ -1,12 +1,15 @@
 <script>
 	import InscriptionTableRow from './InscriptionTableRow.svelte';
 
-	let { inscriptions } = $props();
+	let { inscriptions, showCitedRange = false } = $props();
 </script>
 
 <table>
 	<thead class="surface-1">
 		<tr>
+			{#if showCitedRange}
+				<th class="surface-4">Cited Range</th>
+			{/if}
 			<th class="surface-4">ID</th>
 			<th class="surface-4">Title</th>
 			<th class="surface-4">Date</th>
@@ -20,7 +23,7 @@
 	</thead>
 	<tbody>
 		{#each inscriptions as inscription}
-			<InscriptionTableRow {inscription} />
+			<InscriptionTableRow {inscription} {showCitedRange} />
 		{/each}
 	</tbody>
 </table>
