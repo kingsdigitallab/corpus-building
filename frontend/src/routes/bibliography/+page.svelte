@@ -248,23 +248,4 @@
 	.actions a:focus {
 		text-decoration: underline;
 	}
-
-	.pager {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--size-2) var(--size-3);
-		align-items: center;
-		justify-content: center;
-		margin-top: var(--size-4);
-	}
-	.pager button {
-		padding: var(--size-2) var(--size-3);
-		border: 1px solid var(--border-color);
-		background: var(--surface-1);
-		border-radius: var(--radius-2);
-		color: var(--text-1);
-	}
-	.pager button:disabled {
-		opacity: 0.5;
-	}
 </style>
