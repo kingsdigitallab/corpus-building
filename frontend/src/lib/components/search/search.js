@@ -332,8 +332,8 @@ export function load({
 		if (item.text) contentParts.push(...item.text);
 		if (item.lemmas) contentParts.push(...item.lemmas);
 
-		for (let i = 0; i < aggregationKeys.length; i++) {
-			const value = item[aggregationKeys[i]];
+		for (const key of aggregationKeys) {
+			const value = item[key];
 			if (value !== undefined && value !== null) {
 				if (Array.isArray(value)) {
 					contentParts.push(...value);
