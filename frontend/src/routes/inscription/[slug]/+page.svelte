@@ -23,7 +23,7 @@
 	let { data } = $props();
 	let { slug, metadata, images, html, xml } = data;
 
-	const attribution = $derived(html.editions[0]?.html);
+	const attribution = $derived(html.editions?.[0]?.html);
 	const editions = $derived(html.divs.find((div) => div.id === 'editions'));
 	const apparatus = $derived(html.divs.find((div) => div.id === 'apparatus'));
 	const translations = $derived(html.divs.filter((div) => div.id === 'translation'));
