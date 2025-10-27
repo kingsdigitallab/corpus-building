@@ -54,10 +54,6 @@
 	const end = $derived(start + pageSize);
 	const pageItems = $derived(sorted.slice(start, end));
 
-	function goto(p) {
-		page = Math.min(Math.max(1, p), totalPages);
-	}
-
 	function countInscriptions(e) {
 		return Array.isArray(e.inscriptions) ? e.inscriptions.length : 0;
 	}
