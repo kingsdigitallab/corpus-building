@@ -36,8 +36,8 @@
 			const va = fields[sortBy](a);
 			const vb = fields[sortBy](b);
 
-			if (va < vb) return sortDir === 1 ? -1 : 1;
-			if (va > vb) return sortDir === -1 ? 1 : -1;
+			if (va < vb) return -1 * sortDir;
+			if (va > vb) return sortDir;
 
 			return 0;
 		})
@@ -99,7 +99,7 @@
 				<Button.Root
 					class="order-toggle"
 					onclick={() => (sortDir = sortDir * -1)}
-					aria-label="Toggle sort order from ascending to descending to no order"
+					aria-label="Toggle sort order from ascending to descending"
 				>
 					{#if sortDir === 1}
 						<LucideArrowUp aria-label="Ascending" />
