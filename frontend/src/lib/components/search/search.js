@@ -172,35 +172,63 @@ const searchConfig = {
 	sortings: {
 		file_asc: {
 			field: 'file',
-			order: 'asc'
+			order: 'asc',
+			label: 'File'
 		},
 		file_desc: {
 			field: 'file',
-			order: 'desc'
+			order: 'desc',
+			label: 'File'
 		},
 		notAfter_asc: {
 			field: 'notAfter',
-			order: 'asc'
+			order: 'asc',
+			label: 'Not After'
 		},
 		notAfter_desc: {
 			field: 'notAfter',
-			order: 'desc'
+			order: 'desc',
+			label: 'Not After'
 		},
 		notBefore_asc: {
 			field: 'notBefore',
-			order: 'desc'
+			order: 'asc',
+			label: 'Not Before'
 		},
 		notBefore_desc: {
 			field: 'notBefore',
-			order: 'desc'
+			order: 'desc',
+			label: 'Not Before'
 		},
 		title_asc: {
 			field: 'title',
-			order: 'asc'
+			order: 'asc',
+			label: 'Title'
 		},
 		title_desc: {
 			field: 'title',
-			order: 'desc'
+			order: 'desc',
+			label: 'Title'
+		},
+		language_asc: {
+			field: 'language',
+			order: 'asc',
+			label: 'Language'
+		},
+		language_desc: {
+			field: 'language',
+			order: 'desc',
+			label: 'Language'
+		},
+		objectType_asc: {
+			field: 'objectType',
+			order: 'asc',
+			label: 'Object Type'
+		},
+		objectType_desc: {
+			field: 'objectType',
+			order: 'desc',
+			label: 'Object Type'
 		}
 	},
 	isExactSearch: false
