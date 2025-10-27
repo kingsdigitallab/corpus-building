@@ -67,26 +67,26 @@
 		<dt>ID</dt>
 		<dd>{metadata.file}</dd>
 		<dt>Language</dt>
-		<dd>{metadata.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
+		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
 		<dd>
-			{#if metadata.type?.ref}
+			{#if metadata?.type?.ref}
 				<a class="badge strong" href={metadata.type.ref}
 					>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
 				>
 			{:else}
-				{metadata.type?._ || config.EMPTY_PLACEHOLDER}
+				{metadata?.type?._ || config.EMPTY_PLACEHOLDER}
 			{/if}
 		</dd>
 		<dt>Object type</dt>
-		{#if metadata.objectType}
+		{#if metadata?.objectType}
 			<dd>
-				{#if metadata.objectType?.ref}
+				{#if metadata?.objectType?.ref}
 					<a class="badge strong" href={metadata.objectType.ref}
 						>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
 					>
 				{:else}
-					{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}
+					{metadata?.objectType?._ || config.EMPTY_PLACEHOLDER}
 				{/if}
 			</dd>
 		{/if}
