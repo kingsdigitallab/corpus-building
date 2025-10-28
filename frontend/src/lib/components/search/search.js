@@ -321,6 +321,10 @@ export function load({
 
 	searchEngine.itemsEngine = itemsjs(processedCorpus, searchConfig);
 
+	if (searchEngine.flexIndex?.reg?.size > 0) {
+		return;
+	}
+
 	const aggregationKeys = Object.keys(searchConfig.aggregations);
 
 	for (const item of processedCorpus) {
