@@ -178,11 +178,11 @@
 						max={1830}
 						step={1}
 						startLabel={selectedDateRange[0] <= 0
-							? `${-1 * selectedDateRange[0]} BC `
-							: `${selectedDateRange[0]} AD`}
+							? `${-1 * selectedDateRange[0]} BCE `
+							: `${selectedDateRange[0]} CE`}
 						endLabel={selectedDateRange[1] <= 0
-							? `${-1 * selectedDateRange[1]} BC`
-							: `${selectedDateRange[1]} AD`}
+							? `${-1 * selectedDateRange[1]} BCE`
+							: `${selectedDateRange[1]} CE`}
 						bind:selectedRange={selectedDateRange}
 						rangeChange={() => searchFiltersChange()}
 					/>
