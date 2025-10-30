@@ -60,7 +60,7 @@ const searchConfig = {
 			chosen_filters_on_top: false
 		},
 		provenance: {
-			title: 'Provenance',
+			title: 'Origin',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
