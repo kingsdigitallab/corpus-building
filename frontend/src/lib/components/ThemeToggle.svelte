@@ -3,7 +3,7 @@
 	import { Button } from 'bits-ui';
 	import { MoonIcon, SunIcon } from 'lucide-svelte';
 
-	let theme = $state((browser && localStorage.getItem('color-scheme')) || 'light');
+	let theme = $state('light');
 
 	if (browser) {
 		const preference = window.matchMedia('(prefers-color-scheme: dark)');
@@ -11,6 +11,10 @@
 		if (preference.matches) {
 			theme = 'dark';
 		}
+
+		console.log(localStorage.getItem('color-scheme'));
+
+		theme = localStorage.getItem('color-scheme') || theme;
 
 		setTheme();
 
@@ -39,13 +43,17 @@
 
 <svelte:head>
 	<script type="module">
-		let theme = localStorage.getItem('color-scheme') || 'light';
+		let theme = 'light';
+
 		const preference = window.matchMedia('(prefers-color-scheme: dark)');
 
 		if (preference.matches) {
 			theme = 'dark';
 		}
 
+		theme = localStorage.getItem('color-scheme') || theme;
+
+		console.log('Theme', theme);
 		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
 	</script>
