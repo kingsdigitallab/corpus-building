@@ -92,7 +92,7 @@ const searchConfig = {
 			chosen_filters_on_top: false
 		},
 		technique: {
-			title: 'Technique',
+			title: 'Execution technique',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
