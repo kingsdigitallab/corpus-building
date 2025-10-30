@@ -46,7 +46,7 @@ export const search = {
 	minDate: -700,
 	maxDate: 1830,
 	minLetterHeight: 0,
-	maxLetterHeight: 100
+	maxLetterHeight: 250
 };
 
 export const xmlServerPath =
