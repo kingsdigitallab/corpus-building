@@ -12,7 +12,10 @@
 			theme = 'dark';
 		}
 
-		theme = localStorage.getItem('color-scheme') || theme;
+		const localTheme = localStorage.getItem('color-scheme');
+		if (localTheme) {
+			theme = localTheme;
+		}
 
 		setTheme();
 
