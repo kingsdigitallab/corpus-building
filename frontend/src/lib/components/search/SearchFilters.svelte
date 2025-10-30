@@ -265,8 +265,8 @@
 							min={0}
 							max={100}
 							step={1}
-							startLabel="At least"
-							endLabel="At most"
+							startLabel="Minimum"
+							endLabel="Maximum"
 							bind:selectedRange={selectedLetterHeightRange}
 							rangeChange={() => searchFiltersChange()}
 						/>
