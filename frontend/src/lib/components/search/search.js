@@ -99,7 +99,7 @@ const searchConfig = {
 			conjunction: false
 		},
 		pigment: {
-			title: 'Pigment',
+			title: 'Pigment use',
 			hide_zero_doc_count: true,
 			size: 200,
 			sort: 'key',
