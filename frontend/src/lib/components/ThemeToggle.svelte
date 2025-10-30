@@ -12,8 +12,6 @@
 			theme = 'dark';
 		}
 
-		console.log(localStorage.getItem('color-scheme'));
-
 		theme = localStorage.getItem('color-scheme') || theme;
 
 		setTheme();
@@ -53,7 +51,6 @@
 
 		theme = localStorage.getItem('color-scheme') || theme;
 
-		console.log('Theme', theme);
 		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
 	</script>
