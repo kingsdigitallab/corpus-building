@@ -107,7 +107,7 @@ const searchConfig = {
 			chosen_filters_on_top: false
 		},
 		lettering: {
-			title: 'Lettering',
+			title: 'Letter types',
 			hide_zero_doc_count: true,
 			size: 500,
 			sort: 'key',
