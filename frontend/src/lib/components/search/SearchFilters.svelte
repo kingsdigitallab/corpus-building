@@ -2,6 +2,7 @@
 	import { Button } from 'bits-ui';
 	import { slide } from 'svelte/transition';
 	import RangeSlider from './RangeSlider.svelte';
+	import TooltipInfo from '$lib/components/TooltipInfo.svelte';
 	import * as config from '$lib/config';
 
 	let {
@@ -117,6 +118,7 @@
 	>
 		<section class="filters-header">
 			<h2>Filters</h2>
+
 			<Button.Root class="close-button" onclick={handleClose} aria-label="Close filters"
 				>×</Button.Root
 			>
@@ -187,6 +189,7 @@
 						endLabel={selectedDateRange[1] <= 0
 							? `${-1 * selectedDateRange[1]} BCE`
 							: `${selectedDateRange[1]} CE`}
+						tooltip={config.tooltips.date}
 						bind:selectedRange={selectedDateRange}
 						rangeChange={() => searchFiltersChange()}
 					/>
@@ -197,7 +200,12 @@
 					<section class="filters-group">
 						<details>
 							<summary>
-								<h3>{aggregations[key].title}</h3>
+								<hgroup>
+									<h3>{aggregations[key].title}</h3>
+									{#if key in config.tooltips}
+										<TooltipInfo>{config.tooltips[key]}</TooltipInfo>
+									{/if}
+								</hgroup>
 							</summary>
 							<div>
 								<small
@@ -271,6 +279,7 @@
 							step={1}
 							startLabel="Minimum"
 							endLabel="Maximum"
+							tooltip={config.tooltips.letterHeight}
 							bind:selectedRange={selectedLetterHeightRange}
 							rangeChange={() => searchFiltersChange()}
 						/>
@@ -429,6 +438,11 @@
 		justify-content: space-between;
 		list-style: none;
 		padding-inline: var(--size-3);
+	}
+
+	.filters-group summary hgroup {
+		align-items: flex-start;
+		display: flex;
 	}
 
 	.filters-group details[open] summary {
