@@ -161,7 +161,7 @@ const searchConfig = {
 			chosen_filters_on_top: false
 		},
 		status: {
-			title: 'Status',
+			title: 'Editorial status',
 			hide_zero_doc_count: true,
 			sort: 'key',
 			conjunction: false,
