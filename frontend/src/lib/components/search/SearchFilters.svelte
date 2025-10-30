@@ -2,6 +2,7 @@
 	import { Button } from 'bits-ui';
 	import { slide } from 'svelte/transition';
 	import RangeSlider from './RangeSlider.svelte';
+	import * as config from '$lib/config';
 
 	let {
 		show = $bindable(false),
@@ -11,7 +12,10 @@
 		publicationConjunction = $bindable(true),
 		sortAggregationsBy = $bindable('key'),
 		selectedDateRange = $bindable([0, 0]),
-		selectedLetterHeightRange = $bindable([0, 0]),
+		selectedLetterHeightRange = $bindable([
+			config.search.minLetterHeight,
+			config.search.maxLetterHeight
+		]),
 		selectedFilters = $bindable({}),
 		sortAggregationsByChange,
 		languageConjunctionChange,
@@ -263,7 +267,7 @@
 							title="Letter height"
 							unit="mm"
 							min={0}
-							max={100}
+							max={config.search.maxLetterHeight}
 							step={1}
 							startLabel="Minimum"
 							endLabel="Maximum"

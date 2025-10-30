@@ -267,8 +267,20 @@ export function load({
 					: undefined;
 			const letterHeights =
 				item.letterHeights && item.letterHeights.length > 0
-					? item.letterHeights.map((d) => ({ atLeast: d.atLeast ?? 0, atMost: d.atMost ?? 100 }))
-					: [{ atLeast: 0, atMost: 100 }];
+					? item.letterHeights.map((d) => {
+							if (d.quantity) {
+								return {
+									atLeast: Number.parseInt(d.quantity),
+									atMost: Number.parseInt(d.quantity)
+								};
+							} else {
+								return {
+									atLeast: Number.parseInt(d.atLeast ?? '0'),
+									atMost: Number.parseInt(d.atMost ?? '250')
+								};
+							}
+						})
+					: [{ atLeast: 0, atMost: 0 }];
 
 			let repositoryRole = item.repository?.role?.toLowerCase() ?? undefined;
 			repositoryRole = repositoryRole?.indexOf('private') !== -1 ? 'private' : repositoryRole;
@@ -287,8 +299,8 @@ export function load({
 				// raw values, because the original are converted to facet values
 				rawObjectType: item.objectType,
 				// facet values
-				notAfter: item?.date?.notAfter ?? undefined,
-				notBefore: item?.date?.notBefore ?? undefined,
+				notAfter: item?.date?.notAfter ?? 0,
+				notBefore: item?.date?.notBefore ?? 1900,
 				language: item?.textLang?.languages ?? undefined,
 				languageCert: item?.textLang?.cert ?? undefined,
 				inscriptionType: getHierarchicalValues(item.type?.ana),
@@ -471,12 +483,13 @@ export function search({
 		filters,
 		filter: (item) => {
 			const matchesDateRange =
-				(!dateRange[0] && !dateRange[1]) ||
+				(dateRange[0] === undefined && dateRange[1] === undefined) ||
 				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
 
 			const matchesLetterHeightRange =
-				item.letterHeightAtLeast >= letterHeightRange[0] &&
-				item.letterHeightAtMost <= letterHeightRange[1];
+				(letterHeightRange[0] === undefined && letterHeightRange[1] === undefined) ||
+				(item.letterHeightAtLeast >= letterHeightRange[0] &&
+					item.letterHeightAtMost <= letterHeightRange[1]);
 
 			return matchesDateRange && matchesLetterHeightRange;
 		}
