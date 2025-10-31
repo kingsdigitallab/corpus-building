@@ -5,7 +5,7 @@
 		let dates = [];
 
 		for (const key of ['notBefore', 'notAfter']) {
-			if (date[key]) {
+			if (date?.[key]) {
 				if (date[key] < 0) {
 					dates.push(`${Math.abs(date[key])} BC`);
 				} else {
