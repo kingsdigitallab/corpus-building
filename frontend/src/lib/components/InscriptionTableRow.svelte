@@ -4,7 +4,7 @@
 	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	let { inscription, showCitedRange = false } = $props();
+	let { inscription, showCitedRange = false, showInventoryNumber = false } = $props();
 </script>
 
 <tr>
@@ -16,6 +16,9 @@
 				N/A
 			{/if}
 		</td>
+	{/if}
+	{#if showInventoryNumber}
+		<td>{inscription?.idno?._ || 'N/A'}</td>
 	{/if}
 	<td class="strong">
 		<InscriptionLink id={inscription.file}>{inscription.file}</InscriptionLink>
