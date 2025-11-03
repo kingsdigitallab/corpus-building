@@ -77,8 +77,8 @@
 
 	<section class="inscriptions">
 		<h2>Inscriptions</h2>
-		<InscriptionTable {inscriptions} />
-	</section>
+    <InscriptionTable {inscriptions} showInventoryNumber={true} />
+  </section>
 </article>
 
 <style>
