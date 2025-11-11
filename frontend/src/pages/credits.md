@@ -13,7 +13,7 @@ I.Sicily has been funded by the University of Oxford John Fell Fund, Merton Coll
 
 I.Sicily was created and developed by Jonathan Prag, with the technical support of James Cummings and James Chartrand.
 
-The Crossreads team, directed by Jonathan Prag, consists of: Germana Barone, Alessia Coccato, Chloe Colchester, Robert Crellin, Dmitry Dundua, Victoria Fendel, Ilenia Gradante, Paolo Mazzoleni, Valentina Mignosa, and Sophia Topf Aguiar De Medeiros, together with the development team of King's Digital Lab: Arianna Ciula, Neil Jakeman, Zihao Lu, Geoffroy Noël, Miguel Vieira with contributions from Ryan Heuser, Tiffany Ong, and Ginestra Ferraro.
+The Crossreads team, directed by Jonathan Prag, consists of: Germana Barone, Alessia Coccato, Chloe Colchester, Robert Crellin, Dmitry Dundua, Victoria Fendel, Ilenia Gradante, Paolo Mazzoleni, Valentina Mignosa, and Sophia Topf Aguiar De Medeiros, together with the development team of King's Digital Lab: Arianna Ciula, Neil Jakeman, Zihao Lu (lead designer for the edition website from winter 2024), Geoffroy Noël, Miguel Vieira with contributions from Ryan Heuser, Tiffany Ong (lead designer for the edition website until autumn 2024), and Ginestra Ferraro.
 
 The original dataset was collected by Jonathan Prag between 2001 and 2012, based upon published material. It was converted to EpiDoc by James Cummings in 2013. Museum data was collected by Michael Metcalfe between c.2013 and 2022. Geographical location data was edited by Valeria Vitale in 2013-2014. Simona Stoyanova provided further template development from 2020 onwards.
 
