@@ -229,6 +229,46 @@ const searchConfig = {
 			field: 'objectType',
 			order: 'desc',
 			label: 'Object Type'
+		},
+		provenance_asc: {
+			field: 'provenance',
+			order: 'asc',
+			label: 'Origin'
+		},
+		provenance_desc: {
+			field: 'provenance',
+			order: 'desc',
+			label: 'Origin'
+		},
+		material_asc: {
+			field: 'material',
+			order: 'asc',
+			label: 'Material'
+		},
+		material_desc: {
+			field: 'material',
+			order: 'desc',
+			label: 'Material'
+		},
+		inscriptionType_asc: {
+			field: 'inscriptionType',
+			order: 'asc',
+			label: 'Inscription Type'
+		},
+		inscriptionType_desc: {
+			field: 'inscriptionType',
+			order: 'desc',
+			label: 'Inscription Type'
+		},
+		settlement_asc: {
+			field: 'settlement',
+			order: 'asc',
+			label: 'Current Location'
+		},
+		settlement_desc: {
+			field: 'settlement',
+			order: 'desc',
+			label: 'Current Location'
 		}
 	},
 	isExactSearch: false
