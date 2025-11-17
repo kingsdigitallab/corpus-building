@@ -21,21 +21,23 @@
 	);
 
 	onMount(async () => {
-		const OpenSeaDragon = (await import('openseadragon')).default;
+		if (images && images.length > 0) {
+			const OpenSeaDragon = (await import('openseadragon')).default;
 
-		const viewer = OpenSeaDragon({
-			id: 'image-viewer',
-			prefixUrl: `${base}/openseadragon/images/`,
-			tileSources,
-			sequenceMode: true,
-			showReferenceStrip: true,
-			preserveViewport: true
-		});
+			const viewer = OpenSeaDragon({
+				id: 'image-viewer',
+				prefixUrl: `${base}/openseadragon/images/`,
+				tileSources,
+				sequenceMode: true,
+				showReferenceStrip: true,
+				preserveViewport: true
+			});
 
-		viewer.addHandler('page', (/** @type {{ page: number; }} */ event) => {
-			const image = images[event.page];
-			curImageTitle = `${image.surfaceType}, ${image.desc}`;
-		});
+			viewer.addHandler('page', (/** @type {{ page: number; }} */ event) => {
+				const image = images[event.page];
+				curImageTitle = `${image.surfaceType}, ${image.desc}`;
+			});
+		}
 	});
 </script>
 
@@ -59,10 +61,18 @@
 			{/if}
 		</hgroup>
 	</div>
-	<figure id="facsimile-images">
-		<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
-		<figcaption>{curImageTitle}</figcaption>
-	</figure>
+
+	{#if images && images.length > 0}
+		<figure id="facsimile-images">
+			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
+			<figcaption>{curImageTitle}</figcaption>
+		</figure>
+	{:else}
+		<div class="image-placeholder surface-2">
+			<p>No image available</p>
+		</div>
+	{/if}
+
 	<dl>
 		<dt>ID</dt>
 		<dd>{metadata.file}</dd>
@@ -125,7 +135,8 @@
 		text-align: center;
 	}
 
-	#overview #facsimile-images {
+	#overview #facsimile-images,
+	#overview .image-placeholder {
 		grid-column: 1;
 		grid-row: 1;
 		margin: 0 auto;
@@ -135,7 +146,6 @@
 
 	#overview #facsimile-images figcaption {
 		border-top: var(--border-size-1) solid var(--border-color);
-		border-bottom: var(--border-size-1) solid var(--border-color);
 		font-size: var(--font-size-0);
 		max-inline-size: none;
 		padding-block: var(--size-4);
@@ -144,7 +154,13 @@
 		width: 100%;
 	}
 
+	#overview .image-placeholder {
+		height: 60%;
+		text-align: center;
+	}
+
 	#overview dl {
+		border-top: var(--border-size-1) solid var(--border-color);
 		column-count: 2;
 		column-gap: var(--size-4);
 		padding-block: var(--size-4);
