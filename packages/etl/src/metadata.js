@@ -131,7 +131,7 @@ function getTitle(xml) {
 function getStatus(xml) {
   const status = xml.TEI.teiHeader.revisionDesc.status;
 
-  if (status.toLowerCase() === "deprecated") {
+  if (status?.toLowerCase() === "deprecated") {
     const changeNote = getChangeNote(xml, status);
     return {
       _: status,
