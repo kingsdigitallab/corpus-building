@@ -760,7 +760,7 @@ describe("getMsIdentifier function", () => {
 });
 
 describe("getTextLang function", () => {
-  it("should return the textLang object when it exists", async () => {
+  it("should build the languages list from main, other and possible languages", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -768,7 +768,11 @@ describe("getTextLang function", () => {
             <sourceDesc>
               <msDesc>
                 <msContents>
-                  <textLang mainLang="la">Latin</textLang>
+                  <textLang mainLang="la" otherLangs="grc heb">
+                    Latin
+                    <certainty assertedValue="osc"/>
+                    <certainty assertedValue="xpu"/>
+                  </textLang>
                 </msContents>
               </msDesc>
             </sourceDesc>
@@ -776,14 +780,23 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
-    expect(metadataExtractors.getTextLang(xml)).toEqual({
-      _: "Latin",
-      languages: ["Latin"],
+
+    const textLang = metadataExtractors.getTextLang(xml);
+
+    expect(textLang?.languages).toEqual([
+      "Latin",
+      "Ancient Greek",
+      "Hebrew",
+      "Oscan (possibly)",
+      "Punic (possibly)",
+    ]);
+    expect(textLang).toMatchObject({
       mainLang: "la",
+      otherLangs: "grc heb",
     });
   });
 
-  it("should return undefined when textLang doesn't exist", async () => {
+  it("should return null when textLang doesn't exist", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -823,7 +836,7 @@ describe("getTextLang function", () => {
     });
   });
 
-  it("should return an empty object when textLang is present but empty", async () => {
+  it("should return a languages array with undefined when textLang is empty", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -839,6 +852,7 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
+
     expect(metadataExtractors.getTextLang(xml)).toBeNull();
   });
 });
