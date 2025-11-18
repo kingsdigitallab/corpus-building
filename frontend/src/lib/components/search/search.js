@@ -52,13 +52,6 @@ const searchConfig = {
 			conjunction: false,
 			chosen_filters_on_top: false
 		},
-		languageCert: {
-			title: 'Language certainty',
-			hide_zero_doc_count: true,
-			size: 10,
-			sort: 'key',
-			chosen_filters_on_top: false
-		},
 		provenance: {
 			title: 'Origin',
 			hide_zero_doc_count: true,
@@ -342,7 +335,6 @@ export function load({
 				notAfter: item?.date?.notAfter ?? 0,
 				notBefore: item?.date?.notBefore ?? 1900,
 				language: item?.textLang?.languages ?? undefined,
-				languageCert: item?.textLang?.cert ?? undefined,
 				inscriptionType: getHierarchicalValues(item.type?.ana),
 				objectType: getHierarchicalValues(item.objectType?.ana),
 				material: getHierarchicalValues(item.material?.ana),
