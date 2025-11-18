@@ -68,7 +68,7 @@
 						/>
 					</InscriptionLink>
 				{:else}
-					<div class="card-image-placeholder"></div>
+					<div class="card-image-placeholder surface-2"><p>No image available</p></div>
 				{/if}
 			</div>
 		{/if}
@@ -152,8 +152,8 @@
 	}
 
 	.card-image-placeholder {
-		background-color: var(--surface-2);
 		height: 200px;
+		padding-block: var(--size-4);
 		width: 100%;
 	}
 

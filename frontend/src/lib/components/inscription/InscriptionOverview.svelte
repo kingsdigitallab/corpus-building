@@ -156,6 +156,7 @@
 
 	#overview .image-placeholder {
 		height: 60%;
+		padding-block: var(--size-4);
 		text-align: center;
 	}
 
