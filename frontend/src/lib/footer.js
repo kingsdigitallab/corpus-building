@@ -123,7 +123,7 @@ export const footer = {
 		},
 		{
 			title: 'Regione Siciliana',
-			href: 'https://regione.sicilia.it/',
+			href: 'https://www.regione.sicilia.it/',
 			img: '/images/logos/RegioneSiciliana.png'
 		},
 		{
