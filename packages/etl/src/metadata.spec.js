@@ -148,7 +148,9 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getStatus(xml)).toBe("draft");
+    const status = metadataExtractors.getStatus(xml);
+
+    expect(status._).toBe("draft");
   });
 
   it("should be empty", async () => {
@@ -162,7 +164,9 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getStatus(xml)).toBe("");
+    const status = metadataExtractors.getStatus(xml);
+
+    expect(status._).toBe("");
   });
 
   it("should be undefined", async () => {
@@ -175,7 +179,9 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getStatus(xml)).toBe(undefined);
+    const status = metadataExtractors.getStatus(xml);
+
+    expect(status._).toBe(undefined);
   });
 });
 
@@ -618,13 +624,13 @@ describe("getPlaces function", () => {
 });
 
 describe("getFacsimile function", () => {
-  it("should return null when facsimile is not present", async () => {
+  it("should return an empty array when facsimile is not present", async () => {
     const xml = await createXmlObject(`
       <TEI>
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toBeNull();
+    expect(metadataExtractors.getFacsimile(xml).length).toBe(0);
   });
 
   it("should return facsimile data when surface is not an array", async () => {
@@ -632,20 +638,17 @@ describe("getFacsimile function", () => {
       <TEI>
         <facsimile>
           <surface>
-            <graphic url="image.tif" desc="Sample description"/>
+            <graphic url="image.tif" desc="Sample description" n="screen" />
             <graphic url="image.jpg" desc="Sample description"/>
           </surface>
         </facsimile>
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toEqual({
-      url: "image.tif",
-      desc: "Sample description",
-    });
+    expect(metadataExtractors.getFacsimile(xml).length).toEqual(1);
   });
 
-  it("should return null when no .tif file is found", async () => {
+  it("should return an empty array when no .tif file is found", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <facsimile>
@@ -657,25 +660,22 @@ describe("getFacsimile function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toBeNull();
+    expect(metadataExtractors.getFacsimile(xml).length).toEqual(0);
   });
 
-  it("should return first .tif file when multiple are present", async () => {
+  it("should return all .tif files when multiple are present", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <facsimile>
           <surface>
-            <graphic url="image1.tif" desc="TIF 1"/>
-            <graphic url="image2.tif" desc="TIF 2"/>
+            <graphic url="image1.tif" desc="TIF 1" n="screen"/>
+            <graphic url="image2.tif" desc="TIF 2" n="screen"/>
           </surface>
         </facsimile>
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toEqual({
-      url: "image1.tif",
-      desc: "TIF 1",
-    });
+    expect(metadataExtractors.getFacsimile(xml).length).toEqual(2);
   });
 });
 
