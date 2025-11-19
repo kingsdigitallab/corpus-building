@@ -52,7 +52,7 @@ export const footer = {
 				},
 				{
 					title: 'Accessibility',
-					href: ''
+					href: '/accessibility'
 				},
 				{
 					title: 'Credits & Acknowledgements',
