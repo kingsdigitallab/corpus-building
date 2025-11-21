@@ -21,7 +21,7 @@ async function extractAllZoteroData() {
   // Read all XML inscription files to find Zotero references
   const inscriptionsDir = path.join(
     __dirname,
-    "../../../data/raw/inscriptions"
+    "../../../data/raw/inscriptions",
   );
 
   try {
@@ -29,7 +29,7 @@ async function extractAllZoteroData() {
     const xmlFiles = files.filter((file) => file.endsWith(".xml"));
 
     console.log(
-      `Found ${xmlFiles.length} XML files to process in ${inscriptionsDir}`
+      `Found ${xmlFiles.length} XML files to process in ${inscriptionsDir}`,
     );
 
     for (const file of xmlFiles) {
@@ -71,7 +71,7 @@ async function extractAllZoteroData() {
     // Save to JSON file
     const outputPath = path.join(
       __dirname,
-      "../../../data/processed/zotero.json"
+      "../../../data/processed/zotero.json",
     );
     await fs.writeFile(outputPath, JSON.stringify(zoteroDataObject, null, 2));
 
@@ -90,7 +90,7 @@ async function extractAllZoteroData() {
  */
 async function parseXML(
   xmlString,
-  options = { explicitArray: false, mergeAttrs: true }
+  options = { explicitArray: false, mergeAttrs: true },
 ) {
   const parser = new xml2js.Parser(options);
   try {
@@ -109,7 +109,7 @@ function extractZoteroKeysFromXML(xml) {
 
   // Extract from edition author source
   const edition = xml.TEI?.text?.body?.div?.find(
-    (div) => div.type === "edition"
+    (div) => div.type === "edition",
   );
   if (edition?.source?.includes("zotero")) {
     const key = edition.source.split("/").at(-1);
@@ -118,7 +118,7 @@ function extractZoteroKeysFromXML(xml) {
 
   // Extract from bibliography ptr targets
   const bibliography = xml.TEI?.text?.body?.div?.find(
-    (div) => div.type === "bibliography"
+    (div) => div.type === "bibliography",
   )?.listBibl;
   if (bibliography) {
     const bibliographyArray = Array.isArray(bibliography)
@@ -157,7 +157,7 @@ async function fetchZoteroData(itemKey) {
     const response = await fetch(url);
     if (!response.ok) {
       console.warn(
-        `Failed to fetch Zotero item ${itemKey}: ${response.status}`
+        `Failed to fetch Zotero item ${itemKey}: ${response.status}`,
       );
       return null;
     }
@@ -192,7 +192,7 @@ async function fetchZoteroData(itemKey) {
     const citationResponse = await fetch(url);
     if (!citationResponse.ok) {
       console.warn(
-        `Failed to fetch citation for Zotero item ${itemKey}: ${citationResponse.status}`
+        `Failed to fetch citation for Zotero item ${itemKey}: ${citationResponse.status}`,
       );
       return null;
     }
@@ -201,6 +201,11 @@ async function fetchZoteroData(itemKey) {
 
     const data = {
       title: citationJson.data.title?.trim() || "",
+      author:
+        citationJson.data?.creators
+          .filter((creator) => creator.creatorType === "author")
+          .map((creator) => creator.name)
+          .join(", ") || "",
       date: citationJson.data.date?.trim() || null,
       citation: citationJson.citation.replace(".</span>", "</span>"),
       uri: citationJson.data.uri,
