@@ -204,11 +204,12 @@ async function fetchZoteroData(itemKey) {
       author:
         citationJson.data?.creators
           .filter((creator) => creator.creatorType === "author")
-          .map((creator) => creator.name)
+          .map((creator) => creator?.lastName?.trim())
+          .filter(Boolean)
           .join(", ") || "",
       date: citationJson.data.date?.trim() || null,
       citation: citationJson.citation.replace(".</span>", "</span>"),
-      uri: citationJson.data.uri,
+      uri: citationJson.links.alternate.href,
     };
 
     console.log(`✓ Fetched data for Zotero item: ${itemKey}`);
