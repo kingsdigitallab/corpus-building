@@ -1,7 +1,7 @@
 {
   "file": "ISic002992",
   "uri": "ISic002992",
-  "title": "I.Sicily inscription 002992",
+  "title": "Funerary inscription for Basil",
   "status": {
     "_": "draft"
   },
@@ -42,19 +42,22 @@
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
-      "_": "20.6",
+      "_": "20.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
-      "_": "15.6",
+      "_": "12-15.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "3",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -66,32 +69,39 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-6",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line6",
+        "h": "20-25",
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
-        "l": "Interlineation line 1 to 2",
+        "l": "Interlineation line 1 to 6",
         "from": "line1",
-        "to": "line2",
-        "unit": "mm"
+        "to": "line6",
+        "h": "5-10",
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "10"
       }
     ]
   },
   "date": {
     "_": "Not specified, but would seem to be 2nd — 3rd century CE",
     "notBefore": 101,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
@@ -113,14 +123,18 @@
   ],
   "provenance": "Centuripae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Circumstances of discovery not recorded, but prior to 1949; currently on display in the Centuripe museum.",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1949",
     "geo": null
   },
   "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "On display, upper floor.",
+    "_": "Prado 2023-05-09",
     "type": "observed",
+    "subtype": "autopsied",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -128,9 +142,9 @@
     {
       "n": "screen",
       "url": "ISic002992_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "4144px",
+      "width": "3256px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09",
       "surfaceType": "front"
     }
   ],
@@ -228,8 +242,8 @@
       }
     ],
     "change": {
-      "_": "Updated Zenodo DOI",
-      "when": "2021-07-14",
+      "_": "Jonathan Prag added image and some metadata",
+      "when": "2025-10-13",
       "who": "#JP"
     }
   },
@@ -237,12 +251,21 @@
   "facsimile": {
     "n": "screen",
     "url": "ISic002992_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "4144px",
+    "width": "3256px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 25
+    },
+    {
+      "atLeast": 5,
+      "atMost": 10
+    }
+  ],
   "publications": [
     "Libertini, 1949, Iscrizioni Centuripine"
   ],
@@ -251,7 +274,7 @@
   ],
   "keywords": [
     "isic002992",
-    "i.sicily inscription 002992",
+    "funerary inscription for basil",
     {
       "_": "draft"
     },

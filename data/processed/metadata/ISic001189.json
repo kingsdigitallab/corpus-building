@@ -183,7 +183,9 @@
         "from": "line1",
         "to": "line3",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -191,7 +193,9 @@
         "from": "line1",
         "to": "line2",
         "h": "50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -199,15 +203,16 @@
         "from": "line2",
         "to": "line3",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       }
     ]
   },
   "date": {
     "_": "1st century BCE",
     "notBefore": -100,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -1
   },
   "places": [
     {
@@ -413,12 +418,17 @@
       {
         "_": "Norma Quagliana",
         "xml:id": "NQ"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited and revised images",
-      "when": "2022-06-16",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
   "tmNumber": "492795",
@@ -430,7 +440,20 @@
     "desc": "Photo J. Prag, 2022-05-23, courtesy  Museo Archeologico Regionale Antonino Salinas",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 30
+    },
+    {
+      "atLeast": 50,
+      "atMost": 50
+    },
+    {
+      "atLeast": 40,
+      "atMost": 40
+    }
+  ],
   "publications": [
     "Kaibel, 1890, IG",
     "Manni Piraino, 1973, IGMusPalermo",

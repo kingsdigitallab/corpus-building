@@ -71,7 +71,7 @@
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
       "damage": {
-        "ana": "#text-condition.legible"
+        "ana": "#text_condition.legible"
       }
     }
   },
@@ -84,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "7-15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "7",
+        "atMost": "15"
       },
       {
         "type": "letterHeight",
@@ -92,7 +94,9 @@
         "from": "line2",
         "to": "line15",
         "h": "9-19",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "9",
+        "atMost": "19"
       },
       {
         "type": "interlinear",
@@ -466,7 +470,16 @@
     "desc": "Photo by students of Liceo Lazzaro, 2017-05-11",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 7,
+      "atMost": 15
+    },
+    {
+      "atLeast": 9,
+      "atMost": 19
+    }
+  ],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",

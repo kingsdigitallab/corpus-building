@@ -1,7 +1,7 @@
 {
   "file": "ISic001468",
   "uri": "ISic001468",
-  "title": "I.Sicily inscription 001468",
+  "title": "Epitaph of Agasias, son of Karias",
   "status": {
     "_": "draft"
   },
@@ -30,40 +30,61 @@
       "type": "PHI"
     }
   ],
-  "editionAuthor": null,
+  "editionAuthor": {
+    "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+    "author": "Manni Piraino",
+    "date": "1973",
+    "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+    "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+    "ref": "https://www.zotero.org/groups/382445/items/F66S4X3M"
+  },
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Upper part of a stele of pale yellow limestone stele",
+  "objectType": {
+    "_": "stele",
+    "ana": "#object.stele",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/250"
+  },
   "material": {
-    "_": "tufa limestone\n                                    ",
+    "_": "tufa limestone",
     "ana": "#material.stone.limestone_tufa",
     "ref": "http://www.eagle-network.eu/voc/material/lod/64.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "27",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "37",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "27",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Four lines, laid out boustrophedon",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
@@ -138,10 +159,13 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "30-60",
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "60"
       },
       {
         "type": "interlinear",
@@ -177,8 +201,10 @@
   ],
   "provenance": "Selinus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in the necropolis of contrada Bagliazzo, during excavations by the Soprintendenza; currently on display in Palermo museum.",
     "type": "found",
+    "subtype": "discovered",
+    "when": "1967-09",
     "geo": null
   },
   "provenanceGeo": [],
@@ -195,7 +221,7 @@
       "url": "ISic001468_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21.",
       "surfaceType": "front"
     }
   ],
@@ -269,10 +295,7 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000531",
-          "target": "https://biblio.inscriptiones.org/epig10000531"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F66S4X3M",
         "title": "Iscrizioni greche lapidarie del Museo di Palermo",
         "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
         "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M"
@@ -403,12 +426,17 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
   "tmNumber": "284885",
@@ -417,10 +445,15 @@
     "url": "ISic001468_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21.",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 60
+    }
+  ],
   "publications": [
     "Dubois, 1989, IGDS1",
     "Manni Piraino, 1973, IGMusPalermo",
@@ -443,11 +476,12 @@
   ],
   "keywords": [
     "isic001468",
-    "i.sicily inscription 001468",
+    "epitaph of agasias, son of karias",
     {
       "_": "draft"
     },
     "funerary",
+    "stele",
     "tufa limestone",
     "selinus",
     "selinunte",

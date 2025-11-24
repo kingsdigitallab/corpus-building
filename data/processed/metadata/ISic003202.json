@@ -1,7 +1,7 @@
 {
   "file": "ISic003202",
   "uri": "ISic003202",
-  "title": "I.Sicily inscription 003202",
+  "title": "Fragment of an honorific inscription",
   "status": {
     "_": "draft"
   },
@@ -27,15 +27,15 @@
   ],
   "editionAuthor": null,
   "type": {
-    "_": "honorific; funerary",
-    "ana": "#function.honorific #function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html http://www.eagle-network.eu/voc/typeins/lod/92.html",
-    "cert": "low"
+    "_": "honorific",
+    "ana": "#function.honorific",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/69"
   },
+  "support": "Part of a marble plaque, composed of 6 joining fragments; broken off on all sides.",
   "objectType": {
-    "_": "unknown",
+    "_": "plaque",
     "ana": "#object.unknown",
-    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/2.html"
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
     "_": "marble",
@@ -43,24 +43,28 @@
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
-    "ana": "#condition.fragment"
+    "ana": "#condition.fragments.contiguous"
   },
   "dimensions": [
     {
+      "_": "33",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "24",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "2",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Parts of four lines from the middle of a longer text",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
@@ -75,25 +79,40 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
-        "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "l": "Lines 2-4",
+        "from": "line2",
+        "to": "line4",
+        "h": "70",
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
-        "unit": "mm"
+        "h": "20-25",
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "25"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 4",
+        "from": "line2",
+        "to": "line4",
+        "h": "30",
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       }
     ]
   },
   "date": {
-    "_": "2nd century CE;\n                                apparent ref. to Trajan (?)",
+    "_": "2nd century CE",
     "notBefore": 101,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
@@ -115,15 +134,23 @@
   ],
   "provenance": "Centuripae",
   "provenanceFound": {
+    "_": "Found by Libertini during the 1950–1951 excavations in the area of the so-called 'Building of the Augustales', near the former Barbagallo Mill, in the Vallata Difesa.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "geo": [
+      37.62257,
+      14.74099
+    ]
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.62257,
+    14.74099
+  ],
   "provenanceObserved": {
-    "_": "None",
+    "_": "Prado, 2023-05-09",
     "type": "observed",
     "subtype": "autopsied",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -131,16 +158,41 @@
     {
       "n": "screen",
       "url": "ISic003202_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09",
       "surfaceType": "front"
     }
   ],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
-  "repository": "",
+  "repository": {
+    "_": "Museo Archeologico Regionale di Centuripe",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/002",
+    "museum": {
+      "slug": "002",
+      "type": "museum",
+      "name": "Museo Archeologico Regionale di Centuripe",
+      "uri": "http://sicily.classics.ox.ac.uk/museum/002",
+      "description": "An excellent and comprehensive display of archaeological material from Centuripe and the surrounding area",
+      "location": {
+        "settlement": "Centuripe",
+        "region": "Enna",
+        "country": "Italy",
+        "address": "Via Giulio Cesare, 94010 Centuripe (EN)",
+        "geo": {
+          "lat": 37.622753,
+          "lon": 14.740806
+        }
+      }
+    }
+  },
+  "idno": {
+    "_": "KA0862 + KA864 + KA868",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -178,10 +230,7 @@
         "ptr": {
           "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        },
+        "ref": "http://zotero.org/groups/382445/items/4MCP2PVV",
         "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
         "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV"
       }
@@ -234,8 +283,8 @@
       }
     ],
     "change": {
-      "_": "edited epidoc text division",
-      "when": "2021-06-14",
+      "_": "Jonathan Prag made draft revisions from photograph and Prado's notes",
+      "when": "2025-10-13",
       "who": "#JP"
     }
   },
@@ -243,12 +292,25 @@
   "facsimile": {
     "n": "screen",
     "url": "ISic003202_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "5520px",
+    "width": "3680px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 70
+    },
+    {
+      "atLeast": 20,
+      "atMost": 25
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Notizie degli scavi di antichità, 1876-"
@@ -259,18 +321,19 @@
   ],
   "keywords": [
     "isic003202",
-    "i.sicily inscription 003202",
+    "fragment of an honorific inscription",
     {
       "_": "draft"
     },
-    "honorific; funerary",
-    "unknown",
+    "honorific",
+    "plaque",
     "marble",
     "centuripae",
     "centuripe",
     "italy",
     "sicily",
     "centuripe",
+    "museo archeologico regionale di centuripe",
     "latin",
     "la"
   ]

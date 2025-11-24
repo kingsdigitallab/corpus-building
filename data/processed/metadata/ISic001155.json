@@ -199,7 +199,9 @@
         "from": "line1",
         "to": "line1",
         "h": "33",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "33",
+        "atMost": "33"
       },
       {
         "type": "letterHeight",
@@ -207,7 +209,9 @@
         "from": "line2",
         "to": "line2",
         "h": "29-33",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "29",
+        "atMost": "33"
       },
       {
         "type": "letterHeight",
@@ -215,7 +219,9 @@
         "from": "line3",
         "to": "line4",
         "h": "33-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "33",
+        "atMost": "38"
       },
       {
         "type": "interlinear",
@@ -229,8 +235,7 @@
   "date": {
     "_": "2nd century BCE or 1st century CE",
     "notBefore": -200,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
@@ -372,6 +377,8 @@
       {
         "type": "corpus",
         "n": "IGRR",
+        "author": "Cagnat, Toutain, Jouguet",
+        "date": "1906-1927",
         "citedRange": "506",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/KSH4D9GK"
@@ -381,8 +388,6 @@
           "target": "https://biblio.inscriptiones.org/epig10001116"
         },
         "title": "Inscriptiones Graecae ad res Romanas pertinentes",
-        "author": "Cagnat, Toutain, Jouguet",
-        "date": "1906-1927",
         "citation": "<span>R. Cagnat, J. Toutain, and P. Jouguet, <i>Inscriptiones Graecae ad res Romanas pertinentes</i>, 4 vols (Paris: Ernest Leroux, 1906)</span>",
         "uri": "https://www.zotero.org/groups/isicily/items/KSH4D9GK"
       },
@@ -443,12 +448,17 @@
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "edition on basis of autopsy and photographs",
-      "when": "2023-08-21",
-      "who": "#AA"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
   "tmNumber": "492768",
@@ -460,7 +470,20 @@
     "desc": "Photo J. Prag, courtesy Museo civico di Termini Imerese",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 33,
+      "atMost": 33
+    },
+    {
+      "atLeast": 29,
+      "atMost": 33
+    },
+    {
+      "atLeast": 33,
+      "atMost": 38
+    }
+  ],
   "publications": [
     "Kaibel, 1890, IG",
     "Bulletin épigraphique, 1888-",
