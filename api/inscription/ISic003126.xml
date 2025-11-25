@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,9 +9,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder>
-                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
-                </funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -20,18 +18,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
-                    <resp>lemmatization and linguistic analysis</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
-                    <resp>lemmatization and linguistic analysis</resp>
-                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -69,8 +59,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <p>Marble plaque (Manganaro describes as veined Luna marble), intact but slightly chipped around the edges.</p>
+                                <support><p>Marble plaque (Manganaro describes as veined Luna marble), intact but slightly chipped around the edges.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--Manganaro-->
@@ -80,18 +69,16 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-                            </supportDesc>
+		    </supportDesc>
                             <layoutDesc>
-                                <layout>
-                                    <p>The text fills the surface, within a simple incised border, with a fixed margin on the left, uneven margin on the right. The space below the text is filled by three staurograms.</p>
+                                <layout><p>The text fills the surface, within a simple incised border, with a fixed margin on the left, uneven margin on the right. The space below the text is filled by three staurograms.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
-                                <p>Lunate epsilon, sigma and omega, cursive mu; use of supralines on numerals and some abbreviation marks. Manganaro does not record letter heights.</p>
+                            <handNote><p>Lunate epsilon, sigma and omega, cursive mu; use of supralines on numerals and some abbreviation marks. Manganaro does not record letter heights.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -106,10 +93,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                                <geo>37.49223, 15.07041</geo>
-                            </origPlace>
+                            	<geo>37.49223, 15.07041</geo>
+		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0427" notAfter-custom="0427" evidence="internal-date">427 CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1931">Said to come from the via Androne necropolis, first reported by Libertini from an apograph; said by Manganaro to be in the possession of avv. S. Majorana, found in the area of his house on via Androne; seen and photographed by Manganaro.</provenance>
@@ -120,18 +107,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
-                    <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
-                    <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
-        </encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -160,88 +147,45 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-07-11" who="#JP">Jonathan Prag revised from edition</change>
-                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
-                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
-            </listChange>
+	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface type="front">
+         <surface type="front">
             <graphic n="screen" url="ISic003126_tiled.tif" height="3185px" width="2768px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana: scan of Manganaro 1959: tav.41</desc>
             </graphic>
             <graphic n="print" url="ISic003126.jpg" height="3185px" width="2768px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana: scan of Manganaro 1959: tav.41</desc>
             </graphic>
-        </surface>
+         </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><w n="5">ἐνθάδε</w> <w n="10">κῖτε</w> <persName type="attested"><name><w n="15">Σωτὴρ</w></name></persName>
-                    <lb n="2"/><w n="20">ζήσας</w> <w n="25">τὸν</w> <w n="30">βίον</w> <w n="35">ἑαυτοῦ</w>
-                    <lb n="3"/><w n="40">ἀμένπτως</w> <w n="45">τελευτᾷ</w>
-                    <lb n="4"/><w n="50">τῇ</w> <w n="55"><expan><abbr><hi rend="ligature">πρ</hi></abbr><ex>ὸ</ex></expan></w> <num value="15"><w n="60"><hi rend="supraline">ιε</hi></w></num> <w n="65"><expan><abbr>κα<hi rend="intraline">λ</hi></abbr><ex>ανδῶν</ex></expan></w> <w n="70">Αὐγούστων</w>
-                    <lb n="5"/><w n="75">ζήσας</w> <w n="80">ἔτη</w> <num value="50"><w n="85"><hi rend="supraline">ν</hi></w></num> <w n="90"><choice><orig><expan><abbr>πλῖο</abbr><ex>ν</ex></expan></orig><reg>πλεῖον</reg></choice></w> <w n="100">ἥτ
-                    <lb n="6" break="no"/>τω</w> <w n="105">μετὰ</w> <w n="110">τὴν</w> <roleName type="supracivic" subtype="consul"><w n="115">ὑπατίαν</w></roleName>
-                    <lb n="7"/><persName type="attested"><name><w n="120">Θεοδοσίου</w></name></persName> <w n="125">τὸ</w> <num value="12"><w n="130"><hi rend="supraline">ιβ</hi></w></num> <w n="135">καὶ</w>
-                    <lb n="8"/><persName type="attested"><name><w n="140">Βαλεντινιανοῦ</w></name></persName> <w n="145">τὸ</w> <num value="2"><w n="150"><hi rend="supraline">β</hi></w></num>
-                    <lb n="9"/><w n="155">ἰρήνη</w> <w n="160">τῇ</w> <w n="165">ψυχῇ</w> <w n="170">σου</w>
-                    <lb n="10"/><g ref="#staurogram" n="175">𐆠</g> <g ref="#staurogram" n="180">𐆠</g> <g ref="#staurogram" n="185">𐆠</g>
-                </ab>
-            </div>
-            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
-                <ab>
-                    <w n="5" lemma="ἐνθάδε">ἐνθάδε</w>
-                    <w n="10" lemma="κεῖμαι">κῖτε</w>
-                    <w n="15" lemma="Σωτήρ">Σωτὴρ</w>
-                    <w n="20" lemma="ζάω">ζήσας</w>
-                    <w n="25" lemma="ὁ">τὸν</w>
-                    <w n="30" lemma="βίος">βίον</w>
-                    <w n="35" lemma="ἑαυτός">ἑαυτοῦ</w>
-                    <w n="40" lemma="ἄμεμπτος">ἀμένπτως</w>
-                    <w n="45" lemma="τελευτάω">τελευτᾷ</w>
-                    <w n="50" lemma="ὁ">τῇ</w>
-                    <w n="55" lemma="πρό">πρὸ</w>
-                    <w n="60" lemma="ιε">ιε</w>
-                    <w n="65" lemma="kalendae">καλανδῶν</w>
-                    <w n="70" lemma="Augustus">Αὐγούστων</w>
-                    <w n="75" lemma="ζάω">ζήσας</w>
-                    <w n="80" lemma="ἔτος">ἔτη</w>
-                    <w n="85" lemma="ν">ν</w>
-                    <w n="90" lemma="πολύς">πλῖον</w>
-                    <w n="100" lemma="ἥττων">ἥττω</w>
-                    <w n="105" lemma="μετά">μετὰ</w>
-                    <w n="110" lemma="ὁ">τὴν</w>
-                    <w n="115" lemma="ὑπατία">ὑπατίαν</w>
-                    <w n="120" lemma="Θεοδόσιος">Θεοδοσίου</w>
-                    <w n="125" lemma="ὁ">τὸ</w>
-                    <w n="130" lemma="ιβ">ιβ</w>
-                    <w n="135" lemma="καί">καὶ</w>
-                    <w n="140" lemma="Βαλεντινιανός">Βαλεντινιανοῦ</w>
-                    <w n="145" lemma="ὁ">τὸ</w>
-                    <w n="150" lemma="β">β</w>
-                    <w n="155" lemma="εἰρήνη">ἰρήνη</w>
-                    <w n="160" lemma="ὁ">τῇ</w>
-                    <w n="165" lemma="ψυχή">ψυχῇ</w>
-                    <w n="170" lemma="σύ">σου</w>
+                    <lb n="1"/>ἐνθάδε κῖτε <persName type="attested"><name>Σωτὴρ</name></persName>
+                    <lb n="2"/>ζήσας τὸν βίον ἑαυτοῦ
+                    <lb n="3"/>ἀμένπτως, τελευτᾷ
+                    <lb n="4"/>τῇ <expan><abbr><hi rend="ligature">πρ</hi></abbr><ex>ὸ</ex></expan> <num value="15"><hi rend="supraline">ιε</hi></num> <expan><abbr>κα<hi rend="intraline">λ</hi></abbr><ex>ανδῶν</ex></expan> Αὐγούστων
+                    <lb n="5"/>ζήσας ἔτη <num value="50"><hi rend="supraline">ν</hi></num> <choice><orig> <expan><abbr>πλῖο</abbr><ex>ν</ex></expan></orig><reg>πλεῖον</reg></choice> ἥτ
+                    <lb n="6" break="no"/>τω μετὰ τὴν <roleName type="supracivic" subtype="consul">ὑπατίαν</roleName>
+                    <lb n="7"/><persName type="attested"><name>Θεοδοσίου</name></persName> τὸ <num value="12"><hi rend="supraline">ιβ</hi></num> καὶ
+                    <lb n="8"/><persName type="attested"><name>Βαλεντινιανοῦ</name></persName> τὸ <num value="2"><hi rend="supraline">β</hi></num>
+                    <lb n="9"/>ἰρήνη τῇ ψυχῇ σου
+                    <lb n="10"/><g ref="#staurogram">&#x101a0;</g> <g ref="#staurogram">&#x101a0;</g> <g ref="#staurogram">&#x101a0;</g>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app>
-                        <note>Text of Manganaro, with amendment of Feissel</note>
-                    </app>
-                    <app loc="5">
-                        <note>Manganaro: πλίο</note>
-                    </app>
+                    <app><note>Text of Manganaro, with amendment of Feissel</note></app>
+                    <app loc="5"><note>Manganaro: πλίο</note></app>
                 </listApp>
             </div>
             <div type="translation">
@@ -255,45 +199,37 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>31.0829</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>17.0441</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1931</date>
                         <citedRange>42 no.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/T67M4XMU"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1959</date>
                         <citedRange>349, tav.41</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/4974KISD"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001853">https://biblio.inscriptiones.org/epig10001853</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001853">https://biblio.inscriptiones.org/epig10001853</ref></bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1982-1983</date>
                         <citedRange>17 no.56</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q7DDNWD6"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001996">https://biblio.inscriptiones.org/epig10001996</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001996">https://biblio.inscriptiones.org/epig10001996</ref></bibl>
                     <bibl>
                         <author>Feissel</author>
                         <date>1981</date>
                         <citedRange>136 n.14</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/UK6WUH6Z"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002009">https://biblio.inscriptiones.org/epig10002009</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10002009">https://biblio.inscriptiones.org/epig10002009</ref></bibl>
                 </listBibl>
-                <listBibl type="discussion">
-                    <bibl/>
-                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
     </text>
