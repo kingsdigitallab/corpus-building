@@ -1,5 +1,49 @@
 
 
+# [0.23.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.22.0...v0.23.0) (2025-11-25)
+
+
+### Bug Fixes
+
+* **bibliography:** Simplify sorting ([db1bb8a](https://github.com/kingsdigitallab/corpus-building/commit/db1bb8abc7b0bebe74c6ea20c7ea46cfc3cdf454))
+* **etl:** Check if object type is an array ([8e253ad](https://github.com/kingsdigitallab/corpus-building/commit/8e253ad9b1655822b6e74bbc71c0d35a6baca220))
+* **inscription:** Add metadata validation to ensure required fields are present ([6252b13](https://github.com/kingsdigitallab/corpus-building/commit/6252b132ba1e6d000a29ed500cf4d27795df3067))
+* **inscription:** Correctly access the first edition's HTML in derived attribution ([cb17dc7](https://github.com/kingsdigitallab/corpus-building/commit/cb17dc714f5e71362a90c34639fe70160f7f6e49))
+* **inscriptiondate:** Use optional chaining for date key access ([bdf72e1](https://github.com/kingsdigitallab/corpus-building/commit/bdf72e1c9e9c08c4569790cf6f4d722a7a1b72d9))
+* **inscriptionoverview:** Add checks for metadata properties ([8b9107d](https://github.com/kingsdigitallab/corpus-building/commit/8b9107d550ae1aea3b9eac58aa9466b9711f59aa))
+* **inscription:** Safeguard against undefined metadata in dimensions and handNote properties ([efc8203](https://github.com/kingsdigitallab/corpus-building/commit/efc82038ffa0feb2f37ad11e01f02ee3c33a217e))
+* **inscriptiontable:** Handle optional reference in citedRange display ([58e4321](https://github.com/kingsdigitallab/corpus-building/commit/58e432154bb284a8619383ee09b902715da784bc))
+* **metadata:** Safeguard status check against null values ([70d4519](https://github.com/kingsdigitallab/corpus-building/commit/70d4519f1193a69deb6740a5b8cdf749c082ea13))
+* **search:** Add limit to the text search engine ([a8726ad](https://github.com/kingsdigitallab/corpus-building/commit/a8726adb5132ae0a1bee3f4d96ad3b8f242d7bb7))
+* **searchfilters:** Ensure selected filter values stay active when ([950da8f](https://github.com/kingsdigitallab/corpus-building/commit/950da8fe0ffd01955031265f7c00bb9661b4a546))
+* **search:** Update titles for search conditions and ensure safe access to item properties ([7879072](https://github.com/kingsdigitallab/corpus-building/commit/787907228908ee9a06636d34102a10323eddf51c))
+
+
+### Features
+
+* **bibliography:** Add cited range information ([5538b0d](https://github.com/kingsdigitallab/corpus-building/commit/5538b0d5f2aec661d73ad0948681cbe00e4dd8f1))
+* **download:** Expand CSV download functionality ([adba5e6](https://github.com/kingsdigitallab/corpus-building/commit/adba5e6752d6561464cbbfe3fd2b6a44d62e9212))
+* **facetedsearch:** Dynamically build the search options ([7a0d263](https://github.com/kingsdigitallab/corpus-building/commit/7a0d263a7868d81c8cd2ab963b9042386df9e879))
+* **frontend:** Update Accessibility link and add accessibility statement page ([594a6a2](https://github.com/kingsdigitallab/corpus-building/commit/594a6a292c562063d7da49ccacc043760f114ea0))
+* **inscription:** Improve metadata handling with incomplete data warning and null checks ([569451d](https://github.com/kingsdigitallab/corpus-building/commit/569451dff70e4168b492e8fac3ac1a21e967d2d5))
+* **inscriptionoverview:** Add placeholder image when image not ([5a9e9ed](https://github.com/kingsdigitallab/corpus-building/commit/5a9e9ed35a976e886e5463959de350d5af47e631))
+* **inscriptiontable:** Add option to display citation information ([89abc03](https://github.com/kingsdigitallab/corpus-building/commit/89abc039e30da15953a8c237c25e014cf8bfa6e3))
+* **inscriptiontable:** Add option to display inventory number ([d9359aa](https://github.com/kingsdigitallab/corpus-building/commit/d9359aaef2e56a5bd19498bb4ea8995fd66a65b1))
+* **museum:** Display inventory number in the inscription table ([c85ba96](https://github.com/kingsdigitallab/corpus-building/commit/c85ba967998c5b3ba94524473a64b3dcaa5e793e))
+* **museum:** Display museum ID number and type ([dfd8266](https://github.com/kingsdigitallab/corpus-building/commit/dfd8266b2262b36395c20991a071cf5f10940358))
+* **rangeslider:** Integrate TooltipInfo component ([82b4fe1](https://github.com/kingsdigitallab/corpus-building/commit/82b4fe150d09725efe1764ba3de8b2f7300b4f55))
+* **search:** Add sorting for language and object type ([896f741](https://github.com/kingsdigitallab/corpus-building/commit/896f741a53a1f34ce04d7f47827cad9a7a52dff8))
+* **search:** Add sortings for origin, material, inscription type and ([e6dc470](https://github.com/kingsdigitallab/corpus-building/commit/e6dc470a00f80fcaf1597c28b9854cbba705b452))
+* **searchfilters:** Added TooltipInfo component to display tooltips for facets ([60c8e9c](https://github.com/kingsdigitallab/corpus-building/commit/60c8e9c81190cde63e35466e5f4cf375c05186a7))
+* **tooltip:** Add TooltipInfo component ([41ee40f](https://github.com/kingsdigitallab/corpus-building/commit/41ee40ff28ce3d4546b4a8585ecfe3ee629d4050))
+* **tooltips:** Add tooltip descriptions for various inscription attributes ([fff5545](https://github.com/kingsdigitallab/corpus-building/commit/fff5545cf9dc4fe98e11acab195e7ab39f461905))
+* **zotero:** Add author field to fetched Zotero data ([5831705](https://github.com/kingsdigitallab/corpus-building/commit/5831705f7ff944b884a1e3212c03af025628f7e0))
+
+
+### Performance Improvements
+
+* **search:** Prevent loading the text index if already populated ([efdec8b](https://github.com/kingsdigitallab/corpus-building/commit/efdec8b28eeb0e3d4a393958bf6a901e20b75e24))
+
 # [0.22.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.21.0...v0.22.0) (2025-10-06)
 
 
