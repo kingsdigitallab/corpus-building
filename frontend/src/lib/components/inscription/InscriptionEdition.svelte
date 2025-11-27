@@ -6,8 +6,6 @@
 
 	const { slug, metadata, xml, editions, attribution } = $props();
 
-	console.log(editions);
-
 	/**
 	 * @param {string} htmlString
 	 * @returns {Array<{id: string, type: string, html: string, isExpandable: boolean}>}
@@ -24,7 +22,11 @@
 				.filter((div) => div.id !== 'edition-diplomatic-simple-lemmatized')
 				.map((div) => ({
 					id: div.id,
-					type: div.id.replace('edition-', '').split('-').join(' '),
+					type: div.id
+						.replace('edition-', '')
+						.replace('interpretive-simple-lemmatized', 'fully-expanded-text')
+						.split('-')
+						.join(' '),
 					html: div.outerHTML,
 					isExpandable: (div.outerHTML.match(/<span class="linenumber"/g) || []).length > 10
 				}));
