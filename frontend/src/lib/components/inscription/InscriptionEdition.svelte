@@ -6,6 +6,8 @@
 
 	const { slug, metadata, xml, editions, attribution } = $props();
 
+	console.log(editions);
+
 	/**
 	 * @param {string} htmlString
 	 * @returns {Array<{id: string, type: string, html: string, isExpandable: boolean}>}
@@ -18,12 +20,14 @@
 			div.innerHTML = htmlString;
 			const editionDivs = Array.from(div.querySelectorAll('[id^="edition-"]'));
 
-			return editionDivs.map((div) => ({
-				id: div.id,
-				type: div.id.replace('edition-', '').split('-').join(' '),
-				html: div.outerHTML,
-				isExpandable: (div.outerHTML.match(/<span class="linenumber"/g) || []).length > 10
-			}));
+			return editionDivs
+				.filter((div) => div.id !== 'edition-diplomatic-simple-lemmatized')
+				.map((div) => ({
+					id: div.id,
+					type: div.id.replace('edition-', '').split('-').join(' '),
+					html: div.outerHTML,
+					isExpandable: (div.outerHTML.match(/<span class="linenumber"/g) || []).length > 10
+				}));
 		} catch (e) {
 			console.error('Error parsing edition divs:', e);
 			return [];
