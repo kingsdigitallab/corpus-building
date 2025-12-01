@@ -163,6 +163,15 @@
 </article>
 
 <style>
+	h1 {
+		margin-top: var(--size-5); /**ZL added this to make the header having a bit more space*/
+	}
+
+	.controls select {
+		padding: var(--size-2) var(--size-4) var(--size-2) var(--size-2);
+		border-radius: var(--radius-2);
+	}
+
 	.controls {
 		display: grid;
 		gap: var(--size-2);
@@ -199,10 +208,14 @@
 		margin: 0;
 		display: grid;
 		gap: var(--size-3);
+		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /**ZL added */
+		justify-content: center; /**ZL added */
 	}
 	@media (min-width: 900px) {
 		.bib-list {
-			grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+			gap: var(
+				--size-4
+			); /* ZL changed grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));*/
 		}
 	}
 
@@ -211,8 +224,11 @@
 		border-radius: var(--radius-2);
 		padding: var(--size-3) var(--size-4);
 		background: var(--surface-1);
-		display: grid;
+		display: flex; /** ZL changed from grid to flex */
+		flex-direction: column; /**ZL added */
+		justify-content: space-between; /**ZL added*/
 		gap: var(--size-2);
+		min-height: 200px; /**ZL added*/
 	}
 
 	.title {

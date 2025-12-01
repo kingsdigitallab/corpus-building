@@ -618,4 +618,18 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 			overflow: visible;
 		}
 	}
+
+	#content :global(a:not(.badge):not(.strong)) {
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+	/**ZL added this for adding underlines to all text links under inscription pages to making them more identifiable without touching the homepage card views */
+
+	#content :global(a[href^='http']:not([href*='isicily']):not(.badge))::after {
+		content: '↗';
+		display: inline-block;
+		margin-left: 0.25em;
+		font-size: 0.8em;
+		vertical-align: text-top;
+	}
 </style>
