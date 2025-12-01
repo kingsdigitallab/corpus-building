@@ -11,7 +11,7 @@
 	{#if showCitedRange}
 		<td>
 			{#if inscription?.bibl?.citedRange}
-				{inscription.bibl.citedRange}
+				{inscription.bibl.citedRange?.ref?._ || inscription.bibl.citedRange}
 			{:else}
 				N/A
 			{/if}

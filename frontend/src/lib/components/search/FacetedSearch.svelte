@@ -42,7 +42,7 @@
 					{ field: sorting.field, label: sorting.label }
 				])
 			).values()
-		).sort((a, b) => a.field.localeCompare(b.field))
+		).sort((a, b) => a.label.localeCompare(b.label))
 	);
 
 	/** @type {import('./worker.js').WorkerStatus} */

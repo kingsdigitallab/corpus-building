@@ -52,6 +52,7 @@ describe("convertMuseumsToJson", () => {
       {
         type: "museum",
         name: "Test Museum",
+        slug: "001",
         uri: "http://test.museum/001",
         description: "A test museum",
         location: {

@@ -24,6 +24,10 @@
 		text-align: center;
 	}
 
+	:global(.md h1, .md h2, .md h3, .md h4, .md h5, .md h6) {
+		max-inline-size: unset;
+	}
+
 	:global(.md p) {
 		max-inline-size: unset;
 		text-align: justify;

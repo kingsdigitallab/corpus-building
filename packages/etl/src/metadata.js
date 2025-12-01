@@ -131,7 +131,7 @@ function getTitle(xml) {
 function getStatus(xml) {
   const status = xml.TEI.teiHeader.revisionDesc.status;
 
-  if (status.toLowerCase() === "deprecated") {
+  if (status?.toLowerCase() === "deprecated") {
     const changeNote = getChangeNote(xml, status);
     return {
       _: status,
@@ -444,11 +444,24 @@ function getTextLang(xml) {
 
   if (!textLang) return null;
 
-  const otherLangs = textLang.otherLangs ? textLang.otherLangs.split(" ") : [];
+  const otherLangs = textLang.otherLangs
+    ? textLang.otherLangs.split(" ").map(getLangName)
+    : [];
+
+  let certainty = textLang.certainty || [];
+
+  if (certainty && !Array.isArray(certainty)) {
+    certainty = [certainty];
+  }
+
+  const possibleLangs = certainty.map(
+    (certainty) => `${getLangName(certainty.assertedValue)} (possibly)`,
+  );
 
   textLang.languages = [
     getLangName(textLang.mainLang),
-    ...otherLangs.map(getLangName),
+    ...otherLangs,
+    ...possibleLangs,
   ];
 
   return textLang;
