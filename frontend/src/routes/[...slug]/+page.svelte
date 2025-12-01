@@ -39,4 +39,13 @@
 		text-decoration-thickness: 1px;
 		text-underline-offset: 2px;
 	}
+
+	:global(.prose a[href^='http']:not(.badge))::after,
+	:global(a[href^='http']:not(.badge))::after {
+		content: '↗';
+		margin-left: 0.25em;
+		font-size: 0.8em;
+		display: inline-block;
+		vertical-align: text-top;
+	}
 </style>
