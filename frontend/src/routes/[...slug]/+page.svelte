@@ -32,4 +32,11 @@
 		max-inline-size: unset;
 		text-align: justify;
 	}
+
+	/* ZL added underline all links */
+	:global(.md a) {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 2px;
+	}
 </style>
