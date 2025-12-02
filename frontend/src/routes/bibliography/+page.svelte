@@ -163,17 +163,40 @@
 </article>
 
 <style>
-	.controls {
-		display: grid;
-		gap: var(--size-2);
-		margin-bottom: var(--size-4);
+	h1 {
+		margin-top: var(--size-6); /**ZL added this to make the header having a bit more space*/
 	}
-
-	.sort {
+	.controls {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--size-2) var(--size-4);
 		align-items: center;
+		row-gap: var(--size-3);
+		column-gap: var(--size-4);
+
+		/* top + bottom lines, like home page */
+		border-block: var(--border-size-1) solid var(--border-color);
+		padding-block: var(--size-3);
+		margin-bottom: var(--size-4);
+		border-top: none; /* remove current top line */
+	}
+
+	.controls .search {
+		flex: 1 1 100%;
+	}
+
+	.controls .meta {
+		order: 1;
+		font-size: var(--font-size-1);
+		margin-right: auto; /* push sort group to the right */
+	}
+
+	.controls .sort {
+		order: 2;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--size-2) var(--size-4);
+		margin-left: auto;
 	}
 
 	.sort label {
@@ -181,6 +204,14 @@
 		align-items: center;
 		gap: var(--size-2);
 	}
+
+	/* .sort {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-2) var(--size-4);
+		align-items: center;
+	} */
+
 	.search {
 		padding: var(--size-2) var(--size-3);
 		border: 1px solid var(--border-color);
@@ -199,10 +230,14 @@
 		margin: 0;
 		display: grid;
 		gap: var(--size-3);
+		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /**ZL added */
+		justify-content: center; /**ZL added */
 	}
 	@media (min-width: 900px) {
 		.bib-list {
-			grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+			gap: var(
+				--size-4
+			); /* ZL changed grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));*/
 		}
 	}
 
@@ -211,8 +246,11 @@
 		border-radius: var(--radius-2);
 		padding: var(--size-3) var(--size-4);
 		background: var(--surface-1);
-		display: grid;
+		display: flex; /** ZL changed from grid to flex */
+		flex-direction: column; /**ZL added */
+		justify-content: space-between; /**ZL added*/
 		gap: var(--size-2);
+		min-height: 200px; /**ZL added*/
 	}
 
 	.title {

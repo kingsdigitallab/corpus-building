@@ -75,4 +75,20 @@
 	:global(td .inscription-place li) {
 		font-size: var(--font-size-0);
 	}
+
+	/* ZL: table row hover – different in light and dark */
+
+	/* Light mode: cream / yellow highlight */
+	:global([data-color-scheme='light'] #faceted-search table tbody tr:hover),
+	:global([data-color-scheme='light'] #faceted-search table tbody tr:hover td) {
+		background-color: var(--brown-0); /* the yellow you like */
+		color: var(--text-1);
+	}
+
+	/* Dark mode: subtle lighter band, not black */
+	:global([data-color-scheme='dark'] #faceted-search table tbody tr:hover),
+	:global([data-color-scheme='dark'] #faceted-search table tbody tr:hover td) {
+		background-color: #50514f;
+		color: var(--text-1);
+	}
 </style>
