@@ -1,5 +1,18 @@
 
 
+# [0.24.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.23.0...v0.24.0) (2025-12-02)
+
+
+### Bug Fixes
+
+* **how-to-cite:** Remove extra full stop ([b8205ef](https://github.com/kingsdigitallab/corpus-building/commit/b8205efea56dd80711dce91ff57bd305db4e1088))
+
+
+### Features
+
+* **inscriptionedition:** Do not render edition diplomatic simple lemmatized ([0da64d6](https://github.com/kingsdigitallab/corpus-building/commit/0da64d6928546df18fe2752189f487c82ef4e103))
+* **page:** Remove max inline size for header elements ([da4f1ba](https://github.com/kingsdigitallab/corpus-building/commit/da4f1ba86b8cb22ca44bf5cce1c03e6a00fb3c42))
+
 # [0.23.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.22.0...v0.23.0) (2025-11-25)
 
 
