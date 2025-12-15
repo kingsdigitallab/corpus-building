@@ -5,7 +5,7 @@
 
 	let selectedView = $state('map');
 	let selectedCategory = $state('inscriptionType');
-	let selectedColourBy = $state('inscriptionType');
+	let selectedColourBy = $state('');
 
 	const categories = Object.values(aggregations).map((aggregation) => ({
 		value: aggregation.name,
@@ -25,7 +25,7 @@
 		</label>
 		<label>
 			Category
-			<select name="category" bind:value={selectedCategory}>
+			<select name="category" bind:value={selectedCategory} disabled={selectedView === 'map'}>
 				{#each categories as category (category.value)}
 					<option value={category.value}>{category.label}</option>
 				{/each}
@@ -33,7 +33,7 @@
 		</label>
 		<label>
 			Colour by
-			<select name="colourBy" bind:value={selectedColourBy}>
+			<select name="colourBy" bind:value={selectedColourBy} disabled={selectedView === 'map'}>
 				{#each categories as category (category.value)}
 					{#if category.value === selectedCategory}
 						<option value={category.value} disabled>{category.label}</option>
