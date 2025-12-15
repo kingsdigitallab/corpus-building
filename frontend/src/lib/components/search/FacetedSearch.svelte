@@ -12,7 +12,7 @@
 		LayoutGridIcon,
 		LucideArrowDown,
 		LucideArrowUp,
-		MapIcon,
+		BarChartIcon,
 		TableIcon,
 		TextIcon
 	} from 'lucide-svelte';
@@ -27,7 +27,7 @@
 	const searchQueryParam = queryParam('q', ssp.string(''));
 	const searchPageParam = queryParam('page', ssp.number(1));
 	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
-	/** @property {'cards' | 'map' | 'table' | 'text'} */
+	/** @property {'cards' | 'viz' | 'table' | 'text'} */
 	const searchViewParam = queryParam('view', ssp.string('cards'));
 	const searchFiltersParam = queryParam('filters', ssp.object({}));
 	/** @property {import('./search').SearchOptions['searchMode']} */
@@ -60,7 +60,7 @@
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
 	let inscriptionsGeo = $derived(
-		$searchViewParam === 'map'
+		$searchViewParam === 'viz'
 			? inscriptions?.map((inscription) => ({
 					file: inscription.file,
 					title: inscription.title,
@@ -247,7 +247,7 @@
 
 		$searchQueryParam = '';
 		$searchPageParam = 1;
-		$searchLimitParam = $searchViewParam === 'map' ? config.search.maxLimit : config.search.limit;
+		$searchLimitParam = $searchViewParam === 'viz' ? config.search.maxLimit : config.search.limit;
 		$searchFiltersParam = '';
 		$searchModeParam = 'all';
 		selectedDateRange = [...initDateRange()];
@@ -257,7 +257,7 @@
 		postSearchMessage(
 			1,
 			'',
-			$searchViewParam === 'map' ? config.search.maxLimit : config.search.limit
+			$searchViewParam === 'viz' ? config.search.maxLimit : config.search.limit
 		);
 	}
 
@@ -332,14 +332,14 @@
 	}
 
 	/**
-	 * @param {'cards' | 'map' | 'table' | 'text'} newView
+	 * @param {'cards' | 'viz' | 'table' | 'text'} newView
 	 */
 	async function handleViewChange(newView) {
 		let currentLimit = $searchLimitParam;
 
-		if (newView === 'map') {
+		if (newView === 'viz') {
 			currentLimit = config.search.maxLimit;
-		} else if ($searchViewParam === 'map') {
+		} else if ($searchViewParam === 'viz') {
 			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
 			searchResults = {
 				...searchResults,
@@ -584,10 +584,10 @@
 							<TextIcon />View text
 						</Button.Root>
 						<Button.Root
-							class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
-							onclick={() => handleViewChange('map')}
+							class={`primary ${$searchViewParam !== 'viz' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('viz')}
 						>
-							<MapIcon />View map
+							<BarChartIcon />Visualisations
 						</Button.Root>
 						<Button.Root
 							class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'} view-table-btn`}
@@ -653,7 +653,7 @@
 						</Button.Root>
 					</div>
 				</section>
-				{#if $searchViewParam === 'map'}
+				{#if $searchViewParam === 'viz'}
 					<div
 						class="transition-container"
 						in:fade={{ duration: 500 }}
