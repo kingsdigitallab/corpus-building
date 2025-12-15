@@ -1,6 +1,6 @@
 <script>
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
-	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
+	import InscriptionVisualisation from '$lib/components/InscriptionVisualisation.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
@@ -59,7 +59,7 @@
 	let numberOfLocations = $derived(getNumberOfLocations());
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
-	let inscriptionsGeo = $derived(
+	let inscriptionsViz = $derived(
 		$searchViewParam === 'viz'
 			? inscriptions?.map((inscription) => ({
 					file: inscription.file,
@@ -659,7 +659,10 @@
 						in:fade={{ duration: 500 }}
 						out:fade={{ duration: 250 }}
 					>
-						<InscriptionMap inscriptions={inscriptionsGeo} />
+						<InscriptionVisualisation
+							inscriptions={inscriptionsViz}
+							aggregations={searchAggregations}
+						/>
 					</div>
 				{:else}
 					{#key $searchViewParam}
