@@ -13,6 +13,7 @@
 
 	let { inscriptions, aggregations } = $props();
 
+	// Viz controls
 	let selectedView = $state('bar-stacked');
 
 	const categories = $derived(
@@ -29,9 +30,11 @@
 
 	let selectedColourBy = $state('');
 
+	// Viz settings
 	let maxCategories = $state(10);
 	let height = $state(400);
 
+	// Viz data
 	const data = $derived(
 		selectedCategoryBuckets
 			.slice(0, maxCategories)
