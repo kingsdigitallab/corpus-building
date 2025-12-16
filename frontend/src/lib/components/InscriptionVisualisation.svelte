@@ -18,10 +18,12 @@
 	let selectedView = $state('bar-stacked');
 
 	const categories = $derived(
-		Object.values(aggregations).map((aggregation) => ({
-			value: aggregation.name,
-			label: aggregation.title
-		}))
+		Object.values(aggregations)
+			.map((aggregation) => ({
+				value: aggregation.name,
+				label: aggregation.title
+			}))
+			.sort((a, b) => a.label.localeCompare(b.label))
 	);
 
 	let selectedCategory = $state('inscriptionType');
