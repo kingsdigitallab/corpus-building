@@ -43,7 +43,7 @@
 	);
 
 	// Bar
-	const domain = $derived([0, data.length - 1]);
+	const yDomain = $derived([0, data.length - 1]);
 
 	const xLabel = 'Inscription count';
 	const yLabel = $derived(aggregations[selectedCategory]?.title || 'No title');
@@ -137,7 +137,7 @@
 	{#if selectedView === 'map'}
 		<InscriptionMap {inscriptions} />
 	{:else if selectedView === 'bar-stacked'}
-		<VisXYContainer {data} {height} yDirection="south" yDomain={domain}>
+		<VisXYContainer {data} {height} yDirection="south" {yDomain}>
 			<VisStackedBar x={(_, i) => i} y={(d) => d.value} barPadding={0.1} orientation="horizontal" />
 			<VisAxis type="x" label={xLabel} />
 			<VisAxis type="y" label={yLabel} gridLine={false} {numTicks} {tickFormat} {tickValues} />
