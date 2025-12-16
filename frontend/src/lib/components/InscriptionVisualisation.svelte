@@ -117,6 +117,15 @@
 </section>
 
 <style>
+	:global(body, html) {
+		--vis-color-main: var(--surface-3);
+		--vis-color0: var(--vis-color-main);
+
+		--vis-font-family: var(--font-family);
+
+		--vis-nested-donut-segment-label-font-size: 0.875em;
+	}
+
 	fieldset {
 		border: none;
 	}
