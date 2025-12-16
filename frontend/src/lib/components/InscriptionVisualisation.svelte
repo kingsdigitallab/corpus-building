@@ -1,7 +1,15 @@
 <script>
-	import { VisAxis, VisXYContainer, VisStackedBar, VisTooltip } from '@unovis/svelte';
+	import {
+		VisAxis,
+		VisXYContainer,
+		VisNestedDonut,
+		VisSingleContainer,
+		VisStackedBar,
+		VisTooltip
+	} from '@unovis/svelte';
 	import InscriptionMap from './InscriptionMap.svelte';
 	import { StackedBar } from '@unovis/ts';
+	import { NestedDonut } from '@unovis/ts';
 
 	let { inscriptions, aggregations } = $props();
 
@@ -25,8 +33,16 @@
 	let height = $state(400);
 
 	const data = $derived(
-		selectedCategoryBuckets.slice(0, maxCategories).sort((a, b) => a.key.localeCompare(b.key))
+		selectedCategoryBuckets
+			.slice(0, maxCategories)
+			.sort((a, b) => a.key.localeCompare(b.key))
+			.map((bucket) => ({
+				key: bucket.key,
+				value: bucket.doc_count
+			}))
 	);
+
+	// Bar
 	const domain = $derived([0, data.length - 1]);
 
 	const xLabel = 'Inscription count';
@@ -35,12 +51,21 @@
 	const tickFormat = $derived((tick) => data[tick]?.key || tick);
 	const tickValues = $derived(Array.from({ length: numTicks }, (_, i) => i));
 
+	// Donut
+	const layers = $derived([(d) => d.key]);
+
+	// Tooltips
 	const triggers = $derived({
-		[StackedBar.selectors.bar]: getBarTooltip
+		[StackedBar.selectors.bar]: getBarTooltip,
+		[NestedDonut.selectors.segment]: getDonutTooltip
 	});
 
-	function getBarTooltip(bucket) {
-		return `${bucket.key}: ${bucket.doc_count}`;
+	function getBarTooltip(bar) {
+		return `${bar.key}: ${bar.value}`;
+	}
+
+	function getDonutTooltip(segment) {
+		return `${segment.data.key}: ${segment.value}`;
 	}
 </script>
 
@@ -113,18 +138,16 @@
 		<InscriptionMap {inscriptions} />
 	{:else if selectedView === 'bar-stacked'}
 		<VisXYContainer {data} {height} yDirection="south" yDomain={domain}>
-			<VisStackedBar
-				x={(_, i) => i}
-				y={(d) => d.doc_count}
-				barPadding={0.1}
-				orientation="horizontal"
-			/>
+			<VisStackedBar x={(_, i) => i} y={(d) => d.value} barPadding={0.1} orientation="horizontal" />
 			<VisAxis type="x" label={xLabel} />
 			<VisAxis type="y" label={yLabel} gridLine={false} {numTicks} {tickFormat} {tickValues} />
 			<VisTooltip {triggers} />
 		</VisXYContainer>
 	{:else if selectedView === 'donut'}
-		<p>🍩</p>
+		<VisSingleContainer {data} height={height * 1.5}>
+			<VisNestedDonut {layers} value={(d) => d.value} direction="outwards" layerPadding={10} />
+			<VisTooltip {triggers} />
+		</VisSingleContainer>
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
