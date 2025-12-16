@@ -6,17 +6,19 @@
 
 	let selectedView = $state('bar-stacked');
 
-	const categories = Object.values(aggregations).map((aggregation) => ({
-		value: aggregation.name,
-		label: aggregation.title
-	}));
+	const categories = $derived(
+		Object.values(aggregations).map((aggregation) => ({
+			value: aggregation.name,
+			label: aggregation.title
+		}))
+	);
 
 	let selectedCategory = $state('inscriptionType');
 	const selectedCategoryBuckets = $derived(aggregations[selectedCategory]?.buckets || []);
 
 	let selectedColourBy = $state('');
 
-	let maxCategories = $state(Math.min(2, selectedCategoryBuckets.length));
+	let maxCategories = $state(10);
 	let height = $state(400);
 
 	const data = $derived(selectedCategoryBuckets.slice(0, maxCategories));
