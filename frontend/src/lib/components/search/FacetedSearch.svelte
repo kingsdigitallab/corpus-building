@@ -62,9 +62,7 @@
 	let inscriptionsViz = $derived(
 		$searchViewParam === 'viz'
 			? inscriptions?.map((inscription) => ({
-					file: inscription.file,
-					title: inscription.title,
-					places: inscription.places,
+					...inscription,
 					geo: inscription.geo[0]
 				}))
 			: []
