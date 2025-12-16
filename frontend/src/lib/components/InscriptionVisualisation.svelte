@@ -1,6 +1,7 @@
 <script>
-	import { VisAxis, VisXYContainer, VisStackedBar } from '@unovis/svelte';
+	import { VisAxis, VisXYContainer, VisStackedBar, VisTooltip } from '@unovis/svelte';
 	import InscriptionMap from './InscriptionMap.svelte';
+	import { StackedBar } from '@unovis/ts';
 
 	let { inscriptions, aggregations } = $props();
 
@@ -14,14 +15,18 @@
 	);
 
 	let selectedCategory = $state('inscriptionType');
-	const selectedCategoryBuckets = $derived(aggregations[selectedCategory]?.buckets || []);
+	const selectedCategoryBuckets = $derived(
+		[...(aggregations[selectedCategory]?.buckets || [])].sort((a, b) => b.doc_count - a.doc_count)
+	);
 
 	let selectedColourBy = $state('');
 
 	let maxCategories = $state(10);
 	let height = $state(400);
 
-	const data = $derived(selectedCategoryBuckets.slice(0, maxCategories));
+	const data = $derived(
+		selectedCategoryBuckets.slice(0, maxCategories).sort((a, b) => a.key.localeCompare(b.key))
+	);
 	const domain = $derived([0, data.length - 1]);
 
 	const xLabel = 'Inscription count';
@@ -29,6 +34,14 @@
 	const numTicks = $derived(data.length);
 	const tickFormat = $derived((tick) => data[tick]?.key || tick);
 	const tickValues = $derived(Array.from({ length: numTicks }, (_, i) => i));
+
+	const triggers = $derived({
+		[StackedBar.selectors.bar]: getBarTooltip
+	});
+
+	function getBarTooltip(bucket) {
+		return `${bucket.key}: ${bucket.doc_count}`;
+	}
 </script>
 
 <section id="viz-controls">
@@ -108,6 +121,7 @@
 			/>
 			<VisAxis type="x" label={xLabel} />
 			<VisAxis type="y" label={yLabel} gridLine={false} {numTicks} {tickFormat} {tickValues} />
+			<VisTooltip {triggers} />
 		</VisXYContainer>
 	{:else if selectedView === 'donut'}
 		<p>🍩</p>
