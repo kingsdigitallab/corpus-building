@@ -1,16 +1,32 @@
 <script>
+	import { VisAxis, VisXYContainer, VisStackedBar } from '@unovis/svelte';
 	import InscriptionMap from './InscriptionMap.svelte';
 
 	let { inscriptions, aggregations } = $props();
 
-	let selectedView = $state('map');
-	let selectedCategory = $state('inscriptionType');
-	let selectedColourBy = $state('');
+	let selectedView = $state('bar-stacked');
 
 	const categories = Object.values(aggregations).map((aggregation) => ({
 		value: aggregation.name,
 		label: aggregation.title
 	}));
+
+	let selectedCategory = $state('inscriptionType');
+	const selectedCategoryBuckets = $derived(aggregations[selectedCategory]?.buckets || []);
+
+	let selectedColourBy = $state('');
+
+	let maxCategories = $state(Math.min(2, selectedCategoryBuckets.length));
+	let height = $state(400);
+
+	const data = $derived(selectedCategoryBuckets.slice(0, maxCategories));
+	const domain = $derived([0, data.length - 1]);
+
+	const xLabel = 'Inscription count';
+	const yLabel = $derived(aggregations[selectedCategory]?.title || 'No title');
+	const numTicks = $derived(data.length);
+	const tickFormat = $derived((tick) => data[tick]?.key || tick);
+	const tickValues = $derived(Array.from({ length: numTicks }, (_, i) => i));
 </script>
 
 <section id="viz-controls">
@@ -46,11 +62,51 @@
 	</fieldset>
 </section>
 
+<section id="viz-settings">
+	{#if selectedView !== 'map'}
+		<fieldset>
+			<label>
+				Max categories ({maxCategories})
+				<input
+					type="range"
+					min={Math.min(2, selectedCategoryBuckets.length)}
+					max={Math.min(selectedCategoryBuckets.length, 50)}
+					step="1"
+					bind:value={maxCategories}
+					aria-label="Adjust max categories"
+				/>
+				<small>Move the slider to adjust the maximum number of categories</small>
+			</label>
+			<label>
+				Chart height ({height}px)
+				<input
+					type="range"
+					min="200"
+					max="2000"
+					step="10"
+					bind:value={height}
+					aria-label="Adjust chart height"
+				/>
+				<small>Move the slider to adjust the chart height</small>
+			</label>
+		</fieldset>
+	{/if}
+</section>
+
 <section id="viz-container">
 	{#if selectedView === 'map'}
 		<InscriptionMap {inscriptions} />
 	{:else if selectedView === 'bar-stacked'}
-		<p>The bars are stacked!</p>
+		<VisXYContainer {data} {height} yDirection="south" yDomain={domain}>
+			<VisStackedBar
+				x={(_, i) => i}
+				y={(d) => d.doc_count}
+				barPadding={0.1}
+				orientation="horizontal"
+			/>
+			<VisAxis type="x" label={xLabel} />
+			<VisAxis type="y" label={yLabel} gridLine={false} {numTicks} {tickFormat} {tickValues} />
+		</VisXYContainer>
 	{:else if selectedView === 'donut'}
 		<p>🍩</p>
 	{:else}
@@ -59,8 +115,28 @@
 </section>
 
 <style>
+	fieldset {
+		border: none;
+	}
+
 	#viz-controls fieldset {
 		display: flex;
 		justify-content: space-around;
+	}
+
+	#viz-settings fieldset {
+		display: flex;
+		justify-content: space-between;
+		padding-inline: var(--size-4);
+		width: 100%;
+	}
+
+	#viz-settings fieldset * {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-inline-size: unset;
+		padding-bottom: var(--size-4);
 	}
 </style>
