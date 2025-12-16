@@ -1,6 +1,7 @@
 <script>
 	import {
 		VisAxis,
+		VisBulletLegend,
 		VisXYContainer,
 		VisNestedDonut,
 		VisSingleContainer,
@@ -56,6 +57,13 @@
 
 	// Donut
 	const layers = $derived([(d) => d.key]);
+
+	// Legend
+	const items = $derived(
+		data.map((d) => ({
+			name: d.key
+		}))
+	);
 
 	// Tooltips
 	const triggers = $derived({
@@ -151,6 +159,7 @@
 			<VisNestedDonut {layers} value={(d) => d.value} direction="outwards" layerPadding={10} />
 			<VisTooltip {triggers} />
 		</VisSingleContainer>
+		<VisBulletLegend {items} />
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
@@ -189,5 +198,16 @@
 		justify-content: center;
 		max-inline-size: unset;
 		padding-bottom: var(--size-4);
+	}
+
+	#viz-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	:global(vis-bullet-legend) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 </style>
