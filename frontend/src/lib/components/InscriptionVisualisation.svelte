@@ -44,13 +44,24 @@
 	);
 
 	let selectedColourBy = $state('');
-	const selectedColourByKeys = $derived(() => {
+	const selectedColourByKeys = $derived.by(() => {
 		if (!selectedColourBy) return [];
 		const buckets =
 			aggregations[selectedColourBy]?.buckets.filter(
 				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
 			) || [];
 		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
+	});
+
+	// Colour-by keys that have at least one count > 0 in the current data
+	const activeColourByKeys = $derived.by(() => {
+		if (!selectedColourBy || !data.length) return [];
+		return selectedColourByKeys.filter((key) =>
+			data.some((d) => {
+				const item = /** @type {Record<string, unknown>} */ (d);
+				return typeof item[key] === 'number' && /** @type {number} */ (item[key]) > 0;
+			})
+		);
 	});
 
 	// Viz settings
@@ -179,10 +190,8 @@
 	const xLabel = 'Inscription count';
 
 	const y = $derived(
-		selectedColourBy && selectedColourByKeys().length > 0
-			? selectedColourByKeys().map(
-					(key) => (/** @type {Record<string, number>} */ d) => d[key] ?? 0
-				)
+		selectedColourBy && activeColourByKeys.length > 0
+			? activeColourByKeys.map((key) => (/** @type {Record<string, number>} */ d) => d[key] ?? 0)
 			: (/** @type {{ value: number }} */ d) => d.value
 	);
 	/** @type {[number, number]} */
@@ -196,10 +205,10 @@
 	// Donut
 	/** @type {{ key?: string, group?: string, subgroup?: string, value: number }[]} */
 	const donutData = $derived(
-		!selectedColourBy || selectedColourByKeys().length === 0
+		!selectedColourBy || activeColourByKeys.length === 0
 			? data.map((d) => ({ key: d.key, value: d.value }))
 			: data.flatMap((d) =>
-					selectedColourByKeys()
+					activeColourByKeys
 						.filter((k) => typeof d[k] === 'number' && d[k] > 0)
 						.map((k) => ({
 							group: d.key,
@@ -211,7 +220,7 @@
 
 	/** @type {((d: any) => string)[]} */
 	const layers = $derived(
-		selectedColourBy && selectedColourByKeys().length > 0
+		selectedColourBy && activeColourByKeys.length > 0
 			? [(d) => d.group, (d) => d.subgroup]
 			: [(d) => d.key]
 	);
@@ -220,8 +229,8 @@
 	const legendShape = BulletShape.Square;
 
 	const legendItems = $derived(
-		selectedColourBy && selectedColourByKeys().length > 0
-			? selectedColourByKeys().map((key) => ({
+		selectedColourBy && activeColourByKeys.length > 0
+			? activeColourByKeys.map((key) => ({
 					name: formatKey(key),
 					shape: legendShape
 				}))
@@ -241,7 +250,7 @@
 	function getBarTooltip(bar) {
 		// For stacked bars, show all segment values with the hovered one highlighted
 		if (selectedColourBy && bar._stacked) {
-			const keys = selectedColourByKeys();
+			const keys = activeColourByKeys;
 			const hoveredValue = bar._stacked[1] - bar._stacked[0];
 			const lines = keys
 				.filter((key) => typeof bar[key] === 'number' && bar[key] > 0)
@@ -375,6 +384,31 @@
 	{/if}
 </section>
 
+<section id="viz-data">
+	<table>
+		<thead class="surface-1">
+			<tr>
+				<th class="surface-4">{selectedCategoryTitle}</th>
+				<th class="surface-4">Count</th>
+				{#each activeColourByKeys as key}
+					<th class="surface-4">{formatKey(key)}</th>
+				{/each}
+			</tr>
+		</thead>
+		<tbody>
+			{#each data as d (d.key)}
+				<tr>
+					<td>{d.key}</td>
+					<td class="number">{d.value.toLocaleString()}</td>
+					{#each activeColourByKeys as key (key)}
+						<td class="number">{d[key]?.toLocaleString() || '-'}</td>
+					{/each}
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+</section>
+
 <style>
 	:global(body, html) {
 		--vis-color-main: var(--surface-3);
@@ -453,5 +487,49 @@
 
 	#viz-container div {
 		flex: 1 auto;
+	}
+
+	#viz-data {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	table {
+		--nice-inner-radius: 0;
+
+		background: unset;
+		border: unset;
+		border-radius: unset;
+		border-spacing: 0;
+		border-top: 1px solid var(--border-color);
+	}
+
+	thead {
+		border-start-start-radius: unset;
+		font-size: var(--font-size-1);
+	}
+
+	th {
+		text-align: left;
+	}
+
+	tr :not(th) {
+		font-size: var(--font-size-0);
+		vertical-align: top;
+		padding-block: var(--size-1);
+	}
+
+	tr:hover {
+		font-weight: 600;
+	}
+
+	td {
+		padding-block: var(--size-4);
+		text-align: left;
+	}
+
+	td.number {
+		text-align: right;
 	}
 </style>
