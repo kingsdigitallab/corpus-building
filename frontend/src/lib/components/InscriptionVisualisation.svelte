@@ -15,12 +15,14 @@
 	let { inscriptions, aggregations } = $props();
 
 	const HIERARCHY_SEPARATOR = ':::';
+	const excludedCategories = ['letterHeightAtLeast', 'letterHeightAtMost', 'notBefore', 'notAfter'];
 
 	// Viz controls
 	let selectedView = $state('bar-stacked');
 
 	const categories = $derived(
 		Object.values(aggregations)
+			.filter((aggregation) => !excludedCategories.includes(aggregation.name))
 			.map((aggregation) => ({
 				value: aggregation.name,
 				label: aggregation.title
@@ -36,7 +38,10 @@
 	let selectedColourBy = $state('');
 	const selectedColourByKeys = $derived(() => {
 		if (!selectedColourBy) return [];
-		const buckets = aggregations[selectedColourBy]?.buckets || [];
+		const buckets =
+			aggregations[selectedColourBy]?.buckets.filter(
+				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
+			) || [];
 		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
 	});
 
@@ -49,7 +54,11 @@
 
 	function getData() {
 		// Get buckets, sorted by count, limited to maxCategories
-		let buckets = [...(aggregations[selectedCategory]?.buckets || [])];
+		let buckets = [
+			...(aggregations[selectedCategory]?.buckets.filter(
+				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
+			) || [])
+		];
 		buckets = buckets.sort((a, b) => b.doc_count - a.doc_count).slice(0, maxCategories);
 
 		// Simple case: no colour-by selected
