@@ -9,7 +9,7 @@
 		VisTooltip
 	} from '@unovis/svelte';
 	import InscriptionMap from './InscriptionMap.svelte';
-	import { StackedBar } from '@unovis/ts';
+	import { BulletShape, StackedBar } from '@unovis/ts';
 	import { NestedDonut } from '@unovis/ts';
 
 	let { inscriptions, aggregations } = $props();
@@ -169,12 +169,15 @@
 	);
 
 	// Legend - show colour-by categories when selected, otherwise show category values
+	const legendShape = BulletShape.Square;
+
 	const legendItems = $derived(
 		selectedColourBy && selectedColourByKeys().length > 0
 			? selectedColourByKeys().map((key) => ({
-					name: key.replaceAll(HIERARCHY_SEPARATOR, ' > ')
+					name: key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+					shape: legendShape
 				}))
-			: data.map((d) => ({ name: d.key }))
+			: data.map((d) => ({ name: d.key, shape: legendShape }))
 	);
 
 	// Tooltips
@@ -279,7 +282,7 @@
 			<VisTooltip {triggers} />
 		</VisXYContainer>
 		{#if selectedColourBy}
-			<VisBulletLegend items={legendItems} />
+			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
 		{/if}
 	{:else if selectedView === 'donut'}
 		<VisSingleContainer data={donutData} height={height * 1.5}>
@@ -291,7 +294,7 @@
 			/>
 			<VisTooltip {triggers} />
 		</VisSingleContainer>
-		<VisBulletLegend items={legendItems} />
+		<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
