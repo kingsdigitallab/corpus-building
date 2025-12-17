@@ -9,13 +9,17 @@
 		VisTooltip
 	} from '@unovis/svelte';
 	import InscriptionMap from './InscriptionMap.svelte';
-	import { BulletShape, StackedBar } from '@unovis/ts';
-	import { NestedDonut } from '@unovis/ts';
+	import { BulletShape, NestedDonut, StackedBar } from '@unovis/ts';
 
 	let { inscriptions, aggregations } = $props();
 
 	const HIERARCHY_SEPARATOR = ':::';
+	const HIERARCHY_SEPARATOR_LABEL = '>';
 	const excludedCategories = ['letterHeightAtLeast', 'letterHeightAtMost', 'notBefore', 'notAfter'];
+
+	/** @param {string | undefined} key */
+	const formatKey = (key) =>
+		key?.replaceAll(HIERARCHY_SEPARATOR, ` ${HIERARCHY_SEPARATOR_LABEL} `) ?? '';
 
 	// Viz controls
 	let selectedView = $state('bar-stacked');
@@ -64,7 +68,7 @@
 		// Simple case: no colour-by selected
 		if (!selectedColourBy || !inscriptions?.length) {
 			return buckets.map((b) => ({
-				key: b.key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+				key: formatKey(b.key),
 				value: b.doc_count
 			}));
 		}
@@ -112,12 +116,12 @@
 				}
 
 				return {
-					key: bucket.key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+					key: formatKey(bucket.key),
 					value: Object.values(counts).reduce((sum, c) => sum + c, 0),
 					...counts
 				};
 			})
-			.filter((d) => Object.keys(d).length > 1);
+			.filter((d) => Object.keys(d).length > 2);
 
 		return result;
 	}
@@ -144,31 +148,19 @@
 
 	// Donut
 	/** @type {{ key?: string, group?: string, subgroup?: string, value: number }[]} */
-	const donutData = $derived.by(() => {
-		if (!selectedColourBy || selectedColourByKeys().length === 0) {
-			// Simple case: just key and value
-			return data.map((d) => ({
-				key: d.key,
-				value: d.value
-			}));
-		}
-
-		// Colour-by case: flatten into group/subgroup/value for nested donut
-		return data.flatMap((d) => {
-			/** @type {Record<string, unknown>} */
-			const record = d;
-			return selectedColourByKeys()
-				.filter((colourKey) => {
-					const val = record[colourKey];
-					return val !== undefined && typeof val === 'number' && val > 0;
-				})
-				.map((colourKey) => ({
-					group: d.key,
-					subgroup: colourKey.replaceAll(HIERARCHY_SEPARATOR, ' > '),
-					value: /** @type {number} */ (record[colourKey])
-				}));
-		});
-	});
+	const donutData = $derived(
+		!selectedColourBy || selectedColourByKeys().length === 0
+			? data.map((d) => ({ key: d.key, value: d.value }))
+			: data.flatMap((d) =>
+					selectedColourByKeys()
+						.filter((k) => typeof d[k] === 'number' && d[k] > 0)
+						.map((k) => ({
+							group: d.key,
+							subgroup: formatKey(k),
+							value: /** @type {number} */ (d[k])
+						}))
+				)
+	);
 
 	/** @type {((d: any) => string)[]} */
 	const layers = $derived(
@@ -183,10 +175,13 @@
 	const legendItems = $derived(
 		selectedColourBy && selectedColourByKeys().length > 0
 			? selectedColourByKeys().map((key) => ({
-					name: key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+					name: formatKey(key),
 					shape: legendShape
 				}))
-			: data.map((d) => ({ name: d.key, shape: legendShape }))
+			: data.map((d) => ({
+					name: formatKey(d.key),
+					shape: legendShape
+				}))
 	);
 
 	// Tooltips
@@ -203,15 +198,15 @@
 			if (keys.length > 0 && bar.index !== undefined) {
 				const segmentKey = keys[bar.index];
 				const segmentValue = bar.data[segmentKey] ?? 0;
-				return `${bar.data.key}\n${segmentKey.replaceAll(HIERARCHY_SEPARATOR, ' > ')}: ${segmentValue}`;
+				return `${bar.data.key}\n${formatKey(segmentKey)}: ${segmentValue}`;
 			}
 		}
-		return `${bar.key}: ${bar.value}`;
+		return `${formatKey(bar.key)}: ${bar.value}`;
 	}
 
 	/** @param {{ data: { key: string }, value: number }} segment */
 	function getDonutTooltip(segment) {
-		return `${segment.data.key}: ${segment.value}`;
+		return `${formatKey(segment.data.key)}: ${segment.value}`;
 	}
 </script>
 
