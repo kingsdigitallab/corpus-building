@@ -176,7 +176,7 @@
 	});
 
 	// Colour-by keys that have at least one count > 0 in the current data
-	const activeColourByKeys = $derived(() => {
+	const activeColourByKeys = $derived.by(() => {
 		if (!selectedColourBy || !data.length) return [];
 		return selectedColourByKeys.filter((key) =>
 			data.some((d) => {
