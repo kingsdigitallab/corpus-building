@@ -134,7 +134,39 @@
 	const tickValues = $derived(Array.from({ length: numTicks }, (_, i) => i));
 
 	// Donut
-	const layers = $derived([(/** @type {{ key: string }} */ d) => d.key]);
+	/** @type {{ key?: string, group?: string, subgroup?: string, value: number }[]} */
+	const donutData = $derived.by(() => {
+		if (!selectedColourBy || selectedColourByKeys().length === 0) {
+			// Simple case: just key and value
+			return data.map((d) => ({
+				key: d.key,
+				value: d.value
+			}));
+		}
+
+		// Colour-by case: flatten into group/subgroup/value for nested donut
+		return data.flatMap((d) => {
+			/** @type {Record<string, unknown>} */
+			const record = d;
+			return selectedColourByKeys()
+				.filter((colourKey) => {
+					const val = record[colourKey];
+					return val !== undefined && typeof val === 'number' && val > 0;
+				})
+				.map((colourKey) => ({
+					group: d.key,
+					subgroup: colourKey.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+					value: /** @type {number} */ (record[colourKey])
+				}));
+		});
+	});
+
+	/** @type {((d: any) => string)[]} */
+	const layers = $derived(
+		selectedColourBy && selectedColourByKeys().length > 0
+			? [(d) => d.group, (d) => d.subgroup]
+			: [(d) => d.key]
+	);
 
 	// Legend - show colour-by categories when selected, otherwise show category values
 	const legendItems = $derived(
@@ -250,7 +282,7 @@
 			<VisBulletLegend items={legendItems} />
 		{/if}
 	{:else if selectedView === 'donut'}
-		<VisSingleContainer {data} height={height * 1.5}>
+		<VisSingleContainer data={donutData} height={height * 1.5}>
 			<VisNestedDonut
 				{layers}
 				value={(/** @type {{ value: number }} */ d) => d.value}
