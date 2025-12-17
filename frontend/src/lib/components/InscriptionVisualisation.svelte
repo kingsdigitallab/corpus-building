@@ -57,6 +57,8 @@
 	let maxCategories = $state(10);
 	let height = $state(400);
 
+	let showDataTable = $state(false);
+
 	// Viz data
 	const data = $derived(getData());
 
@@ -385,28 +387,35 @@
 </section>
 
 <section id="viz-data">
-	<table>
-		<thead class="surface-1">
-			<tr>
-				<th class="surface-4">{selectedCategoryTitle}</th>
-				<th class="surface-4">Count</th>
-				{#each activeColourByKeys as key}
-					<th class="surface-4">{formatKey(key)}</th>
-				{/each}
-			</tr>
-		</thead>
-		<tbody>
-			{#each data as d (d.key)}
+	<p>
+		<button on:click={() => (showDataTable = !showDataTable)}>
+			{showDataTable ? 'Hide' : 'Show'} data
+		</button>
+	</p>
+	{#if showDataTable}
+		<table>
+			<thead class="surface-1">
 				<tr>
-					<td>{d.key}</td>
-					<td class="number">{d.value.toLocaleString()}</td>
+					<th class="surface-4">{selectedCategoryTitle}</th>
+					<th class="surface-4">Count</th>
 					{#each activeColourByKeys as key (key)}
-						<td class="number">{d[key]?.toLocaleString() || '-'}</td>
+						<th class="surface-4">{formatKey(key)}</th>
 					{/each}
 				</tr>
-			{/each}
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				{#each data as d (d.key)}
+					<tr>
+						<td>{d.key}</td>
+						<td class="number">{d.value.toLocaleString()}</td>
+						{#each activeColourByKeys as key (key)}
+							<td class="number">{d[key]?.toLocaleString() || '-'}</td>
+						{/each}
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	{/if}
 </section>
 
 <style>
@@ -486,7 +495,7 @@
 	}
 
 	#viz-container div {
-		flex: 1 auto;
+		flex: auto auto;
 	}
 
 	#viz-data {
@@ -503,6 +512,7 @@
 		border-radius: unset;
 		border-spacing: 0;
 		border-top: 1px solid var(--border-color);
+		margin-top: var(--size-4);
 	}
 
 	thead {
