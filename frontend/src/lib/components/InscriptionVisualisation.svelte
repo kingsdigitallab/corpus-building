@@ -275,6 +275,50 @@
 		}
 		return `<h6 class="legend-title">${formatKey(segment.data.key)}</h6>${segment.value.toLocaleString()} inscriptions`;
 	}
+
+	let isDownloading = $state(false);
+
+	async function downloadData() {
+		isDownloading = true;
+
+		const csv = dataToCSV(data);
+		await downloadFile(
+			csv,
+			`${selectedCategory.toLowerCase()}${selectedColourBy ? `-${selectedColourBy}` : ''}.csv`
+		);
+
+		isDownloading = false;
+	}
+
+	/**
+	 * @param {Record<string, unknown>[]} data
+	 * @returns {string}
+	 */
+	function dataToCSV(data) {
+		const headers = ['Category', 'Count', ...activeColourByKeys];
+		const rows = data.map((d) => [
+			d.key,
+			d.value,
+			...activeColourByKeys.map((key) => d[key] || '-')
+		]);
+
+		return [headers, ...rows].map((row) => row.join(',')).join('\n');
+	}
+
+	/**
+	 * @param {string} content
+	 * @param {string} filename
+	 */
+	async function downloadFile(content, filename) {
+		const blob = new Blob([content], { type: 'text/csv' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = filename;
+		a.click();
+		a.remove();
+		URL.revokeObjectURL(url);
+	}
 </script>
 
 <section id="viz-controls">
@@ -390,7 +434,7 @@
 
 <section id="viz-data">
 	<p>
-		<button on:click={() => (showDataTable = !showDataTable)}>
+		<button class="surface-2" on:click={() => (showDataTable = !showDataTable)}>
 			{showDataTable ? 'Hide' : 'Show'} data
 		</button>
 	</p>
@@ -417,6 +461,11 @@
 				{/each}
 			</tbody>
 		</table>
+		<p>
+			<button on:click={() => downloadData()} aria-busy={isDownloading} disabled={isDownloading}
+				>{isDownloading ? 'Downloading...' : 'Download data'}</button
+			>
+		</p>
 	{/if}
 </section>
 
@@ -514,6 +563,7 @@
 		border-radius: unset;
 		border-spacing: 0;
 		border-top: 1px solid var(--border-color);
+		margin-bottom: var(--size-6);
 		margin-top: var(--size-4);
 	}
 
