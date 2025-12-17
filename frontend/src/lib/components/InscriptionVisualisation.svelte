@@ -14,6 +14,8 @@
 
 	let { inscriptions, aggregations } = $props();
 
+	const HIERARCHY_SEPARATOR = ':::';
+
 	// Viz controls
 	let selectedView = $state('bar-stacked');
 
@@ -32,39 +34,114 @@
 	);
 
 	let selectedColourBy = $state('');
+	const selectedColourByKeys = $derived(() => {
+		if (!selectedColourBy) return [];
+		const buckets = aggregations[selectedColourBy]?.buckets || [];
+		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
+	});
 
 	// Viz settings
 	let maxCategories = $state(10);
 	let height = $state(400);
 
 	// Viz data
-	const data = $derived(
-		selectedCategoryBuckets
-			.slice(0, maxCategories)
-			.sort((a, b) => a.key.localeCompare(b.key))
-			.map((bucket) => ({
-				key: bucket.key,
-				value: bucket.doc_count
-			}))
-	);
+	const data = $derived(getData());
+
+	function getData() {
+		// Get buckets, sorted by count, limited to maxCategories
+		let buckets = [...(aggregations[selectedCategory]?.buckets || [])];
+		buckets = buckets.sort((a, b) => b.doc_count - a.doc_count).slice(0, maxCategories);
+
+		// Simple case: no colour-by selected
+		if (!selectedColourBy || !inscriptions?.length) {
+			return buckets.map((b) => ({
+				key: b.key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+				value: b.doc_count
+			}));
+		}
+
+		// Helper to get values as array (handles both array and string fields)
+		/** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
+		const getValuesAsArray = (item, field) => {
+			const value = item[field];
+			if (Array.isArray(value)) return value;
+			if (value !== undefined && value !== null) return [value];
+			return [];
+		};
+
+		// Build lookup: categoryValue -> items[]
+		const categoryMap = new Map();
+		for (const item of inscriptions) {
+			const values = getValuesAsArray(item, selectedCategory);
+			for (const v of values) {
+				if (!categoryMap.has(v)) categoryMap.set(v, []);
+				categoryMap.get(v).push(item);
+			}
+		}
+
+		// Get valid colourBy keys
+		const colourByBuckets = aggregations[selectedColourBy]?.buckets || [];
+		const validColourByKeys = new Set(
+			colourByBuckets.map((/** @type {{ key: string }} */ b) => b.key)
+		);
+
+		// Cross-tabulate: for each category bucket, count items by aggregateBy value
+		const result = buckets
+			.map((bucket) => {
+				const items = categoryMap.get(bucket.key) || [];
+				/** @type {Record<string, number>} */
+				const counts = {};
+
+				for (const item of items) {
+					const groupValues = getValuesAsArray(item, selectedColourBy);
+					for (const gv of groupValues) {
+						const key = /** @type {string} */ (gv);
+						if (validColourByKeys.has(key)) {
+							counts[key] = (counts[key] || 0) + 1;
+						}
+					}
+				}
+
+				return {
+					key: bucket.key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+					...counts
+				};
+			})
+			.filter((d) => Object.keys(d).length > 1);
+
+		return result;
+	}
 
 	// Bar
-	const yDomain = $derived([0, data.length - 1]);
-
+	/** @type {(d: unknown, i: number) => number} */
+	const x = (_, i) => i;
 	const xLabel = 'Inscription count';
+
+	const y = $derived(
+		selectedColourBy && selectedColourByKeys().length > 0
+			? selectedColourByKeys().map(
+					(key) => (/** @type {Record<string, number>} */ d) => d[key] ?? 0
+				)
+			: (/** @type {{ value: number }} */ d) => d.value
+	);
+	/** @type {[number, number]} */
+	const yDomain = $derived([0, data.length - 1]);
 	const yLabel = $derived(aggregations[selectedCategory]?.title || 'No title');
+
 	const numTicks = $derived(data.length);
-	const tickFormat = $derived((tick) => data[tick]?.key || tick);
+	const tickFormat = $derived((/** @type {number} */ tick) => data[tick]?.key || tick);
 	const tickValues = $derived(Array.from({ length: numTicks }, (_, i) => i));
 
 	// Donut
-	const layers = $derived([(d) => d.key]);
+	const layers = $derived([(/** @type {{ key: string }} */ d) => d.key]);
 
-	// Legend
-	const items = $derived(
-		data.map((d) => ({
-			name: d.key
-		}))
+	// Legend - show colour-by categories when selected, otherwise show category values
+	const legendItems = $derived(
+		selectedColourBy && selectedColourByKeys().length > 0
+			? selectedColourByKeys().map((key) => ({
+					name: key.replaceAll(HIERARCHY_SEPARATOR, ' > ')
+				}))
+			: data.map((d) => ({ name: d.key }))
 	);
 
 	// Tooltips
@@ -73,10 +150,21 @@
 		[NestedDonut.selectors.segment]: getDonutTooltip
 	});
 
+	/** @param {{ data?: Record<string, unknown> & { key?: string }, index?: number, key?: string, value?: number }} bar */
 	function getBarTooltip(bar) {
+		// For stacked bars, show the segment value; for simple bars, show total
+		if (selectedColourBy && bar.data) {
+			const keys = selectedColourByKeys();
+			if (keys.length > 0 && bar.index !== undefined) {
+				const segmentKey = keys[bar.index];
+				const segmentValue = bar.data[segmentKey] ?? 0;
+				return `${bar.data.key}\n${segmentKey.replaceAll(HIERARCHY_SEPARATOR, ' > ')}: ${segmentValue}`;
+			}
+		}
 		return `${bar.key}: ${bar.value}`;
 	}
 
+	/** @param {{ data: { key: string }, value: number }} segment */
 	function getDonutTooltip(segment) {
 		return `${segment.data.key}: ${segment.value}`;
 	}
@@ -89,7 +177,7 @@
 			<select name="view" bind:value={selectedView}>
 				<option value="bar-stacked">Bar</option>
 				<option value="donut">Donut</option>
-				<option value="map" selected>Map</option>
+				<option value="map">Map</option>
 			</select>
 		</label>
 		<label>
@@ -103,6 +191,7 @@
 		<label>
 			Colour by
 			<select name="colourBy" bind:value={selectedColourBy} disabled={selectedView === 'map'}>
+				<option value="">None</option>
 				{#each categories as category (category.value)}
 					{#if category.value === selectedCategory}
 						<option value={category.value} disabled>{category.label}</option>
@@ -151,17 +240,25 @@
 		<InscriptionMap {inscriptions} />
 	{:else if selectedView === 'bar-stacked'}
 		<VisXYContainer {data} {height} yDirection="south" {yDomain}>
-			<VisStackedBar x={(_, i) => i} y={(d) => d.value} barPadding={0.1} orientation="horizontal" />
+			<VisStackedBar {x} {y} barPadding={0.1} orientation="horizontal" />
 			<VisAxis type="x" label={xLabel} />
 			<VisAxis type="y" label={yLabel} gridLine={false} {numTicks} {tickFormat} {tickValues} />
 			<VisTooltip {triggers} />
 		</VisXYContainer>
+		{#if selectedColourBy}
+			<VisBulletLegend items={legendItems} />
+		{/if}
 	{:else if selectedView === 'donut'}
 		<VisSingleContainer {data} height={height * 1.5}>
-			<VisNestedDonut {layers} value={(d) => d.value} direction="outwards" layerPadding={10} />
+			<VisNestedDonut
+				{layers}
+				value={(/** @type {{ value: number }} */ d) => d.value}
+				direction="outwards"
+				layerPadding={10}
+			/>
 			<VisTooltip {triggers} />
 		</VisSingleContainer>
-		<VisBulletLegend {items} />
+		<VisBulletLegend items={legendItems} />
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
