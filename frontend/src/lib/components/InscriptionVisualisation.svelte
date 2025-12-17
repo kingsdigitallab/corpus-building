@@ -353,12 +353,7 @@
 
 	#viz-container {
 		display: flex;
+		gap: var(--size-8);
 		justify-content: space-between;
-	}
-
-	:global(vis-bullet-legend) {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 	}
 </style>
