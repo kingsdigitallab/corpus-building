@@ -335,10 +335,13 @@
 		justify-content: space-around;
 	}
 
+	#viz-settings {
+		margin-bottom: 0;
+	}
+
 	#viz-settings fieldset {
 		display: flex;
 		justify-content: space-between;
-		padding-inline: var(--size-4);
 		width: 100%;
 	}
 
@@ -349,11 +352,25 @@
 		justify-content: center;
 		max-inline-size: unset;
 		padding-bottom: var(--size-4);
+		padding-inline: var(--size-8);
+		width: 100%;
+	}
+
+	#viz-settings fieldset :first-child {
+		border-right: var(--border-size-1) solid var(--border-color);
+	}
+
+	input[type='range'] {
+		width: 100%;
 	}
 
 	#viz-container {
+		border-bottom: var(--border-size-1) solid var(--border-color);
+		border-top: var(--border-size-1) solid var(--border-color);
 		display: flex;
 		gap: var(--size-8);
 		justify-content: space-between;
+		margin-top: 0;
+		padding-block: var(--size-10);
 	}
 </style>
