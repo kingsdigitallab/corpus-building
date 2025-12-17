@@ -53,17 +53,6 @@
 		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
 	});
 
-	// Colour-by keys that have at least one count > 0 in the current data
-	const activeColourByKeys = $derived.by(() => {
-		if (!selectedColourBy || !data.length) return [];
-		return selectedColourByKeys.filter((key) =>
-			data.some((d) => {
-				const item = /** @type {Record<string, unknown>} */ (d);
-				return typeof item[key] === 'number' && /** @type {number} */ (item[key]) > 0;
-			})
-		);
-	});
-
 	// Viz settings
 	let maxCategories = $state(10);
 	let height = $state(400);
@@ -182,6 +171,17 @@
 		}
 
 		return parts.join('. ') + '.';
+	});
+
+	// Colour-by keys that have at least one count > 0 in the current data
+	const activeColourByKeys = $derived(() => {
+		if (!selectedColourBy || !data.length) return [];
+		return selectedColourByKeys.filter((key) =>
+			data.some((d) => {
+				const item = /** @type {Record<string, unknown>} */ (d);
+				return typeof item[key] === 'number' && /** @type {number} */ (item[key]) > 0;
+			})
+		);
 	});
 
 	// Bar
