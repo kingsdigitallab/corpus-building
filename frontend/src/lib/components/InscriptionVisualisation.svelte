@@ -16,7 +16,8 @@
 
 	const HIERARCHY_SEPARATOR = ':::';
 	const HIERARCHY_SEPARATOR_LABEL = '>';
-	const excludedCategories = ['letterHeightAtLeast', 'letterHeightAtMost', 'notBefore', 'notAfter'];
+	/** @type {string[]} */
+	const excludedCategories = [];
 
 	/** @param {string | undefined} key */
 	const formatKey = (key) =>
@@ -93,8 +94,9 @@
 		for (const item of inscriptions) {
 			const values = getValuesAsArray(item, selectedCategory);
 			for (const v of values) {
-				if (!categoryMap.has(v)) categoryMap.set(v, []);
-				categoryMap.get(v).push(item);
+				const key = String(v);
+				if (!categoryMap.has(key)) categoryMap.set(key, []);
+				categoryMap.get(key).push(item);
 			}
 		}
 
@@ -104,7 +106,7 @@
 			colourByBuckets.map((/** @type {{ key: string }} */ b) => b.key)
 		);
 
-		// Cross-tabulate: for each category bucket, count items by aggregateBy value
+		// For each category bucket, count items by colourBy value
 		const result = buckets
 			.map((bucket) => {
 				const items = categoryMap.get(bucket.key) || [];
@@ -114,7 +116,7 @@
 				for (const item of items) {
 					const groupValues = getValuesAsArray(item, selectedColourBy);
 					for (const gv of groupValues) {
-						const key = /** @type {string} */ (gv);
+						const key = String(gv);
 						if (validColourByKeys.has(key)) {
 							counts[key] = (counts[key] || 0) + 1;
 						}
