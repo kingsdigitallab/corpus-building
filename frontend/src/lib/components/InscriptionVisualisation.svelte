@@ -190,18 +190,22 @@
 		[NestedDonut.selectors.segment]: getDonutTooltip
 	});
 
-	/** @param {{ data?: Record<string, unknown> & { key?: string }, index?: number, key?: string, value?: number }} bar */
+	/** @param {{ key: string, value: number, _index?: number, _stacked?: [number, number] } & Record<string, unknown>} bar */
 	function getBarTooltip(bar) {
-		// For stacked bars, show the segment value; for simple bars, show total
-		if (selectedColourBy && bar.data) {
+		// For stacked bars, show all segment values with the hovered one highlighted
+		if (selectedColourBy && bar._stacked) {
 			const keys = selectedColourByKeys();
-			if (keys.length > 0 && bar.index !== undefined) {
-				const segmentKey = keys[bar.index];
-				const segmentValue = bar.data[segmentKey] ?? 0;
-				return `${bar.data.key}\n${formatKey(segmentKey)}: ${segmentValue}`;
-			}
+			const hoveredValue = bar._stacked[1] - bar._stacked[0];
+			const lines = keys
+				.filter((key) => typeof bar[key] === 'number' && bar[key] > 0)
+				.map((key) => {
+					const value = /** @type {number} */ (bar[key]);
+					const text = `${formatKey(key)}: ${value.toLocaleString()}`;
+					return value === hoveredValue ? `<strong>${text}</strong>` : text;
+				});
+			return `<h6 class="legend-title">${formatKey(bar.key)}</h6>${lines.join('<br>')}`;
 		}
-		return `${formatKey(bar.key)}: ${bar.value}`;
+		return `<h6 class="legend-title">${formatKey(bar.key)}</h6>${bar.value.toLocaleString()} inscriptions`;
 	}
 
 	/** @param {{ data: { key: string }, value: number }} segment */
@@ -312,6 +316,11 @@
 		--vis-font-family: var(--font-family);
 
 		--vis-nested-donut-segment-label-font-size: 0.875em;
+	}
+
+	:global(.legend-title) {
+		font-variant: small-caps;
+		padding-bottom: var(--size-2);
 	}
 
 	fieldset {
