@@ -210,7 +210,10 @@
 
 	/** @param {{ data: { key: string }, value: number }} segment */
 	function getDonutTooltip(segment) {
-		return `${formatKey(segment.data.key)}: ${segment.value}`;
+		if (selectedColourBy) {
+			return `<h6 class="legend-title">${formatKey(segment.data.root)}</h6>${formatKey(segment.data.key)}: ${segment.value.toLocaleString()} inscriptions`;
+		}
+		return `<h6 class="legend-title">${formatKey(segment.data.key)}</h6>${segment.value.toLocaleString()} inscriptions`;
 	}
 </script>
 
