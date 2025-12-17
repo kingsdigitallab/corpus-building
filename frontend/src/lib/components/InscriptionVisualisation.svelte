@@ -8,8 +8,9 @@
 		VisStackedBar,
 		VisTooltip
 	} from '@unovis/svelte';
-	import InscriptionMap from './InscriptionMap.svelte';
 	import { BulletShape, NestedDonut, StackedBar } from '@unovis/ts';
+	import pluralize from 'pluralize-esm';
+	import InscriptionMap from './InscriptionMap.svelte';
 
 	let { inscriptions, aggregations } = $props();
 
@@ -35,6 +36,9 @@
 	);
 
 	let selectedCategory = $state('inscriptionType');
+	const selectedCategoryTitle = $derived(
+		categories.find((c) => c.value === selectedCategory)?.label || 'No title'
+	);
 	const selectedCategoryBuckets = $derived(
 		[...(aggregations[selectedCategory]?.buckets || [])].sort((a, b) => b.doc_count - a.doc_count)
 	);
@@ -125,6 +129,23 @@
 
 		return result;
 	}
+
+	const summary = $derived.by(() => {
+		if (!data || data.length === 0) {
+			return 'No data!';
+		}
+
+		const totalItems = data.reduce((sum, d) => sum + d.value, 0);
+
+		const maxCategory = data.reduce((max, curr) => (curr.value > max.value ? curr : max), data[0]);
+		const minCategory = data.reduce((min, curr) => (curr.value < min.value ? curr : min), data[0]);
+
+		let summary = `There are ${totalItems.toLocaleString()} total inscriptions across ${data.length} ${pluralize(selectedCategoryTitle.toLowerCase(), data.length)}.`;
+		summary = `${summary} Highest count is ${maxCategory.value.toLocaleString()} ${pluralize('inscription', maxCategory.value)} for <em>${maxCategory.key}</em>,`;
+		summary = `${summary} lowest is ${minCategory.value.toLocaleString()} ${pluralize('inscription', minCategory.value)} for <em>${minCategory.key}</em>.`;
+
+		return summary;
+	});
 
 	// Bar
 	/** @type {(d: unknown, i: number) => number} */
@@ -282,6 +303,17 @@
 	{/if}
 </section>
 
+<section id="viz-summary">
+	<hgroup>
+		<h3>
+			{selectedView === 'map' ? 'Map' : selectedCategoryTitle}
+		</h3>
+		{#if selectedView !== 'map'}
+			<p>{@html summary}</p>
+		{/if}
+	</hgroup>
+</section>
+
 <section id="viz-container">
 	{#if selectedView === 'map'}
 		<InscriptionMap {inscriptions} />
@@ -293,7 +325,10 @@
 			<VisTooltip {triggers} />
 		</VisXYContainer>
 		{#if selectedColourBy}
-			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+			<div>
+				<h4>Legend</h4>
+				<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+			</div>
 		{/if}
 	{:else if selectedView === 'donut'}
 		<VisSingleContainer data={donutData} height={height * 1.5}>
@@ -305,7 +340,10 @@
 			/>
 			<VisTooltip {triggers} />
 		</VisSingleContainer>
-		<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+		<div>
+			<h4>Legend</h4>
+			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+		</div>
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
@@ -345,7 +383,7 @@
 		width: 100%;
 	}
 
-	#viz-settings fieldset * {
+	#viz-settings fieldset > * {
 		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
@@ -356,6 +394,10 @@
 		width: 100%;
 	}
 
+	small {
+		max-inline-size: unset;
+	}
+
 	#viz-settings fieldset :first-child {
 		border-right: var(--border-size-1) solid var(--border-color);
 	}
@@ -364,13 +406,26 @@
 		width: 100%;
 	}
 
+	#viz-summary {
+		border-top: var(--border-size-1) solid var(--border-color);
+		padding-top: var(--size-4);
+		margin-bottom: 0;
+	}
+
+	#viz-summary hgroup p {
+		max-inline-size: unset;
+	}
+
 	#viz-container {
 		border-bottom: var(--border-size-1) solid var(--border-color);
-		border-top: var(--border-size-1) solid var(--border-color);
 		display: flex;
 		gap: var(--size-8);
 		justify-content: space-between;
 		margin-top: 0;
 		padding-block: var(--size-10);
+	}
+
+	#viz-container div {
+		flex: 1 auto;
 	}
 </style>
