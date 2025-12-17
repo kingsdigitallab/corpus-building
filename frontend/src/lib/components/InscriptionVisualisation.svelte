@@ -104,6 +104,7 @@
 
 				return {
 					key: bucket.key.replaceAll(HIERARCHY_SEPARATOR, ' > '),
+					value: Object.values(counts).reduce((sum, c) => sum + c, 0),
 					...counts
 				};
 			})
