@@ -433,42 +433,44 @@
 	{/if}
 </section>
 
-<section id="viz-data">
-	<p>
-		<button class="surface-2" on:click={() => (showDataTable = !showDataTable)}>
-			<TableIcon />{showDataTable ? 'Hide' : 'Show'} data
-		</button>
-	</p>
-	{#if showDataTable}
-		<table>
-			<thead class="surface-1">
-				<tr>
-					<th class="surface-4">{selectedCategoryTitle}</th>
-					<th class="surface-4">Count</th>
-					{#each activeColourByKeys as key (key)}
-						<th class="surface-4">{formatKey(key)}</th>
-					{/each}
-				</tr>
-			</thead>
-			<tbody>
-				{#each data as d (d.key)}
+{#if selectedView !== 'map'}
+	<section id="viz-data">
+		<p>
+			<button class="surface-2" on:click={() => (showDataTable = !showDataTable)}>
+				<TableIcon />{showDataTable ? 'Hide' : 'Show'} data
+			</button>
+		</p>
+		{#if showDataTable}
+			<table>
+				<thead class="surface-1">
 					<tr>
-						<td>{d.key}</td>
-						<td class="number">{d.value.toLocaleString()}</td>
+						<th class="surface-4">{selectedCategoryTitle}</th>
+						<th class="surface-4">Count</th>
 						{#each activeColourByKeys as key (key)}
-							<td class="number">{d[key]?.toLocaleString() || '-'}</td>
+							<th class="surface-4">{formatKey(key)}</th>
 						{/each}
 					</tr>
-				{/each}
-			</tbody>
-		</table>
-		<p>
-			<button on:click={() => downloadData()} aria-busy={isDownloading} disabled={isDownloading}
-				><DownloadIcon />{isDownloading ? 'Downloading...' : 'Download data'}</button
-			>
-		</p>
-	{/if}
-</section>
+				</thead>
+				<tbody>
+					{#each data as d (d.key)}
+						<tr>
+							<td>{d.key}</td>
+							<td class="number">{d.value.toLocaleString()}</td>
+							{#each activeColourByKeys as key (key)}
+								<td class="number">{d[key]?.toLocaleString() || '-'}</td>
+							{/each}
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+			<p>
+				<button on:click={() => downloadData()} aria-busy={isDownloading} disabled={isDownloading}
+					><DownloadIcon />{isDownloading ? 'Downloading...' : 'Download data'}</button
+				>
+			</p>
+		{/if}
+	</section>
+{/if}
 
 <style>
 	:global(body, html) {
@@ -541,13 +543,12 @@
 	}
 
 	#viz-container {
-		border-bottom: var(--border-size-1) solid var(--border-color);
 		display: flex;
 		gap: var(--size-8);
 		justify-content: space-between;
 		margin-top: 0;
 		max-width: 100%;
-		padding-block: var(--size-10);
+		padding-top: var(--size-10);
 	}
 
 	#viz-container div {
@@ -556,10 +557,12 @@
 
 	#viz-data {
 		align-items: center;
+		border-top: var(--border-size-1) solid var(--border-color);
 		display: flex;
 		flex-direction: column;
 		max-width: 100%;
 		overflow: scroll;
+		padding-top: var(--size-6);
 	}
 
 	table {
