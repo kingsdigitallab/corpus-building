@@ -334,7 +334,12 @@
 		</label>
 		<label>
 			Category
-			<select name="category" bind:value={selectedCategory} disabled={selectedView === 'map'}>
+			<select
+				name="category"
+				bind:value={selectedCategory}
+				disabled={selectedView === 'map'}
+				onchange={() => (selectedColourBy = '')}
+			>
 				{#each categories as category (category.value)}
 					<option value={category.value}>{category.label}</option>
 				{/each}
@@ -436,7 +441,7 @@
 {#if selectedView !== 'map'}
 	<section id="viz-data">
 		<p>
-			<button class="surface-2" on:click={() => (showDataTable = !showDataTable)}>
+			<button class="surface-2" onclick={() => (showDataTable = !showDataTable)}>
 				<TableIcon />{showDataTable ? 'Hide' : 'Show'} data
 			</button>
 		</p>
@@ -464,7 +469,7 @@
 				</tbody>
 			</table>
 			<p>
-				<button on:click={() => downloadData()} aria-busy={isDownloading} disabled={isDownloading}
+				<button onclick={() => downloadData()} aria-busy={isDownloading} disabled={isDownloading}
 					><DownloadIcon />{isDownloading ? 'Downloading...' : 'Download data'}</button
 				>
 			</p>
