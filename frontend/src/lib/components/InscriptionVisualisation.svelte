@@ -11,6 +11,7 @@
 	import { BulletShape, NestedDonut, StackedBar } from '@unovis/ts';
 	import pluralize from 'pluralize-esm';
 	import InscriptionMap from './InscriptionMap.svelte';
+	import { DownloadIcon, TableIcon } from 'lucide-svelte';
 
 	let { inscriptions, aggregations } = $props();
 
@@ -435,7 +436,7 @@
 <section id="viz-data">
 	<p>
 		<button class="surface-2" on:click={() => (showDataTable = !showDataTable)}>
-			{showDataTable ? 'Hide' : 'Show'} data
+			<TableIcon />{showDataTable ? 'Hide' : 'Show'} data
 		</button>
 	</p>
 	{#if showDataTable}
@@ -463,7 +464,7 @@
 		</table>
 		<p>
 			<button on:click={() => downloadData()} aria-busy={isDownloading} disabled={isDownloading}
-				>{isDownloading ? 'Downloading...' : 'Download data'}</button
+				><DownloadIcon />{isDownloading ? 'Downloading...' : 'Download data'}</button
 			>
 		</p>
 	{/if}
@@ -500,7 +501,6 @@
 	#viz-settings fieldset {
 		display: flex;
 		justify-content: space-between;
-		width: 100%;
 	}
 
 	#viz-settings fieldset > * {
@@ -542,6 +542,7 @@
 		gap: var(--size-8);
 		justify-content: space-between;
 		margin-top: 0;
+		max-width: 100%;
 		padding-block: var(--size-10);
 	}
 
@@ -550,9 +551,11 @@
 	}
 
 	#viz-data {
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		max-width: 100%;
+		overflow: scroll;
 	}
 
 	table {
@@ -562,28 +565,31 @@
 		border: unset;
 		border-radius: unset;
 		border-spacing: 0;
-		border-top: 1px solid var(--border-color);
+		border-top: var(--border-size-1) solid var(--border-color);
 		margin-bottom: var(--size-6);
 		margin-top: var(--size-4);
 	}
 
-	thead {
+	thead th {
+		border-bottom: var(--border-size-2) solid var(--border-color);
 		border-start-start-radius: unset;
-		font-size: var(--font-size-1);
 	}
 
-	th {
-		text-align: left;
+	tr {
+		font-size: var(--font-size-0);
+	}
+
+	tr th {
+		vertical-align: top;
 	}
 
 	tr :not(th) {
-		font-size: var(--font-size-0);
-		vertical-align: top;
 		padding-block: var(--size-1);
 	}
 
-	tr:hover {
-		font-weight: 600;
+	th {
+		white-space: wrap;
+		text-align: left;
 	}
 
 	td {
