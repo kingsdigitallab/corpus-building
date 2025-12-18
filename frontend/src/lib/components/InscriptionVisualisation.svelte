@@ -500,9 +500,14 @@
 		border: none;
 	}
 
+	#viz-controls {
+		margin-block: var(--size-4);
+	}
+
 	#viz-controls fieldset {
 		display: flex;
-		justify-content: space-around;
+		gap: var(--size-10);
+		justify-content: center;
 	}
 
 	select:disabled {
@@ -511,6 +516,7 @@
 
 	#viz-settings {
 		margin-bottom: 0;
+		margin-top: var(--size-2);
 	}
 
 	#viz-settings fieldset {
@@ -545,6 +551,7 @@
 		border-top: var(--border-size-1) solid var(--gray-4);
 		padding-top: var(--size-4);
 		margin-bottom: 0;
+		margin-top: var(--size-4);
 	}
 
 	#viz-summary hgroup p {
@@ -569,6 +576,7 @@
 		border-top: var(--border-size-1) solid var(--gray-4);
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 0;
 		max-width: 100%;
 		overflow: scroll;
 		padding-top: var(--size-6);
