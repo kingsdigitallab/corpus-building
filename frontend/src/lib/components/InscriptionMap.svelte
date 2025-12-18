@@ -236,4 +236,8 @@
 		background-color: var(--blue-10);
 		color: white;
 	}
+
+	:global(.maplibregl-popup-content) {
+		min-width: 150px;
+	}
 </style>
