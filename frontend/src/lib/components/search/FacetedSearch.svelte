@@ -576,6 +576,12 @@
 							<LayoutGridIcon />View cards
 						</Button.Root>
 						<Button.Root
+							class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('table')}
+						>
+							<TableIcon />View table
+						</Button.Root>
+						<Button.Root
 							class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
 							onclick={() => handleViewChange('text')}
 						>
@@ -586,12 +592,6 @@
 							onclick={() => handleViewChange('viz')}
 						>
 							<BarChartIcon />Visualisations
-						</Button.Root>
-						<Button.Root
-							class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'} view-table-btn`}
-							onclick={() => handleViewChange('table')}
-						>
-							<TableIcon />View table
 						</Button.Root>
 					</section>
 					<section class="reduced-block-margin download-buttons">
