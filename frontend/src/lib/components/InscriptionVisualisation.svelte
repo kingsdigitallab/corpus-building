@@ -25,7 +25,7 @@
 		key?.replaceAll(HIERARCHY_SEPARATOR, ` ${HIERARCHY_SEPARATOR_LABEL} `) ?? '';
 
 	// Viz controls
-	let selectedView = $state('bar-stacked');
+	let selectedView = $state('map');
 
 	const categories = $derived(
 		Object.values(aggregations)
