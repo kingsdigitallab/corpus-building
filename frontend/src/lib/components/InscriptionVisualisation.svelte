@@ -482,7 +482,20 @@
 		--vis-font-family: var(--font-family);
 
 		--vis-color-main: var(--surface-3);
+
 		--vis-color0: var(--vis-color-main);
+		--vis-color1: #c7956d;
+		--vis-color2: #d4a574;
+		--vis-color3: #8b9e6b;
+		--vis-color4: #5d8a83;
+		--vis-color5: #7a6b8a;
+
+		--vis-dark-color0: var(--vis-color-main);
+		--vis-dark-color1: #e88a96;
+		--vis-dark-color2: #e8c088;
+		--vis-dark-color3: #a3c085;
+		--vis-dark-color4: #4db8a6;
+		--vis-dark-color5: #8b96cc;
 
 		--vis-axis-label-color: var(--text-1);
 		--vis-axis-tick-label-color: var(--text-1);
