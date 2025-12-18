@@ -494,6 +494,10 @@
 		justify-content: space-around;
 	}
 
+	select:disabled {
+		cursor: not-allowed;
+	}
+
 	#viz-settings {
 		margin-bottom: 0;
 	}
