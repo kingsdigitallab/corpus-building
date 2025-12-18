@@ -530,7 +530,7 @@
 	}
 
 	#viz-settings fieldset :first-child {
-		border-right: var(--border-size-1) solid var(--border-color);
+		border-right: var(--border-size-1) solid var(--gray-4);
 	}
 
 	input[type='range'] {
@@ -538,7 +538,7 @@
 	}
 
 	#viz-summary {
-		border-top: var(--border-size-1) solid var(--border-color);
+		border-top: var(--border-size-1) solid var(--gray-4);
 		padding-top: var(--size-4);
 		margin-bottom: 0;
 	}
@@ -562,7 +562,7 @@
 
 	#viz-data {
 		align-items: center;
-		border-top: var(--border-size-1) solid var(--border-color);
+		border-top: var(--border-size-1) solid var(--gray-4);
 		display: flex;
 		flex-direction: column;
 		max-width: 100%;
