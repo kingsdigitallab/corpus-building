@@ -479,10 +479,14 @@
 
 <style>
 	:global(body, html) {
+		--vis-font-family: var(--font-family);
+
 		--vis-color-main: var(--surface-3);
 		--vis-color0: var(--vis-color-main);
 
-		--vis-font-family: var(--font-family);
+		--vis-axis-label-color: var(--text-1);
+		--vis-axis-tick-label-color: var(--text-1);
+		--vis-legend-label-color: var(--text-1);
 
 		--vis-nested-donut-segment-label-font-size: 0.875em;
 	}
