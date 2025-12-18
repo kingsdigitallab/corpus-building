@@ -33,6 +33,9 @@
 	function setTheme() {
 		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
+
+		document.body.classList.remove('theme-light', 'theme-dark');
+		document.body.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
 	}
 
 	function handleThemeToggle() {
@@ -56,6 +59,10 @@
 
 		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
+
+		// Set Unovis theme by adding a class to the body
+		document.body.classList.remove('theme-light', 'theme-dark');
+		document.body.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
 	</script>
 </svelte:head>
 
