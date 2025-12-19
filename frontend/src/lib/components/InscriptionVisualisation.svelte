@@ -172,7 +172,7 @@
 		if (selectedColourBy) {
 			const colourByTitle =
 				categories.find((c) => c.value === selectedColourBy)?.label || selectedColourBy;
-			parts.push(`Coloured by <strong>${colourByTitle}</strong>`);
+			parts.push(`Split by <strong>${colourByTitle}</strong>`);
 		}
 
 		return parts.join('. ') + '.';
@@ -233,7 +233,8 @@
 	// Legend - show colour-by categories when selected, otherwise show category values
 	const legendShape = BulletShape.Square;
 
-	const legendItems = $derived(
+	// Bar legend: shows colour-by categories when selected
+	const barLegendItems = $derived(
 		selectedColourBy && activeColourByKeys.length > 0
 			? activeColourByKeys.map((key) => ({
 					name: formatKey(key),
@@ -243,6 +244,14 @@
 					name: formatKey(d.key),
 					shape: legendShape
 				}))
+	);
+
+	// Donut legend: always shows parent categories (colours represent parent groups)
+	const donutLegendItems = $derived(
+		data.map((d) => ({
+			name: formatKey(d.key),
+			shape: legendShape
+		}))
 	);
 
 	// Tooltips
@@ -346,7 +355,7 @@
 			</select>
 		</label>
 		<label>
-			Colour by
+			Split by
 			<select name="colourBy" bind:value={selectedColourBy} disabled={selectedView === 'map'}>
 				<option value="">None</option>
 				{#each categories as category (category.value)}
@@ -416,7 +425,7 @@
 		{#if selectedColourBy}
 			<div>
 				<h4>Legend</h4>
-				<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+				<VisBulletLegend items={barLegendItems} labelFontSize="large" orientation="vertical" />
 			</div>
 		{/if}
 	{:else if selectedView === 'donut'}
@@ -431,7 +440,7 @@
 		</VisSingleContainer>
 		<div>
 			<h4>Legend</h4>
-			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+			<VisBulletLegend items={donutLegendItems} labelFontSize="large" orientation="vertical" />
 		</div>
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
