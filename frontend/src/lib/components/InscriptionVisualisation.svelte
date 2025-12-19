@@ -56,7 +56,7 @@
 	});
 
 	// Viz settings
-	let maxCategories = $state(10);
+	let maxCategories = $state(6);
 	let height = $state(400);
 
 	let showDataTable = $state(false);
