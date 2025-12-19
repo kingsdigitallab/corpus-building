@@ -65,22 +65,6 @@
 	const data = $derived(getData());
 
 	function getData() {
-		// Get buckets, sorted by count, limited to maxCategories
-		let buckets = [
-			...(aggregations[selectedCategory]?.buckets.filter(
-				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
-			) || [])
-		];
-		buckets = buckets.sort((a, b) => b.doc_count - a.doc_count).slice(0, maxCategories);
-
-		// Simple case: no colour-by selected
-		if (!selectedColourBy || !inscriptions?.length) {
-			return buckets.map((b) => ({
-				key: formatKey(b.key),
-				value: b.doc_count
-			}));
-		}
-
 		// Helper to get values as array (handles both array and string fields)
 		/** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
 		const getValuesAsArray = (item, field) => {
@@ -90,27 +74,62 @@
 			return [];
 		};
 
-		// Build lookup: categoryValue -> items[]
+		// If no inscriptions, fall back to aggregation buckets (for initial load)
+		if (!inscriptions?.length) {
+			const buckets = [
+				...(aggregations[selectedCategory]?.buckets.filter(
+					/** @param {{ key: string }} bucket */ (bucket) =>
+						!excludedCategories.includes(bucket.key)
+				) || [])
+			];
+			return buckets
+				.sort((a, b) => b.doc_count - a.doc_count)
+				.slice(0, maxCategories)
+				.map((b) => ({
+					key: formatKey(b.key),
+					value: b.doc_count
+				}));
+		}
+
+		// Build counts from inscriptions (filtered search results)
+		/** @type {Map<string, { count: number, items: any[] }>} */
 		const categoryMap = new Map();
 		for (const item of inscriptions) {
 			const values = getValuesAsArray(item, selectedCategory);
 			for (const v of values) {
 				const key = String(v);
-				if (!categoryMap.has(key)) categoryMap.set(key, []);
-				categoryMap.get(key).push(item);
+				if (excludedCategories.includes(key)) continue;
+				if (!categoryMap.has(key)) categoryMap.set(key, { count: 0, items: [] });
+				const entry = categoryMap.get(key);
+				entry.count++;
+				entry.items.push(item);
 			}
 		}
 
-		// Get valid colourBy keys
+		// Sort by count and limit to maxCategories
+		const sortedKeys = [...categoryMap.entries()]
+			.sort((a, b) => b[1].count - a[1].count)
+			.slice(0, maxCategories)
+			.map(([key]) => key);
+
+		// Simple case: no split-by selected
+		if (!selectedColourBy) {
+			return sortedKeys.map((key) => ({
+				key: formatKey(key),
+				value: categoryMap.get(key)?.count || 0
+			}));
+		}
+
+		// Get valid colourBy keys from aggregations
 		const colourByBuckets = aggregations[selectedColourBy]?.buckets || [];
 		const validColourByKeys = new Set(
 			colourByBuckets.map((/** @type {{ key: string }} */ b) => b.key)
 		);
 
-		// For each category bucket, count items by colourBy value
-		const result = buckets
-			.map((bucket) => {
-				const items = categoryMap.get(bucket.key) || [];
+		// For each category, count items by colourBy value
+		const result = sortedKeys
+			.map((categoryKey) => {
+				const items = categoryMap.get(categoryKey)?.items || [];
 				/** @type {Record<string, number>} */
 				const counts = {};
 
@@ -125,7 +144,7 @@
 				}
 
 				return {
-					key: formatKey(bucket.key),
+					key: formatKey(categoryKey),
 					value: Object.values(counts).reduce((sum, c) => sum + c, 0),
 					...counts
 				};
@@ -378,7 +397,7 @@
 				<input
 					type="range"
 					min={Math.min(2, selectedCategoryBuckets.length)}
-					max={Math.min(selectedCategoryBuckets.length, 50)}
+					max={Math.max(selectedCategoryBuckets.length, 12)}
 					step="1"
 					bind:value={maxCategories}
 					aria-label="Adjust max categories"
