@@ -100,7 +100,7 @@
 				const key = String(v);
 				if (excludedCategories.includes(key)) continue;
 				if (!categoryMap.has(key)) categoryMap.set(key, { count: 0, items: [] });
-				const entry = categoryMap.get(key);
+				const entry = /** @type {{ count: number, items: any[] }} */ (categoryMap.get(key));
 				entry.count++;
 				entry.items.push(item);
 			}
@@ -159,7 +159,7 @@
 			return 'No data available.';
 		}
 
-		const totalItems = data.reduce((sum, d) => sum + d.value, 0);
+		const totalItems = inscriptions?.length || 0;
 		const categoryCount = data.length;
 		const categoryLabel = pluralize(selectedCategoryTitle.toLowerCase(), categoryCount);
 
@@ -397,7 +397,7 @@
 				<input
 					type="range"
 					min={Math.min(2, selectedCategoryBuckets.length)}
-					max={Math.max(selectedCategoryBuckets.length, 12)}
+					max={Math.min(selectedCategoryBuckets.length, 12)}
 					step="1"
 					bind:value={maxCategories}
 					aria-label="Adjust max categories"
