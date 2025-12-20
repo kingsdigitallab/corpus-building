@@ -1,22 +1,16 @@
 <script>
-	import {
-		VisAxis,
-		VisBulletLegend,
-		VisXYContainer,
-		VisNestedDonut,
-		VisSingleContainer,
-		VisStackedBar,
-		VisTooltip
-	} from '@unovis/svelte';
-	import { BulletShape, NestedDonut, StackedBar } from '@unovis/ts';
 	import pluralize from 'pluralize-esm';
 	import InscriptionMap from './InscriptionMap.svelte';
+	import HistogramChart from './HistogramChart.svelte';
+	import BarChart from './BarChart.svelte';
+	import DonutChart from './DonutChart.svelte';
 	import { DownloadIcon, TableIcon } from 'lucide-svelte';
 
 	let { inscriptions, aggregations } = $props();
 
 	const HIERARCHY_SEPARATOR = ':::';
 	const HIERARCHY_SEPARATOR_LABEL = '>';
+
 	/** @type {string[]} */
 	const excludedCategories = [];
 
@@ -63,9 +57,7 @@
 	let showDataTable = $state(false);
 
 	// Viz data
-	const data = $derived(getData());
-
-	function getData() {
+	const data = $derived.by(() => {
 		// Helper to get values as array (handles both array and string fields)
 		/** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
 		const getValuesAsArray = (item, field) => {
@@ -153,7 +145,7 @@
 			.filter((d) => Object.keys(d).length > 2);
 
 		return result;
-	}
+	});
 
 	const summary = $derived.by(() => {
 		if (!data || data.length === 0) {
@@ -209,187 +201,7 @@
 		);
 	});
 
-	// Bar
-	/** @type {(d: unknown, i: number) => number} */
-	const x = (_, i) => i;
-	const xLabel = 'Inscription count';
-
-	const y = $derived(
-		selectedColourBy && activeColourByKeys.length > 0
-			? activeColourByKeys.map((key) => (/** @type {Record<string, number>} */ d) => d[key] ?? 0)
-			: (/** @type {{ value: number }} */ d) => d.value
-	);
-	/** @type {[number, number]} */
-	const yDomain = $derived([0, data.length - 1]);
-	const yLabel = $derived(aggregations[selectedCategory]?.title || 'No title');
-
-	const numTicks = $derived(data.length);
-	const tickFormat = $derived((/** @type {number} */ tick) => data[tick]?.key || tick);
-	const tickValues = $derived(Array.from({ length: numTicks }, (_, i) => i));
-
-	// Donut
-	/** @type {{ key?: string, group?: string, subgroup?: string, value: number }[]} */
-	const donutData = $derived(
-		!selectedColourBy || activeColourByKeys.length === 0
-			? data.map((d) => ({ key: d.key, value: d.value }))
-			: data.flatMap((d) =>
-					activeColourByKeys
-						.filter((k) => typeof d[k] === 'number' && d[k] > 0)
-						.map((k) => ({
-							group: d.key,
-							subgroup: formatKey(k),
-							value: /** @type {number} */ (d[k])
-						}))
-				)
-	);
-
-	/** @type {((d: any) => string)[]} */
-	const layers = $derived(
-		selectedColourBy && activeColourByKeys.length > 0
-			? [(d) => d.group, (d) => d.subgroup]
-			: [(d) => d.key]
-	);
-
-	// Legend - show colour-by categories when selected, otherwise show category values
-	const legendShape = BulletShape.Square;
-
-	// Bar legend: shows colour-by categories when selected
-	const barLegendItems = $derived(
-		selectedColourBy && activeColourByKeys.length > 0
-			? activeColourByKeys.map((key) => ({
-					name: formatKey(key),
-					shape: legendShape
-				}))
-			: data.map((d) => ({
-					name: formatKey(d.key),
-					shape: legendShape
-				}))
-	);
-
-	// Donut legend: always shows parent categories (colours represent parent groups)
-	const donutLegendItems = $derived(
-		data.map((d) => ({
-			name: formatKey(d.key),
-			shape: legendShape
-		}))
-	);
-
-	// Histogram - date distribution with configurable bin sizes
-	/** @type {{ key: string, value: number }[]} */
-	const histogramData = $derived.by(() => {
-		if (!inscriptions?.length) return [];
-
-		// Get min/max dates from valid inscriptions only
-		let minDate = Infinity;
-		let maxDate = -Infinity;
-		for (const item of inscriptions) {
-			const nb = /** @type {number | undefined} */ (item.notBefore);
-			const na = /** @type {number | undefined} */ (item.notAfter);
-			// Only consider inscriptions with valid date ranges
-			if (nb === undefined || na === undefined || nb > na) continue;
-			if (nb < minDate) minDate = nb;
-			if (na > maxDate) maxDate = na;
-		}
-
-		if (minDate === Infinity || maxDate === -Infinity) return [];
-
-		// Align bins to nice boundaries
-		const binStart = Math.floor(minDate / histogramBinSize) * histogramBinSize;
-		const binEnd = Math.ceil(maxDate / histogramBinSize) * histogramBinSize;
-
-		// Create bins
-		/** @type {Map<number, number>} */
-		const bins = new Map();
-		for (let start = binStart; start < binEnd; start += histogramBinSize) {
-			bins.set(start, 0);
-		}
-
-		// Count inscriptions in each bin (full range approach)
-		for (const item of inscriptions) {
-			const nb = /** @type {number | undefined} */ (item.notBefore);
-			const na = /** @type {number | undefined} */ (item.notAfter);
-			// Skip inscriptions with missing or invalid date ranges
-			if (nb === undefined || na === undefined || nb > na) continue;
-
-			// Find all bins this inscription overlaps
-			for (let start = binStart; start < binEnd; start += histogramBinSize) {
-				const binEndDate = start + histogramBinSize;
-				// Check if [nb, na] overlaps [start, binEndDate)
-				if (nb < binEndDate && na >= start) {
-					bins.set(start, (bins.get(start) || 0) + 1);
-				}
-			}
-		}
-
-		// Convert to array with formatted labels
-		/** @param {number} year @returns {string} */
-		const formatYear = (year) => (year < 0 ? `${Math.abs(year)} BCE` : `${year} CE`);
-
-		return [...bins.entries()]
-			.filter(([_, count]) => count > 0) // Only show non-empty bins
-			.sort((a, b) => a[0] - b[0])
-			.map(([start, count]) => ({
-				key: `${formatYear(start)} – ${formatYear(start + histogramBinSize)}`,
-				value: count
-			}));
-	});
-
-	// Histogram chart accessors
-	/** @type {(d: unknown, i: number) => number} */
-	const histogramX = (_, i) => i;
-	const histogramY = $derived((/** @type {{ value: number }} */ d) => d.value);
-	const histogramYDomain = $derived(
-		/** @type {[number, number]} */ ([0, histogramData.length - 1])
-	);
-	// Limit tick labels to ~20 max to prevent overlap (height / ~25px per label)
-	const maxHistogramTicks = $derived(Math.floor(height / 25));
-	const histogramTickStep = $derived(
-		histogramData.length > maxHistogramTicks
-			? Math.ceil(histogramData.length / maxHistogramTicks)
-			: 1
-	);
-	const histogramNumTicks = $derived(Math.ceil(histogramData.length / histogramTickStep));
-	const histogramTickFormat = $derived(
-		(/** @type {number} */ tick) => histogramData[tick]?.key || tick
-	);
-	const histogramTickValues = $derived(
-		Array.from({ length: histogramData.length }, (_, i) => i).filter(
-			(i) => i % histogramTickStep === 0
-		)
-	);
-
-	// Tooltips
-	const triggers = $derived({
-		[StackedBar.selectors.bar]: getBarTooltip,
-		[NestedDonut.selectors.segment]: getDonutTooltip
-	});
-
-	/** @param {{ key: string, value: number, _index?: number, _stacked?: [number, number] } & Record<string, unknown>} bar */
-	function getBarTooltip(bar) {
-		// For stacked bars, show all segment values with the hovered one highlighted
-		if (selectedColourBy && bar._stacked) {
-			const keys = activeColourByKeys;
-			const hoveredValue = bar._stacked[1] - bar._stacked[0];
-			const lines = keys
-				.filter((key) => typeof bar[key] === 'number' && bar[key] > 0)
-				.map((key) => {
-					const value = /** @type {number} */ (bar[key]);
-					const text = `${formatKey(key)}: ${value.toLocaleString()}`;
-					return value === hoveredValue ? `<strong>${text}</strong>` : text;
-				});
-			return `<h6 class="legend-title">${formatKey(bar.key)}</h6>${lines.join('<br>')}`;
-		}
-		return `<h6 class="legend-title">${formatKey(bar.key)}</h6>${bar.value.toLocaleString()} inscriptions`;
-	}
-
-	/** @param {{ data: { key: string }, value: number }} segment */
-	function getDonutTooltip(segment) {
-		if (selectedColourBy) {
-			return `<h6 class="legend-title">${formatKey(segment.data.root)}</h6>${formatKey(segment.data.key)}: ${segment.value.toLocaleString()} inscriptions`;
-		}
-		return `<h6 class="legend-title">${formatKey(segment.data.key)}</h6>${segment.value.toLocaleString()} inscriptions`;
-	}
-
+	// Data download
 	let isDownloading = $state(false);
 
 	async function downloadData() {
@@ -548,12 +360,15 @@
 				{selectedCategoryTitle}
 			{/if}
 		</h3>
-		{#if selectedView === 'histogram'}
+		{#if selectedView === 'map'}
+			<p>Geographical distribution of inscriptions.</p>
+		{:else if selectedView === 'histogram'}
 			<p>
-				{inscriptions?.length.toLocaleString() || 0} inscriptions distributed across {histogramData.length}
-				date bins ({histogramBinSize}-year intervals)
+				{inscriptions?.length.toLocaleString() || 0} inscriptions by date in {histogramBinSize}-year
+				intervals.
 			</p>
-		{:else if selectedView !== 'map'}
+			<p><small>Inscriptions with uncertain dates may appear in multiple bins.</small></p>
+		{:else}
 			<p>{@html summary}</p>
 		{/if}
 	</hgroup>
@@ -563,46 +378,17 @@
 	{#if selectedView === 'map'}
 		<InscriptionMap {inscriptions} />
 	{:else if selectedView === 'bar-stacked'}
-		<VisXYContainer {data} {height} yDirection="south" {yDomain}>
-			<VisStackedBar {x} {y} barPadding={0.1} orientation="horizontal" />
-			<VisAxis type="x" label={xLabel} />
-			<VisAxis type="y" label={yLabel} gridLine={false} {numTicks} {tickFormat} {tickValues} />
-			<VisTooltip {triggers} />
-		</VisXYContainer>
-		{#if selectedColourBy}
-			<div>
-				<h4>Legend</h4>
-				<VisBulletLegend items={barLegendItems} labelFontSize="large" orientation="vertical" />
-			</div>
-		{/if}
+		<BarChart
+			{data}
+			{height}
+			categoryTitle={selectedCategoryTitle}
+			colourByKeys={activeColourByKeys}
+			{formatKey}
+		/>
 	{:else if selectedView === 'donut'}
-		<VisSingleContainer data={donutData} height={height * 1.5}>
-			<VisNestedDonut
-				{layers}
-				value={(/** @type {{ value: number }} */ d) => d.value}
-				direction="outwards"
-				layerPadding={10}
-			/>
-			<VisTooltip {triggers} />
-		</VisSingleContainer>
-		<div>
-			<h4>Legend</h4>
-			<VisBulletLegend items={donutLegendItems} labelFontSize="large" orientation="vertical" />
-		</div>
+		<DonutChart {data} {height} colourByKeys={activeColourByKeys} {formatKey} />
 	{:else if selectedView === 'histogram'}
-		<VisXYContainer data={histogramData} {height} yDirection="south" yDomain={histogramYDomain}>
-			<VisStackedBar x={histogramX} y={histogramY} barPadding={0.1} orientation="horizontal" />
-			<VisAxis type="x" label="Inscription count" />
-			<VisAxis
-				type="y"
-				label="Date range"
-				gridLine={false}
-				numTicks={histogramNumTicks}
-				tickFormat={histogramTickFormat}
-				tickValues={histogramTickValues}
-			/>
-			<VisTooltip {triggers} />
-		</VisXYContainer>
+		<HistogramChart {inscriptions} {height} binSize={histogramBinSize} />
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
@@ -748,10 +534,6 @@
 		margin-top: 0;
 		max-width: 100%;
 		padding-top: var(--size-10);
-	}
-
-	#viz-container div {
-		flex: auto auto;
 	}
 
 	#viz-data {

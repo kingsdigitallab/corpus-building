@@ -1,6 +1,6 @@
 <script>
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
-	import InscriptionVisualisation from '$lib/components/InscriptionVisualisation.svelte';
+	import InscriptionVisualisation from '$lib/components/viz/InscriptionVisualisation.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
