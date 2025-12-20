@@ -57,7 +57,8 @@
 
 	// Viz settings
 	let maxCategories = $state(6);
-	let height = $state(400);
+	let histogramBinSize = $state(50);
+	let height = $state(550);
 
 	let showDataTable = $state(false);
 
@@ -273,6 +274,90 @@
 		}))
 	);
 
+	// Histogram - date distribution with configurable bin sizes
+	/** @type {{ key: string, value: number }[]} */
+	const histogramData = $derived.by(() => {
+		if (!inscriptions?.length) return [];
+
+		// Get min/max dates from valid inscriptions only
+		let minDate = Infinity;
+		let maxDate = -Infinity;
+		for (const item of inscriptions) {
+			const nb = /** @type {number | undefined} */ (item.notBefore);
+			const na = /** @type {number | undefined} */ (item.notAfter);
+			// Only consider inscriptions with valid date ranges
+			if (nb === undefined || na === undefined || nb > na) continue;
+			if (nb < minDate) minDate = nb;
+			if (na > maxDate) maxDate = na;
+		}
+
+		if (minDate === Infinity || maxDate === -Infinity) return [];
+
+		// Align bins to nice boundaries
+		const binStart = Math.floor(minDate / histogramBinSize) * histogramBinSize;
+		const binEnd = Math.ceil(maxDate / histogramBinSize) * histogramBinSize;
+
+		// Create bins
+		/** @type {Map<number, number>} */
+		const bins = new Map();
+		for (let start = binStart; start < binEnd; start += histogramBinSize) {
+			bins.set(start, 0);
+		}
+
+		// Count inscriptions in each bin (full range approach)
+		for (const item of inscriptions) {
+			const nb = /** @type {number | undefined} */ (item.notBefore);
+			const na = /** @type {number | undefined} */ (item.notAfter);
+			// Skip inscriptions with missing or invalid date ranges
+			if (nb === undefined || na === undefined || nb > na) continue;
+
+			// Find all bins this inscription overlaps
+			for (let start = binStart; start < binEnd; start += histogramBinSize) {
+				const binEndDate = start + histogramBinSize;
+				// Check if [nb, na] overlaps [start, binEndDate)
+				if (nb < binEndDate && na >= start) {
+					bins.set(start, (bins.get(start) || 0) + 1);
+				}
+			}
+		}
+
+		// Convert to array with formatted labels
+		/** @param {number} year @returns {string} */
+		const formatYear = (year) => (year < 0 ? `${Math.abs(year)} BCE` : `${year} CE`);
+
+		return [...bins.entries()]
+			.filter(([_, count]) => count > 0) // Only show non-empty bins
+			.sort((a, b) => a[0] - b[0])
+			.map(([start, count]) => ({
+				key: `${formatYear(start)} – ${formatYear(start + histogramBinSize)}`,
+				value: count
+			}));
+	});
+
+	// Histogram chart accessors
+	/** @type {(d: unknown, i: number) => number} */
+	const histogramX = (_, i) => i;
+	const histogramY = $derived((/** @type {{ value: number }} */ d) => d.value);
+	const histogramYDomain = $derived(
+		/** @type {[number, number]} */ ([0, histogramData.length - 1])
+	);
+	// Limit tick labels to ~20 max to prevent overlap (height / ~25px per label)
+	const maxHistogramTicks = $derived(Math.floor(height / 25));
+	const histogramTickStep = $derived(
+		histogramData.length > maxHistogramTicks
+			? Math.ceil(histogramData.length / maxHistogramTicks)
+			: 1
+	);
+	const histogramNumTicks = $derived(Math.ceil(histogramData.length / histogramTickStep));
+	const histogramTickFormat = $derived(
+		(/** @type {number} */ tick) => histogramData[tick]?.key || tick
+	);
+	const histogramTickValues = $derived(
+		Array.from({ length: histogramData.length }, (_, i) => i).filter(
+			(i) => i % histogramTickStep === 0
+		)
+	);
+
 	// Tooltips
 	const triggers = $derived({
 		[StackedBar.selectors.bar]: getBarTooltip,
@@ -357,6 +442,7 @@
 			<select name="view" bind:value={selectedView}>
 				<option value="bar-stacked">Bar</option>
 				<option value="donut">Donut</option>
+				<option value="histogram">Histogram</option>
 				<option value="map">Map</option>
 			</select>
 		</label>
@@ -365,7 +451,7 @@
 			<select
 				name="category"
 				bind:value={selectedCategory}
-				disabled={selectedView === 'map'}
+				disabled={selectedView === 'map' || selectedView === 'histogram'}
 				onchange={() => (selectedColourBy = '')}
 			>
 				{#each categories as category (category.value)}
@@ -375,7 +461,11 @@
 		</label>
 		<label>
 			Split by
-			<select name="colourBy" bind:value={selectedColourBy} disabled={selectedView === 'map'}>
+			<select
+				name="colourBy"
+				bind:value={selectedColourBy}
+				disabled={selectedView === 'map' || selectedView === 'histogram'}
+			>
 				<option value="">None</option>
 				{#each categories as category (category.value)}
 					{#if category.value === selectedCategory}
@@ -390,7 +480,7 @@
 </section>
 
 <section id="viz-settings">
-	{#if selectedView !== 'map'}
+	{#if selectedView !== 'map' && selectedView !== 'histogram'}
 		<fieldset>
 			<label>
 				Max categories ({maxCategories})
@@ -417,15 +507,53 @@
 				<small>Move the slider to adjust the chart height</small>
 			</label>
 		</fieldset>
+	{:else if selectedView === 'histogram'}
+		<fieldset>
+			<label>
+				Bin size ({histogramBinSize} years)
+				<input
+					type="range"
+					min="5"
+					max="100"
+					step="5"
+					bind:value={histogramBinSize}
+					aria-label="Adjust bin size"
+				/>
+				<small>Move the slider to adjust the date bin size</small>
+			</label>
+			<label>
+				Chart height ({height}px)
+				<input
+					type="range"
+					min="200"
+					max="2000"
+					step="10"
+					bind:value={height}
+					aria-label="Adjust chart height"
+				/>
+				<small>Move the slider to adjust the chart height</small>
+			</label>
+		</fieldset>
 	{/if}
 </section>
 
 <section id="viz-summary">
 	<hgroup>
 		<h3>
-			{selectedView === 'map' ? 'Map' : selectedCategoryTitle}
+			{#if selectedView === 'map'}
+				Map
+			{:else if selectedView === 'histogram'}
+				Date Distribution
+			{:else}
+				{selectedCategoryTitle}
+			{/if}
 		</h3>
-		{#if selectedView !== 'map'}
+		{#if selectedView === 'histogram'}
+			<p>
+				{inscriptions?.length.toLocaleString() || 0} inscriptions distributed across {histogramData.length}
+				date bins ({histogramBinSize}-year intervals)
+			</p>
+		{:else if selectedView !== 'map'}
 			<p>{@html summary}</p>
 		{/if}
 	</hgroup>
@@ -461,6 +589,20 @@
 			<h4>Legend</h4>
 			<VisBulletLegend items={donutLegendItems} labelFontSize="large" orientation="vertical" />
 		</div>
+	{:else if selectedView === 'histogram'}
+		<VisXYContainer data={histogramData} {height} yDirection="south" yDomain={histogramYDomain}>
+			<VisStackedBar x={histogramX} y={histogramY} barPadding={0.1} orientation="horizontal" />
+			<VisAxis type="x" label="Inscription count" />
+			<VisAxis
+				type="y"
+				label="Date range"
+				gridLine={false}
+				numTicks={histogramNumTicks}
+				tickFormat={histogramTickFormat}
+				tickValues={histogramTickValues}
+			/>
+			<VisTooltip {triggers} />
+		</VisXYContainer>
 	{:else}
 		<code>If you are seeing this, something went wrong!</code>
 	{/if}
