@@ -65,7 +65,6 @@
 			}));
 	});
 
-	// Chart accessors
 	/** @type {(d: unknown, i: number) => number} */
 	const x = (_, i) => i;
 	const y = $derived((/** @type {{ value: number }} */ d) => d.value);
