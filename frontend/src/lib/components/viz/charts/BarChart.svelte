@@ -19,7 +19,6 @@
 	 */
 	let { data, height, categoryTitle, colourByKeys = [], formatKey } = $props();
 
-	// Chart accessors
 	/** @type {(d: unknown, i: number) => number} */
 	const x = (_, i) => i;
 	const xLabel = 'Inscription count';
