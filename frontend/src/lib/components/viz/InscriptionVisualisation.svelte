@@ -68,8 +68,12 @@
 			>
 				<option value="">None</option>
 				{#each categories as category (category.value)}
-					<option value={category.value} disabled={category.disabledColourBy}
-						>{category.label}</option
+					<option
+						value={category.value}
+						disabled={category.disabledColourBy}
+						title={category.disabledColourBy
+							? 'Too many values, filter results to enable option'
+							: ''}>{category.label}</option
 					>
 				{/each}
 			</select>
