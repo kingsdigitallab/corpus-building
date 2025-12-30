@@ -12,22 +12,27 @@
 	// Viz controls
 	let selectedView = $state('map');
 
-	const categories = $derived(
-		Object.values(aggregations)
-			.filter((aggregation) => !excludedCategories.includes(aggregation.name))
-			.map((aggregation) => ({
-				value: aggregation.name,
-				label: aggregation.title
-			}))
-			.sort((a, b) => a.label.localeCompare(b.label))
-	);
-
 	let selectedCategory = $state('inscriptionType');
 	const selectedCategoryTitle = $derived(
 		categories.find((c) => c.value === selectedCategory)?.label || 'No title'
 	);
 
 	let selectedColourBy = $state('');
+
+	const categories = $derived(
+		Object.values(aggregations)
+			.filter((aggregation) => !excludedCategories.includes(aggregation.name))
+			.map((aggregation) => ({
+				value: aggregation.name,
+				label: aggregation.title,
+				count: aggregation.buckets.length,
+				disabledColourBy:
+					aggregation.name === selectedCategory ||
+					aggregation.buckets.length === 0 ||
+					aggregation.buckets.length >= 12
+			}))
+			.sort((a, b) => a.label.localeCompare(b.label))
+	);
 </script>
 
 <section id="viz-controls">
@@ -63,11 +68,9 @@
 			>
 				<option value="">None</option>
 				{#each categories as category (category.value)}
-					{#if category.value === selectedCategory}
-						<option value={category.value} disabled>{category.label}</option>
-					{:else}
-						<option value={category.value}>{category.label}</option>
-					{/if}
+					<option value={category.value} disabled={category.disabledColourBy}
+						>{category.label}</option
+					>
 				{/each}
 			</select>
 		</label>
