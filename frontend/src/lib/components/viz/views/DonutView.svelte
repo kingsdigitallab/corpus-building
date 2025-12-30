@@ -194,7 +194,7 @@
 			<input
 				type="range"
 				min={Math.min(2, selectedCategoryBuckets.length)}
-				max={Math.min(selectedCategoryBuckets.length, 12)}
+				max={Math.min(selectedCategoryBuckets.length, 18)}
 				step="1"
 				bind:value={maxCategories}
 				aria-label="Adjust max categories"

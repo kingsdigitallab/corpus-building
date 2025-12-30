@@ -31,7 +31,7 @@
 	} = $props();
 
 	// Settings state
-	let maxCategories = $state(18);
+	let maxCategories = $state(12);
 
 	// Helper to get values as array
 	/** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
@@ -203,7 +203,7 @@
 			<input
 				type="range"
 				min={Math.min(2, selectedCategoryBuckets.length)}
-				max={Math.min(selectedCategoryBuckets.length, 12)}
+				max={Math.min(selectedCategoryBuckets.length, 36)}
 				step="1"
 				bind:value={maxCategories}
 				aria-label="Adjust max categories"
