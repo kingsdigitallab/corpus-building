@@ -301,18 +301,18 @@ export function load({
 			const letterHeights =
 				item.letterHeights && item.letterHeights.length > 0
 					? item.letterHeights.map((d) => {
-							if (d.quantity) {
-								return {
-									atLeast: Number.parseInt(d.quantity),
-									atMost: Number.parseInt(d.quantity)
-								};
-							} else {
-								return {
-									atLeast: Number.parseInt(d.atLeast ?? '0'),
-									atMost: Number.parseInt(d.atMost ?? '250')
-								};
-							}
-						})
+						if (d.quantity) {
+							return {
+								atLeast: Number.parseInt(d.quantity),
+								atMost: Number.parseInt(d.quantity)
+							};
+						} else {
+							return {
+								atLeast: Number.parseInt(d.atLeast ?? '0'),
+								atMost: Number.parseInt(d.atMost ?? '250')
+							};
+						}
+					})
 					: [{ atLeast: 0, atMost: 0 }];
 
 			let repositoryRole = item.repository?.role?.toLowerCase() ?? undefined;
@@ -320,7 +320,7 @@ export function load({
 
 			const repository =
 				repositoryRole?.indexOf('private') !== -1 ||
-				item.repository?._?.toLowerCase().indexOf('private') !== -1
+					item.repository?._?.toLowerCase().indexOf('private') !== -1
 					? 'private'
 					: (item.repository?._?.trim() ?? undefined);
 
@@ -335,7 +335,7 @@ export function load({
 				notAfter: item?.date?.notAfter ?? 0,
 				notBefore: item?.date?.notBefore ?? 1900,
 				language: item?.textLang?.languages ?? undefined,
-				inscriptionType: getHierarchicalValues(item.type?.ana),
+				inscriptionType: [...(getHierarchicalValues(item.type?.ana) || []), ...(getHierarchicalValues(item.type?.certainty?.assertedValue)?.map(v => `${v} (possibly)`) || [])],
 				objectType: getHierarchicalValues(item.objectType?.ana),
 				material: getHierarchicalValues(item.material?.ana),
 				technique: getHierarchicalValues(technique),
