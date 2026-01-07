@@ -34,7 +34,7 @@ export async function load({ params: { slug } }) {
 
 		const inscriptions = /** @type {any[]} */ (corpus).filter(
 			(inscription) => inscription?.repository?.ref === museum.uri
-		);
+		).map(i => ({ ...i, idnoSort: parseInt(i.idno?._ || '9999999999') })).sort((a, b) => a.idnoSort - b.idnoSort);
 
 		return { museum, inscriptions };
 	} catch (e) {
