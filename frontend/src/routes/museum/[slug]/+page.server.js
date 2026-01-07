@@ -9,7 +9,7 @@ export async function load({ params: { slug } }) {
 		 * @type {{
 		 * 	slug: string,
 		 * 	uri: string,
-		 *  url: string | undefined,
+		 * 	url: string | undefined,
 		 * 	name: string,
 		 * 	type: string,
 		 * 	description: string,
@@ -32,9 +32,14 @@ export async function load({ params: { slug } }) {
 			throw error(404, `Museum ${slug} not found`);
 		}
 
-		const inscriptions = /** @type {any[]} */ (corpus).filter(
-			(inscription) => inscription?.repository?.ref === museum.uri
-		).map(i => ({ ...i, idnoSort: parseInt(i.idno?._ || '9999999999') })).sort((a, b) => a.idnoSort - b.idnoSort);
+		const inscriptions = /** @type {any[]} */ (corpus)
+			.filter((inscription) => inscription?.repository?.ref === museum.uri)
+			.map((i) => ({ ...i, idnoSort: parseInt(i.idno?._ || '9999999999', 10) }))
+			.map((i) => ({ ...i, languageSort: i.textLang?.languages.join(', ') || 'ZZZ' }))
+			.map((i) => ({ ...i, materialSort: i.material?._ || 'ZZZ' }))
+			.map((i) => ({ ...i, originSort: i.places?.[0]?._ || 'ZZZ' }))
+			.map((i) => ({ ...i, typeSort: i.type?._ || 'ZZZ' }))
+			.sort((a, b) => a.idnoSort - b.idnoSort);
 
 		return { museum, inscriptions };
 	} catch (e) {

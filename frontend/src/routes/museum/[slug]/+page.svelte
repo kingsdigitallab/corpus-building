@@ -77,7 +77,17 @@
 
 	<section class="inscriptions">
 		<h2>Inscriptions</h2>
-    <InscriptionTable {inscriptions} showInventoryNumber={true} />
+    	<InscriptionTable {inscriptions}
+            showInventoryNumber={true}
+            showSearch={true}
+            sortOptions={[
+                {value: 'idnoSort', label: 'Inventory number'},
+                {value: 'file', label: 'ISic'},
+                {value: 'materialSort', label: 'Material'},
+                {value: 'originSort', label: 'Origin'},
+                {value: 'typeSort', label: 'Type'},
+                {value: 'languageSort', label: 'Language'}
+              ]} />
   </section>
 </article>
 
