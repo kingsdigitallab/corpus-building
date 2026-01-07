@@ -12,7 +12,7 @@
 	} = $props();
 
 	let search = $state('');
-	let sortBy = $state(sortOptions[0].value);
+	let sortBy = $state(sortOptions?.[0]?.value || 'file');
 	let sortDir = $state(1);
 
 	let filteredInscriptions = $derived(
