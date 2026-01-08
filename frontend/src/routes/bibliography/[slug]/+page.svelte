@@ -25,7 +25,19 @@
 		</hgroup>
 	</header>
 
-	<InscriptionTable {inscriptions} showCitedRange={true} />
+	<InscriptionTable
+		{inscriptions}
+		showCitedRange={true}
+		showSearch={true}
+		sortOptions={[
+			{ value: 'citedRangeSort', label: 'Cited Range' },
+			{ value: 'file', label: 'ISic' },
+			{ value: 'materialSort', label: 'Material' },
+			{ value: 'settlement', label: 'Current Location' },
+			{ value: 'typeSort', label: 'Type' },
+			{ value: 'languageSort', label: 'Language' }
+		]}
+	/>
 </article>
 
 <style>
