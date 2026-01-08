@@ -31,14 +31,19 @@ export async function load({ params: { slug } }) {
 			})
 			.map((inscription) => ({
 				...inscription,
-				citedRangeSort: inscription.bibl?.citedRange || 'ZZZZZ'
+				citedRangeSort:
+					inscription.bibl.type === 'bulletin'
+						? `${inscription.bibl?.date || ''}${inscription.bibl?.citedRange || 'ZZZZZ'}`
+						: inscription.bibl?.citedRange || 'ZZZZZ'
 			}))
 			.map((i) => ({ ...i, languageSort: i.textLang?.languages.join(', ') || 'ZZZ' }))
 			.map((i) => ({ ...i, materialSort: i.material?._ || 'ZZZ' }))
 			.map((i) => ({ ...i, typeSort: i.type?._ || 'ZZZ' }))
 			.sort((a, b) => a.citedRangeSort.localeCompare(b.citedRangeSort));
 
-		return { zotero: z, inscriptions };
+		const isBulletin = inscriptions.some((inscription) => inscription.bibl?.type === 'bulletin');
+
+		return { zotero: z, inscriptions, isBulletin };
 	} catch (e) {
 		if (e instanceof Error) {
 			error(404, `Error loading bibliography: ${e.message}`);

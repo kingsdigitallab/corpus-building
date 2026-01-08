@@ -5,7 +5,7 @@
 
 	/** @type {{ data: import('./$types').PageData }} */
 	const { data } = $props();
-	const { zotero, inscriptions } = data;
+	const { zotero, inscriptions, isBulletin } = data;
 </script>
 
 <svelte:head>
@@ -28,6 +28,7 @@
 	<InscriptionTable
 		{inscriptions}
 		showCitedRange={true}
+		showBulletinDate={isBulletin}
 		showSearch={true}
 		sortOptions={[
 			{ value: 'citedRangeSort', label: 'Cited Range' },
