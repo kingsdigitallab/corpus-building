@@ -4,7 +4,12 @@
 	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	let { inscription, showCitedRange = false, showInventoryNumber = false } = $props();
+	let {
+		inscription,
+		showCitedRange = false,
+		showBulletinDate = false,
+		showInventoryNumber = false
+	} = $props();
 </script>
 
 <tr>
@@ -16,6 +21,11 @@
 				N/A
 			{/if}
 		</td>
+		{#if showBulletinDate}
+			<td>
+				{inscription.bibl?.date?.slice(0, 4) || 'N/A'}
+			</td>
+		{/if}
 	{/if}
 	{#if showInventoryNumber}
 		<td>{inscription?.idno?._ || 'N/A'}</td>

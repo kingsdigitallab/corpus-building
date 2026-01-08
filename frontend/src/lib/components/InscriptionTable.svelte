@@ -8,6 +8,7 @@
 		showSearch = false,
 		sortOptions = [],
 		showCitedRange = false,
+		showBulletinDate = false,
 		showInventoryNumber = false
 	} = $props();
 
@@ -72,7 +73,10 @@
 	<thead class="surface-1">
 		<tr>
 			{#if showCitedRange}
-				<th class="surface-4">Cited Range</th>
+				<th class="surface-4">Cited range</th>
+				{#if showBulletinDate}
+					<th class="surface-4">Bulletin date</th>
+				{/if}
 			{/if}
 			{#if showInventoryNumber}
 				<th class="surface-4">Inventory number</th>
@@ -90,7 +94,12 @@
 	</thead>
 	<tbody>
 		{#each filteredInscriptions as inscription}
-			<InscriptionTableRow {inscription} {showCitedRange} {showInventoryNumber} />
+			<InscriptionTableRow
+				{inscription}
+				{showCitedRange}
+				{showBulletinDate}
+				{showInventoryNumber}
+			/>
 		{/each}
 	</tbody>
 </table>
