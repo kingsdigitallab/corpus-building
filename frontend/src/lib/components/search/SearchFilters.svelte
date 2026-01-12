@@ -243,27 +243,48 @@
 										class="filter-input"
 									/>
 								{/if}
-								<ul>
-									{#each filterBuckets(aggregations[key].buckets, key) as bucket}
-										<li>
-											<label class:active={bucket.found}>
-												<input
-													type="checkbox"
-													value={bucket.key}
-													bind:group={selectedFilters[key]}
-													disabled={bucket.doc_count === 0}
-													onchange={() => searchFiltersChange()}
-												/>
-												<div>
-													<span title={bucket.key.replaceAll(':::', ' > ')}
-														>{getBucketDisplayValue(bucket.key)}</span
-													>
-													<small>matches: {bucket.doc_count.toLocaleString()}</small>
-												</div>
-											</label>
-										</li>
-									{/each}
-								</ul>
+								{#if filterBuckets(aggregations[key].buckets, key)}
+									{@const filteredBuckets = filterBuckets(aggregations[key].buckets, key)}
+									<div class="select-all">
+										<label>
+											<input
+												type="checkbox"
+												checked={selectedFilters[key].length === filteredBuckets.length}
+												disabled={filteredBuckets.length === 0}
+												onchange={() => {
+													if (selectedFilters[key].length === filteredBuckets.length) {
+														selectedFilters[key] = [];
+													} else {
+														selectedFilters[key] = filteredBuckets.map((bucket) => bucket.key);
+													}
+													searchFiltersChange();
+												}}
+											/>
+											Select all
+										</label>
+									</div>
+									<ul>
+										{#each filteredBuckets as bucket}
+											<li>
+												<label class:active={bucket.found}>
+													<input
+														type="checkbox"
+														value={bucket.key}
+														bind:group={selectedFilters[key]}
+														disabled={bucket.doc_count === 0}
+														onchange={() => searchFiltersChange()}
+													/>
+													<div>
+														<span title={bucket.key.replaceAll(':::', ' > ')}
+															>{getBucketDisplayValue(bucket.key)}</span
+														>
+														<small>matches: {bucket.doc_count.toLocaleString()}</small>
+													</div>
+												</label>
+											</li>
+										{/each}
+									</ul>
+								{/if}
 							</div>
 						</details>
 					</section>
@@ -459,7 +480,8 @@
 		transform: rotate(45deg);
 	}
 
-	.filters-group .conjunction-options {
+	.filters-group .conjunction-options,
+	.filters-group .select-all {
 		margin-block: var(--size-2);
 	}
 
@@ -536,5 +558,11 @@
 	.filters-group ul li label div small {
 		overflow-wrap: balance;
 		white-space: nowrap;
+	}
+
+	label:has(input[disabled]),
+	input[disabled] {
+		opacity: 0.5;
+		cursor: not-allowed;
 	}
 </style>
