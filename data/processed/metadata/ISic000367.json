@@ -27,33 +27,48 @@
   ],
   "editionAuthor": null,
   "type": {
-    "_": "funerary; honorific",
-    "ana": "#function.funerary #function.honorific",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "_": "funerary",
+    "ana": "#function.funerary",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
+    "certainty": {
+      "locus": "value",
+      "match": "../@ana",
+      "assertedValue": "#function.honorific",
+      "desc": "possibly honorific"
+    }
   },
-  "objectType": "",
+  "support": "Seven joining fragments of a marble plaque, broken on all sides",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
-    "_": "marble\n                                    ",
+    "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
   "dimensions": [
     {
+      "_": "28",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "41",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "2.8",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "It seems likely that the final line of the text is preserved, given the vacat below.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
@@ -66,10 +81,13 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line2",
+        "h": "50-65",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -83,7 +101,8 @@
   "date": {
     "_": "1st century CE or beginning 2nd century CE\n                                (Korhonen)",
     "notBefore": 1,
-    "notAfter": 125
+    "notAfter": 125,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -105,27 +124,21 @@
   ],
   "provenance": "Catina",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Dug up in Catania in 1773; now in the Museo Civico, last observed by Korhonen (sala VI.160, mag. del cort.)",
     "type": "found",
+    "subtype": "discovered",
+    "when": "1773",
     "geo": null
   },
   "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "sala VI.160, mag. del cort.",
+    "_": "None",
     "type": "observed",
+    "subtype": "autopsied",
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000367_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
@@ -248,15 +261,12 @@
     }
   },
   "tmNumber": "491578",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000367_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 65
+    }
+  ],
   "publications": [
     "Mommsen, 1883, CIL",
     "Korhonen, 2004, IMusCatania"
@@ -271,7 +281,8 @@
     {
       "_": "draft"
     },
-    "funerary; honorific",
+    "funerary",
+    "plaque",
     "marble",
     "catina",
     "catania",

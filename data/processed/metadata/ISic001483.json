@@ -26,37 +26,59 @@
   ],
   "editionAuthor": null,
   "type": {
-    "_": "funerary; dedication",
-    "ana": "#function.funerary #function.dedication",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "_": "dedication",
+    "ana": "#function.dedication",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html",
+    "certainty": {
+      "locus": "value",
+      "match": "../@ana",
+      "assertedValue": "#function.funerary",
+      "desc": "possibly funerary"
+    }
+  },
+  "support": "an irregular, damaged / cut-down block of stone, originally a votive base.",
+  "objectType": {
+    "_": "base",
+    "ana": "#object.base",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/57.html"
   },
   "material": {
-    "_": "\n                                        limestone (white)\n                                    ",
+    "_": "limestone",
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
   "dimensions": [
     {
+      "_": "87",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "35",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "55",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
-      "rs": {
-        "_": "chiselled",
-        "ana": "#execution.chiselled",
-        "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
-      },
+      "p": "Boustrophedon",
+      "rs": [
+        {
+          "_": "chiselled",
+          "ana": "#execution.chiselled",
+          "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
+        },
+        {
+          "_": "rubrication, red",
+          "ana": "#execution.rubrication.red"
+        }
+      ],
       "damage": ""
     }
   },
@@ -117,10 +139,13 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line2",
+        "h": "70",
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -156,8 +181,9 @@
   ],
   "provenance": "Gela",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in secondary deposition, in re-use as construction material in a C4 BCE context, during excavations by Orlandini on the north side of the acropolis.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -359,7 +385,12 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 70
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
@@ -380,8 +411,9 @@
     {
       "_": "draft"
     },
-    "funerary; dedication",
-    "limestone (white)",
+    "dedication",
+    "base",
+    "limestone",
     "gela",
     "gela",
     "italy",

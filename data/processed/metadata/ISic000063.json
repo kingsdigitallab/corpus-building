@@ -1,7 +1,7 @@
 {
   "file": "ISic000063",
   "uri": "ISic000063",
-  "title": "I.Sicily inscription 000063",
+  "title": "Honours for the Emperor Trajan",
   "status": {
     "_": "draft"
   },
@@ -25,28 +25,52 @@
       "type": "PHI"
     }
   ],
-  "editionAuthor": null,
+  "editionAuthor": {
+    "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+    "author": "Bivona",
+    "date": "1970",
+    "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+    "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+    "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
+  },
   "type": {
-    "_": "honorific; building",
-    "ana": "#function.honorific #function.building",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
+    "_": "honorific",
+    "ana": "#function.honorific",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
+    "certainty": {
+      "locus": "value",
+      "match": "../@ana",
+      "assertedValue": "#function.building",
+      "desc": "possibly building"
+    }
+  },
+  "support": "Large marble plaque, broken in fragments, which have been recomposed in a plaster seting. The lower right corner is lost, and several letters in the first two lines have been large restored, but the text is complete.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
     "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
+      "_": "64",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "134.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "4",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -58,17 +82,22 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-6",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line6",
+        "h": "68-75",
+        "unit": "mm",
+        "atLeast": "68",
+        "atMost": "75"
       },
       {
         "type": "interlinear",
@@ -80,8 +109,8 @@
     ]
   },
   "date": {
-    "_": "dated by consular year (so Raepsaet-Charlier)",
-    "notBefore": 103,
+    "_": "dated by consular year",
+    "notBefore": 102,
     "notAfter": 103,
     "evidence": "office"
   },
@@ -105,8 +134,9 @@
   ],
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in Tyndaris, in close proximity to a statue of Trajan.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -123,7 +153,7 @@
       "url": "ISic000063_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-05-23",
       "surfaceType": "front"
     }
   ],
@@ -284,12 +314,17 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alfredo Tosques",
+        "xml:id": "AT",
+        "ref": "https://orcid.org/0009-0009-2753-4014"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag added metadata, image, and translations and comment of Alfredo Tosques",
+      "when": "2025-12-02",
+      "who": "#JP"
     }
   },
   "tmNumber": "175834",
@@ -298,10 +333,15 @@
     "url": "ISic000063_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-05-23",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 68,
+      "atMost": 75
+    }
+  ],
   "publications": [
     "Maggiore, 1829, Su di alcune iscrizioni latine ritrovate in Tindari",
     "Mommsen, 1883, CIL",
@@ -318,11 +358,12 @@
   ],
   "keywords": [
     "isic000063",
-    "i.sicily inscription 000063",
+    "honours for the emperor trajan",
     {
       "_": "draft"
     },
-    "honorific; building",
+    "honorific",
+    "plaque",
     "marble",
     "tyndaris",
     "tindari",

@@ -31,6 +31,7 @@
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Large limestone block. Intact front, left, and partly on top and at resar. The right side is lost and the upper surface is uneven, very worn, and clearly missing some material. A piece is missing rear right.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -41,53 +42,119 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "36",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "90",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "60",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The front face preserves four lines of Latin text, with a clear margin on the left, loss to the upper right of line 1, and from the right end of all four lines. A deep circular hole has been drilled into the middle of line 4, which however the letters appear to be engraved around.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Broken bar A, D tending to square, lunate E, G with trailing tail, closed P and R. Use of a sinusoid form interpunct after FL in line 2.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "62",
+        "unit": "mm",
+        "atLeast": "62",
+        "atMost": "62"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "60-78",
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "78"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "51-62",
+        "unit": "mm",
+        "atLeast": "51",
+        "atMost": "62"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "45-48",
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "48"
       },
       {
         "type": "interlinear",
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
-        "unit": "mm"
+        "h": "15-25",
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "25"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "22-30",
+        "unit": "mm",
+        "atLeast": "22",
+        "atMost": "30"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "32-40",
+        "unit": "mm",
+        "atLeast": "32",
+        "atMost": "40"
       }
     ]
   },
   "date": {
-    "_": "Second half of 5th century CE",
-    "notBefore": 451,
-    "notAfter": 500
+    "_": "5th or early 6th century CE",
+    "notBefore": 401,
+    "notAfter": 550,
+    "evidence": "lettering, titulature"
   },
   "places": [
     {
@@ -109,15 +176,26 @@
   ],
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Piazza Matteotti",
+    "_": "Found during works to open Via del Littorio on Ortygia, between 1934 and 1936; one of a number of unstratified finds (apparently in secondary deposition, reused as building material) in the area of Largo Antonello Gagini, formerly Largo XXVIII Ottobre. Now in storage in the Museo Archeologico Regionale di Siracusa.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "notBefore": "1934",
+    "notAfter": "1936",
+    "geo": [
+      37.0629811,
+      15.2921563
+    ]
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.0629811,
+    15.2921563
+  ],
   "provenanceObserved": {
-    "_": "basement corridor",
+    "_": "Prag 2018-03-15",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -125,9 +203,9 @@
     {
       "n": "screen",
       "url": "ISic000632_tiled.tif",
-      "height": "4584px",
-      "width": "7064px",
-      "desc": "Photo J. Prag",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-03-15",
       "surfaceType": "front"
     }
   ],
@@ -331,21 +409,50 @@
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised from autopsy notes",
+      "when": "2025-12-03",
+      "who": "#JP"
     }
   },
   "tmNumber": "175845",
   "facsimile": {
     "n": "screen",
     "url": "ISic000632_tiled.tif",
-    "height": "4584px",
-    "width": "7064px",
-    "desc": "Photo J. Prag",
+    "height": "3680px",
+    "width": "5520px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-03-15",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 62,
+      "atMost": 62
+    },
+    {
+      "atLeast": 60,
+      "atMost": 78
+    },
+    {
+      "atLeast": 51,
+      "atMost": 62
+    },
+    {
+      "atLeast": 45,
+      "atMost": 48
+    },
+    {
+      "atLeast": 15,
+      "atMost": 25
+    },
+    {
+      "atLeast": 22,
+      "atMost": 30
+    },
+    {
+      "atLeast": 32,
+      "atMost": 40
+    }
+  ],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",

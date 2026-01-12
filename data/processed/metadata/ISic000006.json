@@ -24,7 +24,14 @@
       "type": "PHI"
     }
   ],
-  "editionAuthor": null,
+  "editionAuthor": {
+    "name": {
+      "_": "Jonathan Prag",
+      "xml:id": "JP",
+      "ref": "http://orcid.org/0000-0003-3819-8537"
+    },
+    "resp": "original data collection and editing"
+  },
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
@@ -43,14 +50,17 @@
   "condition": "",
   "dimensions": [
     {
+      "_": "30.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "30.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "1.5-2.5",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -69,10 +79,13 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "25-35",
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -108,8 +121,9 @@
   ],
   "provenance": "Cossura",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found on Cossura (Pantelleria)",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -244,8 +258,8 @@
       }
     ],
     "change": {
-      "_": "Jonathan Prag tagged named entities",
-      "when": "2021-06-30",
+      "_": "Jonathan Prag added metadata and a note in the commentary",
+      "when": "2025-12-02",
       "who": "#JP"
     }
   },
@@ -258,7 +272,12 @@
     "desc": "Photo J. Prag, courtesy  Museo Archeologico Regionale Antonino Salinas",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 35
+    }
+  ],
   "publications": [
     "Mommsen, 1883, CIL",
     "Bivona, 1970, ILMusPalermo"
