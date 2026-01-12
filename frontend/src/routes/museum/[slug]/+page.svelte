@@ -82,10 +82,10 @@
             showSearch={true}
             sortOptions={[
                 {value: 'idnoSort', label: 'Inventory number'},
-                {value: 'file', label: 'ISic'},
+                {value: 'file', label: 'FIle'},
                 {value: 'materialSort', label: 'Material'},
                 {value: 'originSort', label: 'Origin'},
-                {value: 'typeSort', label: 'Type'},
+                {value: 'typeSort', label: 'Inscription type'},
                 {value: 'languageSort', label: 'Language'}
               ]} />
   </section>

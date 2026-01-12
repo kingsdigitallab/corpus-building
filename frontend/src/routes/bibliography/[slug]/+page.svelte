@@ -31,11 +31,11 @@
 		showBulletinDate={isBulletin}
 		showSearch={true}
 		sortOptions={[
-			{ value: 'citedRangeSort', label: 'Cited Range' },
-			{ value: 'file', label: 'ISic' },
+			{ value: 'citedRangeSort', label: 'Cited range' },
+			{ value: 'file', label: 'File' },
 			{ value: 'materialSort', label: 'Material' },
-			{ value: 'settlement', label: 'Current Location' },
-			{ value: 'typeSort', label: 'Type' },
+			{ value: 'settlement', label: 'Current location' },
+			{ value: 'typeSort', label: 'Inscription type' },
 			{ value: 'languageSort', label: 'Language' }
 		]}
 	/>
