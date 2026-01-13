@@ -25,20 +25,23 @@
 		</hgroup>
 	</header>
 
-	<InscriptionTable
-		{inscriptions}
-		showCitedRange={true}
-		showBulletinDate={isBulletin}
-		showSearch={true}
-		sortOptions={[
-			{ value: 'citedRangeSort', label: 'Cited range' },
-			{ value: 'file', label: 'File' },
-			{ value: 'materialSort', label: 'Material' },
-			{ value: 'settlement', label: 'Current location' },
-			{ value: 'typeSort', label: 'Inscription type' },
-			{ value: 'languageSort', label: 'Language' }
-		]}
-	/>
+	<section class="inscriptions">
+		<h2>Inscriptions</h2>
+		<InscriptionTable
+			{inscriptions}
+			showCitedRange={true}
+			showBulletinDate={isBulletin}
+			showSearch={true}
+			sortOptions={[
+				{ value: 'citedRangeSort', label: 'Cited range' },
+				{ value: 'file', label: 'File' },
+				{ value: 'materialSort', label: 'Material' },
+				{ value: 'settlement', label: 'Current location' },
+				{ value: 'typeSort', label: 'Inscription type' },
+				{ value: 'languageSort', label: 'Language' }
+			]}
+		/>
+	</section>
 </article>
 
 <style>
