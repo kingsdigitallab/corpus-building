@@ -17,12 +17,12 @@
 
 	function handleCategoryChange() {
 		selectedColourBy = '';
-		selectedView = 'bar-stacked';
+		selectedView = selectedCategory === 'provenance' ? 'map' : 'bar-stacked';
 	}
 
 	let selectedColourBy = $state('');
 
-	let selectedView = $state(selectedCategory === 'provenance' ? 'map' : 'bar-stacked');
+	let selectedView = $state('map');
 
 	const categories = $derived(
 		Object.values(aggregations)
