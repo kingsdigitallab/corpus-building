@@ -10,14 +10,19 @@
 	const excludedCategories = [];
 
 	// Viz controls
-	let selectedView = $state('map');
-
-	let selectedCategory = $state('inscriptionType');
+	let selectedCategory = $state('provenance');
 	const selectedCategoryTitle = $derived(
 		categories.find((c) => c.value === selectedCategory)?.label || 'No title'
 	);
 
+	function handleCategoryChange() {
+		selectedColourBy = '';
+		selectedView = 'bar-stacked';
+	}
+
 	let selectedColourBy = $state('');
+
+	let selectedView = $state(selectedCategory === 'provenance' ? 'map' : 'bar-stacked');
 
 	const categories = $derived(
 		Object.values(aggregations)
@@ -33,38 +38,58 @@
 			}))
 			.sort((a, b) => a.label.localeCompare(b.label))
 	);
+
+	const isColourByDisabled = $derived(['histogram', 'map'].includes(selectedView));
+	const isHistogramDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
+	const isMapDisabled = $derived(selectedCategory !== 'provenance');
 </script>
 
 <section id="viz-controls">
 	<fieldset>
-		<label>
-			View
-			<select name="view" bind:value={selectedView}>
-				<option value="bar-stacked">Bar</option>
-				<option value="donut">Donut</option>
-				<option value="histogram">Histogram</option>
-				<option value="map">Map</option>
-			</select>
-		</label>
-		<label>
-			Category
+		<div class="control">
+			<label for="category">Category</label>
 			<select
+				id="category"
 				name="category"
 				bind:value={selectedCategory}
-				disabled={selectedView === 'map' || selectedView === 'histogram'}
-				onchange={() => (selectedColourBy = '')}
+				onchange={() => handleCategoryChange()}
+				aria-describedby="category-help"
 			>
 				{#each categories as category (category.value)}
 					<option value={category.value}>{category.label}</option>
 				{/each}
 			</select>
-		</label>
-		<label>
-			Split by
+			<p id="category-help">
+				<small>Choose a category to group inscriptions by in the chart.</small>
+			</p>
+		</div>
+		<div class="control">
+			<label for="chartType">Chart type</label>
 			<select
+				id="chartType"
+				name="chartType"
+				bind:value={selectedView}
+				aria-describedby="chartType-help"
+			>
+				<option value="bar-stacked">Bar</option>
+				<option value="donut">Donut</option>
+				<option value="histogram" disabled={isHistogramDisabled}>Histogram</option>
+				<option value="map" disabled={isMapDisabled}>Map</option>
+			</select>
+			<p id="chartType-help">
+				<small
+					>Switch between chart types; some are disabled depending on the selected category.</small
+				>
+			</p>
+		</div>
+		<div class="control">
+			<label for="colourBy">Split by</label>
+			<select
+				id="colourBy"
 				name="colourBy"
 				bind:value={selectedColourBy}
-				disabled={selectedView === 'map' || selectedView === 'histogram'}
+				disabled={isColourByDisabled}
+				aria-describedby="colourBy-help"
 			>
 				<option value="">None</option>
 				{#each categories as category (category.value)}
@@ -77,7 +102,13 @@
 					>
 				{/each}
 			</select>
-		</label>
+			<p id="colourBy-help">
+				<small
+					>Select a category to segment the data. Options with too many values are disabled; filter
+					your results further to enable them.</small
+				>
+			</p>
+		</div>
 	</fieldset>
 </section>
 
@@ -146,10 +177,14 @@
 	#viz-controls fieldset {
 		display: flex;
 		gap: var(--size-10);
-		justify-content: center;
+		justify-content: space-between;
 	}
 
-	label:has(select:disabled) {
+	.control p {
+		max-inline-size: var(--size-content-2);
+	}
+
+	.control:has(select:disabled) {
 		opacity: 0.5;
 	}
 
