@@ -187,8 +187,4 @@
 	.control:has(select:disabled) {
 		opacity: 0.5;
 	}
-
-	select:disabled {
-		cursor: not-allowed;
-	}
 </style>
