@@ -632,6 +632,7 @@
 							id="sort-select"
 							bind:value={searchOptions.sortResultsBy}
 							onchange={(option) => handleSortResultsByChange(option.target.value)}
+							disabled={isLoading || isDownloading || $searchViewParam === 'viz'}
 						>
 							{#each sortings as sorting}
 								<option value={sorting.field}>{sorting.label}</option>
@@ -642,6 +643,7 @@
 							class="order-toggle"
 							onclick={() => handleSortResultsOrderToggle()}
 							aria-label="Toggle sort order from ascending to descending to no order"
+							disabled={isLoading || isDownloading || $searchViewParam === 'viz'}
 						>
 							{#if searchOptions.sortResultsOrder === 'asc'}
 								<LucideArrowUp aria-label="Ascending" />
@@ -769,6 +771,11 @@
 		align-items: center;
 		display: flex;
 		gap: var(--size-2);
+	}
+
+	.sort-controls:has(select:disabled) {
+		cursor: not-allowed;
+		opacity: 0.5;
 	}
 
 	.transition-container {
