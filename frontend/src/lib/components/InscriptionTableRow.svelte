@@ -23,7 +23,7 @@
 		</td>
 		{#if showBulletinDate}
 			<td>
-				{inscription.bibl?.date?.slice(0, 4) || 'N/A'}
+				{inscription.bibl?.inscriptionDate || 'N/A'}
 			</td>
 		{/if}
 	{/if}
