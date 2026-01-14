@@ -47,35 +47,39 @@
 <section id="viz-controls">
 	<fieldset>
 		<div class="control">
-			<label for="category">Category</label>
-			<select
-				id="category"
-				name="category"
-				bind:value={selectedCategory}
-				onchange={() => handleCategoryChange()}
-				aria-describedby="category-help"
-			>
-				{#each categories as category (category.value)}
-					<option value={category.value}>{category.label}</option>
-				{/each}
-			</select>
+			<div>
+				<label for="category">Category:</label>
+				<select
+					id="category"
+					name="category"
+					bind:value={selectedCategory}
+					onchange={() => handleCategoryChange()}
+					aria-describedby="category-help"
+				>
+					{#each categories as category (category.value)}
+						<option value={category.value}>{category.label}</option>
+					{/each}
+				</select>
+			</div>
 			<p id="category-help">
 				<small>Choose a category to group inscriptions by in the chart.</small>
 			</p>
 		</div>
 		<div class="control">
-			<label for="chartType">Chart type</label>
-			<select
-				id="chartType"
-				name="chartType"
-				bind:value={selectedView}
-				aria-describedby="chartType-help"
-			>
-				<option value="bar-stacked">Bar</option>
-				<option value="donut">Donut</option>
-				<option value="histogram" disabled={isHistogramDisabled}>Histogram</option>
-				<option value="map" disabled={isMapDisabled}>Map</option>
-			</select>
+			<div>
+				<label for="chartType">Chart type:</label>
+				<select
+					id="chartType"
+					name="chartType"
+					bind:value={selectedView}
+					aria-describedby="chartType-help"
+				>
+					<option value="bar-stacked">Bar</option>
+					<option value="donut">Donut</option>
+					<option value="histogram" disabled={isHistogramDisabled}>Histogram</option>
+					<option value="map" disabled={isMapDisabled}>Map</option>
+				</select>
+			</div>
 			<p id="chartType-help">
 				<small
 					>Switch between chart types; some are disabled depending on the selected category.</small
@@ -83,25 +87,27 @@
 			</p>
 		</div>
 		<div class="control">
-			<label for="colourBy">Split by</label>
-			<select
-				id="colourBy"
-				name="colourBy"
-				bind:value={selectedColourBy}
-				disabled={isColourByDisabled}
-				aria-describedby="colourBy-help"
-			>
-				<option value="">None</option>
-				{#each categories as category (category.value)}
-					<option
-						value={category.value}
-						disabled={category.disabledColourBy}
-						title={category.disabledColourBy
-							? 'Too many values, filter results to enable option'
-							: ''}>{category.label}</option
-					>
-				{/each}
-			</select>
+			<div>
+				<label for="colourBy">Split by:</label>
+				<select
+					id="colourBy"
+					name="colourBy"
+					bind:value={selectedColourBy}
+					disabled={isColourByDisabled}
+					aria-describedby="colourBy-help"
+				>
+					<option value="">None</option>
+					{#each categories as category (category.value)}
+						<option
+							value={category.value}
+							disabled={category.disabledColourBy}
+							title={category.disabledColourBy
+								? 'Too many values, filter results to enable option'
+								: ''}>{category.label}</option
+						>
+					{/each}
+				</select>
+			</div>
 			<p id="colourBy-help">
 				<small
 					>Select a category to segment the data. Options with too many values are disabled; filter
@@ -178,6 +184,12 @@
 		display: flex;
 		gap: var(--size-10);
 		justify-content: space-between;
+	}
+
+	.control div {
+		align-items: center;
+		display: flex;
+		gap: var(--size-2);
 	}
 
 	.control p {
