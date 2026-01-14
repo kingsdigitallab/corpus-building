@@ -22,7 +22,8 @@
 				(inscription) =>
 					inscription.keywords?.join(' ').toLowerCase().includes(search.toLowerCase()) ||
 					inscription?.idno?._?.toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.bibl?.citedRange?.toLowerCase().includes(search.toLowerCase())
+					inscription?.bibl?.citedRange?.toLowerCase().includes(search.toLowerCase()) ||
+					inscription?.bibl?.inscriptionDate?.includes(search.toLowerCase())
 			)
 			.sort((a, b) => {
 				if (sortBy === 'idnoSort') {
