@@ -33,7 +33,7 @@ export async function load({ params: { slug } }) {
 				...inscription,
 				citedRangeSort:
 					inscription.bibl.type === 'bulletin'
-						? `${inscription.bibl?.date || ''}${inscription.bibl?.citedRange || 'ZZZZZ'}`
+						? `${inscription.bibl?.inscriptionDate || ''}${inscription.bibl?.citedRange || 'ZZZZZ'}`
 						: inscription.bibl?.citedRange || 'ZZZZZ'
 			}))
 			.map((i) => ({ ...i, languageSort: i.textLang?.languages.join(', ') || 'ZZZ' }))
