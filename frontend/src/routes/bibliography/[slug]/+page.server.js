@@ -31,10 +31,8 @@ export async function load({ params: { slug } }) {
 			})
 			.map((inscription) => ({
 				...inscription,
-				citedRangeSort:
-					inscription.bibl.type === 'bulletin'
-						? `${inscription.bibl?.inscriptionDate || ''}${inscription.bibl?.citedRange || 'ZZZZZ'}`
-						: inscription.bibl?.citedRange || 'ZZZZZ'
+				bulletinDateSort: parseInt(inscription.bibl?.inscriptionDate || '999999999999'),
+				citedRangeSort: inscription.bibl?.citedRange || 'ZZZZZ'
 			}))
 			.map((i) => ({ ...i, languageSort: i.textLang?.languages.join(', ') || 'ZZZ' }))
 			.map((i) => ({ ...i, materialSort: i.material?._ || 'ZZZ' }))
