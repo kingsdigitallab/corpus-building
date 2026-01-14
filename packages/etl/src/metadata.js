@@ -516,6 +516,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
 
           return {
             ...item,
+            inscriptionDate: item?.date,
             ...zoteroData,
           };
         }
