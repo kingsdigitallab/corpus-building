@@ -557,3 +557,130 @@ a.badge {
 	width: var(--size-8);
 }
 /* End of Epidoc styles */
+
+/* Print styles */
+@media print {
+	:root {
+		color-scheme: light !important;
+		--text-1: #000 !important;
+		--surface-1: #fff !important;
+		--border-color: #ccc !important;
+	}
+
+	/* Reset page layout */
+	html,
+	body {
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+	/* Hide interactive elements */
+	#page-navigation,
+	#image-viewer,
+	.map,
+	.citation-actions,
+	.tabs,
+	button,
+	[role='button'],
+	.toaster,
+	nav,
+	header:has(nav),
+	footer {
+		display: none !important;
+	}
+
+	article {
+		display: block !important;
+		height: auto !important;
+		overflow: visible !important;
+		grid-template-columns: 1fr !important;
+	}
+
+	#overview {
+		border: none !important;
+		height: auto !important;
+		overflow: visible !important;
+		position: relative !important;
+		page-break-after: avoid;
+	}
+
+	#overview h1 {
+		font-size: 1.5rem !important;
+		text-align: left !important;
+	}
+
+	#overview dl {
+		column-count: 1 !important;
+	}
+
+	#facsimile-images {
+		display: block !important;
+	}
+
+	#facsimile-images #image-viewer {
+		display: none !important;
+	}
+
+	#content {
+		height: auto !important;
+		overflow: visible !important;
+		padding-inline: 0 !important;
+	}
+
+	#content > section {
+		border-bottom: 1px solid #ccc !important;
+		page-break-inside: avoid;
+	}
+
+	.translation-content {
+		page-break-inside: avoid;
+	}
+
+	a[href^='http']:not(.badge)::after {
+		content: ' (' attr(href) ')' !important;
+		font-size: 0.8em;
+		word-break: break-all;
+	}
+
+	a.badge::after {
+		content: '' !important;
+	}
+
+	dl {
+		page-break-inside: avoid;
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	* {
+		color: #000 !important;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.badge {
+		background-color: #eee !important;
+		border: 1px solid #ccc !important;
+	}
+
+	* {
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	@page {
+		margin: 2cm;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+
+	ul,
+	ol {
+		page-break-inside: avoid;
+	}
+}
+/* End of Print styles */

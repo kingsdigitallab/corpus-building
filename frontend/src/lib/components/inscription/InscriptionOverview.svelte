@@ -64,6 +64,11 @@
 
 	{#if images && images.length > 0}
 		<figure id="facsimile-images">
+			<img
+				class="print-only"
+				src="{config.imageServer}{slug}/{images[0]?.url || ''}/{config.imageThumbParams}"
+				alt={images[0]?.desc || 'Inscription image'}
+			/>
 			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
 			<figcaption>{curImageTitle}</figcaption>
 		</figure>
@@ -198,6 +203,19 @@
 
 		#overview dl {
 			column-count: 1;
+		}
+	}
+
+	.print-only {
+		display: none;
+	}
+
+	@media print {
+		.print-only {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
 		}
 	}
 </style>
