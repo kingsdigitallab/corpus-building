@@ -26,7 +26,7 @@
 					inscription?.bibl?.inscriptionDate?.includes(search.toLowerCase())
 			)
 			.sort((a, b) => {
-				if (sortBy === 'idnoSort') {
+				if (sortBy === 'idnoSort' || sortBy === 'bulletinDateSort') {
 					return a[sortBy] - b[sortBy] * sortDir;
 				}
 
