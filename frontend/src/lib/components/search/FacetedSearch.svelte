@@ -63,7 +63,7 @@
 		$searchViewParam === 'viz'
 			? inscriptions?.map((inscription) => ({
 					...inscription,
-					geo: inscription.geo[0]
+					geo: inscription?.geo?.[0]
 				}))
 			: []
 	);
