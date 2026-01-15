@@ -3,6 +3,7 @@
 	import DonutView from './views/DonutView.svelte';
 	import HistogramView from './views/HistogramView.svelte';
 	import MapView from './views/MapView.svelte';
+	import { FilterIcon } from 'lucide-svelte';
 
 	let { inscriptions, aggregations } = $props();
 
@@ -110,8 +111,9 @@
 			</div>
 			<p id="colourBy-help">
 				<small
-					>Select a category to segment the data. Options with too many values are disabled; filter
-					your results further to enable them.</small
+					>Select a category to segment the data. Options with too many values are disabled;
+					<FilterIcon size={16} />
+					filter your results further to enable them.</small
 				>
 			</p>
 		</div>
@@ -198,5 +200,10 @@
 
 	.control:has(select:disabled) {
 		opacity: 0.5;
+	}
+
+	:global(p#colourBy-help small svg) {
+		display: inline;
+		vertical-align: middle;
 	}
 </style>
