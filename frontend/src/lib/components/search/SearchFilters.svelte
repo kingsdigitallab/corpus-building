@@ -158,7 +158,7 @@
 					</Button.Root>
 				{/if}
 			</div>
-			<ul>
+			<ul class="filters-selected">
 				{#each selectedFiltersEntries as [key, value]}
 					{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
 					<li>
@@ -378,6 +378,15 @@
 	.filters-sort div {
 		display: flex;
 		gap: var(--size-4);
+	}
+
+	.filters-selected {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-2);
+		justify-content: flex-start;
+		list-style: none;
+		padding: 0;
 	}
 
 	h3,
