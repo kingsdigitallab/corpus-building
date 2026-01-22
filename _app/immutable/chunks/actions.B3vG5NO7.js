@@ -1,0 +1,1 @@
+import{v as c,t as o,w as i,x as d,y as m}from"./runtime.ntRhrFos.js";function x(e,n,f){c(()=>{var r=o(()=>n(e,f==null?void 0:f())||{});if(f&&(r!=null&&r.update)){var t=!1,a={};i(()=>{var s=f();d(s),t&&m(a,s)&&(a=s,r.update(s))}),t=!0}if(r!=null&&r.destroy)return()=>r.destroy()})}export{x as a};
