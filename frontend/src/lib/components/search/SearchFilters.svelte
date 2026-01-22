@@ -4,6 +4,7 @@
 	import RangeSlider from './RangeSlider.svelte';
 	import TooltipInfo from '$lib/components/TooltipInfo.svelte';
 	import * as config from '$lib/config';
+	import { MinusIcon, PlusIcon } from 'lucide-svelte';
 
 	let {
 		show = $bindable(false),
@@ -33,6 +34,8 @@
 			.filter(([_, value]) => value.length > 0)
 			.flatMap(([key, value]) => value.map((v) => [key, v]))
 	);
+
+	let showAllFilters = $state(false);
 
 	const sortAggregationsOptions = [
 		{ label: 'Name', value: 'key' },
@@ -158,21 +161,41 @@
 					</Button.Root>
 				{/if}
 			</div>
-			<ul class="filters-selected">
-				{#each selectedFiltersEntries as [key, value]}
-					{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
-					<li>
-						<Button.Root
-							class="remove-filter-button surface-3"
-							aria-label="Remove {key} filter with value {displayValue}"
-							title="Remove {key} filter with value {displayValue}"
-							onclick={() => handleRemoveFilter(key, value)}
-						>
-							{displayValue}
-						</Button.Root>
-					</li>
-				{/each}
-			</ul>
+			{#if selectedFiltersEntries.length > 0}
+				{@const maxVisibleFilters = 9}
+
+				<ul class="filters-selected">
+					{#each selectedFiltersEntries as [key, value], index}
+						{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
+						<li class:hidden={index > maxVisibleFilters - 1 && !showAllFilters}>
+							<Button.Root
+								class="remove-filter-button surface-3"
+								aria-label="Remove {key} filter with value {displayValue}"
+								title="Remove {key} filter with value {displayValue}"
+								onclick={() => handleRemoveFilter(key, value)}
+							>
+								{displayValue}
+							</Button.Root>
+						</li>
+					{/each}
+					{#if selectedFiltersEntries.length > maxVisibleFilters}
+						<li>
+							<Button.Root
+								class="filters-show-all-button surface-4"
+								aria-label={showAllFilters ? 'Show less filters' : 'Show all filters'}
+								title={showAllFilters ? 'Show less filters' : 'Show all filters'}
+								onclick={() => (showAllFilters = !showAllFilters)}
+							>
+								{#if showAllFilters}
+									<MinusIcon /> Show less filters
+								{:else}
+									<PlusIcon /> Show all filters
+								{/if}
+							</Button.Root>
+						</li>
+					{/if}
+				</ul>
+			{/if}
 		</section>
 
 		<section class="filters-groups">
@@ -387,6 +410,16 @@
 		justify-content: flex-start;
 		list-style: none;
 		padding: 0;
+	}
+
+	.filters-selected li.hidden {
+		display: none;
+	}
+
+	:global(.filters-show-all-button) {
+		box-shadow: none;
+		font-size: var(--font-size-1);
+		padding-inline: var(--size-4);
 	}
 
 	h3,
