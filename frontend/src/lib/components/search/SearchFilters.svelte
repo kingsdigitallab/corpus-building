@@ -4,7 +4,7 @@
 	import RangeSlider from './RangeSlider.svelte';
 	import TooltipInfo from '$lib/components/TooltipInfo.svelte';
 	import * as config from '$lib/config';
-	import { MinusIcon, PlusIcon } from 'lucide-svelte';
+	import { ChevronDownIcon, ChevronUpIcon } from 'lucide-svelte';
 
 	let {
 		show = $bindable(false),
@@ -178,23 +178,23 @@
 							</Button.Root>
 						</li>
 					{/each}
-					{#if selectedFiltersEntries.length > maxVisibleFilters}
-						<li>
-							<Button.Root
-								class="filters-show-all-button surface-4"
-								aria-label={showAllFilters ? 'Show less filters' : 'Show all filters'}
-								title={showAllFilters ? 'Show less filters' : 'Show all filters'}
-								onclick={() => (showAllFilters = !showAllFilters)}
-							>
-								{#if showAllFilters}
-									<MinusIcon /> Show less filters
-								{:else}
-									<PlusIcon /> Show all filters
-								{/if}
-							</Button.Root>
-						</li>
-					{/if}
 				</ul>
+				{#if selectedFiltersEntries.length > maxVisibleFilters}
+					<div class="filters-show-all-button-wrapper">
+						<Button.Root
+							class="filters-show-all-button secondary-inverse"
+							aria-label={showAllFilters ? 'Show less filters' : 'Show all filters'}
+							title={showAllFilters ? 'Show less filters' : 'Show all filters'}
+							onclick={() => (showAllFilters = !showAllFilters)}
+						>
+							{#if showAllFilters}
+								<ChevronUpIcon /> Show less filters
+							{:else}
+								<ChevronDownIcon /> Show all filters
+							{/if}
+						</Button.Root>
+					</div>
+				{/if}
 			{/if}
 		</section>
 
@@ -416,10 +416,20 @@
 		display: none;
 	}
 
+	.filters-show-all-button-wrapper {
+		margin-block-start: var(--size-2);
+	}
+
 	:global(.filters-show-all-button) {
+		background: transparent;
+		border: none;
 		box-shadow: none;
+		color: var(--text-4);
 		font-size: var(--font-size-1);
+		font-weight: normal;
+		margin-left: auto;
 		padding-inline: var(--size-4);
+		text-decoration: underline;
 	}
 
 	h3,
