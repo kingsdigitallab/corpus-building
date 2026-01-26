@@ -220,6 +220,7 @@
 			{/if}
 			{#each Object.keys(selectedFilters) as key}
 				{#if key in aggregations && aggregations[key].title}
+					{@const filteredBuckets = filterBuckets(aggregations[key].buckets, key)}
 					<section class="filters-group">
 						<details>
 							<summary>
@@ -234,6 +235,26 @@
 								<small
 									>Options: {aggregations[key].buckets.filter((b) => b.doc_count > 0).length}
 								</small>
+								{#if filterBuckets(aggregations[key].buckets, key)}
+									<div class="select-all">
+										<label>
+											<input
+												type="checkbox"
+												checked={selectedFilters[key].length === filteredBuckets.length}
+												disabled={filteredBuckets.length === 0}
+												onchange={() => {
+													if (selectedFilters[key].length === filteredBuckets.length) {
+														selectedFilters[key] = [];
+													} else {
+														selectedFilters[key] = filteredBuckets.map((bucket) => bucket.key);
+													}
+													searchFiltersChange();
+												}}
+											/>
+											Select all
+										</label>
+									</div>
+								{/if}
 								{#if key === 'language'}
 									<div class="conjunction-options">
 										<label>
@@ -267,25 +288,6 @@
 									/>
 								{/if}
 								{#if filterBuckets(aggregations[key].buckets, key)}
-									{@const filteredBuckets = filterBuckets(aggregations[key].buckets, key)}
-									<div class="select-all">
-										<label>
-											<input
-												type="checkbox"
-												checked={selectedFilters[key].length === filteredBuckets.length}
-												disabled={filteredBuckets.length === 0}
-												onchange={() => {
-													if (selectedFilters[key].length === filteredBuckets.length) {
-														selectedFilters[key] = [];
-													} else {
-														selectedFilters[key] = filteredBuckets.map((bucket) => bucket.key);
-													}
-													searchFiltersChange();
-												}}
-											/>
-											Select all
-										</label>
-									</div>
 									<ul>
 										{#each filteredBuckets as bucket}
 											<li>
