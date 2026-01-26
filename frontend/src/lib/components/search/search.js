@@ -269,6 +269,7 @@ const searchConfig = {
 
 searchConfig.searchableFields = [
 	'file',
+	'fileClean',
 	'keywords',
 	'title',
 	'text',
@@ -326,6 +327,7 @@ export function load({
 
 			return {
 				...item,
+				fileClean: [item.file, item.file.replace('ISic', ''), `${parseInt(item.file.replace('ISic', ''))}`],
 				lemmas: [...itemLemmas, ...itemLemmas.flatMap((l) => [`lemma_${l}`, `text_${l}`])],
 				text: [...itemText, ...itemText.map((t) => `text_${t}`)],
 				status: item?.status?._ ?? undefined,
