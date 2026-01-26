@@ -44,7 +44,7 @@ export const search = {
 	limit: 20,
 	maxLimit: 5000,
 	minDate: -700,
-	maxDate: 1830,
+	maxDate: 902,
 	minLetterHeight: 0,
 	maxLetterHeight: 250
 };
