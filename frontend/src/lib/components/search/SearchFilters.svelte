@@ -142,6 +142,7 @@
 							value={option.value}
 							bind:group={sortAggregationsBy}
 							onchange={() => sortAggregationsByChange()}
+							disabled={isLoading}
 						/>
 						{option.label}
 					</label>
@@ -160,6 +161,7 @@
 						class="clear-filters-button"
 						aria-label="Clear all filters"
 						onclick={handleClearFilters}
+						disabled={isLoading}
 					>
 						Clear all filters
 					</Button.Root>
@@ -177,6 +179,7 @@
 								aria-label="Remove {key} filter with value {displayValue}"
 								title="Remove {key} filter with value {displayValue}"
 								onclick={() => handleRemoveFilter(key, value)}
+								disabled={isLoading}
 							>
 								{displayValue}
 							</Button.Root>
@@ -190,6 +193,7 @@
 							aria-label={showAllFilters ? 'Show less filters' : 'Show all filters'}
 							title={showAllFilters ? 'Show less filters' : 'Show all filters'}
 							onclick={() => (showAllFilters = !showAllFilters)}
+							disabled={isLoading}
 						>
 							{#if showAllFilters}
 								<ChevronUpIcon /> Show less filters
@@ -219,6 +223,7 @@
 						tooltip={config.tooltips.date}
 						bind:selectedRange={selectedDateRange}
 						rangeChange={() => searchFiltersChange()}
+						disabled={isLoading}
 					/>
 				</section>
 			{/if}
@@ -245,7 +250,7 @@
 											<input
 												type="checkbox"
 												checked={selectedFilters[key].length === filteredBuckets.length}
-												disabled={filteredBuckets.length === 0}
+												disabled={filteredBuckets.length === 0 || isLoading}
 												onchange={() => {
 													if (selectedFilters[key].length === filteredBuckets.length) {
 														selectedFilters[key] = [];
@@ -266,6 +271,7 @@
 												type="checkbox"
 												bind:checked={languageConjunction}
 												onchange={() => languageConjunctionChange()}
+												disabled={isLoading}
 											/>
 											Match all selected languages (AND)
 										</label>
@@ -278,6 +284,7 @@
 												type="checkbox"
 												bind:checked={inscriptionTypeConjunction}
 												onchange={() => inscriptionTypeConjunctionChange()}
+												disabled={isLoading}
 											/>
 											Match all selected inscription types (AND)
 										</label>
@@ -290,6 +297,7 @@
 												type="checkbox"
 												bind:checked={publicationConjunction}
 												onchange={() => publicationConjunctionChange()}
+												disabled={isLoading}
 											/>
 											Match all selected publications (AND)
 										</label>
@@ -301,6 +309,7 @@
 										placeholder="Filter options..."
 										bind:value={filterContains[key]}
 										class="filter-input"
+										disabled={isLoading}
 									/>
 								{/if}
 								{#if filterBuckets(aggregations[key].buckets, key)}
@@ -312,7 +321,7 @@
 														type="checkbox"
 														value={bucket.key}
 														bind:group={selectedFilters[key]}
-														disabled={bucket.doc_count === 0}
+														disabled={bucket.doc_count === 0 || isLoading}
 														onchange={() => searchFiltersChange()}
 													/>
 													<div>
@@ -344,6 +353,7 @@
 							tooltip={config.tooltips.letterHeight}
 							bind:selectedRange={selectedLetterHeightRange}
 							rangeChange={() => searchFiltersChange()}
+							disabled={isLoading}
 						/>
 					</section>
 				{/if}

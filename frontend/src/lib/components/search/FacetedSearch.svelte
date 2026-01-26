@@ -282,6 +282,7 @@
 
 	async function handleConjunctionToggle() {
 		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchStatus = 'load';
 			searchWorker.postMessage({
 				type: 'load',
 				data: {
