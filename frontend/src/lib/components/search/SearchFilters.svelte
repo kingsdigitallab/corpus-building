@@ -204,7 +204,7 @@
 					<RangeSlider
 						title="Date range"
 						min={-700}
-						max={1830}
+						max={1900}
 						step={1}
 						startLabel={selectedDateRange[0] <= 0
 							? `${-1 * selectedDateRange[0]} BCE `
