@@ -72,8 +72,8 @@
 
 	const searchOptions = $state({
 		sortAggregationsBy: 'key',
-		languageConjunction: true,
-		publicationConjunction: true,
+		languageConjunction: false,
+		publicationConjunction: false,
 		sortResultsBy: 'file',
 		sortResultsOrder: 'asc'
 	});
