@@ -172,11 +172,6 @@
 		height: 600px;
 		width: 100%;
 
-		:global(.maplibregl-popup-content) {
-			height: 200px;
-			overflow: scroll;
-		}
-
 		:global(button) {
 			box-shadow: none;
 			text-shadow: none;
@@ -238,6 +233,6 @@
 	}
 
 	:global(.maplibregl-popup-content) {
-		min-width: 150px;
+		height: 200px;
 	}
 </style>
