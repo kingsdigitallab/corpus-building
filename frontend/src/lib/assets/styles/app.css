@@ -365,15 +365,19 @@ code {
 	padding-block: var(--size-1);
 	padding-inline: var(--size-2);
 	text-align: center;
+	white-space: nowrap;
 }
 
 .badge a,
 a.badge {
 	color: var(--text-2);
+	padding-block: var(--size-1);
 	text-decoration-color: var(--text-2);
 }
 
-.badge::first-letter {
+.badge::first-letter,
+.badge a::first-letter,
+a.badge::first-letter {
 	text-transform: uppercase;
 }
 
