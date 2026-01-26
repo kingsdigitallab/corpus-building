@@ -144,8 +144,9 @@
 	.edition-content {
 		border-radius: var(--radius-2);
 		font-family: var(--font-family-greek);
-		line-height: var(--font-lineheight-3);
-		max-height: calc(10 * var(--font-lineheight-3));
+		letter-spacing: 0.05em;
+		line-height: var(--font-lineheight-4);
+		max-height: calc(10 * var(--font-lineheight-4));
 		overflow-x: scroll;
 		overflow-y: scroll;
 		padding-block: var(--size-4);
