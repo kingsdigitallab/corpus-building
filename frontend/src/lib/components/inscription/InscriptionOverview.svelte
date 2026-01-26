@@ -84,13 +84,19 @@
 		<dt>Language</dt>
 		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
-		<dd>
-			{#if metadata?.type?.ref}
-				<a class="badge strong" href={metadata.type.ref}
-					>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
-				>
-			{:else}
-				{metadata?.type?._ || config.EMPTY_PLACEHOLDER}
+		<dd class="inscription-type">
+			{#if metadata.type}
+				{@const inscriptionType = metadata.type}
+				{#if inscriptionType?.ref}
+					<a class="badge strong" href={inscriptionType.ref}
+						>{inscriptionType?._ || config.EMPTY_PLACEHOLDER}</a
+					>
+				{:else}
+					{inscriptionType?._ || config.EMPTY_PLACEHOLDER}
+				{/if}
+				{#if inscriptionType.certainty}
+					<span class="badge">{inscriptionType.certainty.desc}</span>
+				{/if}
 			{/if}
 		</dd>
 		<dt>Object type</dt>
@@ -191,6 +197,15 @@
 	#overview dl dd a {
 		display: inline-flex;
 		align-items: center;
+		gap: var(--size-2);
+	}
+
+	#overview .badge {
+		display: inline-block;
+	}
+
+	.inscription-type {
+		display: flex !important;
 		gap: var(--size-2);
 	}
 
