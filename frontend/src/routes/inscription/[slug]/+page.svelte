@@ -7,7 +7,7 @@
 	import { Button } from 'bits-ui';
 	import { onMount } from 'svelte';
 	import toast, { Toaster } from 'svelte-french-toast';
-	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
+	import { DefaultMarker, Marker, MapLibre, Popup } from 'svelte-maplibre';
 	import { goto } from '$app/navigation';
 	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
 	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
@@ -288,6 +288,8 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 				<dl>
 					<dt>Place of origin</dt>
 					{#if metadata.places.length}
+						{@const cert =
+							metadata.provenanceFound?.cert || metadata.provenanceFound?.geoCert || null}
 						<dd>
 							{metadata.places[0].offset || ''}
 							{#if metadata.places[0]?.ref}
@@ -295,6 +297,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 							{:else}
 								{metadata.places[0]?._ || config.EMPTY_PLACEHOLDER}
 							{/if}
+							{#if cert}<em>{cert} certainty</em>{/if}
 						</dd>
 					{:else}
 						<dd>{config.EMPTY_PLACEHOLDER}</dd>
@@ -302,6 +305,9 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 					<dt>Provenance found</dt>
 					<dd>{metadata.provenanceFound?._ || config.EMPTY_PLACEHOLDER}</dd>
 					{#if metadata.provenanceFound?.geo}
+						{@const cert =
+							metadata.provenanceFound?.cert || metadata.provenanceFound?.geoCert || null}
+						{@const markerClass = cert === 'low' ? 'lg' : cert === 'medium' ? 'md' : 'sm'}
 						{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
 						<dt>Map</dt>
 						<dd>
@@ -312,13 +318,23 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 								standardControls
 								style={config.mapStyle}
 							>
-								<DefaultMarker {lngLat}>
-									<Popup offset={[0, -10]}>
-										<div class="popup">
-											{metadata.provenanceFound._}
-										</div>
-									</Popup>
-								</DefaultMarker>
+								{#if cert}
+									<Marker {lngLat} class="marker {markerClass}">
+										<Popup>
+											<div class="popup">
+												{metadata.provenanceFound._}
+											</div>
+										</Popup>
+									</Marker>
+								{:else}
+									<DefaultMarker {lngLat} class="marker {markerClass}">
+										<Popup>
+											<div class="popup">
+												{metadata.provenanceFound._}
+											</div>
+										</Popup>
+									</DefaultMarker>
+								{/if}
 							</MapLibre>
 						</dd>
 					{/if}
@@ -631,5 +647,49 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 		margin-left: 0.25em;
 		font-size: 0.8em;
 		vertical-align: text-top;
+	}
+
+	:global(.marker) {
+		--marker-size: 12px;
+
+		background-color: var(--blue-10);
+		border-radius: var(--radius-4);
+		border: none;
+		box-shadow: var(--shadow-1);
+		color: var(--gray-12);
+		cursor: pointer;
+		display: block;
+		font-size: var(--font-size-0);
+		font-weight: var(--font-weight-6);
+		height: var(--marker-size);
+		line-height: var(--marker-size);
+		opacity: 0.8 !important;
+		padding: 0;
+		text-align: center;
+		width: var(--marker-size);
+	}
+
+	:global(.marker:hover) {
+		filter: brightness(90%);
+		box-shadow: var(--shadow-4);
+	}
+	:global(.marker.sm) {
+		--marker-size: 24px;
+
+		background-color: var(--blue-8);
+	}
+
+	:global(.marker.md) {
+		--marker-size: 36px;
+
+		background-color: var(--blue-6);
+		color: white;
+	}
+
+	:global(.marker.lg) {
+		--marker-size: 50px;
+
+		background-color: var(--blue-4);
+		color: white;
 	}
 </style>
