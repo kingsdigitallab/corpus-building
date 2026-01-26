@@ -8,9 +8,11 @@
 
 	let {
 		show = $bindable(false),
+		isLoading,
 		aggregations = {},
 		total = 0,
 		languageConjunction = $bindable(true),
+		inscriptionTypeConjunction = $bindable(true),
 		publicationConjunction = $bindable(true),
 		sortAggregationsBy = $bindable('key'),
 		selectedDateRange = $bindable([0, 0]),
@@ -21,6 +23,7 @@
 		selectedFilters = $bindable({}),
 		sortAggregationsByChange,
 		languageConjunctionChange,
+		inscriptionTypeConjunctionChange,
 		publicationConjunctionChange,
 		searchFiltersChange
 	} = $props();
@@ -114,6 +117,7 @@
 {#if show}
 	<aside
 		class="filters surface-1"
+		class:is-loading={isLoading}
 		tabindex="-1"
 		transition:slide={{ axis: 'x', duration: 300 }}
 		onintroend={handleIntroEnd}
@@ -267,6 +271,18 @@
 										</label>
 									</div>
 								{/if}
+								{#if key === 'inscriptionType'}
+									<div class="conjunction-options">
+										<label>
+											<input
+												type="checkbox"
+												bind:checked={inscriptionTypeConjunction}
+												onchange={() => inscriptionTypeConjunctionChange()}
+											/>
+											Match all selected inscription types (AND)
+										</label>
+									</div>
+								{/if}
 								{#if key === 'publications'}
 									<div class="conjunction-options">
 										<label>
@@ -347,6 +363,10 @@
 		min-width: 400px;
 		/* padding: var(--size-4); */
 		z-index: 10;
+	}
+
+	.is-loading * {
+		cursor: wait;
 	}
 
 	@media (max-width: 992px) {

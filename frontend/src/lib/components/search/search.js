@@ -281,8 +281,9 @@ export { searchConfig };
 
 export function load({
 	sortAggregationsBy = 'key',
-	languageConjunction = true,
-	publicationConjunction = true,
+	languageConjunction = false,
+	inscriptionTypeConjunction = false,
+	publicationConjunction = false,
 	isExactSearch = false
 } = {}) {
 	const processedCorpus = corpus
@@ -362,6 +363,7 @@ export function load({
 		])
 	);
 	searchConfig.aggregations.language.conjunction = languageConjunction;
+	searchConfig.aggregations.inscriptionType.conjunction = inscriptionTypeConjunction;
 	searchConfig.aggregations.publications.conjunction = publicationConjunction;
 	searchConfig.isExactSearch = isExactSearch;
 

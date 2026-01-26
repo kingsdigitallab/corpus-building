@@ -73,6 +73,7 @@
 	const searchOptions = $state({
 		sortAggregationsBy: 'key',
 		languageConjunction: false,
+		inscriptionTypeConjunction: false,
 		publicationConjunction: false,
 		sortResultsBy: 'file',
 		sortResultsOrder: 'asc'
@@ -93,6 +94,10 @@
 			'message',
 			(/** @type {{ data: { type: import('./worker.js').WorkerStatus; data: any; }}} */ event) => {
 				const { type, data } = event.data;
+
+				if (type === 'load') {
+					searchStatus = 'load';
+				}
 
 				if (type === 'ready') {
 					searchStatus = 'ready';
@@ -266,6 +271,7 @@
 				data: {
 					sortAggregationsBy: searchOptions.sortAggregationsBy,
 					languageConjunction: searchOptions.languageConjunction,
+					inscriptionTypeConjunction: searchOptions.inscriptionTypeConjunction,
 					publicationConjunction: searchOptions.publicationConjunction
 				}
 			});
@@ -274,28 +280,14 @@
 		}
 	}
 
-	async function handleLanguageConjunctionToggle() {
+	async function handleConjunctionToggle() {
 		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
 			searchWorker.postMessage({
 				type: 'load',
 				data: {
 					sortAggregationsBy: searchOptions.sortAggregationsBy,
 					languageConjunction: searchOptions.languageConjunction,
-					publicationConjunction: searchOptions.publicationConjunction
-				}
-			});
-
-			postSearchMessage();
-		}
-	}
-
-	async function handlePublicationConjunctionToggle() {
-		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
-			searchWorker.postMessage({
-				type: 'load',
-				data: {
-					sortAggregationsBy: searchOptions.sortAggregationsBy,
-					languageConjunction: searchOptions.languageConjunction,
+					inscriptionTypeConjunction: searchOptions.inscriptionTypeConjunction,
 					publicationConjunction: searchOptions.publicationConjunction
 				}
 			});
@@ -511,17 +503,20 @@
 <div class="search-layout">
 	<SearchFilters
 		bind:show={showFilters}
+		{isLoading}
 		aggregations={searchAggregations}
 		{total}
 		bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
 		bind:languageConjunction={searchOptions.languageConjunction}
+		bind:inscriptionTypeConjunction={searchOptions.inscriptionTypeConjunction}
 		bind:publicationConjunction={searchOptions.publicationConjunction}
 		bind:selectedDateRange
 		bind:selectedLetterHeightRange
 		bind:selectedFilters
 		sortAggregationsByChange={handleSortAggregationsByChange}
-		languageConjunctionChange={handleLanguageConjunctionToggle}
-		publicationConjunctionChange={handlePublicationConjunctionToggle}
+		languageConjunctionChange={handleConjunctionToggle}
+		inscriptionTypeConjunctionChange={handleConjunctionToggle}
+		publicationConjunctionChange={handleConjunctionToggle}
 		searchFiltersChange={handleSearchFiltersChange}
 	/>
 
