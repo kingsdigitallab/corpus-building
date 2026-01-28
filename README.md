@@ -27,16 +27,18 @@ The main components of the project are:
 graph TD
 A[EpiDoc Submodule] --> B[ETL Process]
 X[XSLT Submodule] --> B
+Z[Zotero API] -.->|Fetch Citations| B
 B -->|Transform XML| C[Saxon-JS]
 C -->|HTML Fragments| D[Processed HTML]
-B -->|Extract Corpus Data| E[JSON Data]
+B -->|Extract Data| E[JSON Files]
 D --> F[Static Site Generator]
 E --> F
 G[Markdown Files] -.-> F
 F -->|Generate Pages| H[Static HTML]
-H -.->|Index| I[Pagefind]
-E -.->|Map Data| F
-H -.-> J[Interactive Map]
+E -.->|Search Index| F
+H -.-> I[Inscriptions]
+H -.-> K[Search and Filters]
+H -.-> J[Interactive Visualisations]
 ```
 
 ## Getting started
