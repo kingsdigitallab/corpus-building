@@ -39,6 +39,7 @@ E -.->|Search Index| F
 H -.-> I[Inscriptions]
 H -.-> K[Search and Filters]
 H -.-> J[Interactive Visualisations]
+H -.-> L[Open Data Endpoints]
 ```
 
 ## Getting started
