@@ -50,21 +50,47 @@ export const search = {
 };
 
 export const tooltips = {
-	date: 'Use negative numbers for BCE dates. Century and half-century ranges are encoded e.g. -200 to -101 and 101 to 200.',
-	provenance:
-		'The ancient site (or modern location if ancient name unknown) where the inscription is believed to have originated or is best associated with.',
-	inscriptionType: 'Classification of inscriptions according to FAIR Epigraphy typology.',
-	objectType: 'Classification of the object bearing the inscription.',
-	material: 'Classification of the material of which the inscribed object is composed.',
-	technique: 'Classification of the technique used to create the inscription.',
-	pigment: 'Inscriptions for which the presence of pigment has been observed.',
-	letterHeight: 'Recorded letter height, where data available.',
-	lettering:
-		'Letter types, where available, according to the typology defined at https://kingsdigitallab.github.io/crossreads/data/allographs/types/all.html.',
-	condition: 'Preservation status of the inscribed object.',
-	damage: 'Preservation status of the text.',
-	repository: 'Current location (museum, other, site).',
-	status: 'Current editorial status of the file.'
+	date: {
+		text: 'Use negative numbers for BCE dates. Century and half-century ranges are encoded e.g. -200 to -101 and 101 to 200.'
+	},
+	provenance: {
+		text: 'The ancient site (or modern location if ancient name unknown) where the inscription is believed to have originated or is best associated with.'
+	},
+	inscriptionType: {
+		text: 'Classification of inscriptions according to FAIR Epigraphy typology.'
+	},
+	objectType: {
+		text: 'Classification of the object bearing the inscription.'
+	},
+	material: {
+		text: 'Classification of the material of which the inscribed object is composed.'
+	},
+	technique: {
+		text: 'Classification of the technique used to create the inscription.'
+	},
+	pigment: {
+		text: 'Inscriptions for which the presence of pigment has been observed.'
+	},
+	letterHeight: {
+		text: 'Recorded letter height, where data available.'
+	},
+	lettering: {
+		text: 'Letter types, where available, according to the CROSSREADS typology.',
+		link: 'https://kingsdigitallab.github.io/crossreads/data/allographs/types/all.html',
+		linkLabel: 'View reference guide'
+	},
+	condition: {
+		text: 'Preservation status of the inscribed object.'
+	},
+	damage: {
+		text: 'Preservation status of the text.'
+	},
+	repository: {
+		text: 'Current location (museum, other, site).'
+	},
+	status: {
+		text: 'Current editorial status of the file.'
+	}
 };
 
 export const xmlServerPath =
