@@ -65,24 +65,7 @@ Petrographic analysis has been undertaken on hundreds of items across the corpus
 
 The following diagram illustrates the corpus building workflow:
 
-```mermaid
-graph TD
-A[EpiDoc Submodule] --> B[ETL Process]
-X[XSLT Submodule] --> B
-Z[Zotero API] -.->|Fetch Citations| B
-B -->|Transform XML| C[Saxon-JS]
-C -->|HTML Fragments| D[Processed HTML]
-B -->|Extract Data| E[JSON Files]
-D --> F[Static Site Generator]
-E --> F
-G[Markdown Files] -.-> F
-F -->|Generate Pages| H[Static HTML]
-E -.->|Search Index| F
-H -.-> I[Inscriptions]
-H -.-> K[Search and Filters]
-H -.-> J[Interactive Visualisations]
-H -.-> L[Open Data Endpoints]
-```
+[![](https://mermaid.ink/img/pako:eNplUl2P2jAQ_CuWnwFxIWk-Hk66I8kBhR5SUIVweHCTPbBK7MhxWlrCf-8mhLuqffPu7OzOrPdCM5UDDehB8_JINmEqn1hUilBlJKm_FSqvT7Anw-EjeWbRZknWWmVQVftUbtk2WW7-q0rlju2UAa3I03qOydHwsYnBZEcyFYYboWTVtGXPbX2z0VxWb0oXZLtaNmTKEn5WcrhIcMK0q5htVksSa34oQBqkhqzXADlpsf29VXQ2mmeGhNzwhkRskbx-IbE4Qas27NTFLGkloDdhgLyABM2N0ohHNzyVL2zF9fdc_ZQ9t3PQInE3pScBWfMDoJzZvWWvJbo5ToBrtDyXOZyblj279ZmzuawyLcpuEfv3_GfWM7jM28G4wL_QBbIwg-7EDyBfRVXzk6j4Pz2W7LUE2fknkcxLJXBhezrAzxU5DYyuYUAL0AVvQ3pJJSEpNUcoIKUBPiXUuMJTSlN5RVrJ5U6p4s7Uqj4cafDGTxVGdZnjFkLB8XI-SgD96qmqpaHBp64DDS70TIOJPRpbju857oPruhPbHtBfNPDHo7FtWxPHsnzbtx7864D-7kaOR54_sTzP9jzLdSx34gwo5AI_a3U72O5ur38AqRfjQQ?type=png)](https://mermaid.live/edit#pako:eNplUl2P2jAQ_CuWnwFxIWk-Hk66I8kBhR5SUIVweHCTPbBK7MhxWlrCf-8mhLuqffPu7OzOrPdCM5UDDehB8_JINmEqn1hUilBlJKm_FSqvT7Anw-EjeWbRZknWWmVQVftUbtk2WW7-q0rlju2UAa3I03qOydHwsYnBZEcyFYYboWTVtGXPbX2z0VxWb0oXZLtaNmTKEn5WcrhIcMK0q5htVksSa34oQBqkhqzXADlpsf29VXQ2mmeGhNzwhkRskbx-IbE4Qas27NTFLGkloDdhgLyABM2N0ohHNzyVL2zF9fdc_ZQ9t3PQInE3pScBWfMDoJzZvWWvJbo5ToBrtDyXOZyblj279ZmzuawyLcpuEfv3_GfWM7jM28G4wL_QBbIwg-7EDyBfRVXzk6j4Pz2W7LUE2fknkcxLJXBhezrAzxU5DYyuYUAL0AVvQ3pJJSEpNUcoIKUBPiXUuMJTSlN5RVrJ5U6p4s7Uqj4cafDGTxVGdZnjFkLB8XI-SgD96qmqpaHBp64DDS70TIOJPRpbju857oPruhPbHtBfNPDHo7FtWxPHsnzbtx7864D-7kaOR54_sTzP9jzLdSx34gwo5AI_a3U72O5ur38AqRfjQQ)
 
 ### Architecture
 
