@@ -641,7 +641,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 	}
 	/**ZL added this for adding underlines to all text links under inscription pages to making them more identifiable without touching the homepage card views */
 
-	#content :global(a[href^='http']:not([href*='isicily']):not(.badge))::after {
+	#content :global(a[href^='http']:not([href*='isicily']):not(.badge):not([download]))::after {
 		content: '↗';
 		display: inline-block;
 		margin-left: 0.25em;
