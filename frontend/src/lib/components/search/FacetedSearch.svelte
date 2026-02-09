@@ -752,15 +752,29 @@
 		margin-block: var(--size-3);
 	}
 
+	/*ZL to make changes about the layout of explore filter button*/
 	.controls {
 		align-items: center;
 		border-bottom: var(--border-size-1) solid var(--gray-4);
 		border-top: var(--border-size-1) solid var(--gray-4);
-		display: flex;
-		justify-content: space-between;
+		display: grid; /* ZL changed from flex to grid**/
+		grid-template-columns: 1fr auto 1fr; /* ZL removed justify-content: space-between to grid-template columns*/
 		padding-block: var(--size-2);
 		margin-block-end: var(--size-6);
 		width: 100%;
+	}
+
+	/* ZL added to place the component for the right places **/
+	.controls > p {
+		justify-self: start; /* ZL: count text sticks to the left */
+	}
+
+	.filters-toggle {
+		justify-self: center; /* ZL: Explore filters sits in the true centre */
+	}
+
+	.sort-controls {
+		justify-self: end; /* ZL: sort controls hug the right side */
 	}
 
 	.sort-controls {
