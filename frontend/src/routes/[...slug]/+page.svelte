@@ -74,4 +74,31 @@
 	:global(.md td) {
 		text-align: left;
 	}
+
+	/* ZL: Make text visible inside tables */
+	:global(.md td code) {
+		color: var(--gray-12);
+	}
+
+	/* ZL: Changing colours in light mode */
+	:global(html[data-color-scheme='light'] .md td code) {
+		background-color: var(--surface-4);
+		color: var(--gray-12);
+	}
+
+	/* ZL: changed row hovering colour (before was not accessible) */
+
+	/* Light mode row hover */
+	:global([data-color-scheme='light'] .md table tbody tr:hover),
+	:global([data-color-scheme='light'] .md table tbody tr:hover td) {
+		background-color: var(--surface-4);
+		color: var(--text-1);
+	}
+
+	/* Dark mode row hover */
+	:global([data-color-scheme='dark'] .md table tbody tr:hover),
+	:global([data-color-scheme='dark'] .md table tbody tr:hover td) {
+		background-color: var(--surface-4);
+		color: var(--text-1);
+	}
 </style>
