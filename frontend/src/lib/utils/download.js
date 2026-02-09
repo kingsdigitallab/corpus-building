@@ -6,8 +6,9 @@ import { base } from '$app/paths';
  *
  * @param {string} summary - The summary of the search
  * @param {Array<{ file: string; tmNumber: string; title: string; notBefore: number; notAfter: number; places: Array<{ offset: string; _: string; type: string; }>; status: { _: string; }; type: { _: string; }; objectType: { _: string; }; language: { _: string; }; settlement: { _: string; }; }>} inscriptions - Array of inscription objects
+ * @param {(progress: number, total: number) => void} [onProgress] - Optional progress callback
  */
-export async function downloadInscriptionsCSV(summary, inscriptions) {
+export async function downloadInscriptionsCSV(summary, inscriptions, onProgress) {
 	const headers = [
 		'ID',
 		'TM Number',
@@ -26,11 +27,21 @@ export async function downloadInscriptionsCSV(summary, inscriptions) {
 		'Execution type 2',
 		'Language',
 		'Repository name',
-		'Inventory number'
+		'Inventory number',
+		'Edition (interpretive)',
+		'Edition (diplomatic)'
 	].join(',');
+
+	// Fetch edition texts for all inscriptions
+	const editionTexts = await fetchEditionTexts(inscriptions, onProgress);
 
 	const rows = inscriptions
 		.map((inscription) => {
+			const editions = editionTexts.get(inscription.file) || {
+				interpretive: '',
+				diplomatic: ''
+			};
+
 			return [
 				inscription.file,
 				`"${inscription?.tmNumber || ''}"`,
@@ -49,7 +60,9 @@ export async function downloadInscriptionsCSV(summary, inscriptions) {
 				`"${inscription.pigment?.at(-1)?.replaceAll(':::', '.') || ''}"`,
 				`"${getInscriptionLanguage(inscription)}"`,
 				`"${inscription.repository.at(-1)?.split(':::').at(-1) || ''}"`,
-				`"${inscription.idno?._ || ''}"`
+				`"${inscription.idno?._ || ''}"`,
+				`"${escapeCSV(editions.interpretive)}"`,
+				`"${escapeCSV(editions.diplomatic)}"`
 			].join(',');
 		})
 		.join('\n');
@@ -60,6 +73,67 @@ export async function downloadInscriptionsCSV(summary, inscriptions) {
 	a.click();
 	a.remove();
 }
+
+/**
+ * Fetches edition texts for all inscriptions
+ *
+ * @param {Array<{ file: string }>} inscriptions - Array of inscription objects
+ * @param {(progress: number, total: number) => void} [onProgress] - Optional progress callback
+ * @returns {Promise<Map<string, { interpretive: string; diplomatic: string }>>}
+ */
+async function fetchEditionTexts(inscriptions, onProgress) {
+	const editionTexts = new Map();
+	const total = inscriptions.length;
+
+	for (let i = 0; i < inscriptions.length; i++) {
+		const inscription = inscriptions[i];
+		try {
+			const [interpretive, diplomatic] = await Promise.all([
+				fetchEditionText(inscription.file, 'interpretive'),
+				fetchEditionText(inscription.file, 'diplomatic')
+			]);
+
+			editionTexts.set(inscription.file, { interpretive, diplomatic });
+		} catch (error) {
+			console.warn(`Failed to fetch editions for ${inscription.file}:`, error);
+			editionTexts.set(inscription.file, { interpretive: '', diplomatic: '' });
+		}
+
+		if (onProgress) {
+			onProgress(i + 1, total);
+		}
+	}
+
+	return editionTexts;
+}
+
+/**
+ * Fetches a single edition text from the API
+ *
+ * @param {string} slug - The inscription ID
+ * @param {string} edition - The edition type (interpretive or diplomatic)
+ * @returns {Promise<string>}
+ */
+async function fetchEditionText(slug, edition) {
+	const response = await fetch(`${base}/api/inscription/${slug}/${edition}.txt`);
+	if (!response.ok) {
+		return '';
+	}
+	return response.text();
+}
+
+/**
+ * Escapes a string for CSV format (handles quotes and newlines)
+ *
+ * @param {string} text - The text to escape
+ * @returns {string}
+ */
+function escapeCSV(text) {
+	if (!text) return '';
+	// Replace newlines with spaces and escape double quotes
+	return text.replace(/\n/g, ' ').replace(/"/g, '""');
+}
+
 
 /**
  * @param {any} inscription

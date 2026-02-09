@@ -20,6 +20,10 @@ export const footer = {
 					href: ''
 				},
 				{
+					title: 'Technical Overview',
+					href: '/technical-overview'
+				},
+				{
 					title: 'Back to Top',
 					href: '#top',
 					class: 'small spacer'

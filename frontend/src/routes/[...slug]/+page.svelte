@@ -47,4 +47,31 @@
 		display: inline-block;
 		vertical-align: text-top;
 	}
+
+	:global(.md table) {
+		--nice-inner-radius: 0;
+
+		align-self: center;
+		background: var(--surface-1);
+		border: var(--border-size-1) solid var(--border-color);
+		border-radius: var(--radius-1);
+		border-spacing: 0;
+	}
+
+	:global(.md thead) {
+		background-color: var(--surface-1);
+		border-start-start-radius: unset;
+		color: var(--text-1);
+		font-size: var(--font-size-1);
+	}
+
+	:global(.md th) {
+		background-color: var(--surface-4);
+		color: var(--text-1);
+		text-align: left;
+	}
+
+	:global(.md td) {
+		text-align: left;
+	}
 </style>

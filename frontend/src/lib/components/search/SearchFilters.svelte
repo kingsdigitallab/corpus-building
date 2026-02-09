@@ -220,7 +220,7 @@
 						endLabel={selectedDateRange[1] <= 0
 							? `${-1 * selectedDateRange[1]} BCE`
 							: `${selectedDateRange[1]} CE`}
-						tooltip={config.tooltips.date}
+						tooltip={config.tooltips.date.text}
 						bind:selectedRange={selectedDateRange}
 						rangeChange={() => searchFiltersChange()}
 						disabled={isLoading}
@@ -236,11 +236,41 @@
 								<hgroup>
 									<h3>{aggregations[key].title}</h3>
 									{#if key in config.tooltips}
-										<TooltipInfo>{config.tooltips[key]}</TooltipInfo>
+										{@const tooltip =
+											config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
+										<TooltipInfo>
+											{tooltip.text}
+											{#if tooltip.link}
+												<a
+													href={tooltip.link}
+													target="_blank"
+													rel="noopener noreferrer"
+													class="tooltip-link"
+												>
+													{tooltip.linkLabel || 'Learn more'}
+												</a>
+											{/if}
+										</TooltipInfo>
 									{/if}
 								</hgroup>
 							</summary>
 							<div>
+								{#if config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
+									{@const tooltip =
+										config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
+									<small>
+										<a
+											href={tooltip.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											class="tooltip-link external"
+										>
+											{tooltip.linkLabel || 'Learn more'}
+										</a>
+									</small>
+									<br />
+								{/if}
+
 								<small
 									>Options: {aggregations[key].buckets.filter((b) => b.doc_count > 0).length}
 								</small>
@@ -350,7 +380,7 @@
 							step={1}
 							startLabel="Minimum"
 							endLabel="Maximum"
-							tooltip={config.tooltips.letterHeight}
+							tooltip={config.tooltips.letterHeight.text}
 							bind:selectedRange={selectedLetterHeightRange}
 							rangeChange={() => searchFiltersChange()}
 							disabled={isLoading}
