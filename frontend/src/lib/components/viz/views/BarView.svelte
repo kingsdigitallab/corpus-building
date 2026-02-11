@@ -2,16 +2,10 @@
 	import pluralize from 'pluralize-esm';
 	import VizWrapper from '../VizWrapper.svelte';
 	import BarChart from '../charts/BarChart.svelte';
-
-	const HIERARCHY_SEPARATOR = ':::';
-	const HIERARCHY_SEPARATOR_LABEL = '>';
+	import { formatKey, getLeaves, getLeafKeys } from '../utils.js';
 
 	/** @type {string[]} */
 	const excludedCategories = [];
-
-	/** @param {string | undefined} key */
-	const formatKey = (key) =>
-		key?.replaceAll(HIERARCHY_SEPARATOR, ` ${HIERARCHY_SEPARATOR_LABEL} `) ?? '';
 
 	/** 
 	 * @type {{ 
@@ -46,12 +40,12 @@
 	const data = $derived.by(() => {
 		// If no inscriptions, fall back to aggregation buckets
 		if (!inscriptions?.length) {
-			const buckets = [
+			const buckets = getLeaves([
 				...(aggregations[selectedCategory]?.buckets.filter(
 					/** @param {{ key: string }} bucket */ (bucket) =>
 						!excludedCategories.includes(bucket.key)
 				) || [])
-			];
+			]);
 			return buckets
 				.sort((a, b) => b.doc_count - a.doc_count)
 				.slice(0, maxCategories)
@@ -76,8 +70,12 @@
 			}
 		}
 
+		// Filter to leaf keys only (exclude parent hierarchy entries)
+		const leafKeys = getLeafKeys(categoryMap.keys());
+
 		// Sort by count and limit
 		const sortedKeys = [...categoryMap.entries()]
+			.filter(([key]) => leafKeys.has(key))
 			.sort((a, b) => b[1].count - a[1].count)
 			.slice(0, maxCategories)
 			.map(([key]) => key);
@@ -126,10 +124,11 @@
 	// Colour-by keys that have counts > 0
 	const selectedColourByKeys = $derived.by(() => {
 		if (!selectedColourBy) return [];
-		const buckets =
+		const buckets = getLeaves(
 			aggregations[selectedColourBy]?.buckets.filter(
 				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
-			) || [];
+			) || []
+		);
 		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
 	});
 
@@ -186,7 +185,7 @@
 
 	// Selected category buckets for maxCategories slider
 	const selectedCategoryBuckets = $derived(
-		[...(aggregations[selectedCategory]?.buckets || [])].sort((a, b) => b.doc_count - a.doc_count)
+		getLeaves([...(aggregations[selectedCategory]?.buckets || [])]).sort((a, b) => b.doc_count - a.doc_count)
 	);
 </script>
 

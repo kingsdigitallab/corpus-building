@@ -2,16 +2,10 @@
 	import pluralize from 'pluralize-esm';
 	import VizWrapper from '../VizWrapper.svelte';
 	import DonutChart from '../charts/DonutChart.svelte';
-
-	const HIERARCHY_SEPARATOR = ':::';
-	const HIERARCHY_SEPARATOR_LABEL = '>';
+	import { formatKey, getLeaves, getLeafKeys } from '../utils.js';
 
 	/** @type {string[]} */
 	const excludedCategories = [];
-
-	/** @param {string | undefined} key */
-	const formatKey = (key) =>
-		key?.replaceAll(HIERARCHY_SEPARATOR, ` ${HIERARCHY_SEPARATOR_LABEL} `) ?? '';
 
 	/** 
 	 * @type {{ 
@@ -45,12 +39,12 @@
 	// Data computation (same as BarView)
 	const data = $derived.by(() => {
 		if (!inscriptions?.length) {
-			const buckets = [
+			const buckets = getLeaves([
 				...(aggregations[selectedCategory]?.buckets.filter(
 					/** @param {{ key: string }} bucket */ (bucket) =>
 						!excludedCategories.includes(bucket.key)
 				) || [])
-			];
+			]);
 			return buckets
 				.sort((a, b) => b.doc_count - a.doc_count)
 				.slice(0, maxCategories)
@@ -74,7 +68,11 @@
 			}
 		}
 
+		// Filter to leaf keys only (exclude parent hierarchy entries)
+		const leafKeys = getLeafKeys(categoryMap.keys());
+
 		const sortedKeys = [...categoryMap.entries()]
+			.filter(([key]) => leafKeys.has(key))
 			.sort((a, b) => b[1].count - a[1].count)
 			.slice(0, maxCategories)
 			.map(([key]) => key);
@@ -119,10 +117,11 @@
 	// Colour-by keys
 	const selectedColourByKeys = $derived.by(() => {
 		if (!selectedColourBy) return [];
-		const buckets =
+		const buckets = getLeaves(
 			aggregations[selectedColourBy]?.buckets.filter(
 				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
-			) || [];
+			) || []
+		);
 		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
 	});
 
@@ -177,7 +176,7 @@
 	});
 
 	const selectedCategoryBuckets = $derived(
-		[...(aggregations[selectedCategory]?.buckets || [])].sort((a, b) => b.doc_count - a.doc_count)
+		getLeaves([...(aggregations[selectedCategory]?.buckets || [])]).sort((a, b) => b.doc_count - a.doc_count)
 	);
 </script>
 
