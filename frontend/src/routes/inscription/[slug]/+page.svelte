@@ -47,6 +47,8 @@
 			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
 
+	let provenanceMapZoom = $state(7);
+
 	const commentary = $derived(html?.divs?.find((div) => div.id === 'commentary') || null);
 	let activeTranslationTab = $state(0);
 
@@ -305,15 +307,16 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 					<dt>Provenance found</dt>
 					<dd>{metadata.provenanceFound?._ || config.EMPTY_PLACEHOLDER}</dd>
 					{#if metadata.provenanceFound?.geo}
+						{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
 						{@const cert =
 							metadata.provenanceFound?.cert || metadata.provenanceFound?.geoCert || null}
+						{@const markerScale = Math.min(2, Math.max(0.5, provenanceMapZoom / 7))}
 						{@const markerClass = cert === 'low' ? 'lg' : cert === 'medium' ? 'md' : 'sm'}
-						{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
 						<dt>Map</dt>
-						<dd>
+						<dd style="--marker-scale: {markerScale}">
 							<MapLibre
 								center={lngLat}
-								zoom={7}
+								bind:zoom={provenanceMapZoom}
 								class="map"
 								standardControls
 								style={config.mapStyle}
@@ -653,7 +656,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 		--marker-size: 12px;
 
 		background-color: var(--blue-10);
-		border-radius: var(--radius-4);
+		border-radius: calc(var(--radius-4) * var(--marker-scale));
 		border: none;
 		box-shadow: var(--shadow-1);
 		color: var(--gray-12);
@@ -661,12 +664,13 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 		display: block;
 		font-size: var(--font-size-0);
 		font-weight: var(--font-weight-6);
-		height: var(--marker-size);
+		height: calc(var(--marker-size) * var(--marker-scale));
 		line-height: var(--marker-size);
 		opacity: 0.8 !important;
 		padding: 0;
 		text-align: center;
-		width: var(--marker-size);
+		transition: ease 0.2s;
+		width: calc(var(--marker-size) * var(--marker-scale));
 	}
 
 	:global(.marker:hover) {
@@ -687,7 +691,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 	}
 
 	:global(.marker.lg) {
-		--marker-size: 50px;
+		--marker-size: 64px;
 
 		background-color: var(--blue-4);
 		color: white;
