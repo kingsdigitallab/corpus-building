@@ -1,8 +1,9 @@
 <script>
 	import * as config from '$lib/config';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
+	import { downloadCSV } from '$lib/utils/download';
 	import { Button } from 'bits-ui';
-	import { LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
+	import { DownloadIcon, LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
 
 	/** @type {{ data: import('./$types').PageData }} */
 	let { data } = $props();
@@ -57,6 +58,33 @@
 	const start = $derived((page - 1) * pageSize);
 	const end = $derived(start + pageSize);
 	const pageItems = $derived(sorted.slice(start, end));
+
+	function handleCSVDownload() {
+		const headers = [
+			'Slug',
+			'Name',
+			'Type',
+			'Settlement',
+			'Region',
+			'Country',
+			'Inscriptions',
+			'URI'
+		];
+		const rows = sorted.map((e) => [
+			e.slug,
+			e.name || '',
+			e.type || '',
+			e.location?.settlement || '',
+			e.location?.region || '',
+			e.location?.country || '',
+			e.inscriptionCount,
+			e.uri || ''
+		]);
+
+		const filename = q ? `museums_${q.replaceAll(/\s+/g, '_')}.csv` : 'museums.csv';
+
+		downloadCSV(headers, rows, filename);
+	}
 </script>
 
 <svelte:head>
@@ -82,6 +110,7 @@
 			}}
 			aria-label="Search museums"
 		/>
+		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 		<div class="sort">
 			<label class="checkbox-label">
 				<input type="checkbox" bind:checked={withInscriptions} onchange={() => (page = 1)} />
@@ -121,8 +150,14 @@
 					{/each}
 				</select>
 			</label>
+			<Button.Root
+				class="secondary"
+				aria-label="Download museums as CSV"
+				onclick={handleCSVDownload}
+			>
+				<DownloadIcon />CSV
+			</Button.Root>
 		</div>
-		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 	</section>
 
 	<section>
