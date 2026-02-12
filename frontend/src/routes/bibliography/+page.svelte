@@ -98,7 +98,6 @@
 	</header>
 
 	<section class="controls">
-		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 		<input
 			class="search"
 			type="search"
@@ -110,6 +109,7 @@
 			}}
 			aria-label="Search bibliography"
 		/>
+		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 		<div class="sort">
 			<label>
 				<span>Sort by</span>
