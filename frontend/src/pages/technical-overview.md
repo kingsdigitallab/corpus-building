@@ -32,16 +32,16 @@ The site generates plain HTML, CSS, and JavaScript files that can be served by a
 
 Key frontend dependencies include:
 
-- [bits-ui](https://www.bits-ui.com/) for UI components
+- [bits-ui](https://www.bits-ui.com/) for User Interface (UI) components
 - [itemsjs](https://github.com/itemsapi/itemsjs) for faceted search
 - [mdsvex](https://mdsvex.pngwn.io/) for markdown content
 - [unovis](https://unovis.dev/) for data visualisations
 - [OpenSeadragon](https://openseadragon.github.io/) for IIIF image viewing
 - [MapLibre GL](https://maplibre.org/) for interactive maps
 
-### Data Model
+### Data Workflows and Models
 
-The project processes EpiDoc TEI XML files, enriches the original input corpus, and presents it on a static website. Individual editions are published as HTML pages but can also be searched and filtered, as well as being freely available for download.
+The project workflow processes EpiDoc TEI XML files, enriches the original input corpus, and presents it on a static website. Individual editions are published as HTML pages but can also be searched and filtered, as well as being freely available for download.
 
 High resolution images, where available, are presented via a [IIIF](https://iiif.io/) server.
 
@@ -59,7 +59,7 @@ Palaeographic annotation is conducted through a dedicated digital palaeographic 
 
 #### Petrographic Annotation
 
-Petrographic analysis has been undertaken on hundreds of items across the corpus. The dataset includes raw and processed data from (geo)chemical and minero-petrographic analyses on epigraphic supports, supporting the identification of rock types and their provenance.
+Petrographic analysis has been undertaken on hundreds of items across the corpus. The dataset includes raw and processed data from (geo)chemical and minero-petrographic analyses on epigraphic supports, supporting the identification of rock types and their provenance. Geology-specific vocabularies ([The BGS Rock Classification Scheme](https://www.bgs.ac.uk/technologies/bgs-rock-classification-scheme/)) are used as reference to update the XML files with material and material provenance data. Materials description has been augmented via a dedicated RSE-supported workflow which aggregates the multi-analytical data collected by the project’s material scientist and supports (pre)processing and analysis of different data by streamlining repetitive tasks and simplifying data interpretation, eventually leading to the identification of the rocks where the texts (in Latin, Greek and other languages) are inscribed, and therefore their provenance. This research workflow is summarised in technical documentation (*ADD* diagram below), research dissemination (e.g. [Coccato et al., 2025a](https://gmpca2025.sciencesconf.org/); [Coccato et al., 2025b](https://doi.org/10.3301/ABSGI.2025.03); [Ciula et. al., 2025](https://doi.org/10.5281/zenodo.17967411); [Ciula, 2025](https://kdl.kcl.ac.uk/blog/role-and-responsibilities-rsa/)) and the actual [code used to implement the petrographic research environment](https://github.com/kingsdigitallab/crossreads-petrography).
 
 ### Workflows
 
