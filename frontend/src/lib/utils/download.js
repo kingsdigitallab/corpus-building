@@ -134,6 +134,28 @@ function escapeCSV(text) {
 	return text.replace(/\n/g, ' ').replace(/"/g, '""');
 }
 
+/**
+ * Creates and downloads a CSV file from generic tabular data
+ *
+ * @param {string[]} headers - Array of column header strings
+ * @param {Array<Array<string | number>>} rows - Array of row arrays (each row is an array of cell values)
+ * @param {string} filename - The filename for the downloaded CSV (e.g. 'bibliography.csv')
+ */
+export function downloadCSV(headers, rows, filename) {
+	const headerLine = headers.map((h) => `"${escapeCSV(String(h))}"`).join(',');
+	const dataLines = rows
+		.map((row) => row.map((cell) => `"${escapeCSV(String(cell ?? ''))}"`).join(','))
+		.join('\n');
+
+	const csv = `${headerLine}\n${dataLines}`;
+
+	const a = document.createElement('a');
+	a.href = `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`;
+	a.download = filename;
+	a.click();
+	a.remove();
+}
+
 
 /**
  * @param {any} inscription

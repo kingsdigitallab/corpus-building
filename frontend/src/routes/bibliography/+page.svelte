@@ -1,8 +1,9 @@
 <script>
 	import * as config from '$lib/config';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
+	import { downloadCSV } from '$lib/utils/download';
 	import { Button } from 'bits-ui';
-	import { LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
+	import { DownloadIcon, LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
 
 	/** @type {{ data: import('./$types').PageData }} */
 	let { data } = $props();
@@ -57,6 +58,32 @@
 	function countInscriptions(e) {
 		return Array.isArray(e.inscriptions) ? e.inscriptions.length : 0;
 	}
+
+	function handleCSVDownload() {
+		const headers = [
+			'Key',
+			'Author',
+			'Title',
+			'Year',
+			'Inscriptions',
+			'Zotero URL',
+			'Reference URL'
+		];
+
+		const rows = sorted.map((e) => [
+			e.key,
+			e.author || '',
+			e.title || '',
+			e.date || '',
+			countInscriptions(e),
+			e.ptr?.target || '',
+			e.ref?.target || ''
+		]);
+
+		const filename = q ? `bibliography_${q.replaceAll(/\s+/g, '_')}.csv` : 'bibliography.csv';
+
+		downloadCSV(headers, rows, filename);
+	}
 </script>
 
 <svelte:head>
@@ -71,6 +98,7 @@
 	</header>
 
 	<section class="controls">
+		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 		<input
 			class="search"
 			type="search"
@@ -116,8 +144,14 @@
 					{/each}
 				</select>
 			</label>
+			<Button.Root
+				class="secondary"
+				aria-label="Download bibliography as CSV"
+				onclick={handleCSVDownload}
+			>
+				<DownloadIcon />CSV
+			</Button.Root>
 		</div>
-		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 	</section>
 
 	<section>
