@@ -1,7 +1,9 @@
 <script>
 	import InscriptionTableRow from './InscriptionTableRow.svelte';
+	import { downloadCSV } from '$lib/utils/download';
 	import { Button } from 'bits-ui';
-	import { LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
+	import { DownloadIcon, LucideArrowUp, LucideArrowDown } from 'lucide-svelte';
+	import { formatInscriptionDate } from '$lib/utils/format';
 
 	let {
 		inscriptions,
@@ -9,7 +11,8 @@
 		sortOptions = [],
 		showCitedRange = false,
 		showBulletinDate = false,
-		showInventoryNumber = false
+		showInventoryNumber = false,
+		downloadFilename = 'inscriptions'
 	} = $props();
 
 	let search = $state('');
@@ -34,6 +37,57 @@
 			})
 	);
 	const total = $derived(filteredInscriptions.length);
+
+	function handleCSVDownload() {
+		const headers = [];
+
+		if (showCitedRange) {
+			headers.push('Cited Range');
+			if (showBulletinDate) headers.push('Bulletin Date');
+		}
+
+		if (showInventoryNumber) headers.push('Inventory Number');
+
+		headers.push(
+			'ID',
+			'Title',
+			'Date',
+			'Origin',
+			'Material',
+			'Type',
+			'Object Type',
+			'Language',
+			'Current Location'
+		);
+
+		const rows = filteredInscriptions.map((i) => {
+			const row = [];
+
+			if (showCitedRange) {
+				row.push(i.bibl?.citedRange?.ref?._ || i.bibl?.citedRange || 'N/A');
+				if (showBulletinDate) row.push(i.bibl?.inscriptionDate || 'N/A');
+			}
+
+			if (showInventoryNumber) row.push(i.idno?._ || 'N/A');
+
+			row.push(
+				i.file,
+				i.title || '',
+				formatInscriptionDate(i.date),
+				i.settlement || 'N/A',
+				i.material?._ || 'N/A',
+				i.type?._ || 'N/A',
+				i.rawObjectType?._ || 'N/A',
+				i.textLang?._ || 'N/A',
+				i.settlement || 'N/A'
+			);
+
+			return row;
+		});
+
+		const safeName = downloadFilename.replaceAll(/[^a-zA-Z0-9_-]/g, '_').substring(0, 100);
+		downloadCSV(headers, rows, `${safeName}.csv`);
+	}
 </script>
 
 {#if showSearch}
@@ -45,6 +99,7 @@
 			placeholder="Search ISic, title..."
 			aria-label="Search inscription table"
 		/>
+		<p class="meta">{total} inscription{total === 1 ? '' : 's'}</p>
 		<div class="sort">
 			<label>
 				<span>Sort by</span>
@@ -65,8 +120,14 @@
 					{/if}
 				</Button.Root>
 			</label>
+			<Button.Root
+				class="secondary"
+				aria-label="Download inscriptions as CSV"
+				onclick={handleCSVDownload}
+			>
+				<DownloadIcon />CSV
+			</Button.Root>
 		</div>
-		<p class="meta">{total} inscription{total === 1 ? '' : 's'}</p>
 	</section>
 {/if}
 

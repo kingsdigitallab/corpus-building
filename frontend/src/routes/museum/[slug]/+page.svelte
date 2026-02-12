@@ -81,6 +81,7 @@
     		<InscriptionTable {inscriptions}
 				showInventoryNumber={true}
 				showSearch={true}
+				downloadFilename={museum.name}
 				sortOptions={[
 					{value: 'idnoSort', label: 'Inventory number'},
 					{value: 'file', label: 'FIle'},
