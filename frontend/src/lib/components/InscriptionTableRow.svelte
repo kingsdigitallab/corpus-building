@@ -10,6 +10,8 @@
 		showBulletinDate = false,
 		showInventoryNumber = false
 	} = $props();
+
+	const objectType = $derived(inscription.rawObjectType || inscription.objectType);
 </script>
 
 <tr>
@@ -47,10 +49,10 @@
 		{/if}
 	</td>
 	<td>
-		{#if inscription.rawObjectType?.ref}
-			<a class="badge" href={inscription.rawObjectType.ref}>{inscription.rawObjectType?._}</a>
+		{#if objectType?.ref}
+			<a class="badge" href={objectType.ref}>{objectType?._}</a>
 		{:else}
-			{inscription.rawObjectType?._ || 'N/A'}
+			{objectType?._ || 'N/A'}
 		{/if}
 	</td>
 	<td>{inscription.textLang?._ || 'N/A'}</td>

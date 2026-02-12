@@ -75,20 +75,23 @@
 		</section>
 	</header>
 
-	<section class="inscriptions">
-		<h2>Inscriptions</h2>
-    	<InscriptionTable {inscriptions}
-            showInventoryNumber={true}
-            showSearch={true}
-            sortOptions={[
-                {value: 'idnoSort', label: 'Inventory number'},
-                {value: 'file', label: 'FIle'},
-                {value: 'materialSort', label: 'Material'},
-                {value: 'originSort', label: 'Origin'},
-                {value: 'typeSort', label: 'Inscription type'},
-                {value: 'languageSort', label: 'Language'}
-              ]} />
-  </section>
+	{#if inscriptions.length > 0}
+		<section class="inscriptions">
+			<h2>Inscriptions</h2>
+    		<InscriptionTable {inscriptions}
+				showInventoryNumber={true}
+				showSearch={true}
+				downloadFilename={museum.name}
+				sortOptions={[
+					{value: 'idnoSort', label: 'Inventory number'},
+					{value: 'file', label: 'FIle'},
+					{value: 'materialSort', label: 'Material'},
+					{value: 'originSort', label: 'Origin'},
+					{value: 'typeSort', label: 'Inscription type'},
+					{value: 'languageSort', label: 'Language'}
+				]} />
+		</section>
+	{/if}
 </article>
 
 <style>

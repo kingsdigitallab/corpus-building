@@ -26,6 +26,7 @@
 		<ul>
 			<li><BaseLink href="/about">About</BaseLink></li>
 			<li><BaseLink href="/bibliography">Bibliography</BaseLink></li>
+			<li><BaseLink href="/museum">Museums</BaseLink></li>
 			<li>Guide</li>
 			{#if dev && debug}
 				<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>

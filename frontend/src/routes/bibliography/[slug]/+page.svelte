@@ -32,6 +32,7 @@
 			showCitedRange={true}
 			showBulletinDate={isBulletin}
 			showSearch={true}
+			downloadFilename={zotero.title}
 			sortOptions={[
 				{ value: 'citedRangeSort', label: 'Cited range' },
 				{ value: 'bulletinDateSort', label: 'Bulletin date' },

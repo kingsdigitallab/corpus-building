@@ -7,10 +7,11 @@
 
 	/** @type {{ data: import('./$types').PageData }} */
 	let { data } = $props();
-	const { bibliography } = data;
+	const { museums } = data;
 
 	let q = $state('');
-	let sortBy = $state('author');
+	let withInscriptions = $state(true);
+	let sortBy = $state('name');
 	let sortDir = $state(1);
 	let page = $state(1);
 	let pageSize = $state(50);
@@ -19,9 +20,11 @@
 	const normalize = (s) => (s || '').toString().toLowerCase().normalize('NFKD');
 
 	const filtered = $derived(
-		bibliography.filter((e) => {
+		museums.filter((e) => {
+			if (withInscriptions && e.inscriptionCount === 0) return false;
 			if (!q) return true;
-			const hay = `${e.title} ${e.author} ${e.date}`.toLowerCase();
+			const hay =
+				`${e.name} ${e.location?.settlement} ${e.location?.region} ${e.location?.country} ${e.type}`.toLowerCase();
 			return normalize(hay).includes(normalize(q));
 		})
 	);
@@ -29,9 +32,10 @@
 	const sorted = $derived(
 		[...filtered].sort((a, b) => {
 			const fields = {
-				author: (x) => normalize(x.author),
-				title: (x) => normalize(x.title),
-				year: (x) => (x.date || '').toString()
+				name: (x) => normalize(x.name),
+				settlement: (x) => normalize(x.location?.settlement),
+				region: (x) => normalize(x.location?.region),
+				type: (x) => normalize(x.type)
 			};
 
 			const va = fields[sortBy](a);
@@ -55,62 +59,63 @@
 	const end = $derived(start + pageSize);
 	const pageItems = $derived(sorted.slice(start, end));
 
-	function countInscriptions(e) {
-		return Array.isArray(e.inscriptions) ? e.inscriptions.length : 0;
-	}
-
 	function handleCSVDownload() {
 		const headers = [
-			'Key',
-			'Author',
-			'Title',
-			'Year',
+			'Slug',
+			'Name',
+			'Type',
+			'Settlement',
+			'Region',
+			'Country',
 			'Inscriptions',
-			'Zotero URL',
-			'Reference URL'
+			'URI'
 		];
-
 		const rows = sorted.map((e) => [
-			e.key,
-			e.author || '',
-			e.title || '',
-			e.date || '',
-			countInscriptions(e),
-			e.ptr?.target || '',
-			e.ref?.target || ''
+			e.slug,
+			e.name || '',
+			e.type || '',
+			e.location?.settlement || '',
+			e.location?.region || '',
+			e.location?.country || '',
+			e.inscriptionCount,
+			e.uri || ''
 		]);
 
-		const filename = q ? `bibliography_${q.replaceAll(/\s+/g, '_')}.csv` : 'bibliography.csv';
+		const filename = q ? `museums_${q.replaceAll(/\s+/g, '_')}.csv` : 'museums.csv';
 
 		downloadCSV(headers, rows, filename);
 	}
 </script>
 
 <svelte:head>
-	<title>Bibliography | {config.title}</title>
-	<meta name="description" content="Bibliography of the inscriptions" />
-	<meta name="tags" content="bibliography, {config.title}" />
+	<title>Museums | {config.title}</title>
+	<meta name="description" content="Museums and repositories of the inscriptions" />
+	<meta name="tags" content="museums, repositories, {config.title}" />
 </svelte:head>
 
 <article>
 	<header>
-		<h1>Bibliography</h1>
+		<h1>Museums</h1>
 	</header>
 
 	<section class="controls">
 		<input
 			class="search"
 			type="search"
-			placeholder="Search title, author, year…"
+			placeholder="Search name, location, type…"
 			value={q}
 			oninput={(e) => {
 				q = e.currentTarget.value;
 				page = 1;
 			}}
-			aria-label="Search bibliography"
+			aria-label="Search museums"
 		/>
 		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
 		<div class="sort">
+			<label class="checkbox-label">
+				<input type="checkbox" bind:checked={withInscriptions} onchange={() => (page = 1)} />
+				<span>With inscriptions only</span>
+			</label>
 			<label>
 				<span>Sort by</span>
 				<select
@@ -120,9 +125,10 @@
 						page = 1;
 					}}
 				>
-					<option value="author">Author</option>
-					<option value="year">Year</option>
-					<option value="title">Title</option>
+					<option value="name">Name</option>
+					<option value="settlement">Settlement</option>
+					<option value="region">Region</option>
+					<option value="type">Type</option>
 				</select>
 				<Button.Root
 					class="order-toggle"
@@ -146,7 +152,7 @@
 			</label>
 			<Button.Root
 				class="secondary"
-				aria-label="Download bibliography as CSV"
+				aria-label="Download museums as CSV"
 				onclick={handleCSVDownload}
 			>
 				<DownloadIcon />CSV
@@ -155,30 +161,27 @@
 	</section>
 
 	<section>
-		<ul class="bib-list" role="list">
-			{#each pageItems as entry (entry.key)}
-				<li class="bib-item">
-					<a class="title" href={`bibliography/${entry.key}`}>
-						{entry.title}
+		<ul class="museum-list" role="list">
+			{#each pageItems as entry (entry.slug)}
+				<li class="museum-item">
+					<a class="title" href={`museum/${entry.slug}`}>
+						{entry.name}
 					</a>
 					<div class="meta-line">
 						<span class="byline">
-							{entry.author || '—'}{entry.date ? ` • ${entry.date}` : ''}
+							{entry.location?.settlement || '—'}{entry.location?.region
+								? ` • ${entry.location.region}`
+								: ''}{entry.location?.country ? ` • ${entry.location.country}` : ''}
 						</span>
-						{#if countInscriptions(entry) > 0}
+						{#if entry.inscriptionCount > 0}
 							<span class="badge" title="Linked inscriptions">
-								{countInscriptions(entry)} inscription{countInscriptions(entry) === 1 ? '' : 's'}
+								{entry.inscriptionCount} inscription{entry.inscriptionCount === 1 ? '' : 's'}
 							</span>
 						{/if}
 					</div>
-					<div class="actions">
-						{#if entry.ptr?.target}
-							<a href={entry.ptr.target} rel="noopener noreferrer" target="_blank">Zotero</a>
-						{/if}
-						{#if entry.ref?.target}
-							<a href={entry.ref.target} rel="noopener noreferrer" target="_blank">Reference</a>
-						{/if}
-					</div>
+					{#if entry.description}
+						<p class="description">{entry.description}</p>
+					{/if}
 				</li>
 			{/each}
 		</ul>
@@ -198,7 +201,7 @@
 
 <style>
 	h1 {
-		margin-top: var(--size-6); /**ZL added this to make the header having a bit more space*/
+		margin-top: var(--size-6);
 	}
 	.controls {
 		display: flex;
@@ -207,11 +210,10 @@
 		row-gap: var(--size-3);
 		column-gap: var(--size-4);
 
-		/* top + bottom lines, like home page */
 		border-block: var(--border-size-1) solid var(--border-color);
 		padding-block: var(--size-3);
 		margin-bottom: var(--size-4);
-		border-top: none; /* remove current top line */
+		border-top: none;
 	}
 
 	.controls .search {
@@ -221,7 +223,7 @@
 	.controls .meta {
 		order: 1;
 		font-size: var(--font-size-1);
-		margin-right: auto; /* push sort group to the right */
+		margin-right: auto;
 	}
 
 	.controls .sort {
@@ -239,13 +241,6 @@
 		gap: var(--size-2);
 	}
 
-	/* .sort {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--size-2) var(--size-4);
-		align-items: center;
-	} */
-
 	.search {
 		padding: var(--size-2) var(--size-3);
 		border: 1px solid var(--border-color);
@@ -258,33 +253,31 @@
 		font-size: var(--font-size-1);
 	}
 
-	.bib-list {
+	.museum-list {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		display: grid;
 		gap: var(--size-3);
-		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /**ZL added */
-		justify-content: center; /**ZL added */
+		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+		justify-content: center;
 	}
 	@media (min-width: 900px) {
-		.bib-list {
-			gap: var(
-				--size-4
-			); /* ZL changed grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));*/
+		.museum-list {
+			gap: var(--size-4);
 		}
 	}
 
-	.bib-item {
+	.museum-item {
 		border: 1px solid var(--border-color);
 		border-radius: var(--radius-2);
 		padding: var(--size-3) var(--size-4);
 		background: var(--surface-1);
-		display: flex; /** ZL changed from grid to flex */
-		flex-direction: column; /**ZL added */
-		justify-content: space-between; /**ZL added*/
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		gap: var(--size-2);
-		min-height: 200px; /**ZL added*/
+		min-height: 200px;
 	}
 
 	.title {
@@ -304,20 +297,16 @@
 		flex-wrap: wrap;
 		gap: var(--size-2);
 		align-items: center;
-		/* color: var(--text-2); */
 		font-size: var(--font-size-1);
 	}
 
-	.actions {
-		display: flex;
-		gap: var(--size-3);
-		flex-wrap: wrap;
-	}
-	.actions a {
-		text-decoration: none;
-	}
-	.actions a:hover,
-	.actions a:focus {
-		text-decoration: underline;
+	.description {
+		font-size: var(--font-size-1);
+		color: var(--text-2);
+		line-height: 1.4;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 </style>
