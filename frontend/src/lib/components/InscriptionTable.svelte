@@ -77,7 +77,7 @@
 				i.settlement || 'N/A',
 				i.material?._ || 'N/A',
 				i.type?._ || 'N/A',
-				i.rawObjectType?._ || 'N/A',
+				i.rawObjectType?._ || i.objectType?._ || 'N/A',
 				i.textLang?._ || 'N/A',
 				i.settlement || 'N/A'
 			);
