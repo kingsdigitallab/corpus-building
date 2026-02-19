@@ -98,7 +98,7 @@ export const footer = {
 				},
 				{
 					title: 'Feedback',
-					href: ''
+					href: 'https://forms.office.com/pages/responsepage.aspx?id=G96VzPWXk0-0uv5ouFLPkYuLvvtmnolAvKHijf9sSopUNVQyWjFJQjkzS0JKUklQVlFUNEkyVjhKVS4u&route=shorturl'
 				}
 			]
 		}
