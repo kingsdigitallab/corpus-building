@@ -52,6 +52,14 @@ const searchConfig = {
 			conjunction: false,
 			chosen_filters_on_top: false
 		},
+		country: {
+			title: 'Origin country',
+			hide_zero_doc_count: true,
+			size: 50,
+			sort: 'key',
+			conjunction: false,
+			chosen_filters_on_top: false
+		},
 		provenance: {
 			title: 'Origin',
 			hide_zero_doc_count: true,

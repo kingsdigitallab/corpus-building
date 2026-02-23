@@ -29,7 +29,7 @@
 	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
 	/** @property {'cards' | 'viz' | 'table' | 'text'} */
 	const searchViewParam = queryParam('view', ssp.string('cards'));
-	const searchFiltersParam = queryParam('filters', ssp.object({}));
+	const searchFiltersParam = queryParam('filters', ssp.object({ country: ['Sicilia'] }));
 	/** @property {import('./search').SearchOptions['searchMode']} */
 	const searchModeParam = queryParam('mode', ssp.string('all'));
 	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
