@@ -32,6 +32,7 @@ export async function extractMetadata(xmlString) {
     handNote: getHandNote(xml),
     date: getDates(xml),
     ...getPlaces(xml),
+    country: undefined,
     provenance: undefined,
     provenanceFound: getProvenance(xml, "found"),
     provenanceGeo: undefined,
@@ -48,6 +49,7 @@ export async function extractMetadata(xmlString) {
   metadata.tmNumber =
     metadata.editions.find((edition) => edition.type === "TM")?._ || "";
   metadata.facsimile = metadata.graphics[0];
+  metadata.country = metadata.places[0]?.region;
   metadata.provenance = metadata.places[0]?._;
   metadata.provenanceGeo = metadata.provenanceFound?.geo || [];
 
@@ -295,6 +297,7 @@ function getPlaces(xml) {
 
   if (!origPlace) return { places: [], geo: null };
 
+  const region = origPlace.region;
   const places = [];
 
   for (const placeType of ["ancient", "modern"]) {
@@ -311,7 +314,9 @@ function getPlaces(xml) {
       place = origPlace.offset.placeName;
       place.offset = origPlace.offset._.trim();
     }
+
     if (place?._) {
+      place.region = region;
       places.push(place);
     }
   }
