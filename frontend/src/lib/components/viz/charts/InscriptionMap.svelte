@@ -1,7 +1,8 @@
 <script>
 	import * as config from '$lib/config';
-	import { VisLeafletMap, VisTooltip } from '@unovis/svelte';
-	import { LeafletMap } from '@unovis/ts';
+	import { VisLeafletMap } from '@unovis/svelte';
+	import { LeafletMap, Tooltip } from '@unovis/ts';
+	import { goto } from '$app/navigation';
 
 	/**
 	 * @typedef {Object} Props
@@ -29,24 +30,41 @@
 	const pointLongitude = (/** @type {any} */ d) => d.longitude;
 	const pointBottomLabel = (/** @type {any} */ d) => d.places?.[0]?._ ?? '';
 
-	const tooltipTriggers = {
-		[LeafletMap.selectors.point]: tooltipContent,
-		[LeafletMap.selectors.cluster]: clusterTooltipContent
-	};
+	const tooltip = new Tooltip({
+		triggers: {
+			[LeafletMap.selectors.point]: tooltipContent
+		}
+	});
 
-	/** @param {{ data: any }} d */
+	/** @param {any} d */
 	function tooltipContent(d) {
-		const point = d.data;
-		const place = point.places?.[0]?._ ?? 'Unknown';
-		return `<div class="tooltip"><strong>${place}</strong><br/><a href="inscription/${point.file}">${point.title}</a></div>`;
+		const point = d?.data ?? d;
+		if (!point) return '';
+
+		if (point.clusterPoints) {
+			const place = point.clusterPoints[0].places[0]._;
+			const count = point.clusterPoints.length;
+
+			return `<strong>${place}</strong><br/>${count} inscriptions<br/><br/>Click to expand`;
+		}
+
+		const inscription = point.properties;
+		const place = inscription.places?.[0]?._ ?? 'Unknown';
+
+		return `<strong>${inscription.title}</strong><br/>${place}<br/><br/>Click to view inscription`;
 	}
 
-	/** @param {{ data: any }} d */
-	function clusterTooltipContent(d) {
-		const cluster = d.data;
-		const count = cluster.clusterPoints?.length ?? 0;
-		return `<div class="tooltip"><strong>${count} inscriptions</strong><br/>Click to expand</div>`;
-	}
+	const events = {
+		[LeafletMap.selectors.point]: {
+			/** @param {any} d */
+			click: (d) => {
+				const point = d?.data ?? d;
+				if (!point || point.clusterPoints) return;
+				const file = point.properties?.file;
+				if (file) goto(`inscription/${file}`);
+			}
+		}
+	};
 </script>
 
 {#if show}
@@ -62,9 +80,9 @@
 			pointRadius={6}
 			pointColor="var(--blue-6)"
 			clusterColor="var(--blue-8)"
-			clusterRadius={undefined}
+			{tooltip}
+			{events}
 		/>
-		<VisTooltip triggers={tooltipTriggers} />
 	</div>
 {/if}
 
