@@ -60,6 +60,8 @@
 			fitViewPadding={[60, 60]}
 			clusterExpandOnClick={true}
 			pointRadius={6}
+			pointColor="var(--blue-6)"
+			clusterColor="var(--blue-8)"
 			clusterRadius={undefined}
 		/>
 		<VisTooltip triggers={tooltipTriggers} />
