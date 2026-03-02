@@ -3,10 +3,12 @@
 
 	/**
 	 * @type {{
-	 *   inscriptions: any[]
+	 *   inscriptions: any[],
+	 *   aggregations: Record<string, any>,
+	 *   selectedColourBy: string
 	 * }}
 	 */
-	let { inscriptions } = $props();
+	let { inscriptions, aggregations, selectedColourBy } = $props();
 </script>
 
 <section class="viz-summary">
@@ -17,7 +19,7 @@
 </section>
 
 <section class="viz-container">
-	<InscriptionMap {inscriptions} />
+	<InscriptionMap {inscriptions} {aggregations} {selectedColourBy} />
 </section>
 
 <style>

@@ -40,7 +40,7 @@
 			.sort((a, b) => a.label.localeCompare(b.label))
 	);
 
-	const isColourByDisabled = $derived(['histogram', 'map'].includes(selectedView));
+	const isColourByDisabled = $derived(['histogram'].includes(selectedView));
 	const isHistogramDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
 	const isMapDisabled = $derived(selectedCategory !== 'provenance');
 </script>
@@ -139,7 +139,7 @@
 {:else if selectedView === 'histogram'}
 	<HistogramView {inscriptions} />
 {:else if selectedView === 'map'}
-	<MapView {inscriptions} />
+	<MapView {inscriptions} {aggregations} {selectedColourBy} />
 {/if}
 
 <style>
