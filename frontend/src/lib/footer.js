@@ -94,7 +94,7 @@ export const footer = {
 			links: [
 				{
 					title: 'Email',
-					href: 'mailto:isicily@iscriptiones.org'
+					href: 'mailto:isicily@inscriptiones.org'
 				},
 				{
 					title: 'Feedback',
