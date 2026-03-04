@@ -30,10 +30,12 @@
 			)
 			.sort((a, b) => {
 				if (sortBy === 'idnoSort' || sortBy === 'bulletinDateSort') {
-					return a[sortBy] - b[sortBy] * sortDir;
+					return (a[sortBy] - b[sortBy]) * sortDir;
 				}
 
-				return (a[sortBy] || '').localeCompare(b[sortBy]) * sortDir;
+				return (
+					(a[sortBy] || '').localeCompare(b[sortBy] || '', undefined, { numeric: true }) * sortDir
+				);
 			})
 	);
 	const total = $derived(filteredInscriptions.length);
