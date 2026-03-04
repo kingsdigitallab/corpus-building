@@ -104,7 +104,7 @@ export const EMPTY_PLACEHOLDER = 'No data';
 
 export const digitalEditionUrls = /** @type {const} */ ({
 	DOI: 'https://doi.org/',
-	EDCS: 'https://db.edcs.eu/epigr/epi_url.php?s_sprache=de&p_edcs_id=EDCS-',
+	EDCS: 'https://edcs.hist.uzh.ch/en/search?edcs-id=EDCS-',
 	EDH: 'https://edh.ub.uni-heidelberg.de/edh/inschrift/HD',
 	EDR: 'http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&id_nr=EDR',
 	PHI: 'https://epigraphy.packhum.org/text/',
