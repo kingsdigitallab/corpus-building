@@ -10,7 +10,7 @@
 	const tileSources = $derived(
 		images.map(
 			(/** @type Object<String, string> */ image) =>
-				`${config.imageServer}${slug}/${image?.url || ''}/info.json`
+				`${config.imageServer}${image?.url || ''}/info.json`
 		)
 	);
 
