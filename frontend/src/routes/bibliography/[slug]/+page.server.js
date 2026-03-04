@@ -32,7 +32,7 @@ export async function load({ params: { slug } }) {
 			.map((inscription) => ({
 				...inscription,
 				bulletinDateSort: parseInt(inscription.bibl?.inscriptionDate || '999999999999'),
-				citedRangeSort: inscription.bibl?.citedRange || 'ZZZZZ'
+				citedRangeSort: String(inscription.bibl?.citedRange || 'ZZZZZ')
 			}))
 			.map((i) => ({ ...i, languageSort: i.textLang?.languages.join(', ') || 'ZZZ' }))
 			.map((i) => ({ ...i, materialSort: i.material?._ || 'ZZZ' }))
