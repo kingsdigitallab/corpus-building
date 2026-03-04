@@ -15,8 +15,12 @@
 		downloadFilename = 'inscriptions'
 	} = $props();
 
+	let activeSortOptions = $derived(
+		showBulletinDate ? sortOptions : sortOptions.filter((o) => o.value !== 'bulletinDateSort')
+	);
+
 	let search = $state('');
-	let sortBy = $state(sortOptions?.[0]?.value || 'file');
+	let sortBy = $state(activeSortOptions?.[0]?.value || 'file');
 	let sortDir = $state(1);
 
 	let filteredInscriptions = $derived(
@@ -106,7 +110,7 @@
 			<label>
 				<span>Sort by</span>
 				<select bind:value={sortBy}>
-					{#each sortOptions as option (option.value)}
+					{#each activeSortOptions as option (option.value)}
 						<option value={option.value}>{option.label}</option>
 					{/each}
 				</select>
