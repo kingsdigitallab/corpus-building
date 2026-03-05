@@ -34,7 +34,7 @@ test.describe('routes', () => {
     });
 
     test('inscription detail page loads', async ({ page }) => {
-        await page.goto(`${BASE}/inscription/ISic000001`);
+        await page.goto(`${BASE}/inscription/ISic000001`, { waitUntil: 'domcontentloaded' });
         await expect(page.locator('h1')).toBeVisible();
         await expect(page.locator('h1')).toContainText('ISic000001');
     });
