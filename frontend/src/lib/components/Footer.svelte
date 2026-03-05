@@ -11,7 +11,7 @@
 	<section class="footer-links">
 		{#each footer.links as section}
 			<div class="footer-link-section">
-				<h3>{section.title}</h3>
+				<h2>{section.title}</h2>
 				<ul>
 					{#each section.links as link}
 						<li class={link.class || ''}>
@@ -107,7 +107,7 @@
 		}
 	}
 
-	.footer-link-section h3 {
+	.footer-link-section h2 {
 		font-size: var(--font-size-2);
 		font-weight: 600;
 		margin-block-end: var(--size-6);
