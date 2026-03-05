@@ -225,4 +225,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   extractAllZoteroData();
 }
 
-export { extractAllZoteroData, fetchZoteroData };
+export {
+  extractAllZoteroData,
+  extractZoteroKeysFromXML,
+  fetchZoteroData,
+  parseXML,
+};
