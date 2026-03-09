@@ -41,9 +41,7 @@ jobs:
           npx playwright install --with-deps
 
       - name: Test
-        continue-on-error: true
-        run: |
-          npm run -w frontend test
+        run: npm test
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
