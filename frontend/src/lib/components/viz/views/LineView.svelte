@@ -1,16 +1,17 @@
 <script>
 	import VizWrapper from '../VizWrapper.svelte';
-	import HistogramChart from '../charts/HistogramChart.svelte';
+	import LineChart from '../charts/LineChart.svelte';
 	import { formatKey, getLeaves } from '../utils.js';
 
 	/** 
 	 * @type {{ 
 	 *   inscriptions: any[],
 	 *   aggregations: Record<string, any>,
+	 *   selectedCategoryTitle: string,
 	 *   selectedColourBy: string
 	 * }} 
 	 */
-	let { inscriptions, aggregations, selectedColourBy } = $props();
+	let { inscriptions, aggregations, selectedCategoryTitle, selectedColourBy } = $props();
 
 	// Settings state
 	let binSize = $state(50);
@@ -31,7 +32,7 @@
 	/** @type {Array<any>} */
 	const data = $derived.by(() => {
 		if (!inscriptions?.length) return [];
-
+		
 		const size = Number(binSize);
 
 		// Get min/max dates from valid inscriptions only
@@ -104,6 +105,7 @@
 	});
 
 	// Colour-by keys that have counts > 0
+	// For Line chart, we no longer artificially truncate this array for scaling purposes
 	const selectedColourByKeys = $derived.by(() => {
 		if (!selectedColourBy) return [];
 		const buckets = getLeaves(
@@ -111,7 +113,7 @@
 				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
 			) || []
 		);
-		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
+		return [...buckets].map((b) => b.key);
 	});
 
 	const activeColourByKeys = $derived.by(() => {
@@ -135,8 +137,8 @@
 </script>
 
 <VizWrapper 
-	title="Date Distribution" 
-	{summary} 
+	title="{selectedCategoryTitle}"
+	{summary}
 	{data}
 	columns={activeColourByKeys}
 	{formatKey}
@@ -157,7 +159,7 @@
 	{/snippet}
 
 	{#snippet children(height)}
-		<HistogramChart 
+		<LineChart 
 			{inscriptions} 
 			{data}
 			{height} 

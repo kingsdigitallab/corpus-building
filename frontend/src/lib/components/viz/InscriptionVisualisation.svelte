@@ -2,6 +2,7 @@
 	import BarView from './views/BarView.svelte';
 	import DonutView from './views/DonutView.svelte';
 	import HistogramView from './views/HistogramView.svelte';
+	import LineView from './views/LineView.svelte';
 	import MapView from './views/MapView.svelte';
 	import { FilterIcon } from 'lucide-svelte';
 	import { formatKey } from './utils.js';
@@ -36,12 +37,13 @@
 				disabledColourBy:
 					aggregation.name === selectedCategory ||
 					aggregation.buckets.length === 0 ||
-					aggregation.buckets.length >= 12
+					(selectedView !== 'line' && aggregation.buckets.length >= 12)
 			}))
 			.sort((a, b) => a.label.localeCompare(b.label))
 	);
 
 	const isColourByDisabled = $derived(false);
+	const isLineDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
 	const isHistogramDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
 	const isMapDisabled = $derived(selectedCategory !== 'provenance');
 </script>
@@ -78,6 +80,7 @@
 				>
 					<option value="bar-stacked">Bar</option>
 					<option value="donut">Donut</option>
+					<option value="line" disabled={isLineDisabled}>Line</option>
 					<option value="histogram" disabled={isHistogramDisabled}>Histogram</option>
 					<option value="map" disabled={isMapDisabled}>Map</option>
 				</select>
@@ -137,6 +140,8 @@
 		{selectedCategoryTitle}
 		{selectedColourBy}
 	/>
+{:else if selectedView === 'line'}
+	<LineView {inscriptions} {aggregations} {selectedCategoryTitle} {selectedColourBy} />
 {:else if selectedView === 'histogram'}
 	<HistogramView {inscriptions} {aggregations} {selectedColourBy} {formatKey} />
 {:else if selectedView === 'map'}
