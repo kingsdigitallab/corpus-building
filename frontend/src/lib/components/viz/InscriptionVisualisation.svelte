@@ -4,6 +4,7 @@
 	import HistogramView from './views/HistogramView.svelte';
 	import MapView from './views/MapView.svelte';
 	import { FilterIcon } from 'lucide-svelte';
+	import { formatKey } from './utils.js';
 
 	let { inscriptions, aggregations } = $props();
 
@@ -40,7 +41,7 @@
 			.sort((a, b) => a.label.localeCompare(b.label))
 	);
 
-	const isColourByDisabled = $derived(['histogram'].includes(selectedView));
+	const isColourByDisabled = $derived(false);
 	const isHistogramDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
 	const isMapDisabled = $derived(selectedCategory !== 'provenance');
 </script>
@@ -137,7 +138,7 @@
 		{selectedColourBy}
 	/>
 {:else if selectedView === 'histogram'}
-	<HistogramView {inscriptions} />
+	<HistogramView {inscriptions} {aggregations} {selectedColourBy} {formatKey} />
 {:else if selectedView === 'map'}
 	<MapView {inscriptions} {aggregations} {selectedColourBy} />
 {/if}
