@@ -160,7 +160,6 @@
 
 	{#snippet children(height)}
 		<LineChart 
-			{inscriptions} 
 			{data}
 			{height} 
 			{binSize} 

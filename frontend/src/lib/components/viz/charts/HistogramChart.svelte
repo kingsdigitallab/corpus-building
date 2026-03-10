@@ -10,22 +10,13 @@
 
 	/**
 	 * @type {{
-	 *   inscriptions: any[],
 	 *   height: number,
-	 *   binSize: number,
 	 *   data: Array<{ key: string, value: number } & Record<string, unknown>>,
 	 *   colourByKeys?: string[],
 	 *   formatKey?: (key: string | undefined) => string
 	 * }}
 	 */
-	let {
-		inscriptions,
-		height,
-		binSize,
-		data,
-		colourByKeys = [],
-		formatKey = (k) => k || ''
-	} = $props();
+	let { height, data, colourByKeys = [], formatKey = (k) => k || '' } = $props();
 
 	/** @type {(d: unknown, i: number) => number} */
 	const x = (_, i) => i;

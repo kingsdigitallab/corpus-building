@@ -7,11 +7,10 @@
 		VisCrosshair,
 		VisBulletLegend
 	} from '@unovis/svelte';
-	import { Line, Crosshair, BulletShape } from '@unovis/ts';
+	import { BulletShape } from '@unovis/ts';
 
 	/**
 	 * @type {{
-	 *   inscriptions: any[],
 	 *   height: number,
 	 *   binSize: number,
 	 *   data: Array<{ key: string, value: number } & Record<string, unknown>>,
@@ -19,14 +18,7 @@
 	 *   formatKey?: (key: string | undefined) => string
 	 * }}
 	 */
-	let {
-		inscriptions,
-		height,
-		binSize,
-		data,
-		colourByKeys = [],
-		formatKey = (k) => k || ''
-	} = $props();
+	let { height, binSize, data, colourByKeys = [], formatKey = (k) => k || '' } = $props();
 
 	/** @type {(d: unknown, i: number) => number} */
 	const x = (_, i) => i;

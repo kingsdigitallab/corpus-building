@@ -158,10 +158,8 @@
 
 	{#snippet children(height)}
 		<HistogramChart 
-			{inscriptions} 
 			{data}
 			{height} 
-			{binSize} 
 			colourByKeys={activeColourByKeys}
 			{formatKey}
 		/>

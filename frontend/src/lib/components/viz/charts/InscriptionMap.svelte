@@ -136,7 +136,6 @@
 			{pointLatitude}
 			{pointLongitude}
 			{pointBottomLabel}
-			fitViewPadding={[60, 60]}
 			clusterExpandOnClick={true}
 			pointRadius={6}
 			pointColor="var(--blue-6)"
