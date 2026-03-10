@@ -98,9 +98,11 @@
 </VisXYContainer>
 
 {#if colourByKeys.length > 0}
-	<div class="legend-container">
+	<div>
 		<h4>Legend</h4>
-		<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+		<div class="legend-container">
+			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+		</div>
 	</div>
 {/if}
 
