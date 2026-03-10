@@ -16,8 +16,7 @@
 	/** @type {Props} */
 	let { inscriptions, aggregations, selectedColourBy, mapStyle = config.mapStyle } = $props();
 
-	/** @type {string[]} */
-	const PALETTE = ['#825b3a', '#c7956d', '#d4a574', '#8b9e6b', '#5d8a83', '#7a6b8a'];
+	const PALETTE = Array.from({ length: 12 }, (_, i) => `var(--vis-color${i})`);
 
 	// Get active colour-by keys from aggregation buckets
 	const colourByKeys = $derived.by(() => {

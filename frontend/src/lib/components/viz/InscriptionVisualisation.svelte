@@ -181,6 +181,21 @@
 		--vis-nested-donut-segment-label-font-size: 0.875em;
 	}
 
+	:global([data-color-scheme='dark']) {
+		--vis-color0: var(--vis-dark-color0);
+		--vis-color1: var(--vis-dark-color1);
+		--vis-color2: var(--vis-dark-color2);
+		--vis-color3: var(--vis-dark-color3);
+		--vis-color4: var(--vis-dark-color4);
+		--vis-color5: var(--vis-dark-color5);
+		--vis-color6: var(--vis-dark-color6);
+		--vis-color7: var(--vis-dark-color7);
+		--vis-color8: var(--vis-dark-color8);
+		--vis-color9: var(--vis-dark-color9);
+		--vis-color10: var(--vis-dark-color10);
+		--vis-color11: var(--vis-dark-color11);
+	}
+
 	:global(.legend-title) {
 		font-variant: small-caps;
 		padding-bottom: var(--size-2);
