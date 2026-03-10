@@ -115,7 +115,7 @@
 
 	.legend-container {
 		margin-top: var(--size-4, 1rem);
-		max-height: 30vh;
+		max-height: 40vh;
 		overflow-y: auto;
 	}
 </style>
