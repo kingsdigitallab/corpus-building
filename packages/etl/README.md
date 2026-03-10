@@ -64,10 +64,16 @@ npm run etl -- --help
 
 ## Testing
 
-Run the tests with:
+Run the ETL unit tests from within this package:
 
 ```sh
 npm test
+```
+
+Or from the monorepo root:
+
+```sh
+npm run test:etl
 ```
 
 Generate a coverage report:

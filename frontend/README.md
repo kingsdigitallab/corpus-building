@@ -63,17 +63,30 @@ npm run preview
 
 ## Testing
 
-Run integration tests ([Playwright](https://playwright.dev/)):
+The frontend uses two layers of testing:
+
+1. **End-to-end and Accessibility** ([Playwright](https://playwright.dev/)): Smoke tests for all routes and Axe accessibility scans.
+2. **Unit Tests** ([Vitest](https://vitest.dev/)): Tests for pure functions and pure utilities.
+
+Run all frontend tests:
+
+```sh
+npm test
+```
+
+Run integration/accessibility tests only:
 
 ```sh
 npm run test:integration
 ```
 
-Run unit tests ([Vitest](https://vitest.dev/)):
+Run unit tests only:
 
 ```sh
 npm run test:unit
 ```
+
+_(Note: Use `npm run test:watch` to run unit tests in interactive watch mode during development)._
 
 ## Adding content
 

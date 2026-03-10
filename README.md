@@ -75,6 +75,22 @@ H -.-> L[Open Data Endpoints]
 
 The project should be available at http://localhost:5173/.
 
+## Testing
+
+The project uses a comprehensive testing strategy covering pure functions (Vitest) and end-to-end integration/accessibility (Playwright).
+
+To run all tests across the entire monorepo (both ETL and frontend):
+
+```sh
+npm test
+```
+
+You can also run tests for specific workspaces from the root:
+
+- `npm run test:etl` — Run ETL unit tests only
+- `npm run test:frontend` — Run all frontend tests (unit + integration)
+- `npm run test:integration` — Run Playwright frontend integration/accessibility tests only
+
 ## Adding content to the site
 
 See the [frontend README](frontend/README.md#adding-content) for instructions on
