@@ -154,12 +154,12 @@
 		--vis-color3: #8b9e6b;
 		--vis-color4: #5d8a83;
 		--vis-color5: #7a6b8a;
-		--vis-color6: #b57b59;
-		--vis-color7: #e6cc98;
-		--vis-color8: #5b7256;
-		--vis-color9: #416b75;
-		--vis-color10: #915c7a;
-		--vis-color11: #8a837b;
+		--vis-color6: #4d6a7f;
+		--vis-color7: #c96a52;
+		--vis-color8: #e3a652;
+		--vis-color9: #8c7673;
+		--vis-color10: #427869;
+		--vis-color11: #a86c82;
 
 		--vis-dark-color0: var(--vis-color-main);
 		--vis-dark-color1: #e88a96;
@@ -167,12 +167,12 @@
 		--vis-dark-color3: #a3c085;
 		--vis-dark-color4: #4db8a6;
 		--vis-dark-color5: #8b96cc;
-		--vis-dark-color6: #ffb3a7;
-		--vis-dark-color7: #f5e6b3;
-		--vis-dark-color8: #7da67d;
-		--vis-dark-color9: #6ba3ba;
-		--vis-dark-color10: #bf8cb4;
-		--vis-dark-color11: #a39f99;
+		--vis-dark-color6: #72aee6;
+		--vis-dark-color7: #fca079;
+		--vis-dark-color8: #e6cb73;
+		--vis-dark-color9: #c99bc2;
+		--vis-dark-color10: #73c293;
+		--vis-dark-color11: #b898cf;
 
 		--vis-axis-label-color: var(--text-1);
 		--vis-axis-tick-label-color: var(--text-1);
