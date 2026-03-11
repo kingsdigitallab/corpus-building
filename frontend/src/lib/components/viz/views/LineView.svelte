@@ -1,7 +1,8 @@
 <script>
 	import VizWrapper from '../VizWrapper.svelte';
 	import LineChart from '../charts/LineChart.svelte';
-	import { formatKey, getLeaves } from '../utils.js';
+	import { formatKey } from '../utils.js';
+	import { computeHistogramData, computeActiveColourByKeys } from '../data.js';
 
 	/** 
 	 * @type {{ 
@@ -13,124 +14,33 @@
 	 */
 	let { inscriptions, aggregations, selectedCategoryTitle, selectedColourBy } = $props();
 
-	// Settings state
 	let binSize = $state(50);
 
 	/** @type {string[]} */
 	const excludedCategories = [];
 
-	// Helper to get values as array
-	/** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
-	const getValuesAsArray = (item, field) => {
-		const value = item[field];
-		if (Array.isArray(value)) return value;
-		if (value !== undefined && value !== null) return [value];
-		return [];
-	};
+	const data = $derived(
+		computeHistogramData({
+			inscriptions,
+			aggregations,
+			binSize,
+			selectedColourBy
+		})
+	);
 
-	// Histogram data computation
-	/** @type {Array<any>} */
-	const data = $derived.by(() => {
-		if (!inscriptions?.length) return [];
-		
-		const size = Number(binSize);
+	const activeColourByKeys = $derived(
+		computeActiveColourByKeys({
+			data,
+			aggregations,
+			selectedColourBy,
+			excludedCategories
+		})
+	);
 
-		// Get min/max dates from valid inscriptions only
-		let minDate = Infinity;
-		let maxDate = -Infinity;
-		for (const item of inscriptions) {
-			const nb = /** @type {number | undefined} */ (item.notBefore);
-			const na = /** @type {number | undefined} */ (item.notAfter);
-			if (nb === undefined || na === undefined || nb > na) continue;
-			if (nb < minDate) minDate = nb;
-			if (na > maxDate) maxDate = na;
-		}
-
-		if (minDate === Infinity || maxDate === -Infinity) return [];
-
-		// Align bins to nice boundaries
-		const binStart = Math.floor(minDate / size) * size;
-		const binEnd = Math.ceil(maxDate / size) * size;
-
-		// Create bins map where values are objects tracking total count, and individual counts per selected category
-		/** @type {Map<number, Record<string, any>>} */
-		const bins = new Map();
-		for (let start = binStart; start < binEnd; start += size) {
-			bins.set(start, { value: 0 });
-		}
-
-		// Calculate valid subset of category variables
-		const colourByBuckets = selectedColourBy ? (aggregations[selectedColourBy]?.buckets || []) : [];
-		const validColourByKeys = new Set(
-			colourByBuckets.map((/** @type {{ key: string }} */ b) => b.key)
-		);
-
-		// Count inscriptions in each bin (full range approach)
-		for (const item of inscriptions) {
-			const nb = /** @type {number | undefined} */ (item.notBefore);
-			const na = /** @type {number | undefined} */ (item.notAfter);
-			if (nb === undefined || na === undefined || nb > na) continue;
-
-			for (let start = binStart; start < binEnd; start += size) {
-				const binEndDate = start + size;
-				if (nb < binEndDate && na >= start) {
-					const binObj = bins.get(start) || { value: 0 };
-					binObj.value += 1;
-
-					if (selectedColourBy) {
-						const groupValues = getValuesAsArray(item, selectedColourBy);
-						for (const gv of groupValues) {
-							const k = String(gv);
-							if (validColourByKeys.has(k)) {
-								binObj[k] = (binObj[k] || 0) + 1;
-							}
-						}
-					}
-					bins.set(start, binObj);
-				}
-			}
-		}
-
-		// Convert to array with formatted labels
-		/** @param {number} year @returns {string} */
-		const formatYear = (year) => (year < 0 ? `${Math.abs(year)} BCE` : `${year} CE`);
-
-		return [...bins.entries()]
-			.filter(([_, countsObj]) => countsObj.value > 0)
-			.sort((a, b) => a[0] - b[0])
-			.map(([start, countsObj]) => ({
-				key: `${formatYear(start)} – ${formatYear(start + size)}`,
-				...countsObj
-			}));
-	});
-
-	// Colour-by keys that have counts > 0
-	// For Line chart, we no longer artificially truncate this array for scaling purposes
-	const selectedColourByKeys = $derived.by(() => {
-		if (!selectedColourBy) return [];
-		const buckets = getLeaves(
-			aggregations[selectedColourBy]?.buckets.filter(
-				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
-			) || []
-		);
-		return [...buckets].map((b) => b.key);
-	});
-
-	const activeColourByKeys = $derived.by(() => {
-		if (!selectedColourBy || !data.length) return [];
-		return selectedColourByKeys.filter((key) =>
-			data.some((d) => {
-				const item = /** @type {Record<string, unknown>} */ (d);
-				return typeof item[key] === 'number' && /** @type {number} */ (item[key]) > 0;
-			})
-		);
-	});
-
-	// Summary
 	const summary = $derived.by(() => {
 		const label = `${inscriptions?.length.toLocaleString() || 0} inscriptions by date in ${binSize}-year intervals.`;
 		const helpText = `<br/><small>Inscriptions with uncertain dates may appear in multiple bins.</small>`;
-		
+
 		if (selectedColourBy) return `${label} Split by <strong>${selectedColourBy}</strong>.${helpText}`;
 		return `${label}${helpText}`;
 	});

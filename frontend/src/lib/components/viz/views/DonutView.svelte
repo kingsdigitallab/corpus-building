@@ -2,7 +2,8 @@
 	import pluralize from 'pluralize-esm';
 	import VizWrapper from '../VizWrapper.svelte';
 	import DonutChart from '../charts/DonutChart.svelte';
-	import { formatKey, getLeaves, getLeafKeys } from '../utils.js';
+	import { formatKey, getLeaves } from '../utils.js';
+	import { computeCategoryData, computeActiveColourByKeys } from '../data.js';
 
 	/** @type {string[]} */
 	const excludedCategories = [];
@@ -24,118 +25,28 @@
 		selectedColourBy
 	} = $props();
 
-	// Settings state
 	let maxCategories = $state(6);
 
-	// Helper to get values as array
-	/** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
-	const getValuesAsArray = (item, field) => {
-		const value = item[field];
-		if (Array.isArray(value)) return value;
-		if (value !== undefined && value !== null) return [value];
-		return [];
-	};
+	const data = $derived(
+		computeCategoryData({ 
+			inscriptions, 
+			aggregations, 
+			selectedCategory, 
+			selectedColourBy, 
+			maxCategories, 
+			excludedCategories 
+		})
+	);
 
-	// Data computation (same as BarView)
-	const data = $derived.by(() => {
-		if (!inscriptions?.length) {
-			const buckets = getLeaves([
-				...(aggregations[selectedCategory]?.buckets.filter(
-					/** @param {{ key: string }} bucket */ (bucket) =>
-						!excludedCategories.includes(bucket.key)
-				) || [])
-			]);
-			return buckets
-				.sort((a, b) => b.doc_count - a.doc_count)
-				.slice(0, maxCategories)
-				.map((b) => ({
-					key: formatKey(b.key),
-					value: b.doc_count
-				}));
-		}
+	const activeColourByKeys = $derived(
+		computeActiveColourByKeys({
+			data,
+			aggregations,
+			selectedColourBy,
+			excludedCategories
+		})
+	);
 
-		/** @type {Map<string, { count: number, items: any[] }>} */
-		const categoryMap = new Map();
-		for (const item of inscriptions) {
-			const values = getValuesAsArray(item, selectedCategory);
-			for (const v of values) {
-				const key = String(v);
-				if (excludedCategories.includes(key)) continue;
-				if (!categoryMap.has(key)) categoryMap.set(key, { count: 0, items: [] });
-				const entry = /** @type {{ count: number, items: any[] }} */ (categoryMap.get(key));
-				entry.count++;
-				entry.items.push(item);
-			}
-		}
-
-		// Filter to leaf keys only (exclude parent hierarchy entries)
-		const leafKeys = getLeafKeys(categoryMap.keys());
-
-		const sortedKeys = [...categoryMap.entries()]
-			.filter(([key]) => leafKeys.has(key))
-			.sort((a, b) => b[1].count - a[1].count)
-			.slice(0, maxCategories)
-			.map(([key]) => key);
-
-		if (!selectedColourBy) {
-			return sortedKeys.map((key) => ({
-				key: formatKey(key),
-				value: categoryMap.get(key)?.count || 0
-			}));
-		}
-
-		const colourByBuckets = aggregations[selectedColourBy]?.buckets || [];
-		const validColourByKeys = new Set(
-			colourByBuckets.map((/** @type {{ key: string }} */ b) => b.key)
-		);
-
-		const result = sortedKeys
-			.map((categoryKey) => {
-				const items = categoryMap.get(categoryKey)?.items || [];
-				/** @type {Record<string, number>} */
-				const counts = {};
-				for (const item of items) {
-					const groupValues = getValuesAsArray(item, selectedColourBy);
-					for (const gv of groupValues) {
-						const key = String(gv);
-						if (validColourByKeys.has(key)) {
-							counts[key] = (counts[key] || 0) + 1;
-						}
-					}
-				}
-				return {
-					key: formatKey(categoryKey),
-					value: Object.values(counts).reduce((sum, c) => sum + c, 0),
-					...counts
-				};
-			})
-			.filter((d) => Object.keys(d).length > 2);
-
-		return result;
-	});
-
-	// Colour-by keys
-	const selectedColourByKeys = $derived.by(() => {
-		if (!selectedColourBy) return [];
-		const buckets = getLeaves(
-			aggregations[selectedColourBy]?.buckets.filter(
-				/** @param {{ key: string }} bucket */ (bucket) => !excludedCategories.includes(bucket.key)
-			) || []
-		);
-		return [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
-	});
-
-	const activeColourByKeys = $derived.by(() => {
-		if (!selectedColourBy || !data.length) return [];
-		return selectedColourByKeys.filter((key) =>
-			data.some((d) => {
-				const item = /** @type {Record<string, unknown>} */ (d);
-				return typeof item[key] === 'number' && /** @type {number} */ (item[key]) > 0;
-			})
-		);
-	});
-
-	// Summary
 	const summary = $derived.by(() => {
 		if (!data?.length) return 'No data available.';
 
