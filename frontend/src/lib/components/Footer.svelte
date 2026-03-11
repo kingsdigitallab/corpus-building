@@ -33,7 +33,7 @@
 	<section class="footer-logos">
 		<ul>
 			{#each footer.logos as logo}
-				<li>
+				<li class={logo.class || ''}>
 					{#if logo.href}
 						<a href={logo.href}>
 							<img
@@ -125,6 +125,10 @@
 		display: flex;
 		justify-content: space-between;
 		gap: var(--size-6);
+	}
+
+	:global(.footer-logos .add-background) {
+		background-color: var(--logo-background);
 	}
 
 	@media (max-width: 768px) {

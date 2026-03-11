@@ -107,7 +107,8 @@ export const footer = {
 		{
 			title: 'Università di Catania',
 			href: 'https://unict.it/',
-			img: '/images/logos/UniCT-Logo-Nero.png'
+			img: '/images/logos/UniCT-Logo-Nero.png',
+			class: 'add-background'
 		},
 		{
 			title: 'University of Oxford',
