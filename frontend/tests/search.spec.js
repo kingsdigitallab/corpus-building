@@ -50,7 +50,7 @@ test.describe('search', () => {
         await page.goto(`${BASE}/`);
 
         // Wait for initial results
-        const results = page.locator('.inscriptions [class*="result"], .inscriptions [class*="card"], .inscriptions article');
+        const results = page.locator('.inscriptions .inscription-card');
         await expect(results.first()).toBeVisible({ timeout: 5000 });
 
         // Count initial results (e.g., 20)
@@ -68,5 +68,32 @@ test.describe('search', () => {
         // Expect the results count to have increased
         const newCount = await results.count();
         expect(newCount).toBeGreaterThan(initialCount);
+    });
+
+    test('pagination next page replaces results', async ({ page }) => {
+        await page.goto(`${BASE}/`);
+
+        const results = page.locator('.inscriptions .inscription-card');
+        await expect(results.first()).toBeVisible({ timeout: 5000 });
+
+        const initialCount = await results.count();
+        expect(initialCount).toBeGreaterThan(0);
+
+        const firstResultText = await results.first().textContent();
+
+        // Click next page in the standard paginator
+        const nextButton = page.locator('button[aria-label="Next page"]');
+        await expect(nextButton).toBeVisible();
+        await nextButton.click();
+
+        await page.waitForTimeout(1000);
+
+        // Expect the count to remain exactly the original limit (e.g. 20) instead of growing
+        const newCount = await results.count();
+        expect(newCount).toEqual(initialCount);
+
+        // Expect the results to have changed
+        const newFirstResultText = await results.first().textContent();
+        expect(newFirstResultText).not.toEqual(firstResultText);
     });
 });
