@@ -49,8 +49,10 @@
 	let searchStatus = $state('idle');
 	let isLoading = $derived(['idle', 'load'].includes(searchStatus));
 	let isDownloading = $state(false);
+	let isAppending = $state(false);
 
 	let searchWorker = $state();
+	/** @type {any} */
 	let searchResults = $state({});
 	let searchPagination = $derived(searchResults?.pagination ?? {});
 	let searchAggregations = $derived(searchResults?.data?.aggregations ?? {});
@@ -105,7 +107,18 @@
 				}
 
 				if (type === 'results') {
-					searchResults = data;
+					if (isAppending) {
+						searchResults = {
+							...data,
+							data: {
+								...data.data,
+								items: [...(searchResults?.data?.items ?? []), ...data.data.items]
+							}
+						};
+					} else {
+						searchResults = data;
+					}
+					isAppending = false;
 				}
 			}
 		);
@@ -120,8 +133,10 @@
 	 * @param {string | null | undefined} [query]
 	 * @param {number | null | undefined} [limit]
 	 * @param {import('./search').SearchOptions['searchMode'] | null | undefined} [mode]
+	 * @param {boolean} [append]
 	 */
-	async function postSearchMessage(page, query, limit, mode) {
+	async function postSearchMessage(page, query, limit, mode, append = false) {
+		isAppending = append;
 		let currentPage = $searchPageParam;
 		let currentQuery = $searchQueryParam;
 		let currentLimit = $searchLimitParam;
@@ -480,6 +495,12 @@
 		postSearchMessage(page);
 	}
 
+	async function handleLoadMore() {
+		const nextPage = $searchPageParam + 1;
+		$searchPageParam = nextPage;
+		postSearchMessage(nextPage, null, null, null, true);
+	}
+
 	onMount(() => {
 		init();
 	});
@@ -679,6 +700,19 @@
 							{/if}
 						</div>
 					{/key}
+
+					{#if $searchViewParam !== 'viz' && inscriptions.length > 0 && $searchPageParam * $searchLimitParam < total}
+						<div class="load-more-container reduced-block-margin">
+							<Button.Root
+								class="secondary"
+								onclick={handleLoadMore}
+								disabled={isAppending || isLoading}
+							>
+								{isAppending ? 'Loading...' : 'Load more'}
+							</Button.Root>
+						</div>
+					{/if}
+
 					<InscriptionPagination
 						page={$searchPageParam}
 						count={total}
@@ -791,6 +825,13 @@
 	.transition-container {
 		width: 100%;
 	}
+
+	.load-more-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
 	/*ZL: disabled Table View*/
 	@media (max-width: 768px) {
 		:global(.view-table-btn) {
