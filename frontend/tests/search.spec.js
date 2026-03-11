@@ -45,4 +45,28 @@ test.describe('search', () => {
             pageContent?.includes('0') || pageContent?.toLowerCase().includes('no result')
         ).toBeTruthy();
     });
+
+    test('load more button appends results', async ({ page }) => {
+        await page.goto(`${BASE}/`);
+
+        // Wait for initial results
+        const results = page.locator('.inscriptions [class*="result"], .inscriptions [class*="card"], .inscriptions article');
+        await expect(results.first()).toBeVisible({ timeout: 5000 });
+
+        // Count initial results (e.g., 20)
+        const initialCount = await results.count();
+        expect(initialCount).toBeGreaterThan(0);
+
+        // Click the load more button
+        const loadMoreBtn = page.locator('button:has-text("Load more")').first();
+        await expect(loadMoreBtn).toBeVisible();
+        await loadMoreBtn.click();
+
+        // Wait a bit for results to append
+        await page.waitForTimeout(1000);
+
+        // Expect the results count to have increased
+        const newCount = await results.count();
+        expect(newCount).toBeGreaterThan(initialCount);
+    });
 });
