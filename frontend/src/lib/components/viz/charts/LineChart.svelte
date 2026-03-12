@@ -19,18 +19,21 @@
 	 * }}
 	 */
 	let { height, binSize, data, colourByKeys = [], formatKey = (k) => k || '' } = $props();
+	let hiddenSeries = $state(new Set());
 
 	/** @type {(d: unknown, i: number) => number} */
 	const x = (_, i) => i;
 
-	// Svelte 5 needs array references to update properly for Unovis
 	let y = $derived.by(() => {
+		console.log('y', $state.snapshot(hiddenSeries));
 		if (colourByKeys.length > 0) {
 			return colourByKeys.map((key) => {
+				if (hiddenSeries.has(key)) return () => null;
 				return (/** @type {Record<string, number>} */ d) => d[key] ?? 0;
 			});
+		} else {
+			return [(/** @type {{ value: number }} */ d) => d.value];
 		}
-		return [(/** @type {{ value: number }} */ d) => d.value];
 	});
 
 	// Limit tick labels to prevent overlap
@@ -50,10 +53,24 @@
 		colourByKeys.length > 0
 			? colourByKeys.map((key) => ({
 					name: formatKey(key),
-					shape: legendShape
+					shape: legendShape,
+					inactive: hiddenSeries.has(key)
 				}))
 			: []
 	);
+
+	/** @param {import('@unovis/ts').BulletLegendItemInterface} item */
+	function toggleLegendItem(item) {
+		const key = colourByKeys.find((k) => formatKey(k) === item.name);
+
+		if (!key) return;
+
+		if (hiddenSeries.has(key)) {
+			hiddenSeries = new Set([...hiddenSeries].filter((k) => k !== key));
+		} else {
+			hiddenSeries = new Set([...hiddenSeries, key]);
+		}
+	}
 
 	/** @param {any} item */
 	function getTooltip(item) {
@@ -67,7 +84,8 @@
 					(key) =>
 						typeof targetPoint[key] === 'number' &&
 						typeof targetPoint.key === 'string' &&
-						targetPoint[key] > 0
+						targetPoint[key] > 0 &&
+						!hiddenSeries.has(key)
 				)
 				.map((key) => {
 					const value = /** @type {number} */ (targetPoint[key]);
@@ -80,7 +98,7 @@
 </script>
 
 <VisXYContainer {data} {height}>
-	{#key colourByKeys.length + '-' + binSize}
+	{#key colourByKeys.length + '-' + binSize + '-' + [...hiddenSeries].join(',')}
 		<VisLine {x} {y} />
 		<VisCrosshair template={getTooltip} {x} {y} />
 	{/key}
@@ -91,9 +109,17 @@
 
 {#if colourByKeys.length > 0}
 	<div>
-		<h4>Legend</h4>
+		<hgroup>
+			<h4>Legend</h4>
+			<small>Click on a legend item to hide or show the corresponding line in the chart.</small>
+		</hgroup>
 		<div class="legend-container">
-			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+			<VisBulletLegend
+				items={legendItems}
+				onLegendItemClick={toggleLegendItem}
+				labelFontSize="large"
+				orientation="vertical"
+			/>
 		</div>
 	</div>
 {/if}
@@ -106,8 +132,8 @@
 	}
 
 	.legend-container {
-		margin-top: var(--size-4, 1rem);
-		max-height: 40vh;
+		margin-top: var(--size-2, var(--size-4));
+		max-height: 35vh;
 		overflow-y: auto;
 	}
 </style>
