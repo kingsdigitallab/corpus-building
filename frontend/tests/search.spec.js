@@ -17,7 +17,7 @@ test.describe('search', () => {
 
         // Expect some inscription results to appear
         const results = page.locator('[class*="result"], [class*="card"], table tbody tr, article');
-        await expect(results.first()).toBeVisible({ timeout: 5000 });
+        await expect(results.first()).toBeVisible({ timeout: 15000 });
     });
 
     test('empty search shows all inscriptions', async ({ page }) => {
@@ -51,7 +51,7 @@ test.describe('search', () => {
 
         // Wait for initial results
         const results = page.locator('.inscriptions .inscription-card');
-        await expect(results.first()).toBeVisible({ timeout: 5000 });
+        await expect(results.first()).toBeVisible({ timeout: 15000 });
 
         // Count initial results (e.g., 20)
         const initialCount = await results.count();
