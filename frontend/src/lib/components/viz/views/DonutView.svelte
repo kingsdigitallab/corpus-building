@@ -52,7 +52,10 @@
 
 		const totalItems = inscriptions?.length || 0;
 		const categoryCount = data.length;
-		const categoryLabel = pluralize(selectedCategoryTitle.toLowerCase(), categoryCount);
+		const categoryLabel = 
+			['notAfter', 'notBefore', 'letterHeightAtLeast', 'letterHeightAtMost'].includes(selectedCategory) 
+				? selectedCategoryTitle.toLowerCase() 
+				: pluralize(selectedCategoryTitle.toLowerCase(), categoryCount);
 
 		const maxCategory = data.reduce((max, curr) => (curr.value > max.value ? curr : max), data[0]);
 		const minCategory = data.reduce((min, curr) => (curr.value < min.value ? curr : min), data[0]);
