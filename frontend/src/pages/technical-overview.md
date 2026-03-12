@@ -55,7 +55,9 @@ Linguistic annotation has been undertaken on a Greek and Latin subset of the cor
 
 #### Palaeographic Annotation
 
-Palaeographic annotation is conducted through a dedicated digital palaeographic environment, which enables the assignment of letter typologies to linked images and texts. The environment uses [Web Annotations](https://www.w3.org/TR/annotation-model/) that bind graphs as they appear on inscription images with their occurrences in the EpiDoc edition and the formal description of their structure.
+Palaeographic annotation is conducted through a dedicated digital palaeographic environment with its own web application and interface ([Annotator](https://kingsdigitallab.github.io/crossreads/annotator.html)) also served and documented via a dedicated [Github repository](https://github.com/kingsdigitallab/crossreads-petrography). The environment lets the user define the palaeographic structure of allographs and then create thousands of Web Annotations ([Web Annotation Data Model](https://www.w3.org/TR/annotation-model/)) that bind graphs as they appear on inscription images (using IIIF Image API region format) with their occurrences in the EpiDoc edition (fetched from a [Distributed Text Services (DTS)](https://distributed-text-services.github.io/specifications/) collection) and the formal description of their structure.
+A faceted search interface allows the researcher to filter graph annotations by their structural patterns and define a high-level typology of allographs. 
+The list of letter types identified for each annotated inscription are then added to the TEI file and so visible on the corpus website with links back to the palaeography environment. These types are also searchable from the ‘Lettering’ filter in the list of facet options, thus integrating them with the rest of the exploration possibilities within the entire corpus, even though only a selection of inscriptions underwent palaeographic analysis.
 
 #### Petrographic Annotation
 
@@ -110,3 +112,4 @@ By integrating different layers of annotations in the same publication, the site
 ## Acknowledgements
 
 This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (CROSSREADS, grant agreement no. 885040).
+A previous instance of I.Sicily on which the requirements of the current solution is based was created and developed by Jonathan Prag, with the technical support of James Cummings and James Chartrand of OpenSky Solutions (see [Prag, 2021](https://doi.org/10.2307/j.ctv24q4z4h.24) and [Prag and Chartrand, 2019](https://www.degruyterbrill.com/document/doi/10.1515/9783110607208-020/html)).
