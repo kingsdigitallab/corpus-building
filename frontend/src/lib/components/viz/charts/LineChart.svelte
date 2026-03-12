@@ -19,13 +19,13 @@
 	 * }}
 	 */
 	let { height, binSize, data, colourByKeys = [], formatKey = (k) => k || '' } = $props();
-	let hiddenSeries = $state(new Set());
 
 	/** @type {(d: unknown, i: number) => number} */
 	const x = (_, i) => i;
 
+	let hiddenSeries = $state(new Set());
+
 	let y = $derived.by(() => {
-		console.log('y', $state.snapshot(hiddenSeries));
 		if (colourByKeys.length > 0) {
 			return colourByKeys.map((key) => {
 				if (hiddenSeries.has(key)) return () => null;
