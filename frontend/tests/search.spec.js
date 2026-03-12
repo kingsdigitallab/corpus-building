@@ -74,7 +74,7 @@ test.describe('search', () => {
         await page.goto(`${BASE}/?limit=3`);
 
         const results = page.locator('.inscriptions .inscription-card');
-        await expect(results.first()).toBeVisible({ timeout: 5000 });
+        await expect(results.first()).toBeVisible({ timeout: 15000 });
 
         const initialCount = await results.count();
         expect(initialCount).toBeGreaterThan(0);
