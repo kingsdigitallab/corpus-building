@@ -47,7 +47,7 @@ test.describe('search', () => {
     });
 
     test('load more button appends results', async ({ page }) => {
-        await page.goto(`${BASE}/`);
+        await page.goto(`${BASE}/?limit=3`);
 
         // Wait for initial results
         const results = page.locator('.inscriptions .inscription-card');
@@ -71,7 +71,7 @@ test.describe('search', () => {
     });
 
     test('pagination next page replaces results', async ({ page }) => {
-        await page.goto(`${BASE}/`);
+        await page.goto(`${BASE}/?limit=3`);
 
         const results = page.locator('.inscriptions .inscription-card');
         await expect(results.first()).toBeVisible({ timeout: 5000 });
