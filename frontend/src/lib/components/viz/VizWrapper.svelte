@@ -93,28 +93,30 @@
 			</button>
 		</p>
 		{#if showDataTable}
-			<table>
-				<thead class="surface-1">
-					<tr>
-						<th class="surface-4">{title}</th>
-						<th class="surface-4">Count</th>
-						{#each columns as col (col)}
-							<th class="surface-4">{formatKey(col)}</th>
-						{/each}
-					</tr>
-				</thead>
-				<tbody>
-					{#each data as d (d.key)}
+			<div class="table-scroll">
+				<table>
+					<thead class="surface-1">
 						<tr>
-							<td>{d.key}</td>
-							<td class="number">{d.value.toLocaleString()}</td>
+							<th class="surface-4">{title}</th>
+							<th class="surface-4">Count</th>
 							{#each columns as col (col)}
-								<td class="number">{d[col]?.toLocaleString?.() || '-'}</td>
+								<th class="surface-4">{formatKey(col)}</th>
 							{/each}
 						</tr>
-					{/each}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{#each data as d (d.key)}
+							<tr>
+								<td>{d.key}</td>
+								<td class="number">{d.value.toLocaleString()}</td>
+								{#each columns as col (col)}
+									<td class="number">{d[col]?.toLocaleString?.() || '-'}</td>
+								{/each}
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			</div>
 			<p>
 				<button onclick={downloadData} aria-busy={isDownloading} disabled={isDownloading}>
 					<DownloadIcon />{isDownloading ? 'Downloading...' : 'Download data'}
@@ -185,9 +187,13 @@
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 0;
-		max-width: 100%;
-		overflow: scroll;
+		max-width: 90vw;
 		padding-top: var(--size-6);
+	}
+
+	.table-scroll {
+		max-width: 100%;
+		overflow-x: auto;
 	}
 
 	table {
@@ -200,6 +206,7 @@
 		border-top: var(--border-size-1) solid var(--border-color);
 		margin-bottom: var(--size-6);
 		margin-top: var(--size-4);
+		width: max-content;
 	}
 
 	thead th {
