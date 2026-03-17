@@ -59,6 +59,10 @@
 			: []
 	);
 
+	function toggleLegendItems() {
+		hiddenSeries = hiddenSeries.size ? new Set() : new Set(colourByKeys);
+	}
+
 	/** @param {import('@unovis/ts').BulletLegendItemInterface} item */
 	function toggleLegendItem(item) {
 		const key = colourByKeys.find((k) => formatKey(k) === item.name);
@@ -111,7 +115,12 @@
 	<div>
 		<hgroup>
 			<h4>Legend</h4>
-			<small>Click on a legend item to hide or show the corresponding line in the chart.</small>
+			<small>
+				Click on a legend item to hide or show the corresponding line in the chart.
+				<button class="legend-toggle" onclick={toggleLegendItems}>
+					{#if hiddenSeries.size}Show all{:else}Hide all{/if}
+				</button>
+			</small>
 		</hgroup>
 		<div class="legend-container">
 			<VisBulletLegend
@@ -129,6 +138,22 @@
 		max-height: 50vh;
 		overflow-y: auto;
 		overflow-x: hidden;
+	}
+
+	.legend-toggle {
+		background: none;
+		border: none;
+		color: var(--brand, var(--link));
+		cursor: pointer;
+		font-size: inherit;
+		padding: 0;
+		text-decoration: underline;
+		text-decoration-color: var(--brand, var(--link));
+		text-underline-offset: var(--size-1);
+	}
+
+	.legend-toggle:hover {
+		opacity: 0.75;
 	}
 
 	.legend-container {
