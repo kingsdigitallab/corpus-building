@@ -7,13 +7,18 @@
 	import { FilterIcon } from 'lucide-svelte';
 	import { formatKey } from './utils.js';
 
-	let { inscriptions, aggregations } = $props();
+	let {
+		inscriptions,
+		aggregations,
+		selectedCategory = $bindable('provenance'),
+		selectedView = $bindable('map'),
+		selectedColourBy = $bindable('')
+	} = $props();
 
 	/** @type {string[]} */
 	const excludedCategories = [];
 
 	// Viz controls
-	let selectedCategory = $state('provenance');
 	const selectedCategoryTitle = $derived(
 		categories.find((c) => c.value === selectedCategory)?.label || 'No title'
 	);
@@ -22,10 +27,6 @@
 		selectedColourBy = '';
 		selectedView = selectedCategory === 'provenance' ? 'map' : 'bar-stacked';
 	}
-
-	let selectedColourBy = $state('');
-
-	let selectedView = $state('map');
 
 	const categories = $derived(
 		Object.values(aggregations)

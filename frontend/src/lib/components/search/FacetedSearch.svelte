@@ -33,6 +33,9 @@
 	/** @property {import('./search').SearchOptions['searchMode']} */
 	const searchModeParam = queryParam('mode', ssp.string('all'));
 	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
+	const vizCategoryParam = queryParam('vizCategory', ssp.string('provenance'));
+	const vizChartParam = queryParam('vizChart', ssp.string('map'));
+	const vizColourByParam = queryParam('vizColourBy', ssp.string(''));
 
 	const sortings = $derived(
 		Array.from(
@@ -268,6 +271,9 @@
 		$searchLimitParam = $searchViewParam === 'viz' ? config.search.maxLimit : config.search.limit;
 		$searchFiltersParam = '';
 		$searchModeParam = 'all';
+		$vizCategoryParam = 'provenance';
+		$vizChartParam = 'map';
+		$vizColourByParam = '';
 		selectedDateRange = [...initDateRange()];
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
@@ -679,6 +685,9 @@
 						<InscriptionVisualisation
 							inscriptions={inscriptionsViz}
 							aggregations={searchAggregations}
+							bind:selectedCategory={$vizCategoryParam}
+							bind:selectedView={$vizChartParam}
+							bind:selectedColourBy={$vizColourByParam}
 						/>
 					</div>
 				{:else}
