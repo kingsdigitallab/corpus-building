@@ -19,18 +19,29 @@
 		showBulletinDate ? sortOptions : sortOptions.filter((o) => o.value !== 'bulletinDateSort')
 	);
 
+	// Evaluate initial state once to avoid "$derived referenced locally" warning
+	const initialSortOptions = showBulletinDate
+		? sortOptions
+		: sortOptions.filter((o) => o.value !== 'bulletinDateSort');
+
 	let search = $state('');
-	let sortBy = $state(activeSortOptions?.[0]?.value || 'file');
+	let sortBy = $state(initialSortOptions?.[0]?.value || 'file');
 	let sortDir = $state(1);
 
 	let filteredInscriptions = $derived(
 		inscriptions
 			.filter(
 				(inscription) =>
-					inscription.keywords?.join(' ').toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.idno?._?.toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.bibl?.citedRange?.toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.bibl?.inscriptionDate?.includes(search.toLowerCase())
+					(inscription.keywords?.join(' ') || '').toLowerCase().includes(search.toLowerCase()) ||
+					String(inscription?.idno?._ || '')
+						.toLowerCase()
+						.includes(search.toLowerCase()) ||
+					String(inscription?.bibl?.citedRange?.ref?._ || inscription?.bibl?.citedRange || '')
+						.toLowerCase()
+						.includes(search.toLowerCase()) ||
+					String(inscription?.bibl?.inscriptionDate || '')
+						.toLowerCase()
+						.includes(search.toLowerCase())
 			)
 			.sort((a, b) => {
 				if (sortBy === 'idnoSort' || sortBy === 'bulletinDateSort') {
