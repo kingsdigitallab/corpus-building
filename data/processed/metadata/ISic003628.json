@@ -3,7 +3,7 @@
   "uri": "ISic003628",
   "title": "Honorific inscription for a benefactor",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -29,15 +29,16 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A small marble plaque, intact above and to the right, but broken to the left and below, the surface worn; the rear very uneven.",
   "objectType": {
-    "_": "unknown",
-    "ana": "#object.unknown",
-    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/2.html"
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "_": "marble",
+    "ana": "#material.stone.marble",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
     "ana": "#condition.fragment"
@@ -66,30 +67,33 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Very small letters, rather worn such that terminal points are clear, but impossible to identify extent of serifs. Alpha with straight bar; epsilon with shorter middle bar; almost full-size omicron; lunate sigma; tear-drop shaped, closed omega.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1-3",
         "from": "line1",
         "to": "line3",
-        "h": "6",
+        "h": "5-7",
         "unit": "mm",
-        "atLeast": "6",
-        "atMost": "6"
+        "atLeast": "5",
+        "atMost": "7"
       },
       {
         "type": "letterHeight",
         "l": "Line 4-14",
         "from": "line4",
         "to": "line14",
-        "h": "4",
+        "h": "3-5",
         "unit": "mm",
-        "atLeast": "4",
-        "atMost": "4"
+        "atLeast": "3",
+        "atMost": "5"
       },
       {
         "type": "interlinear",
@@ -104,7 +108,8 @@
   "date": {
     "_": "2nd century BCE",
     "notBefore": -200,
-    "notAfter": -101
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -129,14 +134,22 @@
   "country": "Sicilia",
   "provenance": "Calacte",
   "provenanceFound": {
-    "_": "Found in a field in Caronia",
+    "_": "Found in November 2003, a chance surface find in a field on the NE slope of the hill of Caronia, immediately below the town, in an area rich in scattered material from the ancient town above.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "when": "2003",
+    "geo": [
+      38.0283617,
+      14.4408091
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.0283617,
+    14.4408091
+  ],
   "provenanceObserved": {
-    "_": "None",
+    "_": "Studied but not transcribed, Prag 2019",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -148,13 +161,42 @@
       "url": "ISic003628_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic003628_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02",
+      "surfaceType": "rear"
     }
   ],
   "region": "Sicily",
   "settlement": "Caronia",
-  "repository": "Deposito della Soprintendenza BB.CC. di Messina",
+  "repository": {
+    "_": "Soprintendenza Beni Culturali e Ambientali di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/197",
+    "museum": {
+      "slug": "197",
+      "type": "museum",
+      "name": "Soprintendenza Beni Culturali e Ambientali di Messina",
+      "uri": "http://sicily.classics.ox.ac.uk/museum/197",
+      "description": "Offices and stores of the provincial archaeological authority",
+      "location": {
+        "settlement": "Messina",
+        "region": "Messina",
+        "country": "Italy",
+        "address": "Viale Boccetta, 38, 98122 Messina ME, Italy",
+        "geo": {
+          "lat": 38.198039,
+          "lon": 15.5508031
+        }
+      }
+    }
+  },
   "idno": {
     "_": "Caronia 25274",
     "type": "inventory"
@@ -277,6 +319,14 @@
         "title": "Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione",
         "citation": "<span>Emiliano Arena, «Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione», in <i>Studia Calactina I. Ricerche su una città greco-romana di Sicilia. Kalè Akté - Calacte</i>, a c. di F. Collura, International Series 2813 (Oxford: British Archaeological Reports, 2016), 347–68</span>",
         "uri": "https://www.zotero.org/groups/isicily/items/SHHDSKRM"
+      },
+      {
+        "author": "Collura",
+        "date": "2016",
+        "ptr": {
+          "target": "http://zotero.org/groups/382445/items/LX4MRMIG"
+        },
+        "inscriptionDate": "2016"
       }
     ]
   },
@@ -310,12 +360,17 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised from publication, partial autopsy and photographs",
+      "when": "2026-02-26",
+      "who": "#JP"
     }
   },
   "tmNumber": "645701",
@@ -324,17 +379,17 @@
     "url": "ISic003628_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02",
     "surfaceType": "front"
   },
   "letterHeights": [
     {
-      "atLeast": 6,
-      "atMost": 6
+      "atLeast": 5,
+      "atMost": 7
     },
     {
-      "atLeast": 4,
-      "atMost": 4
+      "atLeast": 3,
+      "atMost": 5
     }
   ],
   "publications": [
@@ -344,7 +399,8 @@
     "Manganaro, 2009, Un frammento inscritto erratico dall'area di Caronia (Kaleakté)",
     "Battistoni, 2010, Note al nuovo decreto dall'area di Caronia",
     "Manganaro, 2011, Il sistema anagrafico nella Sicilia in epoca ellenistica",
-    "Arena, 2016, Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione"
+    "Arena, 2016, Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione",
+    "Collura, 2016"
   ],
   "zotero": [
     "F2GG87EQ",
@@ -353,22 +409,24 @@
     "QC6X4IXA",
     "WUT47HXD",
     "HT3P7UWH",
-    "SHHDSKRM"
+    "SHHDSKRM",
+    "LX4MRMIG"
   ],
   "keywords": [
     "isic003628",
     "honorific inscription for a benefactor",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "honorific",
-    "unknown",
-    "limestone",
+    "plaque",
+    "marble",
     "calacte",
     "caronia",
     "sicilia",
     "sicily",
     "caronia",
+    "soprintendenza beni culturali e ambientali di messina",
     "ancient greek",
     "grc"
   ]
