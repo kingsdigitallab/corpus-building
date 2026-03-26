@@ -210,7 +210,7 @@ export function computeActiveColourByKeys({
         ) || []
     );
 
-    const selectedColourByKeys = [...buckets].sort((a, b) => b.doc_count - a.doc_count).map((b) => b.key);
+    const selectedColourByKeys = [...buckets].sort((a, b) => a.key.localeCompare(b.key)).map((b) => b.key);
 
     return selectedColourByKeys.filter((key) =>
         data.some((d) => {
