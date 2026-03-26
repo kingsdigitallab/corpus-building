@@ -47,7 +47,7 @@
 </script>
 
 <VizWrapper 
-	title="{selectedCategoryTitle}"
+	title={selectedCategoryTitle}
 	{summary}
 	{data}
 	columns={activeColourByKeys}
