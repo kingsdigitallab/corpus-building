@@ -149,6 +149,8 @@
 			{colorMap}
 			{tooltip}
 			{events}
+			width="100%"
+			height="100%"
 		/>
 		<div class="map-controls">
 			<button
