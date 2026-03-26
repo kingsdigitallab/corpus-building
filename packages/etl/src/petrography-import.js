@@ -64,16 +64,35 @@ export function updateMaterialContent(xml, description) {
 }
 
 /**
+ * Build the TEI XML fragment for a provenance <place> element.
+ * The fragment is intended to appear inside <material>, after the text description.
+ *
+ * @param {{ placeName: string, coordinates: string, radius: string | null, uri: string }} provenance
+ * @returns {string}
+ */
+export function buildProvenanceXml(provenance) {
+  let locationContent = `\n<geo>${provenance.coordinates}</geo>`;
+  if (provenance.radius) {
+    locationContent += `\n<precision match="preceding-sibling::geo" n="${provenance.radius}"/>`;
+  }
+  locationContent += `\n<ref target="${provenance.uri}"/>`;
+  return `\n<place type="source">\n <placeName>${provenance.placeName}</placeName>\n <location>${locationContent}\n </location>\n</place>`;
+}
+
+/**
  * Apply all petrography changes to an XML string.
  *
  * @param {string} xml
- * @param {{ type: string, subtype: string, ana: string, addCoccatoResp: boolean, description: string | null }} entry
+ * @param {{ type: string, subtype: string, ana: string, addCoccatoResp: boolean, description: string | null, provenance?: object | null }} entry
  * @returns {string}
  */
 export function applyPetrographyImport(xml, entry) {
   let result = updateMaterialElement(xml, entry);
   if (entry.description != null) {
-    result = updateMaterialContent(result, entry.description);
+    const content = entry.provenance
+      ? entry.description + buildProvenanceXml(entry.provenance)
+      : entry.description;
+    result = updateMaterialContent(result, content);
   }
   if (entry.addCoccatoResp) {
     result = addCoccatoRespStmt(result);

@@ -42,6 +42,30 @@ export function buildReferenceLookup(rows) {
 }
 
 /**
+ * Build a lookup Map of provenance data from the reference CSV rows.
+ * Key: subtype value. Value: { placeName, coordinates, radius, uri }.
+ * Only rows that have all of placeName, coordinates, and uri are included.
+ * Coordinates are normalised to "lat,lon" (all whitespace removed).
+ * @param {Record<string, string>[]} rows
+ * @returns {Map<string, { placeName: string, coordinates: string, radius: string | null, uri: string }>}
+ */
+export function buildProvenance(rows) {
+  const lookup = new Map();
+  for (const row of rows) {
+    const subtype = row["subtype"]?.trim();
+    const placeName = row["placeName"]?.trim();
+    // Strip all whitespace including non-breaking spaces (U+00A0) to get "lat,lon"
+    const coordinates = row["coordinates"]?.replace(/[^\d.,\-]/g, "").trim();
+    const radius = row["radius (m)"]?.trim() || null;
+    const uri = row["uri"]?.trim();
+    if (subtype && placeName && coordinates && uri) {
+      lookup.set(subtype, { placeName, coordinates, radius, uri });
+    }
+  }
+  return lookup;
+}
+
+/**
  * Build a lookup Map of detailed subtypes from Metamorphic, Sedimentary, and
  * Other CSV rows. Multiple rows for the same ISic have their unique subtype
  * values merged with "|".
@@ -177,15 +201,16 @@ export function extractAnaFromXml(xml) {
  *
  * @param {{
  *   refLookup: Map<string, string>,
+ *   provenanceLookup?: Map<string, { placeName: string, coordinates: string, radius: string | null, uri: string }>,
  *   detailSubtypes: Map<string, string>,
  *   detailDescriptions: Map<string, string>,
  *   stoneRows: Record<string, string>[],
  *   nonstoneRows: Record<string, string>[],
  *   readXml: (isic: string) => Promise<{ xml: string | null, warning: string | null }>
  * }} opts
- * @returns {Promise<Array<{isic: string, type: string, subtype: string, ana: string, addCoccatoResp: boolean, description: string | null, warnings: string[]}>>}
+ * @returns {Promise<Array<{isic: string, type: string, subtype: string, ana: string, addCoccatoResp: boolean, description: string | null, provenance: object | null, warnings: string[]}>>}
  */
-export async function buildRecords({ refLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows, readXml }) {
+export async function buildRecords({ refLookup, provenanceLookup = new Map(), detailSubtypes, detailDescriptions, stoneRows, nonstoneRows, readXml }) {
   const results = [];
 
   // Non-stone inscriptions: type from CSV col G, subtype always "unverified"
@@ -197,7 +222,7 @@ export async function buildRecords({ refLookup, detailSubtypes, detailDescriptio
     if (!type) continue;
     const subtype = "unverified";
     const { ana, warnings } = resolveAna(refLookup, type, subtype);
-    results.push({ isic, type, subtype, ana, addCoccatoResp: false, description: null, warnings });
+    results.push({ isic, type, subtype, ana, addCoccatoResp: false, description: null, provenance: null, warnings });
   }
 
   // Stone inscriptions
@@ -246,8 +271,13 @@ export async function buildRecords({ refLookup, detailSubtypes, detailDescriptio
       }
     }
 
+    // Provenance: look up by subtype only for single-value specific subtypes
+    const isSpecificSingleSubtype =
+      subtype && subtype !== "unverified" && subtype !== "unspecified" && !subtype.includes("|");
+    const provenance = isSpecificSingleSubtype ? (provenanceLookup.get(subtype) ?? null) : null;
+
     const { ana, warnings: anaWarnings } = resolveAna(refLookup, type, subtype);
-    results.push({ isic, type, subtype, ana, addCoccatoResp, description, warnings: [...preWarnings, ...anaWarnings] });
+    results.push({ isic, type, subtype, ana, addCoccatoResp, description, provenance, warnings: [...preWarnings, ...anaWarnings] });
   }
 
   return results;
@@ -289,6 +319,7 @@ export async function buildPetrographyJson(paths) {
   ]);
 
   const refLookup = buildReferenceLookup(refRows);
+  const provenanceLookup = buildProvenance(refRows);
   const detailRows = [...metaRows, ...sedRows, ...otherRows];
   const detailSubtypes = buildDetailSubtypes(detailRows);
   const detailDescriptions = buildDetailDescriptions(detailRows);
@@ -303,7 +334,7 @@ export async function buildPetrographyJson(paths) {
     }
   }
 
-  const records = await buildRecords({ refLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows, readXml });
+  const records = await buildRecords({ refLookup, provenanceLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows, readXml });
   const sortedRecords = records.toSorted((a, b) => a.isic.localeCompare(b.isic));
 
   await fs.writeFile(paths.output, JSON.stringify(sortedRecords, null, 2));

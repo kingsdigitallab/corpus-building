@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import {
   parseCsv,
   buildReferenceLookup,
+  buildProvenance,
   buildDetailSubtypes,
   buildDetailDescriptions,
   cleanDescription,
@@ -50,6 +51,52 @@ describe("buildReferenceLookup", () => {
     ];
     const lookup = buildReferenceLookup(rows);
     expect(lookup.size).toBe(0);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// buildProvenance
+// ---------------------------------------------------------------------------
+describe("buildProvenance", () => {
+  const provenanceRow = {
+    subtype: "Proconnesian",
+    placeName: "Marmara District",
+    coordinates: "40.61972, \u00a027.61694",
+    "radius (m)": "",
+    uri: "https://www.geonames.org/741729/marmara-adasi.html",
+  };
+
+  it("builds a map of subtype to provenance object", () => {
+    const lookup = buildProvenance([provenanceRow]);
+    expect(lookup.has("Proconnesian")).toBe(true);
+    const prov = lookup.get("Proconnesian");
+    expect(prov.placeName).toBe("Marmara District");
+    expect(prov.uri).toBe("https://www.geonames.org/741729/marmara-adasi.html");
+  });
+
+  it("normalises coordinates to lat,lon with no whitespace", () => {
+    const lookup = buildProvenance([provenanceRow]);
+    expect(lookup.get("Proconnesian").coordinates).toBe("40.61972,27.61694");
+  });
+
+  it("sets radius to null when the column is empty", () => {
+    const lookup = buildProvenance([provenanceRow]);
+    expect(lookup.get("Proconnesian").radius).toBeNull();
+  });
+
+  it("captures radius when present", () => {
+    const row = { ...provenanceRow, "radius (m)": "30000" };
+    const lookup = buildProvenance([row]);
+    expect(lookup.get("Proconnesian").radius).toBe("30000");
+  });
+
+  it("skips rows missing placeName, coordinates, or uri", () => {
+    const rows = [
+      { subtype: "Proconnesian", placeName: "", coordinates: "40.0,27.0", uri: "https://example.com" },
+      { subtype: "Parian-1", placeName: "Paros", coordinates: "", uri: "https://example.com" },
+      { subtype: "Parian-2", placeName: "Paros", coordinates: "37.0,25.0", uri: "" },
+    ];
+    expect(buildProvenance(rows).size).toBe(0);
   });
 });
 
@@ -413,6 +460,50 @@ describe("buildRecords", () => {
       stoneRows, nonstoneRows: [], readXml,
     });
     expect(records[0].warnings.some((w) => w.includes("No detail subtype found"))).toBe(true);
+  });
+
+  it("non-stone: provenance is null", async () => {
+    const nonstoneRows = [{ ISic: "ISic000079", type: "ceramic", subtype: "unverified" }];
+    const records = await buildRecords({
+      refLookup, detailSubtypes, detailDescriptions, stoneRows: [], nonstoneRows, readXml,
+    });
+    expect(records[0].provenance).toBeNull();
+  });
+
+  it("stone blank subtype with single subtype: provenance from lookup", async () => {
+    const provenanceLookup = new Map([
+      ["Proconnesian", { placeName: "Marmara District", coordinates: "40.61972,27.61694", radius: null, uri: "https://www.geonames.org/741729/" }],
+    ]);
+    const stoneRows = [{ ISic: "ISic000027", type: "stone.marble", subtype: "", "identification based on": "" }];
+    const records = await buildRecords({
+      refLookup, provenanceLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows: [], readXml,
+    });
+    expect(records[0].provenance).toEqual({
+      placeName: "Marmara District",
+      coordinates: "40.61972,27.61694",
+      radius: null,
+      uri: "https://www.geonames.org/741729/",
+    });
+  });
+
+  it("stone blank subtype with multiple subtypes: provenance is null", async () => {
+    const provenanceLookup = new Map([
+      ["Parian-1", { placeName: "Paros", coordinates: "37.05722,25.1875", radius: null, uri: "https://example.com" }],
+    ]);
+    const multiSubtypes = new Map([["ISic000027", "Parian-1|Parian-2"]]);
+    const stoneRows = [{ ISic: "ISic000027", type: "stone.marble", subtype: "", "identification based on": "" }];
+    const records = await buildRecords({
+      refLookup, provenanceLookup, detailSubtypes: multiSubtypes, detailDescriptions, stoneRows, nonstoneRows: [], readXml,
+    });
+    expect(records[0].provenance).toBeNull();
+  });
+
+  it("stone blank subtype with single subtype not in provenance lookup: provenance is null", async () => {
+    const stoneRows = [{ ISic: "ISic000027", type: "stone.marble", subtype: "", "identification based on": "" }];
+    const records = await buildRecords({
+      refLookup, provenanceLookup: new Map(), detailSubtypes, detailDescriptions, stoneRows, nonstoneRows: [], readXml,
+    });
+    expect(records[0].provenance).toBeNull();
   });
 
   it("stone blank subtype: warns when reference lookup fails for resolved subtype", async () => {
