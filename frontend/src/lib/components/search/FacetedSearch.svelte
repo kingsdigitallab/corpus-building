@@ -24,18 +24,18 @@
 	import { searchConfig } from './search';
 	import SearchWorker from './worker.js?worker';
 
-	const searchQueryParam = queryParam('q', ssp.string(''));
-	const searchPageParam = queryParam('page', ssp.number(1));
-	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
+	const searchQueryParam = queryParam('q', ssp.string(''), { showDefaults: false });
+	const searchPageParam = queryParam('page', ssp.number(1), { showDefaults: false });
+	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit), { showDefaults: false });
 	/** @property {'cards' | 'viz' | 'table' | 'text'} */
-	const searchViewParam = queryParam('view', ssp.string('cards'));
-	const searchFiltersParam = queryParam('filters', ssp.object({ country: ['Sicilia'] }));
+	const searchViewParam = queryParam('view', ssp.string('cards'), { showDefaults: false });
+	const searchFiltersParam = queryParam('filters', ssp.object({ country: ['Sicilia'] }), { showDefaults: false });
 	/** @property {import('./search').SearchOptions['searchMode']} */
-	const searchModeParam = queryParam('mode', ssp.string('all'));
-	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
-	const vizCategoryParam = queryParam('vizCategory', ssp.string('provenance'));
-	const vizChartParam = queryParam('vizChart', ssp.string('map'));
-	const vizColourByParam = queryParam('vizColourBy', ssp.string(''));
+	const searchModeParam = queryParam('mode', ssp.string('all'), { showDefaults: false });
+	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false), { showDefaults: false });
+	const vizCategoryParam = queryParam('vizCategory', ssp.string('provenance'), { showDefaults: false });
+	const vizChartParam = queryParam('vizChart', ssp.string('map'), { showDefaults: false });
+	const vizColourByParam = queryParam('vizColourBy', ssp.string(''), { showDefaults: false });
 
 	const sortings = $derived(
 		Array.from(
