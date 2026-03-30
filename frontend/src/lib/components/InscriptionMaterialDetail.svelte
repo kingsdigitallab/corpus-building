@@ -7,10 +7,12 @@
 
 <dl>
 	<dt>Description</dt>
-	<dd>{material?._ || config.EMPTY_PLACEHOLDER}</dd>
-	<dt>Type > subtype</dt>
 	<dd>
-		{#if material.type}
+		{material?._.trim() || config.EMPTY_PLACEHOLDER}
+	</dd>
+	{#if material?.type}
+		<dt>Type > subtype</dt>
+		<dd>
 			{#if material?.ref}
 				<a class="badge strong" href={material.ref}>
 					{material.type}
@@ -24,17 +26,15 @@
 					> {material.subtype}
 				{/if}
 			{/if}
-		{:else}
-			{config.EMPTY_PLACEHOLDER}
-		{/if}
-	</dd>
-	{#if material.placeName?.location?.geo}
+		</dd>
+	{/if}
+	{#if material?.placeName?.location?.geo}
 		{@const location = material.placeName.location}
 		{@const ref = material.placeName.ref}
 		{@const locationName = ref._}
 		{@const geo = location.geo.split(',')}
 		{@const lngLat = [geo[1], geo[0]]}
-		{@const radius = Number(location?.precision?.radius || null) || null}
+		{@const radius = Number(location?.precision?.n || null) || null}
 		{@const markerScale = radius
 			? Math.min(2, Math.max(0.5, 1.8 - 0.3 * Math.log10(Number(radius) || 1)))
 			: Math.min(2, Math.max(0.5, mapZoom / 7))}
