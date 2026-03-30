@@ -1,18 +1,18 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
+	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
+	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
+	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
+	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
+	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
 	import { onMount } from 'svelte';
 	import toast, { Toaster } from 'svelte-french-toast';
-	import { DefaultMarker, Marker, MapLibre, Popup } from 'svelte-maplibre';
-	import { goto } from '$app/navigation';
-	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
-	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
-	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
-	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
+	import { DefaultMarker, MapLibre, Marker, Popup } from 'svelte-maplibre';
 
 	/**
 	 * @typedef {Object} Props
