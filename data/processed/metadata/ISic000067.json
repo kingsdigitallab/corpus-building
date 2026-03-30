@@ -31,6 +31,12 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Fragment of a large marble plaque, intact left and below, broken above and right.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
     "_": "marble",
     "ana": "#material.stone.marble",
@@ -39,14 +45,17 @@
   "condition": "",
   "dimensions": [
     {
+      "_": "35",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "45",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "4",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -65,10 +74,23 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
-        "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "l": "Line 2-3",
+        "from": "line2",
+        "to": "line3",
+        "h": "85-90",
+        "unit": "mm",
+        "atLeast": "85",
+        "atMost": "90"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "30",
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -80,9 +102,10 @@
     ]
   },
   "date": {
-    "_": "Caracalla or better Severus\n                                Alexander",
-    "notBefore": 201,
-    "notAfter": 250
+    "_": "Caracalla or better Severus Alexander",
+    "notBefore": 198,
+    "notAfter": 235,
+    "evidence": "office"
   },
   "places": [
     {
@@ -107,8 +130,10 @@
   "country": "Sicilia",
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in Tindari in 1880",
     "type": "found",
+    "subtype": "discovered",
+    "when": "1880",
     "geo": null
   },
   "provenanceGeo": [],
@@ -125,7 +150,7 @@
       "url": "ISic000067_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
       "surfaceType": "front"
     }
   ],
@@ -290,10 +315,19 @@
     "url": "ISic000067_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 85,
+      "atMost": 90
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Notizie degli scavi di antichità, 1876-",
     "Mommsen, 1883, CIL",
@@ -313,6 +347,7 @@
       "_": "draft"
     },
     "honorific",
+    "plaque",
     "marble",
     "tyndaris",
     "tindari",

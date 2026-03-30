@@ -20,6 +20,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Update submodules
+        run: git submodule update --remote --merge
+
       - name: Update symlinks
         run: |
           rm -f ./frontend/src/data/inscriptions
@@ -40,15 +43,16 @@ jobs:
           npm ci
           npx playwright install --with-deps
 
+      - name: Run ETL
+        run: npm run etl
+
       - name: Test
-        continue-on-error: true
-        run: |
-          npm run -w frontend test
+        run: npm test
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "ci(frontend): update test results"
-          file_pattern: "frontend/src/lib/prerender-errors.json frontend/test-results/*.json"
+          commit_message: "ci(frontend): update etl output and test results"
+          file_pattern: "frontend/src/data/*.json frontend/src/lib/prerender-errors.json frontend/test-results/*.json data/raw xslt/epidoc frontend/static/fonts/nau"
 
   pages:
     needs: test
@@ -62,6 +66,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+          ref: ${{ github.ref }}
 
       - name: Update symlinks
         run: |
@@ -104,6 +109,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+          ref: ${{ github.ref }}
 
       - name: Update symlinks
         run: |

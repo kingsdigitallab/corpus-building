@@ -24,15 +24,18 @@
 	import { searchConfig } from './search';
 	import SearchWorker from './worker.js?worker';
 
-	const searchQueryParam = queryParam('q', ssp.string(''));
-	const searchPageParam = queryParam('page', ssp.number(1));
-	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
+	const searchQueryParam = queryParam('q', ssp.string(''), { showDefaults: false });
+	const searchPageParam = queryParam('page', ssp.number(1), { showDefaults: false });
+	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit), { showDefaults: false });
 	/** @property {'cards' | 'viz' | 'table' | 'text'} */
-	const searchViewParam = queryParam('view', ssp.string('cards'));
-	const searchFiltersParam = queryParam('filters', ssp.object({ country: ['Sicilia'] }));
+	const searchViewParam = queryParam('view', ssp.string('cards'), { showDefaults: false });
+	const searchFiltersParam = queryParam('filters', ssp.object({ country: ['Sicilia'] }), { showDefaults: false });
 	/** @property {import('./search').SearchOptions['searchMode']} */
-	const searchModeParam = queryParam('mode', ssp.string('all'));
-	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
+	const searchModeParam = queryParam('mode', ssp.string('all'), { showDefaults: false });
+	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false), { showDefaults: false });
+	const vizCategoryParam = queryParam('vizCategory', ssp.string('provenance'), { showDefaults: false });
+	const vizChartParam = queryParam('vizChart', ssp.string('map'), { showDefaults: false });
+	const vizColourByParam = queryParam('vizColourBy', ssp.string(''), { showDefaults: false });
 
 	const sortings = $derived(
 		Array.from(
@@ -49,8 +52,10 @@
 	let searchStatus = $state('idle');
 	let isLoading = $derived(['idle', 'load'].includes(searchStatus));
 	let isDownloading = $state(false);
+	let isAppending = $state(false);
 
 	let searchWorker = $state();
+	/** @type {any} */
 	let searchResults = $state({});
 	let searchPagination = $derived(searchResults?.pagination ?? {});
 	let searchAggregations = $derived(searchResults?.data?.aggregations ?? {});
@@ -105,7 +110,18 @@
 				}
 
 				if (type === 'results') {
-					searchResults = data;
+					if (isAppending) {
+						searchResults = {
+							...data,
+							data: {
+								...data.data,
+								items: [...(searchResults?.data?.items ?? []), ...data.data.items]
+							}
+						};
+					} else {
+						searchResults = data;
+					}
+					isAppending = false;
 				}
 			}
 		);
@@ -120,8 +136,10 @@
 	 * @param {string | null | undefined} [query]
 	 * @param {number | null | undefined} [limit]
 	 * @param {import('./search').SearchOptions['searchMode'] | null | undefined} [mode]
+	 * @param {boolean} [append]
 	 */
-	async function postSearchMessage(page, query, limit, mode) {
+	async function postSearchMessage(page, query, limit, mode, append = false) {
+		isAppending = append;
 		let currentPage = $searchPageParam;
 		let currentQuery = $searchQueryParam;
 		let currentLimit = $searchLimitParam;
@@ -253,6 +271,9 @@
 		$searchLimitParam = $searchViewParam === 'viz' ? config.search.maxLimit : config.search.limit;
 		$searchFiltersParam = '';
 		$searchModeParam = 'all';
+		$vizCategoryParam = 'provenance';
+		$vizChartParam = 'map';
+		$vizColourByParam = '';
 		selectedDateRange = [...initDateRange()];
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
@@ -480,6 +501,12 @@
 		postSearchMessage(page);
 	}
 
+	async function handleLoadMore() {
+		const nextPage = $searchPageParam + 1;
+		$searchPageParam = nextPage;
+		postSearchMessage(nextPage, null, null, null, true);
+	}
+
 	onMount(() => {
 		init();
 	});
@@ -658,6 +685,9 @@
 						<InscriptionVisualisation
 							inscriptions={inscriptionsViz}
 							aggregations={searchAggregations}
+							bind:selectedCategory={$vizCategoryParam}
+							bind:selectedView={$vizChartParam}
+							bind:selectedColourBy={$vizColourByParam}
 						/>
 					</div>
 				{:else}
@@ -679,6 +709,19 @@
 							{/if}
 						</div>
 					{/key}
+
+					{#if $searchViewParam !== 'viz' && inscriptions.length > 0 && $searchPageParam * $searchLimitParam < total}
+						<div class="load-more-container reduced-block-margin">
+							<Button.Root
+								class="secondary"
+								onclick={handleLoadMore}
+								disabled={isAppending || isLoading}
+							>
+								{isAppending ? 'Loading...' : 'Load more'}
+							</Button.Root>
+						</div>
+					{/if}
+
 					<InscriptionPagination
 						page={$searchPageParam}
 						count={total}
@@ -791,6 +834,13 @@
 	.transition-container {
 		width: 100%;
 	}
+
+	.load-more-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
 	/*ZL: disabled Table View*/
 	@media (max-width: 768px) {
 		:global(.view-table-btn) {

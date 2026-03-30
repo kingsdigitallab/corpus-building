@@ -1,84 +1,57 @@
 <script>
 	import VizWrapper from '../VizWrapper.svelte';
 	import HistogramChart from '../charts/HistogramChart.svelte';
+	import { formatKey } from '../utils.js';
+	import { computeHistogramData, computeActiveColourByKeys } from '../data.js';
 
 	/** 
 	 * @type {{ 
-	 *   inscriptions: any[]
+	 *   inscriptions: any[],
+	 *   aggregations: Record<string, any>,
+	 *   selectedColourBy: string
 	 * }} 
 	 */
-	let { inscriptions } = $props();
+	let { inscriptions, aggregations, selectedColourBy } = $props();
 
-	// Settings state
 	let binSize = $state(50);
 
+	/** @type {string[]} */
+	const excludedCategories = [];
+
 	// Histogram data computation
-	/** @type {{ key: string, value: number }[]} */
-	const data = $derived.by(() => {
-		if (!inscriptions?.length) return [];
-
-		// Get min/max dates from valid inscriptions only
-		let minDate = Infinity;
-		let maxDate = -Infinity;
-		for (const item of inscriptions) {
-			const nb = /** @type {number | undefined} */ (item.notBefore);
-			const na = /** @type {number | undefined} */ (item.notAfter);
-			if (nb === undefined || na === undefined || nb > na) continue;
-			if (nb < minDate) minDate = nb;
-			if (na > maxDate) maxDate = na;
-		}
-
-		if (minDate === Infinity || maxDate === -Infinity) return [];
-
-		// Align bins to nice boundaries
-		const binStart = Math.floor(minDate / binSize) * binSize;
-		const binEnd = Math.ceil(maxDate / binSize) * binSize;
-
-		// Create bins
-		/** @type {Map<number, number>} */
-		const bins = new Map();
-		for (let start = binStart; start < binEnd; start += binSize) {
-			bins.set(start, 0);
-		}
-
-		// Count inscriptions in each bin (full range approach)
-		for (const item of inscriptions) {
-			const nb = /** @type {number | undefined} */ (item.notBefore);
-			const na = /** @type {number | undefined} */ (item.notAfter);
-			if (nb === undefined || na === undefined || nb > na) continue;
-
-			for (let start = binStart; start < binEnd; start += binSize) {
-				const binEndDate = start + binSize;
-				if (nb < binEndDate && na >= start) {
-					bins.set(start, (bins.get(start) || 0) + 1);
-				}
-			}
-		}
-
-		// Convert to array with formatted labels
-		/** @param {number} year @returns {string} */
-		const formatYear = (year) => (year < 0 ? `${Math.abs(year)} BCE` : `${year} CE`);
-
-		return [...bins.entries()]
-			.filter(([_, count]) => count > 0)
-			.sort((a, b) => a[0] - b[0])
-			.map(([start, count]) => ({
-				key: `${formatYear(start)} – ${formatYear(start + binSize)}`,
-				value: count
-			}));
-	});
-
-	// Summary
-	const summary = $derived(
-		`${inscriptions?.length.toLocaleString() || 0} inscriptions by date in ${binSize}-year intervals.
-		<br/><small>Inscriptions with uncertain dates may appear in multiple bins.</small>`
+	const data = $derived(
+		computeHistogramData({
+			inscriptions,
+			aggregations,
+			binSize,
+			selectedColourBy
+		})
 	);
+
+	const activeColourByKeys = $derived(
+		computeActiveColourByKeys({
+			data,
+			aggregations,
+			selectedColourBy,
+			excludedCategories
+		})
+	);
+
+	const summary = $derived.by(() => {
+		const label = `${inscriptions?.length.toLocaleString() || 0} inscriptions by date in ${binSize}-year intervals.`;
+		const helpText = `<br/><small>Inscriptions with uncertain dates may appear in multiple bins.</small>`;
+		
+		if (selectedColourBy) return `${label} Split by <strong>${selectedColourBy}</strong>.${helpText}`;
+		return `${label}${helpText}`;
+	});
 </script>
 
 <VizWrapper 
 	title="Date Distribution" 
 	{summary} 
 	{data}
+	columns={activeColourByKeys}
+	{formatKey}
 >
 	{#snippet settingsSlot()}
 		<label>
@@ -96,6 +69,11 @@
 	{/snippet}
 
 	{#snippet children(height)}
-		<HistogramChart {inscriptions} {height} {binSize} />
+		<HistogramChart 
+			{data}
+			{height} 
+			colourByKeys={activeColourByKeys}
+			{formatKey}
+		/>
 	{/snippet}
 </VizWrapper>

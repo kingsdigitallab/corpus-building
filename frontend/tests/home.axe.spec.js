@@ -5,7 +5,7 @@ import path from 'path';
 
 test.describe('home.axe', () => {
 	test('home page is accessible', async ({ page }) => {
-		await page.goto('/');
+		await page.goto('/corpus-building/');
 
 		const results = await new AxeBuilder({ page }).analyze();
 

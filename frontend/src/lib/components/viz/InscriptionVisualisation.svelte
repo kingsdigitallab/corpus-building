@@ -2,16 +2,23 @@
 	import BarView from './views/BarView.svelte';
 	import DonutView from './views/DonutView.svelte';
 	import HistogramView from './views/HistogramView.svelte';
+	import LineView from './views/LineView.svelte';
 	import MapView from './views/MapView.svelte';
 	import { FilterIcon } from 'lucide-svelte';
+	import { formatKey } from './utils.js';
 
-	let { inscriptions, aggregations } = $props();
+	let {
+		inscriptions,
+		aggregations,
+		selectedCategory = $bindable('provenance'),
+		selectedView = $bindable('map'),
+		selectedColourBy = $bindable('')
+	} = $props();
 
 	/** @type {string[]} */
 	const excludedCategories = [];
 
 	// Viz controls
-	let selectedCategory = $state('provenance');
 	const selectedCategoryTitle = $derived(
 		categories.find((c) => c.value === selectedCategory)?.label || 'No title'
 	);
@@ -20,10 +27,6 @@
 		selectedColourBy = '';
 		selectedView = selectedCategory === 'provenance' ? 'map' : 'bar-stacked';
 	}
-
-	let selectedColourBy = $state('');
-
-	let selectedView = $state('map');
 
 	const categories = $derived(
 		Object.values(aggregations)
@@ -35,12 +38,13 @@
 				disabledColourBy:
 					aggregation.name === selectedCategory ||
 					aggregation.buckets.length === 0 ||
-					aggregation.buckets.length >= 12
+					(selectedView !== 'line' && aggregation.buckets.length >= 12)
 			}))
 			.sort((a, b) => a.label.localeCompare(b.label))
 	);
 
-	const isColourByDisabled = $derived(['histogram'].includes(selectedView));
+	const isColourByDisabled = $derived(false);
+	const isLineDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
 	const isHistogramDisabled = $derived(!['notAfter', 'notBefore'].includes(selectedCategory));
 	const isMapDisabled = $derived(selectedCategory !== 'provenance');
 </script>
@@ -77,6 +81,7 @@
 				>
 					<option value="bar-stacked">Bar</option>
 					<option value="donut">Donut</option>
+					<option value="line" disabled={isLineDisabled}>Line</option>
 					<option value="histogram" disabled={isHistogramDisabled}>Histogram</option>
 					<option value="map" disabled={isMapDisabled}>Map</option>
 				</select>
@@ -136,8 +141,10 @@
 		{selectedCategoryTitle}
 		{selectedColourBy}
 	/>
+{:else if selectedView === 'line'}
+	<LineView {inscriptions} {aggregations} {selectedCategoryTitle} {selectedColourBy} />
 {:else if selectedView === 'histogram'}
-	<HistogramView {inscriptions} />
+	<HistogramView {inscriptions} {aggregations} {selectedColourBy} {formatKey} />
 {:else if selectedView === 'map'}
 	<MapView {inscriptions} {aggregations} {selectedColourBy} />
 {/if}
@@ -154,6 +161,12 @@
 		--vis-color3: #8b9e6b;
 		--vis-color4: #5d8a83;
 		--vis-color5: #7a6b8a;
+		--vis-color6: #4d6a7f;
+		--vis-color7: #c96a52;
+		--vis-color8: #e3a652;
+		--vis-color9: #8c7673;
+		--vis-color10: #427869;
+		--vis-color11: #a86c82;
 
 		--vis-dark-color0: var(--vis-color-main);
 		--vis-dark-color1: #e88a96;
@@ -161,12 +174,33 @@
 		--vis-dark-color3: #a3c085;
 		--vis-dark-color4: #4db8a6;
 		--vis-dark-color5: #8b96cc;
+		--vis-dark-color6: #72aee6;
+		--vis-dark-color7: #fca079;
+		--vis-dark-color8: #e6cb73;
+		--vis-dark-color9: #c99bc2;
+		--vis-dark-color10: #73c293;
+		--vis-dark-color11: #b898cf;
 
 		--vis-axis-label-color: var(--text-1);
 		--vis-axis-tick-label-color: var(--text-1);
 		--vis-legend-label-color: var(--text-1);
 
 		--vis-nested-donut-segment-label-font-size: 0.875em;
+	}
+
+	:global([data-color-scheme='dark']) {
+		--vis-color0: var(--vis-dark-color0);
+		--vis-color1: var(--vis-dark-color1);
+		--vis-color2: var(--vis-dark-color2);
+		--vis-color3: var(--vis-dark-color3);
+		--vis-color4: var(--vis-dark-color4);
+		--vis-color5: var(--vis-dark-color5);
+		--vis-color6: var(--vis-dark-color6);
+		--vis-color7: var(--vis-dark-color7);
+		--vis-color8: var(--vis-dark-color8);
+		--vis-color9: var(--vis-dark-color9);
+		--vis-color10: var(--vis-dark-color10);
+		--vis-color11: var(--vis-dark-color11);
 	}
 
 	:global(.legend-title) {

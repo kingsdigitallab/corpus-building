@@ -2,6 +2,7 @@
 	import * as config from '$lib/config';
 	import { VisBulletLegend, VisLeafletMap } from '@unovis/svelte';
 	import { BulletShape, LeafletMap, Tooltip } from '@unovis/ts';
+	import { Plus, Minus, Maximize } from 'lucide-svelte';
 	import { goto } from '$app/navigation';
 	import { formatKey, getLeaves } from '../utils.js';
 
@@ -16,8 +17,10 @@
 	/** @type {Props} */
 	let { inscriptions, aggregations, selectedColourBy, mapStyle = config.mapStyle } = $props();
 
-	/** @type {string[]} */
-	const PALETTE = ['#825b3a', '#c7956d', '#d4a574', '#8b9e6b', '#5d8a83', '#7a6b8a'];
+	/** @type {any} */
+	let mapRef = $state();
+
+	const PALETTE = Array.from({ length: 12 }, (_, i) => `var(--vis-color${i})`);
 
 	// Get active colour-by keys from aggregation buckets
 	const colourByKeys = $derived.by(() => {
@@ -132,12 +135,12 @@
 {#key selectedColourBy}
 	<div class="inscription-map">
 		<VisLeafletMap
+			bind:this={mapRef}
 			style={mapStyle}
 			{data}
 			{pointLatitude}
 			{pointLongitude}
 			{pointBottomLabel}
-			fitViewPadding={[60, 60]}
 			clusterExpandOnClick={true}
 			pointRadius={6}
 			pointColor="var(--blue-6)"
@@ -146,7 +149,35 @@
 			{colorMap}
 			{tooltip}
 			{events}
+			width="100%"
+			height="100%"
 		/>
+		<div class="map-controls">
+			<button
+				class="map-control-btn"
+				onclick={() => mapRef?.getComponent()?.zoomIn(1)}
+				aria-label="Zoom in"
+				title="Zoom in"
+			>
+				<Plus size={16} />
+			</button>
+			<button
+				class="map-control-btn"
+				onclick={() => mapRef?.getComponent()?.zoomOut(1)}
+				aria-label="Zoom out"
+				title="Zoom out"
+			>
+				<Minus size={16} />
+			</button>
+			<button
+				class="map-control-btn"
+				onclick={() => mapRef?.getComponent()?.fitView()}
+				aria-label="Fit view"
+				title="Fit view"
+			>
+				<Maximize size={16} />
+			</button>
+		</div>
 	</div>
 
 	{#if colourByKeys.length > 0}
@@ -172,5 +203,38 @@
 
 	.inscription-map :global(.tooltip a) {
 		color: var(--link);
+	}
+
+	.map-controls {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-2);
+		position: absolute;
+		right: var(--size-3);
+		top: var(--size-3);
+		z-index: 1000;
+	}
+
+	.map-control-btn {
+		align-items: center;
+		background: var(--surface-1);
+		border-radius: var(--radius-2);
+		border: 1px solid var(--border);
+		box-shadow: var(--shadow-2);
+		color: var(--text-1);
+		cursor: pointer;
+		display: flex;
+		height: 32px;
+		justify-content: center;
+		padding: 0;
+		width: 32px;
+		transition:
+			background-color 0.2s,
+			color 0.2s;
+	}
+
+	.map-control-btn:hover {
+		background: var(--surface-2);
+		color: var(--text-2);
 	}
 </style>

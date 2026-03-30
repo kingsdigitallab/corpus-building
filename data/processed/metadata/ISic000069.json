@@ -31,22 +31,33 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Fragment of a marble plaque, broken on all sides.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
     "_": "marble",
     "ana": "#material.stone.marble",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "37",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "20",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "4",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -65,10 +76,13 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "70-72",
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "72"
       },
       {
         "type": "interlinear",
@@ -80,9 +94,10 @@
     ]
   },
   "date": {
-    "_": "To son of Gallienus,\n                                emp.253—268",
-    "notBefore": 251,
-    "notAfter": 300
+    "_": "Valerian, son of Gallienus, as Caesar",
+    "notBefore": 256,
+    "notAfter": 258,
+    "evidence": "office"
   },
   "places": [
     {
@@ -107,8 +122,10 @@
   "country": "Sicilia",
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found at Tindari in 1880.",
     "type": "found",
+    "subtype": "discovered",
+    "when": "1880",
     "geo": null
   },
   "provenanceGeo": [],
@@ -123,9 +140,9 @@
     {
       "n": "screen",
       "url": "ISic000069_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "2316px",
+      "width": "2178px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
       "surfaceType": "front"
     }
   ],
@@ -288,12 +305,17 @@
   "facsimile": {
     "n": "screen",
     "url": "ISic000069_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "2316px",
+    "width": "2178px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 72
+    }
+  ],
   "publications": [
     "Notizie degli scavi di antichità, 1876-",
     "Mommsen, 1883, CIL",
@@ -313,6 +335,7 @@
       "_": "draft"
     },
     "honorific",
+    "plaque",
     "marble",
     "tyndaris",
     "tindari",

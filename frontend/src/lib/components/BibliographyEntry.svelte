@@ -7,6 +7,7 @@
 			n?: string;
 			author?: string;
 			date?: string;
+			inscriptionDate?: string;
 			citedRange?: {
 				ref?: { _: string; target: string };
 			} | string;
@@ -32,7 +33,9 @@
 	<span>{entry.author} ({entry.date})</span>
 {/if}
 {#if typeof entry.citedRange === 'object' && entry.citedRange?.ref}
-	at <a href={entry.citedRange.ref.target}>{entry.citedRange.ref._}</a>
+	at {#if entry.type === 'bulletin' && entry.inscriptionDate}({entry.inscriptionDate}),
+	{/if} <a href={entry.citedRange.ref.target}>{entry.citedRange.ref._}</a>
 {:else if entry.citedRange}
-	at <span>{entry.citedRange}</span>
+	at {#if entry.type === 'bulletin' && entry.inscriptionDate}({entry.inscriptionDate}),
+	{/if} <span>{entry.citedRange}</span>
 {/if}

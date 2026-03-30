@@ -90,6 +90,9 @@ export async function main() {
 }
 
 // Only run if this file is being run directly
-if (import.meta.url === `file://${__filename}`) {
+const isDirectRun =
+  process.argv[1] &&
+  import.meta.url === `file://${process.argv[1]}`;
+if (isDirectRun) {
   main();
 }

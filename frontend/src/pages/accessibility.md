@@ -10,7 +10,7 @@ tags:
 
 This accessibility statement applies to [https://isicily.classics.ox.ac.uk/](https://isicily.classics.ox.ac.uk/). 
 
-### Using the website 
+## Using the website 
 
 We want as many people as possible to be able to use, read and understand the content of ​​I.Sicily​​. 
 This means that you should be able to:  
@@ -23,7 +23,7 @@ This means that you should be able to:
 
 [AbilityNet](https://mcmw.abilitynet.org.uk/) has advice on making your device easier to use if you have a disability. 
 
-### How accessible this website is 
+## How accessible this website is 
 
 We made every effort for I.Sicily to meet WCAG 2.2 AA compliance for all components. 
 
@@ -32,13 +32,13 @@ We are aware that some parts of ​I.Sicily​ could be not fully accessible due
 - Image viewer uses [OpenSeaDragon](https://openseadragon.github.io);
 - Copy Citation notifications in Edition viewer use [svelte-french-toast](https://svelte-french-toast.com).​ 
 
-### Feedback and contact information 
+## Feedback and contact information 
 
 If you find any problems not listed in this statement or think we’re not meeting accessibility requirements, email <isicily@inscriptiones.org>.  
 
 The project team in Oxford will consider your request and get back to you in 7 days.  
 
-### Enforcement procedure 
+## Enforcement procedure 
 
 The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’). If you’re not happy with how we respond to your complaint, [contact the Equality Advisory and Support Service (EASS)](https://www.equalityadvisoryservice.com/). 
 

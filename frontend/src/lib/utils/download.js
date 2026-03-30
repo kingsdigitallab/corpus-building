@@ -128,7 +128,7 @@ async function fetchEditionText(slug, edition) {
  * @param {string} text - The text to escape
  * @returns {string}
  */
-function escapeCSV(text) {
+export function escapeCSV(text) {
 	if (!text) return '';
 	// Replace newlines with spaces and escape double quotes
 	return text.replace(/\n/g, ' ').replace(/"/g, '""');
@@ -161,35 +161,35 @@ export function downloadCSV(headers, rows, filename) {
  * @param {any} inscription
  * @param {string} type
  */
-function getInscriptionPlace(inscription, type) {
+export function getInscriptionPlace(inscription, type) {
 	return inscription?.places?.find((place) => place.type === type)?._ || '';
 }
 
 /**
  * @param {{ type: { _: string; }; }} inscription
  */
-function getInscriptionType(inscription) {
+export function getInscriptionType(inscription) {
 	return inscription.type?._?.trim() || 'N/A';
 }
 
 /**
  * @param {{ rawObjectType: { _: string; }; }} inscription
  */
-function getInscriptionObjectType(inscription) {
+export function getInscriptionObjectType(inscription) {
 	return inscription.rawObjectType?._ || 'N/A';
 }
 
 /**
  * @param {{ textLang: { _: string; }; }} inscription
  */
-function getInscriptionLanguage(inscription) {
+export function getInscriptionLanguage(inscription) {
 	return inscription.textLang?._ || 'N/A';
 }
 
 /**
  * @param {{ settlement: string; }} inscription
  */
-function getInscriptionSettlement(inscription) {
+export function getInscriptionSettlement(inscription) {
 	return inscription.settlement || 'N/A';
 }
 

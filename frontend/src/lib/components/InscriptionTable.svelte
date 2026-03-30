@@ -15,25 +15,42 @@
 		downloadFilename = 'inscriptions'
 	} = $props();
 
+	let activeSortOptions = $derived(
+		showBulletinDate ? sortOptions : sortOptions.filter((o) => o.value !== 'bulletinDateSort')
+	);
+
+	// Evaluate initial state once to avoid "$derived referenced locally" warning
+	const initialSortOptions = showBulletinDate
+		? sortOptions
+		: sortOptions.filter((o) => o.value !== 'bulletinDateSort');
+
 	let search = $state('');
-	let sortBy = $state(sortOptions?.[0]?.value || 'file');
+	let sortBy = $state(initialSortOptions?.[0]?.value || 'file');
 	let sortDir = $state(1);
 
 	let filteredInscriptions = $derived(
 		inscriptions
 			.filter(
 				(inscription) =>
-					inscription.keywords?.join(' ').toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.idno?._?.toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.bibl?.citedRange?.toLowerCase().includes(search.toLowerCase()) ||
-					inscription?.bibl?.inscriptionDate?.includes(search.toLowerCase())
+					(inscription.keywords?.join(' ') || '').toLowerCase().includes(search.toLowerCase()) ||
+					String(inscription?.idno?._ || '')
+						.toLowerCase()
+						.includes(search.toLowerCase()) ||
+					String(inscription?.bibl?.citedRange?.ref?._ || inscription?.bibl?.citedRange || '')
+						.toLowerCase()
+						.includes(search.toLowerCase()) ||
+					String(inscription?.bibl?.inscriptionDate || '')
+						.toLowerCase()
+						.includes(search.toLowerCase())
 			)
 			.sort((a, b) => {
 				if (sortBy === 'idnoSort' || sortBy === 'bulletinDateSort') {
-					return a[sortBy] - b[sortBy] * sortDir;
+					return (a[sortBy] - b[sortBy]) * sortDir;
 				}
 
-				return (a[sortBy] || '').localeCompare(b[sortBy]) * sortDir;
+				return (
+					(a[sortBy] || '').localeCompare(b[sortBy] || '', undefined, { numeric: true }) * sortDir
+				);
 			})
 	);
 	const total = $derived(filteredInscriptions.length);
@@ -104,7 +121,7 @@
 			<label>
 				<span>Sort by</span>
 				<select bind:value={sortBy}>
-					{#each sortOptions as option (option.value)}
+					{#each activeSortOptions as option (option.value)}
 						<option value={option.value}>{option.label}</option>
 					{/each}
 				</select>
