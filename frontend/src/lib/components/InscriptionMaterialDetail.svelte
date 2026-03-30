@@ -39,7 +39,7 @@
 			? Math.min(2, Math.max(0.5, 1.8 - 0.3 * Math.log10(Number(radius) || 1)))
 			: Math.min(2, Math.max(0.5, mapZoom / 7))}
 		{@const markerClass = radius ? (radius > 5000 ? 'lg' : radius > 1000 ? 'md' : 'sm') : 'sm'}
-		<dt>Place</dt>
+		<dt>Provenance</dt>
 		<dd><a href={ref.target}>{locationName}</a></dd>
 		<dt>Map</dt>
 		<dd style="--marker-scale: {markerScale}">
