@@ -1,6 +1,6 @@
-import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,7 +49,10 @@ export function updateMaterialElement(xml, entry) {
  */
 export function addCoccatoRespStmt(xml) {
   if (xml.includes('xml:id="Coccato"')) return xml;
-  return xml.replace("</titleStmt>", `${COCCATO_RESP_STMT}\n            </titleStmt>`);
+  return xml.replace(
+    "</titleStmt>",
+    `${COCCATO_RESP_STMT}\n            </titleStmt>`,
+  );
 }
 
 /**
@@ -60,7 +63,10 @@ export function addCoccatoRespStmt(xml) {
  * @returns {string}
  */
 export function updateMaterialContent(xml, description) {
-  return xml.replace(/(<material\s[^>]*>)[\s\S]*?(<\/material>)/, `$1${description}$2`);
+  return xml.replace(
+    /(<material\s[^>]*>)[\s\S]*?(<\/material>)/,
+    `$1${description}$2`,
+  );
 }
 
 /**
@@ -71,12 +77,10 @@ export function updateMaterialContent(xml, description) {
  * @returns {string}
  */
 export function buildProvenanceXml(provenance) {
-  let locationContent = `\n<geo>${provenance.coordinates}</geo>`;
-  if (provenance.radius) {
-    locationContent += `\n<precision match="preceding-sibling::geo" n="${provenance.radius}"/>`;
-  }
-  locationContent += `\n<ref target="${provenance.uri}"/>`;
-  return `\n<place type="source">\n <placeName>${provenance.placeName}</placeName>\n <location>${locationContent}\n </location>\n</place>`;
+  const precision = provenance.radius
+    ? `\n  <precision match="preceding-sibling::geo" n="${provenance.radius}"/>`
+    : "";
+  return `\n<placeName type="provenance">\n <ref target="${provenance.uri}">${provenance.placeName}</ref>\n <location>\n  <geo>${provenance.coordinates}</geo>${precision}\n </location>\n</placeName>`;
 }
 
 /**
@@ -124,9 +128,10 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
   const allRecords = JSON.parse(await fs.readFile(jsonPath, "utf-8"));
 
   const normalizedFilter = filter.map(normalizeIsic);
-  const records = normalizedFilter.length > 0
-    ? allRecords.filter((r) => normalizedFilter.includes(r.isic))
-    : allRecords;
+  const records =
+    normalizedFilter.length > 0
+      ? allRecords.filter((r) => normalizedFilter.includes(r.isic))
+      : allRecords;
 
   let modified = 0;
   let skipped = 0;
@@ -137,7 +142,9 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
     try {
       xml = await fs.readFile(xmlPath, "utf-8");
     } catch {
-      console.warn(`[petrography-import] Skipping ${entry.isic}: XML file not found`);
+      console.warn(
+        `[petrography-import] Skipping ${entry.isic}: XML file not found`,
+      );
       skipped++;
       continue;
     }
@@ -145,7 +152,9 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
     const updated = applyPetrographyImport(xml, entry);
 
     if (updated === xml) {
-      console.warn(`[petrography-import] No changes made to ${entry.isic} (material element not found?)`);
+      console.warn(
+        `[petrography-import] No changes made to ${entry.isic} (material element not found?)`,
+      );
       skipped++;
       continue;
     }
@@ -154,7 +163,9 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
     modified++;
   }
 
-  console.log(`[petrography-import] Done. Modified: ${modified}, Skipped: ${skipped}`);
+  console.log(
+    `[petrography-import] Done. Modified: ${modified}, Skipped: ${skipped}`,
+  );
 }
 
 export async function main() {
@@ -171,7 +182,8 @@ export async function main() {
   }
 }
 
-const isDirectRun = process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
+const isDirectRun =
+  process.argv[1] && import.meta.url === `file://${process.argv[1]}`;
 if (isDirectRun) {
   main();
 }

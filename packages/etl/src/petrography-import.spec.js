@@ -175,32 +175,39 @@ describe("buildProvenanceXml", () => {
     uri: "https://www.geonames.org/741729/marmara-adasi.html",
   };
 
-  it("contains placeName, geo, and ref target", () => {
+  it("contains placeName text inside <ref> with target URI", () => {
     const xml = buildProvenanceXml(prov);
-    expect(xml).toContain("<placeName>Marmara District</placeName>");
-    expect(xml).toContain("<geo>40.61972,27.61694</geo>");
-    expect(xml).toContain('target="https://www.geonames.org/741729/marmara-adasi.html"');
+    expect(xml).toContain('<ref target="https://www.geonames.org/741729/marmara-adasi.html">Marmara District</ref>');
   });
 
-  it("wraps content in <place type=\"source\"> and <location>", () => {
+  it("contains geo coordinates inside <location>", () => {
     const xml = buildProvenanceXml(prov);
-    expect(xml).toContain('<place type="source">');
-    expect(xml).toContain("<location>");
-    expect(xml).toContain("</location>");
-    expect(xml).toContain("</place>");
+    expect(xml).toContain("<geo>40.61972,27.61694</geo>");
+    const locationOpen = xml.indexOf("<location>");
+    const geoPos = xml.indexOf("<geo>");
+    const locationClose = xml.indexOf("</location>");
+    expect(geoPos).toBeGreaterThan(locationOpen);
+    expect(geoPos).toBeLessThan(locationClose);
+  });
+
+  it("wraps content in <placeName type=\"provenance\">", () => {
+    const xml = buildProvenanceXml(prov);
+    expect(xml).toContain('<placeName type="provenance">');
+    expect(xml).toContain("</placeName>");
   });
 
   it("omits <precision> when radius is null", () => {
     expect(buildProvenanceXml(prov)).not.toContain("<precision");
   });
 
-  it("includes <precision> with correct @n when radius is set", () => {
+  it("includes <precision> inside <location> after <geo> when radius is set", () => {
     const xml = buildProvenanceXml({ ...prov, radius: "30000" });
     expect(xml).toContain('<precision match="preceding-sibling::geo" n="30000"/>');
-    // precision must appear after geo
     const geoPos = xml.indexOf("<geo>");
     const precPos = xml.indexOf("<precision");
+    const locationClose = xml.indexOf("</location>");
     expect(precPos).toBeGreaterThan(geoPos);
+    expect(precPos).toBeLessThan(locationClose);
   });
 });
 
@@ -240,14 +247,14 @@ describe("applyPetrographyImport", () => {
       },
     };
     const result = applyPetrographyImport(MINIMAL_XML, entry);
-    expect(result).toContain("<placeName>Marmara District</placeName>");
+    expect(result).toContain('<ref target="https://www.geonames.org/741729/marmara-adasi.html">Marmara District</ref>');
     expect(result).toContain("<geo>40.61972,27.61694</geo>");
     // provenance must appear inside the material element
     const matOpen = result.indexOf("<material");
     const matClose = result.indexOf("</material>");
-    const placePos = result.indexOf("<place");
-    expect(placePos).toBeGreaterThan(matOpen);
-    expect(placePos).toBeLessThan(matClose);
+    const placeNamePos = result.indexOf('<placeName type="provenance">');
+    expect(placeNamePos).toBeGreaterThan(matOpen);
+    expect(placeNamePos).toBeLessThan(matClose);
   });
 
   it("is fully idempotent with provenance: running twice produces the same result as running once", () => {
