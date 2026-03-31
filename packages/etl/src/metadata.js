@@ -93,7 +93,7 @@ export async function extractMetadata(xmlString) {
 
   metadata.zotero = bibliography
     .filter((b) => b?.ptr?.target?.includes("zotero"))
-    .map((b) => b.ptr.target.split("/").at(-1));
+    .map((b) => sanitizeURL(b.ptr.target).split("/").at(-1));
   metadata.keywords = getKeywords(metadata);
 
   return metadata;
@@ -117,6 +117,17 @@ export async function parseXML(
     console.error("Error parsing XML:", error);
     return null;
   }
+}
+
+/**
+ * Removes all whitespace from a URL string.
+ * Raw XML attributes may contain leading, trailing, or embedded spaces.
+ *
+ * @param {string | undefined} url
+ * @returns {string | undefined}
+ */
+function sanitizeURL(url) {
+  return url?.replace(/\s+/g, "");
 }
 
 function getURI(xml) {
@@ -202,11 +213,11 @@ function getObjectType(xml) {
     xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
       ?.supportDesc?.support?.objectType;
 
-  if (Array.isArray(objectType)) {
-    return objectType[0];
-  }
+  const result = Array.isArray(objectType) ? objectType[0] : objectType;
 
-  return objectType;
+  if (result?.ref) result.ref = sanitizeURL(result.ref);
+
+  return result;
 }
 
 function getMaterial(xml) {
@@ -400,6 +411,7 @@ function getGraphics(xml) {
         ?.map((graphic) => {
           return {
             ...graphic,
+            url: sanitizeURL(graphic.url),
             desc: graphic.desc,
             surfaceType: surface.type,
           };
@@ -427,13 +439,13 @@ function getMsIdentifier(xml) {
 }
 
 function getRepository(msIdentifier) {
-  const ref = msIdentifier.repository?.ref;
+  const ref = sanitizeURL(msIdentifier.repository?.ref);
 
   if (!ref) return msIdentifier.repository;
 
   const museum = museums.find((m) => m.uri === ref);
 
-  if (!museum) return msIdentifier.repository;
+  if (!museum) return { ...msIdentifier.repository, ref };
 
   return {
     _: museum.name,
@@ -516,7 +528,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
       ) => {
         if (item.ptr?.target) {
           const zoteroData = await getZoteroData(
-            item.ptr.target.split("/").at(-1),
+            sanitizeURL(item.ptr.target).split("/").at(-1),
           );
 
           return {

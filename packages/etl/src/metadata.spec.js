@@ -224,6 +224,34 @@ describe("getType function", () => {
 });
 
 describe("getObjectType function", () => {
+  it("removes spaces from objectType ref URL", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <objectType ref="https://www.e agle-network.eu/voc/objtyp/lod/144.html">basin</objectType>
+                      </support>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getObjectType(xml).ref).toBe(
+      "https://www.eagle-network.eu/voc/objtyp/lod/144.html",
+    );
+  });
+
   it("should return the object type when it exists", async () => {
     const xml = await createXmlObject(`
       <TEI>
@@ -624,6 +652,23 @@ describe("getPlaces function", () => {
 });
 
 describe("getFacsimile function", () => {
+  it("removes spaces from graphic url", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <facsimile>
+          <surface>
+            <graphic n="screen" url=" https://example.com/img.tif "/>
+            <graphic n="print" url="https://example.com/img.jpg"/>
+          </surface>
+        </facsimile>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getFacsimile(xml)[0].url).toBe(
+      "https://example.com/img.tif",
+    );
+  });
+
   it("should return an empty array when facsimile is not present", async () => {
     const xml = await createXmlObject(`
       <TEI>
@@ -680,6 +725,28 @@ describe("getFacsimile function", () => {
 });
 
 describe("getMsIdentifier function", () => {
+  it("removes spaces from repository ref", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <repository ref=" http://sicily.classics.ox.ac.uk/museum/unknown">Some Museum</repository>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getMsIdentifier(xml).repository.ref).toBe(
+      "http://sicily.classics.ox.ac.uk/museum/unknown",
+    );
+  });
+
   it("should handle empty strings for all properties", async () => {
     const xml = await createXmlObject(`
       <TEI>
