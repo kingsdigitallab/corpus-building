@@ -4,7 +4,7 @@
 	const bubble = createBubbler();
 	import { base } from '$app/paths';
 
-	
+
 	/**
 	 * @typedef {Object} Props
 	 * @property {string} href
@@ -25,6 +25,13 @@
 </a>
 
 <style>
+	a {
+		align-items: center;
+		display: inline-flex;
+		min-block-size: 44px;
+		min-inline-size: 44px;
+	}
+
 	.title {
 		font-size: var(--font-size-4);
 		font-weight: bold;

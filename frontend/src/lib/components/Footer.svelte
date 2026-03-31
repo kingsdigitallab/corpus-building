@@ -148,6 +148,13 @@
 		padding: 0;
 	}
 
+	li a {
+		align-items: center;
+		display: inline-flex;
+		min-block-size: 44px;
+		min-inline-size: 44px;
+	}
+
 	li.small {
 		font-size: var(--font-size-0);
 	}
