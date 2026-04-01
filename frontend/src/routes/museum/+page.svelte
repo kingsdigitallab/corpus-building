@@ -116,7 +116,7 @@
 			}}
 			aria-label="Search museums"
 		/>
-		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
+		<p class="meta">{total.toLocaleString()} result{total === 1 ? '' : 's'}</p>
 		<div class="sort">
 			<label class="checkbox-label">
 				<input type="checkbox" bind:checked={withInscriptions} onchange={() => (page = 1)} />

@@ -112,7 +112,7 @@
 			}}
 			aria-label="Search bibliography"
 		/>
-		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
+		<p class="meta">{total.toLocaleString()} result{total === 1 ? '' : 's'}</p>
 		<div class="sort">
 			<label>
 				<span>Sort by</span>
