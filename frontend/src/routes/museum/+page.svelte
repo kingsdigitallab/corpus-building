@@ -89,13 +89,19 @@
 
 <svelte:head>
 	<title>Museums | {config.title}</title>
-	<meta name="description" content="Museums and repositories of the inscriptions" />
+	<meta
+		name="description"
+		content="Museums and repositories holding the inscriptions in ISicily corpus"
+	/>
 	<meta name="tags" content="museums, repositories, {config.title}" />
 </svelte:head>
 
 <article>
 	<header>
-		<h1>Museums</h1>
+		<hgroup>
+			<h1>Museums</h1>
+			<p>Museums and repositories holding the inscriptions in this corpus</p>
+		</hgroup>
 	</header>
 
 	<section class="controls">

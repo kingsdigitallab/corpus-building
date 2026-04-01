@@ -88,13 +88,16 @@
 
 <svelte:head>
 	<title>Bibliography | {config.title}</title>
-	<meta name="description" content="Bibliography of the inscriptions" />
-	<meta name="tags" content="bibliography, {config.title}" />
+	<meta name="description" content="Publications cited across the inscriptions in ISicily corpus" />
+	<meta name="tags" content="bibliography, publications, {config.title}" />
 </svelte:head>
 
 <article>
 	<header>
-		<h1>Bibliography</h1>
+		<hgroup>
+			<h1>Bibliography</h1>
+			<p>Publications cited across the inscriptions in this corpus</p>
+		</hgroup>
 	</header>
 
 	<section class="controls">
@@ -314,6 +317,10 @@
 		flex-wrap: wrap;
 	}
 	.actions a {
+		align-items: center;
+		display: inline-flex;
+		min-block-size: 44px;
+		min-inline-size: 44px;
 		text-decoration: none;
 	}
 	.actions a:hover,
