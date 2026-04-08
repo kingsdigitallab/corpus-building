@@ -87,7 +87,47 @@ The set of granular standard-compliant data files (DTS, EpiDoc, Web Annotations,
 
 ## Design Process
 
-The design of the site was informed by initial discussions around the information architecture and review of static mock-ups. A usability workshop with a group of representative prospective users identified bugs as well as user interface and user experience refinements which have been prioritised collaboratively and integrated into the current interface.
+The design of the site was informed by initial discussions around the information architecture and review of static mock-ups.
+
+![Information architecture diagram showing homepage, filter system, inscription views (list, table, map), and detail page structure with prioritised features.](images/technical_overview/333.jpg 'Information Architecture & Wireframing')
+
+Early information architecture to map out the user experience and wireframing iterations exploring multiple feature views.
+
+This diagram outlines the restructuring of the platform into a flatter, more accessible hierarchy compared to the previous instance of I.Sicily (see acknowledgements below). The goal was to streamline key user flows (search → results → inscription), and balance quick access for new users with advanced functionality for researchers.
+
+The iterations below exemplified in the figures focus on structuring the core interaction model - combining search, filters, and result views (list, table, map) into a cohesive and flexible interface. The aim was to minimise cognitive load while supporting both exploratory browsing and precise academic queries.
+
+![Design system colour palette options including earth tones, Mediterranean, monochrome, and modern schemes with accessibility considerations.](images/technical_overview/colourpallete.jpg 'Colour Palletes')
+
+Colour system exploration, balancing visual identity, readability, and accessibility.
+
+Multiple colour palette directions were designed and tested to reflect the historical context while ensuring strong contrast and accessibility requirements. Iterations focused on readability, hierarchy, and creating a consistent visual language that works across complex data interfaces.
+
+![UI UX designs for inscription detail pages featuring image viewer, edition text, translations, and metadata in a dark-themed layout.](images/technical_overview/inscriptionpages.jpg 'Inscription Pages')
+
+Inscription detail page design and iterations, integrating and optimising images, metadata, and academic content.
+
+The inscription detail page was designed to handle complex, layered information: combining imagery, transcription, translation, and metadata.
+
+In the early version, the page followed a single-column layout, with metadata positioned below the inscription image. To improve usability (particularly for comparison and reference while reading), this was redesigned into a side-by-side layout, with a fixed image and scrollable metadata panel.
+
+Further iterations explored how to present this content clearly while maintaining academic depth and supporting different reading behaviours.
+
+![Mockups of homepage and search results with card-based inscription listings, filters, and sorting options across multiple layout variations](images/technical_overview/landingpages.jpg 'Landing Pages & Filtering Features')
+
+Landing page and search experience iterations, focusing on functionality, clarity and entry points into the dataset.
+
+The homepage was designed to immediately guide users into the dataset through a prominent search and filtering system.
+
+Iterations focused on hierarchy and call-to-action clarity, establishing search as the primary entry point. The design balances accessibility for first-time users with the depth and flexibility required for more advanced academic research.
+
+![User research synthesis board with workshop notes, feedback clustering, and prioritisation across multiple participants.](images/technical_overview/Untitled-1-04.jpg 'Remote Usability Testing')
+
+Remote usability testing workshops.
+
+Usability workshops with a group of representative prospective users identified bugs as well as user interface and user experience refinements which have been prioritised collaboratively and integrated into the current interface.
+
+These were run with a mix of users to observe how they interact with search, filters, navigation, and inscription pages. Feedback was captured in real time, highlighting pain points, confusion areas, and differences between expert and non-expert users. Insights from testing informed refinements to interaction patterns, layout, and clarity. The data visualisation section builds on patterns from previous KDL projects, combining established structures with tailored UX/UI decisions for this project.
 
 ## Community Value
 
