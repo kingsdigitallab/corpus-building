@@ -182,7 +182,9 @@ async function getEditionAuthor(xml) {
 
     const itemKey = source.split("/").at(-1);
     const zoteroData = await getZoteroData(itemKey);
-    zoteroData.ref = source;
+    if (zoteroData) {
+      zoteroData.ref = source;
+    }
     return zoteroData;
   }
 
@@ -190,8 +192,10 @@ async function getEditionAuthor(xml) {
 
   if (!respStmt) return null;
 
-  const author = respStmt.find(
-    (rs) => rs.name["xml:id"] === source.split("#").at(-1),
+  const respStmts = Array.isArray(respStmt) ? respStmt : [respStmt];
+
+  const author = respStmts.find(
+    (rs) => rs.name?.["xml:id"] === source.split("#").at(-1),
   );
 
   if (!author) return null;
@@ -430,13 +434,21 @@ function getMsIdentifier(xml) {
     return { country: null, region: null, settlement: null, repository: null };
 
   return {
-    country: msIdentifier.country?.trim(),
-    region: msIdentifier.region?.trim(),
-    settlement: msIdentifier.settlement?.trim(),
+    country: getText(msIdentifier.country),
+    region: getText(msIdentifier.region),
+    settlement: getText(msIdentifier.settlement),
     repository: getRepository(msIdentifier),
     idno: msIdentifier.idno,
   };
 }
+
+function getText(node) {
+  if (node === undefined) return undefined;
+  if (node === null) return null;
+  if (typeof node === "string") return node.trim();
+  if (Array.isArray(node)) return getText(node[0]);
+  return node._?.trim();
+};
 
 function getRepository(msIdentifier) {
   const ref = sanitizeURL(msIdentifier.repository?.ref);
