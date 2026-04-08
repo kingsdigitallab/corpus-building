@@ -56,7 +56,7 @@ Linguistic annotation has been undertaken on a Greek and Latin subset of the cor
 #### Palaeographic Annotation
 
 Palaeographic annotation is conducted through a dedicated digital palaeographic environment with its own web application and interface ([Annotator](https://kingsdigitallab.github.io/crossreads/annotator.html)) also served and documented via a dedicated [Github repository](https://github.com/kingsdigitallab/crossreads-petrography). The environment lets the user define the palaeographic structure of allographs and then create thousands of Web Annotations ([Web Annotation Data Model](https://www.w3.org/TR/annotation-model/)) that bind graphs as they appear on inscription images (using IIIF Image API region format) with their occurrences in the EpiDoc edition (fetched from a [Distributed Text Services (DTS)](https://distributed-text-services.github.io/specifications/) collection) and the formal description of their structure.
-A faceted search interface allows the researcher to filter graph annotations by their structural patterns and define a high-level typology of allographs. 
+A faceted search interface allows the researcher to filter graph annotations by their structural patterns and define a high-level typology of allographs.
 The list of letter types identified for each annotated inscription are then added to the TEI file and so visible on the corpus website with links back to the palaeography environment. These types are also searchable from the ‘Lettering’ filter in the list of facet options, thus integrating them with the rest of the exploration possibilities within the entire corpus, even though only a selection of inscriptions underwent palaeographic analysis.
 
 #### Petrographic Annotation
@@ -97,7 +97,7 @@ The design of the site was informed by initial discussions around the informatio
 
 ![Information architecture diagram showing homepage, filter system, inscription views (list, table, map), and detail page structure with prioritised features.](images/technical_overview/333.jpg 'Information Architecture & Wireframing')
 
-Early information architecture to map out the user experience and wireframing iterations exploring multiple feature views.
+_Figure 3: Early information architecture to map out the user experience and wireframing iterations exploring multiple feature views._
 
 This diagram outlines the restructuring of the platform into a flatter, more accessible hierarchy compared to the previous instance of I.Sicily (see acknowledgements below). The goal was to streamline key user flows (search → results → inscription), and balance quick access for new users with advanced functionality for researchers.
 
@@ -105,13 +105,13 @@ The iterations below exemplified in the figures focus on structuring the core in
 
 ![Design system colour palette options including earth tones, Mediterranean, monochrome, and modern schemes with accessibility considerations.](images/technical_overview/colourpallete.jpg 'Colour Palletes')
 
-Colour system exploration, balancing visual identity, readability, and accessibility.
+_Figure 4: Colour system exploration, balancing visual identity, readability, and accessibility._
 
 Multiple colour palette directions were designed and tested to reflect the historical context while ensuring strong contrast and accessibility requirements. Iterations focused on readability, hierarchy, and creating a consistent visual language that works across complex data interfaces.
 
 ![UI UX designs for inscription detail pages featuring image viewer, edition text, translations, and metadata in a dark-themed layout.](images/technical_overview/inscriptionpages.jpg 'Inscription Pages')
 
-Inscription detail page design and iterations, integrating and optimising images, metadata, and academic content.
+_Figure 5: Inscription detail page design and iterations, integrating and optimising images, metadata, and academic content._
 
 The inscription detail page was designed to handle complex, layered information: combining imagery, transcription, translation, and metadata.
 
@@ -121,7 +121,7 @@ Further iterations explored how to present this content clearly while maintainin
 
 ![Mockups of homepage and search results with card-based inscription listings, filters, and sorting options across multiple layout variations](images/technical_overview/landingpages.jpg 'Landing Pages & Filtering Features')
 
-Landing page and search experience iterations, focusing on functionality, clarity and entry points into the dataset.
+_Figure 6: Landing page and search experience iterations, focusing on functionality, clarity and entry points into the dataset._
 
 The homepage was designed to immediately guide users into the dataset through a prominent search and filtering system.
 
@@ -129,7 +129,7 @@ Iterations focused on hierarchy and call-to-action clarity, establishing search 
 
 ![User research synthesis board with workshop notes, feedback clustering, and prioritisation across multiple participants.](images/technical_overview/Untitled-1-04.jpg 'Remote Usability Testing')
 
-Remote usability testing workshops.
+_Figure 7: Remote usability testing workshops._
 
 Usability workshops with a group of representative prospective users identified bugs as well as user interface and user experience refinements which have been prioritised collaboratively and integrated into the current interface.
 
