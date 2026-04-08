@@ -400,7 +400,7 @@ code {
 /** End of Code styles */
 
 /* Utility classes */
-.badge {
+/* .badge {
 	background-color: var(--surface-3);
 	border-radius: var(--radius-1);
 	color: var(--text-2);
@@ -408,6 +408,23 @@ code {
 	padding-inline: var(--size-2);
 	text-align: center;
 	white-space: nowrap;
+} */
+
+/*ZL replaced the old version to this as fixing the badge max length and any content inside badge goes longer than that, using '...' */
+.badge {
+	background-color: var(--surface-3);
+	border-radius: var(--radius-1);
+	color: var(--text-2);
+	padding-block: var(--size-1);
+	padding-inline: var(--size-2);
+	text-align: center;
+
+	display: inline-block;
+	max-width: 12rem; /* ZL: adjust here to change the badge width */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
 }
 
 .badge a,
