@@ -31,6 +31,12 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Presented in the form of a base or altar in Gualtherus (a common practice, bearing little relation to the actual physical form), but most likely a plaque",
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
     "_": "stone",
     "ana": "#material.stone",
@@ -62,6 +68,7 @@
     }
   },
   "handNote": {
+    "lettering": "Gualtherus prints lunate epsilon and sigma, which may or may not be representative.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -80,20 +87,22 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "Imperial in date",
+    "notBefore": 51,
+    "notAfter": 350
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,10 +111,12 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
   "provenance": "Thermae Himeraeae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Seen by Gualtherus, seemingly in the walls of the 'praetorium', i.e. town hall.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -115,22 +126,17 @@
     "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001157_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
+  },
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
-    "_": "Chiesa Madre",
+    "_": "Town Hall",
     "role": "other"
   },
   "textLang": {
@@ -143,6 +149,19 @@
   "bibliographyEdition": {
     "type": "edition",
     "bibl": [
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "253",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS"
+      },
       {
         "type": "corpus",
         "n": "IG",
@@ -273,22 +292,16 @@
     }
   },
   "tmNumber": "492770",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001157_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "letterHeights": [],
   "publications": [
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
     "Kaibel, 1890, IG",
     "Boeckh, Franz, 1853, CIG",
     "Boeckh, Franz, 1853, CIG",
     "Boeckh, Franz, 1853, CIG"
   ],
   "zotero": [
+    "ZP8DE8KS",
     "Q2SBPG9F",
     "TQMVHEVL",
     "TQMVHEVL",
@@ -301,13 +314,14 @@
       "_": "draft"
     },
     "funerary",
+    "unknown",
     "stone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
-    "chiesa madre",
+    "town hall",
     "ancient greek",
     "grc"
   ]

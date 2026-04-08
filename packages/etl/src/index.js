@@ -381,4 +381,9 @@ async function main() {
   }
 }
 
-main();
+// Only run if this file is being run directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { extractLemmas };

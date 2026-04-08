@@ -40,7 +40,7 @@
 		text-underline-offset: 2px;
 	}
 
-	:global(.md a[href^='http']:not(.badge))::after {
+	:global(.md a[href^='http']:not(.badge)):not(:has(img))::after {
 		content: '↗';
 		margin-left: 0.25em;
 		font-size: 0.8em;

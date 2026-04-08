@@ -60,8 +60,7 @@
 				{#if inscription.facsimile}
 					<InscriptionLink id={inscription.file} title={inscription.title}>
 						<Image
-							src="{config.imageServer}{inscription.file}/{inscription.facsimile
-								.url}/{config.imageThumbParams}"
+							src="{config.imageServer}{inscription.facsimile.url}/{config.imageThumbParams}"
 							alt={inscription.facsimile.desc}
 							width={400}
 							height={200}

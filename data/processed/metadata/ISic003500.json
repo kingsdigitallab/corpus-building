@@ -1,9 +1,9 @@
 {
   "file": "ISic003500",
   "uri": "ISic003500",
-  "title": "I.Sicily inscription 003500",
+  "title": "Fragment of a Greek inscription",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -25,6 +25,12 @@
     }
   ],
   "editionAuthor": null,
+  "type": {
+    "_": "unknown",
+    "ana": "#function.unknown",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/143.html"
+  },
+  "support": "Fragment of the local limestone, intact on the left margin, possibly intact above, but broekn to the right and below. The rear is cut roughtly straight. could be part of a plaque or stele.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
@@ -40,61 +46,77 @@
   },
   "dimensions": [
     {
+      "_": "29",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "10",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "6",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Initial letters of six lines, preserving a consistent left margin, c.2 letter spaces in from the edge, but not quite perpendicular to the margin.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Simple letters without serifs. Broken bar alpha; Mu with vertical outer strokes, short inner strokes.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-6",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line6",
+        "h": "30-34",
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "34"
       },
       {
         "type": "interlinear",
-        "l": "Interlineation line 1 to 2",
+        "l": "Interlineation line 1 to 6",
         "from": "line1",
-        "to": "line2",
-        "unit": "mm"
+        "to": "line6",
+        "h": "10-15",
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "15"
       }
     ]
   },
   "date": {
-    "_": "Hellenistic (?)",
-    "notBefore": -300,
-    "notAfter": -1
+    "_": "Later Hellenistic?",
+    "notBefore": -200,
+    "notAfter": -51,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,17 +125,21 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "None",
+    "_": "Prag, 2018-03-15, Magazzino B, MARPO",
     "type": "observed",
     "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -121,13 +147,20 @@
     {
       "n": "screen",
       "url": "ISic003500_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-03-15",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic003500_rear_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-03-15",
+      "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -167,9 +200,9 @@
         "n": "SEG",
         "citedRange": "49.1331.6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": "http://zotero.org/groups/382445/items/F2GG87EQ",
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
         "author": "",
         "date": "1923-",
@@ -229,21 +262,30 @@
       }
     ],
     "change": {
-      "_": "Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition",
-      "when": "2021-01-21",
-      "who": "#VM"
+      "_": "Jonathan Prag revised from autopsy notes and photograph",
+      "when": "2026-02-18",
+      "who": "#JP"
     }
   },
   "tmNumber": "645368",
   "facsimile": {
     "n": "screen",
     "url": "ISic003500_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "5520px",
+    "width": "3680px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-03-15",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 34
+    },
+    {
+      "atLeast": 10,
+      "atMost": 15
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Manganaro, 1999, Sikelika: studi di antichità e di epigrafia della Sicilia greca"
@@ -254,15 +296,16 @@
   ],
   "keywords": [
     "isic003500",
-    "i.sicily inscription 003500",
+    "fragment of a greek inscription",
     {
-      "_": "draft"
+      "_": "edited"
     },
+    "unknown",
     "unknown",
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

@@ -17,27 +17,31 @@ export async function load({ params: { slug } }) {
 			.filter((/** @type {{ zotero: string | any[]; }} */ inscription) =>
 				inscription.zotero?.includes(slug)
 			)
-			.map((inscription) => {
+			.flatMap((inscription) => {
 				const filePath = join(process.cwd(), 'src', 'data', 'metadata', `${inscription.file}.json`);
 				const fileContent = readFileSync(filePath, 'utf-8');
 				const json = JSON.parse(fileContent);
-				const bibl =
-					json?.bibliographyEdition?.bibl?.find((bibl) => bibl?.ptr?.target?.endsWith(slug)) ||
-					null;
-				return {
+				const bibls =
+					json?.bibliographyEdition?.bibl?.filter((bibl) => bibl?.ptr?.target?.endsWith(slug)) ||
+					[];
+				return bibls.map((bibl) => ({
 					...inscription,
 					bibl
-				};
+				}));
 			})
 			.map((inscription) => ({
 				...inscription,
 				bulletinDateSort: parseInt(inscription.bibl?.inscriptionDate || '999999999999'),
-				citedRangeSort: inscription.bibl?.citedRange || 'ZZZZZ'
+				citedRangeSort: String(
+					inscription.bibl?.citedRange?.ref?._ || inscription.bibl?.citedRange || 'ZZZZZ'
+				)
 			}))
 			.map((i) => ({ ...i, languageSort: i.textLang?.languages.join(', ') || 'ZZZ' }))
 			.map((i) => ({ ...i, materialSort: i.material?._ || 'ZZZ' }))
 			.map((i) => ({ ...i, typeSort: i.type?._ || 'ZZZ' }))
-			.sort((a, b) => a.citedRangeSort.localeCompare(b.citedRangeSort));
+			.sort((a, b) =>
+				a.citedRangeSort.localeCompare(b.citedRangeSort, undefined, { numeric: true })
+			);
 
 		const isBulletin = inscriptions.some((inscription) => inscription.bibl?.type === 'bulletin');
 

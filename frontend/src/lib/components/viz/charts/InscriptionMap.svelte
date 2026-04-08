@@ -1,169 +1,192 @@
 <script>
 	import * as config from '$lib/config';
-	import maplibregl from 'maplibre-gl';
-	import { onDestroy, onMount } from 'svelte';
-	import 'maplibre-gl/dist/maplibre-gl.css';
-
-	const { Map, Marker, NavigationControl, Popup } = maplibregl;
+	import { VisBulletLegend, VisLeafletMap } from '@unovis/svelte';
+	import { BulletShape, LeafletMap, Tooltip } from '@unovis/ts';
+	import { Plus, Minus, Maximize } from 'lucide-svelte';
+	import { goto } from '$app/navigation';
+	import { formatKey, getLeaves } from '../utils.js';
 
 	/**
 	 * @typedef {Object} Props
-	 * @property {any} inscriptions
-	 * @property {boolean} [show]
+	 * @property {any[]} inscriptions
+	 * @property {Record<string, any>} aggregations
+	 * @property {string} selectedColourBy
+	 * @property {string} mapStyle
 	 */
 
 	/** @type {Props} */
-	let { inscriptions, mapStyle = config.mapStyle, show = true } = $props();
+	let { inscriptions, aggregations, selectedColourBy, mapStyle = config.mapStyle } = $props();
 
-	let map = $state();
+	/** @type {any} */
+	let mapRef = $state();
 
-	/** @type {HTMLDivElement | undefined} */
-	let mapContainer = $state();
+	const PALETTE = Array.from({ length: 12 }, (_, i) => `var(--vis-color${i})`);
 
-	let activeMarkers = $state([]);
+	// Get active colour-by keys from aggregation buckets
+	const colourByKeys = $derived.by(() => {
+		if (!selectedColourBy || !aggregations[selectedColourBy]) return [];
+		const buckets = getLeaves(aggregations[selectedColourBy]?.buckets || []);
+		return buckets
+			.sort((/** @type {any} */ a, /** @type {any} */ b) => b.doc_count - a.doc_count)
+			.map((/** @type {{ key: string }} */ b) => b.key);
+	});
 
-	let inscriptionsByGeo = $derived(
-		inscriptions
-			.filter((inscription) => inscription.geo)
-			.reduce((acc, curr) => {
-				if (!curr.geo || curr.geo.length !== 2) return acc;
+	// Build the Unovis colorMap from colour-by keys
+	const colorMap = $derived.by(() => {
+		if (!colourByKeys.length) return {};
+		/** @type {Record<string, { color: string }>} */
+		const map = {};
+		for (let i = 0; i < colourByKeys.length; i++) {
+			map[colourByKeys[i]] = { color: PALETTE[i % PALETTE.length] };
+		}
+		return map;
+	});
 
-				const key = curr.geo.join('_');
-				if (!acc[key]) {
-					acc[key] = [];
+	// Legend items for VisBulletLegend
+	const legendItems = $derived(
+		colourByKeys.map((key, i) => ({
+			name: formatKey(key),
+			color: PALETTE[i % PALETTE.length],
+			shape: BulletShape.Square
+		}))
+	);
+
+	// Transform inscription data — include numeric counts per colour-by value
+	const data = $derived.by(() => {
+		const points = inscriptions
+			.filter((/** @type {any} */ inscription) => inscription.geo && inscription.geo.length === 2)
+			.map((/** @type {any} */ inscription) => {
+				/** @type {Record<string, any>} */
+				const point = {
+					latitude: inscription.geo[0],
+					longitude: inscription.geo[1],
+					title: inscription.title,
+					file: inscription.file,
+					places: inscription.places
+				};
+
+				// Add numeric properties for each colour-by key
+				if (selectedColourBy && colourByKeys.length) {
+					const rawValues = Array.isArray(inscription[selectedColourBy])
+						? inscription[selectedColourBy]
+						: inscription[selectedColourBy] !== undefined
+							? [inscription[selectedColourBy]]
+							: [];
+					const stringValues = rawValues.map((/** @type {any} */ v) => String(v));
+
+					for (const key of colourByKeys) {
+						point[key] = stringValues.includes(key) ? 1 : 0;
+					}
 				}
 
-				acc[key].push(curr);
+				return point;
+			});
 
-				return acc;
-			}, {})
-	);
-	let markers = $derived(
-		Object.entries(inscriptionsByGeo).map(([_, inscriptions]) => {
-			const geo = inscriptions[0].geo;
-
-			const numberInscriptions = inscriptions.length;
-			let markerSize = 'single';
-
-			if (numberInscriptions > 100) {
-				markerSize = 'lg';
-			} else if (numberInscriptions > 25) {
-				markerSize = 'md';
-			} else if (numberInscriptions > 1) {
-				markerSize = 'sm';
-			}
-
-			return {
-				coords: [geo[1], geo[0]],
-				markerSize,
-				numberInscriptions,
-				inscriptions
-			};
-		})
-	);
-
-	function addMarkerAction(node, { coords, inscriptions }) {
-		const popup = new Popup();
-
-		const updatePopupContent = () => {
-			const content = createPopupContent(inscriptions);
-			popup.setHTML(content);
-		};
-
-		updatePopupContent();
-
-		const marker = new Marker({ element: node }).setLngLat(coords).setPopup(popup).addTo(map);
-
-		activeMarkers.push(marker);
-
-		return {
-			destroy() {
-				marker?.remove();
-				activeMarkers = activeMarkers.filter((m) => m !== marker);
-			},
-			update({ coords: newCoords, inscriptions: newInscriptions }) {
-				inscriptions = newInscriptions;
-				updatePopupContent();
-				marker.setLngLat(newCoords);
-			}
-		};
-	}
-
-	function createPopupContent(inscriptions) {
-		const inscriptionsByPlace = inscriptions.reduce((acc, curr) => {
-			if (!curr.places[0]) {
-				return acc;
-			}
-
-			if (!acc[curr.places[0]._]) {
-				acc[curr.places[0]._] = [];
-			}
-			acc[curr.places[0]._].push(curr);
-
-			return acc;
-		}, {});
-
-		let html = `<div class="tooltip">`;
-		const items = Object.entries(inscriptionsByPlace)
-			.map(([place, inscriptions]) => {
-				const filters = encodeURIComponent(JSON.stringify({ provenance: [place] }));
-				let dt = `<dt><a href="?filters=${filters}&view=map" onclick="event.preventDefault(); window.location.search='?filters=${filters}&view=map';">${place}</a></dt>`;
-				let dd = inscriptions
-					.map(
-						(inscription) =>
-							`<dd><a href="inscription/${inscription.file}">${inscription.title}</a></dd>`
-					)
-					.join('');
-
-				return `${dt}${dd}`;
-			})
-			.join('');
-
-		return `${html}<dl>${items}</dl></div>`;
-	}
-
-	onMount(async () => {
-		map = new Map({
-			container: mapContainer,
-			style: mapStyle,
-			center: [14.01535, 37.59999],
-			zoom: 7
-		});
-
-		map.addControl(new NavigationControl({ showCompass: true, showZoom: true }));
+		return points;
 	});
 
-	onDestroy(async () => {
-		if (map) {
-			map.remove();
-			map = undefined;
-			mapContainer = undefined;
+	const pointLatitude = (/** @type {any} */ d) => d.latitude;
+	const pointLongitude = (/** @type {any} */ d) => d.longitude;
+	const pointBottomLabel = (/** @type {any} */ d) => d.places?.[0]?._ ?? '';
+
+	const tooltip = new Tooltip({
+		triggers: {
+			[LeafletMap.selectors.point]: tooltipContent
 		}
 	});
+
+	/** @param {any} d */
+	function tooltipContent(d) {
+		const point = d?.data ?? d;
+		if (!point) return '';
+
+		if (point.clusterPoints) {
+			const place = point.clusterPoints[0].places[0]._;
+			const count = point.clusterPoints.length;
+
+			return `<strong>${place}</strong><br/>${count} inscriptions<br/><br/>Click to expand`;
+		}
+
+		const inscription = point.properties;
+		const place = inscription.places?.[0]?._ ?? 'Unknown';
+
+		let colourInfo = '';
+		if (selectedColourBy && colourByKeys.length) {
+			const matched = colourByKeys.filter((key) => inscription[key] === 1);
+			if (matched.length) colourInfo = `<br/>${matched.map(formatKey).join(', ')}`;
+		}
+
+		return `<strong>${inscription.file}: ${inscription.title}</strong><br/>${place}${colourInfo}<br/><br/>Click to view inscription`;
+	}
+
+	const events = {
+		[LeafletMap.selectors.point]: {
+			/** @param {any} d */
+			click: (d) => {
+				const point = d?.data ?? d;
+				if (!point || point.clusterPoints) return;
+				const file = point.properties?.file;
+				if (file) goto(`inscription/${file}`);
+			}
+		}
+	};
 </script>
 
-{#if show}
-	<div class="inscription-map" bind:this={mapContainer}>
-		{#if map && markers}
-			{#each markers as marker}
-				<div
-					use:addMarkerAction={{ coords: marker.coords, inscriptions: marker.inscriptions }}
-					class="marker"
-					class:single={marker.markerSize === 'single'}
-					class:sm={marker.markerSize === 'sm'}
-					class:md={marker.markerSize === 'md'}
-					class:lg={marker.markerSize === 'lg'}
-					role="img"
-					aria-label={`Map marker for ${marker.inscriptions[0].title}`}
-				>
-					{#if marker.numberInscriptions > 1}
-						<span>{marker.numberInscriptions}</span>
-					{/if}
-				</div>
-			{/each}
-		{/if}
+{#key selectedColourBy}
+	<div class="inscription-map">
+		<VisLeafletMap
+			bind:this={mapRef}
+			style={mapStyle}
+			{data}
+			{pointLatitude}
+			{pointLongitude}
+			{pointBottomLabel}
+			clusterExpandOnClick={true}
+			pointRadius={6}
+			pointColor="var(--blue-6)"
+			clusterColor="var(--blue-8)"
+			clusterRingWidth={6}
+			{colorMap}
+			{tooltip}
+			{events}
+			width="100%"
+			height="100%"
+		/>
+		<div class="map-controls">
+			<button
+				class="map-control-btn"
+				onclick={() => mapRef?.getComponent()?.zoomIn(1)}
+				aria-label="Zoom in"
+				title="Zoom in"
+			>
+				<Plus size={16} />
+			</button>
+			<button
+				class="map-control-btn"
+				onclick={() => mapRef?.getComponent()?.zoomOut(1)}
+				aria-label="Zoom out"
+				title="Zoom out"
+			>
+				<Minus size={16} />
+			</button>
+			<button
+				class="map-control-btn"
+				onclick={() => mapRef?.getComponent()?.fitView()}
+				aria-label="Fit view"
+				title="Fit view"
+			>
+				<Maximize size={16} />
+			</button>
+		</div>
 	</div>
-{/if}
+
+	{#if colourByKeys.length > 0}
+		<div class="legend">
+			<h4>Legend</h4>
+			<VisBulletLegend items={legendItems} labelFontSize="large" orientation="vertical" />
+		</div>
+	{/if}
+{/key}
 
 <style>
 	.inscription-map {
@@ -171,68 +194,47 @@
 		font-family: var(--font-family);
 		height: 600px;
 		width: 100%;
-
-		:global(button) {
-			box-shadow: none;
-			text-shadow: none;
-		}
-
-		:global(ul) {
-			font-size: var(--font-size-1);
-			list-style: none;
-			padding-inline: 0;
-
-			:global(li) {
-				padding-inline: 0;
-			}
-		}
+		position: relative;
 	}
 
-	.marker {
-		--marker-size: 12px;
+	.inscription-map :global(.tooltip) {
+		font-size: var(--font-size-1);
+	}
 
-		background-color: var(--blue-4);
-		border-radius: var(--radius-4);
-		border: none;
-		box-shadow: var(--shadow-1);
-		color: var(--gray-12);
+	.inscription-map :global(.tooltip a) {
+		color: var(--link);
+	}
+
+	.map-controls {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-2);
+		position: absolute;
+		right: var(--size-3);
+		top: var(--size-3);
+		z-index: 1000;
+	}
+
+	.map-control-btn {
+		align-items: center;
+		background: var(--surface-1);
+		border-radius: var(--radius-2);
+		border: 1px solid var(--border);
+		box-shadow: var(--shadow-2);
+		color: var(--text-1);
 		cursor: pointer;
-		display: block;
-		font-size: var(--font-size-0);
-		font-weight: var(--font-weight-6);
-		height: var(--marker-size);
-		line-height: var(--marker-size);
+		display: flex;
+		height: 32px;
+		justify-content: center;
 		padding: 0;
-		text-align: center;
-		width: var(--marker-size);
+		width: 32px;
+		transition:
+			background-color 0.2s,
+			color 0.2s;
 	}
 
-	.marker:hover {
-		filter: brightness(90%);
-		box-shadow: var(--shadow-4);
-	}
-
-	.sm {
-		--marker-size: 24px;
-
-		background-color: var(--blue-6);
-	}
-
-	.md {
-		--marker-size: 36px;
-
-		background-color: var(--blue-8);
-		color: white;
-	}
-
-	.lg {
-		--marker-size: 50px;
-
-		background-color: var(--blue-10);
-		color: white;
-	}
-
-	:global(.maplibregl-popup-content) {
-		height: 200px;
+	.map-control-btn:hover {
+		background: var(--surface-2);
+		color: var(--text-2);
 	}
 </style>

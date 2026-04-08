@@ -32,6 +32,7 @@ export async function extractMetadata(xmlString) {
     handNote: getHandNote(xml),
     date: getDates(xml),
     ...getPlaces(xml),
+    country: undefined,
     provenance: undefined,
     provenanceFound: getProvenance(xml, "found"),
     provenanceGeo: undefined,
@@ -48,6 +49,7 @@ export async function extractMetadata(xmlString) {
   metadata.tmNumber =
     metadata.editions.find((edition) => edition.type === "TM")?._ || "";
   metadata.facsimile = metadata.graphics[0];
+  metadata.country = metadata.places[0]?.region;
   metadata.provenance = metadata.places[0]?._;
   metadata.provenanceGeo = metadata.provenanceFound?.geo || [];
 
@@ -91,7 +93,7 @@ export async function extractMetadata(xmlString) {
 
   metadata.zotero = bibliography
     .filter((b) => b?.ptr?.target?.includes("zotero"))
-    .map((b) => b.ptr.target.split("/").at(-1));
+    .map((b) => sanitizeURL(b.ptr.target).split("/").at(-1));
   metadata.keywords = getKeywords(metadata);
 
   return metadata;
@@ -115,6 +117,17 @@ export async function parseXML(
     console.error("Error parsing XML:", error);
     return null;
   }
+}
+
+/**
+ * Removes all whitespace from a URL string.
+ * Raw XML attributes may contain leading, trailing, or embedded spaces.
+ *
+ * @param {string | undefined} url
+ * @returns {string | undefined}
+ */
+function sanitizeURL(url) {
+  return url?.replace(/\s+/g, "");
 }
 
 function getURI(xml) {
@@ -169,7 +182,9 @@ async function getEditionAuthor(xml) {
 
     const itemKey = source.split("/").at(-1);
     const zoteroData = await getZoteroData(itemKey);
-    zoteroData.ref = source;
+    if (zoteroData) {
+      zoteroData.ref = source;
+    }
     return zoteroData;
   }
 
@@ -177,8 +192,10 @@ async function getEditionAuthor(xml) {
 
   if (!respStmt) return null;
 
-  const author = respStmt.find(
-    (rs) => rs.name["xml:id"] === source.split("#").at(-1),
+  const respStmts = Array.isArray(respStmt) ? respStmt : [respStmt];
+
+  const author = respStmts.find(
+    (rs) => rs.name?.["xml:id"] === source.split("#").at(-1),
   );
 
   if (!author) return null;
@@ -200,11 +217,11 @@ function getObjectType(xml) {
     xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
       ?.supportDesc?.support?.objectType;
 
-  if (Array.isArray(objectType)) {
-    return objectType[0];
-  }
+  const result = Array.isArray(objectType) ? objectType[0] : objectType;
 
-  return objectType;
+  if (result?.ref) result.ref = sanitizeURL(result.ref);
+
+  return result;
 }
 
 function getMaterial(xml) {
@@ -295,6 +312,7 @@ function getPlaces(xml) {
 
   if (!origPlace) return { places: [], geo: null };
 
+  const region = origPlace.region;
   const places = [];
 
   for (const placeType of ["ancient", "modern"]) {
@@ -311,7 +329,9 @@ function getPlaces(xml) {
       place = origPlace.offset.placeName;
       place.offset = origPlace.offset._.trim();
     }
+
     if (place?._) {
+      place.region = region;
       places.push(place);
     }
   }
@@ -395,6 +415,7 @@ function getGraphics(xml) {
         ?.map((graphic) => {
           return {
             ...graphic,
+            url: sanitizeURL(graphic.url),
             desc: graphic.desc,
             surfaceType: surface.type,
           };
@@ -413,22 +434,30 @@ function getMsIdentifier(xml) {
     return { country: null, region: null, settlement: null, repository: null };
 
   return {
-    country: msIdentifier.country?.trim(),
-    region: msIdentifier.region?.trim(),
-    settlement: msIdentifier.settlement?.trim(),
+    country: getText(msIdentifier.country),
+    region: getText(msIdentifier.region),
+    settlement: getText(msIdentifier.settlement),
     repository: getRepository(msIdentifier),
     idno: msIdentifier.idno,
   };
 }
 
+function getText(node) {
+  if (node === undefined) return undefined;
+  if (node === null) return null;
+  if (typeof node === "string") return node.trim();
+  if (Array.isArray(node)) return getText(node[0]);
+  return node._?.trim();
+};
+
 function getRepository(msIdentifier) {
-  const ref = msIdentifier.repository?.ref;
+  const ref = sanitizeURL(msIdentifier.repository?.ref);
 
   if (!ref) return msIdentifier.repository;
 
   const museum = museums.find((m) => m.uri === ref);
 
-  if (!museum) return msIdentifier.repository;
+  if (!museum) return { ...msIdentifier.repository, ref };
 
   return {
     _: museum.name,
@@ -511,7 +540,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
       ) => {
         if (item.ptr?.target) {
           const zoteroData = await getZoteroData(
-            item.ptr.target.split("/").at(-1),
+            sanitizeURL(item.ptr.target).split("/").at(-1),
           );
 
           return {

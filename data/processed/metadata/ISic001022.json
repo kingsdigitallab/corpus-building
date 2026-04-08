@@ -31,6 +31,12 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Presumably a funerary cippus of some description, but no description preserved.",
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
     "_": "stone",
     "ana": "#material.stone",
@@ -53,6 +59,7 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Presented over four lines, with words broken across line ends in Gualtherus",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
@@ -62,6 +69,7 @@
     }
   },
   "handNote": {
+    "lettering": "Gualtherus records lunate sigma, standard epsilon.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -80,7 +88,7 @@
     ]
   },
   "date": {
-    "_": "Chrestos kai amemptos; age\n                                in years (?)",
+    "_": "typical Greek funerary formula of the imperial period",
     "notBefore": 101,
     "notAfter": 500
   },
@@ -88,13 +96,15 @@
     {
       "_": "Bidis",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462113"
+      "ref": "http://pleiades.stoa.org/places/462113",
+      "region": "Sicilia"
     },
     {
       "_": "Acate",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525796",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,6 +113,7 @@
       14.49302
     ]
   ],
+  "country": "Sicilia",
   "provenance": "Bidis",
   "provenanceFound": {
     "_": "Poggio Bidini",
@@ -117,18 +128,13 @@
     "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001022_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "provenanceLost": {
+    "_": "Lost",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
+  },
+  "graphics": [],
   "region": "Sicily",
   "settlement": "(near) Acate",
   "repository": "",
@@ -142,6 +148,19 @@
   "bibliographyEdition": {
     "type": "edition",
     "bibl": [
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "114",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS"
+      },
       {
         "type": "corpus",
         "n": "IG",
@@ -217,34 +236,23 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "Romeo Gessaga",
-        "xml:id": "RG",
-        "ref": "https://orcid.org/0009-0003-5190-1722"
       }
     ],
     "change": {
-      "_": "confirmed tagged names and persons",
-      "when": "2025-12-09",
-      "who": "#RG"
+      "_": "Andoni Llamazares added text edition",
+      "when": "2021-07-12",
+      "who": "#AL"
     }
   },
   "tmNumber": "492650",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001022_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
   "letterHeights": [],
   "publications": [
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
     "Kaibel, 1890, IG",
     "Boeckh, Franz, 1853, CIG"
   ],
   "zotero": [
+    "ZP8DE8KS",
     "Q2SBPG9F",
     "TQMVHEVL"
   ],
@@ -255,10 +263,11 @@
       "_": "draft"
     },
     "funerary",
+    "unknown",
     "stone",
     "bidis",
     "acate",
-    "italy",
+    "sicilia",
     "sicily",
     "(near) acate",
     "ancient greek",

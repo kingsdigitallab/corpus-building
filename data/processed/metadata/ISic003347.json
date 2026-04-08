@@ -1,7 +1,7 @@
 {
   "file": "ISic003347",
   "uri": "ISic003347",
-  "title": "I.Sicily inscription 003347",
+  "title": "Fragment of a public inscription",
   "status": {
     "_": "draft"
   },
@@ -30,6 +30,7 @@
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
+  "support": "Fragment of a limestone epistyle / architrave",
   "objectType": {
     "_": "architrave",
     "ana": "#object.arch_element.architrave",
@@ -40,13 +41,17 @@
     "ana": "#material.stone.limestone",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "40",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "60",
       "unit": "cm",
       "dimension": "width"
     },
@@ -57,22 +62,29 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "single line of monumental letters below the moulding of the architrave",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Neat, wide thinly incised monumental letters, omicron full size.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "75",
+        "unit": "mm",
+        "atLeast": "75",
+        "atMost": "75"
       },
       {
         "type": "interlinear",
@@ -85,19 +97,21 @@
   },
   "date": {
     "_": "Hellenistic",
-    "notBefore": -300,
-    "notAfter": -1
+    "notBefore": -200,
+    "notAfter": -46
   },
   "places": [
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,32 +120,30 @@
       15.04385
     ]
   ],
+  "country": "Sicilia",
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in excavations by Gentili in 1949 in re-use in the so-called honorific arch, or late antique monumental entrance, immediately outside the city walls on the south side of the settlement, below the modern hamlet (and possibly still in situ in secondary deposition).",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1949",
+    "geo": [
+      38.142117,
+      15.044133
+    ]
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.142117,
+    15.044133
+  ],
   "provenanceObserved": {
-    "_": "2006.04",
+    "_": "none",
     "type": "observed",
     "subtype": "autopsied",
-    "resp": "#JP",
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic003347_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Tindari",
   "repository": {
@@ -171,7 +183,7 @@
         "n": "BE",
         "citedRange": "1953.0277",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
@@ -186,6 +198,7 @@
       {
         "author": "Gentili",
         "date": "1952",
+        "citedRange": "164 no.1821",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/J7X6KWXI"
         },
@@ -276,15 +289,12 @@
     }
   },
   "tmNumber": "645591",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic003347_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 75,
+      "atMost": 75
+    }
+  ],
   "publications": [
     "Bulletin épigraphique, 1888-",
     "Gentili, 1952, 1821. Scavi nella città",
@@ -299,7 +309,7 @@
   ],
   "keywords": [
     "isic003347",
-    "i.sicily inscription 003347",
+    "fragment of a public inscription",
     {
       "_": "draft"
     },
@@ -308,7 +318,7 @@
     "limestone",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
     "tindari",
     "antiquarium di tindari",

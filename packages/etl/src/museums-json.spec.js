@@ -1,14 +1,12 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { convertMuseumsToJson } from "./museums-json.js";
 import fs from "fs/promises";
+import os from "os";
 import path from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe("convertMuseumsToJson", () => {
-  const testInputPath = path.join(__dirname, "test-museums.xml");
-  const testOutputPath = path.join(__dirname, "test-museums.json");
+  const testInputPath = path.join(os.tmpdir(), "test-museums.xml");
+  const testOutputPath = path.join(os.tmpdir(), "test-museums.json");
 
   beforeEach(async () => {
     // Create a test XML file

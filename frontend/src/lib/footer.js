@@ -94,11 +94,11 @@ export const footer = {
 			links: [
 				{
 					title: 'Email',
-					href: 'mailto:isicily@iscriptiones.org'
+					href: 'mailto:isicily@inscriptiones.org'
 				},
 				{
 					title: 'Feedback',
-					href: ''
+					href: 'https://forms.office.com/pages/responsepage.aspx?id=G96VzPWXk0-0uv5ouFLPkYuLvvtmnolAvKHijf9sSopUNVQyWjFJQjkzS0JKUklQVlFUNEkyVjhKVS4u&route=shorturl'
 				}
 			]
 		}
@@ -107,7 +107,8 @@ export const footer = {
 		{
 			title: 'Università di Catania',
 			href: 'https://unict.it/',
-			img: '/images/logos/UniCT-Logo-Nero.png'
+			img: '/images/logos/UniCT-Logo-Nero.png',
+			class: 'add-background'
 		},
 		{
 			title: 'University of Oxford',

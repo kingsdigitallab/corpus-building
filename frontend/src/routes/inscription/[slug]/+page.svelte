@@ -1,18 +1,19 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
+	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
+	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
+	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
+	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
+	import InscriptionMaterialDetail from '$lib/components/InscriptionMaterialDetail.svelte';
+	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
 	import { onMount } from 'svelte';
 	import toast, { Toaster } from 'svelte-french-toast';
-	import { DefaultMarker, Marker, MapLibre, Popup } from 'svelte-maplibre';
-	import { goto } from '$app/navigation';
-	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
-	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
-	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
-	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
+	import { DefaultMarker, MapLibre, Marker, Popup } from 'svelte-maplibre';
 
 	/**
 	 * @typedef {Object} Props
@@ -209,16 +210,6 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 					{:else}
 						<dd>{config.EMPTY_PLACEHOLDER}</dd>
 					{/if}
-					<dt>Material</dt>
-					<dd>
-						{#if metadata?.material?.ref}
-							<a class="badge strong" href={metadata.material.ref}
-								>{metadata.material?._ || config.EMPTY_PLACEHOLDER}</a
-							>
-						{:else}
-							{metadata?.material?._ || config.EMPTY_PLACEHOLDER}
-						{/if}
-					</dd>
 					<dt>Object condition</dt>
 					{#if metadata.condition?.ana}
 						<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
@@ -233,6 +224,10 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 						{/each}
 					</dd>
 				</dl>
+				<h3>Material</h3>
+				{#if metadata.material}
+					<InscriptionMaterialDetail material={metadata.material} />
+				{/if}
 				<h3>Inscription</h3>
 				<dl>
 					<dt>Layout</dt>

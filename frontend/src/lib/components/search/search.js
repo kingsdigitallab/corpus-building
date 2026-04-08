@@ -52,6 +52,14 @@ const searchConfig = {
 			conjunction: false,
 			chosen_filters_on_top: false
 		},
+		country: {
+			title: 'Origin country',
+			hide_zero_doc_count: true,
+			size: 50,
+			sort: 'key',
+			conjunction: false,
+			chosen_filters_on_top: false
+		},
 		provenance: {
 			title: 'Origin',
 			hide_zero_doc_count: true,
@@ -343,7 +351,7 @@ export function load({
 				material: getHierarchicalValues(item.material?.ana),
 				technique: getHierarchicalValues(technique),
 				pigment: getHierarchicalValues(pigment),
-				lettering: getLetteringOptions(item?.handNote?.lettering?.ref),
+				lettering: getLetteringOptions(item?.handNote?.lettering),
 				letterHeightAtLeast: Math.min(...letterHeights.map((d) => d.atLeast)),
 				letterHeightAtMost: Math.max(...letterHeights.map((d) => d.atMost)),
 				condition: getHierarchicalValues(item.condition?.ana),
@@ -405,32 +413,27 @@ function capitalizeFirstLetter(val) {
 
 /**
  *
- * @param {object[]} metadataRefs
+ * @param {object[] | object} lettering
  * @returns {string[]}
  */
-function getLetteringOptions(metadataRefs) {
-	let ret = [];
+function getLetteringOptions(lettering) {
+	if (!lettering) return [];
 
-	if (metadataRefs && Array.isArray(metadataRefs)) {
-		// {
-		// 	 "_": "Α type1.1.1",
-		//   "target": "https://kingsdigital[...]/types/greek-Α-type1.1.html"
-		// }
-		// =>
-		// "Greek Α type1.1.1"
-		ret = metadataRefs
-			// Filter out the refs embedded in the introduction paragraph.
-			// Only keep the list of refs with a type format.
-			.filter((ref) => ref._.match(/ type[\d.]+$/))
-			.map((ref) => {
-				// Extract the script from the url and display it in the option.
-				// Otherwise user can't tell latin A from greek A.
-				let script = ref.target.replace(/^.*\/types\/(\w+)-.*$/, '$1');
-				return `${capitalizeFirstLetter(script)} ${ref._}`;
-			});
-	}
+	// Normalize to an array to handle both single objects and arrays uniformly
+	const items = Array.isArray(lettering) ? lettering : [lettering];
 
-	return ret;
+	return items
+		// Keep only objects that have a 'ref' property
+		.filter((item) => typeof item === 'object' && item.ref)
+		// Extract refs and flatten them (handles both array and single object refs)
+		.flatMap((item) => item.ref)
+		// Only keep the list of refs with a type format
+		.filter((ref) => ref?._?.match(/ type[\d.]+$/))
+		.map((ref) => {
+			// Extract the script from the url and display it in the option
+			const script = ref.target.replace(/^.*\/types\/(\w+)-.*$/, '$1');
+			return `${capitalizeFirstLetter(script)} ${ref._}`;
+		});
 }
 
 /**
@@ -522,8 +525,8 @@ export function search({
 				(dateRange[0] === undefined && dateRange[1] === undefined) ||
 				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
 
-			const matchesLetterHeightRange =
-				(letterHeightRange[0] === undefined && letterHeightRange[1] === undefined) ||
+			const matchesLetterHeightRange = true;
+			(letterHeightRange[0] === undefined && letterHeightRange[1] === undefined) ||
 				(item.letterHeightAtLeast >= letterHeightRange[0] &&
 					item.letterHeightAtMost <= letterHeightRange[1]);
 

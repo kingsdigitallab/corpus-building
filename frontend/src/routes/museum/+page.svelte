@@ -89,13 +89,19 @@
 
 <svelte:head>
 	<title>Museums | {config.title}</title>
-	<meta name="description" content="Museums and repositories of the inscriptions" />
+	<meta
+		name="description"
+		content="Museums and repositories holding the inscriptions in ISicily corpus"
+	/>
 	<meta name="tags" content="museums, repositories, {config.title}" />
 </svelte:head>
 
 <article>
 	<header>
-		<h1>Museums</h1>
+		<hgroup>
+			<h1>Museums</h1>
+			<p>Museums and repositories holding the inscriptions in this corpus</p>
+		</hgroup>
 	</header>
 
 	<section class="controls">
@@ -110,7 +116,7 @@
 			}}
 			aria-label="Search museums"
 		/>
-		<p class="meta">{total} result{total === 1 ? '' : 's'}</p>
+		<p class="meta">{total.toLocaleString()} result{total === 1 ? '' : 's'}</p>
 		<div class="sort">
 			<label class="checkbox-label">
 				<input type="checkbox" bind:checked={withInscriptions} onchange={() => (page = 1)} />

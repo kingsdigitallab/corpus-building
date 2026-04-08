@@ -47,6 +47,15 @@
 </article>
 
 <style>
+	hgroup p,
+	hgroup h1 {
+		max-inline-size: unset;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
 	header a {
 		align-items: center;
 		display: inline-flex;
