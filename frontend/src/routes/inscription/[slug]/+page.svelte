@@ -136,10 +136,21 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 />
 
 <svelte:head>
-	<title>{metadata.file}: {metadata.title} | {config.title}</title>
-	<meta name="description" content={metadata.title} />
+	<title>{metadata.title} ({metadata.file}) | {config.title}</title>
 	<meta
-		name="tags"
+		name="description"
+		content={[
+			metadata.title,
+			metadata.places?.[0]?._ ? `Found at ${metadata.places[0]._}` : null,
+			metadata.date?._ ? `Date: ${metadata.date._}` : null,
+			metadata.material?._ ? `Material: ${metadata.material._}` : null,
+			metadata.textLang?._ ? `Language: ${metadata.textLang._}` : null
+		]
+			.filter(Boolean)
+			.join('. ')}
+	/>
+	<meta
+		name="keywords"
 		content="sicily, inscription, {metadata?.textLang?._}, {metadata?.type?._}, {metadata
 			?.objectType?._}"
 	/>
@@ -355,12 +366,14 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 										{metadata.repository.museum.name}
 									</a>
 								{:else}
-									{metadata.repository._}
-								{/if}
-								{#if metadata.idno}
-									, {metadata.idno._}
+									{metadata.repository._ || config.EMPTY_PLACEHOLDER}
 								{/if}
 							</dd>
+							{#if metadata.idno}
+								<dd>
+									{metadata.idno._}
+								</dd>
+							{/if}
 						{/if}
 						<dt>Autopsy</dt>
 						<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>

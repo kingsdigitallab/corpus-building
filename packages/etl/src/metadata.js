@@ -547,6 +547,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
             ...item,
             inscriptionDate: item?.date,
             ...zoteroData,
+            year: zoteroData?.date?.match(/\d{4}/)?.[0] || ''
           };
         }
       },
