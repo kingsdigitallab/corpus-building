@@ -355,12 +355,14 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 										{metadata.repository.museum.name}
 									</a>
 								{:else}
-									{metadata.repository._}
-								{/if}
-								{#if metadata.idno}
-									, {metadata.idno._}
+									{metadata.repository._ || config.EMPTY_PLACEHOLDER}
 								{/if}
 							</dd>
+							{#if metadata.idno}
+								<dd>
+									{metadata.idno._}
+								</dd>
+							{/if}
 						{/if}
 						<dt>Autopsy</dt>
 						<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
