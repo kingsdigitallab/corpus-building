@@ -31,7 +31,7 @@
 			const fields = {
 				author: (x) => normalize(x.author),
 				title: (x) => normalize(x.title),
-				year: (x) => (x.date || '').toString()
+				year: (x) => x.year
 			};
 
 			const va = fields[sortBy](a);
