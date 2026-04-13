@@ -93,7 +93,7 @@
 		name="description"
 		content="Museums and repositories holding the inscriptions in ISicily corpus"
 	/>
-	<meta name="tags" content="museums, repositories, {config.title}" />
+	<meta name="keywords" content="museums, repositories, {config.title}" />
 </svelte:head>
 
 <article>

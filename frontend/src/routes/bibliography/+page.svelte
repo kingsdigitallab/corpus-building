@@ -89,7 +89,7 @@
 <svelte:head>
 	<title>Bibliography | {config.title}</title>
 	<meta name="description" content="Publications cited across the inscriptions in ISicily corpus" />
-	<meta name="tags" content="bibliography, publications, {config.title}" />
+	<meta name="keywords" content="bibliography, publications, {config.title}" />
 </svelte:head>
 
 <article>

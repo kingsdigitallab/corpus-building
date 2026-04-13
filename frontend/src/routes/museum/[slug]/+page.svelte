@@ -12,7 +12,7 @@
 <svelte:head>
 	<title>{museum.name} | {config.title}</title>
 	<meta name="description" content={museum.name} />
-	<meta name="tags" content="museum, inscriptions, {museum.name}" />
+	<meta name="keywords" content="museum, inscriptions, {museum.name}" />
 </svelte:head>
 
 {#snippet address(/** @type {import('./$types').PageData['museum']['location']} */ location)}

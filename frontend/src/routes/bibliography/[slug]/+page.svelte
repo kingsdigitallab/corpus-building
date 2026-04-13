@@ -11,7 +11,7 @@
 <svelte:head>
 	<title>{zotero.title} | {config.title}</title>
 	<meta name="description" content={zotero.title} />
-	<meta name="tags" content="bibliography, {zotero.title}" />
+	<meta name="keywords" content="bibliography, {zotero.title}" />
 </svelte:head>
 
 <article>
