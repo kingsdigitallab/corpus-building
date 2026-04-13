@@ -62,8 +62,8 @@
 						<Image
 							src="{config.imageServer}{inscription.facsimile.url}/{config.imageThumbParams}"
 							alt={inscription.facsimile.desc}
-							width={400}
-							height={200}
+							width={800}
+							height={400}
 						/>
 					</InscriptionLink>
 				{:else}
@@ -129,11 +129,34 @@
 
 <style>
 	.inscription-card {
-		border: 1px solid var(--border-color);
+		/*ZL added to solve overlapping boarder issue */
+		border-right: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
 		height: 100%;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
+		position: relative;
+	}
+
+	/*ZL - added hovering feature for card views here*/
+	/* .inscription-card:hover {
+		box-shadow: inset 0 0 0 1px var(--text-1);
+	} */
+
+	/*ZL - added hovering feature for card views here*/
+	.inscription-card::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		box-shadow: inset 0 0 0 0 var(--text-1);
+		transition: box-shadow 0.2s ease;
+		z-index: 3;
+	}
+
+	.inscription-card:hover::after {
+		box-shadow: inset 0 0 0 1px var(--text-1);
 	}
 
 	.card-header {
@@ -146,8 +169,48 @@
 		font-weight: normal;
 	}
 
+	/*ZL - adjusted the card image sizes*/
 	.card-image {
-		padding: var(--size-8) var(--size-4) 0 var(--size-4);
+		/* padding: var(--size-8) var(--size-4) 0 var(--size-4);*/
+		padding: var(--size-8) 0 0 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-image :global(a) {
+		display: block;
+		width: 100%;
+	}
+
+	.card-image :global(picture) {
+		display: block;
+		width: 100%;
+	}
+
+	.card-image :global(img) {
+		display: block;
+		width: 100%;
+		max-width: none;
+		height: auto;
+		transition:
+			filter 0.2s ease,
+			opacity 0.2s ease;
+	}
+
+	:global([data-color-scheme='dark']) .card-image :global(img) {
+		filter: brightness(0.76);
+	}
+
+	:global([data-color-scheme='dark']) .inscription-card:hover .card-image :global(img) {
+		filter: brightness(1);
+	}
+
+	:global([data-color-scheme='light']) .card-image :global(img) {
+		opacity: 0.76;
+	}
+
+	:global([data-color-scheme='light']) .inscription-card:hover .card-image :global(img) {
+		opacity: 0.9;
 	}
 
 	.card-image-placeholder {
@@ -157,7 +220,8 @@
 	}
 
 	.card-body {
-		padding-block: var(--size-4);
+		padding-top: var(--size-4); /*ZL adjusted the */
+		padding-bottom: var(--size-4);
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
@@ -202,12 +266,13 @@
 	}
 
 	.card-footer {
-		border-top: 1px solid var(--border-color);
+		border-top: 0.5px solid color-mix(in srgb, var(--border-color) 70%, transparent);
 		bottom: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding-block: var(--size-4);
+		padding-top: var(--size-6);
+		padding-bottom: var(--size-6);
 		padding-inline: var(--size-4);
 		text-align: left;
 	}
@@ -222,7 +287,18 @@
 	}
 
 	dt:not(:first-of-type) {
-		margin-block-start: var(--size-2);
+		/* margin-block-start: var(--size-2); ZL changed the spacing */
+		margin-top: var(--size-3);
+	}
+
+	dt {
+		/*ZL added*/
+		margin-bottom: var(--size-2);
+	}
+
+	dd {
+		/*ZL added*/
+		margin-bottom: var(--size-1);
 	}
 
 	dd {
