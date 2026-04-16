@@ -1,5 +1,62 @@
 
 
+# [0.26.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.25.0...v0.26.0) (2026-04-16)
+
+
+### Bug Fixes
+
+* **accessibility:** Change h3 to h2 ([328b16b](https://github.com/kingsdigitallab/corpus-building/commit/328b16bc7b77a47eb3cb42a9acdd30b40d31e0f3))
+* **api:** Add missing UTF-8 charset to Content-Type headers for XML and JSON API responses ([b088fa3](https://github.com/kingsdigitallab/corpus-building/commit/b088fa36e0bad1d23895fa03dc5bae3c0ea5cdab))
+* **bibliography:** Improve sorting accuracy ([13dc007](https://github.com/kingsdigitallab/corpus-building/commit/13dc00774d5b376293cc1f1571b02869e2472d9a))
+* **etl:** Improve metadata parsing robustness ([f609ecb](https://github.com/kingsdigitallab/corpus-building/commit/f609ecb147f9eb996a9a0908b81d08b746804ffe))
+* **etl:** Sanitize URLs in metadata extraction ([d260745](https://github.com/kingsdigitallab/corpus-building/commit/d260745d9c2595716ef7fd9f8053423fc45836f6))
+* **facetedsearch:** Disable search parms package from setting defaults ([5a3616b](https://github.com/kingsdigitallab/corpus-building/commit/5a3616b50c19be65c579200b7eb14450300e68d1))
+* **frontend:** Enforce minimum size for links ([13abf92](https://github.com/kingsdigitallab/corpus-building/commit/13abf92c8d266a6ee790413859a4e81b3b863992))
+* **inscription:** Improve checks for repository data ([3e25328](https://github.com/kingsdigitallab/corpus-building/commit/3e25328bb1922982aeb1f5c85b2ae45eba5727e7))
+* **inscriptiontable:** Make inscription search filter more robust ([839e013](https://github.com/kingsdigitallab/corpus-building/commit/839e013e3725c7c1e22efe42bcb633e4f6ef08b4))
+* **scrollspy:** Improve component active state tracking ([1da9534](https://github.com/kingsdigitallab/corpus-building/commit/1da953492e5589f069f3eff92a9f9060a9a140db))
+* **search:** Update lettering options logic to handle nested structures ([a5a1eb2](https://github.com/kingsdigitallab/corpus-building/commit/a5a1eb2cabe8e52e4ef6c0615e477d99945020a8))
+* **viz:** Prevent pluralisation of numeric-based category labels ([f8d4962](https://github.com/kingsdigitallab/corpus-building/commit/f8d4962b4ccb5a785e88812ef328ce428ee9cf9c))
+* **viz:** Wrap data table in a scrollable container for horizontal overflow ([28d5090](https://github.com/kingsdigitallab/corpus-building/commit/28d5090032f67e94a2a69441c2900097c4ce0417))
+
+
+### Features
+
+* **bibliography,museums:** Add a short description about the page ([00cc9b7](https://github.com/kingsdigitallab/corpus-building/commit/00cc9b7ba6d1b51f6efdd738df0bcf9b60812424))
+* **bibliography:** Enable support for multiple cited ranges per ([ee87067](https://github.com/kingsdigitallab/corpus-building/commit/ee870679978fcc924ae580e91e0287b80ac99f5e))
+* **bibliographyentry:** Display date as well as cited range for bulletin ([66524b4](https://github.com/kingsdigitallab/corpus-building/commit/66524b418d7074c5cc06e74174e1587670d95eb8))
+* **bibliography:** Remove max-inline-size constraint for hgroup elements ([5935e20](https://github.com/kingsdigitallab/corpus-building/commit/5935e20c80fb8278ed0735c6caf30525b048dd8f))
+* **bibliography:** Use the new biblio year field for sorting by year ([3104cb0](https://github.com/kingsdigitallab/corpus-building/commit/3104cb069cfc0f81218636813d793f207a816fd4))
+* **etl:** Add scripts to import petrography data ([8da2da6](https://github.com/kingsdigitallab/corpus-building/commit/8da2da67ff7897a80397463e69c879f5beafda37))
+* **etl:** Expand petrography scripts to import provenance data ([b3a40d7](https://github.com/kingsdigitallab/corpus-building/commit/b3a40d772b9596075ccce711faa26fc371b8a740))
+* **etl:** Extract country of origin ([b0bfe51](https://github.com/kingsdigitallab/corpus-building/commit/b0bfe518bdc137048cdbe2b0ead2747673b293e1))
+* **facetedsearch:** Add load more functionality in parallel with pagination ([41d76a3](https://github.com/kingsdigitallab/corpus-building/commit/41d76a38332ae22cbe5a8382102cd31590741413))
+* **footer:** Add background styling to footer logos ([67445f5](https://github.com/kingsdigitallab/corpus-building/commit/67445f53dd1a724c03f4e074474cb408b32b80e7))
+* **footer:** Add link to feedback form ([4978baf](https://github.com/kingsdigitallab/corpus-building/commit/4978baf7fdd0b4fc5e55d47dd3b543915004209d))
+* **frontend:** Add New Athena Unicode font submodule ([5972bbe](https://github.com/kingsdigitallab/corpus-building/commit/5972bbef3efd316dc2e6347ece5fefe0e24e62f6))
+* **frontend:** Add New Athena Unicode font submodule ([0bed6b5](https://github.com/kingsdigitallab/corpus-building/commit/0bed6b5c605beecb709b42b9232adf9ddf1b174c))
+* **frontend:** Add URL query parameters to control visualisation state ([5118671](https://github.com/kingsdigitallab/corpus-building/commit/5118671cc92223310f573ca30dffd358a981e11b))
+* **frontend:** Implement SEO improvements ([89c0e2c](https://github.com/kingsdigitallab/corpus-building/commit/89c0e2c3debf77ba6228daa095dc26f1ca711111))
+* **inscription:** Expand material display ([db38437](https://github.com/kingsdigitallab/corpus-building/commit/db384375c03b321830ea3ebb5962c3ef7195be94))
+* **inscriptionmap:** Add controls to the map ([125539b](https://github.com/kingsdigitallab/corpus-building/commit/125539bbb73b8992e279b3e8f5bec3b114a0cbfa))
+* **inscriptionmap:** Add width and height parameter to the map ([f06e507](https://github.com/kingsdigitallab/corpus-building/commit/f06e5079da333fa0b8c77b71a006853ad84ef9af))
+* **inscriptionplace:** Add title to place names ([43d7b50](https://github.com/kingsdigitallab/corpus-building/commit/43d7b50be4b186b0c7adca4bd551c984c0d2b297))
+* **inscriptiontable:** Dynamically build available sort options ([f6025ff](https://github.com/kingsdigitallab/corpus-building/commit/f6025ff5120cc1540067330c29a2c749c9e11039))
+* **linechard:** Add interactivity to the legend ([3d46247](https://github.com/kingsdigitallab/corpus-building/commit/3d46247382704105166c1e8c81a9df5540025fac))
+* **linechart:** Add 'Show all/Hide all' button to chart legend for toggling all series visibility ([51237ec](https://github.com/kingsdigitallab/corpus-building/commit/51237ec88d7dd80d979ae68bdf9019329bb624ed))
+* **map:** Add navigation to map points and improved tooltips ([59f68d1](https://github.com/kingsdigitallab/corpus-building/commit/59f68d1169547771ad50b41691aa166b29d5f35d))
+* **metadata:** Add a year field to the bibliography data ([9bd8cac](https://github.com/kingsdigitallab/corpus-building/commit/9bd8cac2e32b95adad954e2650d980365fa5ffb8))
+* **pages:** Do not display external link mark on image links ([c6802df](https://github.com/kingsdigitallab/corpus-building/commit/c6802df2acb561e7261bd731ae545ee2d3828c78))
+* **search:** Add country to search aggregations ([4180c01](https://github.com/kingsdigitallab/corpus-building/commit/4180c011a47fef37cfa24f4ff0a54d0b359a8361))
+* **technical-overview:** Add links to GitHub repositories ([0eb41ef](https://github.com/kingsdigitallab/corpus-building/commit/0eb41ef318b94115da205a9ba438861edd74aa22))
+* **technical-overview:** Add petrographic workflow diagram ([4f1f8d8](https://github.com/kingsdigitallab/corpus-building/commit/4f1f8d806d49005e26ea880594b1438b4bcd2f68))
+* **viz:** Add "colour by" functionality to the histogram view ([0367b4e](https://github.com/kingsdigitallab/corpus-building/commit/0367b4ee39d611a57a6deef19e0f9bb0b6f78ea0))
+* **viz:** Add data dimensions to map visualisation ([fd4c8a9](https://github.com/kingsdigitallab/corpus-building/commit/fd4c8a92d007ad7d61439a980d1507ed27595b17))
+* **viz:** Add line chart visualisation ([c659081](https://github.com/kingsdigitallab/corpus-building/commit/c659081c34b10a454a0ac86f64f4bc6406e036f9))
+* **viz:** Expand visualisation colour palette to 12 entries ([73d6b9c](https://github.com/kingsdigitallab/corpus-building/commit/73d6b9c5dac5e8cb7c92c9854f825c658b495a8b))
+* **viz:** Increase LineChart legend container max-height from 30vh to 40vh ([24806fd](https://github.com/kingsdigitallab/corpus-building/commit/24806fda31228eab9504727351be2d85c1e48b86))
+* **viz:** Use CSS variables for colour palettes ([70a4d23](https://github.com/kingsdigitallab/corpus-building/commit/70a4d2320f7c9c29de43e81ce494d29ac2680217))
+
 # [0.25.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.24.0...v0.25.0) (2026-02-12)
 
 
