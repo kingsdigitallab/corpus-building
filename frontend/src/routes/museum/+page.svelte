@@ -279,10 +279,12 @@
 		border-radius: var(--radius-2);
 		padding: var(--size-3) var(--size-4);
 		background: var(--surface-1);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: var(--size-2);
+
+		display: grid;
+		grid-template-rows: minmax(2.6em, auto) auto minmax(3.2em, auto);
+		row-gap: var(--size-2);
+		align-content: start;
+
 		min-height: 200px;
 	}
 
@@ -292,6 +294,13 @@
 		font-weight: 600;
 		line-height: 1.3;
 		word-break: break-word;
+
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
+		min-height: 2.8em;
 	}
 	.title:hover,
 	.title:focus {
@@ -300,18 +309,25 @@
 
 	.meta-line {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-start;
 		gap: var(--size-2);
-		align-items: center;
+		align-items: left;
 		font-size: var(--font-size-1);
+		margin-top: var(--size-2);
 	}
 
 	.description {
-		font-size: var(--font-size-1);
-		color: var(--text-2);
+		margin-top: var(--size-6);
+		font-size: 0.9rem;
+		font-weight: 300;
+		color: color-mix(in oklab, var(--text-1) 75%, transparent);
 		line-height: 1.4;
+		height: calc(1.4em * 2);
+		max-height: calc(1.4em * 2);
+
 		display: -webkit-box;
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
