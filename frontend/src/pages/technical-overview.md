@@ -145,9 +145,11 @@ By integrating different layers of annotations in the same publication, the site
 
 ## Source Code
 
-- [Palaeographic Annotation repository](https://github.com/kingsdigitallab/crossreads)
-- [Petrographic Analysis repository](https://github.com/kingsdigitallab/crossreads-petrography)
-- [Corpus Building repository](https://github.com/kingsdigitallab/corpus-building)
+<ul class="tap-target-links">
+  <li><a href="https://github.com/kingsdigitallab/crossreads">Palaeographic Annotation repository</a></li>
+  <li><a href="https://github.com/kingsdigitallab/crossreads-petrography">Petrographic Analysis repository</a></li>
+  <li><a href="https://github.com/kingsdigitallab/corpus-building">Corpus Building repository</a></li>
+</ul>
 
 ## Acknowledgements
 
