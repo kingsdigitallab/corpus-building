@@ -32,7 +32,10 @@ export function updateMaterialElement(xml, entry) {
   attrs = attrs.replace(/\s+resp="[^"]*"/g, "");
 
   // Build the new leading attributes (ana first, matching EpiDoc conventions)
-  let leading = ` ana="${entry.ana}"`;
+  let leading = ''
+  if (entry.ana.trim().length) {
+    leading += ` ana="${entry.ana}"`;
+  }
   leading += ` type="${entry.type}"`;
   leading += ` subtype="${entry.subtype}"`;
   if (entry.addCoccatoResp) leading += ` resp="#Coccato"`;
