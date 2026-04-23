@@ -116,17 +116,26 @@
 	.discover-link {
 		align-items: center;
 		color: var(--text-1);
-		display: flex;
+		display: inline-flex;
 		font-size: var(--font-size-2);
 		font-weight: bold;
-		gap: var(--size-2);
+		gap: var(--size-4);
 		text-decoration: none;
+
+		min-height: 44px;
+		padding-block: var(--size-1);
 	}
 
 	.arrow {
 		border-radius: var(--radius);
 		border: var(--border-size-1) solid var(--border-color);
 		padding-inline: var(--size-2);
+
+		min-width: 44px;
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.discover-link-text {

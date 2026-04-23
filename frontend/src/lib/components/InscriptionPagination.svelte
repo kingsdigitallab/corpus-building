@@ -56,16 +56,22 @@
 		align-items: center;
 		display: flex;
 		gap: var(--size-2);
-		height: 100%;
 		justify-content: center;
 
-		:global(button) {
+		:global(button),
+		:global(a) {
 			background: none;
 			border: none;
 			box-shadow: none;
 			font-weight: inherit;
-			height: 100%;
 			text-shadow: none;
+
+			min-width: 44px;
+		    min-height: 44px;
+		    display: inline-flex;
+		    align-items: center;
+		    justify-content: center;
+		    border-radius: var(--radius-2);
 
 			&:hover {
 				background: var(--surface-4);

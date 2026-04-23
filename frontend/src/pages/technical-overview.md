@@ -127,7 +127,7 @@ The homepage was designed to immediately guide users into the dataset through a 
 
 Iterations focused on hierarchy and call-to-action clarity, establishing search as the primary entry point. The design balances accessibility for first-time users with the depth and flexibility required for more advanced academic research.
 
-![User research synthesis board with workshop notes, feedback clustering, and prioritisation across multiple participants.](images/technical_overview/Untitled-1-04.jpg 'Remote Usability Testing')
+![User research synthesis board with workshop notes, feedback clustering, and prioritisation across multiple participants.](images/technical_overview/remoteworkshop.jpg 'Remote Usability Testing')
 
 _Figure 7: Remote usability testing workshops._
 
@@ -145,9 +145,11 @@ By integrating different layers of annotations in the same publication, the site
 
 ## Source Code
 
-- [Palaeographic Annotation repository](https://github.com/kingsdigitallab/crossreads)
-- [Petrographic Analysis repository](https://github.com/kingsdigitallab/crossreads-petrography)
-- [Corpus Building repository](https://github.com/kingsdigitallab/corpus-building)
+<ul class="tap-target-links">
+  <li><a href="https://github.com/kingsdigitallab/crossreads">Palaeographic Annotation repository</a></li>
+  <li><a href="https://github.com/kingsdigitallab/crossreads-petrography">Petrographic Analysis repository</a></li>
+  <li><a href="https://github.com/kingsdigitallab/corpus-building">Corpus Building repository</a></li>
+</ul>
 
 ## Acknowledgements
 

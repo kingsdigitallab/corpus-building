@@ -40,6 +40,17 @@
 		text-underline-offset: 2px;
 	}
 
+	:global(.md .tap-target-links a) {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		padding-inline: var(--size-2);
+	}
+
+	:global(.md .tap-target-links li) {
+		margin-bottom: 4px;
+	}
+
 	:global(.md a[href^='http']:not(.badge)):not(:has(img))::after {
 		content: '↗';
 		margin-left: 0.25em;
