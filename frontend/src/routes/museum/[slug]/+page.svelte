@@ -36,11 +36,6 @@
 			{/if}
 
 			<ul class="links">
-				<li>
-					<a href={museum.uri} target="museum">
-						View in current site <LucideExternalLink />
-					</a>
-				</li>
 				{#if museum.url}
 					<li>
 						<a href={museum.url} target="museum">{museum.url} <LucideExternalLink /></a>

@@ -83,6 +83,8 @@
 		<dd>{metadata.file}</dd>
 		<dt>Language</dt>
 		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
+		<dt>Status</dt>
+		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
 		<dd class="inscription-type">
 			{#if metadata.type}
@@ -111,14 +113,6 @@
 				{/if}
 			</dd>
 		{/if}
-		<dt>Status</dt>
-		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
-		<dt>Links</dt>
-		<dd>
-			<a href="{config.publicUrl}inscription/{slug}" target="inscription">
-				View in current site <LucideExternalLink />
-			</a>
-		</dd>
 	</dl>
 </section>
 
