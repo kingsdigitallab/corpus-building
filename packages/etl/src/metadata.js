@@ -229,7 +229,9 @@ function getMaterial(xml) {
     ?.supportDesc?.support?.material;
   
   // convert the pipe separated list of values in the string into an array
-  ret.subtype = (ret?.subtype || '').split("|").map((g) => g.trim())
+  if (ret) {
+    ret.subtype = ((ret?.subtype || '').split("|").map((g) => g.trim())).filter(g => g)
+  }
 
   return ret
 }

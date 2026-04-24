@@ -356,7 +356,7 @@ export function load({
 				language: item?.textLang?.languages ?? undefined,
 				inscriptionType: [...(getHierarchicalValues(item.type?.ana) || []), ...(getHierarchicalValues(item.type?.certainty?.assertedValue)?.map(v => `${v} (possibly)`) || [])],
 				objectType: getHierarchicalValues(item.objectType?.ana),
-				material: getHierarchicalValues(item.material?.type),
+				material: getHierarchicalValues(item.material?.type, false),
 				lithotype: item.material?.subtype,
 				technique: getHierarchicalValues(technique),
 				pigment: getHierarchicalValues(pigment),
