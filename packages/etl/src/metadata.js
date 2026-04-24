@@ -225,8 +225,13 @@ function getObjectType(xml) {
 }
 
 function getMaterial(xml) {
-  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+  let ret = xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
     ?.supportDesc?.support?.material;
+  
+  // convert the pipe separated list of values in the string into an array
+  ret.subtype = (ret?.subtype || '').split("|").map((g) => g.trim())
+
+  return ret
 }
 
 function getCondition(xml) {

@@ -92,6 +92,14 @@ const searchConfig = {
 			conjunction: false,
 			chosen_filters_on_top: false
 		},
+		lithotype: {
+			title: 'Lithotype',
+			hide_zero_doc_count: true,
+			size: 200,
+			sort: 'key',
+			conjunction: false,
+			chosen_filters_on_top: false
+		},
 		technique: {
 			title: 'Execution technique',
 			hide_zero_doc_count: true,
@@ -349,6 +357,7 @@ export function load({
 				inscriptionType: [...(getHierarchicalValues(item.type?.ana) || []), ...(getHierarchicalValues(item.type?.certainty?.assertedValue)?.map(v => `${v} (possibly)`) || [])],
 				objectType: getHierarchicalValues(item.objectType?.ana),
 				material: getHierarchicalValues(item.material?.type),
+				lithotype: item.material?.subtype,
 				technique: getHierarchicalValues(technique),
 				pigment: getHierarchicalValues(pigment),
 				lettering: getLetteringOptions(item?.handNote?.lettering),
