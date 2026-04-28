@@ -36,9 +36,15 @@ export function updateMaterialElement(xml, entry) {
   if (entry.ana.trim().length) {
     leading += ` ana="${entry.ana}"`;
   }
-  leading += ` type="${entry.type}"`;
-  leading += ` subtype="${entry.subtype}"`;
-  if (entry.addCoccatoResp) leading += ` resp="#Coccato"`;
+  if (entry.type.trim().length) {
+    leading += ` type="${entry.type}"`;
+  }
+  if (entry.subtype.trim().length) {
+    leading += ` subtype="${entry.subtype}"`;
+  }
+  if (entry.addCoccatoResp) {
+    leading += ` resp="#Coccato"`;
+  }
 
   const newTag = `<material${leading}${attrs}>`;
   return xml.replace(materialTagRegex, newTag);
