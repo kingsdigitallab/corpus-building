@@ -74,12 +74,11 @@ The content listed below is non-accessible for the following reasons.
 Oxford University in collaboration with King’s College London is committed to fixing or providing alternatives for all issues that we are made aware of or are identified by our internal testing and auditing processes. 
 
 ​Activities to improve the accessibility of this website are as follows:
-- Accessibility review planned in first half of 2026 when data visualizations will be added to the website
 - Scope the need for accessibility reviews as part of any Service Level Agreement to be agreed between Oxford University and King’s Digital Lab following the end of the funded period (September 2026)​ 
 
 ## Preparation of this accessibility statement 
 
-This statement was prepared on ​14 November 2025​. It was last reviewed on ​28 April 2026​. 
+This statement was prepared on ​14 November 2025​. It was last reviewed on ​29 April 2026​. 
 
 This website was last tested on ​28 April 2026​.  
 
