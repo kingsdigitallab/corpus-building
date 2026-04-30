@@ -704,4 +704,10 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 		background-color: var(--blue-4);
 		color: white;
 	}
+
+	:global(.epidoc .line) {
+		/* Prevents long strings in XML display to run out of parent div 
+		See ISic000006 and CU https://app.clickup.com/t/86c7kmmrk */
+		overflow-wrap: break-word;
+	}
 </style>
