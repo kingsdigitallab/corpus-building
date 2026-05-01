@@ -37,7 +37,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -74,7 +79,54 @@
     }
   },
   "handNote": {
-    "lettering": "Regularly spaced letters of even height, neatly cut (a broad v-cut) with minimal terminations to the strokes. Alpha has straight bar; Kappa has short arms, centrally placed; Omicron is very small (105 mm) and midline; sigma has horizontal top and bottom strokes.",
+    "lettering": [
+      "Regularly spaced letters of even height, neatly cut (a broad v-cut) with minimal terminations to the strokes. Alpha has straight bar; Kappa has short arms, centrally placed; Omicron is very small (105 mm) and midline; sigma has horizontal top and bottom strokes.",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html"
+          },
+          {
+            "_": "Α type1.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.3.html"
+          },
+          {
+            "_": "Δ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Δ-type2.html"
+          },
+          {
+            "_": "Ι type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+          },
+          {
+            "_": "Κ type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Κ-type1.html"
+          },
+          {
+            "_": "Κ type1.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Κ-type1.1.html"
+          },
+          {
+            "_": "Ο type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
+          },
+          {
+            "_": "Ο type1.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.2.html"
+          },
+          {
+            "_": "Σ tyoe3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-tyoe3.2.html"
+          },
+          {
+            "_": "Σ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -82,26 +134,29 @@
         "from": "line1",
         "to": "line1",
         "h": "175-200",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "175",
+        "atMost": "200"
       }
     ]
   },
   "date": {
     "_": "3rd century BCE",
     "notBefore": -300,
-    "notAfter": -200,
-    "precision": "low"
+    "notAfter": -201
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +165,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found c.1961 below the Euryelos fortifications, in the 'Dionysian walls', from the slope below the\n                            fortifications by the city gate crossed by the modern 'via Epipole', in the direction of the castello Eurialo",
     "type": "found",
@@ -117,6 +174,7 @@
     "notAfter": "1961",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Currently located beside the path between ticket office and public toilets near the entrance to the site",
     "type": "observed",
@@ -182,7 +240,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -205,7 +262,10 @@
           "lon": 15.22299
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462204"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462204"
+      }
     }
   },
   "textLang": {
@@ -229,29 +289,35 @@
           "_": "https://biblio.inscriptiones.org/epig10001955",
           "target": "https://biblio.inscriptiones.org/epig10001955"
         },
+        "inscriptionDate": "1961",
         "title": "Nuovi elementi di epigrafia siracusana",
-        "citation": "<span>G.V. Gentili, «Nuovi elementi di epigrafia siracusana», <i>Archivio Storico Siracusano</i> 7 (1961): 5–25</span>"
+        "citation": "<span>G.V. Gentili, «Nuovi elementi di epigrafia siracusana», <i>Archivio Storico Siracusano</i> 7 (1961): 5–25</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CBDGFVEG",
+        "year": "1961"
       },
       {
         "author": "Manganaro",
         "date": "1963",
         "citedRange": "52 n.5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/M3UEW68D"
+          "target": "https://www.zotero.org/groups/382445/items/M3UEW68D"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001850",
           "target": "https://biblio.inscriptiones.org/epig10001850"
         },
+        "inscriptionDate": "1963",
         "title": "Nuove ricerche di epigrafia siceliota",
-        "citation": "<span>Giacomo Manganaro, «Nuove ricerche di epigrafia siceliota», <i>Siculorum Gymnasium</i> 16 (1963): 51–64</span>"
+        "citation": "<span>Giacomo Manganaro, «Nuove ricerche di epigrafia siceliota», <i>Siculorum Gymnasium</i> 16 (1963): 51–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M3UEW68D",
+        "year": "1963"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -275,20 +341,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -299,16 +351,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited file from autopsy and publications, added images and bibl",
-      "when": "2021-04-22",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2026-02-11",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "644821",
   "facsimile": {
     "n": "screen",
     "url": "ISic003426_tiled.tif",
@@ -317,11 +381,19 @@
     "desc": "Photo J. Prag, 2015",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 175,
+      "atMost": 200
+    }
+  ],
   "publications": [
     "Gentili, 1961, Nuovi elementi di epigrafia siracusana",
     "Manganaro, 1963, Nuove ricerche di epigrafia siceliota"
+  ],
+  "zotero": [
+    "CBDGFVEG",
+    "M3UEW68D"
   ],
   "keywords": [
     "isic003426",
@@ -334,7 +406,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "area archeologica castello eurialo",

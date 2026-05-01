@@ -43,9 +43,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Very fine-grained, spotted and veined, white, calcitic marble, likely Lunense. Digital microscopy: homeoblastic fabric. ND only: ho, veined and spotted (identification based on pXRF, digital microscopy, XRD)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Carrara",
+        "target": "https://www.geonames.org/6542087/carrara.html"
+      },
+      "location": {
+        "geo": "44.06294,10.06069"
+      }
+    }
   },
   "condition": {
     "ana": "#condition.complete"
@@ -89,7 +104,9 @@
         "from": "line1",
         "to": "line4",
         "h": "30-45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -103,19 +120,20 @@
   "date": {
     "_": "4th — 5th century CE",
     "notBefore": 301,
-    "notAfter": 500,
-    "precision": "low"
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -124,6 +142,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Found in Contrada Gelofia, Centuripe, 1877 ",
     "type": "found",
@@ -134,6 +154,10 @@
       14.733503
     ]
   },
+  "provenanceGeo": [
+    37.614275,
+    14.733503
+  ],
   "provenanceObserved": {
     "_": "Quagliana 2022-05-23",
     "type": "observed",
@@ -152,7 +176,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -196,31 +219,42 @@
         "n": "SEG",
         "citedRange": "26.1074",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1975.0454",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "13",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -228,22 +262,28 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Fiorelli",
-        "title": "NSA",
-        "date": "1878",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "175-176",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1878",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Ferrua",
@@ -255,28 +295,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001995",
           "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "author": "Giuffrida",
         "date": "2020",
         "citedRange": "60-61",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/KISJUYBW"
+          "target": "https://www.zotero.org/groups/382445/items/KISJUYBW"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002323",
           "target": "https://biblio.inscriptiones.org/epig10002323"
         },
+        "inscriptionDate": "2020",
         "title": "Aurelius Samohil between ius and identity",
-        "citation": "<span>Claudia Giuffrida, ‘Aurelius Samohil between Ius and Identity’, <i>Codex. Giornale Romanistico Di Studi Giuridici Politici e Sociali</i> 1 (2020): 59–88</span>"
+        "citation": "<span>Claudia Giuffrida, ‘Aurelius Samohil between Ius and Identity’, <i>Codex. Giornale Romanistico Di Studi Giuridici Politici e Sociali</i> 1 (2020): 59–88</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/KISJUYBW",
+        "year": "2020"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -304,20 +352,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -328,8 +362,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -338,6 +373,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "493900",
   "facsimile": {
     "n": "screen",
     "url": "ISic000794_tiled.tif",
@@ -346,15 +382,27 @@
     "desc": "Photo J.Prag 2022-05-23",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 45
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    null,
-    "IGMusPalermo",
-    "Fiorelli, 1878, NSA",
-    "Ferrua, 1989",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Notizie degli scavi di antichità, 1876-",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
     "Giuffrida, 2020, Aurelius Samohil between ius and identity"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "R46KDTZX",
+    "F66S4X3M",
+    "4MCP2PVV",
+    "759ZXHKQ",
+    "KISJUYBW"
   ],
   "keywords": [
     "isic000794",
@@ -364,10 +412,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "very fine-grained, spotted and veined, white, calcitic marble, likely lunense. digital microscopy: homeoblastic fabric. nd only: ho, veined and spotted (identification based on pxrf, digital microscopy, xrd)",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

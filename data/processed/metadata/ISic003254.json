@@ -32,7 +32,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -81,19 +86,20 @@
   "date": {
     "_": "2nd — beginning 3rd century (K)",
     "notBefore": 101,
-    "notAfter": 250,
-    "precision": "low"
+    "notAfter": 250
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,11 +108,14 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "sala IX.120, mag. sup.",
     "type": "observed",
@@ -123,7 +132,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -165,56 +173,63 @@
       {
         "type": "corpus",
         "n": "CIL",
-        "citedRange": {
-          "ref": {
-            "_": "06.2555",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
-          }
-        },
+        "author": "Bormann and Henzen",
+        "date": "1876",
+        "citedRange": "2555",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/VVHPQFD3"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001134",
+          "target": "https://biblio.inscriptiones.org/epig10001134"
+        },
+        "inscriptionDate": "1876",
+        "year": ""
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "\n                                10.1088*310",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
+            "_": "1088*.310",
+            "target": "http://arachne.uni-koeln.de/item/buch/4004"
           }
         },
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/HSQETNGN"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001137",
+          "target": "https://biblio.inscriptiones.org/epig10001137"
+        },
+        "inscriptionDate": "1883",
+        "year": ""
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "126",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -238,20 +253,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -262,8 +263,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -272,6 +274,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "285131",
   "facsimile": {
     "n": "screen",
     "url": "ISic003254_tiled.tif",
@@ -280,12 +283,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "CIL",
-    "IMusCatania"
+    "Bormann and Henzen, 1876, CIL",
+    "Mommsen, 1883, CIL",
+    "Korhonen, 2004, IMusCatania"
+  ],
+  "zotero": [
+    "VVHPQFD3",
+    "HSQETNGN",
+    "2EUC82DH"
   ],
   "keywords": [
     "isic003254",
@@ -297,7 +304,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

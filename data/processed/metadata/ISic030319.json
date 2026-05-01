@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "bronze",
-    "ana": "#material.metal.bronze",
+    "ana": "#material.inorganic.metal.bronze",
+    "type": "metal.bronze",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
   "condition": {
@@ -197,25 +201,28 @@
         "from": "line1",
         "to": "line1",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       }
     ]
   },
   "date": {
     "_": "second half of the 4th century BCE",
     "notBefore": -350,
-    "notAfter": -300,
-    "precision": "low"
+    "notAfter": -301
   },
   "places": [
     {
       "_": "Palikè",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/465970"
+      "ref": "https://pleiades.stoa.org/places/465970",
+      "region": "Sicilia"
     },
     {
       "_": "Area archeologica di Palikè",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -224,6 +231,8 @@
       14.697361
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Palikè",
   "provenanceFound": {
     "_": "Found outside of the city wall along the northeast side of the hill of Palikè by the local landowner Sig. A. Tranquillità (Gentili 1962).",
     "type": "found",
@@ -233,6 +242,10 @@
       14.697361
     ]
   },
+  "provenanceGeo": [
+    37.329954,
+    14.697361
+  ],
   "provenanceObserved": {
     "_": "Mignosa 2021-01-17",
     "type": "observed",
@@ -252,7 +265,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -295,14 +307,17 @@
         "author": "Gentili",
         "date": "1962-1963",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3HGQKQ37"
+          "target": "https://www.zotero.org/groups/382445/items/3HGQKQ37"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001442",
           "target": "https://biblio.inscriptiones.org/epig10001442"
         },
+        "inscriptionDate": "1962",
         "title": "Cinturone Eneo con Dedica da Palikè",
-        "citation": "<span>G.V. Gentili, «Cinturone Eneo con Dedica da Palikè», <i>Mitteilungen des Deutschen Archaologischen Instituts, Roemische Abteilung</i> 69–70 (1963 1962): 14–20</span>"
+        "citation": "<span>G.V. Gentili, «Cinturone Eneo con Dedica da Palikè», <i>Mitteilungen des Deutschen Archaologischen Instituts, Roemische Abteilung</i> 69–70 (1963 1962): 14–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3HGQKQ37",
+        "year": "1962"
       }
     ]
   },
@@ -314,30 +329,36 @@
         "date": "2003",
         "citedRange": "147",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/KHEHA75N"
+          "target": "https://www.zotero.org/groups/382445/items/KHEHA75N"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002360",
           "target": "https://biblio.inscriptiones.org/epig10002360"
         },
+        "inscriptionDate": "2003",
         "title": "The Sanctuary of the Divine Palikoi (Rocchicella di Mineo, Sicily): Fieldwork from 1995 to 2001",
-        "citation": "<span>Laura Maniscalco and B.E. McConnell, ‘The Sanctuary of the Divine Palikoi (Rocchicella Di Mineo, Sicily): Fieldwork from 1995 to 2001’, <i>American Journal of Archaeology</i> 107, no. 2 (2003): 145–80</span>"
+        "citation": "<span>Laura Maniscalco and B.E. McConnell, ‘The Sanctuary of the Divine Palikoi (Rocchicella Di Mineo, Sicily): Fieldwork from 1995 to 2001’, <i>American Journal of Archaeology</i> 107, no. 2 (2003): 145–80</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/KHEHA75N",
+        "year": "2003"
       },
       {
         "author": "Tagliamonte",
         "date": "1994",
         "citedRange": "146-148",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/AFXW2VT5"
+          "target": "https://www.zotero.org/groups/382445/items/AFXW2VT5"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002361",
           "target": "https://biblio.inscriptiones.org/epig10002361"
         },
+        "inscriptionDate": "1994",
         "title": "I Figli di Marte: Mobilità, Mercenari e Mercenariato Italici in Magna Grecia e Sicilia",
-        "citation": "<span>G. Tagliamonte, <i>I Figli di Marte: Mobilità, Mercenari e Mercenariato Italici in Magna Grecia e Sicilia</i> (Roma, 1994)</span>"
+        "citation": "<span>G. Tagliamonte, <i>I Figli di Marte: Mobilità, Mercenari e Mercenariato Italici in Magna Grecia e Sicilia</i> (Roma, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/AFXW2VT5",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "citation": {
@@ -361,30 +382,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic030319_tiled.tif",
@@ -393,10 +407,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Palikè",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Gentili, 1962-1963, Cinturone Eneo con Dedica da Palikè"
+  ],
+  "zotero": [
+    "3HGQKQ37"
   ],
   "keywords": [
     "isic030319",
@@ -409,7 +430,7 @@
     "bronze",
     "palikè",
     "area archeologica di palikè",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

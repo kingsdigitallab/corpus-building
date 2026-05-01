@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line3",
         "h": "8-15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "8",
+        "atMost": "15"
       },
       {
         "type": "interlinear",
@@ -95,19 +102,20 @@
   "date": {
     "_": "4th — 5th century CE",
     "notBefore": 301,
-    "notAfter": 500,
-    "precision": "low"
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +124,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in 1740 \"in Stesichori area\", Catania (Amico).",
     "type": "found",
@@ -123,6 +133,7 @@
     "when": "1740",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Observed by Amico in Museo Biscari, later by Korhonen in Magazzino del cortile, Collezione Biscari (formerly sala VI 89).",
     "type": "observed",
@@ -139,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -183,44 +193,58 @@
         "date": "1741",
         "citedRange": "274 no.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F5INCW3T"
+          "target": "https://www.zotero.org/groups/382445/items/F5INCW3T"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002186",
           "target": "https://biblio.inscriptiones.org/epig10002186"
-        }
+        },
+        "inscriptionDate": "1741",
+        "title": "Catana Ilustrata",
+        "citation": "<span>V. and Statella Amico E., <i>Catana Ilustrata</i>, vol. 3 (Catanae, 1741)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F5INCW3T",
+        "year": "1741"
       },
       {
         "author": "Ferrara",
         "date": "1829",
         "citedRange": "383 no.7",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/82T4IWDN"
+          "target": "https://www.zotero.org/groups/382445/items/82T4IWDN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002005",
           "target": "https://biblio.inscriptiones.org/epig10002005"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Storia di Catania sino alla fine del secolo XVIII",
+        "citation": "<span>F. Ferrara, <i>Storia di Catania sino alla fine del secolo XVIII</i> (Catania, 1829)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82T4IWDN",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "189",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -249,20 +273,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -273,8 +283,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -283,6 +294,7 @@
       "who": "#martaf"
     }
   },
+  "tmNumber": "645555",
   "facsimile": {
     "n": "screen",
     "url": "ISic003287_tiled.tif",
@@ -291,12 +303,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 8,
+      "atMost": 15
+    }
+  ],
   "publications": [
-    "Amico, 1741",
-    "Ferrara, 1829",
-    "IMusCatania"
+    "Amico, 1741, Catana Ilustrata",
+    "Ferrara, 1829, Storia di Catania sino alla fine del secolo XVIII",
+    "Korhonen, 2004, IMusCatania"
+  ],
+  "zotero": [
+    "F5INCW3T",
+    "82T4IWDN",
+    "2EUC82DH"
   ],
   "keywords": [
     "isic003287",
@@ -309,7 +330,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

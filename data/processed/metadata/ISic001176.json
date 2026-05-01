@@ -39,8 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -72,7 +74,78 @@
     }
   },
   "handNote": {
-    "lettering": "The letters are regularly cut, with deep terminations to the strokes rather than extended serifs. Epsilon has a shorter middle bar, detached from the main vertical; omicron is very slightly smaller than the other letters; omega is almost, or completely closed, with a slightly elliptical rather than purely circular form.",
+    "lettering": [
+      "The letters are regularly cut, with deep terminations to the strokes rather than extended serifs. Epsilon has a shorter middle bar, detached from the main vertical; omicron is very slightly smaller than the other letters; omega is almost, or completely closed, with a slightly elliptical rather than purely circular form.",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html"
+          },
+          {
+            "_": "Α type1.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.3.html"
+          },
+          {
+            "_": "Ε type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.html"
+          },
+          {
+            "_": "Ε type2.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.3.html"
+          },
+          {
+            "_": "Ε type2.3.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.3.3.html"
+          },
+          {
+            "_": "Κ type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Κ-type1.html"
+          },
+          {
+            "_": "Ν type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type2.html"
+          },
+          {
+            "_": "Ν type2.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type2.2.html"
+          },
+          {
+            "_": "Ο type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
+          },
+          {
+            "_": "Ρ type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.html"
+          },
+          {
+            "_": "Ρ type1.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.1.html"
+          },
+          {
+            "_": "Σ tyoe3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-tyoe3.2.html"
+          },
+          {
+            "_": "Σ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+          },
+          {
+            "_": "Ω type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ω-type2.html"
+          },
+          {
+            "_": "Ω type2.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ω-type2.2.html"
+          },
+          {
+            "_": "Ω type2.2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ω-type2.2.1.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -80,7 +153,9 @@
         "from": "line1",
         "to": "line3",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -94,20 +169,21 @@
   "date": {
     "_": "2nd — 1st century BCE (letter forms and formulae)",
     "notBefore": -200,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -1
   },
   "places": [
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,12 +192,15 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "Halaesa",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "The stone was seen by Gualtherus (1624) in a building adjacent to the church of S. Maria dei Palazzi.",
     "type": "observed",
@@ -168,7 +247,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
   "repository": {
@@ -210,19 +288,23 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0354",
+            "_": "354",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
@@ -234,37 +316,51 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Gualtherus",
-        "date": "(no date)",
-        "citedRange": "24 no.140"
+        "date": "1624",
+        "citedRange": "140",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "47 no.302",
+            "_": "302",
             "target": "http://arachne.uni-koeln.de/item/buchseite/310972"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Castelli",
@@ -282,15 +378,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002086",
           "target": "https://biblio.inscriptiones.org/epig10002086"
         },
+        "inscriptionDate": "1753",
         "title": "Storia di Alesa, antica città di Sicilia",
-        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Storia di Alesa, antica città di Sicilia</i> (Palermo: Stamperia de SS. Appostoli in Piazza Vigliena, presso Pietro Bentivenga, 1753), <a href=\"http://arachne.uni-koeln.de/books/Castelli1763\">http://arachne.uni-koeln.de/books/Castelli1763</a></span>"
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Storia di Alesa, antica città di Sicilia</i> (Palermo: Stamperia de SS. Appostoli in Piazza Vigliena, presso Pietro Bentivenga, 1753), <a href=\"http://arachne.uni-koeln.de/books/Castelli1763\">http://arachne.uni-koeln.de/books/Castelli1763</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/U7S4ZAG3",
+        "year": "1753"
       },
       {
         "author": "Castelli",
         "date": "1769",
         "citedRange": {
           "ref": {
-            "_": "22 cl.3 no.9",
+            "_": "cl.3 no.9",
             "target": "http://arachne.uni-koeln.de/item/buchseite/501318"
           }
         },
@@ -300,14 +399,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
         "date": "1784",
         "citedRange": {
           "ref": {
-            "_": "25 cl.3 no.10",
+            "_": "cl.3 no.10",
             "target": "http://arachne.uni-koeln.de/item/buchseite/501728"
           }
         },
@@ -317,34 +421,50 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5596",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5596",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5202",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://www.zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       },
       {
         "author": "Scibona",
@@ -357,8 +477,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001595",
           "target": "https://biblio.inscriptiones.org/epig10001595"
         },
+        "inscriptionDate": "2008",
         "title": "La chiesa e il complesso edilizio postmedievale",
-        "citation": "<span>G. Scibona, <i>La chiesa e il complesso edilizio postmedievale</i>, Introduzione all’archeologia di Halaesa 2 (Palermo: Regione Siciliana, 2008)</span>"
+        "citation": "<span>G. Scibona, <i>La chiesa e il complesso edilizio postmedievale</i>, Introduzione all’archeologia di Halaesa 2 (Palermo: Regione Siciliana, 2008)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QZ3DGIQJ",
+        "year": "2008"
       },
       {
         "author": "Scibona",
@@ -371,8 +494,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001593",
           "target": "https://biblio.inscriptiones.org/epig10001593"
         },
+        "inscriptionDate": "2008",
         "title": "The Epigraphs",
-        "citation": "<span>G. Scibona, ‘The Epigraphs’, in <i>Alesa Archonidea. Guide to the Antiquarium</i>, ed. G. Scibona and G. Tigano (Palermo: Regione Siciliana, 2008), 25–27</span>"
+        "citation": "<span>G. Scibona, ‘The Epigraphs’, in <i>Alesa Archonidea. Guide to the Antiquarium</i>, ed. G. Scibona and G. Tigano (Palermo: Regione Siciliana, 2008), 25–27</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6GFVUASD",
+        "year": "2008"
       },
       {
         "author": "Scibona",
@@ -385,11 +511,14 @@
           "_": "https://biblio.inscriptiones.org/epig10001592",
           "target": "https://biblio.inscriptiones.org/epig10001592"
         },
+        "inscriptionDate": "2009",
         "title": "Decreto sacerdotale per il conferimento della euerghesia a Nemenios in Halaesa",
-        "citation": "<span>G. Scibona, «Decreto sacerdotale per il conferimento della euerghesia a Nemenios in Halaesa», in <i>Alaisa-Halaesa. Scavi e ricerche (1970-2007)</i>, a c. di G. Scibona e G. Tigano (Messina, 2009), 97–112</span>"
+        "citation": "<span>G. Scibona, «Decreto sacerdotale per il conferimento della euerghesia a Nemenios in Halaesa», in <i>Alaisa-Halaesa. Scavi e ricerche (1970-2007)</i>, a c. di G. Scibona e G. Tigano (Messina, 2009), 97–112</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ANG99H3X",
+        "year": "2009"
       },
       {
-        "author": "Prestianni Giallombardo and Facella",
+        "author": "Prestianni Giallombardo, Facella",
         "date": "2012",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/M5NPN3MF"
@@ -398,8 +527,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001655",
           "target": "https://biblio.inscriptiones.org/epig10001655"
         },
+        "inscriptionDate": "2012",
         "title": "Tusa",
-        "citation": "<span>Anna Maria Prestianni Giallombardo e A. Facella, «Tusa», in <i>Bibliografia Topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 21, 21 (Pisa: Scuola Normale Superiore di Pisa Ecole Francaise de Rome, 2012), 251–311</span>"
+        "citation": "<span>Anna Maria Prestianni Giallombardo e A. Facella, «Tusa», in <i>Bibliografia Topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 21, 21 (Pisa: Scuola Normale Superiore di Pisa Ecole Francaise de Rome, 2012), 251–311</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M5NPN3MF",
+        "year": "2012"
       },
       {
         "author": "Prestianni Giallombardo",
@@ -412,42 +544,51 @@
           "_": "https://biblio.inscriptiones.org/epig10001357",
           "target": "https://biblio.inscriptiones.org/epig10001357"
         },
+        "inscriptionDate": "2012",
         "title": "Spazio pubblico e memoria civica. Le epigrafi dall'agora di Alesa",
-        "citation": "<span>Anna Maria Prestianni Giallombardo, «Spazio pubblico e memoria civica. Le epigrafi dall’agora di Alesa», in <i>Agora greca e agorai di Sicilia</i>, a c. di C. Ampolo (Pisa: Edizioni della Normale, 2012), 171–200</span>"
+        "citation": "<span>Anna Maria Prestianni Giallombardo, «Spazio pubblico e memoria civica. Le epigrafi dall’agora di Alesa», in <i>Agora greca e agorai di Sicilia</i>, a c. di C. Ampolo (Pisa: Edizioni della Normale, 2012), 171–200</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CJISRIUV",
+        "year": "2012"
       },
       {
-        "author": "Prag and Tigano",
+        "author": "Prag, Tigano",
         "date": "2017",
         "citedRange": "no.3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MI64NB9L"
+          "target": "https://www.zotero.org/groups/382445/items/MI64NB9L"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002630",
           "target": "https://biblio.inscriptiones.org/epig10002630"
         },
+        "inscriptionDate": "2017",
         "title": "Alesa Archonidea: il lapidarium",
-        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>"
+        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MI64NB9L",
+        "year": "2017"
       },
       {
         "author": "Prestianni Giallombardo",
         "date": "2017",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MBC93V22"
+          "target": "https://www.zotero.org/groups/382445/items/MBC93V22"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002618",
           "target": "https://biblio.inscriptiones.org/epig10002618"
         },
+        "inscriptionDate": "2017",
         "title": "Un'epigrafe alesina recuperata (IG XIV 354)",
-        "citation": "<span>Anna Maria Prestianni Giallombardo, «Un’epigrafe alesina recuperata (IG XIV 354)», in <i>KTHMA ES AIEI. Studi e ricordi in memoria di Giacomo Scibona</i>, a c. di Giovan Giuseppe Mellusi e Rosario Moscheo (Messina: Società Messinese di Storia Patria, 2017), 387–410</span>"
+        "citation": "<span>Anna Maria Prestianni Giallombardo, «Un’epigrafe alesina recuperata (IG XIV 354)», in <i>KTHMA ES AIEI. Studi e ricordi in memoria di Giacomo Scibona</i>, a c. di Giovan Giuseppe Mellusi e Rosario Moscheo (Messina: Società Messinese di Storia Patria, 2017), 387–410</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MBC93V22",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -471,39 +612,37 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Maria Egizia Felice",
         "xml:id": "MEF"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Romeo Gessaga",
+        "xml:id": "RG",
+        "ref": "https://orcid.org/0009-0003-5190-1722"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-18",
+      "who": "#RG"
     }
   },
+  "tmNumber": "492781",
   "facsimile": {
     "n": "screen",
     "url": "ISic001176_tiled.tif",
@@ -512,25 +651,47 @@
     "desc": "Photo J.Prag",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "Gualtherus, (no date)",
-    "Gualtherus, 1624 [1625]",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
     "Castelli, 1753, Storia di Alesa, antica città di Sicilia",
-    "Castelli, 1769",
-    "Castelli, 1784",
-    "CIG",
-    "SGDI, 1884-1915",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Boeckh, Franz, 1853, CIG",
+    "Hoffmann, 1904, SGDI",
     "Scibona, 2008, La chiesa e il complesso edilizio postmedievale",
     "Scibona, 2008, The Epigraphs",
     "Scibona, 2009, Decreto sacerdotale per il conferimento della euerghesia a Nemenios in Halaesa",
-    "Prestianni Giallombardo and Facella, 2012, Tusa",
+    "Prestianni Giallombardo, Facella, 2012, Tusa",
     "Prestianni Giallombardo, 2012, Spazio pubblico e memoria civica. Le epigrafi dall'agora di Alesa",
-    "Prag and Tigano, 2017, Alesa Archonidea: il lapidarium",
+    "Prag, Tigano, 2017, Alesa Archonidea: il lapidarium",
     "Prestianni Giallombardo, 2017, Un'epigrafe alesina recuperata (IG XIV 354)"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "U7S4ZAG3",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "TQMVHEVL",
+    "DQDPC573",
+    "QZ3DGIQJ",
+    "6GFVUASD",
+    "ANG99H3X",
+    "M5NPN3MF",
+    "CJISRIUV",
+    "MI64NB9L",
+    "MBC93V22"
   ],
   "keywords": [
     "isic001176",
@@ -543,7 +704,7 @@
     "limestone",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
     "halaesa",
     "antiquarium e sito archeologico di halaesa",

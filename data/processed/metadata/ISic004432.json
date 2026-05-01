@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -81,26 +85,29 @@
         "from": "line1",
         "to": "line1",
         "h": "20-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "30"
       }
     ]
   },
   "date": {
     "_": "2nd century BCE to the 1st century CE",
     "notBefore": -200,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,6 +116,8 @@
       15.020175
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tyndaris",
   "provenanceFound": {
     "_": "Found in the district of SS. Salvatore di Patti (ME), near the Cedro stream on the edge of a path",
     "type": "found",
@@ -119,6 +128,10 @@
       15.020167
     ]
   },
+  "provenanceGeo": [
+    38.145361,
+    15.020167
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -136,7 +149,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tyndaris",
   "repository": {
@@ -176,27 +188,33 @@
         "n": "AE",
         "citedRange": "2017.0536",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "64.0838",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Fasolo",
@@ -208,14 +226,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002011",
           "target": "https://biblio.inscriptiones.org/epig10002011"
-        }
+        },
+        "inscriptionDate": "2013",
+        "title": "Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+        "citation": "<span>M. Fasolo, <i>Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari</i> (Rome: MediaGEO, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X2SEXMRX",
+        "year": "2013"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -234,11 +257,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -255,6 +273,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "698378",
   "facsimile": {
     "n": "screen",
     "url": "ISic004432_tiled.tif",
@@ -263,12 +282,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Tyndaris",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
-    "Fasolo, 2013"
+    "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "X2SEXMRX"
   ],
   "keywords": [
     "isic004432",
@@ -281,7 +309,7 @@
     "stone",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
     "tyndaris",
     "soprintendenza beni culturali e ambientali di messina",

@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "marble (white)",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -83,7 +87,9 @@
         "from": "line1",
         "to": "line2",
         "h": "20-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -91,7 +97,9 @@
         "from": "line1",
         "to": "line2",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       }
     ]
   },
@@ -105,12 +113,14 @@
     {
       "_": "Drepanum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462187"
+      "ref": "http://pleiades.stoa.org/places/462187",
+      "region": "Sicilia"
     },
     {
       "_": "Trapani",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522876"
+      "ref": "http://sws.geonames.org/2522876",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,11 +129,14 @@
       12.53617
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Drepanum",
   "provenanceFound": {
     "_": "Original discovery not recorded",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -132,7 +145,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Trapani",
   "repository": {
@@ -174,19 +186,23 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7256",
+            "_": "7256",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Oliveri",
@@ -199,15 +215,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001723",
           "target": "https://biblio.inscriptiones.org/epig10001723"
         },
+        "inscriptionDate": "2009",
         "title": "Le iscrizioni latine",
-        "citation": "<span>F. Oliveri, «Le iscrizioni latine», in <i>Il museo regionale «A. Pepoli» di Trapani. Le collezioni archeologiche</i>, a c. di M.L. Famà (Bari: Edipuglia, 2009), 385–96</span>"
+        "citation": "<span>F. Oliveri, «Le iscrizioni latine», in <i>Il museo regionale «A. Pepoli» di Trapani. Le collezioni archeologiche</i>, a c. di M.L. Famà (Bari: Edipuglia, 2009), 385–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/539T7KIS",
+        "year": "2009"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -231,27 +250,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Alex Antoniou",
@@ -265,11 +266,24 @@
       "who": "#JP"
     }
   },
-  "provenance": "Drepanum",
-  "letterHeights": [],
+  "tmNumber": "491759",
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 25
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "CIL",
+    "Mommsen, 1883, CIL",
     "Oliveri, 2009, Le iscrizioni latine"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "539T7KIS"
   ],
   "keywords": [
     "isic000536",
@@ -282,7 +296,7 @@
     "marble (white)",
     "drepanum",
     "trapani",
-    "italy",
+    "sicilia",
     "sicily",
     "trapani",
     "museo regionale agostino pepoli",

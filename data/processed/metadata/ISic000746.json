@@ -32,7 +32,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -89,12 +93,14 @@
       "_": "Syracusae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462503",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,6 +109,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Amphitheatre",
     "type": "found",
@@ -110,6 +118,7 @@
     "xml:id": "findspot",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "in situ",
     "type": "observed",
@@ -127,7 +136,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -150,7 +158,10 @@
           "lon": 15.2780021
         }
       },
-      "pleiades": "http://pleiades.stoa.org/places/219478548"
+      "idno": {
+        "type": "Pleiades",
+        "url": "http://pleiades.stoa.org/places/219478548"
+      }
     }
   },
   "textLang": {
@@ -166,33 +177,40 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7130.16",
+            "_": "7130.16",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Gentili",
         "date": "1973",
         "citedRange": "65 fig.67, 70 no.11",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GX47AQI8"
+          "target": "https://www.zotero.org/groups/382445/items/GX47AQI8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001954",
           "target": "https://biblio.inscriptiones.org/epig10001954"
         },
+        "inscriptionDate": "1973",
         "title": "Studi e ricerche su l'anfiteatro di Siracusa",
-        "citation": "<span>G.V. Gentili, «Studi e ricerche su l’anfiteatro di Siracusa», <i>Palladio. Rivista di storia dell’architettura</i> 23 (1973): 3–80</span>"
+        "citation": "<span>G.V. Gentili, «Studi e ricerche su l’anfiteatro di Siracusa», <i>Palladio. Rivista di storia dell’architettura</i> 23 (1973): 3–80</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GX47AQI8",
+        "year": "1973"
       },
       {
         "author": "Manganaro",
@@ -204,7 +222,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -213,14 +236,17 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "type": "corpus",
         "n": "EAOR",
+        "author": "Buonocore",
         "citedRange": "122 no.85.16, tav.XXXVIII fig.4",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/TC8M5CGM"
@@ -231,14 +257,16 @@
         },
         "title": "Epigrafia anfiteatrale dell'occidente romano. III. Regiones Italiae II-V, Sicilia, Sardinia et Corsica",
         "date": "1992",
-        "citation": "<span>M. Buonocore, <i>Epigrafia anfiteatrale dell’occidente romano. III. Regiones Italiae II-V, Sicilia, Sardinia et Corsica</i>, Epigrafia anfiteatrale dell’occidente romano (Rome: Quasar, 1992)</span>"
+        "citation": "<span>M. Buonocore, <i>Epigrafia anfiteatrale dell’occidente romano. III. Regiones Italiae II-V, Sicilia, Sardinia et Corsica</i>, Epigrafia anfiteatrale dell’occidente romano (Rome: Quasar, 1992)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TC8M5CGM",
+        "year": "1992"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -262,20 +290,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -284,10 +298,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -296,6 +306,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491636",
   "facsimile": {
     "n": "screen",
     "url": "ISic000746_tiled.tif",
@@ -304,14 +315,20 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "CIL",
+    "Mommsen, 1883, CIL",
     "Gentili, 1973, Studi e ricerche su l'anfiteatro di Siracusa",
-    "Manganaro, 1988",
-    "Manganaro, 1989",
-    "EAOR, 1992"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Buonocore, 1992, EAOR"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "GX47AQI8",
+    "RZSFKACR",
+    "EZMBJ6GN",
+    "TC8M5CGM"
   ],
   "keywords": [
     "isic000746",
@@ -323,7 +340,7 @@
     "stone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "area archeologica della neapolis, orecchio di dionisio e teatro greco",

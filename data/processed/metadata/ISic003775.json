@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "volcanic (local stone, from Monte Rosa)",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": {
@@ -80,7 +83,9 @@
         "from": "line1",
         "to": "line1",
         "h": "40-45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -99,12 +104,14 @@
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,6 +120,8 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Found in contrada Diana district during maintenance works on the wall of Sextus Pompeius",
     "type": "found",
@@ -123,6 +132,10 @@
       14.953871
     ]
   },
+  "provenanceGeo": [
+    38.46713,
+    14.953871
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -140,7 +153,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
   "repository": {
@@ -182,22 +194,26 @@
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "69",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -221,20 +237,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -243,10 +245,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -255,6 +253,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003775_tiled.tif",
@@ -263,10 +262,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 45
+    }
+  ],
   "publications": [
-    "ILipara"
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara"
+  ],
+  "zotero": [
+    "VDAQH5D2"
   ],
   "keywords": [
     "isic003775",
@@ -279,7 +285,7 @@
     "volcanic (local stone, from monte rosa)",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
     "lipari",
     "museo archeologico regionale eoliano \"luigi bernab� brea\"",

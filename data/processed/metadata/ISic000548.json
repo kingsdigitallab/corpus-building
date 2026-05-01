@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -87,19 +91,20 @@
   "date": {
     "_": "Mid-3rd century CE (so Tusa)",
     "notBefore": 201,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Panhormus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462410"
+      "ref": "http://pleiades.stoa.org/places/462410",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,28 +113,23 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "First recorded (by Gualtherus) in the crypt of the Duomo",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "in the crypt",
+    "_": "None",
     "type": "observed",
+    "subtype": "autopsied",
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000548_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -147,21 +147,53 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "37",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "194",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7289",
+            "_": "7289",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Manganaro",
@@ -173,7 +205,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Tusa",
@@ -186,15 +223,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001531",
           "target": "https://biblio.inscriptiones.org/epig10001531"
         },
+        "inscriptionDate": "1995",
         "title": "I sarcofagi romani in Sicilia",
-        "citation": "<span>Vincenzo Tusa, <i>I sarcofagi romani in Sicilia</i>, 2nd ed., vol. 14 (l’Erma di Bretschneider, 1995)</span>"
+        "citation": "<span>Vincenzo Tusa, <i>I sarcofagi romani in Sicilia</i>, 2nd ed., vol. 14 (l’Erma di Bretschneider, 1995)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MKRMHRK2",
+        "year": "1995"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -218,20 +258,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -240,10 +266,6 @@
         "_": "Giorgia Capra",
         "xml:id": "GC",
         "ref": "https://orcid.org/0000-0003-1030-5679"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -252,20 +274,21 @@
       "who": "#GC"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000548_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Panhormus",
+  "tmNumber": "491791",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Manganaro, 1988",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Tusa, 1995, I sarcofagi romani in Sicilia"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "RZSFKACR",
+    "MKRMHRK2"
   ],
   "keywords": [
     "isic000548",
@@ -278,7 +301,7 @@
     "marble",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "cathedral",

@@ -1,7 +1,7 @@
 {
   "file": "ISic000065",
   "uri": "ISic000065",
-  "title": "I.Sicily inscription 000065",
+  "title": "Dedication to the Emperor Marcus Aurelius",
   "status": {
     "_": "draft"
   },
@@ -29,7 +29,14 @@
       "type": "PHI"
     }
   ],
-  "editionAuthor": null,
+  "editionAuthor": {
+    "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+    "author": "Bivona",
+    "date": "1970",
+    "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+    "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+    "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
+  },
   "type": {
     "_": "honorific",
     "ana": "#function.honorific",
@@ -42,9 +49,24 @@
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to medium-grained, banded, white, calcitic marble, likely Proconnesian. Optical microscopy: heteroblastic fabric. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -84,10 +106,13 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-7",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line7",
+        "h": "60-65",
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -99,20 +124,23 @@
     ]
   },
   "date": {
-    "_": "probably 10th December 160—9th December 161 CE;\n                                161 (Raepsaet-Charlier)",
+    "_": "probably 10th December 160—9th December 161 CE;\n                                161",
     "notBefore": 160,
-    "notAfter": 161
+    "notAfter": 161,
+    "evidence": "office"
   },
   "places": [
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -121,12 +149,15 @@
       15.04385
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tyndaris",
   "provenanceFound": {
     "_": "Found at Tyndaris by Fagan",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "partially recorded 2022-05-23",
     "type": "observed",
@@ -138,13 +169,12 @@
     {
       "n": "screen",
       "url": "ISic000065_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "3522px",
+      "width": "2550px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -193,14 +223,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002795",
           "target": "https://biblio.inscriptiones.org/epig10002795"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Su di alcune iscrizioni latine ritrovate in Tindari",
+        "citation": "<span>Niccolo Maggiore, «Su di alcune iscrizioni latine ritrovate in Tindari», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 27 (1829): 291–301</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/T4NR9UP5",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7474",
+            "_": "7474",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650805"
           }
         },
@@ -210,43 +247,64 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2007.0682",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0338c",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "66",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Raepsaet-Charlier",
@@ -258,7 +316,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001648",
           "target": "https://biblio.inscriptiones.org/epig10001648"
-        }
+        },
+        "inscriptionDate": "1974",
+        "title": "A propos du récent catalogue d'inscriptions latines du musée de Palerme",
+        "citation": "<span>M.-Th. Raepsaet-Charlier, « A propos du récent catalogue d’inscriptions latines du musée de Palerme », <i>Latomus</i> 33 (1974): 124‑27</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PZHQV5MN",
+        "year": "1974"
       },
       {
         "author": "Zambito",
@@ -270,7 +333,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001503",
           "target": "https://biblio.inscriptiones.org/epig10001503"
-        }
+        },
+        "inscriptionDate": "2007",
+        "title": "Intervento statale e attività urbanistica: sul ruolo dei curatores reipublicae in due epigrafi da Tindari",
+        "citation": "<span>Luca Zambito, «Intervento statale e attività urbanistica: sul ruolo dei curatores reipublicae in due epigrafi da Tindari», <i>Minima Epigraphica et Papyrologica</i> 12 (2007): 103–10</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/I2845RRS",
+        "year": "2007"
       },
       {
         "author": "Fasolo",
@@ -282,7 +350,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002011",
           "target": "https://biblio.inscriptiones.org/epig10002011"
-        }
+        },
+        "inscriptionDate": "2013",
+        "title": "Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+        "citation": "<span>M. Fasolo, <i>Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari</i> (Rome: MediaGEO, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X2SEXMRX",
+        "year": "2013"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "74",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
@@ -299,7 +389,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
@@ -324,20 +419,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -348,48 +429,71 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alfredo Tosques",
+        "xml:id": "AT",
+        "ref": "https://orcid.org/0009-0009-2753-4014"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Amended references to second fragment, as no longer to be attributed to this text",
-      "when": "2022-07-17",
+      "_": "Jonathan Prag added image, updated metadata, added Alfredo Tosques' translations",
+      "when": "2025-12-02",
       "who": "#JP"
     }
   },
+  "tmNumber": "175742",
   "facsimile": {
     "n": "screen",
     "url": "ISic000065_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "3522px",
+    "width": "2550px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21",
     "surfaceType": "front"
   },
-  "provenance": "Tyndaris",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 65
+    }
+  ],
   "publications": [
-    "Maggiore, 1829",
-    "CIL",
-    null,
-    null,
-    "ILMusPalermo",
-    "Raepsaet-Charlier, 1974",
-    "Zambito, 2007",
-    "Fasolo, 2013"
+    "Maggiore, 1829, Su di alcune iscrizioni latine ritrovate in Tindari",
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1970, ILMusPalermo",
+    "Raepsaet-Charlier, 1974, A propos du récent catalogue d'inscriptions latines du musée de Palerme",
+    "Zambito, 2007, Intervento statale e attività urbanistica: sul ruolo dei curatores reipublicae in due epigrafi da Tindari",
+    "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "T4NR9UP5",
+    "GQN8UZSI",
+    "R46KDTZX",
+    "R46KDTZX",
+    "FZWWPUD6",
+    "PZHQV5MN",
+    "I2845RRS",
+    "X2SEXMRX",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000065",
-    "i.sicily inscription 000065",
+    "dedication to the emperor marcus aurelius",
     {
       "_": "draft"
     },
     "honorific",
     "plaque",
-    "marble",
+    "fine to medium-grained, banded, white, calcitic marble, likely proconnesian. optical microscopy: heteroblastic fabric. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy)",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

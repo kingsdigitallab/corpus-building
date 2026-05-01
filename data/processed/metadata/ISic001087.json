@@ -64,8 +64,10 @@
   },
   "material": {
     "_": "tuff (yellow)",
-    "ana": "#material.stone.tuff",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/30.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -98,7 +100,7 @@
   },
   "handNote": {
     "lettering": {
-      "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+      "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
       "ref": [
         {
           "_": "Α type1",
@@ -197,6 +199,10 @@
           "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
         },
         {
+          "_": "Ο type1.1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.1.html"
+        },
+        {
           "_": "Π type1",
           "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type1.html"
         },
@@ -229,6 +235,14 @@
           "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.6.html"
         },
         {
+          "_": "Σ type3",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+        },
+        {
+          "_": "Σ type3.1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.1.html"
+        },
+        {
           "_": "Υ type1",
           "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type1.html"
         },
@@ -249,7 +263,9 @@
         "from": "line1",
         "to": "line11",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -263,18 +279,20 @@
   "date": {
     "_": "475—450 BCE",
     "notBefore": -500,
-    "notAfter": -450
+    "notAfter": -451
   },
   "places": [
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462489"
+      "ref": "http://pleiades.stoa.org/places/462489",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523164"
+      "ref": "http://sws.geonames.org/2523164",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -283,6 +301,8 @@
       12.82522
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": {
     "_": "Found by Cavallari in 1871 in the left anta of the entrance to the adyton of Temple G (Zeus), Selinunte",
     "type": "found",
@@ -293,6 +313,10 @@
       12.8335283
     ]
   },
+  "provenanceGeo": [
+    37.5881651,
+    12.8335283
+  ],
   "provenanceObserved": {
     "_": "On display, ground floor, Palermo archaeological museum",
     "type": "observed",
@@ -318,7 +342,6 @@
       "surfaceType": "right"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -360,263 +383,317 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0268",
+            "_": "268",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "59.1116",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "56.1100",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "53.1030",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "50.0989",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "49.1328",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "46.1271",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "45.2302",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "45.1414",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "43.0628",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "38.0960",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "34.0970",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "33.0933",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "32.0933",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "27.0659",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "15.0595",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1997.0729",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
+        "author": "Dubois",
+        "date": "1989",
         "citedRange": {
           "ref": {
             "_": "78",
@@ -630,13 +707,17 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "date": "1989",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "49",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -644,7 +725,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Buck",
@@ -657,8 +743,11 @@
           "_": "https://biblio.inscriptiones.org/epig10003122",
           "target": "https://biblio.inscriptiones.org/epig10003122"
         },
+        "inscriptionDate": "1955",
         "title": "The Greek dialects: grammar, selected inscriptions, glossary",
-        "citation": "<span>Carl Darling Buck, <i>The Greek Dialects: Grammar, Selected Inscriptions, Glossary</i> (Chicago: University of Chicago Press, 1955)</span>"
+        "citation": "<span>Carl Darling Buck, <i>The Greek Dialects: Grammar, Selected Inscriptions, Glossary</i> (Chicago: University of Chicago Press, 1955)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RFCJWR8R",
+        "year": "1955"
       },
       {
         "author": "Arena",
@@ -671,8 +760,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001374",
           "target": "https://biblio.inscriptiones.org/epig10001374"
         },
+        "inscriptionDate": "1996",
         "title": "Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
-        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>"
+        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BJUFRNS9",
+        "year": "1996"
       },
       {
         "author": "Manganaro",
@@ -685,8 +777,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001817",
           "target": "https://biblio.inscriptiones.org/epig10001817"
         },
+        "inscriptionDate": "1996",
         "title": "Studi di epigrafia siceliota",
-        "citation": "<span>Giacomo Manganaro, «Studi di epigrafia siceliota», <i>Rendiconti dell’Accademia Nazionale dei Lincei. Classe di Scienze morali, storiche e filologiche</i> 9.7 (1996): 27–63</span>"
+        "citation": "<span>Giacomo Manganaro, «Studi di epigrafia siceliota», <i>Rendiconti dell’Accademia Nazionale dei Lincei. Classe di Scienze morali, storiche e filologiche</i> 9.7 (1996): 27–63</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FGU3JFCM",
+        "year": "1996"
       },
       {
         "author": "Holm",
@@ -699,8 +794,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001920",
           "target": "https://biblio.inscriptiones.org/epig10001920"
         },
+        "inscriptionDate": "1871",
         "title": "Iscrizione trovata nel tempio grande di Selinunte",
-        "citation": "<span>A. Holm, «Iscrizione trovata nel tempio grande di Selinunte», <i>Bullettino della Commissione di Antichità e belle arti di Sicilia</i> 4 (1871): 27–34</span>"
+        "citation": "<span>A. Holm, «Iscrizione trovata nel tempio grande di Selinunte», <i>Bullettino della Commissione di Antichità e belle arti di Sicilia</i> 4 (1871): 27–34</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FFIHNAMR",
+        "year": "1871"
       },
       {
         "author": "Brugnone",
@@ -712,8 +810,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002119",
           "target": "https://biblio.inscriptiones.org/epig10002119"
         },
+        "inscriptionDate": "1999",
         "title": "L'iscrizione del Tempio G di Selinunte e le tradizioni sui responsi oracolari delfici",
-        "citation": "<span>Antonietta Brugnone, «L’iscrizione del Tempio G di Selinunte e le tradizioni sui responsi oracolari delfici», in <i>Sicilia Epigraphica</i>, a c. di M. I. Gulletta, vol. 1, 2 voll. (Pisa: Edizioni della Normale, 1999), 129–39</span>"
+        "citation": "<span>Antonietta Brugnone, «L’iscrizione del Tempio G di Selinunte e le tradizioni sui responsi oracolari delfici», in <i>Sicilia Epigraphica</i>, a c. di M. I. Gulletta, vol. 1, 2 voll. (Pisa: Edizioni della Normale, 1999), 129–39</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2XBFXWWX",
+        "year": "1999"
       },
       {
         "author": "Agostiniani",
@@ -726,15 +827,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002654",
           "target": "https://biblio.inscriptiones.org/epig10002654"
         },
+        "inscriptionDate": "2012",
         "title": "Alfabetizzazione della Sicilia pregreca",
-        "citation": "<span>Luciano Agostiniani, «Alfabetizzazione della Sicilia pregreca», <i>Aristonothos</i> 4 (2012): 139–64</span>"
+        "citation": "<span>Luciano Agostiniani, «Alfabetizzazione della Sicilia pregreca», <i>Aristonothos</i> 4 (2012): 139–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/54T9H7FS",
+        "year": "2012"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -758,20 +862,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -782,16 +872,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492716",
   "facsimile": {
     "n": "screen",
     "url": "ISic001087_tiled.tif",
@@ -800,10 +897,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 23.05.2022",
     "surfaceType": "front"
   },
-  "provenance": "Selinus",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
@@ -820,14 +921,41 @@
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Bulletin épigraphique, 1888-",
-    "IGDS1, 1989",
-    "IGMusPalermo",
+    "Dubois, 1989, IGDS1",
+    "Manni Piraino, 1973, IGMusPalermo",
     "Buck, 1955, The Greek dialects: grammar, selected inscriptions, glossary",
     "Arena, 1996, Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
     "Manganaro, 1996, Studi di epigrafia siceliota",
     "Holm, 1871, Iscrizione trovata nel tempio grande di Selinunte",
     "Brugnone, 1999, L'iscrizione del Tempio G di Selinunte e le tradizioni sui responsi oracolari delfici",
     "Agostiniani, 2012, Alfabetizzazione della Sicilia pregreca"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "77P5MNIR",
+    "RWXNUFEX",
+    "F66S4X3M",
+    "RFCJWR8R",
+    "BJUFRNS9",
+    "FGU3JFCM",
+    "FFIHNAMR",
+    "2XBFXWWX",
+    "54T9H7FS"
   ],
   "keywords": [
     "isic001087",
@@ -840,7 +968,7 @@
     "tuff (yellow)",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

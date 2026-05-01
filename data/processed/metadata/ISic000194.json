@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "53"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "37-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "37",
+        "atMost": "40"
       },
       {
         "type": "letterHeight",
@@ -96,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "30-31",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "31"
       },
       {
         "type": "letterHeight",
@@ -104,7 +115,9 @@
         "from": "line4",
         "to": "line4",
         "h": "26-28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "28"
       },
       {
         "type": "letterHeight",
@@ -112,7 +125,9 @@
         "from": "line5",
         "to": "line5",
         "h": "30-33 (I = 38)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "33"
       },
       {
         "type": "interlinear",
@@ -120,7 +135,9 @@
         "from": "line1",
         "to": "line2",
         "h": "3",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "3"
       },
       {
         "type": "interlinear",
@@ -128,7 +145,9 @@
         "from": "line2",
         "to": "line3",
         "h": "5-6",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "6"
       },
       {
         "type": "interlinear",
@@ -136,7 +155,9 @@
         "from": "line3",
         "to": "line4",
         "h": "6-8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "6",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -144,13 +165,15 @@
         "from": "line4",
         "to": "line5",
         "h": "6-10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "6",
+        "atMost": "10"
       }
     ]
   },
   "date": {
     "_": "later first or second century CE (lettering and formula)",
-    "notBefore": 50,
+    "notBefore": 51,
     "notAfter": 200,
     "evidence": "lettering"
   },
@@ -159,12 +182,14 @@
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -173,6 +198,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "First recorded in the Museo Civico by Mommsen in CIL (1883), on the basis of autopsy.",
     "type": "found",
@@ -180,6 +207,7 @@
     "notAfter": "1883",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2023-07-05, in the depositi of the Museo Civico, room 1, rack 8, shelf 1.",
     "type": "observed",
@@ -206,7 +234,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -248,9 +275,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7419",
+            "_": "7419",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
@@ -260,11 +289,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "117",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -272,15 +308,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -304,20 +345,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -328,16 +355,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy and added images",
-      "when": "2024-07-26",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285221",
   "facsimile": {
     "n": "screen",
     "url": "ISic000194_tiled.tif",
@@ -346,11 +380,51 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 53,
+      "atMost": 53
+    },
+    {
+      "atLeast": 37,
+      "atMost": 40
+    },
+    {
+      "atLeast": 30,
+      "atMost": 31
+    },
+    {
+      "atLeast": 26,
+      "atMost": 28
+    },
+    {
+      "atLeast": 30,
+      "atMost": 33
+    },
+    {
+      "atLeast": 3,
+      "atMost": 3
+    },
+    {
+      "atLeast": 5,
+      "atMost": 6
+    },
+    {
+      "atLeast": 6,
+      "atMost": 8
+    },
+    {
+      "atLeast": 6,
+      "atMost": 10
+    }
+  ],
   "publications": [
-    "CIL",
-    "ILMusTermini"
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000194",
@@ -363,7 +437,7 @@
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

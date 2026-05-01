@@ -31,15 +31,22 @@
     "ana": "#function.building",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/86.html"
   },
-  "support": "Two joining fragments of a white marble tablet. \n                                    Both fragments are highly finished on the reverse. The larger fragment preserves a raised margin along the upper edge of the reverse. \n                                    Faint traces of a similar raised margin on the lower right corner of the reverse of the smaller fragment suggest the stone is more or \n                                    less complete bottom right, but the text could have continued on a second stone below. If the restoration of the Emperors' titles in line \n                                    1 is correct, then approximately half the stone is missing on the left side. Some letters are lost from the right margin over the first few lines.",
+  "support": "Two joining fragments of a white marble tablet. The larger fragment is intact along the upper edge, but broken left and right. The smaller fragment is broken or eroded on all sides, but preserves part of the right margin. The lower edge is uneven and corroded. Both fragments are highly finished on the reverse. The larger fragment preserves a raised margin along the upper edge of the reverse. Faint traces of a similar raised margin on the lower right corner of the reverse of the smaller fragment suggest the stone is more or less complete bottom right, but the text could have continued on a second stone below. If the restoration of the Emperors' titles in line 1 is correct, then approximately half the stone is missing on the left side. Some letters are lost from the right margin over the first few lines.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine-grained, homogeneous, grey, smelly marble, likely Docimian, Pentelic, Parian-1. Digital microscopy: homeoblastic to heteroblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1",
+    "type": "stone.marble",
+    "subtype": [
+      "Docimian",
+      "Pentelic",
+      "Parian-1"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -79,7 +86,9 @@
         "from": "line1",
         "to": "line12",
         "h": "10-21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "21"
       },
       {
         "type": "interlinear",
@@ -100,12 +109,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,10 +125,28 @@
       15.07041
     ]
   ],
-  "provenanceFound": null,
+  "country": "Sicilia",
+  "provenance": "Catina",
+  "provenanceFound": {
+    "_": "The main fragment was found in 1741 in the area of the Duomo, and given by Giuseppe Paternò to Ignazio Paternò Castello, Prince of Biscari, shortly afterwards. The smaller fragment was first recorded in 1769. Now on display in the Museo civico (voci di pietra no.14)",
+    "type": "found",
+    "subtype": "discovered",
+    "when": "1741",
+    "geo": [
+      37.502351,
+      15.087629
+    ]
+  },
+  "provenanceGeo": [
+    37.502351,
+    15.087629
+  ],
   "provenanceObserved": {
-    "_": "Display, Voci di pietra no.14",
+    "_": "Prag 2017-03-23",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -125,13 +154,28 @@
     {
       "n": "screen",
       "url": "ISic000308_tiled.tif",
+      "height": "2856px",
+      "width": "4272px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-21",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000308_copy2_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-21",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000308_rear_tiled.tif",
+      "height": "2856px",
+      "width": "4272px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-21",
+      "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -173,47 +217,65 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7024.i",
+            "_": "7024.i",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650757"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0341d",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1960.0202",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "22",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -221,7 +283,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Manganaro",
@@ -233,7 +300,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001854",
           "target": "https://biblio.inscriptiones.org/epig10001854"
-        }
+        },
+        "inscriptionDate": "1959",
+        "title": "Epigrafi frammentarie di Catania",
+        "citation": "<span>Giacomo Manganaro, «Epigrafi frammentarie di Catania», <i>Kokalos</i> 5 (1959): 145–58</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2Z7V4D6",
+        "year": "1959"
       },
       {
         "author": "Clemente",
@@ -245,7 +317,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002074",
           "target": "https://biblio.inscriptiones.org/epig10002074"
-        }
+        },
+        "inscriptionDate": "1980",
+        "title": "La Sicilia nell'età imperiale",
+        "citation": "<span>G. Clemente, «La Sicilia nell’età imperiale», in <i>La Sicilia Antica</i>, a c. di E. Gabba e G. Vallet, vol. 2.2 (Napoli, 1980)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/656VSK6B",
+        "year": "1980"
       },
       {
         "author": "Manganaro",
@@ -257,7 +334,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -269,7 +351,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "author": "Wilson",
@@ -281,14 +368,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -312,20 +404,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
       },
@@ -339,8 +417,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -349,26 +428,42 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "175763",
   "facsimile": {
     "n": "screen",
     "url": "ISic000308_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "2856px",
+    "width": "4272px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-21",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 10,
+      "atMost": 21
+    }
+  ],
   "publications": [
-    "CIL",
-    null,
-    null,
-    "IMusCatania",
-    "Manganaro, 1959",
-    "Clemente, 1980",
-    "Manganaro, 1988",
-    "Manganaro, 1989",
-    "Wilson, 1990"
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Korhonen, 2004, IMusCatania",
+    "Manganaro, 1959, Epigrafi frammentarie di Catania",
+    "Clemente, 1980, La Sicilia nell'età imperiale",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "R46KDTZX",
+    "R46KDTZX",
+    "2EUC82DH",
+    "Q2Z7V4D6",
+    "656VSK6B",
+    "RZSFKACR",
+    "EZMBJ6GN",
+    "VF9MMBI9"
   ],
   "keywords": [
     "isic000308",
@@ -378,10 +473,10 @@
     },
     "building",
     "plaque",
-    "marble",
+    "fine-grained, homogeneous, grey, smelly marble, likely docimian, pentelic, parian-1. digital microscopy: homeoblastic to heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

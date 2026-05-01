@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "volcanic lava stone\n                                    ",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line3",
         "h": "40-50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -91,19 +96,20 @@
   "date": {
     "_": "3rd — 2nd century BCE",
     "notBefore": -300,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Hybla Gereatis",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462251"
+      "ref": "http://pleiades.stoa.org/places/462251",
+      "region": "Sicilia"
     },
     {
       "_": "Paternò",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523866"
+      "ref": "http://sws.geonames.org/2523866",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +118,8 @@
       14.90254
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Hybla Gereatis",
   "provenanceFound": {
     "_": "(re)discovered in 19th century in the garden of the (ex) convent of the Cappuccini, Paternò, although already known to 18th century authors",
     "type": "found",
@@ -121,6 +129,10 @@
       14.89378
     ]
   },
+  "provenanceGeo": [
+    37.562836,
+    14.89378
+  ],
   "provenanceObserved": {
     "_": "Seen by Orsi prior to 1900 publication",
     "type": "observed",
@@ -137,7 +149,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Paterno",
   "repository": {
@@ -163,17 +174,20 @@
         "n": "IG",
         "citedRange": {
           "ref": {
-            "_": "\n                                14.0012*",
+            "_": "12*",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "author": "Kaibel",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "author": "Soraci",
@@ -186,8 +200,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001571",
           "target": "https://biblio.inscriptiones.org/epig10001571"
         },
+        "inscriptionDate": "1958",
         "title": "Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita",
-        "citation": "<span>R. Soraci, «Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita», <i>Rendiconti dell’Accademia Nazionale dei Lincei. Classe di Scienze morali, storiche e filologiche</i> 7.13 (1958): 251–57</span>"
+        "citation": "<span>R. Soraci, «Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita», <i>Rendiconti dell’Accademia Nazionale dei Lincei. Classe di Scienze morali, storiche e filologiche</i> 7.13 (1958): 251–57</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZXGG3V8Z",
+        "year": "1958"
       },
       {
         "author": "Manganaro",
@@ -200,8 +217,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001850",
           "target": "https://biblio.inscriptiones.org/epig10001850"
         },
+        "inscriptionDate": "1963",
         "title": "Nuove ricerche di epigrafia siceliota",
-        "citation": "<span>Giacomo Manganaro, «Nuove ricerche di epigrafia siceliota», <i>Siculorum Gymnasium</i> 16 (1963): 51–64</span>"
+        "citation": "<span>Giacomo Manganaro, «Nuove ricerche di epigrafia siceliota», <i>Siculorum Gymnasium</i> 16 (1963): 51–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M3UEW68D",
+        "year": "1963"
       },
       {
         "author": "Orsi",
@@ -214,29 +234,35 @@
           "_": "https://biblio.inscriptiones.org/epig10001707",
           "target": "https://biblio.inscriptiones.org/epig10001707"
         },
+        "inscriptionDate": "1900",
         "title": "Frammenti epigrafici sicelioti",
-        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>"
+        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UE3VRJA7",
+        "year": "1900"
       },
       {
         "author": "Manganaro",
         "date": "1965",
         "citedRange": "176 fig.5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/TKXFNC6H"
+          "target": "https://www.zotero.org/groups/382445/items/TKXFNC6H"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001452",
           "target": "https://biblio.inscriptiones.org/epig10001452"
         },
+        "inscriptionDate": "1965",
         "title": "Per la storia dei culti in Sicilia",
-        "citation": "<span>Giacomo Manganaro, «Per la storia dei culti in Sicilia», <i>La Parola del Passato</i> 20, fasc. 101 (1965): 163–78</span>"
+        "citation": "<span>Giacomo Manganaro, «Per la storia dei culti in Sicilia», <i>La Parola del Passato</i> 20, fasc. 101 (1965): 163–78</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TKXFNC6H",
+        "year": "1965"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -260,35 +286,23 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2026-01-05",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "644855",
   "facsimile": {
     "n": "screen",
     "url": "ISic002946_tiled.tif",
@@ -297,14 +311,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Hybla Gereatis",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 50
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Soraci, 1958, Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita",
     "Manganaro, 1963, Nuove ricerche di epigrafia siceliota",
     "Orsi, 1900, Frammenti epigrafici sicelioti",
     "Manganaro, 1965, Per la storia dei culti in Sicilia"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "ZXGG3V8Z",
+    "M3UEW68D",
+    "UE3VRJA7",
+    "TKXFNC6H"
   ],
   "keywords": [
     "isic002946",
@@ -317,7 +342,7 @@
     "volcanic lava stone",
     "hybla gereatis",
     "paternò",
-    "italy",
+    "sicilia",
     "sicily",
     "paterno",
     "museo civico gaetano savasta",

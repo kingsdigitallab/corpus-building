@@ -32,8 +32,13 @@
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Strongly altered marble, likely unspecified (identification based on pXRF)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -82,19 +87,20 @@
   "date": {
     "_": "3rd century CE or first half of 4th century CE\n                                (K)",
     "notBefore": 201,
-    "notAfter": 350,
-    "precision": "low"
+    "notAfter": 350
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,11 +109,14 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "sala IX.93, mag. sup.",
     "type": "observed",
@@ -124,7 +133,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -166,39 +174,47 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.8312",
+            "_": "8312",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "41",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -222,20 +238,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -246,8 +248,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -256,6 +259,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "492319",
   "facsimile": {
     "n": "screen",
     "url": "ISic002960_tiled.tif",
@@ -264,11 +268,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "IMusCatania"
+    "Mommsen, 1883, CIL",
+    "Korhonen, 2004, IMusCatania"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "2EUC82DH"
   ],
   "keywords": [
     "isic002960",
@@ -277,10 +284,10 @@
       "_": "draft"
     },
     "honorific",
-    "marble",
+    "strongly altered marble, likely unspecified (identification based on pxrf)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

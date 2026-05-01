@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line2",
         "h": "40-43",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "43"
       },
       {
         "type": "interlinear",
@@ -98,12 +103,14 @@
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     },
     {
       "_": "Segesta",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523171"
+      "ref": "http://sws.geonames.org/2523171",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,11 +119,14 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -134,7 +144,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
   "repository": {
@@ -157,7 +166,10 @@
           "lon": 12.8361805
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462487"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462487"
+      }
     }
   },
   "idno": {
@@ -185,27 +197,32 @@
           "_": "https://biblio.inscriptiones.org/epig10001415",
           "target": "https://biblio.inscriptiones.org/epig10001415"
         },
+        "inscriptionDate": "1995",
         "title": "Iscrizioni greche e latine",
-        "citation": "<span>Giuseppe Nenci, «Iscrizioni greche e latine», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser.3, 25, fasc. 4 (1995): 1182–87</span>"
+        "citation": "<span>Giuseppe Nenci, «Iscrizioni greche e latine», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser.3, 25, fasc. 4 (1995): 1182–87</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WHBJDH75",
+        "year": "1995"
       },
       {
-        "author": "Ampolo and Erdas",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "L12",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3PK3JKXR"
+          "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -229,20 +246,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "David Espinosa Espinosa",
         "xml:id": "DEE",
         "ref": "http://orcid.org/0000-0002-2337-9047"
@@ -251,10 +254,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -263,6 +262,7 @@
       "who": "#DEE"
     }
   },
+  "tmNumber": "644837",
   "facsimile": {
     "n": "screen",
     "url": "ISic002738_tiled.tif",
@@ -271,11 +271,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 43
+    }
+  ],
   "publications": [
     "Nenci, 1995, Iscrizioni greche e latine",
-    "Ampolo and Erdas, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "WHBJDH75",
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic002738",
@@ -288,7 +296,7 @@
     "limestone",
     "segesta",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "segesta",
     "parco archeologico di segesta",

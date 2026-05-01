@@ -37,9 +37,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/57.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Very fine-grained, homogeneous, white, smelly marble, likely Lunense. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Carrara",
+        "target": "https://www.geonames.org/6542087/carrara.html"
+      },
+      "location": {
+        "geo": "44.06294,10.06069"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -79,7 +94,9 @@
         "from": "line1",
         "to": "line10",
         "h": "12-29",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "12",
+        "atMost": "29"
       },
       {
         "type": "interlinear",
@@ -91,20 +108,21 @@
   },
   "date": {
     "_": "Korhonen suggests a date between the second half of the first and the end of the 2nd century CE",
-    "notBefore": 50,
-    "notAfter": 200,
-    "precision": "low"
+    "notBefore": 51,
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Hybla Gereatis",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462251"
+      "ref": "http://pleiades.stoa.org/places/462251",
+      "region": "Sicilia"
     },
     {
       "_": "Paternò",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523866"
+      "ref": "http://sws.geonames.org/2523866",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,6 +131,8 @@
       14.90254
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Hybla Gereatis",
   "provenanceFound": {
     "_": "Dug up in 1759 in the territory of Paternò (according to Torremuzza).",
     "type": "found",
@@ -120,6 +140,7 @@
     "when": "1759",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Display, Voci di pietra no.16",
     "type": "observed",
@@ -144,7 +165,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -186,9 +206,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7013",
+            "_": "7013",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650754"
           }
         },
@@ -198,11 +220,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "237",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -210,7 +239,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Pace",
@@ -222,7 +256,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001691",
           "target": "https://biblio.inscriptiones.org/epig10001691"
-        }
+        },
+        "inscriptionDate": "1945",
+        "title": "Arte e Civiltà della Sicilia antica. Volume terzo. Cultura e vita religiosa",
+        "citation": "<span>B. Pace, <i>Arte e Civiltà della Sicilia antica. Volume terzo. Cultura e vita religiosa</i> (Genoa, Rome, Naples, Citta di Castello: Società anonima editrice Dante Alighieri, 1945)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PDHB9BT9",
+        "year": "1945"
       },
       {
         "author": "Manganaro",
@@ -234,19 +273,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001845",
           "target": "https://biblio.inscriptiones.org/epig10001845"
-        }
+        },
+        "inscriptionDate": "1964",
+        "title": "Città di Sicilia e santuarii panellenici nel III e II secolo a.c.",
+        "citation": "<span>Giacomo Manganaro, «Città di Sicilia e santuarii panellenici nel III e II secolo a.c.», <i>Historia</i> 13 (1964): 414–39</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TXU8J3WF",
+        "year": "1964"
       },
       {
         "author": "Manganaro",
         "date": "1977",
         "citedRange": "153",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JQHZXXJN"
+          "target": "https://www.zotero.org/groups/382445/items/JQHZXXJN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001440",
           "target": "https://biblio.inscriptiones.org/epig10001440"
-        }
+        },
+        "inscriptionDate": "1977",
+        "title": "Per la storia dei culti nella Sicilia greca",
+        "citation": "<span>Giacomo Manganaro, «Per la storia dei culti nella Sicilia greca», <i>Cronache di archeologia e di storia dell’arte</i> 16 (1977): 148–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JQHZXXJN",
+        "year": "1977"
       },
       {
         "author": "Manganaro",
@@ -258,7 +307,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -270,7 +324,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Manganaro",
@@ -282,7 +341,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001818",
           "target": "https://biblio.inscriptiones.org/epig10001818"
-        }
+        },
+        "inscriptionDate": "1996",
+        "title": "Per una storia della chora Katania",
+        "citation": "<span>Giacomo Manganaro, «Per una storia della chora Katania», in <i>Catania Antica. Atti del Convegno della S.I.S.A.C. (Catania 23-24 maggio 1992)</i>, a c. di B. Gentile (Pisa, 1996), 19–59</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CVSZ3FGM",
+        "year": "1996"
       },
       {
         "author": "Manganaro",
@@ -294,7 +358,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001811",
           "target": "https://biblio.inscriptiones.org/epig10001811"
-        }
+        },
+        "inscriptionDate": "2000",
+        "title": "Hybla Megala (Heraia) e Hybla Geleatis (Etnea)",
+        "citation": "<span>Giacomo Manganaro, «Hybla Megala (Heraia) e Hybla Geleatis (Etnea)», in <i>Un ponte fra l’Italia e la Grecia. Atti del simposio in onore di Antonio di Vita</i> (Padova, 2000), 149–54</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HU84ARFA",
+        "year": "2000"
       },
       {
         "author": "Trotta",
@@ -306,14 +375,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001554",
           "target": "https://biblio.inscriptiones.org/epig10001554"
-        }
+        },
+        "inscriptionDate": "2000",
+        "title": "I culti dell Sicilia: tra Greci e Iblei",
+        "citation": "<span>F. Trotta, «I culti dell Sicilia: tra Greci e Iblei», in <i>Un ponte fra l’Italia e la Grecia. Atti del simposio in onore di Antonio di Vita</i> (Padua, 2000), 155–60</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQA5A9CU",
+        "year": "2000"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -337,31 +411,18 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -370,6 +431,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491509",
   "facsimile": {
     "n": "screen",
     "url": "ISic000297_tiled.tif",
@@ -378,19 +440,35 @@
     "desc": "Photograph of front face by students of  Liceo M.M. Lazzaro",
     "surfaceType": "front"
   },
-  "provenance": "Hybla Gereatis",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 12,
+      "atMost": 29
+    }
+  ],
   "publications": [
-    "CIL",
-    "IMusCatania",
-    "Pace, 1945",
-    "Manganaro, 1964",
-    "Manganaro, 1977",
-    "Manganaro, 1988",
-    "Wilson, 1990",
-    "Manganaro, 1996",
-    "Manganaro, 2000",
-    "Trotta, 2000"
+    "Mommsen, 1883, CIL",
+    "Korhonen, 2004, IMusCatania",
+    "Pace, 1945, Arte e Civiltà della Sicilia antica. Volume terzo. Cultura e vita religiosa",
+    "Manganaro, 1964, Città di Sicilia e santuarii panellenici nel III e II secolo a.c.",
+    "Manganaro, 1977, Per la storia dei culti nella Sicilia greca",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Manganaro, 1996, Per una storia della chora Katania",
+    "Manganaro, 2000, Hybla Megala (Heraia) e Hybla Geleatis (Etnea)",
+    "Trotta, 2000, I culti dell Sicilia: tra Greci e Iblei"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "2EUC82DH",
+    "PDHB9BT9",
+    "TXU8J3WF",
+    "JQHZXXJN",
+    "RZSFKACR",
+    "VF9MMBI9",
+    "CVSZ3FGM",
+    "HU84ARFA",
+    "VQA5A9CU"
   ],
   "keywords": [
     "isic000297",
@@ -400,10 +478,10 @@
     },
     "dedication",
     "statue base",
-    "marble",
+    "very fine-grained, homogeneous, white, smelly marble, likely lunense. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "hybla gereatis",
     "paternò",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

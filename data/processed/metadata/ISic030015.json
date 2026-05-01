@@ -42,7 +42,11 @@
   },
   "material": {
     "_": "lead",
-    "ana": "#material.metal.lead",
+    "ana": "#material.inorganic.metal.lead",
+    "type": "metal.lead",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
   "condition": {
@@ -87,27 +91,30 @@
         "from": "line1",
         "to": "line14",
         "h": "4",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "4",
+        "atMost": "4"
       }
     ]
   },
   "date": {
     "_": "499-450 BCE",
-    "notBefore": -499,
-    "notAfter": -450,
-    "evidence": "lettering, archaeological-context",
-    "precision": "low"
+    "notBefore": -500,
+    "notAfter": -451,
+    "evidence": "lettering, archaeological-context"
   },
   "places": [
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462489"
+      "ref": "https://pleiades.stoa.org/places/462489",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523164"
+      "ref": "http://sws.geonames.org/2523164",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,7 +123,10 @@
       12.8298666
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": null,
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -134,7 +144,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -184,8 +193,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001977",
           "target": "https://biblio.inscriptiones.org/epig10001977"
         },
+        "inscriptionDate": "1927",
         "title": "Il Santuario della Malophoros a Selinunte",
-        "citation": "<span>E. Gabrici, «Il Santuario della Malophoros a Selinunte», <i>Monumenti Antichi</i> 32 (1927): 5–419</span>"
+        "citation": "<span>E. Gabrici, «Il Santuario della Malophoros a Selinunte», <i>Monumenti Antichi</i> 32 (1927): 5–419</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SP4NJIAA",
+        "year": "1927"
       },
       {
         "author": "Jeffery",
@@ -198,8 +210,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002443",
           "target": "https://biblio.inscriptiones.org/epig10002443"
         },
+        "inscriptionDate": "1955",
         "title": "Further comments on archaic Greek inscriptions",
-        "citation": "<span>L.H. Jeffery, ‘Further Comments on Archaic Greek Inscriptions’, <i>Annual of the British School at Athens</i> 50 (1955): 67–84</span>"
+        "citation": "<span>L.H. Jeffery, ‘Further Comments on Archaic Greek Inscriptions’, <i>Annual of the British School at Athens</i> 50 (1955): 67–84</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X3DZJ6CW",
+        "year": "1955"
       },
       {
         "author": "Guarducci",
@@ -212,8 +227,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000193",
           "target": "https://biblio.inscriptiones.org/epig10000193"
         },
+        "inscriptionDate": "1967",
         "title": "Epigrafia greca",
-        "citation": "<span>Margherita Guarducci, <i>Epigrafia greca</i>, 4 voll. (Rome: Istituto Poligrafico dello Stato, Libreria dello Stato, 1967)</span>"
+        "citation": "<span>Margherita Guarducci, <i>Epigrafia greca</i>, 4 voll. (Rome: Istituto Poligrafico dello Stato, Libreria dello Stato, 1967)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ENQ4AGD6",
+        "year": "1967"
       },
       {
         "type": "corpus",
@@ -222,21 +240,29 @@
         "date": "1989",
         "citedRange": "71",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VC9IHZAR"
+          "target": "https://www.zotero.org/groups/382445/items/VC9IHZAR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000638",
           "target": "https://biblio.inscriptiones.org/epig10000638"
         },
+        "inscriptionDate": "1989",
         "title": "Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte",
-        "citation": "<span>Renato Arena, <i>Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte</i>, 1st ed., vol. 1 (Milano: Istituto Editoriale Cisalpino - La Goliardica, 1989)</span>"
+        "citation": "<span>Renato Arena, <i>Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte</i>, 1st ed., vol. 1 (Milano: Istituto Editoriale Cisalpino - La Goliardica, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VC9IHZAR",
+        "year": "1989"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
         "author": "Dubois",
         "date": "1989",
-        "citedRange": "39",
+        "citedRange": {
+          "ref": {
+            "_": "39",
+            "target": "http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1"
+          }
+        },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/isicily/items/RWXNUFEX"
         },
@@ -244,22 +270,28 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
-        "author": "Lopez-Jimeno",
+        "author": "López Jimeno",
         "date": "1991",
         "citedRange": "44 no. 4",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/N5IF2DZR"
+          "target": "https://www.zotero.org/groups/382445/items/N5IF2DZR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001858",
           "target": "https://biblio.inscriptiones.org/epig10001858"
         },
+        "inscriptionDate": "1991",
         "title": "Las tabellae defixionis de la Sicilia griega",
-        "citation": "<span>M. A. López Jimeno, <i>Las tabellae defixionis de la Sicilia griega</i> (Amsterdam, 1991)</span>"
+        "citation": "<span>M. A. López Jimeno, <i>Las tabellae defixionis de la Sicilia griega</i> (Amsterdam, 1991)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/N5IF2DZR",
+        "year": "1991"
       },
       {
         "author": "Bettarini",
@@ -272,8 +304,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001388",
           "target": "https://biblio.inscriptiones.org/epig10001388"
         },
+        "inscriptionDate": "2005",
         "title": "Corpus delle defixiones di Selinunte: edizione e commento",
-        "citation": "<span>L. Bettarini, <i>Corpus delle defixiones di Selinunte: edizione e commento</i>, Hellenica (Alessandria: Edizioni dell’Orso, 2005)</span>"
+        "citation": "<span>L. Bettarini, <i>Corpus delle defixiones di Selinunte: edizione e commento</i>, Hellenica (Alessandria: Edizioni dell’Orso, 2005)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SEW88NC7",
+        "year": "2005"
       }
     ]
   },
@@ -285,28 +320,34 @@
         "date": "1985",
         "citedRange": "103",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7UQBFBPB"
+          "target": "https://www.zotero.org/groups/382445/items/7UQBFBPB"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001391",
           "target": "https://biblio.inscriptiones.org/epig10001391"
         },
+        "inscriptionDate": "1985",
         "title": "A survey of Greek defixiones not included in the special corpora",
-        "citation": "<span>D.R. Jordan, ‘A Survey of Greek Defixiones Not Included in the Special Corpora’, <i>Greek, Roman and Byzantine Studies</i> 26 (1985): 151–97</span>"
+        "citation": "<span>D.R. Jordan, ‘A Survey of Greek Defixiones Not Included in the Special Corpora’, <i>Greek, Roman and Byzantine Studies</i> 26 (1985): 151–97</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7UQBFBPB",
+        "year": "1985"
       },
       {
         "author": "Curbera",
         "date": "1999",
         "citedRange": "26",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/9DL74VZN"
+          "target": "https://www.zotero.org/groups/382445/items/9DL74VZN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002060",
           "target": "https://biblio.inscriptiones.org/epig10002060"
         },
+        "inscriptionDate": "1999",
         "title": "Defixiones",
-        "citation": "<span>J. B. Curbera, «Defixiones», in <i>Sicilia epigraphica. Atti del convegno internazionale Erice 15-18 Ottobre 1998. (ASNP ser.iv, quad.1)</i>, a c. di M. I. Gulletta (Pisa, 1999), 159–86</span>"
+        "citation": "<span>J. B. Curbera, «Defixiones», in <i>Sicilia epigraphica. Atti del convegno internazionale Erice 15-18 Ottobre 1998. (ASNP ser.iv, quad.1)</i>, a c. di M. I. Gulletta (Pisa, 1999), 159–86</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9DL74VZN",
+        "year": "1999"
       }
     ]
   },
@@ -324,19 +365,6 @@
         "_": "Jonathan Prag",
         "xml:id": "JP",
         "ref": "https://orcid.org/0000-0003-3819-8537"
-      },
-      {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Simona Stoyanova",
@@ -365,6 +393,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "696124",
   "facsimile": {
     "n": "screen",
     "url": "ISic030015_tiled.tif",
@@ -373,16 +402,29 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Selinus",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 4,
+      "atMost": 4
+    }
+  ],
   "publications": [
     "Gabrici, 1927, Il Santuario della Malophoros a Selinunte",
     "Jeffery, 1955, Further comments on archaic Greek inscriptions",
     "Guarducci, 1967-1978, Epigrafia greca",
     "Arena, 1989, IGASM1",
     "Dubois, 1989, IGDS1",
-    "Lopez-Jimeno, 1991, Las tabellae defixionis de la Sicilia griega",
+    "López Jimeno, 1991, Las tabellae defixionis de la Sicilia griega",
     "Bettarini, 2005, Corpus delle defixiones di Selinunte: edizione e commento"
+  ],
+  "zotero": [
+    "SP4NJIAA",
+    "X3DZJ6CW",
+    "ENQ4AGD6",
+    "VC9IHZAR",
+    "RWXNUFEX",
+    "N5IF2DZR",
+    "SEW88NC7"
   ],
   "keywords": [
     "isic030015",
@@ -395,7 +437,7 @@
     "lead",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

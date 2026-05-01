@@ -43,8 +43,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -195,7 +197,9 @@
         "from": "line1",
         "to": "line3",
         "h": "20-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -209,19 +213,20 @@
   "date": {
     "_": "Beginnning 5th century BCE",
     "notBefore": -500,
-    "notAfter": -450,
-    "precision": "low"
+    "notAfter": -451
   },
   "places": [
     {
       "_": "Megara Hyblaea",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462307"
+      "ref": "http://pleiades.stoa.org/places/462307",
+      "region": "Sicilia"
     },
     {
       "_": "Megara Iblea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8063661"
+      "ref": "http://sws.geonames.org/8063661",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -230,6 +235,8 @@
       15.18274
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Megara Hyblaea",
   "provenanceFound": {
     "_": "Found 24 April 1889 1.75 m west of tomb 223, 0.5m below the surface, in Orsi's excavation of the western necropolis",
     "type": "found",
@@ -241,6 +248,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.205486,
+    15.170858
+  ],
   "provenanceObserved": {
     "_": "04.10.13 observed only in Depositi, Mag B",
     "type": "observed",
@@ -259,7 +270,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -303,34 +313,42 @@
         "n": "SEG",
         "citedRange": "26.1091",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "04.0065",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
+        "author": "Dubois",
+        "date": "1989",
         "citedRange": {
           "ref": {
             "_": "27",
@@ -344,9 +362,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "date": "1989",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "author": "Orsi",
@@ -359,37 +379,47 @@
           "_": "https://biblio.inscriptiones.org/epig10001716",
           "target": "https://biblio.inscriptiones.org/epig10001716"
         },
+        "inscriptionDate": "1890",
         "title": "Megara Hyblaea. Storia - topografia - necropoli e anathemata",
-        "citation": "<span>Paolo Orsi, «Megara Hyblaea. Storia - topografia - necropoli e anathemata», <i>Monumenti Antichi</i> 1 (1890): 689–950</span>"
+        "citation": "<span>Paolo Orsi, «Megara Hyblaea. Storia - topografia - necropoli e anathemata», <i>Monumenti Antichi</i> 1 (1890): 689–950</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JR6QWRW5",
+        "year": "1890"
       },
       {
         "author": "Orsi",
         "date": "2018",
         "citedRange": "Tacc. 4, p. 19",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RGRSRUHK"
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002617",
           "target": "https://biblio.inscriptiones.org/epig10002617"
         },
+        "inscriptionDate": "2018",
         "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>"
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5241",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://www.zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       },
       {
         "author": "Libertini",
@@ -402,8 +432,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001872",
           "target": "https://biblio.inscriptiones.org/epig10001872"
         },
+        "inscriptionDate": "1929",
         "title": "Il regio museo archeologico di Siracusa",
-        "citation": "<span>Guido Libertini, <i>Il regio museo archeologico di Siracusa</i>, Guide dei musei italiani (Roma: La Libreria dello stato, 1929)</span>"
+        "citation": "<span>Guido Libertini, <i>Il regio museo archeologico di Siracusa</i>, Guide dei musei italiani (Roma: La Libreria dello stato, 1929)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/AHZ3TB5P",
+        "year": "1929"
       },
       {
         "author": "Manni Piraino",
@@ -416,8 +449,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001772",
           "target": "https://biblio.inscriptiones.org/epig10001772"
         },
+        "inscriptionDate": "1975",
         "title": "Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?",
-        "citation": "<span>M.T. Manni Piraino, «Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?», <i>Kokalos</i> 21 (1975): 121–53</span>"
+        "citation": "<span>M.T. Manni Piraino, «Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?», <i>Kokalos</i> 21 (1975): 121–53</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UUNP76BF",
+        "year": "1975"
       },
       {
         "author": "Guarducci",
@@ -430,40 +466,46 @@
           "_": "https://biblio.inscriptiones.org/epig10000193",
           "target": "https://biblio.inscriptiones.org/epig10000193"
         },
+        "inscriptionDate": "1967-1978",
         "title": "Epigrafia greca",
-        "citation": "<span>Margherita Guarducci, <i>Epigrafia greca</i>, 4 voll. (Rome: Istituto Poligrafico dello Stato, Libreria dello Stato, 1967)</span>"
+        "citation": "<span>Margherita Guarducci, <i>Epigrafia greca</i>, 4 voll. (Rome: Istituto Poligrafico dello Stato, Libreria dello Stato, 1967)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ENQ4AGD6",
+        "year": "1967"
       },
       {
         "n": "LSAG[2]",
-        "author": [
-          "Jeffery",
-          "Johnston"
-        ],
+        "author": "Jeffery, Johnston",
         "date": "1990",
         "citedRange": "276 no.28",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QUWGZA84"
+          "target": "https://www.zotero.org/groups/382445/items/QUWGZA84"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000678",
           "target": "https://biblio.inscriptiones.org/epig10000678"
         },
+        "inscriptionDate": "1990",
         "title": "The local scripts of archaic Greece",
-        "citation": "<span>L.H. Jeffery and A.W. Johnston, <i>The Local Scripts of Archaic Greece</i>, 2nd ed. (Oxford: Clarendon Press, 1990)</span>"
+        "citation": "<span>L.H. Jeffery and A.W. Johnston, <i>The Local Scripts of Archaic Greece</i>, 2nd edn (Oxford: Clarendon Press, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QUWGZA84",
+        "year": "1990"
       },
       {
         "author": "Jeffery",
         "date": "1961",
         "citedRange": "276 no.28",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/V6CGSWPS"
+          "target": "https://www.zotero.org/groups/382445/items/V6CGSWPS"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000677",
           "target": "https://biblio.inscriptiones.org/epig10000677"
         },
+        "inscriptionDate": "1961",
         "title": "The Local Scripts of Archaic Greece",
-        "citation": "<span>L.H. Jeffery, <i>The Local Scripts of Archaic Greece</i>, 1st ed. (Oxford, 1961)</span>"
+        "citation": "<span>L.H. Jeffery, <i>The Local Scripts of Archaic Greece</i>, 1st edn (Oxford, 1961)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/V6CGSWPS",
+        "year": "1961"
       },
       {
         "type": "corpus",
@@ -477,15 +519,18 @@
           "target": "https://biblio.inscriptiones.org/epig10001374"
         },
         "title": "Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
+        "author": "Arena",
         "date": "1996",
-        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>"
+        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BJUFRNS9",
+        "year": "1996"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -509,20 +554,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -533,16 +564,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "644982",
   "facsimile": {
     "n": "screen",
     "url": "ISic001439_tiled.tif",
@@ -551,21 +589,39 @@
     "desc": "Photo Museo Archeologico Regionale Paolo Orsi, neg. 19982 (1965); Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Megara Hyblaea",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "IGDS1, 1989",
+    "Dubois, 1989, IGDS1",
     "Orsi, 1890, Megara Hyblaea. Storia - topografia - necropoli e anathemata",
     "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-    "SGDI, 1884-1915",
+    "Hoffmann, 1904, SGDI",
     "Libertini, 1929, Il regio museo archeologico di Siracusa",
     "Manni Piraino, 1975, Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?",
     "Guarducci, 1967-1978, Epigrafia greca",
-    "Jeffery,Johnston, 1990, The local scripts of archaic Greece",
+    "Jeffery, Johnston, 1990, The local scripts of archaic Greece",
     "Jeffery, 1961, The Local Scripts of Archaic Greece",
-    "IGASM1, 1996"
+    "Arena, 1996, IGASM1"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "RWXNUFEX",
+    "JR6QWRW5",
+    "RGRSRUHK",
+    "DQDPC573",
+    "AHZ3TB5P",
+    "UUNP76BF",
+    "ENQ4AGD6",
+    "QUWGZA84",
+    "V6CGSWPS",
+    "BJUFRNS9"
   ],
   "keywords": [
     "isic001439",
@@ -578,7 +634,7 @@
     "limestone",
     "megara hyblaea",
     "megara iblea",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

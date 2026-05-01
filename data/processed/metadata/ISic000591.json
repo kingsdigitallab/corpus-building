@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "\n                                        marble (red)\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -93,12 +97,14 @@
     {
       "_": "Haluntium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462228"
+      "ref": "http://pleiades.stoa.org/places/462228",
+      "region": "Sicilia"
     },
     {
       "_": "San Marco d'Alunzio",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523425"
+      "ref": "http://sws.geonames.org/2523425",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,11 +113,14 @@
       14.70093
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Haluntium",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -129,7 +138,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "San Marco d'Alunzio (?)",
   "repository": "",
@@ -146,41 +154,49 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7467",
+            "_": "7467",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1880",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "195 no.14",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1880",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -204,27 +220,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Alex Antoniou",
@@ -238,6 +236,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "491848",
   "facsimile": {
     "n": "screen",
     "url": "ISic000591_tiled.tif",
@@ -246,11 +245,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Haluntium",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Salinas, 1880, NSA"
+    "Mommsen, 1883, CIL",
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic000591",
@@ -263,7 +265,7 @@
     "marble (red)",
     "haluntium",
     "san marco d'alunzio",
-    "italy",
+    "sicilia",
     "sicily",
     "san marco d'alunzio (?)",
     "latin",

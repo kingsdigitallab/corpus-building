@@ -44,8 +44,10 @@
   },
   "material": {
     "_": "tuff",
-    "ana": "#material.stone.tuff",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/30.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -201,7 +203,9 @@
         "from": "line1",
         "to": "line4",
         "h": "60-130",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "130"
       },
       {
         "type": "interlinear",
@@ -221,12 +225,14 @@
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462489"
+      "ref": "http://pleiades.stoa.org/places/462489",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523164"
+      "ref": "http://sws.geonames.org/2523164",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -235,6 +241,8 @@
       12.82522
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": {
     "_": "Exact circumstances of find at Selinunte not recorded; acquired by Dr. Franco Governale, and given to the museum in 1970; ",
     "type": "found",
@@ -242,6 +250,7 @@
     "notAfter": "1970",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "photographed",
     "type": "observed",
@@ -259,7 +268,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -303,49 +311,60 @@
         "n": "SEG",
         "citedRange": "56.1100",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "35.1019",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "29.0936",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
+        "author": "Dubois",
+        "date": "1989",
         "citedRange": {
           "ref": {
             "_": "73",
@@ -359,21 +378,27 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "date": "1989",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "80",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000531",
-          "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/F66S4X3M",
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Arena",
@@ -386,8 +411,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001374",
           "target": "https://biblio.inscriptiones.org/epig10001374"
         },
+        "inscriptionDate": "1996",
         "title": "Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
-        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>"
+        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BJUFRNS9",
+        "year": "1996"
       },
       {
         "author": "Rocco",
@@ -399,8 +427,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001620",
           "target": "https://biblio.inscriptiones.org/epig10001620"
         },
+        "inscriptionDate": "1970",
         "title": "Due iscrizioni fenicie da Mozia",
-        "citation": "<span>B. Rocco, «Due iscrizioni fenicie da Mozia», <i>Sicilia Archeologica</i> 3, fasc. 11 (1970): 27–33</span>"
+        "citation": "<span>B. Rocco, «Due iscrizioni fenicie da Mozia», <i>Sicilia Archeologica</i> 3, fasc. 11 (1970): 27–33</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RV4FMJKF",
+        "year": "1970"
       },
       {
         "author": "Manni Piraino",
@@ -413,11 +444,14 @@
           "_": "https://biblio.inscriptiones.org/epig10001776",
           "target": "https://biblio.inscriptiones.org/epig10001776"
         },
+        "inscriptionDate": "1970",
         "title": "Epigrafia selinuntina",
-        "citation": "<span>M.T. Manni Piraino, «Epigrafia selinuntina», <i>Kokalos</i> 16 (1970): 268–94</span>"
+        "citation": "<span>M.T. Manni Piraino, «Epigrafia selinuntina», <i>Kokalos</i> 16 (1970): 268–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/786HVD5Q",
+        "year": "1970"
       },
       {
-        "author": "Isserlin and Du Plat Taylor",
+        "author": "Isserlin, Du Plat Taylor",
         "date": "1974",
         "citedRange": "3",
         "ptr": {
@@ -427,8 +461,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001907",
           "target": "https://biblio.inscriptiones.org/epig10001907"
         },
+        "inscriptionDate": "1974",
         "title": "Motya. A phoenician and carthaginian city in Sicily (field work and excavation)",
-        "citation": "<span>B.S.J. Isserlin and J. Du Plat Taylor, <i>Motya. A Phoenician and Carthaginian City in Sicily (Field Work and Excavation)</i> (Brill, Leiden, 1974)</span>"
+        "citation": "<span>B.S.J. Isserlin and J. Du Plat Taylor, <i>Motya. A Phoenician and Carthaginian City in Sicily (Field Work and Excavation)</i> (Brill, Leiden, 1974)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7RU37M8P",
+        "year": "1974"
       },
       {
         "author": "Gallavotti",
@@ -441,8 +478,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001971",
           "target": "https://biblio.inscriptiones.org/epig10001971"
         },
+        "inscriptionDate": "1985",
         "title": "Revisione di testi epigrafici",
-        "citation": "<span>C. Gallavotti, «Revisione di testi epigrafici», <i>Bolletino dei Classici</i> series 3, 6 (1985): 28–57</span>"
+        "citation": "<span>C. Gallavotti, «Revisione di testi epigrafici», <i>Bolletino dei Classici</i> series 3, 6 (1985): 28–57</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZSMBXJK6",
+        "year": "1985"
       },
       {
         "author": "Brugnone",
@@ -455,8 +495,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002115",
           "target": "https://biblio.inscriptiones.org/epig10002115"
         },
+        "inscriptionDate": "2006",
         "title": "Note epigrafiche selinuntine",
-        "citation": "<span>Antonietta Brugnone, «Note epigrafiche selinuntine», <i>Thalassa</i> 3 (2006): 45–123</span>"
+        "citation": "<span>Antonietta Brugnone, «Note epigrafiche selinuntine», <i>Thalassa</i> 3 (2006): 45–123</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DM7BU8BU",
+        "year": "2006"
       },
       {
         "author": "Ampolo",
@@ -469,15 +512,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002184",
           "target": "https://biblio.inscriptiones.org/epig10002184"
         },
+        "inscriptionDate": "2012",
         "title": "Compresenza di ethne e culture diverse nella Sicilia occidentale. Per una nuova prospettiva storica",
-        "citation": "<span>Carmine Ampolo, «Compresenza di ethne e culture diverse nella Sicilia occidentale. Per una nuova prospettiva storica», <i>Aristonothos</i> 12 (2012): 15–57</span>"
+        "citation": "<span>Carmine Ampolo, «Compresenza di ethne e culture diverse nella Sicilia occidentale. Per una nuova prospettiva storica», <i>Aristonothos</i> 12 (2012): 15–57</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TWMDKTFT",
+        "year": "2012"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -501,20 +547,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -525,16 +557,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "284886",
   "facsimile": {
     "n": "screen",
     "url": "ISic001466_tiled.tif",
@@ -543,21 +582,39 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Selinus",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 130
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "IGDS1, 1989",
-    "IGMusPalermo",
+    "Dubois, 1989, IGDS1",
+    "Manni Piraino, 1973, IGMusPalermo",
     "Arena, 1996, Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
     "Rocco, 1970, Due iscrizioni fenicie da Mozia",
     "Manni Piraino, 1970, Epigrafia selinuntina",
-    "Isserlin and Du Plat Taylor, 1974, Motya. A phoenician and carthaginian city in Sicily (field work and excavation)",
+    "Isserlin, Du Plat Taylor, 1974, Motya. A phoenician and carthaginian city in Sicily (field work and excavation)",
     "Gallavotti, 1985, Revisione di testi epigrafici",
     "Brugnone, 2006, Note epigrafiche selinuntine",
     "Ampolo, 2012, Compresenza di ethne e culture diverse nella Sicilia occidentale. Per una nuova prospettiva storica"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "RWXNUFEX",
+    "F66S4X3M",
+    "BJUFRNS9",
+    "RV4FMJKF",
+    "786HVD5Q",
+    "7RU37M8P",
+    "ZSMBXJK6",
+    "DM7BU8BU",
+    "TWMDKTFT"
   ],
   "keywords": [
     "isic001466",
@@ -570,7 +627,7 @@
     "tuff",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

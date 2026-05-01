@@ -48,8 +48,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -89,7 +91,9 @@
         "from": "line1",
         "to": "line1",
         "h": "27-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -97,7 +101,9 @@
         "from": "line2",
         "to": "line2",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -105,7 +111,9 @@
         "from": "line3",
         "to": "line3",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -113,7 +121,9 @@
         "from": "line4",
         "to": "line4",
         "h": "21-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "21",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -121,7 +131,9 @@
         "from": "line5",
         "to": "line5",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -134,7 +146,7 @@
   },
   "date": {
     "_": "Roman imperial in date",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 300,
     "evidence": "lettering"
   },
@@ -142,12 +154,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -156,6 +170,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Purchased by the Siracusa museum on 05.02.1895, said to come from the Grotticelli necropolis / Teracati",
     "type": "found",
@@ -166,6 +182,10 @@
       15.2786827
     ]
   },
+  "provenanceGeo": [
+    37.0784545,
+    15.2786827
+  ],
   "provenanceObserved": {
     "_": "Prag 2022-04-28, Magazzino B, Museo Archeologico Regionale Paolo Orsi, Siracusa",
     "type": "observed",
@@ -199,7 +219,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -249,15 +268,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001709",
           "target": "https://biblio.inscriptiones.org/epig10001709"
         },
+        "inscriptionDate": "1896",
         "title": "Sicile",
-        "citation": "<span>Paolo Orsi, « Sicile », <i>Bulletin de Correspondance Hellénique</i> 20 (1896): 399‑400</span>"
+        "citation": "<span>Paolo Orsi, « Sicile », <i>Bulletin de Correspondance Hellénique</i> 20 (1896): 399‑400</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FWX5CWBN",
+        "year": "1896"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -276,27 +298,14 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -305,6 +314,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001871_tiled.tif",
@@ -313,10 +323,33 @@
     "desc": "I.Sicily with the permission of the Parco archeologico e paesaggistico di Siracusa, Eloro, Villa del Tellaro e Akrai, and the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-04-29.",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 27,
+      "atMost": 30
+    },
+    {
+      "atLeast": 25,
+      "atMost": 30
+    },
+    {
+      "atLeast": 25,
+      "atMost": 30
+    },
+    {
+      "atLeast": 21,
+      "atMost": 30
+    },
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Orsi, 1896, Sicile"
+  ],
+  "zotero": [
+    "FWX5CWBN"
   ],
   "keywords": [
     "isic001871",
@@ -329,7 +362,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

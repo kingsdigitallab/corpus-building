@@ -40,7 +40,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -85,7 +88,9 @@
         "from": "line1",
         "to": "line1",
         "h": "20-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -93,7 +98,9 @@
         "from": "line2",
         "to": "line2",
         "h": "45-90",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "90"
       },
       {
         "type": "letterHeight",
@@ -101,7 +108,9 @@
         "from": "line3",
         "to": "line3",
         "h": "30-80",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "80"
       },
       {
         "type": "interlinear",
@@ -115,20 +124,21 @@
   "date": {
     "_": "later 4th or 3rd century BCE",
     "notBefore": -350,
-    "notAfter": -200,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": -201,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Cephaloedium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462154"
+      "ref": "http://pleiades.stoa.org/places/462154",
+      "region": "Sicilia"
     },
     {
       "_": "Cefalù",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525041"
+      "ref": "http://sws.geonames.org/2525041",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -137,6 +147,8 @@
       14.02285
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Cephaloedium",
   "provenanceFound": {
     "_": "Built into an internal wall of the duomo, at the base of the south corner of the principal apse, facing the nave, below the level of the pavement",
     "type": "found",
@@ -147,6 +159,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    38.0399094,
+    14.0225895
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -164,7 +180,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
   "repository": "Duomo",
@@ -183,15 +198,18 @@
         "n": "SEG",
         "citedRange": "36.0846",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manni Piraino",
@@ -204,8 +222,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001768",
           "target": "https://biblio.inscriptiones.org/epig10001768"
         },
+        "inscriptionDate": "1982",
         "title": "II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche",
-        "citation": "<span>M.T. Manni Piraino, «II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche», in <i>Mostra di documenti e testimonianze figurative della Basilica Ruggeriana di Cefalù. Catalogo della mostra Cefalù, luglio - settembre 1982</i> (Palermo, 1982), 63–64</span>"
+        "citation": "<span>M.T. Manni Piraino, «II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche», in <i>Mostra di documenti e testimonianze figurative della Basilica Ruggeriana di Cefalù. Catalogo della mostra Cefalù, luglio - settembre 1982</i> (Palermo, 1982), 63–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DD8RDSHJ",
+        "year": "1982"
       },
       {
         "author": "Manni Piraino",
@@ -218,15 +239,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002300",
           "target": "https://biblio.inscriptiones.org/epig10002300"
         },
+        "inscriptionDate": "1985",
         "title": "Iscrizioni greche del duomo",
-        "citation": "<span>M.T. Manni Piraino, «Iscrizioni greche del duomo», in <i>La Basilica Cattedrale di Cefalù. Materiali per la conoscenza storica e il restauro. 3. La ricerca archeologica. Preesistenze e materiali reimpiegati</i>, a c. di N. Bonacasa et al. (Palermo: Epos, 1985), 145–49</span>"
+        "citation": "<span>M.T. Manni Piraino, «Iscrizioni greche del duomo», in <i>La Basilica Cattedrale di Cefalù. Materiali per la conoscenza storica e il restauro. 3. La ricerca archeologica. Preesistenze e materiali reimpiegati</i>, a c. di N. Bonacasa et al. (Palermo: Epos, 1985), 145–49</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZVLN5VSX",
+        "year": "1985"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -250,27 +274,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -279,6 +285,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "284916",
   "facsimile": {
     "n": "screen",
     "url": "ISic003090_tiled.tif",
@@ -287,12 +294,29 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Cephaloedium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 60
+    },
+    {
+      "atLeast": 45,
+      "atMost": 90
+    },
+    {
+      "atLeast": 30,
+      "atMost": 80
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Manni Piraino, 1982, II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche",
     "Manni Piraino, 1985, Iscrizioni greche del duomo"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "DD8RDSHJ",
+    "ZVLN5VSX"
   ],
   "keywords": [
     "isic003090",
@@ -305,7 +329,7 @@
     "limestone",
     "cephaloedium",
     "cefalù",
-    "italy",
+    "sicilia",
     "sicily",
     "cefalù",
     "ancient greek",

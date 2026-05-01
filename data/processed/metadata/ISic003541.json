@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -79,7 +83,9 @@
         "from": "line1",
         "to": "line1",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "letterHeight",
@@ -87,7 +93,9 @@
         "from": "line2",
         "to": "line4",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -102,19 +110,20 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -123,12 +132,15 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Via S. Marta, fondo Martines",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "In store",
     "type": "observed",
@@ -145,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -187,6 +198,8 @@
       {
         "type": "corpus",
         "n": "IMusMessina",
+        "author": "Bitto",
+        "date": "2001",
         "citedRange": "44",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/M9HMEP2R"
@@ -194,15 +207,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000029",
           "target": "https://biblio.inscriptiones.org/epig10000029"
-        }
+        },
+        "inscriptionDate": "2001",
+        "title": "Le iscrizioni greche e latine di Messina",
+        "citation": "<span>Irma Bitto, <i>Le iscrizioni greche e latine di Messina</i>, vol. 1, Pelorias 7 (Messina: Dipartimento di Scienze dell’Antichità dell’Università degli Studi di Messina, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M9HMEP2R",
+        "year": "2001"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -226,20 +244,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Davide Massimo",
         "xml:id": "DM",
         "ref": "http://orcid.org/0000-0003-2267-0411"
@@ -248,10 +252,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -260,6 +260,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "284782",
   "facsimile": {
     "n": "screen",
     "url": "ISic003541_tiled.tif",
@@ -268,10 +269,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 40
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "IMusMessina"
+    "Bitto, 2001, IMusMessina"
+  ],
+  "zotero": [
+    "M9HMEP2R"
   ],
   "keywords": [
     "isic003541",
@@ -284,7 +296,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "museo regionale interdisciplinare di messina",

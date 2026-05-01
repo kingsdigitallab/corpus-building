@@ -11,7 +11,7 @@
 	<section class="footer-links">
 		{#each footer.links as section}
 			<div class="footer-link-section">
-				<h3>{section.title}</h3>
+				<h2>{section.title}</h2>
 				<ul>
 					{#each section.links as link}
 						<li class={link.class || ''}>
@@ -33,7 +33,7 @@
 	<section class="footer-logos">
 		<ul>
 			{#each footer.logos as logo}
-				<li>
+				<li class={logo.class || ''}>
 					{#if logo.href}
 						<a href={logo.href}>
 							<img
@@ -107,7 +107,7 @@
 		}
 	}
 
-	.footer-link-section h3 {
+	.footer-link-section h2 {
 		font-size: var(--font-size-2);
 		font-weight: 600;
 		margin-block-end: var(--size-6);
@@ -127,6 +127,10 @@
 		gap: var(--size-6);
 	}
 
+	:global(.footer-logos .add-background) {
+		background-color: var(--logo-background);
+	}
+
 	@media (max-width: 768px) {
 		.footer-logos ul {
 			gap: var(--size-4);
@@ -142,6 +146,13 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	li a {
+		align-items: center;
+		display: inline-flex;
+		min-block-size: 44px;
+		min-inline-size: 44px;
 	}
 
 	li.small {

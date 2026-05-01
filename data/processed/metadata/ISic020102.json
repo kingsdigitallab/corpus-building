@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -84,7 +88,9 @@
         "from": "line1",
         "to": "line1",
         "h": "35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       }
     ]
   },
@@ -98,7 +104,8 @@
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,6 +114,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
     "type": "found",
@@ -118,6 +127,10 @@
       12.84509
     ]
   },
+  "provenanceGeo": [
+    37.9424,
+    12.84509
+  ],
   "provenanceObserved": {
     "_": "Mignosa 2021-12-15",
     "type": "observed",
@@ -137,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -176,7 +188,8 @@
       "desc": "Elymian"
     },
     "languages": [
-      "Ancient Greek"
+      "Ancient Greek",
+      "Elymian (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -189,49 +202,58 @@
         "date": "1977",
         "citedRange": "102",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QR2S9AJ9"
+          "target": "https://www.zotero.org/groups/382445/items/QR2S9AJ9"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002201",
           "target": "https://biblio.inscriptiones.org/epig10002201"
         },
+        "inscriptionDate": "1977",
         "title": "Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QR2S9AJ9",
+        "year": "1977"
       },
       {
         "author": "Lejeune",
         "date": "1970",
         "citedRange": "146",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/2H7NP37F"
+          "target": "https://www.zotero.org/groups/382445/items/2H7NP37F"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001880",
           "target": "https://biblio.inscriptiones.org/epig10001880"
         },
+        "inscriptionDate": "1970",
         "title": "Observations sur l'épigraphie élyme",
-        "citation": "<span>Michel Lejeune, « Observations sur l’épigraphie élyme », <i>Revue des études latines</i> 47 (1970): 133‑83</span>"
+        "citation": "<span>Michel Lejeune, « Observations sur l’épigraphie élyme », <i>Revue des études latines</i> 47 (1970): 133‑83</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2H7NP37F",
+        "year": "1970"
       },
       {
         "author": "Tusa",
         "date": "1966",
         "citedRange": "no.35",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/8J77HB5F"
+          "target": "https://www.zotero.org/groups/382445/items/8J77HB5F"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001539",
           "target": "https://biblio.inscriptiones.org/epig10001539"
         },
+        "inscriptionDate": "1966",
         "title": "Nuovi frammenti di ceramica con graffiti da Segesta",
-        "citation": "<span>Vincenzo Tusa, «Nuovi frammenti di ceramica con graffiti da Segesta», <i>Kokalos</i> 12 (1966): 207–20</span>"
+        "citation": "<span>Vincenzo Tusa, «Nuovi frammenti di ceramica con graffiti da Segesta», <i>Kokalos</i> 12 (1966): 207–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8J77HB5F",
+        "year": "1966"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -255,19 +277,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -279,6 +288,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020102_tiled.tif",
@@ -287,12 +297,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 35,
+      "atMost": 35
+    }
+  ],
   "publications": [
     "Agostiniani, 1977, IAS1",
     "Lejeune, 1970, Observations sur l'épigraphie élyme",
     "Tusa, 1966, Nuovi frammenti di ceramica con graffiti da Segesta"
+  ],
+  "zotero": [
+    "QR2S9AJ9",
+    "2H7NP37F",
+    "8J77HB5F"
   ],
   "keywords": [
     "isic020102",
@@ -304,7 +323,7 @@
     "vessel",
     "ceramic",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

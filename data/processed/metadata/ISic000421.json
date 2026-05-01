@@ -32,7 +32,12 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -87,12 +92,14 @@
     {
       "_": "Roma",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/423025"
+      "ref": "http://pleiades.stoa.org/places/423025",
+      "region": "Italia"
     },
     {
       "_": "Rome",
       "type": "modern",
-      "ref": "http://sws.geonames.org/3169071"
+      "ref": "http://sws.geonames.org/3169071",
+      "region": "Italia"
     }
   ],
   "geo": [
@@ -101,11 +108,14 @@
       12.486136
     ]
   ],
+  "country": "Italia",
+  "provenance": "Roma",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,7 +133,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -165,55 +174,76 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7141",
+            "_": "7141",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650768"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "CIL",
-        "citedRange": "10.1088*.9a",
+        "author": "Mommsen",
+        "date": "1883",
+        "citedRange": "1088*.9a",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/HSQETNGN"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001137",
+          "target": "https://biblio.inscriptiones.org/epig10001137"
+        },
+        "inscriptionDate": "1883",
+        "year": ""
       },
       {
         "type": "corpus",
         "n": "CIL",
-        "citedRange": "06.10699"
+        "author": "Bormann et al.",
+        "date": "1882",
+        "citedRange": "10699",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/JK38WFZI"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10000270",
+          "target": "https://biblio.inscriptiones.org/epig10000270"
+        },
+        "inscriptionDate": "1882",
+        "year": ""
       },
       {
         "author": "Mommsen",
         "date": "1883",
-        "citedRange": "993",
+        "citedRange": "p.993",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -237,20 +267,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -261,8 +277,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -271,6 +288,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "575350",
   "facsimile": {
     "n": "screen",
     "url": "ISic000421_tiled.tif",
@@ -279,13 +297,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Roma",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "CIL",
-    "CIL",
-    "Mommsen, 1883"
+    "Mommsen, 1883, CIL",
+    "Mommsen, 1883, CIL",
+    "Bormann et al., 1882, CIL",
+    "Mommsen, 1883, Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "HSQETNGN",
+    "JK38WFZI",
+    "GQN8UZSI"
   ],
   "keywords": [
     "isic000421",
@@ -297,7 +320,7 @@
     "stone",
     "roma",
     "rome",
-    "italy",
+    "italia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

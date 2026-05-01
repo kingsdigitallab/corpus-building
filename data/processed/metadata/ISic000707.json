@@ -30,44 +30,66 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Two joining fragments of a marble plaque, possibly intact along the lower edge, broken on the other three sides",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
+      "_": "30",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "42",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "5",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Traces of two lines, with a vacat below",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Monumental imperial letters",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line2",
+        "h": "100",
+        "unit": "mm",
+        "atLeast": "100",
+        "atMost": "100"
       },
       {
         "type": "interlinear",
@@ -80,19 +102,21 @@
   },
   "date": {
     "_": "Dedication to Aurelius and\n                                Verus, so 160s (if restoration accepted)",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 200
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -101,11 +125,15 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Manganaro 1988 attributes the fragment to the theatre, while Manganaro 1989 states 'raccolto a piazza S. Domenico'. So far not observed in storage either at the theatre nor at the ex-Manifattura Tabacchi",
     "type": "found",
+    "subtype": "discoverd",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -113,17 +141,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000707_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Catania",
   "repository": "",
@@ -142,12 +160,18 @@
         "n": "AE",
         "citedRange": "1989.0341j",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -156,17 +180,36 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "75",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -190,20 +233,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Andoni Llamazares",
         "xml:id": "AL",
         "ref": "https://orcid.org/0000-0002-0000-7611"
@@ -212,10 +241,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -224,19 +249,22 @@
       "who": "#AL"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000707_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "tmNumber": "175769",
+  "letterHeights": [
+    {
+      "atLeast": 100,
+      "atMost": 100
+    }
+  ],
   "publications": [
-    null,
-    "Manganaro, 1989"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "EZMBJ6GN",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000707",
@@ -245,10 +273,11 @@
       "_": "draft"
     },
     "honorific",
+    "plaque",
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "latin",

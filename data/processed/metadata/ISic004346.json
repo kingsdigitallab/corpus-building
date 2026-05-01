@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -79,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "38",
+        "atMost": "38"
       },
       {
         "type": "interlinear",
@@ -99,20 +106,25 @@
     {
       "_": "Sicilia",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462492"
+      "ref": "http://pleiades.stoa.org/places/462492",
+      "region": "Sicilia"
     },
     {
       "_": "Sicily",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523119"
+      "ref": "http://sws.geonames.org/2523119",
+      "region": "Sicilia"
     }
   ],
   "geo": [],
+  "country": "Sicilia",
+  "provenance": "Sicilia",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "2016.05.12",
     "type": "observed",
@@ -139,7 +151,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -178,14 +189,15 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Latin"
+      "Latin",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
     "type": "edition",
     "bibl": [
       {
-        "author": "Biondi and Buscemi Felici",
+        "author": "Biondi, Buscemi Felici",
         "date": "2014",
         "citedRange": "170 no. 235 fig. 41",
         "ptr": {
@@ -195,15 +207,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002149",
           "target": "https://biblio.inscriptiones.org/epig10002149"
         },
+        "inscriptionDate": "2014",
         "title": "Iscrizioni",
-        "citation": "<span>G. Biondi e G. Buscemi Felici, «Iscrizioni», in <i>Il museo archeologio dell’Università di Catania. Collezione Libertini</i>, a c. di G. Biondi, G. Buscemi Felici, e E. Tortorici (Acireale: Bonanno editore, 2014), 170–73</span>"
+        "citation": "<span>G. Biondi e G. Buscemi Felici, «Iscrizioni», in <i>Il museo archeologio dell’Università di Catania. Collezione Libertini</i>, a c. di G. Biondi, G. Buscemi Felici, e E. Tortorici (Acireale: Bonanno editore, 2014), 170–73</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8CH847SJ",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -227,27 +242,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -256,6 +258,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004346_tiled.tif",
@@ -264,10 +267,17 @@
     "desc": "Photo J. Prag, 2016-05-12, courtesy Museo di Archeologia dell'Universita di Catania",
     "surfaceType": "front"
   },
-  "provenance": "Sicilia",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 38,
+      "atMost": 38
+    }
+  ],
   "publications": [
-    "Biondi and Buscemi Felici, 2014, Iscrizioni"
+    "Biondi, Buscemi Felici, 2014, Iscrizioni"
+  ],
+  "zotero": [
+    "8CH847SJ"
   ],
   "keywords": [
     "isic004346",
@@ -280,7 +290,7 @@
     "marble",
     "sicilia",
     "sicily",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo di archeologia dell'universita di catania",

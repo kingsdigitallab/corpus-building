@@ -22,7 +22,7 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
 
   // Extract museums from TEI structure
   const museums = xml.TEI.text[0].body[0].listOrg[0].org.map((org) => {
-    const uri = org.orgName[0].$.ref;
+    const [uri, url] = org.orgName[0].$.ref.split(" ").map((u) => u.trim());
     const slug = uri.split("/").pop();
 
     const museum = {
@@ -30,6 +30,7 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
       type: org.$.type,
       name: org.orgName[0]._.replace(/\s{2,}/g, " "),
       uri,
+      url,
       description: org.desc ? org.desc[0]?.replace(/\s{2,}/g, " ") : "",
       location: {
         settlement: org.location[0].settlement[0]?.replace(/\s{2,}/g, " "),
@@ -37,7 +38,7 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
         country: org.location[0].country[0]?.replace(/\s{2,}/g, " "),
         address: org.location[0].address[0].addrLine[0]?.replace(
           /\s{2,}/g,
-          " "
+          " ",
         ),
         geo: {
           lat: parseFloat(org.location[0].geo[0].split(",")[0].trim()),
@@ -46,9 +47,11 @@ export async function convertMuseumsToJson(inputPath, outputPath) {
       },
     };
 
-    // Add Pleiades ID if it exists
     if (org.idno) {
-      museum.pleiades = org.idno[0]._;
+      museum.idno = {
+        type: org.idno[0].$.type,
+        url: org.idno[0]._,
+      };
     }
 
     return museum;
@@ -70,7 +73,7 @@ export async function main() {
       "data",
       "raw",
       "alists",
-      "museums.xml"
+      "museums.xml",
     );
 
   const outputPath =
@@ -87,6 +90,9 @@ export async function main() {
 }
 
 // Only run if this file is being run directly
-if (import.meta.url === `file://${__filename}`) {
+const isDirectRun =
+  process.argv[1] &&
+  import.meta.url === `file://${process.argv[1]}`;
+if (isDirectRun) {
   main();
 }

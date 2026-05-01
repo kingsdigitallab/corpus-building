@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "clay",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -90,19 +94,20 @@
     "_": "Rizza dates the structure as a whole to the 2nd century CE",
     "notBefore": 101,
     "notAfter": 200,
-    "evidence": "archaeological-context",
-    "precision": "low"
+    "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,6 +116,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Found during repair works to via Traiano, in 'room c' of a structure identified as remains of imperial-era bath-building, between via Traiano and via Adriano in Centuripe",
     "type": "found",
@@ -121,6 +128,10 @@
       14.741257
     ]
   },
+  "provenanceGeo": [
+    37.623389,
+    14.741257
+  ],
   "provenanceObserved": {
     "_": "No autopsy",
     "type": "observed",
@@ -138,7 +149,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
   "repository": {
@@ -176,37 +186,42 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Rizza",
-        "date": "1949",
+        "author": "",
+        "date": "1876-",
         "citedRange": "192 with fig. 2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1949",
+        "title": "Notizie degli scavi di antichità",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
-        "author": "Biondi and Rizza",
+        "author": "Biondi, Rizza",
         "date": "2017",
         "citedRange": "fig. 59",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/47AF76JW"
+          "target": "https://www.zotero.org/groups/382445/items/47AF76JW"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002221",
           "target": "https://biblio.inscriptiones.org/epig10002221"
         },
+        "inscriptionDate": "2017",
         "title": "Centuripe. Guida ai monumenti di età imperiale romana. Guide to the imperial Roman monuments.",
-        "citation": "<span>Giacomo Biondi e Salvatore Rizza, <i>Centuripe. Guida ai monumenti di età imperiale romana. Guide to the imperial Roman monuments.</i> (Catania: IBAM CNR, 2017)</span>"
+        "citation": "<span>Giacomo Biondi e Salvatore Rizza, <i>Centuripe. Guida ai monumenti di età imperiale romana. Guide to the imperial Roman monuments.</i> (Catania: IBAM CNR, 2017)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/47AF76JW",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -230,27 +245,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -259,6 +256,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001683_tiled.tif",
@@ -267,11 +265,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
   "letterHeights": [],
   "publications": [
-    "Rizza, 1949",
-    "Biondi and Rizza, 2017, Centuripe. Guida ai monumenti di età imperiale romana. Guide to the imperial Roman monuments."
+    "Notizie degli scavi di antichità, 1876-",
+    "Biondi, Rizza, 2017, Centuripe. Guida ai monumenti di età imperiale romana. Guide to the imperial Roman monuments."
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "47AF76JW"
   ],
   "keywords": [
     "isic001683",
@@ -284,7 +285,7 @@
     "clay",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
     "museo archeologico regionale di centuripe",

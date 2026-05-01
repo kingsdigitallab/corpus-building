@@ -54,13 +54,12 @@ export async function convertMuseumsToTei(inputPath, outputPath) {
                         <country>${museum.Country}</country>
                         <address><addrLine>${museum.Address.trim()}</addrLine></address>
                         <geo>${museum.Latitude}, ${museum.Longitude}</geo>
-                    </location>${
-                      museum["Pleiades or other URI"]
-                        ? `
+                    </location>${museum["Pleiades or other URI"]
+        ? `
                     <idno type="Pleiades">${museum["Pleiades or other URI"]}</idno>
                 `
-                        : "\n               "
-                    }</org>`;
+        : "\n               "
+      }</org>`;
   }
 
   teiXml = `${teiXml}
@@ -110,6 +109,9 @@ export async function main() {
 }
 
 // Only run if this file is being run directly
-if (import.meta.url === `file://${__filename}`) {
+const isDirectRun =
+  process.argv[1] &&
+  import.meta.url === `file://${process.argv[1]}`;
+if (isDirectRun) {
   main();
 }

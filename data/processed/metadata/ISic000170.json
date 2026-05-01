@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "59-62",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "59",
+        "atMost": "62"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "55-6",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "6"
       },
       {
         "type": "letterHeight",
@@ -118,12 +127,14 @@
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -132,6 +143,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "The inscription was seen by Gualtherus (no later than 1624) on the wall of the town hall ('in foro superiori, in pariete praetorii'). Subsequent records are derivative of Gualtherus, and only the upper part has since been found in the stores of the Museo Civico.",
     "type": "found",
@@ -139,6 +152,7 @@
     "notAfter": "1624",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-06, upper part only, in the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6",
     "type": "observed",
@@ -166,7 +180,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -204,57 +217,73 @@
       {
         "author": "Gualtherus",
         "date": "1624",
-        "citedRange": "no. 90",
+        "citedRange": "90",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GIN6NANU"
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002388",
-          "target": "https://biblio.inscriptiones.org/epig10002388"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
-        "citedRange": "no. 250",
+        "citedRange": "250",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZP8DE8KS"
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Castelli",
         "date": "1769",
-        "citedRange": "149 cl.12 no.21",
+        "citedRange": "cl.12 no.21",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/SPTB56H3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
         "date": "1784",
-        "citedRange": "157 cl.12 no.24",
+        "citedRange": "cl.12 no.24",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/7PSFHSUH"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7399",
+            "_": "7399",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650799"
           }
         },
@@ -264,11 +293,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "91",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -276,15 +312,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -308,20 +349,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -332,21 +359,33 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised and added images",
-      "when": "2024-05-27",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285126",
   "facsimile": {
     "n": "screen",
     "url": "ISic000170_tiled.tif",
@@ -355,15 +394,31 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 59,
+      "atMost": 62
+    },
+    {
+      "atLeast": 55,
+      "atMost": 6
+    }
+  ],
   "publications": [
-    "Gualtherus, 1624",
-    "Gualtherus, 1624 [1625]",
-    "Castelli, 1769",
-    "Castelli, 1784",
-    "CIL",
-    "ILMusTermini"
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000170",
@@ -376,7 +431,7 @@
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

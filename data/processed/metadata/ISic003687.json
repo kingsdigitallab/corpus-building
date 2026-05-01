@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -94,13 +98,15 @@
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,6 +115,8 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "Reported by Di Giovanni in 1885 as found together with the second fragment of the Cadastral inscription, but without further information.",
     "type": "found",
@@ -116,6 +124,7 @@
     "notAfter": "1885",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,9 +147,8 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
-  "settlement": "",
+  "settlement": "unknown",
   "repository": "unknown",
   "textLang": {
     "_": "Latin",
@@ -163,8 +171,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001426",
           "target": "https://biblio.inscriptiones.org/epig10001426"
         },
+        "inscriptionDate": "1885",
         "title": "La tavola alesina scoverta nel sec. XVI e il frammento trovato nel 1885",
-        "citation": "<span>V. Di Giovanni, «La tavola alesina scoverta nel sec. XVI e il frammento trovato nel 1885», <i>Archivio Storico Siciliano</i> 10 (1885): 123–219</span>"
+        "citation": "<span>V. Di Giovanni, «La tavola alesina scoverta nel sec. XVI e il frammento trovato nel 1885», <i>Archivio Storico Siciliano</i> 10 (1885): 123–219</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3EUW62UF",
+        "year": "1885"
       },
       {
         "author": "Facella",
@@ -177,15 +188,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002013",
           "target": "https://biblio.inscriptiones.org/epig10002013"
         },
+        "inscriptionDate": "2006",
         "title": "Alesa Arconidea: ricerche su un'antica città della Sicilia tirrenica",
-        "citation": "<span>A. Facella, <i>Alesa Arconidea: ricerche su un’antica città della Sicilia tirrenica</i> (Pisa: Edizioni della Normale, 2006)</span>"
+        "citation": "<span>A. Facella, <i>Alesa Arconidea: ricerche su un’antica città della Sicilia tirrenica</i> (Pisa: Edizioni della Normale, 2006)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/J4XWZPV6",
+        "year": "2006"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -209,27 +223,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -238,6 +234,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003687_tiled.tif",
@@ -246,11 +243,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
   "letterHeights": [],
   "publications": [
     "Di Giovanni, 1885, La tavola alesina scoverta nel sec. XVI e il frammento trovato nel 1885",
     "Facella, 2006, Alesa Arconidea: ricerche su un'antica città della Sicilia tirrenica"
+  ],
+  "zotero": [
+    "3EUW62UF",
+    "J4XWZPV6"
   ],
   "keywords": [
     "isic003687",
@@ -263,8 +263,9 @@
     "stone",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
+    "unknown",
     "latin",
     "la"
   ]

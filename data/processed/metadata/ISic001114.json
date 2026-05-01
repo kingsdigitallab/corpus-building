@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "clay",
-    "ana": "#material.clay",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": "",
@@ -94,12 +98,14 @@
       "_": "Ietas",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462258",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Monte Iato",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524540"
+      "ref": "http://sws.geonames.org/2524540",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,11 +114,14 @@
       13.198199
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Ietas",
   "provenanceFound": {
     "_": "Original discovery not recorded",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -120,17 +129,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001114_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Alcamo",
   "repository": "",
@@ -146,56 +145,83 @@
     "bibl": [
       {
         "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "266",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "49 no.326-328",
+            "_": "326-328",
             "target": "http://arachne.uni-koeln.de/item/buchseite/310974"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0293",
+            "_": "293",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5550",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5550",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -219,20 +245,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -241,10 +253,6 @@
         "_": "Giorgia Capra",
         "xml:id": "GC",
         "ref": "https://orcid.org/0000-0003-1030-5679"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -253,20 +261,19 @@
       "who": "#GC"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001114_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Ietas",
+  "tmNumber": "492730",
   "letterHeights": [],
   "publications": [
-    "Gualtherus, 1624 [1625]",
-    "IG",
-    "CIG"
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Kaibel, 1890, IG",
+    "Boeckh, Franz, 1853, CIG"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "Q2SBPG9F",
+    "TQMVHEVL"
   ],
   "keywords": [
     "isic001114",
@@ -279,7 +286,7 @@
     "clay",
     "ietas",
     "monte iato",
-    "italy",
+    "sicilia",
     "sicily",
     "alcamo",
     "ancient greek",

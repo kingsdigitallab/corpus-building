@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -94,12 +99,14 @@
     {
       "_": "Roma",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/423025"
+      "ref": "http://pleiades.stoa.org/places/423025",
+      "region": "Italia"
     },
     {
       "_": "Rome",
       "type": "modern",
-      "ref": "http://sws.geonames.org/3169071"
+      "ref": "http://sws.geonames.org/3169071",
+      "region": "Italia"
     }
   ],
   "geo": [
@@ -108,11 +115,14 @@
       12.486136
     ]
   ],
+  "country": "Italia",
+  "provenance": "Roma",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Autopsy Prag 01-07-15",
     "type": "observed",
@@ -132,7 +142,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -174,51 +183,55 @@
       {
         "type": "corpus",
         "n": "CIL",
-        "citedRange": {
-          "ref": {
-            "_": "06.0571",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
-          }
-        },
+        "author": "Bormann and Henzen",
+        "date": "1876",
+        "citedRange": "571",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/VVHPQFD3"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001134",
+          "target": "https://biblio.inscriptiones.org/epig10001134"
+        },
+        "inscriptionDate": "1876",
+        "year": ""
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.1088.231",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
+            "_": "1088*.231",
+            "target": "http://arachne.uni-koeln.de/item/buch/4004"
           }
         },
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/HSQETNGN"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001137",
+          "target": "https://biblio.inscriptiones.org/epig10001137"
+        },
+        "inscriptionDate": "1883",
+        "year": ""
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1889",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "387",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1889",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "bulletin",
@@ -230,7 +243,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002649",
           "target": "https://biblio.inscriptiones.org/epig10002649"
-        }
+        },
+        "title": "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+        "author": "Henzen, Zangemeister",
+        "date": "1872-1913",
+        "citation": "<span>W. Henzen and K. F. W. Zangemeister, <i>Ephemeris Epigraphica. Corporis Inscriptionum Latinarum Supplementum, Edita Iussu Instituti Archaeologici Romani</i>, 9 vols (Berlin: G. Reimerum, 1872)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PU8UDAF3",
+        "year": "1872"
       },
       {
         "type": "bulletin",
@@ -242,14 +261,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002649",
           "target": "https://biblio.inscriptiones.org/epig10002649"
-        }
+        },
+        "title": "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+        "author": "Henzen, Zangemeister",
+        "date": "1872-1913",
+        "citation": "<span>W. Henzen and K. F. W. Zangemeister, <i>Ephemeris Epigraphica. Corporis Inscriptionum Latinarum Supplementum, Edita Iussu Instituti Archaeologici Romani</i>, 9 vols (Berlin: G. Reimerum, 1872)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PU8UDAF3",
+        "year": "1872"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -273,27 +298,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -302,6 +314,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "572408",
   "facsimile": {
     "n": "screen",
     "url": "ISic004343_tiled.tif",
@@ -310,14 +323,20 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Roma",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "CIL",
-    "Orsi, 1889, NSA",
-    null,
-    null
+    "Bormann and Henzen, 1876, CIL",
+    "Mommsen, 1883, CIL",
+    "Notizie degli scavi di antichità, 1876-",
+    "Henzen, Zangemeister, 1872-1913, Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+    "Henzen, Zangemeister, 1872-1913, Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani"
+  ],
+  "zotero": [
+    "VVHPQFD3",
+    "HSQETNGN",
+    "4MCP2PVV",
+    "PU8UDAF3",
+    "PU8UDAF3"
   ],
   "keywords": [
     "isic004343",
@@ -330,7 +349,7 @@
     "marble",
     "roma",
     "rome",
-    "italy",
+    "italia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

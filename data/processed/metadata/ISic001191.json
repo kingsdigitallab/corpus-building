@@ -43,7 +43,12 @@
   },
   "material": {
     "_": "breccia",
-    "ana": "#material.stone.breccia",
+    "ana": "#material.inorganic.stone.polygenic_breccia",
+    "type": "stone.breccia",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
   "condition": "",
@@ -84,7 +89,9 @@
         "from": "line1",
         "to": "line1",
         "h": "45-50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "50"
       },
       {
         "type": "letterHeight",
@@ -92,7 +99,9 @@
         "from": "line2",
         "to": "line2",
         "h": "35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -106,20 +115,21 @@
   "date": {
     "_": "2nd century BCE(?)",
     "notBefore": -200,
-    "notAfter": -100,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Haluntium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462228"
+      "ref": "http://pleiades.stoa.org/places/462228",
+      "region": "Sicilia"
     },
     {
       "_": "San Marco d'Alunzio",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523425"
+      "ref": "http://sws.geonames.org/2523425",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -128,12 +138,15 @@
       14.70093
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Haluntium",
   "provenanceFound": {
     "_": "Observed in 1880 by Salinas in the Casa Comunale, it was subsequently given to the Palermo museum.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -151,7 +164,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -193,23 +205,29 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0368",
+            "_": "368",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "41",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -217,29 +235,35 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1880",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "194 no.5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1880",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -263,20 +287,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -287,16 +297,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised text from photograph",
-      "when": "2023-06-07",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-16",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "492796",
   "facsimile": {
     "n": "screen",
     "url": "ISic001191_tiled.tif",
@@ -305,12 +327,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Haluntium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 45,
+      "atMost": 50
+    },
+    {
+      "atLeast": 35,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusPalermo",
-    "Salinas, 1880, NSA"
+    "Kaibel, 1890, IG",
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F66S4X3M",
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic001191",
@@ -323,7 +358,7 @@
     "breccia",
     "haluntium",
     "san marco d'alunzio",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

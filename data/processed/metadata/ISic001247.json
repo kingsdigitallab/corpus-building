@@ -51,6 +51,7 @@
     "ana": "#function.account",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/410.html"
   },
+  "support": "Two fragments of a large white limestone rectangular stele (of which a third part would seem to be missing from the base). The stele tapers towards the top. The upper fragment (a) is 75 cm tall, 19.5 cm across the narrow face, and reducing across the broad face from 28 cm at the base to 23.5 cm (at the highest point where the full width of the face is still preserved). The lower fragment (b) is 101 cm tall, 20.8 cm wide across the narrow face and 36.8 cm across the broad face. The two fragments essentially connect, although they are mounted separately. Manganaro suggests that the original full height of the stele was perhaps 2.5 m or more. The lower fragment appears to have been re-used as a door threshold at a later date. All four sides are engraved, although it was only Antonetti in the early 1980s who recognised that both of the wider faces were engraved. The text on the wider faces is very poorly preserved, and nothing appears to be legible on the second of these. The practice of mounting the stele fragments against a wall, maintained in the current display, means that one face is always inaccessible (and is part of the explanation for why the existence of text on all four faces was not recognised). The text begins on one of the wider faces (face 1), continues on the opposite wider face (2 - of which nothing can be read), and then on the right hand narrow face (3, understood from the perspective of a viewer facing the initial broad face 1) and finally on the opposite, left-hand, narrow face (4). In pre-1983 editions, face 2 was omitted, and so face 3 = 2 and face 4 = 3. In the current display, the upper fragment (a) is mounted against the wall with face 4 outermost; the lower fragment (b) is mounted against the wall with face 1 outermost.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
@@ -58,20 +59,27 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcite_limestone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
+      "_": "at least 176",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "36.8-23.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "20.8-19.5",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -83,17 +91,23 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Letters vary from 3-8 mm in height, with a use of lunate sigma, standard epsilon and variously open or closed omega.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1ff",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "3-8",
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -107,19 +121,20 @@
   "date": {
     "_": "2nd — 1st century BCE",
     "notBefore": -200,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -51
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -128,13 +143,17 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "First observed in the church of S. Peter the Apostle, outside Taormina.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "2009.10.06",
+    "_": "Superficial autopsy, Prag 2009-10-06",
     "type": "observed",
     "subtype": "autopsied",
     "resp": "#JP",
@@ -144,14 +163,173 @@
   "graphics": [
     {
       "n": "screen",
-      "url": "ISic001247_tiled.tif",
+      "url": "ISic001247_fr-a_1_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 1",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_1_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 1",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_2_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 2",
+      "surfaceType": "rear"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_3_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 3",
+      "surfaceType": "right"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_4_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 4",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_4_detail-1_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 4, detail 1",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_4_detail-2_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 4, detail 2",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_4_detail-3_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 4, detail 3",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_4_detail-4_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 4, detail 4",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-a_4_detail-5_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 4, detail 5",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-1_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 1",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-2_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 2",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-3_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 3",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-4_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 4",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-5_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 5",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-6_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 6",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-7_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 7",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-8_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 8",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-9_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 9",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001247_fr-b_4_detail-10_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment b, face 4, detail 10",
+      "surfaceType": "left"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -189,98 +367,119 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0422",
+            "_": "422",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "45.1342",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "38.0975",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "33.0755",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "04.0049",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1966.0512",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
+        "author": "Dubois",
+        "date": "1989",
         "citedRange": {
           "ref": {
             "_": "186",
@@ -294,51 +493,71 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "date": "1989",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5642",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5642",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5641",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5641",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5220",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://www.zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       },
       {
-        "author": "Arangio Ruiz and Olivieri",
+        "author": "Arangio Ruiz, Olivieri",
         "date": "1925",
         "citedRange": "no.4",
         "ptr": {
@@ -348,8 +567,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001378",
           "target": "https://biblio.inscriptiones.org/epig10001378"
         },
+        "inscriptionDate": "1925",
         "title": "Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes",
-        "citation": "<span>V. Arangio Ruiz and A. Olivieri, <i>Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes</i> (Milan, 1925)</span>"
+        "citation": "<span>V. Arangio Ruiz and A. Olivieri, <i>Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes</i> (Milan, 1925)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5Q2B5T7T",
+        "year": "1925"
       },
       {
         "author": "Sartori",
@@ -361,8 +583,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001605",
           "target": "https://biblio.inscriptiones.org/epig10001605"
         },
+        "inscriptionDate": "1954",
         "title": "Appunti di storia siceliota: la costituzione di Tauromenio",
-        "citation": "<span>F. Sartori, «Appunti di storia siceliota: la costituzione di Tauromenio», <i>Athenaeum</i> 32 (1954): 356–83</span>"
+        "citation": "<span>F. Sartori, «Appunti di storia siceliota: la costituzione di Tauromenio», <i>Athenaeum</i> 32 (1954): 356–83</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6I3KRDXM",
+        "year": "1954"
       },
       {
         "author": "Ruck",
@@ -374,8 +599,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001470",
           "target": "https://biblio.inscriptiones.org/epig10001470"
         },
+        "inscriptionDate": "1996",
         "title": "Die fasten von Taormina",
-        "citation": "<span>B. Ruck, „Die fasten von Taormina“, <i>Zeitschrift für Papyrologie und Epigraphik</i> 111 (1996): 271–80</span>"
+        "citation": "<span>B. Ruck, „Die fasten von Taormina“, <i>Zeitschrift für Papyrologie und Epigraphik</i> 111 (1996): 271–80</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BIGF9CS9",
+        "year": "1996"
       },
       {
         "author": "Cordiano",
@@ -388,8 +616,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002064",
           "target": "https://biblio.inscriptiones.org/epig10002064"
         },
+        "inscriptionDate": "1997",
         "title": "La ginnasiarchia nelle \"poleis\" dell'occidente mediterraneo antico",
-        "citation": "<span>G. Cordiano, <i>La ginnasiarchia nelle «poleis» dell’occidente mediterraneo antico</i>, Studi e testi di storia antica 7 (Pisa, 1997)</span>"
+        "citation": "<span>G. Cordiano, <i>La ginnasiarchia nelle «poleis» dell’occidente mediterraneo antico</i>, Studi e testi di storia antica 7 (Pisa, 1997)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DBDJ7RGP",
+        "year": "1997"
       },
       {
         "author": "Calderone",
@@ -402,8 +633,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002666",
           "target": "https://biblio.inscriptiones.org/epig10002666"
         },
+        "inscriptionDate": "1956",
         "title": "I neapolitai di Tauromenion",
-        "citation": "<span>S. Calderone, «I neapolitai di Tauromenion», in <i>Studi in onore di Aristide Calderini e Roberto Paribeni</i>, vol. 1 (Milan, 1956), 69–78</span>"
+        "citation": "<span>S. Calderone, «I neapolitai di Tauromenion», in <i>Studi in onore di Aristide Calderini e Roberto Paribeni</i>, vol. 1 (Milan, 1956), 69–78</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PCHDSHQ7",
+        "year": "1956"
       },
       {
         "author": "Manganaro",
@@ -416,8 +650,28 @@
           "_": "https://biblio.inscriptiones.org/epig10001842",
           "target": "https://biblio.inscriptiones.org/epig10001842"
         },
+        "inscriptionDate": "1964",
         "title": "Iscrizioni latine e greche dal nuovo edificio termale di Taormina",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni latine e greche dal nuovo edificio termale di Taormina», <i>Cronache di archeologia e di storia dell’arte</i> 3 (1964): 38–68</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni latine e greche dal nuovo edificio termale di Taormina», <i>Cronache di archeologia e di storia dell’arte</i> 3 (1964): 38–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FQZIP29F",
+        "year": "1964"
+      },
+      {
+        "author": "Antonetti",
+        "date": "1983",
+        "citedRange": "11-20",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/D8KZ75JX"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002179",
+          "target": "https://biblio.inscriptiones.org/epig10002179"
+        },
+        "inscriptionDate": "1983",
+        "title": "Ancora sull'iscrizione dei ginnasiarchi di Tauromenio: riflessioni sulla base di nuove letture",
+        "citation": "<span>C. Antonetti, «Ancora sull’iscrizione dei ginnasiarchi di Tauromenio: riflessioni sulla base di nuove letture», <i>Bolletino Beni Culturale della Regione Siciliana</i> 4 (1983): 11–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D8KZ75JX",
+        "year": "1983"
       },
       {
         "author": "Manganaro",
@@ -430,8 +684,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001832",
           "target": "https://biblio.inscriptiones.org/epig10001832"
         },
+        "inscriptionDate": "1988",
         "title": "Le tavole finanziare di Tauromenion",
-        "citation": "<span>Giacomo Manganaro, «Le tavole finanziare di Tauromenion», in <i>Comptes et inventaires dans la cité grecque: actes du colloque international d’épigraphique tenu à Neuchâtel du 23 au 26 septembre 1986 en l’honneur de J.Tréheux</i>, a c. di D. Knoepfler (Neuchâtel, 1988), 155–90</span>"
+        "citation": "<span>Giacomo Manganaro, «Le tavole finanziare di Tauromenion», in <i>Comptes et inventaires dans la cité grecque: actes du colloque international d’épigraphique tenu à Neuchâtel du 23 au 26 septembre 1986 en l’honneur de J.Tréheux</i>, a c. di D. Knoepfler (Neuchâtel, 1988), 155–90</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IXCSBXRM",
+        "year": "1988"
       },
       {
         "author": "Battistoni",
@@ -443,8 +700,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001495",
           "target": "https://biblio.inscriptiones.org/epig10001495"
         },
+        "inscriptionDate": "2011",
         "title": "Time(s) for Τauromenion: the pilaster with the list of the Stratagoi (IG XIV 421) - the Antikythera mechanism",
-        "citation": "<span>Filippo Battistoni, ‘Time(s) for Τauromenion: The Pilaster with the List of the Stratagoi (IG XIV 421) - the Antikythera Mechanism’, <i>Zeitschrift Für Papyrologie Und Epigraphik</i> 179 (2011): 171–88</span>"
+        "citation": "<span>Filippo Battistoni, ‘Time(s) for Τauromenion: The Pilaster with the List of the Stratagoi (IG XIV 421) - the Antikythera Mechanism’, <i>Zeitschrift Für Papyrologie Und Epigraphik</i> 179 (2011): 171–88</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TW56778Q",
+        "year": "2011"
       },
       {
         "author": "Muscolino",
@@ -456,28 +716,34 @@
           "_": "https://biblio.inscriptiones.org/epig10001733",
           "target": "https://biblio.inscriptiones.org/epig10001733"
         },
+        "inscriptionDate": "2007",
         "title": "Gli studi epigrafici e archeologici di Anthony Askew e Thomas Blackburne a Taormina (1748-1749)",
-        "citation": "<span>Francesco Muscolino, «Gli studi epigrafici e archeologici di Anthony Askew e Thomas Blackburne a Taormina (1748-1749)», <i>Zeitschrift für Papyrologie und Epigraphik</i> 162 (2007): 132–38</span>"
+        "citation": "<span>Francesco Muscolino, «Gli studi epigrafici e archeologici di Anthony Askew e Thomas Blackburne a Taormina (1748-1749)», <i>Zeitschrift für Papyrologie und Epigraphik</i> 162 (2007): 132–38</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/C2WQREZM",
+        "year": "2007"
       },
       {
         "author": "Battistoni",
         "date": "2020",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/AW5WZWZN"
+          "target": "https://www.zotero.org/groups/382445/items/AW5WZWZN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002587",
           "target": "https://biblio.inscriptiones.org/epig10002587"
         },
+        "inscriptionDate": "2020",
         "title": "Stratagoi e duoviri a Tauromenion: elementi cronologici",
-        "citation": "<span>Filippo Battistoni, «Stratagoi e duoviri a Tauromenion: elementi cronologici», <i>Ricerche ellenenistiche</i> 1 (2020): 171–78, <a href=\"https://doi.org/doi.org/10.19272/202014801010\">https://doi.org/doi.org/10.19272/202014801010</a></span>"
+        "citation": "<span>Filippo Battistoni, «Stratagoi e duoviri a Tauromenion: elementi cronologici», <i>Ricerche ellenenistiche</i> 1 (2020): 171–78, <a href=\"https://doi.org/doi.org/10.19272/202014801010\">https://doi.org/doi.org/10.19272/202014801010</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/AW5WZWZN",
+        "year": "2020"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -501,66 +767,87 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised text encoding, added metadata and images",
+      "when": "2026-03-20",
+      "who": "#JP"
     }
   },
+  "tmNumber": "492853",
   "facsimile": {
     "n": "screen",
-    "url": "ISic001247_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "url": "ISic001247_fr-a_1_tiled.tif",
+    "height": "5520px",
+    "width": "3680px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22. Fragment a, face 1",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 3,
+      "atMost": 8
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Bulletin épigraphique, 1888-",
-    "IGDS1, 1989",
-    "CIG",
-    "CIG",
-    "SGDI, 1884-1915",
-    "Arangio Ruiz and Olivieri, 1925, Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes",
+    "Dubois, 1989, IGDS1",
+    "Boeckh, Franz, 1853, CIG",
+    "Boeckh, Franz, 1853, CIG",
+    "Hoffmann, 1904, SGDI",
+    "Arangio Ruiz, Olivieri, 1925, Inscriptiones graecae Siciliae et infimae Italiae ad ius pertinentes",
     "Sartori, 1954, Appunti di storia siceliota: la costituzione di Tauromenio",
     "Ruck, 1996, Die fasten von Taormina",
     "Cordiano, 1997, La ginnasiarchia nelle \"poleis\" dell'occidente mediterraneo antico",
     "Calderone, 1956, I neapolitai di Tauromenion",
     "Manganaro, 1964, Iscrizioni latine e greche dal nuovo edificio termale di Taormina",
+    "Antonetti, 1983, Ancora sull'iscrizione dei ginnasiarchi di Tauromenio: riflessioni sulla base di nuove letture",
     "Manganaro, 1988, Le tavole finanziare di Tauromenion",
     "Battistoni, 2011, Time(s) for Τauromenion: the pilaster with the list of the Stratagoi (IG XIV 421) - the Antikythera mechanism",
     "Muscolino, 2007, Gli studi epigrafici e archeologici di Anthony Askew e Thomas Blackburne a Taormina (1748-1749)",
     "Battistoni, 2020, Stratagoi e duoviri a Tauromenion: elementi cronologici"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "77P5MNIR",
+    "RWXNUFEX",
+    "TQMVHEVL",
+    "TQMVHEVL",
+    "DQDPC573",
+    "5Q2B5T7T",
+    "6I3KRDXM",
+    "BIGF9CS9",
+    "DBDJ7RGP",
+    "PCHDSHQ7",
+    "FQZIP29F",
+    "D8KZ75JX",
+    "IXCSBXRM",
+    "TW56778Q",
+    "C2WQREZM",
+    "AW5WZWZN"
   ],
   "keywords": [
     "isic001247",
@@ -573,7 +860,7 @@
     "limestone",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

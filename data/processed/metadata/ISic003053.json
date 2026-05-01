@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "volcanic (pietra di Fuardo)",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line1",
         "h": "47-62",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "47",
+        "atMost": "62"
       },
       {
         "type": "interlinear",
@@ -93,19 +98,20 @@
     "_": "funerary material of the associated tomb dates to the third quarter of the 4th century BCE",
     "notBefore": -350,
     "notAfter": -325,
-    "evidence": "archaeological-context",
-    "precision": "low"
+    "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +120,8 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Found in excavation in 1985 in trench XXIII (prop. Monteleone), in its original context and probably belonging to t.2187",
     "type": "found",
@@ -121,6 +129,7 @@
     "when": "1985",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +147,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
   "repository": {
@@ -182,30 +190,37 @@
         "n": "SEG",
         "citedRange": "41.0808",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "26",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
       {
-        "author": "Bernabò Brea and Cavalier",
+        "author": "Bernabò Brea, Cavalier",
         "date": "1991",
         "citedRange": "151 cippo 2162 fig.330c",
         "ptr": {
@@ -215,15 +230,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002157",
           "target": "https://biblio.inscriptiones.org/epig10002157"
         },
+        "inscriptionDate": "1991",
         "title": "Meligunìs Lipára V. Scavi nella necropoli greca di Lipari",
-        "citation": "<span>L. Bernabò Brea e M. Cavalier, <i>Meligunìs Lipára V. Scavi nella necropoli greca di Lipari</i> (Rome: «L’Erma» di Bretschneider, 1991)</span>"
+        "citation": "<span>L. Bernabò Brea e M. Cavalier, <i>Meligunìs Lipára V. Scavi nella necropoli greca di Lipari</i> (Rome: «L’Erma» di Bretschneider, 1991)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BEQVSMFX",
+        "year": "1991"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -247,20 +265,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Estella Kessler",
         "xml:id": "EK",
         "ref": "https://orcid.org/0000-0002-2354-4452"
@@ -271,16 +275,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2026-02-02",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "645407",
   "facsimile": {
     "n": "screen",
     "url": "ISic003053_tiled.tif",
@@ -289,12 +305,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 47,
+      "atMost": 62
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "ILipara",
-    "Bernabò Brea and Cavalier, 1991, Meligunìs Lipára V. Scavi nella necropoli greca di Lipari"
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara",
+    "Bernabò Brea, Cavalier, 1991, Meligunìs Lipára V. Scavi nella necropoli greca di Lipari"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "VDAQH5D2",
+    "BEQVSMFX"
   ],
   "keywords": [
     "isic003053",
@@ -307,7 +332,7 @@
     "volcanic (pietra di fuardo)",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
     "lipari",
     "museo archeologico regionale eoliano \"luigi bernab� brea\"",

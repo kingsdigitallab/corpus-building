@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -93,12 +98,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,11 +114,14 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Original discovery not recorded",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "2018-09-14 (Flavio Santoni), magazzino B, cassa 47",
     "type": "observed",
@@ -129,7 +139,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -171,40 +180,47 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0061",
+            "_": "61",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "author": "Orsi",
         "date": "2018",
         "citedRange": "Tacc. 1, p. 109",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RGRSRUHK"
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002617",
           "target": "https://biblio.inscriptiones.org/epig10002617"
         },
+        "inscriptionDate": "2018",
         "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>"
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -228,20 +244,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -252,8 +254,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -262,6 +265,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "492508",
   "facsimile": {
     "n": "screen",
     "url": "ISic000878_tiled.tif",
@@ -270,11 +274,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "RGRSRUHK"
   ],
   "keywords": [
     "isic000878",
@@ -287,7 +294,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

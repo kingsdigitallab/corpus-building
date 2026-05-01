@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": "",
@@ -81,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -95,19 +101,21 @@
   "date": {
     "_": "second half of the 3rd century BCE",
     "notBefore": -250,
-    "notAfter": -200,
+    "notAfter": -201,
     "evidence": "archaeological-context, nomenclature"
   },
   "places": [
     {
       "_": "Messana",
       "ref": "http://pleiades.stoa.org/places/462538",
-      "type": "ancient"
+      "type": "ancient",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "ref": "http://sws.geonames.org/2524170",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +124,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Excavated in 1971, found in a stone built chamber tomb in Largo Avignone, Messina",
     "type": "found",
@@ -126,6 +136,10 @@
     ],
     "geoCert": "high"
   },
+  "provenanceGeo": [
+    38.182636,
+    15.548695
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -142,7 +156,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -186,21 +199,24 @@
         "date": "2021",
         "citedRange": "118-125 no. 1, figs. 3-5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/6K4YSQQS"
+          "target": "https://www.zotero.org/groups/382445/items/6K4YSQQS"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002337",
           "target": "https://biblio.inscriptiones.org/epig10002337"
         },
+        "inscriptionDate": "2021",
         "title": "Due nuove epigrafi funerarie da Messana tardo-ellenistica. Donne mamertine nella tomba a camera di Largo Avignone",
-        "citation": "<span>Emiliano Arena, «Due nuove epigrafi funerarie da Messana tardo-ellenistica. Donne mamertine nella tomba a camera di Largo Avignone», <i>Rationes Rerum. Rivista di Filologia e Storia</i> 18 (2021): 115–49</span>"
+        "citation": "<span>Emiliano Arena, «Due nuove epigrafi funerarie da Messana tardo-ellenistica. Donne mamertine nella tomba a camera di Largo Avignone», <i>Rationes Rerum. Rivista di Filologia e Storia</i> 18 (2021): 115–49</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6K4YSQQS",
+        "year": "2021"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -219,27 +235,9 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -248,6 +246,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020917_tiled.tif",
@@ -256,10 +255,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Arena, 2021, Due nuove epigrafi funerarie da Messana tardo-ellenistica. Donne mamertine nella tomba a camera di Largo Avignone"
+  ],
+  "zotero": [
+    "6K4YSQQS"
   ],
   "keywords": [
     "isic020917",
@@ -272,7 +278,7 @@
     "ceramic",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "soprintendenza beni culturali e ambientali di messina",

@@ -1,7 +1,7 @@
 {
   "file": "ISic003708",
   "uri": "ISic003708",
-  "title": "I.Sicily inscription 003708",
+  "title": "Epitaph for Amplis",
   "status": {
     "_": "draft"
   },
@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -74,7 +77,9 @@
         "from": "line1",
         "to": "line7",
         "h": "15-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "38"
       },
       {
         "type": "interlinear",
@@ -87,14 +92,15 @@
   },
   "date": {
     "_": "late imperial",
-    "notBefore": 200,
+    "notBefore": 201,
     "notAfter": 500
   },
   "places": [
     {
       "_": "Rosolini",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523581"
+      "ref": "http://sws.geonames.org/2523581",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,13 +109,22 @@
       14.95132
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Rosolini",
   "provenanceFound": {
-    "_": "Contrada Stafenna, near Rosolini, found October 1972 during agricultural work.",
+    "_": "Contrada Stafenna, near Rosolini, found October 1972 during agricultural work",
     "type": "found",
     "subtype": "discovered",
     "when": "1972-10",
-    "geo": null
+    "geo": [
+      36.8341101,
+      14.9815633
+    ]
   },
+  "provenanceGeo": [
+    36.8341101,
+    14.9815633
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -127,7 +142,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Rosolini",
   "repository": "",
@@ -146,15 +160,15 @@
         "n": "SEG",
         "citedRange": "26.1117",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Agnello",
@@ -166,8 +180,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002205",
           "target": "https://biblio.inscriptiones.org/epig10002205"
         },
+        "inscriptionDate": "1972-1973",
         "title": "Cippo con iscrizione funeraria da Stafenna",
-        "citation": "<span>S.L. Agnello, «Cippo con iscrizione funeraria da Stafenna», <i>Archivio Storico Siracusano</i> 2 (1973 1972): 99–102</span>"
+        "citation": "<span>S.L. Agnello, «Cippo con iscrizione funeraria da Stafenna», <i>Archivio Storico Siracusano</i> 2 (1973 1972): 99–102</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NRVA32DP",
+        "year": "1972"
       }
     ]
   },
@@ -181,12 +198,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/K7PQWD75"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001636",
-          "target": "https://biblio.inscriptiones.org/epig10001636"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/K7PQWD75",
+        "inscriptionDate": "2008",
         "title": "Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina",
-        "citation": "<span>Vittorio Giovanni Rizzone, «Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina», <i>Nea Rhome</i> 5 (2008): 17–26</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone, «Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina», <i>Nea Rhome</i> 5 (2008): 17–26</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/K7PQWD75",
+        "year": "2008"
       }
     ]
   },
@@ -211,35 +228,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited draft edition from publication",
-      "when": "2023-02-06",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2026-01-19",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003708_tiled.tif",
@@ -248,15 +258,23 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Rosolini",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 38
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Agnello, 1972-1973, Cippo con iscrizione funeraria da Stafenna"
   ],
+  "zotero": [
+    "F2GG87EQ",
+    "NRVA32DP"
+  ],
   "keywords": [
     "isic003708",
-    "i.sicily inscription 003708",
+    "epitaph for amplis",
     {
       "_": "draft"
     },
@@ -264,7 +282,7 @@
     "stele",
     "limestone",
     "rosolini",
-    "italy",
+    "sicilia",
     "sicily",
     "rosolini",
     "ancient greek",

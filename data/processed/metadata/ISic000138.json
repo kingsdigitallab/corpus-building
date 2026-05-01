@@ -38,8 +38,18 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine to medium-grained, banded, grey marble, likely Aphrodisian, Parian-1, Parian-2, Parian-3, Parian-4, Ephesian_grey. Digital microscopy: heteroblastic fabric (identification based on digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Ephesian_grey",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-1",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Ephesian_grey"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +90,9 @@
         "from": "line1",
         "to": "line1",
         "h": "36",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "36"
       },
       {
         "type": "letterHeight",
@@ -88,7 +100,9 @@
         "from": "line2",
         "to": "line2",
         "h": "29-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "29",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -96,7 +110,9 @@
         "from": "line3",
         "to": "line3",
         "h": "23-26",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "26"
       },
       {
         "type": "letterHeight",
@@ -104,7 +120,9 @@
         "from": "line4",
         "to": "line4",
         "h": "24",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "24"
       },
       {
         "type": "interlinear",
@@ -124,12 +142,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -138,6 +158,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in the ruins of the castle of Termini, in 1883",
     "type": "found",
@@ -148,6 +170,10 @@
       13.6972583
     ]
   },
+  "provenanceGeo": [
+    37.9886141,
+    13.6972583
+  ],
   "provenanceObserved": {
     "_": "Prag 2022-07-13, storeroom of the Museo Civico, Termini.",
     "type": "observed",
@@ -173,7 +199,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -215,6 +240,8 @@
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "57",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -222,22 +249,31 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Fiorelli",
-        "title": "NSA",
-        "date": "1883",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "179",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1883",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "bulletin",
@@ -249,14 +285,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002649",
           "target": "https://biblio.inscriptiones.org/epig10002649"
-        }
+        },
+        "title": "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+        "author": "Henzen, Zangemeister",
+        "date": "1872-1913",
+        "citation": "<span>W. Henzen and K. F. W. Zangemeister, <i>Ephemeris Epigraphica. Corporis Inscriptionum Latinarum Supplementum, Edita Iussu Instituti Archaeologici Romani</i>, 9 vols (Berlin: G. Reimerum, 1872)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PU8UDAF3",
+        "year": "1872"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -280,20 +322,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -304,16 +332,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy and added images.",
-      "when": "2024-04-17",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285240",
   "facsimile": {
     "n": "screen",
     "url": "ISic000138_tiled.tif",
@@ -322,12 +362,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-13.",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 36,
+      "atMost": 36
+    },
+    {
+      "atLeast": 29,
+      "atMost": 30
+    },
+    {
+      "atLeast": 23,
+      "atMost": 26
+    },
+    {
+      "atLeast": 24,
+      "atMost": 24
+    }
+  ],
   "publications": [
-    "ILMusTermini",
-    "Fiorelli, 1883, NSA",
-    null
+    "Bivona, 1994, ILMusTermini",
+    "Notizie degli scavi di antichità, 1876-",
+    "Henzen, Zangemeister, 1872-1913, Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani"
+  ],
+  "zotero": [
+    "JCV85C79",
+    "4MCP2PVV",
+    "PU8UDAF3"
   ],
   "keywords": [
     "isic000138",
@@ -337,10 +398,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "fine to medium-grained, banded, grey marble, likely aphrodisian, parian-1, parian-2, parian-3, parian-4, ephesian_grey. digital microscopy: heteroblastic fabric (identification based on digital microscopy)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

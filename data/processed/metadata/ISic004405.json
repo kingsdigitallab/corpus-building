@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line3",
         "h": "3-7",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "7"
       },
       {
         "type": "interlinear",
@@ -85,7 +90,9 @@
         "from": "line1",
         "to": "line2",
         "h": "2-4",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "2",
+        "atMost": "4"
       },
       {
         "type": "interlinear",
@@ -93,7 +100,9 @@
         "from": "line2",
         "to": "line3",
         "h": "0-2",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "0",
+        "atMost": "2"
       }
     ]
   },
@@ -101,19 +110,20 @@
     "_": "2nd — 1st century BCE",
     "notBefore": -200,
     "notAfter": -1,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Megara Hyblaea",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462307"
+      "ref": "http://pleiades.stoa.org/places/462307",
+      "region": "Sicilia"
     },
     {
       "_": "Megara Iblea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8063661"
+      "ref": "http://sws.geonames.org/8063661",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -122,6 +132,8 @@
       15.18274
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Megara Hyblaea",
   "provenanceFound": {
     "_": "Found after the original publication of the Hellenistic temple north of the agora, in excavation of 1968 of the area of the archaic building 'k' (Megara 1), c.20 m north-east of the Hellenistic temple, in re-use in a late wall",
     "type": "found",
@@ -132,6 +144,10 @@
       15.181895
     ]
   },
+  "provenanceGeo": [
+    37.204466,
+    15.181895
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -149,7 +165,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
   "repository": {
@@ -193,21 +208,24 @@
         "date": "2018",
         "citedRange": "206 with fig. 311 (dr)",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/5UHWUE4K"
+          "target": "https://www.zotero.org/groups/382445/items/5UHWUE4K"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002599",
           "target": "https://biblio.inscriptiones.org/epig10002599"
         },
+        "inscriptionDate": "2018",
         "title": "Mégara Hyblaea. 7, La ville classique, hellénistique et romaine",
-        "citation": "<span>Henry Tréziny, <i>Mégara Hyblaea. 7, La ville classique, hellénistique et romaine</i>, CEFR 1/7 (Rome: École française de Rome, 2018)</span>"
+        "citation": "<span>Henry Tréziny, <i>Mégara Hyblaea. 7, La ville classique, hellénistique et romaine</i>, CEFR 1/7 (Rome: École française de Rome, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5UHWUE4K",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -231,27 +249,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -260,6 +260,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004405_tiled.tif",
@@ -268,10 +269,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Megara Hyblaea",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 3,
+      "atMost": 7
+    },
+    {
+      "atLeast": 2,
+      "atMost": 4
+    },
+    {
+      "atLeast": 0,
+      "atMost": 2
+    }
+  ],
   "publications": [
     "Tréziny, 2018, Mégara Hyblaea. 7, La ville classique, hellénistique et romaine"
+  ],
+  "zotero": [
+    "5UHWUE4K"
   ],
   "keywords": [
     "isic004405",
@@ -284,7 +300,7 @@
     "limestone",
     "megara hyblaea",
     "megara iblea",
-    "italy",
+    "sicilia",
     "sicily",
     "megara hyblaea",
     "antiquarium di megara hyblaia",

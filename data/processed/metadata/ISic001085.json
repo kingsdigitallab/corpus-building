@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -93,19 +97,21 @@
   "date": {
     "_": "Seemingly archaic (C6-C5 BCE) from the lettering.",
     "notBefore": -600,
-    "notAfter": -400,
+    "notAfter": -401,
     "evidence": "lettering"
   },
   "places": [
     {
       "_": "Hippana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462247"
+      "ref": "http://pleiades.stoa.org/places/462247",
+      "region": "Sicilia"
     },
     {
       "_": "Montagna dei Cavalli",
       "type": "modern",
-      "ref": "http://sws.geonames.org/11102432"
+      "ref": "http://sws.geonames.org/11102432",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +120,8 @@
       13.436825
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Hippana",
   "provenanceFound": {
     "_": "Described as coming from the necropolis on the north side of the ancient site on Montagna dei Cavalli, by Crispi 1831, without further details.",
     "type": "found",
@@ -121,6 +129,7 @@
     "notAfter": "1831",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -128,7 +137,7 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
@@ -143,10 +152,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
-  "settlement": "Lost",
-  "repository": "",
+  "settlement": "unknown",
+  "repository": "unknown",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -160,21 +168,25 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0266",
+            "_": "266",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
-      "",
+      null,
       {
         "author": "Crispi",
         "date": "1831",
@@ -186,15 +198,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002793",
           "target": "https://biblio.inscriptiones.org/epig10002793"
         },
+        "inscriptionDate": "1831",
         "title": "Spiegazione d'una epigrafe greca sepolcrale trovata in Ippana antica città della Sicilia",
-        "citation": "<span>Giuseppe Crispi, «Spiegazione d’una epigrafe greca sepolcrale trovata in Ippana antica città della Sicilia», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 34 (1831): 71–74</span>"
+        "citation": "<span>Giuseppe Crispi, «Spiegazione d’una epigrafe greca sepolcrale trovata in Ippana antica città della Sicilia», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 34 (1831): 71–74</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BDUC3RM4",
+        "year": "1831"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -218,27 +233,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -247,6 +244,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "492714",
   "facsimile": {
     "n": "screen",
     "url": "ISic001085_tiled.tif",
@@ -255,11 +253,14 @@
     "desc": "Crispi 1831 fig.1",
     "surfaceType": "front"
   },
-  "provenance": "Hippana",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Crispi, 1831, Spiegazione d'una epigrafe greca sepolcrale trovata in Ippana antica città della Sicilia"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "BDUC3RM4"
   ],
   "keywords": [
     "isic001085",
@@ -272,9 +273,9 @@
     "stone",
     "hippana",
     "montagna dei cavalli",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "unknown",
     "ancient greek",
     "grc"
   ]

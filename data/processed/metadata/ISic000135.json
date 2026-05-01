@@ -39,8 +39,10 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "type": "stone.breccia",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -80,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "44-47",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "44",
+        "atMost": "47"
       },
       {
         "type": "letterHeight",
@@ -88,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "40-41 (NI ligature = 55)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "41"
       },
       {
         "type": "letterHeight",
@@ -110,20 +116,21 @@
   "date": {
     "_": "2nd century CE (Ferrua)",
     "notBefore": 101,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -132,6 +139,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "First recorded by Ferrua in 1941, as one of several pieces in the museo civico 'venute alla luce negli ultimi anni, durante costruzioni fatte in citta'.",
     "type": "found",
@@ -139,6 +148,7 @@
     "notAfter": "1941",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2022-07-13",
     "type": "observed",
@@ -164,7 +174,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -208,16 +217,24 @@
         "n": "AE",
         "citedRange": "1977.0335",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "54",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -225,7 +242,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Ferrua",
@@ -237,14 +259,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002655",
           "target": "https://biblio.inscriptiones.org/epig10002655"
-        }
+        },
+        "inscriptionDate": "1941",
+        "title": "Analecta sicula",
+        "citation": "<span>Antonio Ferrua, «Analecta sicula», <i>Epigraphica</i> 3 (1941): 252–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P7QQ9SB6",
+        "year": "1941"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -268,20 +295,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -292,16 +305,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised further from autopsy and publication",
-      "when": "2024-04-16",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "175731",
   "facsimile": {
     "n": "screen",
     "url": "ISic000135_tiled.tif",
@@ -310,12 +330,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana: photo J. Prag 13-07-2022",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 44,
+      "atMost": 47
+    },
+    {
+      "atLeast": 40,
+      "atMost": 41
+    }
+  ],
   "publications": [
-    null,
-    "ILMusTermini",
-    "Ferrua, 1941"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1994, ILMusTermini",
+    "Ferrua, 1941, Analecta sicula"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "JCV85C79",
+    "P7QQ9SB6"
   ],
   "keywords": [
     "isic000135",
@@ -328,7 +361,7 @@
     "marble",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

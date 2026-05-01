@@ -41,7 +41,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -78,7 +83,42 @@
     }
   },
   "handNote": {
-    "lettering": "Thinly incised broad letters of regular height, without serifs or marked terminations to the strokes. Alpha has straight bar; Beta has closed loops, in the second instance separated from one another. Sigma has parallel top and bottom strokes, the mid-strokes meeting slightly over halfway across.",
+    "lettering": [
+      "Thinly incised broad letters of regular height, without serifs or marked terminations to the strokes. Alpha has straight bar; Beta has closed loops, in the second instance separated from one another. Sigma has parallel top and bottom strokes, the mid-strokes meeting slightly over halfway across.",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html"
+          },
+          {
+            "_": "Α type1.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.3.html"
+          },
+          {
+            "_": "Β type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Β-type2.html"
+          },
+          {
+            "_": "Β type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Β-type2.1.html"
+          },
+          {
+            "_": "Ι type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+          },
+          {
+            "_": "Σ tyoe3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-tyoe3.2.html"
+          },
+          {
+            "_": "Σ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -86,7 +126,9 @@
         "from": "line1",
         "to": "line3",
         "h": "60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
       },
       {
         "type": "interlinear",
@@ -101,19 +143,21 @@
   "date": {
     "_": "Letters of the 3rd century BCE; the apparent double kingship reference suggests the Hieronian period",
     "notBefore": -300,
-    "notAfter": -200,
+    "notAfter": -201,
     "evidence": "lettering, titulature"
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -122,6 +166,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in foundation works for post office, between via Eumelo, via Archia, and via Carabelli",
     "type": "found",
@@ -131,6 +177,10 @@
       15.284686
     ]
   },
+  "provenanceGeo": [
+    37.070881,
+    15.284686
+  ],
   "provenanceObserved": {
     "_": "Lying on the ground near the exit gate to the area of the amphitheatre",
     "type": "observed",
@@ -172,7 +222,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -195,7 +244,10 @@
           "lon": 15.2780021
         }
       },
-      "pleiades": "http://pleiades.stoa.org/places/219478548"
+      "idno": {
+        "type": "Pleiades",
+        "url": "http://pleiades.stoa.org/places/219478548"
+      }
     }
   },
   "textLang": {
@@ -213,36 +265,38 @@
         "n": "SEG",
         "citedRange": "56.1103.2.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "34.0979",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
-      {
-        "author": "Gentili",
-        "date": "1959-1960",
-        "citedRange": "19-20 fig.2"
-      },
+      null,
       {
         "author": "Gentili",
         "date": "1961",
@@ -254,8 +308,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001955",
           "target": "https://biblio.inscriptiones.org/epig10001955"
         },
+        "inscriptionDate": "1961",
         "title": "Nuovi elementi di epigrafia siracusana",
-        "citation": "<span>G.V. Gentili, «Nuovi elementi di epigrafia siracusana», <i>Archivio Storico Siracusano</i> 7 (1961): 5–25</span>"
+        "citation": "<span>G.V. Gentili, «Nuovi elementi di epigrafia siracusana», <i>Archivio Storico Siracusano</i> 7 (1961): 5–25</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CBDGFVEG",
+        "year": "1961"
       },
       {
         "author": "Manganaro",
@@ -268,8 +325,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001848",
           "target": "https://biblio.inscriptiones.org/epig10001848"
         },
+        "inscriptionDate": "1963",
         "title": "Tauromenitana: un calendario romano di Tauromenion",
-        "citation": "<span>Giacomo Manganaro, «Tauromenitana: un calendario romano di Tauromenion», <i>Archeologia Classica</i> 15 (1963): 13–31</span>"
+        "citation": "<span>Giacomo Manganaro, «Tauromenitana: un calendario romano di Tauromenion», <i>Archeologia Classica</i> 15 (1963): 13–31</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NF8RRH7M",
+        "year": "1963"
       },
       {
         "author": "Manganaro",
@@ -282,8 +342,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001841",
           "target": "https://biblio.inscriptiones.org/epig10001841"
         },
+        "inscriptionDate": "1965",
         "title": "Ricerche di antichità e di epigrafia siceliote",
-        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>"
+        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGTHAFKT",
+        "year": "1965"
       },
       {
         "author": "Manganaro",
@@ -296,14 +359,13 @@
           "_": "https://biblio.inscriptiones.org/epig10001840",
           "target": "https://biblio.inscriptiones.org/epig10001840"
         },
+        "inscriptionDate": "1965",
         "title": "Una epistola di Gerone II ai Siracusani (IG XIV.7)",
-        "citation": "<span>Giacomo Manganaro, «Una epistola di Gerone II ai Siracusani (IG XIV.7)», <i>Athenaeum</i> 43 (1965): 312–20</span>"
+        "citation": "<span>Giacomo Manganaro, «Una epistola di Gerone II ai Siracusani (IG XIV.7)», <i>Athenaeum</i> 43 (1965): 312–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VUT2KB38",
+        "year": "1965"
       },
-      {
-        "author": "Manganaro",
-        "date": "1977",
-        "citedRange": "155-156 dr ph"
-      },
+      null,
       {
         "author": "Dimartino",
         "date": "2006",
@@ -315,15 +377,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002022",
           "target": "https://biblio.inscriptiones.org/epig10002022"
         },
+        "inscriptionDate": "2006",
         "title": "Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II",
-        "citation": "<span>Alessia Dimartino, «Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II», in <i>Guerra e pace in Sicilia e nel Mediterraneo antico (VIII-III sec. a.C.). Arte, prassi e teoria della pace e della guerra</i>, a c. di C. Michelini, vol. 2, 2 voll., Atti Elimi V (Pisa: Edizioni della Normale, 2006), 703–17</span>"
+        "citation": "<span>Alessia Dimartino, «Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II», in <i>Guerra e pace in Sicilia e nel Mediterraneo antico (VIII-III sec. a.C.). Arte, prassi e teoria della pace e della guerra</i>, a c. di C. Michelini, vol. 2, 2 voll., Atti Elimi V (Pisa: Edizioni della Normale, 2006), 703–17</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7AQ7W2MW",
+        "year": "2006"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -347,35 +412,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised after further autopsy",
-      "when": "2022-11-03",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2026-02-04",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "285064",
   "facsimile": {
     "n": "screen",
     "url": "ISic003009_tiled.tif",
@@ -384,18 +447,29 @@
     "desc": "Photo J. Prag 2018",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 60
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "Gentili, 1959-1960",
     "Gentili, 1961, Nuovi elementi di epigrafia siracusana",
     "Manganaro, 1963, Tauromenitana: un calendario romano di Tauromenion",
     "Manganaro, 1965, Ricerche di antichità e di epigrafia siceliote",
     "Manganaro, 1965, Una epistola di Gerone II ai Siracusani (IG XIV.7)",
-    "Manganaro, 1977",
     "Dimartino, 2006, Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "CBDGFVEG",
+    "NF8RRH7M",
+    "RGTHAFKT",
+    "VUT2KB38",
+    "7AQ7W2MW"
   ],
   "keywords": [
     "isic003009",
@@ -408,7 +482,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "area archeologica della neapolis, orecchio di dionisio e teatro greco",

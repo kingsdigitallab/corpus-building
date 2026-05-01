@@ -33,7 +33,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -82,19 +87,20 @@
   "date": {
     "_": "2nd century CE or beginning 3rd century CE\n                                (Korhonen)",
     "notBefore": 101,
-    "notAfter": 250,
-    "precision": "low"
+    "notAfter": 250
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,11 +109,14 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "sala VII.80, mag. sup.",
     "type": "observed",
@@ -124,7 +133,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -168,24 +176,34 @@
         "n": "AE",
         "citedRange": "1933.0028",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "38",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Libertini",
@@ -198,8 +216,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001870",
           "target": "https://biblio.inscriptiones.org/epig10001870"
         },
+        "inscriptionDate": "1931",
         "title": "Miscellanea epigrafica",
-        "citation": "<span>Guido Libertini, «Miscellanea epigrafica», <i>Archivio Storico per la Sicilia Orientale</i> 27 (1931): 39–53</span>"
+        "citation": "<span>Guido Libertini, «Miscellanea epigrafica», <i>Archivio Storico per la Sicilia Orientale</i> 27 (1931): 39–53</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/T67M4XMU",
+        "year": "1931"
       },
       {
         "author": "Manganaro",
@@ -211,14 +232,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -242,20 +268,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Kate Jeremy",
         "xml:id": "KJ",
         "ref": "https://orcid.org/0000-0002-2287-7247"
@@ -266,8 +278,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -276,6 +289,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "175848",
   "facsimile": {
     "n": "screen",
     "url": "ISic002989_tiled.tif",
@@ -284,13 +298,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
   "letterHeights": [],
   "publications": [
-    null,
-    "IMusCatania",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Korhonen, 2004, IMusCatania",
     "Libertini, 1931, Miscellanea epigrafica",
-    "Manganaro, 1988"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "2EUC82DH",
+    "T67M4XMU",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic002989",
@@ -302,7 +321,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

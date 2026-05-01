@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "basalt",
-    "ana": "#material.stone.basalt",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/16.html"
   },
   "condition": {
@@ -100,19 +103,21 @@
   "date": {
     "_": "end of the 6th-5th century BCE (Agostiniani 2009).",
     "notBefore": -520,
-    "notAfter": -400,
+    "notAfter": -401,
     "evidence": "archaeological-context, material-context, lettering"
   },
   "places": [
     {
       "_": "Adranon",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462074"
+      "ref": "http://pleiades.stoa.org/places/462074",
+      "region": "Sicilia"
     },
     {
       "_": "Adrano",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525769"
+      "ref": "http://sws.geonames.org/2525769",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -121,6 +126,8 @@
       14.83283
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Adranon",
   "provenanceFound": {
     "_": "Described by Manganaro (1961) as coming from the area near the Greek settlement of Adrano (contrada Cartalemmi, \"vicino ad un tratto delle mura cosiddette dionigiane\") and after attributed by the same editor to the Mendolito area on the basis of the palaeography (the arrow-shaped alpha)..",
     "type": "found",
@@ -130,6 +137,10 @@
       14.83283
     ]
   },
+  "provenanceGeo": [
+    37.66358,
+    14.83283
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -147,7 +158,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
   "repository": {
@@ -185,7 +195,8 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Sikel"
+      "Sikel",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -196,14 +207,17 @@
         "date": "2009",
         "citedRange": "115 fig. 1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/63R3F4J2"
+          "target": "https://www.zotero.org/groups/382445/items/63R3F4J2"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002427",
           "target": "https://biblio.inscriptiones.org/epig10002427"
         },
+        "inscriptionDate": "2009",
         "title": "Le iscrizioni anelleniche del Museo di Adrano",
-        "citation": "<span>Luciano Agostiniani, «Le iscrizioni anelleniche del Museo di Adrano», in <i>Tra Etna e Simeto. La ricerca archeologica ad Adrano e nel suo territorio</i> (Catania, 2009), 115–18</span>"
+        "citation": "<span>Luciano Agostiniani, «Le iscrizioni anelleniche del Museo di Adrano», in <i>Tra Etna e Simeto. La ricerca archeologica ad Adrano e nel suo territorio</i> (Catania, 2009), 115–18</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/63R3F4J2",
+        "year": "2009"
       },
       {
         "author": "Manganaro",
@@ -216,15 +230,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002677",
           "target": "https://biblio.inscriptiones.org/epig10002677"
         },
+        "inscriptionDate": "1961",
         "title": "Iscrizioni di Adrano in alfabeto siculo",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni di Adrano in alfabeto siculo», <i>Archeologia Classica</i> 13 (1961): 106–12</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni di Adrano in alfabeto siculo», <i>Archeologia Classica</i> 13 (1961): 106–12</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4356IBUF",
+        "year": "1961"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -248,27 +265,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -277,6 +276,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004484_tiled.tif",
@@ -285,11 +285,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Adranon",
   "letterHeights": [],
   "publications": [
     "Agostiniani, 2009, Le iscrizioni anelleniche del Museo di Adrano",
     "Manganaro, 1961, Iscrizioni di Adrano in alfabeto siculo"
+  ],
+  "zotero": [
+    "63R3F4J2",
+    "4356IBUF"
   ],
   "keywords": [
     "isic004484",
@@ -302,7 +305,7 @@
     "basalt",
     "adranon",
     "adrano",
-    "italy",
+    "sicilia",
     "sicily",
     "adrano",
     "museo archeologico regionale di adrano",

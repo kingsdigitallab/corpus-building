@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -78,7 +82,9 @@
         "from": "line1",
         "to": "line2",
         "h": "25-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -98,12 +104,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +120,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Original discovery not recorded, acquired by Palermo museum 27 January 1888.",
     "type": "found",
@@ -119,6 +129,7 @@
     "notAfter": "1888",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -127,7 +138,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -169,33 +179,42 @@
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "118",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000531",
-          "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/F66S4X3M",
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "219 G3 fig.4",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -219,20 +238,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -241,10 +246,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -253,11 +254,20 @@
       "who": "#JP"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "493919",
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    "IGMusPalermo",
-    "Muscolino, 2011-2012"
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "F66S4X3M",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic001582",
@@ -270,7 +280,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

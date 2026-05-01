@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "volcanic (local: riolite grigia)",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": {
@@ -80,7 +83,9 @@
         "from": "line1",
         "to": "line1",
         "h": "62-65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "62",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -99,12 +104,14 @@
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,6 +120,8 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Found in 1972 in trench XXXIII (Bishop's property), in the ground above embankment F",
     "type": "found",
@@ -123,6 +132,10 @@
       14.953871
     ]
   },
+  "provenanceGeo": [
+    38.46713,
+    14.953871
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -140,7 +153,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
   "repository": {
@@ -184,35 +196,39 @@
         "n": "SEG",
         "citedRange": "51.1225",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "177",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -236,40 +252,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Alex Antoniou Epidoc editing and addition of metadata",
-      "when": "2022-02-18",
-      "who": "#AA"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2026-01-19",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003853_tiled.tif",
@@ -278,11 +287,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 62,
+      "atMost": 65
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "ILipara"
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "VDAQH5D2"
   ],
   "keywords": [
     "isic003853",
@@ -295,7 +312,7 @@
     "volcanic (local: riolite grigia)",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
     "lipari",
     "museo archeologico regionale eoliano \"luigi bernab� brea\"",

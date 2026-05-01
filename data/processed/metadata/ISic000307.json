@@ -37,8 +37,16 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/29.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Coarse-grained, banded, white, smelly marble, likely Aphrodisian, Parian-2, Parian-4, Proconnesian. Digital microscopy: homeoblastic to heteroblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-2",
+      "Parian-4",
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -81,7 +89,9 @@
         "from": "line1",
         "to": "line7",
         "h": "35-44",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "44"
       },
       {
         "type": "interlinear",
@@ -101,12 +111,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +127,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in 1832 at a depth of c.16 palms on property belonging to the Duke of Carcaci outside the Porta Ferdinanda near the hill of D. Clarae; currently on display on the ground floor of the Museo Civico.",
     "type": "found",
@@ -122,6 +136,7 @@
     "when": "1832",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2017-03-21",
     "type": "observed",
@@ -157,7 +172,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -199,23 +213,29 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7023",
+            "_": "7023",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650757"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "17",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -223,7 +243,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "type": "corpus",
@@ -235,7 +260,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "author": "Asheri",
@@ -247,7 +278,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001372",
           "target": "https://biblio.inscriptiones.org/epig10001372"
-        }
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le città della Sicilia fra il III e IV secolo d.C.",
+        "citation": "<span>David Asheri, «Le città della Sicilia fra il III e IV secolo d.C.», <i>Kokalos</i> 28–29 (1983 1982): 461–76</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NPFIPDDV",
+        "year": "1982"
       },
       {
         "author": "Manganaro",
@@ -259,7 +295,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -271,14 +312,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -302,20 +348,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
       },
@@ -325,16 +357,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised file including text encoding, added images",
-      "when": "2025-02-06",
-      "who": "#JP"
+      "_": "Victoria Fendel's lemmatizations were added",
+      "when": "2025-07-24",
+      "who": "#VF"
     }
   },
+  "tmNumber": "491516",
   "facsimile": {
     "n": "screen",
     "url": "ISic000307_tiled.tif",
@@ -343,15 +382,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo Civico 2012",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 35,
+      "atMost": 44
+    }
+  ],
   "publications": [
-    "CIL",
-    "IMusCatania",
-    "ILS",
-    "Asheri, 1982-1983",
-    "Manganaro, 1988",
-    "Wilson, 1990"
+    "Mommsen, 1883, CIL",
+    "Korhonen, 2004, IMusCatania",
+    "Dessau, 1892-1916, ILS",
+    "Asheri, 1982-1983, Le città della Sicilia fra il III e IV secolo d.C.",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "2EUC82DH",
+    "XHMS9K6S",
+    "NPFIPDDV",
+    "RZSFKACR",
+    "VF9MMBI9"
   ],
   "keywords": [
     "isic000307",
@@ -361,10 +412,10 @@
     },
     "funerary",
     "altar",
-    "marble",
+    "coarse-grained, banded, white, smelly marble, likely aphrodisian, parian-2, parian-4, proconnesian. digital microscopy: homeoblastic to heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

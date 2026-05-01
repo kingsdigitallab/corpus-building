@@ -40,7 +40,12 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line1",
         "h": "27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "27"
       },
       {
         "type": "letterHeight",
@@ -89,7 +96,9 @@
         "from": "line2",
         "to": "line4",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -97,26 +106,29 @@
         "from": "line1",
         "to": "line4",
         "h": "8-11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "8",
+        "atMost": "11"
       }
     ]
   },
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -125,6 +137,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Found within a funerary building within the area designated 'recinto B' by Paolo Orsi during excavation in 1914 of the ",
     "type": "found",
@@ -140,6 +154,10 @@
       15.5566385
     ]
   },
+  "provenanceGeo": [
+    38.1992517,
+    15.5566385
+  ],
   "provenanceObserved": {
     "_": "Currently on display",
     "type": "observed",
@@ -156,7 +174,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -198,6 +215,8 @@
       {
         "type": "corpus",
         "n": "IMusMessina",
+        "author": "Bitto",
+        "date": "2001",
         "citedRange": "1",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/M9HMEP2R"
@@ -205,7 +224,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000029",
           "target": "https://biblio.inscriptiones.org/epig10000029"
-        }
+        },
+        "inscriptionDate": "2001",
+        "title": "Le iscrizioni greche e latine di Messina",
+        "citation": "<span>Irma Bitto, <i>Le iscrizioni greche e latine di Messina</i>, vol. 1, Pelorias 7 (Messina: Dipartimento di Scienze dell’Antichità dell’Università degli Studi di Messina, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M9HMEP2R",
+        "year": "2001"
       },
       {
         "author": "Orsi",
@@ -218,15 +242,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001701",
           "target": "https://biblio.inscriptiones.org/epig10001701"
         },
+        "inscriptionDate": "1916",
         "title": "Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915",
-        "citation": "<span>Paolo Orsi, «Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915», <i>Monumenti Antichi</i> 24 (1916): 121–218</span>"
+        "citation": "<span>Paolo Orsi, «Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915», <i>Monumenti Antichi</i> 24 (1916): 121–218</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P49V3TMD",
+        "year": "1916"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -250,20 +277,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Michael Economou",
         "xml:id": "ME"
       },
@@ -273,8 +286,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -283,6 +297,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "284771",
   "facsimile": {
     "n": "screen",
     "url": "ISic003433_tiled.tif",
@@ -291,11 +306,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 27,
+      "atMost": 27
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    },
+    {
+      "atLeast": 8,
+      "atMost": 11
+    }
+  ],
   "publications": [
-    "IMusMessina",
+    "Bitto, 2001, IMusMessina",
     "Orsi, 1916, Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915"
+  ],
+  "zotero": [
+    "M9HMEP2R",
+    "P49V3TMD"
   ],
   "keywords": [
     "isic003433",
@@ -308,7 +339,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "museo regionale interdisciplinare di messina",

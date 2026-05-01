@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -79,7 +82,9 @@
         "from": "line1",
         "to": "line4",
         "h": "72-78",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "72",
+        "atMost": "78"
       },
       {
         "type": "interlinear",
@@ -101,12 +106,14 @@
       "_": "Segesta",
       "type": "ancient",
       "ref": "https://pleiades.stoa.org/places/462487",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Segesta",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523171"
+      "ref": "http://sws.geonames.org/2523171",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +122,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Agora, Found during excavations in 1995, US 4558",
     "type": "found",
@@ -126,6 +135,10 @@
       12.842467
     ]
   },
+  "provenanceGeo": [
+    37.939716,
+    12.842467
+  ],
   "provenanceObserved": {
     "_": "in situ",
     "type": "observed",
@@ -143,7 +156,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
   "repository": {
@@ -166,7 +178,10 @@
           "lon": 12.8361805
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462487"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462487"
+      }
     }
   },
   "textLang": {
@@ -184,38 +199,53 @@
         "n": "AE",
         "citedRange": "2003.0783",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2000.0642",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Michelini",
         "date": "1999",
         "citedRange": "441-442 ph",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DI69MHYJ"
+          "target": "https://www.zotero.org/groups/382445/items/DI69MHYJ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002305",
           "target": "https://biblio.inscriptiones.org/epig10002305"
         },
+        "inscriptionDate": "1999",
         "title": "Reimpiego di iscrizioni a Segesta",
-        "citation": "<span>C. Michelini, «Reimpiego di iscrizioni a Segesta», in <i>Sicilia Epigraphica. Atti del convegno internazionale, Erice, 15-18 ottobre 1998</i>, a c. di M. I. Gulletta, vol. 2, Quaderni 2 (Pisa: Classe di Lettere e Filosofia, 1999), 439–48</span>"
+        "citation": "<span>C. Michelini, «Reimpiego di iscrizioni a Segesta», in <i>Sicilia Epigraphica. Atti del convegno internazionale, Erice, 15-18 ottobre 1998</i>, a c. di M. I. Gulletta, vol. 2, Quaderni 2 (Pisa: Classe di Lettere e Filosofia, 1999), 439–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DI69MHYJ",
+        "year": "1999"
       },
       {
         "author": "Nenci",
@@ -228,41 +258,49 @@
           "_": "https://biblio.inscriptiones.org/epig10001726",
           "target": "https://biblio.inscriptiones.org/epig10001726"
         },
+        "inscriptionDate": "2000",
         "title": "Varia Elyma: novità epigrafiche, numismatiche, toponomastiche e cultuali dall'area elima",
-        "citation": "<span>Giuseppe Nenci, «Varia Elyma: novità epigrafiche, numismatiche, toponomastiche e cultuali dall’area elima», in <i>Terze Giornate Internazionale di studi sull’area elima. Atti.</i>, vol. 2, 2 voll. (Pisa: Scuola Normale Superiore di Pisa, 2000), 809–21</span>"
+        "citation": "<span>Giuseppe Nenci, «Varia Elyma: novità epigrafiche, numismatiche, toponomastiche e cultuali dall’area elima», in <i>Terze Giornate Internazionale di studi sull’area elima. Atti.</i>, vol. 2, 2 voll. (Pisa: Scuola Normale Superiore di Pisa, 2000), 809–21</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/V2NMCFNB",
+        "year": "2000"
       },
       {
         "author": "Tribulato",
         "date": "2012",
         "citedRange": "315",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/X5ZZ4GPT"
+          "target": "https://www.zotero.org/groups/382445/items/X5ZZ4GPT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001557",
           "target": "https://biblio.inscriptiones.org/epig10001557"
         },
+        "inscriptionDate": "2012",
         "title": "Siculi bilingues? Latin in the inscriptions of early Roman Sicily",
-        "citation": "<span>Olga Tribulato, ‘Siculi Bilingues? Latin in the Inscriptions of Early Roman Sicily’, in <i>Language and Linguistic Contact in Ancient Sicily</i> (Cambridge: Cambridge University Press, 2012), 291–325</span>"
+        "citation": "<span>Olga Tribulato, ‘Siculi Bilingues? Latin in the Inscriptions of Early Roman Sicily’, in <i>Language and Linguistic Contact in Ancient Sicily</i> (Cambridge: Cambridge University Press, 2012), 291–325</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X5ZZ4GPT",
+        "year": "2012"
       },
       {
-        "author": "Ampolo and Erdas",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "L1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3PK3JKXR"
+          "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -286,27 +324,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -315,6 +335,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491404",
   "facsimile": {
     "n": "screen",
     "url": "ISic003325_tiled.tif",
@@ -323,15 +344,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 72,
+      "atMost": 78
+    }
+  ],
   "publications": [
-    null,
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Michelini, 1999, Reimpiego di iscrizioni a Segesta",
     "Nenci, 2000, Varia Elyma: novità epigrafiche, numismatiche, toponomastiche e cultuali dall'area elima",
     "Tribulato, 2012, Siculi bilingues? Latin in the inscriptions of early Roman Sicily",
-    "Ampolo and Erdas, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "R46KDTZX",
+    "DI69MHYJ",
+    "V2NMCFNB",
+    "X5ZZ4GPT",
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic003325",
@@ -344,7 +377,7 @@
     "limestone",
     "segesta",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "segesta",
     "parco archeologico di segesta",

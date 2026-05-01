@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -88,7 +94,9 @@
         "from": "line2",
         "to": "line2",
         "h": "30-33",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "33"
       },
       {
         "type": "letterHeight",
@@ -96,7 +104,9 @@
         "from": "line3",
         "to": "line3",
         "h": "32-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "32",
+        "atMost": "35"
       },
       {
         "type": "letterHeight",
@@ -104,7 +114,9 @@
         "from": "line4",
         "to": "line4",
         "h": "30-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -117,7 +129,7 @@
   },
   "date": {
     "_": "later 1st or 2nd century CE",
-    "notBefore": 50,
+    "notBefore": 51,
     "notAfter": 200
   },
   "places": [
@@ -125,12 +137,14 @@
       "_": "Tauromenium",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462506",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -139,6 +153,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Found by Salvatore Lo Giudice in 1887 in Taormina, 'nel terreno ove sono posti i sepolcri romani che fiancheggiano lo stradale che introduce a Taormina' (Bivona, quoting archival material of the museum)",
     "type": "found",
@@ -148,6 +164,10 @@
       15.287956
     ]
   },
+  "provenanceGeo": [
+    37.85566,
+    15.287956
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -156,7 +176,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -200,24 +219,34 @@
         "n": "AE",
         "citedRange": "1975.0452",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "52",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Ferrua",
@@ -229,26 +258,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002655",
           "target": "https://biblio.inscriptiones.org/epig10002655"
-        }
+        },
+        "inscriptionDate": "1941",
+        "title": "Analecta sicula",
+        "citation": "<span>Antonio Ferrua, «Analecta sicula», <i>Epigraphica</i> 3 (1941): 252–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P7QQ9SB6",
+        "year": "1941"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "238 L3 fig.15",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -272,20 +311,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -294,10 +319,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -306,13 +327,36 @@
       "who": "#JP"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "175717",
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    },
+    {
+      "atLeast": 30,
+      "atMost": 33
+    },
+    {
+      "atLeast": 32,
+      "atMost": 35
+    },
+    {
+      "atLeast": 30,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    null,
-    "ILMusPalermo",
-    "Ferrua, 1941",
-    "Muscolino, 2011-2012"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1970, ILMusPalermo",
+    "Ferrua, 1941, Analecta sicula",
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "FZWWPUD6",
+    "P7QQ9SB6",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic000051",
@@ -325,7 +369,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

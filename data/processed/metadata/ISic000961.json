@@ -36,9 +36,19 @@
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
   "support": "left half now lost, right side only",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
     "_": "marble (white)",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -94,13 +104,15 @@
     {
       "_": "Acrae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462068"
+      "ref": "http://pleiades.stoa.org/places/462068",
+      "region": "Sicilia"
     },
     {
       "_": "Palazzolo Acreide",
       "type": "modern",
       "ref": "http://sws.geonames.org/2523922",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,12 +121,15 @@
       14.89346
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Acrae",
   "provenanceFound": {
     "_": "Intagliatella catacomb",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -128,11 +143,18 @@
       "url": "ISic000961_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-10",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000961_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-10",
+      "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palazzolo Acreide",
   "repository": {
@@ -174,58 +196,78 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0239",
+            "_": "239",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2005.0677",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "55.1004",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "4.9470",
+        "author": "Curtius, Kirchhoff, Roehl",
+        "date": "1877",
+        "citedRange": "9470",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/533T8HNS"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001249",
+          "target": "https://biblio.inscriptiones.org/epig10001249"
+        },
+        "inscriptionDate": "1877",
+        "title": "Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).",
+        "citation": "<span>E. Curtius, A. Kirchhoff, and H. Roehl, <i>Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).</i>, vol. 4, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1877)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/533T8HNS",
+        "year": "1877"
       },
       {
         "author": "Agnello",
@@ -237,7 +279,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002211",
           "target": "https://biblio.inscriptiones.org/epig10002211"
-        }
+        },
+        "inscriptionDate": "1953",
+        "title": "Silloge di iscrizioni paleocristiane della Sicilia",
+        "citation": "<span>S.L. Agnello, <i>Silloge di iscrizioni paleocristiane della Sicilia</i> (Rome, 1953)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D9BZFDDR",
+        "year": "1953"
       },
       {
         "author": "Pugliese Carratelli",
@@ -250,8 +297,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001394",
           "target": "https://biblio.inscriptiones.org/epig10001394"
         },
+        "inscriptionDate": "1956",
         "title": "Silloge dell' epigrafi acrensi",
-        "citation": "<span>G. Pugliese Carratelli, «Silloge dell’ epigrafi acrensi», in <i>Akrai</i>, a c. di L. Bernabó Brea (Catania, 1956), 151–81</span>"
+        "citation": "<span>G. Pugliese Carratelli, «Silloge dell’ epigrafi acrensi», in <i>Akrai</i>, a c. di L. Bernabó Brea (Catania, 1956), 151–81</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PJDRZH66",
+        "year": "1956"
       },
       {
         "author": "Manni Piraino",
@@ -263,7 +313,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Ferrua",
@@ -275,14 +330,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001996",
           "target": "https://biblio.inscriptiones.org/epig10001996"
-        }
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le iscrizioni datate della Sicilia paleocristiana",
+        "citation": "<span>Antonio Ferrua, «Le iscrizioni datate della Sicilia paleocristiana», <i>Kokalos</i> 28–29 (1983 1982): 3–29</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7DDNWD6",
+        "year": "1982"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -306,20 +366,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -330,35 +376,51 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2025-12-06",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "492687",
   "facsimile": {
     "n": "screen",
     "url": "ISic000961_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-10",
     "surfaceType": "front"
   },
-  "provenance": "Acrae",
   "letterHeights": [],
   "publications": [
-    "IG",
-    null,
+    "Kaibel, 1890, IG",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
-    "CIG",
-    "Agnello, 1953",
+    "Curtius, Kirchhoff, Roehl, 1877, CIG",
+    "Agnello, 1953, Silloge di iscrizioni paleocristiane della Sicilia",
     "Pugliese Carratelli, 1956, Silloge dell' epigrafi acrensi",
-    "Manni Piraino, 1973",
-    "Ferrua, 1982-1983"
+    "Manni Piraino, 1973, Iscrizioni greche lapidarie del Museo di Palermo",
+    "Ferrua, 1982-1983, Le iscrizioni datate della Sicilia paleocristiana"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "R46KDTZX",
+    "F2GG87EQ",
+    "533T8HNS",
+    "D9BZFDDR",
+    "PJDRZH66",
+    "F66S4X3M",
+    "Q7DDNWD6"
   ],
   "keywords": [
     "isic000961",
@@ -367,10 +429,11 @@
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "marble (white)",
     "acrae",
     "palazzolo acreide",
-    "italy",
+    "sicilia",
     "sicily",
     "palazzolo acreide",
     "museo archeologico gabriele judica",

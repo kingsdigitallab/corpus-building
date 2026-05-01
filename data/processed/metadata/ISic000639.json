@@ -40,7 +40,11 @@
   },
   "material": {
     "_": "clay",
-    "ana": "#material.clay.unfired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/642.html"
   },
   "condition": "",
@@ -81,7 +85,9 @@
         "from": "line1",
         "to": "line3",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -95,19 +101,20 @@
   "date": {
     "_": "1st century CE",
     "notBefore": 1,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,11 +123,14 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Manganaro 1994 edits and reports that it was gifted to him ?in the 1960s? by a local resident.",
     "type": "observed",
@@ -138,7 +148,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
   "repository": "",
@@ -157,27 +166,36 @@
         "n": "AE",
         "citedRange": "1994.0762",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "44.0745",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manganaro",
@@ -190,15 +208,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001825",
           "target": "https://biblio.inscriptiones.org/epig10001825"
         },
+        "inscriptionDate": "1994",
         "title": "Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana», <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 106, fasc. 1 (1994): 79–118</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana», <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 106, fasc. 1 (1994): 79–118</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/532NF7SV",
+        "year": "1994"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -222,20 +243,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -244,18 +251,15 @@
         "_": "Francesca Prado",
         "xml:id": "FP",
         "ref": "https://orcid.org/0000-0003-3326-3475"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
       "_": "Updated Zenodo DOI",
       "when": "2021-07-14",
-      "who": "#system"
+      "who": "#JP"
     }
   },
+  "tmNumber": "644881",
   "facsimile": {
     "n": "screen",
     "url": "ISic000639_tiled.tif",
@@ -264,12 +268,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Manganaro, 1994, Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "532NF7SV"
   ],
   "keywords": [
     "isic000639",
@@ -282,7 +295,7 @@
     "clay",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
     "ancient greek",

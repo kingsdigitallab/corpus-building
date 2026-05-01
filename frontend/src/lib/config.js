@@ -44,23 +44,66 @@ export const search = {
 	limit: 20,
 	maxLimit: 5000,
 	minDate: -700,
-	maxDate: 1830,
+	maxDate: 902,
 	minLetterHeight: 0,
-	maxLetterHeight: 100
+	maxLetterHeight: 250
+};
+
+export const tooltips = {
+	date: {
+		text: 'Use negative numbers for BCE dates. Century and half-century ranges are encoded e.g. -200 to -101 and 101 to 200.'
+	},
+	provenance: {
+		text: 'The ancient site (or modern location if ancient name unknown) where the inscription is believed to have originated or is best associated with.'
+	},
+	inscriptionType: {
+		text: 'Classification of inscriptions according to FAIR Epigraphy typology.'
+	},
+	objectType: {
+		text: 'Classification of the object bearing the inscription.'
+	},
+	material: {
+		text: 'Classification of the material of which the inscribed object is composed.'
+	},
+	technique: {
+		text: 'Classification of the technique used to create the inscription.'
+	},
+	pigment: {
+		text: 'Inscriptions for which the presence of pigment has been observed.'
+	},
+	letterHeight: {
+		text: 'Recorded letter height, where data available.'
+	},
+	lettering: {
+		text: 'Letter types, where available, according to the CROSSREADS typology.',
+		link: 'https://kingsdigitallab.github.io/crossreads/data/allographs/types/all.html',
+		linkLabel: 'View reference guide'
+	},
+	condition: {
+		text: 'Preservation status of the inscribed object.'
+	},
+	damage: {
+		text: 'Preservation status of the text.'
+	},
+	repository: {
+		text: 'Current location (museum, other, site).'
+	},
+	status: {
+		text: 'Current editorial status of the file.'
+	}
 };
 
 export const xmlServerPath =
 	'https://raw.githubusercontent.com/ISicily/ISicily/refs/heads/master/inscriptions/';
 
-export const imageServer =
-	'https://apheleia.classics.ox.ac.uk/iipsrv/iipsrv.fcgi?IIIF=inscription_images/';
+export const imageServer = 'https://isicily.classics.ox.ac.uk/image/';
 export const imageThumbParams = 'full/400,/0/default.jpg';
 
 export const EMPTY_PLACEHOLDER = 'No data';
 
 export const digitalEditionUrls = /** @type {const} */ ({
 	DOI: 'https://doi.org/',
-	EDCS: 'https://db.edcs.eu/epigr/epi_url.php?s_sprache=de&p_edcs_id=EDCS-',
+	EDCS: 'https://edcs.hist.uzh.ch/en/search?edcs-id=EDCS-',
 	EDH: 'https://edh.ub.uni-heidelberg.de/edh/inschrift/HD',
 	EDR: 'http://www.edr-edr.it/edr_programmi/res_complex_comune.php?do=book&id_nr=EDR',
 	PHI: 'https://epigraphy.packhum.org/text/',
@@ -71,3 +114,12 @@ export const digitalEditionUrls = /** @type {const} */ ({
 export const mapStyle = dev
 	? 'https://api.maptiler.com/maps/outdoor-v2/style.json?key=brTBbnRxuiKp6PgjwFPr'
 	: 'https://api.maptiler.com/maps/9e2a14f9-e024-4ae4-97f8-2cb320835962/style.json?key=679dKSf11rkW5OwDMgMR';
+
+export const citationTemplate = {
+	title: 'I.Sicily: Inscriptions of Ancient Sicily',
+	url: 'http://sicily.classics.ox.ac.uk/',
+	itemUrl: 'http://sicily.classics.ox.ac.uk/inscription/',
+	doi: 'https://doi.org/10.5281/zenodo.2556743',
+	doiDate: '2020-12-17',
+	yearRange: '2017-2025'
+};

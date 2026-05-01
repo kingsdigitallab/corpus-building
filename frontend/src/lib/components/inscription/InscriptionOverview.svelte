@@ -10,7 +10,7 @@
 	const tileSources = $derived(
 		images.map(
 			(/** @type Object<String, string> */ image) =>
-				`${config.imageServer}${slug}/${image?.url || ''}/info.json`
+				`${config.imageServer}${image?.url || ''}/info.json`
 		)
 	);
 
@@ -21,21 +21,23 @@
 	);
 
 	onMount(async () => {
-		const OpenSeaDragon = (await import('openseadragon')).default;
+		if (images && images.length > 0) {
+			const OpenSeaDragon = (await import('openseadragon')).default;
 
-		const viewer = OpenSeaDragon({
-			id: 'image-viewer',
-			prefixUrl: `${base}/openseadragon/images/`,
-			tileSources,
-			sequenceMode: true,
-			showReferenceStrip: true,
-			preserveViewport: true
-		});
+			const viewer = OpenSeaDragon({
+				id: 'image-viewer',
+				prefixUrl: `${base}/openseadragon/images/`,
+				tileSources,
+				sequenceMode: true,
+				showReferenceStrip: true,
+				preserveViewport: true
+			});
 
-		viewer.addHandler('page', (/** @type {{ page: number; }} */ event) => {
-			const image = images[event.page];
-			curImageTitle = `${image.surfaceType}, ${image.desc}`;
-		});
+			viewer.addHandler('page', (/** @type {{ page: number; }} */ event) => {
+				const image = images[event.page];
+				curImageTitle = `${image.surfaceType}, ${image.desc}`;
+			});
+		}
 	});
 </script>
 
@@ -59,45 +61,58 @@
 			{/if}
 		</hgroup>
 	</div>
-	<figure id="facsimile-images">
-		<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
-		<figcaption>{curImageTitle}</figcaption>
-	</figure>
+
+	{#if images && images.length > 0}
+		<figure id="facsimile-images">
+			<img
+				class="print-only"
+				src="{config.imageServer}{slug}/{images[0]?.url || ''}/{config.imageThumbParams}"
+				alt={images[0]?.desc || 'Inscription image'}
+			/>
+			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
+			<figcaption>{curImageTitle}</figcaption>
+		</figure>
+	{:else}
+		<div class="image-placeholder surface-2">
+			<p>No image available</p>
+		</div>
+	{/if}
+
 	<dl>
 		<dt>ID</dt>
 		<dd>{metadata.file}</dd>
 		<dt>Language</dt>
-		<dd>{metadata.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
+		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
+		<dt>Status</dt>
+		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
-		<dd>
-			{#if metadata.type?.ref}
-				<a class="badge strong" href={metadata.type.ref}
-					>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
-				>
-			{:else}
-				{metadata.type?._ || config.EMPTY_PLACEHOLDER}
+		<dd class="inscription-type">
+			{#if metadata.type}
+				{@const inscriptionType = metadata.type}
+				{#if inscriptionType?.ref}
+					<a class="badge strong" href={inscriptionType.ref}
+						>{inscriptionType?._ || config.EMPTY_PLACEHOLDER}</a
+					>
+				{:else}
+					{inscriptionType?._ || config.EMPTY_PLACEHOLDER}
+				{/if}
+				{#if inscriptionType.certainty}
+					<span class="badge">{inscriptionType.certainty.desc}</span>
+				{/if}
 			{/if}
 		</dd>
 		<dt>Object type</dt>
-		{#if metadata.objectType}
+		{#if metadata?.objectType}
 			<dd>
-				{#if metadata.objectType?.ref}
+				{#if metadata?.objectType?.ref}
 					<a class="badge strong" href={metadata.objectType.ref}
 						>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
 					>
 				{:else}
-					{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}
+					{metadata?.objectType?._ || config.EMPTY_PLACEHOLDER}
 				{/if}
 			</dd>
 		{/if}
-		<dt>Status</dt>
-		<dd>{metadata._ || config.EMPTY_PLACEHOLDER}</dd>
-		<dt>Links</dt>
-		<dd>
-			<a href="{config.publicUrl}inscription/{slug}" target="inscription">
-				View in current site <LucideExternalLink />
-			</a>
-		</dd>
 	</dl>
 </section>
 
@@ -125,7 +140,8 @@
 		text-align: center;
 	}
 
-	#overview #facsimile-images {
+	#overview #facsimile-images,
+	#overview .image-placeholder {
 		grid-column: 1;
 		grid-row: 1;
 		margin: 0 auto;
@@ -135,7 +151,6 @@
 
 	#overview #facsimile-images figcaption {
 		border-top: var(--border-size-1) solid var(--border-color);
-		border-bottom: var(--border-size-1) solid var(--border-color);
 		font-size: var(--font-size-0);
 		max-inline-size: none;
 		padding-block: var(--size-4);
@@ -144,7 +159,14 @@
 		width: 100%;
 	}
 
+	#overview .image-placeholder {
+		height: 60%;
+		padding-block: var(--size-4);
+		text-align: center;
+	}
+
 	#overview dl {
+		border-top: var(--border-size-1) solid var(--border-color);
 		column-count: 2;
 		column-gap: var(--size-4);
 		padding-block: var(--size-4);
@@ -172,6 +194,15 @@
 		gap: var(--size-2);
 	}
 
+	#overview .badge {
+		display: inline-block;
+	}
+
+	.inscription-type {
+		display: flex !important;
+		gap: var(--size-2);
+	}
+
 	@media (max-width: 768px) {
 		#overview {
 			position: relative;
@@ -181,6 +212,19 @@
 
 		#overview dl {
 			column-count: 1;
+		}
+	}
+
+	.print-only {
+		display: none;
+	}
+
+	@media print {
+		.print-only {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
 		}
 	}
 </style>

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -88,19 +92,21 @@
   "date": {
     "_": "500—450 BCE (?)",
     "notBefore": -500,
-    "notAfter": -450,
+    "notAfter": -451,
     "evidence": "material-context, lettering"
   },
   "places": [
     {
       "_": "Entella",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462197"
+      "ref": "http://pleiades.stoa.org/places/462197",
+      "region": "Sicilia"
     },
     {
       "_": "Rocca d'Entella",
       "type": "modern",
-      "ref": "http://sws.geonames.org/11103525/"
+      "ref": "http://sws.geonames.org/11103525/",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,6 +115,8 @@
       13.11509
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Entella",
   "provenanceFound": {
     "_": "Sporadic find. From the 'central area' (Ampolo 2019) of the settlement of Entella.",
     "type": "found",
@@ -118,6 +126,10 @@
       13.11509
     ]
   },
+  "provenanceGeo": [
+    37.77889,
+    13.11509
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -135,7 +147,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Entella",
   "repository": {
@@ -174,7 +185,8 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Elymian"
+      "Elymian",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -187,33 +199,38 @@
         "date": "2021",
         "citedRange": "441",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VQEP8IPT"
+          "target": "https://www.zotero.org/groups/382445/items/VQEP8IPT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002320",
           "target": "https://biblio.inscriptiones.org/epig10002320"
         },
+        "inscriptionDate": "2021",
         "title": "Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQEP8IPT",
+        "year": "2021"
       },
       {
-        "author": "Ampolo",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "80-81, fig. 111",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3PK3JKXR"
+          "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      "\n                    "
+      null
     ]
   },
   "citation": {
@@ -237,19 +254,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -261,6 +265,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020919_tiled.tif",
@@ -269,11 +274,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Entella",
   "letterHeights": [],
   "publications": [
     "Agostiniani, 2021, IAS I, App.",
-    "Ampolo, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "VQEP8IPT",
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic020919",
@@ -286,7 +294,7 @@
     "ceramic",
     "entella",
     "rocca d'entella",
-    "italy",
+    "sicilia",
     "sicily",
     "entella",
     "museo archeologico/antiquarium comunale di entella",

@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -87,19 +91,20 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,6 +113,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": ", sep.115",
     "type": "found",
@@ -121,6 +128,10 @@
       15.5566385
     ]
   },
+  "provenanceGeo": [
+    38.1992517,
+    15.5566385
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +149,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -180,6 +190,8 @@
       {
         "type": "corpus",
         "n": "IMusMessina",
+        "author": "Bitto",
+        "date": "2001",
         "citedRange": "8",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/M9HMEP2R"
@@ -187,7 +199,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000029",
           "target": "https://biblio.inscriptiones.org/epig10000029"
-        }
+        },
+        "inscriptionDate": "2001",
+        "title": "Le iscrizioni greche e latine di Messina",
+        "citation": "<span>Irma Bitto, <i>Le iscrizioni greche e latine di Messina</i>, vol. 1, Pelorias 7 (Messina: Dipartimento di Scienze dell’Antichità dell’Università degli Studi di Messina, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M9HMEP2R",
+        "year": "2001"
       },
       {
         "author": "Orsi",
@@ -200,8 +217,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001701",
           "target": "https://biblio.inscriptiones.org/epig10001701"
         },
+        "inscriptionDate": "1916",
         "title": "Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915",
-        "citation": "<span>Paolo Orsi, «Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915», <i>Monumenti Antichi</i> 24 (1916): 121–218</span>"
+        "citation": "<span>Paolo Orsi, «Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915», <i>Monumenti Antichi</i> 24 (1916): 121–218</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P49V3TMD",
+        "year": "1916"
       },
       {
         "author": "Manganaro",
@@ -213,14 +233,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -244,27 +269,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -273,6 +280,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "284784",
   "facsimile": {
     "n": "screen",
     "url": "ISic003517_tiled.tif",
@@ -281,12 +289,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
   "letterHeights": [],
   "publications": [
-    "IMusMessina",
+    "Bitto, 2001, IMusMessina",
     "Orsi, 1916, Messana. La necropoli romana di S. Placido e di altre scoperte avvenute nel 1910-1915",
-    "Manganaro, 1988"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "M9HMEP2R",
+    "P49V3TMD",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic003517",
@@ -299,7 +311,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "museo regionale interdisciplinare di messina",

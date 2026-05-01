@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -87,19 +91,20 @@
   "date": {
     "_": "3rd century CE",
     "notBefore": 201,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Panhormus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462410"
+      "ref": "http://pleiades.stoa.org/places/462410",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,11 +113,14 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -130,7 +138,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -172,38 +179,47 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0299",
+            "_": "299",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "57.0871",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "145",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -211,7 +227,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Vinci",
@@ -224,15 +245,15 @@
           "_": "https://biblio.inscriptiones.org/epig10001520",
           "target": "https://biblio.inscriptiones.org/epig10001520"
         },
-        "title": "Un nuovo epitaffio in greco della Sicilia di età alto-imperiale e il formulario con gli epiteti XPHSTOS KAI AMEMPTOS",
-        "citation": "<span>M. Vinci, «Un nuovo epitaffio in greco della Sicilia di età alto-imperiale e il formulario con gli epiteti XPHSTOS KAI AMEMPTOS», <i>Zeitschrift für Papyrologie und Epigraphik</i> 162 (2007): 188–92</span>"
+        "inscriptionDate": "2007",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -256,20 +277,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -280,16 +287,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Oliver Clarke",
+        "xml:id": "OC",
+        "ref": "https://orcid.org/0009-0006-5165-8381"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2026-01-19",
+      "who": "#OC"
     }
   },
+  "tmNumber": "492733",
   "facsimile": {
     "n": "screen",
     "url": "ISic001119_tiled.tif",
@@ -298,13 +317,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Panhormus",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "IGMusPalermo",
-    "Vinci, 2007, Un nuovo epitaffio in greco della Sicilia di età alto-imperiale e il formulario con gli epiteti XPHSTOS KAI AMEMPTOS"
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Vinci, 2007"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "F66S4X3M",
+    "P9SXTG6Z"
   ],
   "keywords": [
     "isic001119",
@@ -316,7 +340,7 @@
     "sandstone",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

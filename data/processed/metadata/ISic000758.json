@@ -30,6 +30,7 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "Large brick, engraved after firing(?)",
   "objectType": {
     "_": "brick",
     "ana": "#object.brick",
@@ -37,20 +38,27 @@
   },
   "material": {
     "_": "clay",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": "",
   "dimensions": [
     {
+      "_": "31",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "39.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "7",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -72,7 +80,10 @@
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "40-50",
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -92,12 +103,14 @@
     {
       "_": "Herbessus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462239"
+      "ref": "http://pleiades.stoa.org/places/462239",
+      "region": "Sicilia"
     },
     {
       "_": "Montagna di Marzo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/11102431"
+      "ref": "http://sws.geonames.org/11102431",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,32 +119,34 @@
       14.30061
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Herbessus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "'sarebbe stato trovato in zona di Montagna di Marzo', and 'da me recuperato fortunamente' (Manganaro 1989). Current whereabouts unknown.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "recovered by Manganaro",
+    "_": "None",
     "type": "observed",
-    "subtype": "recovered",
+    "subtype": "autopsied",
     "geo": null
   },
-  "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000758_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "provenanceLost": {
+    "_": "Lost?",
+    "type": "not-observed",
+    "subtype": "lost",
+    "geo": null
+  },
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Montagna di Marzo",
-  "repository": "recovered by Manganaro",
+  "repository": {
+    "_": "private",
+    "role": "private"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -147,12 +162,35 @@
         "n": "AE",
         "citedRange": "1989.0344a",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "50",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -161,17 +199,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -195,20 +235,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Andoni Llamazares",
         "xml:id": "AL",
         "ref": "https://orcid.org/0000-0002-0000-7611"
@@ -217,10 +243,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -229,19 +251,22 @@
       "who": "#AL"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000758_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Herbessus",
-  "letterHeights": [],
+  "tmNumber": "175794",
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 50
+    }
+  ],
   "publications": [
-    null,
-    "Manganaro, 1989"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "RZSFKACR",
+    "EZMBJ6GN"
   ],
   "keywords": [
     "isic000758",
@@ -254,9 +279,10 @@
     "clay",
     "herbessus",
     "montagna di marzo",
-    "italy",
+    "sicilia",
     "sicily",
     "montagna di marzo",
+    "private",
     "latin",
     "la"
   ]

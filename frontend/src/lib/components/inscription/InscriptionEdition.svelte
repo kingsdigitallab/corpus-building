@@ -4,7 +4,7 @@
 	import * as config from '$lib/config';
 	import { codeToHtml } from '$lib/shiki.bundle';
 
-	const { slug, metadata, xml, editions } = $props();
+	const { slug, metadata, xml, editions, attribution } = $props();
 
 	/**
 	 * @param {string} htmlString
@@ -18,12 +18,18 @@
 			div.innerHTML = htmlString;
 			const editionDivs = Array.from(div.querySelectorAll('[id^="edition-"]'));
 
-			return editionDivs.map((div) => ({
-				id: div.id,
-				type: div.id.replace('edition-', '').split('-').join(' '),
-				html: div.outerHTML,
-				isExpandable: (div.outerHTML.match(/<span/g) || []).length > 10
-			}));
+			return editionDivs
+				.filter((div) => div.id !== 'edition-diplomatic-simple-lemmatized')
+				.map((div) => ({
+					id: div.id,
+					type: div.id
+						.replace('edition-', '')
+						.replace('interpretive-simple-lemmatized', 'fully-expanded-text')
+						.split('-')
+						.join(' '),
+					html: div.outerHTML,
+					isExpandable: (div.outerHTML.match(/<span class="linenumber"/g) || []).length > 10
+				}));
 		} catch (e) {
 			console.error('Error parsing edition divs:', e);
 			return [];
@@ -112,6 +118,11 @@
 					{/if}
 				</Button.Root>
 			</div>
+			{#if attribution && attribution !== 'Unknown'}
+				<div class="attribution">
+					{@html attribution}
+				</div>
+			{/if}
 		{/await}
 	{:else}
 		<div aria-busy="true" aria-live="polite">Loading...</div>
@@ -133,7 +144,9 @@
 	.edition-content {
 		border-radius: var(--radius-2);
 		font-family: var(--font-family-greek);
-		max-height: 50vh;
+		letter-spacing: 0.05em;
+		line-height: var(--font-lineheight-4);
+		max-height: calc(10 * var(--font-lineheight-4));
 		overflow-x: scroll;
 		overflow-y: scroll;
 		padding-block: var(--size-4);
@@ -156,6 +169,19 @@
 	.edition-content.epidoc :global(pre) {
 		padding-block: var(--size-4);
 		padding-inline: var(--size-3);
+	}
+
+	.attribution {
+		border-left: var(--border-size-2) solid var(--border-color);
+		font-size: var(--font-size-1);
+		font-weight: normal;
+		margin-block-start: var(--size-4);
+		margin-inline-start: var(--size-4);
+		padding-left: var(--size-2);
+	}
+
+	:global(.attribution a) {
+		color: var(--text-1);
 	}
 
 	.edition-content.expanded {

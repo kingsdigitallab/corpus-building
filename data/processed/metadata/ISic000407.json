@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -79,7 +84,9 @@
         "from": "line1",
         "to": "line2",
         "h": "33-37",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "33",
+        "atMost": "37"
       },
       {
         "type": "interlinear",
@@ -92,7 +99,7 @@
   },
   "date": {
     "_": "second to fourth century CE",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 400,
     "evidence": "lettering"
   },
@@ -100,12 +107,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +123,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Original discovery not recorded, first record appears to be the autopsy notes of Schubring c.1865 (currently in the CIL archive), subsequently recorded in the initial inventory in c.1888 and seen by Mommsen prior to 1883.",
     "type": "found",
@@ -121,6 +132,7 @@
     "notAfter": "1865",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2015-10-21, cassette 29, magazzino B, MARPO.",
     "type": "observed",
@@ -146,7 +158,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -188,27 +199,31 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7126",
+            "_": "7126",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -232,27 +247,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -261,6 +263,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491617",
   "facsimile": {
     "n": "screen",
     "url": "ISic000407_tiled.tif",
@@ -269,10 +272,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22.",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 33,
+      "atMost": 37
+    }
+  ],
   "publications": [
-    "CIL"
+    "Mommsen, 1883, CIL"
+  ],
+  "zotero": [
+    "GQN8UZSI"
   ],
   "keywords": [
     "isic000407",
@@ -285,7 +295,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

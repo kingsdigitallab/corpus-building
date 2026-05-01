@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -83,7 +86,9 @@
         "from": "line1",
         "to": "line4",
         "h": "65-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -96,7 +101,7 @@
   },
   "date": {
     "_": "Imperial in date",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 300,
     "evidence": "lettering"
   },
@@ -104,12 +109,14 @@
     {
       "_": "Assorus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462106"
+      "ref": "http://pleiades.stoa.org/places/462106",
+      "region": "Sicilia"
     },
     {
       "_": "Assoro",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525651"
+      "ref": "http://sws.geonames.org/2525651",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +125,8 @@
       14.4181
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Assorus",
   "provenanceFound": {
     "_": "Found in prop. Crimi, in Contrada Morra/Murra approximately 3km east of Assoro",
     "type": "found",
@@ -129,6 +138,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.62651,
+    14.461248
+  ],
   "provenanceObserved": null,
   "provenanceLost": null,
   "graphics": [
@@ -141,7 +154,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
   "repository": "",
@@ -162,10 +174,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "author": "Morel",
@@ -178,15 +192,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001738",
           "target": "https://biblio.inscriptiones.org/epig10001738"
         },
+        "inscriptionDate": "1963",
         "title": "Recherches archéologiques et topographiques dans la région d'Assoro (province d'Enna, Sicile)",
-        "citation": "<span>J.-P. Morel, « Recherches archéologiques et topographiques dans la région d’Assoro (province d’Enna, Sicile) », <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 75 (1963): 263‑301</span>"
+        "citation": "<span>J.-P. Morel, « Recherches archéologiques et topographiques dans la région d’Assoro (province d’Enna, Sicile) », <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 75 (1963): 263‑301</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7K7K5GQ7",
+        "year": "1963"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -210,27 +227,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -239,6 +238,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "653659",
   "facsimile": {
     "n": "screen",
     "url": "ISic000757_tiled.tif",
@@ -247,11 +247,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Assorus",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 65,
+      "atMost": 70
+    }
+  ],
   "publications": [
-    "Manganaro, 1989",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
     "Morel, 1963, Recherches archéologiques et topographiques dans la région d'Assoro (province d'Enna, Sicile)"
+  ],
+  "zotero": [
+    "EZMBJ6GN",
+    "7K7K5GQ7"
   ],
   "keywords": [
     "isic000757",
@@ -264,7 +272,7 @@
     "limestone",
     "assorus",
     "assoro",
-    "italy",
+    "sicilia",
     "sicily",
     "lost",
     "latin",

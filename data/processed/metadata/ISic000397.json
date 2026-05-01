@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -83,7 +87,9 @@
         "from": "line1",
         "to": "line3",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -96,20 +102,21 @@
   },
   "date": {
     "_": "Orsi attributed it to the Norman period, Ferrua (1989) suggested the Saracen period due to the name Taric, and Manganaro suggests Gothic, each lowering the date therefore, which seems to belong in late antiquity, perhaps later 6th century CE, or earlier 7th century CE, dated by indiction (14th).",
-    "notBefore": 550,
-    "notAfter": 650,
-    "precision": "low"
+    "notBefore": 551,
+    "notAfter": 650
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +125,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Orsi records that it was found in an unspecified location in the vicinity of Acireale, which Manganaro suggests to indicate ancient Acium/Akis, located in the vicinity of Capo Mulini south of Acrieale. However, the piece was already recorded by Ferrara in 1829, as being in the collection of barone Recupero, having been found some years before during the construction of the 'chiesa dei minoriti', in Catania.",
     "type": "found",
@@ -128,6 +137,10 @@
       15.086167
     ]
   },
+  "provenanceGeo": [
+    37.506083,
+    15.086167
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -145,7 +158,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -193,24 +205,33 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002005",
           "target": "https://biblio.inscriptiones.org/epig10002005"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Storia di Catania sino alla fine del secolo XVIII",
+        "citation": "<span>F. Ferrara, <i>Storia di Catania sino alla fine del secolo XVIII</i> (Catania, 1829)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82T4IWDN",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7116",
+            "_": "7116",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Manganaro",
@@ -222,22 +243,31 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1907",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "495-496 ph",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1907",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
@@ -249,7 +279,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000357",
           "target": "https://biblio.inscriptiones.org/epig10000357"
-        }
+        },
+        "title": "Inscriptiones Latinae Christianae Veteres",
+        "author": "Diehl",
+        "date": "1925",
+        "citation": "<span>Ernst Johann L. Diehl, <i>Inscriptiones Latinae Christianae Veteres</i>, 4 vols (Berlin: Weidmann, 1925)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IPPB7CUI",
+        "year": "1925"
       },
       {
         "author": "Ferrua",
@@ -261,7 +297,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001996",
           "target": "https://biblio.inscriptiones.org/epig10001996"
-        }
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le iscrizioni datate della Sicilia paleocristiana",
+        "citation": "<span>Antonio Ferrua, «Le iscrizioni datate della Sicilia paleocristiana», <i>Kokalos</i> 28–29 (1983 1982): 3–29</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7DDNWD6",
+        "year": "1982"
       },
       {
         "author": "Ferrua",
@@ -273,14 +314,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001995",
           "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -304,27 +350,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -333,6 +361,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491608",
   "facsimile": {
     "n": "screen",
     "url": "ISic000397_tiled.tif",
@@ -341,16 +370,29 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 40
+    }
+  ],
   "publications": [
-    "Ferrara, 1829",
-    "CIL",
-    "Manganaro, 1993",
-    "Orsi, 1907, NSA",
-    "ILCV",
-    "Ferrua, 1982-1983",
-    "Ferrua, 1989"
+    "Ferrara, 1829, Storia di Catania sino alla fine del secolo XVIII",
+    "Mommsen, 1883, CIL",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+    "Notizie degli scavi di antichità, 1876-",
+    "Diehl, 1925, ILCV",
+    "Ferrua, 1982-1983, Le iscrizioni datate della Sicilia paleocristiana",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia"
+  ],
+  "zotero": [
+    "82T4IWDN",
+    "GQN8UZSI",
+    "JBI7CI5R",
+    "4MCP2PVV",
+    "IPPB7CUI",
+    "Q7DDNWD6",
+    "759ZXHKQ"
   ],
   "keywords": [
     "isic000397",
@@ -363,7 +405,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "galleria regionale di palazzo bellomo",

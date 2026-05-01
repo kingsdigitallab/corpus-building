@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -82,7 +86,9 @@
         "from": "line1",
         "to": "line7",
         "h": "30-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "60"
       },
       {
         "type": "interlinear",
@@ -90,7 +96,9 @@
         "from": "line1",
         "to": "line7",
         "h": "20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "20"
       }
     ]
   },
@@ -103,12 +111,14 @@
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -117,6 +127,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Found together with a number of tombs, within the confines of the vineyard of the Signori Tumborello near Capo Boeo and reported by Salinas in NSA 1905",
     "type": "found",
@@ -128,6 +140,10 @@
     ],
     "geoCert": "low"
   },
+  "provenanceGeo": [
+    37.801847,
+    12.427609
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -145,7 +161,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Trapani",
   "repository": {
@@ -189,24 +204,36 @@
         "n": "AE",
         "citedRange": "1906.0075.i",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2006.1266",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Wilson",
@@ -218,7 +245,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "type": "corpus",
@@ -230,7 +262,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "author": "Oliveri",
@@ -243,30 +281,54 @@
           "_": "https://biblio.inscriptiones.org/epig10001723",
           "target": "https://biblio.inscriptiones.org/epig10001723"
         },
+        "inscriptionDate": "2009",
         "title": "Le iscrizioni latine",
-        "citation": "<span>F. Oliveri, «Le iscrizioni latine», in <i>Il museo regionale «A. Pepoli» di Trapani. Le collezioni archeologiche</i>, a c. di M.L. Famà (Bari: Edipuglia, 2009), 385–96</span>"
+        "citation": "<span>F. Oliveri, «Le iscrizioni latine», in <i>Il museo regionale «A. Pepoli» di Trapani. Le collezioni archeologiche</i>, a c. di M.L. Famà (Bari: Edipuglia, 2009), 385–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/539T7KIS",
+        "year": "2009"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1905",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "216-218 dr",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1905",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "75",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -290,27 +352,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -319,6 +363,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "284555",
   "facsimile": {
     "n": "screen",
     "url": "ISic000627_tiled.tif",
@@ -327,15 +372,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 60
+    },
+    {
+      "atLeast": 20,
+      "atMost": 20
+    }
+  ],
   "publications": [
-    null,
-    null,
-    "Wilson, 1990",
-    "ILS",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Dessau, 1892-1916, ILS",
     "Oliveri, 2009, Le iscrizioni latine",
-    "Salinas, 1905, NSA"
+    "Notizie degli scavi di antichità, 1876-",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "R46KDTZX",
+    "VF9MMBI9",
+    "XHMS9K6S",
+    "539T7KIS",
+    "4MCP2PVV",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000627",
@@ -348,7 +411,7 @@
     "marble",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "trapani",
     "museo regionale agostino pepoli",

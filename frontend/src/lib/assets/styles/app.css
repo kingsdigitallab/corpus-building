@@ -1,9 +1,41 @@
 @import '@fontsource/source-sans-pro';
 @import 'shiki.css';
 
+@font-face {
+	font-family: 'New Athena Unicode';
+	src: url('/fonts/nau/newathu5_5.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'New Athena Unicode';
+	src: url('/fonts/nau/newathuBold5_5.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'New Athena Unicode';
+	src: url('/fonts/nau/newathuItalic5_5.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'New Athena Unicode';
+	src: url('/fonts/nau/newathuBoldItalic5_5.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
 html {
 	--font-family: var(--font-classical-humanist);
-	--font-family-greek: 'Source Sans Pro', var(--font-antique);
+	--font-family-greek: 'New Athena Unicode', 'Times', 'Source Sans Pro', var(--font-antique);
 
 	--radius: var(--size-px-1);
 
@@ -21,6 +53,7 @@ html {
 	--shadow-strength-light: 2%;
 	--warning-light: var(--orange-4);
 	--focus-color-light: var(--yellow-10);
+	--logo-background-light: var(--surface-1-light);
 
 	/* dark */
 	--brand-dark: var(--choco-1);
@@ -37,6 +70,7 @@ html {
 	--warning-dark: var(--orange-7);
 	--focus-color-dark: var(--yellow-4);
 	--border-color: var(--surface-2-light);
+	--logo-background-dark: var(--surface-2-dark);
 }
 
 :root {
@@ -58,6 +92,8 @@ html {
 
 	--border-color: var(--surface-2-dark);
 	--focus-color: var(--focus-color-light);
+
+	--logo-background: var(--logo-background-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,6 +115,8 @@ html {
 
 		--border-color: var(--surface-2-dark);
 		--focus-color: var(--focus-color-dark);
+
+		--logo-background: var(--logo-background-dark);
 	}
 }
 
@@ -100,6 +138,8 @@ html {
 
 	--border-color: var(--surface-2-light);
 	--focus-color: var(--focus-color-light);
+
+	--logo-background: var(--logo-background-light);
 }
 
 [data-color-scheme='dark'] {
@@ -120,6 +160,8 @@ html {
 
 	--border-color: var(--surface-2-dark);
 	--focus-color: var(--focus-color-dark);
+
+	--logo-background: var(--logo-background-dark);
 }
 
 .brand {
@@ -302,9 +344,9 @@ button.primary:disabled {
 }
 
 button.secondary {
-	background-color: var(--surface-3);
-	border-color: var(--surface-3);
-	color: var(--text-2);
+	background-color: var(--brand);
+	border-color: var(--brand);
+	color: var(--surface-1);
 }
 
 button.secondary-inverse {
@@ -331,14 +373,22 @@ button.secondary:disabled {
 /** Input and select styles */
 input,
 select {
-	background: transparent;
+	background: var(--surface-1);
+	color: var(--text-1);
 	border: 1px solid var(--border-color);
+}
+
+input:disabled,
+select:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
 }
 
 details,
 summary {
 	background-color: unset;
 }
+
 /** End of Input and select styles */
 
 /** Code styles */
@@ -350,6 +400,17 @@ code {
 /** End of Code styles */
 
 /* Utility classes */
+/* .badge {
+	background-color: var(--surface-3);
+	border-radius: var(--radius-1);
+	color: var(--text-2);
+	padding-block: var(--size-1);
+	padding-inline: var(--size-2);
+	text-align: center;
+	white-space: nowrap;
+} */
+
+/*ZL replaced the old version to this as fixing the badge max length and any content inside badge goes longer than that, using '...' */
 .badge {
 	background-color: var(--surface-3);
 	border-radius: var(--radius-1);
@@ -357,15 +418,25 @@ code {
 	padding-block: var(--size-1);
 	padding-inline: var(--size-2);
 	text-align: center;
+
+	display: inline-block;
+	max-width: 12rem; /* ZL: adjust here to change the badge width */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
 }
 
 .badge a,
 a.badge {
 	color: var(--text-2);
+	padding-block: var(--size-1);
 	text-decoration-color: var(--text-2);
 }
 
-.badge::first-letter {
+.badge::first-letter,
+.badge a::first-letter,
+a.badge::first-letter {
 	text-transform: uppercase;
 }
 
@@ -436,6 +507,8 @@ a.badge {
 	color: var(--text-1);
 	font-family: var(--font-family);
 	font-size: var(--font-size-fluid-0);
+	max-width: 300px;
+	overflow: scroll;
 }
 /* End of Map styles */
 
@@ -549,3 +622,130 @@ a.badge {
 	width: var(--size-8);
 }
 /* End of Epidoc styles */
+
+/* Print styles */
+@media print {
+	:root {
+		color-scheme: light !important;
+		--text-1: #000 !important;
+		--surface-1: #fff !important;
+		--border-color: #ccc !important;
+	}
+
+	/* Reset page layout */
+	html,
+	body {
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+	/* Hide interactive elements */
+	#page-navigation,
+	#image-viewer,
+	.map,
+	.citation-actions,
+	.tabs,
+	button,
+	[role='button'],
+	.toaster,
+	nav,
+	header:has(nav),
+	footer {
+		display: none !important;
+	}
+
+	article {
+		display: block !important;
+		height: auto !important;
+		overflow: visible !important;
+		grid-template-columns: 1fr !important;
+	}
+
+	#overview {
+		border: none !important;
+		height: auto !important;
+		overflow: visible !important;
+		position: relative !important;
+		page-break-after: avoid;
+	}
+
+	#overview h1 {
+		font-size: 1.5rem !important;
+		text-align: left !important;
+	}
+
+	#overview dl {
+		column-count: 1 !important;
+	}
+
+	#facsimile-images {
+		display: block !important;
+	}
+
+	#facsimile-images #image-viewer {
+		display: none !important;
+	}
+
+	#content {
+		height: auto !important;
+		overflow: visible !important;
+		padding-inline: 0 !important;
+	}
+
+	#content > section {
+		border-bottom: 1px solid #ccc !important;
+		page-break-inside: avoid;
+	}
+
+	.translation-content {
+		page-break-inside: avoid;
+	}
+
+	a[href^='http']:not(.badge)::after {
+		content: ' (' attr(href) ')' !important;
+		font-size: 0.8em;
+		word-break: break-all;
+	}
+
+	a.badge::after {
+		content: '' !important;
+	}
+
+	dl {
+		page-break-inside: avoid;
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	* {
+		color: #000 !important;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.badge {
+		background-color: #eee !important;
+		border: 1px solid #ccc !important;
+	}
+
+	* {
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	@page {
+		margin: 2cm;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+
+	ul,
+	ol {
+		page-break-inside: avoid;
+	}
+}
+/* End of Print styles */

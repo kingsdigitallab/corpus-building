@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -95,12 +99,14 @@
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,6 +115,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Recorded by Romano in 1838 as being in the 'Casa del Civico Magistrato' in Termini Imerese. Not recorded in CIL and not seen by Bivona or ourselves.",
     "type": "found",
@@ -116,6 +124,7 @@
     "notAfter": "1838",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,16 +132,15 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
   },
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lost",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -148,16 +156,24 @@
         "n": "AE",
         "citedRange": "1994.0774",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "49",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -165,7 +181,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Romano",
@@ -177,14 +198,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001618",
           "target": "https://biblio.inscriptiones.org/epig10001618"
-        }
+        },
+        "inscriptionDate": "1838",
+        "title": "Antichità termitane",
+        "citation": "<span>Baldassare Romano, <i>Antichità termitane</i> (Palermo: Tipografia di Francesco Lao, 1838)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/25ZN5T5X",
+        "year": "1838"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -208,20 +234,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -232,22 +244,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from publication",
-      "when": "2024-04-16",
-      "who": "#JP"
+      "_": "Victoria Fendel's lemmatizations were added",
+      "when": "2025-07-24",
+      "who": "#VF"
     }
   },
-  "provenance": "Thermae Himeraeae",
+  "tmNumber": "285296",
   "letterHeights": [],
   "publications": [
-    null,
-    "ILMusTermini",
-    "Romano, 1838"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1994, ILMusTermini",
+    "Romano, 1838, Antichità termitane"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "JCV85C79",
+    "25ZN5T5X"
   ],
   "keywords": [
     "isic000130",
@@ -260,7 +278,7 @@
     "stone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "lost",
     "latin",

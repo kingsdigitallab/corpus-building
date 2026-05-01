@@ -37,7 +37,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -86,19 +91,20 @@
   "date": {
     "_": "2nd — first half of 3rd century CE\n                                (K)",
     "notBefore": 101,
-    "notAfter": 250,
-    "precision": "low"
+    "notAfter": 250
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,11 +113,14 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "sala VI.75, mag. del cort.",
     "type": "observed",
@@ -128,7 +137,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -170,38 +178,47 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0058",
+            "_": "58",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
-        "citedRange": "44.0738.2",
+        "citedRange": "44.0738.2\n                        ",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "238",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -209,7 +226,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Libertini",
@@ -221,14 +243,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001871",
           "target": "https://biblio.inscriptiones.org/epig10001871"
-        }
+        },
+        "inscriptionDate": "1930",
+        "title": "Il Museo Biscari",
+        "citation": "<span>Guido Libertini, <i>Il Museo Biscari</i> (Milan: Casa editrice D’arte Bestetti e Tuminelli, 1930)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SKUU2R8X",
+        "year": "1930"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -252,20 +279,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -276,16 +289,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2025-12-04",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "492503",
   "facsimile": {
     "n": "screen",
     "url": "ISic000875_tiled.tif",
@@ -294,13 +319,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "IMusCatania",
-    "Libertini, 1930"
+    "Korhonen, 2004, IMusCatania",
+    "Libertini, 1930, Il Museo Biscari"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "2EUC82DH",
+    "SKUU2R8X"
   ],
   "keywords": [
     "isic000875",
@@ -312,7 +342,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

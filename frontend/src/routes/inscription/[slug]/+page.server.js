@@ -2,6 +2,22 @@ import { error } from '@sveltejs/kit';
 import fs from 'fs/promises';
 import corpus from '../../../data/corpus.json';
 
+/**
+ * Validates if the inscription metadata has the minimum required fields
+ * @param {any} metadata
+ * @returns {{ isValid: boolean; missingFields: string[] }}
+ */
+function validateMetadata(metadata) {
+	const requiredFields = ['title'];
+
+	const missingFields = requiredFields.filter((field) => !metadata[field]);
+
+	return {
+		isValid: missingFields.length === 0,
+		missingFields
+	};
+}
+
 /** @type {import('../$types').PageServerLoad} */
 export async function load({ params }) {
 	try {
@@ -11,13 +27,28 @@ export async function load({ params }) {
 		const metadataFileContent = await fs.readFile(metadataFilePath, 'utf8');
 		const metadata = JSON.parse(metadataFileContent);
 
-		// Filter out the refs embedded 
+		// Validate metadata
+		const validation = validateMetadata(metadata);
+		if (!validation.isValid) {
+			return {
+				slug,
+				metadata,
+				images: metadata.graphics || [],
+				html: null,
+				xml: null,
+				isIncomplete: true,
+				missingFields: validation.missingFields
+			};
+		}
+
+		// Filter out the refs embedded
 		// in the introduction paragraph of the <handnote>.
 		// Only keep the list of refs with a type format.
-		metadata.lettering_types = []
+		metadata.lettering_types = [];
 		if (Array.isArray(metadata?.handNote?.lettering?.ref)) {
-			metadata.lettering_types = metadata?.handNote?.lettering?.ref
-				.filter(ref => ref._.match(/ type[\d.]+$/))
+			metadata.lettering_types = metadata?.handNote?.lettering?.ref.filter((ref) =>
+				ref._.match(/ type[\d.]+$/)
+			);
 		}
 
 		const htmlFilePath = `src/data/html/${slug}.json`;

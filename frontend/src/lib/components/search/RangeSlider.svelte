@@ -1,5 +1,6 @@
 <script>
     import { Slider } from 'bits-ui';
+    import TooltipInfo from '../TooltipInfo.svelte';
 
     let {
         title = 'Range slider',
@@ -9,12 +10,16 @@
         step = 1,
         startLabel = 'From',
         endLabel = 'To',
+        tooltip = '',
         selectedRange = $bindable([0, 0]),
         rangeChange
     } = $props();
 </script>
 
-<h3>{title}{#if unit}&#160;<small>({unit})</small>{/if}</h3>
+<hgroup>
+    <h3>{title}{#if unit}&#160;<small>({unit})</small>{/if}</h3>
+    {#if tooltip}&#160;<TooltipInfo>{tooltip}</TooltipInfo>{/if}
+</hgroup>
 <div class="slider">
     <Slider.Root
         class="slider-root"
@@ -52,6 +57,11 @@
 </div>
 
 <style>
+    hgroup {
+        display: flex;
+        align-items: flex-start;
+    }
+
     .range-inputs {
         display: flex;
         gap: var(--size-2);
@@ -64,4 +74,4 @@
         flex-direction: column;
         gap: var(--size-1);
     }
-</style> 
+</style>

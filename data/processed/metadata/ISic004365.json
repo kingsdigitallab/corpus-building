@@ -35,9 +35,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Very fine-grained, homogeneous, white, calcitic marble, likely Lunense. Optical microscopy: homeoblastic to heteroblastic fabric with triple points, mosaic microstructure. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Carrara",
+        "target": "https://www.geonames.org/6542087/carrara.html"
+      },
+      "location": {
+        "geo": "44.06294,10.06069"
+      }
+    }
   },
   "condition": {
     "ana": "#condition.complete"
@@ -81,7 +96,9 @@
         "from": "line1",
         "to": "line1",
         "h": "21-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "21",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -89,7 +106,9 @@
         "from": "line2",
         "to": "line4",
         "h": "23-29",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "29"
       },
       {
         "type": "letterHeight",
@@ -97,7 +116,9 @@
         "from": "line5",
         "to": "line5",
         "h": "26-32",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "32"
       },
       {
         "type": "interlinear",
@@ -105,7 +126,9 @@
         "from": "line1",
         "to": "line4",
         "h": "2-4",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "2",
+        "atMost": "4"
       },
       {
         "type": "interlinear",
@@ -113,25 +136,29 @@
         "from": "line4",
         "to": "line5",
         "h": "5-7",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "7"
       }
     ]
   },
   "date": {
     "_": "Imperial period",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 400
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -140,6 +167,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Original discovery not recorded, from Centuripe prior to 2 Feb 1907.",
     "type": "found",
@@ -147,6 +176,7 @@
     "notAfter": "1907-02-02",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Depositi, Magazzino B, cassa 4, Museo Archeologico Regionale Paolo Orsi",
     "type": "observed",
@@ -188,7 +218,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -230,24 +259,25 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1907",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "495",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1907",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -271,27 +301,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -300,6 +317,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004365_tiled.tif",
@@ -308,10 +326,33 @@
     "desc": "Photo J. Prag, 2014-09-11, by permission of Museo Archeologico Regionale Paolo Orsi",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 21,
+      "atMost": 25
+    },
+    {
+      "atLeast": 23,
+      "atMost": 29
+    },
+    {
+      "atLeast": 26,
+      "atMost": 32
+    },
+    {
+      "atLeast": 2,
+      "atMost": 4
+    },
+    {
+      "atLeast": 5,
+      "atMost": 7
+    }
+  ],
   "publications": [
-    "Orsi, 1907, NSA"
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic004365",
@@ -321,10 +362,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "very fine-grained, homogeneous, white, calcitic marble, likely lunense. optical microscopy: homeoblastic to heteroblastic fabric with triple points, mosaic microstructure. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

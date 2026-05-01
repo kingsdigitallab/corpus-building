@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -93,19 +97,21 @@
   },
   "date": {
     "_": "Roman period?",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 500
   },
   "places": [
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +120,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Found in the last days of October 1886, in the ancient necropolis 'sotto il forte Gonzaga, in contrada Cammari', in the course of works to extend the railway line Messina Cerda.",
     "type": "found",
@@ -121,6 +129,7 @@
     "when": "1886-10",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -143,10 +152,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -162,39 +170,43 @@
         "n": "IG",
         "citedRange": {
           "ref": {
-            "_": "\n                                14.0418a",
+            "_": "418a",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "author": "Kaibel",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1886",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "462",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1886",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -218,27 +230,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -247,6 +241,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "644951",
   "facsimile": {
     "n": "screen",
     "url": "ISic003406_tiled.tif",
@@ -255,11 +250,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "Salinas, 1886, NSA"
+    "Kaibel, 1890, IG",
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic003406",
@@ -272,7 +270,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "ancient greek",

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": "",
@@ -175,11 +179,13 @@
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462214"
+      "ref": "https://pleiades.stoa.org/places/462214",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -188,6 +194,8 @@
       12.8298666
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": {
     "_": "Found in Selinunte.",
     "type": "found",
@@ -196,6 +204,10 @@
       12.8298666
     ]
   },
+  "provenanceGeo": [
+    37.5853775,
+    12.8298666
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -221,7 +233,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Selinunte",
   "repository": {
@@ -247,35 +258,41 @@
         "date": "1989",
         "citedRange": "57, fig.3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VC9IHZAR"
+          "target": "https://www.zotero.org/groups/382445/items/VC9IHZAR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000638",
           "target": "https://biblio.inscriptiones.org/epig10000638"
         },
+        "inscriptionDate": "1989",
         "title": "Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte",
-        "citation": "<span>Renato Arena, <i>Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte</i>, 1st ed., vol. 1 (Milano: Istituto Editoriale Cisalpino - La Goliardica, 1989)</span>"
+        "citation": "<span>Renato Arena, <i>Iscrizioni greche arcaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Megara e Selinunte</i>, 1st ed., vol. 1 (Milano: Istituto Editoriale Cisalpino - La Goliardica, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VC9IHZAR",
+        "year": "1989"
       },
       {
         "author": "Guarducci",
         "date": "1987",
         "citedRange": "137-138, fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/8PAVT2J9"
+          "target": "https://www.zotero.org/groups/382445/items/8PAVT2J9"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002770",
           "target": "https://biblio.inscriptiones.org/epig10002770"
         },
+        "inscriptionDate": "1987",
         "title": "Il vaso iscritto di Aristokleia e Pithakos a Selinunte",
-        "citation": "<span>Margherita Guarducci, «Il vaso iscritto di Aristokleia e Pithakos a Selinunte», <i>Rendiconti della Classe di Scienze Morali, Storiche e Filologiche dell’Accademia dei Lincei</i> 41, fasc. 5–6 (1987): 137–43</span>"
+        "citation": "<span>Margherita Guarducci, «Il vaso iscritto di Aristokleia e Pithakos a Selinunte», <i>Rendiconti della Classe di Scienze Morali, Storiche e Filologiche dell’Accademia dei Lincei</i> 41, fasc. 5–6 (1987): 137–43</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8PAVT2J9",
+        "year": "1987"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -299,30 +316,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020445_tiled.tif",
@@ -331,11 +341,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Selinus",
   "letterHeights": [],
   "publications": [
     "Arena, 1989, IGASM1",
     "Guarducci, 1987, Il vaso iscritto di Aristokleia e Pithakos a Selinunte"
+  ],
+  "zotero": [
+    "VC9IHZAR",
+    "8PAVT2J9"
   ],
   "keywords": [
     "isic020445",
@@ -348,7 +361,7 @@
     "ceramic",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "selinunte",
     "ancient greek",

@@ -31,18 +31,17 @@
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
-  "objectType": [
-    {
-      "_": "plaque",
-      "ana": "#object.plaque",
-      "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
-    },
-    ""
-  ],
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcite_limestone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -92,7 +91,7 @@
   },
   "date": {
     "_": "Neronian",
-    "notBefore": 50,
+    "notBefore": 51,
     "notAfter": 100
   },
   "places": [
@@ -100,12 +99,14 @@
       "_": "Panhormus",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462410",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,11 +115,14 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -136,7 +140,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -176,11 +179,47 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "18",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002388",
+          "target": "https://biblio.inscriptiones.org/epig10002388"
+        },
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "175",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001931",
+          "target": "https://biblio.inscriptiones.org/epig10001931"
+        },
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7266",
+            "_": "7266",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650787"
           }
         },
@@ -190,23 +229,53 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "68 n.348",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2007.678",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "9",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
@@ -214,15 +283,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        },
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -246,20 +320,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -270,13 +330,14 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Robert Crellin",
         "xml:id": "RC",
         "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -285,6 +346,7 @@
       "who": "#RC"
     }
   },
+  "tmNumber": "491768",
   "facsimile": {
     "n": "screen",
     "url": "ISic000009_tiled.tif",
@@ -293,12 +355,22 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Panhormus",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    null,
-    "ILMusPalermo"
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1970, ILMusPalermo"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "RZSFKACR",
+    "R46KDTZX",
+    "FZWWPUD6"
   ],
   "keywords": [
     "isic000009",
@@ -307,10 +379,11 @@
       "_": "draft"
     },
     "dedication",
+    "plaque",
     "limestone",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

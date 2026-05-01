@@ -40,7 +40,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -89,19 +93,20 @@
   "date": {
     "_": "First half of 3rd century CE (cf. Barbieri)",
     "notBefore": 201,
-    "notAfter": 250,
-    "precision": "low"
+    "notAfter": 250
   },
   "places": [
     {
       "_": "Panhormus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462410"
+      "ref": "http://pleiades.stoa.org/places/462410",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +115,8 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
     "_": "Found in 1684 in Palermo in the church of the Monastery of the Martorana, on the reverse of a marble plaque in re-use.",
     "type": "found",
@@ -117,6 +124,7 @@
     "when": "1684",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -124,7 +132,7 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
@@ -139,9 +147,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -155,27 +163,31 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7287",
+            "_": "7287",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650790"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -199,27 +211,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Noah Cashian",
@@ -233,6 +227,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491789",
   "facsimile": {
     "n": "screen",
     "url": "ISic000546_tiled.tif",
@@ -241,10 +236,12 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Panhormus",
   "letterHeights": [],
   "publications": [
-    "CIL"
+    "Mommsen, 1883, CIL"
+  ],
+  "zotero": [
+    "GQN8UZSI"
   ],
   "keywords": [
     "isic000546",
@@ -257,7 +254,7 @@
     "marble",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "latin",

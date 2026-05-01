@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "volcanic (pietra di Fuardo)",
-    "ana": "#material.stone.volcanic",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line1",
         "h": "48-58",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "48",
+        "atMost": "58"
       },
       {
         "type": "interlinear",
@@ -93,21 +100,23 @@
     ]
   },
   "date": {
-    "_": "2nd century CE (Ferrua)",
-    "notBefore": 101,
-    "notAfter": 200,
-    "precision": "low"
+    "_": "Hellenistic (assigned to C2 CE by Ferrua, without reference to the archaeological context of re-use)",
+    "notBefore": -300,
+    "notAfter": -1,
+    "evidence": "lettering, archaeological-context"
   },
   "places": [
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +125,8 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Found by Orsi in 1928 in excavation in contrada Diana, reused in cover of t.22",
     "type": "found",
@@ -126,6 +137,10 @@
       14.953871
     ]
   },
+  "provenanceGeo": [
+    38.46713,
+    14.953871
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -143,7 +158,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
   "repository": {
@@ -185,29 +199,34 @@
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "186",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1929",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "78",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1929",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Ferrua",
@@ -219,14 +238,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002655",
           "target": "https://biblio.inscriptiones.org/epig10002655"
-        }
+        },
+        "inscriptionDate": "1941",
+        "title": "Analecta sicula",
+        "citation": "<span>Antonio Ferrua, «Analecta sicula», <i>Epigraphica</i> 3 (1941): 252–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P7QQ9SB6",
+        "year": "1941"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -250,20 +274,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Marta Capano",
         "xml:id": "MC"
       },
@@ -278,21 +288,33 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Alex Antoniou addition of metadata",
-      "when": "2022-02-18",
-      "who": "#AA"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2026-01-19",
+      "who": "#RC"
     }
   },
+  "tmNumber": "645008",
   "facsimile": {
     "n": "screen",
     "url": "ISic001507_tiled.tif",
@@ -301,12 +323,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 48,
+      "atMost": 58
+    }
+  ],
   "publications": [
-    "ILipara",
-    "Orsi, 1929, NSA",
-    "Ferrua, 1941"
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara",
+    "Notizie degli scavi di antichità, 1876-",
+    "Ferrua, 1941, Analecta sicula"
+  ],
+  "zotero": [
+    "VDAQH5D2",
+    "4MCP2PVV",
+    "P7QQ9SB6"
   ],
   "keywords": [
     "isic001507",
@@ -319,7 +350,7 @@
     "volcanic (pietra di fuardo)",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
     "lipari",
     "museo archeologico regionale eoliano \"luigi bernab� brea\"",

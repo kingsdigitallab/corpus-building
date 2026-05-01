@@ -34,12 +34,16 @@
   "support": "A bronze (or copper) lamina, with flat spheres depicted on each side and a circular handle projecting above, to present a type of tabula ansata, and with a nail hole for fixing.",
   "objectType": {
     "_": "lamina",
-    "ana": "#object.lanima",
+    "ana": "#object.lamina",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/145.html"
   },
   "material": {
     "_": "bronze",
-    "ana": "#material.metal.bronze",
+    "ana": "#material.inorganic.metal.bronze",
+    "type": "metal.bronze",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
   "condition": {
@@ -101,12 +105,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +121,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in Catania, shortly before 1741, beneath the Church of S. Maria Ogninella, and in 1741 in the possession of one Vinc. Michaelangelum, an area near the ancient city walls and in an area of burials (so Amico)",
     "type": "found",
@@ -125,6 +133,10 @@
       15.0881164
     ]
   },
+  "provenanceGeo": [
+    37.5037835,
+    15.0881164
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -132,16 +144,15 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
   },
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -157,43 +168,60 @@
         "date": "1741",
         "citedRange": "201 no.8",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F5INCW3T"
+          "target": "https://www.zotero.org/groups/382445/items/F5INCW3T"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002186",
           "target": "https://biblio.inscriptiones.org/epig10002186"
-        }
+        },
+        "inscriptionDate": "1741",
+        "title": "Catana Ilustrata",
+        "citation": "<span>V. and Statella Amico E., <i>Catana Ilustrata</i>, vol. 3 (Catanae, 1741)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F5INCW3T",
+        "year": "1741"
       },
       {
         "author": "Castelli",
         "date": "1769",
         "citedRange": "cl.2, no.6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SPTB56H3"
+          "target": "https://www.zotero.org/groups/382445/items/SPTB56H3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
         "date": "1784",
         "citedRange": "cl.2, no.6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7PSFHSUH"
+          "target": "https://www.zotero.org/groups/382445/items/7PSFHSUH"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7016",
+            "_": "7016",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650756"
           }
         },
@@ -203,15 +231,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -235,20 +268,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -257,10 +276,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -269,13 +284,19 @@
       "who": "#JP"
     }
   },
-  "provenance": "Catina",
+  "tmNumber": "491511",
   "letterHeights": [],
   "publications": [
-    "Amico, 1741",
-    "Castelli, 1769",
-    "Castelli, 1784",
-    "CIL"
+    "Amico, 1741, Catana Ilustrata",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Mommsen, 1883, CIL"
+  ],
+  "zotero": [
+    "F5INCW3T",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "GQN8UZSI"
   ],
   "keywords": [
     "isic000300",
@@ -288,7 +309,7 @@
     "bronze",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "latin",

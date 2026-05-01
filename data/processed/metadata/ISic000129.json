@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "23-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "26-27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "27"
       },
       {
         "type": "interlinear",
@@ -96,7 +105,9 @@
         "from": "line1",
         "to": "line2",
         "h": "11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "11"
       }
     ]
   },
@@ -109,12 +120,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -123,6 +136,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found among the ruins on 'Piano di S. Giovanni' prior to 1838",
     "type": "found",
@@ -133,6 +148,10 @@
       13.6900201
     ]
   },
+  "provenanceGeo": [
+    37.9874911,
+    13.6900201
+  ],
   "provenanceObserved": {
     "_": "Prag 2023-07-07, in the stores of the Museo Civico",
     "type": "observed",
@@ -158,7 +177,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -200,6 +218,8 @@
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "48",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -207,7 +227,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Romano",
@@ -219,14 +244,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001618",
           "target": "https://biblio.inscriptiones.org/epig10001618"
-        }
+        },
+        "inscriptionDate": "1838",
+        "title": "Antichità termitane",
+        "citation": "<span>Baldassare Romano, <i>Antichità termitane</i> (Palermo: Tipografia di Francesco Lao, 1838)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/25ZN5T5X",
+        "year": "1838"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -250,20 +280,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -274,16 +290,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy",
-      "when": "2024-04-15",
-      "who": "#JP"
+      "_": "Robert Crellin added new elements to the lemmatized edition",
+      "when": "2025-07-03",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285295",
   "facsimile": {
     "n": "screen",
     "url": "ISic000129_tiled.tif",
@@ -292,11 +315,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 07.07.23",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 23,
+      "atMost": 25
+    },
+    {
+      "atLeast": 26,
+      "atMost": 27
+    },
+    {
+      "atLeast": 11,
+      "atMost": 11
+    }
+  ],
   "publications": [
-    "ILMusTermini",
-    "Romano, 1838"
+    "Bivona, 1994, ILMusTermini",
+    "Romano, 1838, Antichità termitane"
+  ],
+  "zotero": [
+    "JCV85C79",
+    "25ZN5T5X"
   ],
   "keywords": [
     "isic000129",
@@ -309,7 +348,7 @@
     "marble",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

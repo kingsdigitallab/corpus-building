@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "sandstone\n                                    ",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -88,19 +92,20 @@
   "date": {
     "_": "Mid 5th century BCE",
     "notBefore": -500,
-    "notAfter": -400,
-    "precision": "low"
+    "notAfter": -401
   },
   "places": [
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462489"
+      "ref": "http://pleiades.stoa.org/places/462489",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523164"
+      "ref": "http://sws.geonames.org/2523164",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,11 +114,14 @@
       12.82522
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -131,7 +139,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -173,14 +180,18 @@
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "96",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000531",
-          "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/F66S4X3M",
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Brugnone",
@@ -193,15 +204,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002115",
           "target": "https://biblio.inscriptiones.org/epig10002115"
         },
+        "inscriptionDate": "2006",
         "title": "Note epigrafiche selinuntine",
-        "citation": "<span>Antonietta Brugnone, «Note epigrafiche selinuntine», <i>Thalassa</i> 3 (2006): 45–123</span>"
+        "citation": "<span>Antonietta Brugnone, «Note epigrafiche selinuntine», <i>Thalassa</i> 3 (2006): 45–123</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DM7BU8BU",
+        "year": "2006"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -225,27 +239,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -254,6 +250,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "284901",
   "facsimile": {
     "n": "screen",
     "url": "ISic001574_tiled.tif",
@@ -262,11 +259,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Selinus",
   "letterHeights": [],
   "publications": [
-    "IGMusPalermo",
+    "Manni Piraino, 1973, IGMusPalermo",
     "Brugnone, 2006, Note epigrafiche selinuntine"
+  ],
+  "zotero": [
+    "F66S4X3M",
+    "DM7BU8BU"
   ],
   "keywords": [
     "isic001574",
@@ -279,7 +279,7 @@
     "sandstone",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

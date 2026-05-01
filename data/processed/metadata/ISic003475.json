@@ -39,7 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -84,7 +87,9 @@
         "from": "line1",
         "to": "line1",
         "h": "20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -98,19 +103,20 @@
   "date": {
     "_": "4th — 3rd century BCE",
     "notBefore": -400,
-    "notAfter": -200,
-    "precision": "low"
+    "notAfter": -201
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,11 +125,14 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Original discovery not recorded, but well before 1999.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Seen by Manganaro in the house of dott. Prospero Cacia prior to 1999",
     "type": "observed",
@@ -141,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
   "repository": {
@@ -163,19 +171,21 @@
         "n": "SEG",
         "citedRange": "49.1275",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGDS2",
+        "author": "Dubois",
+        "date": "2008",
         "citedRange": "101",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/SM2KDHZC"
@@ -184,9 +194,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000160",
           "target": "https://biblio.inscriptiones.org/epig10000160"
         },
+        "inscriptionDate": "2008",
         "title": "Inscriptions grecques dialectales de Sicile. Tome II.",
-        "date": "2008",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile. Tome II.</i> (Geneva: Droz, 2008)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile. Tome II.</i> (Geneva: Droz, 2008)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SM2KDHZC",
+        "year": "2008"
       },
       {
         "author": "Manganaro",
@@ -195,19 +207,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GRB3IPD5"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001813",
-          "target": "https://biblio.inscriptiones.org/epig10001813"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/GRB3IPD5",
+        "inscriptionDate": "1999",
         "title": "Sikelika: studi di antichità e di epigrafia della Sicilia greca",
-        "citation": "<span>Giacomo Manganaro, <i>Sikelika: studi di antichità e di epigrafia della Sicilia greca</i>, Biblioteca di QUCC 8 (Pisa, Roma: Istituti Editoriali e Poligrafici internazionali, 1999)</span>"
+        "citation": "<span>Giacomo Manganaro, <i>Sikelika: studi di antichità e di epigrafia della Sicilia greca</i>, Biblioteca di QUCC 8 (Pisa, Roma: Istituti Editoriali e Poligrafici internazionali, 1999)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GRB3IPD5",
+        "year": "1999"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -231,35 +243,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited file from publications",
-      "when": "2022-02-03",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2026-01-19",
+      "who": "#RC"
     }
   },
+  "tmNumber": "645096",
   "facsimile": {
     "n": "screen",
     "url": "ISic003475_tiled.tif",
@@ -268,12 +273,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 20
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "IGDS2, 2008",
+    "Dubois, 2008, IGDS2",
     "Manganaro, 1999, Sikelika: studi di antichità e di epigrafia della Sicilia greca"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "SM2KDHZC",
+    "GRB3IPD5"
   ],
   "keywords": [
     "isic003475",
@@ -286,7 +300,7 @@
     "limestone",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
     "private collection (p. cacia)",

@@ -37,7 +37,12 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -78,7 +83,9 @@
         "from": "lineA1",
         "to": "lineA1",
         "h": "37-39",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "37",
+        "atMost": "39"
       },
       {
         "type": "letterHeight",
@@ -86,7 +93,9 @@
         "from": "lineA2",
         "to": "lineA2",
         "h": "32-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "32",
+        "atMost": "35"
       },
       {
         "type": "letterHeight",
@@ -94,7 +103,9 @@
         "from": "lineA3",
         "to": "lineA3",
         "h": "27-33",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "33"
       },
       {
         "type": "letterHeight",
@@ -102,7 +113,9 @@
         "from": "lineB1",
         "to": "lineB1",
         "h": "35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       },
       {
         "type": "letterHeight",
@@ -110,7 +123,9 @@
         "from": "lineB2",
         "to": "lineB2",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -118,7 +133,9 @@
         "from": "lineB3",
         "to": "lineB3",
         "h": "27-29",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "29"
       },
       {
         "type": "interlinear",
@@ -126,7 +143,9 @@
         "from": "lineA1",
         "to": "lineA2",
         "h": "12",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "12",
+        "atMost": "12"
       },
       {
         "type": "interlinear",
@@ -134,7 +153,9 @@
         "from": "lineA2",
         "to": "lineA3",
         "h": "11-13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "13"
       },
       {
         "type": "interlinear",
@@ -142,7 +163,9 @@
         "from": "lineB1",
         "to": "lineB2",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -150,7 +173,9 @@
         "from": "lineB2",
         "to": "lineB3",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       }
     ]
   },
@@ -163,12 +188,14 @@
     {
       "_": "Agrigentum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462086"
+      "ref": "http://pleiades.stoa.org/places/462086",
+      "region": "Sicilia"
     },
     {
       "_": "Agrigento",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541860"
+      "ref": "http://sws.geonames.org/6541860",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -177,6 +204,8 @@
       13.58876
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Agrigentum",
   "provenanceFound": {
     "_": "Area of bouleuterion, 1983",
     "type": "found",
@@ -186,6 +215,10 @@
       13.589125
     ]
   },
+  "provenanceGeo": [
+    37.297479,
+    13.589125
+  ],
   "provenanceObserved": {
     "_": "On display.",
     "type": "observed",
@@ -226,7 +259,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
   "repository": {
@@ -249,7 +281,10 @@
           "lon": 13.58898416
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462086"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462086"
+      }
     }
   },
   "idno": {
@@ -277,8 +312,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002053",
           "target": "https://biblio.inscriptiones.org/epig10002053"
         },
+        "inscriptionDate": "1984-1985",
         "title": "L'attivita della soprintendenza archeologica di Agrigento (Anni 1980-84)",
-        "citation": "<span>E. De Miro, «L’attivita della soprintendenza archeologica di Agrigento (Anni 1980-84)», <i>Kokalos</i> 30–31 (1985 1984): 453–65</span>"
+        "citation": "<span>E. De Miro, «L’attivita della soprintendenza archeologica di Agrigento (Anni 1980-84)», <i>Kokalos</i> 30–31 (1985 1984): 453–65</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VJMD7V5S",
+        "year": "1984"
       },
       {
         "author": "Manganaro",
@@ -290,7 +328,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "De Miro",
@@ -303,11 +346,14 @@
           "_": "https://biblio.inscriptiones.org/epig10002051",
           "target": "https://biblio.inscriptiones.org/epig10002051"
         },
+        "inscriptionDate": "2000",
         "title": "Agrigento nella prima età imperiale",
-        "citation": "<span>E. De Miro, «Agrigento nella prima età imperiale», in <i>Damarato. Studi di antichitˆ classica offerti a Paola Pelagatti</i>, a c. di I. Berlingó e et al (Milan: Electa, 2000), 380–86</span>"
+        "citation": "<span>E. De Miro, «Agrigento nella prima età imperiale», in <i>Damarato. Studi di antichitˆ classica offerti a Paola Pelagatti</i>, a c. di I. Berlingó e et al (Milan: Electa, 2000), 380–86</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PXF2BUI7",
+        "year": "2000"
       },
       {
-        "author": "Pugliese Carratelli and Fiorentini",
+        "author": "Pugliese Carratelli, Fiorentini",
         "date": "1992",
         "citedRange": "107-108 ph",
         "ptr": {
@@ -317,11 +363,14 @@
           "_": "https://biblio.inscriptiones.org/epig10001649",
           "target": "https://biblio.inscriptiones.org/epig10001649"
         },
+        "inscriptionDate": "1992",
         "title": "Agrigento, Museo Archeologico",
-        "citation": "<span>G. Pugliese Carratelli e G. Fiorentini, <i>Agrigento, Museo Archeologico</i> (Palermo: Edizioni Novecento, Libreria dello Stato, 1992)</span>"
+        "citation": "<span>G. Pugliese Carratelli e G. Fiorentini, <i>Agrigento, Museo Archeologico</i> (Palermo: Edizioni Novecento, Libreria dello Stato, 1992)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3V3A3VP3",
+        "year": "1992"
       },
       {
-        "author": "Battistoni and Rothenöfer",
+        "author": "Battistoni, Rothenöfer",
         "date": "2012",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/PV2EVRIS"
@@ -330,8 +379,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002663",
           "target": "https://biblio.inscriptiones.org/epig10002663"
         },
+        "inscriptionDate": "2012",
         "title": "Caesars Sohn und die Annii von Agrigent: eine wirtschaftliche Liaison?",
-        "citation": "<span>Filippo Battistoni and P. Rothenöfer, ‘Caesars Sohn und die Annii von Agrigent: eine wirtschaftliche Liaison?’, <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser. 5, 4, no. 1 (2012): 103–15</span>"
+        "citation": "<span>Filippo Battistoni and P. Rothenöfer, ‘Caesars Sohn und die Annii von Agrigent: eine wirtschaftliche Liaison?’, <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser. 5, 4, no. 1 (2012): 103–15</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PV2EVRIS",
+        "year": "2012"
       },
       {
         "author": "Manganaro",
@@ -344,8 +396,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001789",
           "target": "https://biblio.inscriptiones.org/epig10001789"
         },
+        "inscriptionDate": "2013",
         "title": "Tre iscrizioni di Agrigento. Il culto dei Caesares nipoti di Augusto e la diffusione della gens Annia",
-        "citation": "<span>Giacomo Manganaro, «Tre iscrizioni di Agrigento. Il culto dei Caesares nipoti di Augusto e la diffusione della gens Annia», <i>Sicilia Antiqua</i> 10 (2013): 247–52</span>"
+        "citation": "<span>Giacomo Manganaro, «Tre iscrizioni di Agrigento. Il culto dei Caesares nipoti di Augusto e la diffusione della gens Annia», <i>Sicilia Antiqua</i> 10 (2013): 247–52</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WKCWFCS2",
+        "year": "2013"
       },
       {
         "author": "Zambito",
@@ -358,15 +413,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001502",
           "target": "https://biblio.inscriptiones.org/epig10001502"
         },
+        "inscriptionDate": "2013-2014",
         "title": "Gli Annii agrigentini e la produzione di zolfo. Note epigrafiche su economia ed evergetismo nella Sicilia romana",
-        "citation": "<span>Luca Zambito, «Gli Annii agrigentini e la produzione di zolfo. Note epigrafiche su economia ed evergetismo nella Sicilia romana», <i>Minima Epigraphica et Papyrologica</i> 16–17 (2014 2013): 67–82</span>"
+        "citation": "<span>Luca Zambito, «Gli Annii agrigentini e la produzione di zolfo. Note epigrafiche su economia ed evergetismo nella Sicilia romana», <i>Minima Epigraphica et Papyrologica</i> 16–17 (2014 2013): 67–82</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8EC6VQVD",
+        "year": "2013"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -390,27 +448,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -419,6 +464,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645577",
   "facsimile": {
     "n": "screen",
     "url": "ISic003324A_tiled.tif",
@@ -427,16 +473,65 @@
     "desc": "Photo J. Prag, courtesy Museo Regionale Archeologico Pietro Griffo, Agrigento",
     "surfaceType": "front"
   },
-  "provenance": "Agrigentum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 37,
+      "atMost": 39
+    },
+    {
+      "atLeast": 32,
+      "atMost": 35
+    },
+    {
+      "atLeast": 27,
+      "atMost": 33
+    },
+    {
+      "atLeast": 35,
+      "atMost": 35
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    },
+    {
+      "atLeast": 27,
+      "atMost": 29
+    },
+    {
+      "atLeast": 12,
+      "atMost": 12
+    },
+    {
+      "atLeast": 11,
+      "atMost": 13
+    },
+    {
+      "atLeast": 10,
+      "atMost": 10
+    },
+    {
+      "atLeast": 10,
+      "atMost": 10
+    }
+  ],
   "publications": [
     "De Miro, 1984-1985, L'attivita della soprintendenza archeologica di Agrigento (Anni 1980-84)",
-    "Manganaro, 1988",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "De Miro, 2000, Agrigento nella prima età imperiale",
-    "Pugliese Carratelli and Fiorentini, 1992, Agrigento, Museo Archeologico",
-    "Battistoni and Rothenöfer, 2012, Caesars Sohn und die Annii von Agrigent: eine wirtschaftliche Liaison?",
+    "Pugliese Carratelli, Fiorentini, 1992, Agrigento, Museo Archeologico",
+    "Battistoni, Rothenöfer, 2012, Caesars Sohn und die Annii von Agrigent: eine wirtschaftliche Liaison?",
     "Manganaro, 2013, Tre iscrizioni di Agrigento. Il culto dei Caesares nipoti di Augusto e la diffusione della gens Annia",
     "Zambito, 2013-2014, Gli Annii agrigentini e la produzione di zolfo. Note epigrafiche su economia ed evergetismo nella Sicilia romana"
+  ],
+  "zotero": [
+    "VJMD7V5S",
+    "RZSFKACR",
+    "PXF2BUI7",
+    "3V3A3VP3",
+    "PV2EVRIS",
+    "WKCWFCS2",
+    "8EC6VQVD"
   ],
   "keywords": [
     "isic003324",
@@ -449,7 +544,7 @@
     "marble",
     "agrigentum",
     "agrigento",
-    "italy",
+    "sicilia",
     "sicily",
     "agrigento",
     "museo regionale archeologico pietro griffo",

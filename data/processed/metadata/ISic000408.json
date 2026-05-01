@@ -37,8 +37,14 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Very fine-grained, homogeneous, white, calcitic marble, likely Docimian, Pentelic. Optical microscopy: homeoblastic fabric with triple points, mosaic microstructure, fine-grained areas. Digital microscopy: homeoblastic fabric. no reasonable match between mgs and isotopes (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic",
+    "type": "stone.marble",
+    "subtype": [
+      "Docimian",
+      "Pentelic"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -87,7 +93,9 @@
         "from": "line2",
         "to": "line2",
         "h": "58-63",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "58",
+        "atMost": "63"
       },
       {
         "type": "letterHeight",
@@ -95,7 +103,9 @@
         "from": "line3",
         "to": "line3",
         "h": "50-53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -103,7 +113,9 @@
         "from": "line1",
         "to": "line2",
         "h": "38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "38",
+        "atMost": "38"
       },
       {
         "type": "interlinear",
@@ -111,7 +123,9 @@
         "from": "line2",
         "to": "line3",
         "h": "43",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "43",
+        "atMost": "43"
       }
     ]
   },
@@ -124,12 +138,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -138,6 +154,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "The piece is one of several first reported by Schubring 1865 as coming from the Roman site at Contrada Bufardeci, traditionally known as the , and the museum inventory record reads 'Bagno Romano', which refers to the same place. Schubring's autopsy notes from 1865 also attribute this piece to 'Bufardeci'. However, at least one of the pieces so attributed by Schubring is originally from Rome, so this attribution cannot be considered entirely certain. CIL appears to have a typo, describing the provenance as 'Rufardeci'.",
     "type": "found",
@@ -151,6 +169,10 @@
       15.2804126
     ]
   },
+  "provenanceGeo": [
+    37.0673281,
+    15.2804126
+  ],
   "provenanceObserved": {
     "_": "Prag 2014-09-10, MARPO, Magazzino B, cassette 7",
     "type": "observed",
@@ -177,7 +199,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -219,19 +240,23 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7128",
+            "_": "7128",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Schubring",
@@ -244,15 +269,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001600",
           "target": "https://biblio.inscriptiones.org/epig10001600"
         },
+        "inscriptionDate": "1865",
         "title": "Über das neu ausgegrabene römische Gebäude in der campagna Bufardeci zu Syrakus",
-        "citation": "<span>J. Schubring, ‘Über das neu ausgegrabene römische Gebäude in der campagna Bufardeci zu Syrakus’, <i>Monatsberichte der königlichen preussischen Akademie der Wissenschaften zu Berlin</i>, 1865, 362–72</span>"
+        "citation": "<span>J. Schubring, ‘Über das neu ausgegrabene römische Gebäude in der campagna Bufardeci zu Syrakus’, <i>Monatsberichte der königlichen preussischen Akademie der Wissenschaften zu Berlin</i>, 1865, 362–72</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FHNWCQSX",
+        "year": "1865"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -276,27 +304,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -305,6 +320,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491619",
   "facsimile": {
     "n": "screen",
     "url": "ISic000408_tiled.tif",
@@ -313,11 +329,31 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10.",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 58,
+      "atMost": 63
+    },
+    {
+      "atLeast": 50,
+      "atMost": 53
+    },
+    {
+      "atLeast": 38,
+      "atMost": 38
+    },
+    {
+      "atLeast": 43,
+      "atMost": 43
+    }
+  ],
   "publications": [
-    "CIL",
+    "Mommsen, 1883, CIL",
     "Schubring, 1865, Über das neu ausgegrabene römische Gebäude in der campagna Bufardeci zu Syrakus"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "FHNWCQSX"
   ],
   "keywords": [
     "isic000408",
@@ -327,10 +363,10 @@
     },
     "honorific",
     "plaque",
-    "marble",
+    "very fine-grained, homogeneous, white, calcitic marble, likely docimian, pentelic. optical microscopy: homeoblastic fabric with triple points, mosaic microstructure, fine-grained areas. digital microscopy: homeoblastic fabric. no reasonable match between mgs and isotopes (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

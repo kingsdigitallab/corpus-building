@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +81,9 @@
         "from": "line1",
         "to": "line2",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -92,19 +98,20 @@
   "date": {
     "_": "3rd century CE (Manni Piraino, letterforms)",
     "notBefore": 201,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Panhormus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462410"
+      "ref": "http://pleiades.stoa.org/places/462410",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,6 +120,8 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
     "_": "Found during the excavations of Roman period buildings in 1904/1915 undertaken in Piazza Vittoria, Palermo",
     "type": "found",
@@ -122,6 +131,10 @@
       13.355944
     ]
   },
+  "provenanceGeo": [
+    38.112249,
+    13.355944
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -139,7 +152,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -181,35 +193,42 @@
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "146",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Gabrici",
         "date": "1921",
         "citedRange": "201 a",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/BKMCZ8SA"
+          "target": "https://www.zotero.org/groups/382445/items/BKMCZ8SA"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001978",
           "target": "https://biblio.inscriptiones.org/epig10001978"
         },
+        "inscriptionDate": "1921",
         "title": "Ruderi romani scoperti alla Piazza della Vittoria in Palermo",
-        "citation": "<span>E. Gabrici, «Ruderi romani scoperti alla Piazza della Vittoria in Palermo», <i>Monumenti Antichi</i> 27 (1921): 181–204</span>"
+        "citation": "<span>E. Gabrici, «Ruderi romani scoperti alla Piazza della Vittoria in Palermo», <i>Monumenti Antichi</i> 27 (1921): 181–204</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BKMCZ8SA",
+        "year": "1921"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -233,27 +252,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -262,6 +263,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004387_tiled.tif",
@@ -270,11 +272,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Panhormus",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "ILMusPalermo",
+    "Bivona, 1970, ILMusPalermo",
     "Gabrici, 1921, Ruderi romani scoperti alla Piazza della Vittoria in Palermo"
+  ],
+  "zotero": [
+    "FZWWPUD6",
+    "BKMCZ8SA"
   ],
   "keywords": [
     "isic004387",
@@ -287,7 +297,7 @@
     "marble",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

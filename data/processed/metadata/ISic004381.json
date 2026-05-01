@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line4",
         "h": "21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "21",
+        "atMost": "21"
       },
       {
         "type": "interlinear",
@@ -91,19 +98,20 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Messana",
       "ref": "http://pleiades.stoa.org/places/462538",
-      "type": "ancient"
+      "type": "ancient",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "ref": "http://sws.geonames.org/2524170",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +120,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Excavated (between 1991 and 1997) in the southern necropolis, in re-use in the wall of a now-demolished late C18 house, isolato 83, IV comparto, via C. Battisti",
     "type": "found",
@@ -123,6 +133,10 @@
       15.549449
     ]
   },
+  "provenanceGeo": [
+    38.183179,
+    15.549449
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -139,7 +153,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": "Soprintendenza stores",
@@ -162,35 +175,41 @@
         "date": "2017",
         "citedRange": "169 no.4 fig.4",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R9M3U4WX"
+          "target": "https://www.zotero.org/groups/382445/items/R9M3U4WX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001500",
           "target": "https://biblio.inscriptiones.org/epig10001500"
         },
+        "inscriptionDate": "2017",
         "title": "Le epigrafi",
-        "citation": "<span>G. Zavettieri, «Le epigrafi», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 167–71</span>"
+        "citation": "<span>G. Zavettieri, «Le epigrafi», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 167–71</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R9M3U4WX",
+        "year": "2017"
       },
       {
-        "author": "Bacci and Tigano",
+        "author": "",
         "date": "2001",
         "citedRange": "89 CBI/5 fig.18",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/H338MD7C"
+          "target": "https://www.zotero.org/groups/382445/items/H338MD7C"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002172",
           "target": "https://biblio.inscriptiones.org/epig10002172"
         },
+        "inscriptionDate": "2001",
         "title": "Da Zancle a Messina, un percorso archeologico attraverso gli scavi",
-        "citation": "<span>G. M. Bacci e G. Tigano, a c. di, <i>Da Zancle a Messina, un percorso archeologico attraverso gli scavi</i>, vol. 2.1 (Messina: Provincia Regionale di Miessina Assessorato ai beni culturali e alla pubblica istruzione, 2001)</span>"
+        "citation": "<span>G. M. Bacci e G. Tigano, a c. di, <i>Da Zancle a Messina, un percorso archeologico attraverso gli scavi</i>, vol. 2.1 (Messina: Provincia Regionale di Miessina Assessorato ai beni culturali e alla pubblica istruzione, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/H338MD7C",
+        "year": "2001"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -209,27 +228,14 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -238,6 +244,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004381_tiled.tif",
@@ -246,11 +253,19 @@
     "desc": "Photo courtesy of archivio fotografico della soprintendenza di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 21,
+      "atMost": 21
+    }
+  ],
   "publications": [
     "Zavettieri, 2017, Le epigrafi",
-    "Bacci and Tigano, 2001, Da Zancle a Messina, un percorso archeologico attraverso gli scavi"
+    "Da Zancle a Messina, un percorso archeologico attraverso gli scavi, 2001"
+  ],
+  "zotero": [
+    "R9M3U4WX",
+    "H338MD7C"
   ],
   "keywords": [
     "isic004381",
@@ -263,7 +278,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "ancient greek",

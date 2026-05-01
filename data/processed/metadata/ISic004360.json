@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line2",
         "to": "line2",
         "h": "70-75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "75"
       },
       {
         "type": "interlinear",
@@ -89,7 +96,9 @@
         "from": "line1",
         "to": "line2",
         "h": "17-23",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "17",
+        "atMost": "23"
       },
       {
         "type": "interlinear",
@@ -97,13 +106,15 @@
         "from": "line2",
         "to": "line3",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       }
     ]
   },
   "date": {
     "_": "later imperial (later 2nd — 4th centuries CE?)",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 400,
     "evidence": "lettering, material-context"
   },
@@ -111,12 +122,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -125,12 +138,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Of uncertain provenance, first noted in the first volume of the museum inventory, compiled in 1885",
     "type": "found",
     "notAfter": "1885",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Magazzino B, cassetta 16",
     "type": "observed",
@@ -155,7 +171,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -197,38 +212,42 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1889",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "386",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1889",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Orsi",
         "date": "2018",
         "citedRange": "Tacc. 1, p.46",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RGRSRUHK"
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002617",
           "target": "https://biblio.inscriptiones.org/epig10002617"
         },
+        "inscriptionDate": "2018",
         "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>"
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -252,20 +271,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -276,8 +281,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -286,6 +292,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004360_tiled.tif",
@@ -294,11 +301,27 @@
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 75
+    },
+    {
+      "atLeast": 17,
+      "atMost": 23
+    },
+    {
+      "atLeast": 25,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "Orsi, 1889, NSA",
+    "Notizie degli scavi di antichità, 1876-",
     "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "RGRSRUHK"
   ],
   "keywords": [
     "isic004360",
@@ -311,7 +334,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

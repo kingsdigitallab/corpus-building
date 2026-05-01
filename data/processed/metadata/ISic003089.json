@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone",
+    "type": "stone.limestone",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -84,7 +89,9 @@
         "from": "line1",
         "to": "line1",
         "h": "45-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "70"
       },
       {
         "type": "letterHeight",
@@ -92,7 +99,9 @@
         "from": "line2",
         "to": "line2",
         "h": "35-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "40"
       },
       {
         "type": "letterHeight",
@@ -100,7 +109,9 @@
         "from": "line3",
         "to": "line3",
         "h": "30-45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "45"
       },
       {
         "type": "letterHeight",
@@ -108,7 +119,9 @@
         "from": "line4",
         "to": "line4",
         "h": "30-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -122,20 +135,21 @@
   "date": {
     "_": "Later 3rd or 2nd century BCE",
     "notBefore": -250,
-    "notAfter": -100,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Cephaloedium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462154"
+      "ref": "http://pleiades.stoa.org/places/462154",
+      "region": "Sicilia"
     },
     {
       "_": "Cefalù",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525041"
+      "ref": "http://sws.geonames.org/2525041",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -144,6 +158,8 @@
       14.02285
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Cephaloedium",
   "provenanceFound": {
     "_": "Found in re-use in an enclosure wall outside the Duomo (of mediaeval date?), near the south tower ('saggio 1 bis')",
     "type": "found",
@@ -154,6 +170,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    38.0398499,
+    14.0231015
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -171,7 +191,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
   "repository": "Duomo",
@@ -190,15 +209,18 @@
         "n": "SEG",
         "citedRange": "36.0845",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manni Piraino",
@@ -211,8 +233,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001768",
           "target": "https://biblio.inscriptiones.org/epig10001768"
         },
+        "inscriptionDate": "1982",
         "title": "II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche",
-        "citation": "<span>M.T. Manni Piraino, «II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche», in <i>Mostra di documenti e testimonianze figurative della Basilica Ruggeriana di Cefalù. Catalogo della mostra Cefalù, luglio - settembre 1982</i> (Palermo, 1982), 63–64</span>"
+        "citation": "<span>M.T. Manni Piraino, «II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche», in <i>Mostra di documenti e testimonianze figurative della Basilica Ruggeriana di Cefalù. Catalogo della mostra Cefalù, luglio - settembre 1982</i> (Palermo, 1982), 63–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DD8RDSHJ",
+        "year": "1982"
       },
       {
         "author": "Manni Piraino",
@@ -225,11 +250,14 @@
           "_": "https://biblio.inscriptiones.org/epig10002300",
           "target": "https://biblio.inscriptiones.org/epig10002300"
         },
+        "inscriptionDate": "1985",
         "title": "Iscrizioni greche del duomo",
-        "citation": "<span>M.T. Manni Piraino, «Iscrizioni greche del duomo», in <i>La Basilica Cattedrale di Cefalù. Materiali per la conoscenza storica e il restauro. 3. La ricerca archeologica. Preesistenze e materiali reimpiegati</i>, a c. di N. Bonacasa et al. (Palermo: Epos, 1985), 145–49</span>"
+        "citation": "<span>M.T. Manni Piraino, «Iscrizioni greche del duomo», in <i>La Basilica Cattedrale di Cefalù. Materiali per la conoscenza storica e il restauro. 3. La ricerca archeologica. Preesistenze e materiali reimpiegati</i>, a c. di N. Bonacasa et al. (Palermo: Epos, 1985), 145–49</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZVLN5VSX",
+        "year": "1985"
       },
       {
-        "author": "Llamazares",
+        "author": "Llamazares Martin",
         "date": "2024",
         "citedRange": "1-20",
         "ptr": {
@@ -239,15 +267,18 @@
           "_": "https://biblio.inscriptiones.org/epig10003133",
           "target": "https://biblio.inscriptiones.org/epig10003133"
         },
+        "inscriptionDate": "2024",
         "title": "Officina di IG XIV2 – Civic Inscriptions from Hellenistic Kephaloidion",
-        "citation": "<span>Andoni Llamazares Martin, ‘Officina Di IG XIV2 – Civic Inscriptions from Hellenistic Kephaloidion’, <i>Axon. Iscrizioni Storiche Greche</i> 8 (2024): 1–20, <a href=\"https://doi.org/10.30687/Axon/2532-6848/2024/01/009\">https://doi.org/10.30687/Axon/2532-6848/2024/01/009</a></span>"
+        "citation": "<span>Andoni Llamazares Martin, ‘Officina Di IG XIV2 – Civic Inscriptions from Hellenistic Kephaloidion’, <i>Axon. Iscrizioni Storiche Greche</i> 8 (2024): 1–20, <a href=\"https://doi.org/10.30687/Axon/2532-6848/2024/01/009\">https://doi.org/10.30687/Axon/2532-6848/2024/01/009</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QP8MYXSP",
+        "year": "2024"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -271,27 +302,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -300,6 +318,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "284882",
   "facsimile": {
     "n": "screen",
     "url": "ISic003089_tiled.tif",
@@ -308,13 +327,35 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Cephaloedium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 45,
+      "atMost": 70
+    },
+    {
+      "atLeast": 35,
+      "atMost": 40
+    },
+    {
+      "atLeast": 30,
+      "atMost": 45
+    },
+    {
+      "atLeast": 30,
+      "atMost": 40
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Manni Piraino, 1982, II materiale antico reimpiegato e rilavorato in età normanna - Iscrizioni greche",
     "Manni Piraino, 1985, Iscrizioni greche del duomo",
-    "Llamazares, 2024, Officina di IG XIV2 – Civic Inscriptions from Hellenistic Kephaloidion"
+    "Llamazares Martin, 2024, Officina di IG XIV2 – Civic Inscriptions from Hellenistic Kephaloidion"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "DD8RDSHJ",
+    "ZVLN5VSX",
+    "QP8MYXSP"
   ],
   "keywords": [
     "isic003089",
@@ -327,7 +368,7 @@
     "limestone",
     "cephaloedium",
     "cefalù",
-    "italy",
+    "sicilia",
     "sicily",
     "cefalù",
     "ancient greek",

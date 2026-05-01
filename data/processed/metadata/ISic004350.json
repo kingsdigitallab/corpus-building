@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line5",
         "h": "24-27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "27"
       },
       {
         "type": "interlinear",
@@ -97,12 +104,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,6 +120,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Exact provenance unknown, \"Siracusa\" was written in black ink on the reverse (no longer visible?).",
     "type": "found",
@@ -122,6 +133,10 @@
     ],
     "geoCert": "low"
   },
+  "provenanceGeo": [
+    37.08415,
+    15.27628
+  ],
   "provenanceObserved": {
     "_": "2016.05.12",
     "type": "observed",
@@ -148,7 +163,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -188,7 +202,7 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "Biondi and Buscemi Felici",
+        "author": "Biondi, Buscemi Felici",
         "date": "2014",
         "citedRange": "171 no. 239 fig. 41",
         "ptr": {
@@ -198,15 +212,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002149",
           "target": "https://biblio.inscriptiones.org/epig10002149"
         },
+        "inscriptionDate": "2014",
         "title": "Iscrizioni",
-        "citation": "<span>G. Biondi e G. Buscemi Felici, «Iscrizioni», in <i>Il museo archeologio dell’Università di Catania. Collezione Libertini</i>, a c. di G. Biondi, G. Buscemi Felici, e E. Tortorici (Acireale: Bonanno editore, 2014), 170–73</span>"
+        "citation": "<span>G. Biondi e G. Buscemi Felici, «Iscrizioni», in <i>Il museo archeologio dell’Università di Catania. Collezione Libertini</i>, a c. di G. Biondi, G. Buscemi Felici, e E. Tortorici (Acireale: Bonanno editore, 2014), 170–73</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8CH847SJ",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -230,20 +247,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -254,16 +257,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images, metadata, minor edits",
-      "when": "2021-12-14",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004350_tiled.tif",
@@ -272,10 +287,17 @@
     "desc": "Photo J. Prag, 2016-05-12, courtesy Museo di Archeologia dell'Universita di Catania",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 24,
+      "atMost": 27
+    }
+  ],
   "publications": [
-    "Biondi and Buscemi Felici, 2014, Iscrizioni"
+    "Biondi, Buscemi Felici, 2014, Iscrizioni"
+  ],
+  "zotero": [
+    "8CH847SJ"
   ],
   "keywords": [
     "isic004350",
@@ -288,7 +310,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo di archeologia dell'universita di catania",

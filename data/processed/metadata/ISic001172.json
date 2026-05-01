@@ -43,7 +43,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -83,7 +87,9 @@
         "from": "line1",
         "to": "line6",
         "h": "15-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -97,19 +103,20 @@
   "date": {
     "_": "5th century CE",
     "notBefore": 401,
-    "notAfter": 500,
-    "precision": "low"
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Cephaloedium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462154"
+      "ref": "http://pleiades.stoa.org/places/462154",
+      "region": "Sicilia"
     },
     {
       "_": "Cefalù",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525041"
+      "ref": "http://sws.geonames.org/2525041",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,12 +125,15 @@
       14.02285
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Cephaloedium",
   "provenanceFound": {
     "_": "Countryside inland of Cefalù, prior to 1831.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -141,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -183,38 +192,47 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0350",
+            "_": "350",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "59.1105",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "11",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -222,21 +240,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Tullio",
         "date": "1974",
         "citedRange": "133 n. 76",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QRB9I8X3"
+          "target": "https://www.zotero.org/groups/382445/items/QRB9I8X3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002336",
           "target": "https://biblio.inscriptiones.org/epig10002336"
         },
+        "inscriptionDate": "1974",
         "title": "Saggio sulla topografia e sulle antichità di Cefalù",
-        "citation": "<span>Amedeo Tullio, «Saggio sulla topografia e sulle antichità di Cefalù», <i>Kokalos</i> 20 (1974): 119–51</span>"
+        "citation": "<span>Amedeo Tullio, «Saggio sulla topografia e sulle antichità di Cefalù», <i>Kokalos</i> 20 (1974): 119–51</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QRB9I8X3",
+        "year": "1974"
       },
       {
         "author": "Tullio",
@@ -249,8 +275,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001552",
           "target": "https://biblio.inscriptiones.org/epig10001552"
         },
+        "inscriptionDate": "1987",
         "title": "Cefalù",
-        "citation": "<span>Amedeo Tullio, «Cefalù», in <i>Bibliografia topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 5 (Pisa: Scuola Normale Superiore, 1987), 209–21</span>"
+        "citation": "<span>Amedeo Tullio, «Cefalù», in <i>Bibliografia topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 5 (Pisa: Scuola Normale Superiore, 1987), 209–21</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PE7MRIXU",
+        "year": "1987"
       },
       {
         "author": "Montalbano",
@@ -263,15 +292,15 @@
           "_": "https://biblio.inscriptiones.org/epig10001740",
           "target": "https://biblio.inscriptiones.org/epig10001740"
         },
-        "title": "Reperti da vecchi scavi e ricognizioni",
-        "citation": "<span>M. G. Montalbano, «Reperti da vecchi scavi e ricognizioni», in <i>Cefalù. La necropoli ellenistica I</i>, a c. di A. Tullio (Rome: «L’Erma» di Bretschneider, 2008), 169–90</span>"
+        "inscriptionDate": "2008",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -295,20 +324,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -317,10 +332,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -329,6 +340,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "284918",
   "facsimile": {
     "n": "screen",
     "url": "ISic001172_tiled.tif",
@@ -337,15 +349,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Cephaloedium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 25
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "IGMusPalermo",
+    "Manni Piraino, 1973, IGMusPalermo",
     "Tullio, 1974, Saggio sulla topografia e sulle antichità di Cefalù",
     "Tullio, 1987, Cefalù",
-    "Montalbano, 2008, Reperti da vecchi scavi e ricognizioni"
+    "Montalbano, 2008"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "F66S4X3M",
+    "QRB9I8X3",
+    "PE7MRIXU",
+    "N8BEV89J"
   ],
   "keywords": [
     "isic001172",
@@ -358,7 +382,7 @@
     "marble",
     "cephaloedium",
     "cefalù",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

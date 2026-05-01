@@ -31,17 +31,18 @@
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
   "support": "Marble plaque, with some pitting to the upper part of the front face, corrosion to the lower front face, and some damage / loss to the lower right corner; the text is complete.",
-  "objectType": [
-    {
-      "_": "plaque",
-      "ana": "#object.plaque",
-      "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
-    },
-    ""
-  ],
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -86,7 +87,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -94,7 +97,9 @@
         "from": "line2",
         "to": "line3",
         "h": "25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -102,7 +107,9 @@
         "from": "line4",
         "to": "line4",
         "h": "23-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -110,7 +117,9 @@
         "from": "line5",
         "to": "line5",
         "h": "20-23",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "23"
       },
       {
         "type": "letterHeight",
@@ -118,7 +127,9 @@
         "from": "line6",
         "to": "line8",
         "h": "20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -139,12 +150,14 @@
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -153,6 +166,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Found in Centuripe and sold to Palermo museum in 1879 by one sig. Salvatore Fallica di Catania",
     "type": "found",
@@ -160,6 +175,7 @@
     "notAfter": "1879",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -168,7 +184,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -210,9 +225,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7006",
+            "_": "7006",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650754"
           }
         },
@@ -222,11 +239,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "5",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
@@ -234,15 +258,37 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        },
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
-      ""
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "51 n.251",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
+      },
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -266,27 +312,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -295,11 +323,38 @@
       "who": "#JP"
     }
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "tmNumber": "491502",
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    },
+    {
+      "atLeast": 25,
+      "atMost": 25
+    },
+    {
+      "atLeast": 23,
+      "atMost": 25
+    },
+    {
+      "atLeast": 20,
+      "atMost": 23
+    },
+    {
+      "atLeast": 20,
+      "atMost": 20
+    }
+  ],
   "publications": [
-    "CIL",
-    "ILMusPalermo"
+    "Mommsen, 1883, CIL",
+    "Bivona, 1970, ILMusPalermo",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "FZWWPUD6",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000005",
@@ -308,10 +363,11 @@
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "marble",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

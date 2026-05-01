@@ -1,9 +1,9 @@
 {
   "file": "ISic001035",
   "uri": "ISic001035",
-  "title": "I.Sicily inscription 001035",
+  "title": "Fragment of a list of names",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -30,14 +30,25 @@
     "ana": "#function.list",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/108.html"
   },
+  "support": "A small triangular fragment of white marble, intact along the lower edge, but broken on the other sides. The reverse is cut flat, but only roughly finished.",
   "objectType": {
     "_": "unknown",
     "ana": "#object.unknown",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Coarse-grained, homogeneous, white marble, likely Aphrodisian, Parian-2, Parian-3, Parian-4, Proconnesian, Thasian-3. Digital microscopy: indistinguishable fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Proconnesian",
+      "Thasian-3"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -45,36 +56,46 @@
   },
   "dimensions": [
     {
+      "_": "7.7 (face 7.5)",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "10.5 (face 10)",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "1.9-2.1",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Preserves traces of 6 lines of Greek letters, with a clear vacat below. There are clear spaces between each word (name).",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Moderately regular thinly incised letters with pronounced terminal serifs, and a fairly square module. Alpha with straight bar; delta (and sigma) show slight curvature; kappa with short arms; omicron slightly smaller (c.2mm less) and above the line; sigma with parallel outer strokes, and sometimes a pronounced extension to the mid-join; phi with extended vertical (11mm) and small over-semi-circular loops.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-6",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line6",
+        "h": "5-8",
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -86,22 +107,24 @@
     ]
   },
   "date": {
-    "_": "3rd — 2nd century BCE (so Consani\n                                1996)",
-    "notBefore": -300,
-    "notAfter": -100,
-    "precision": "low"
+    "_": "2nd century BCE ",
+    "notBefore": -200,
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Acrae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462068"
+      "ref": "http://pleiades.stoa.org/places/462068",
+      "region": "Sicilia"
     },
     {
       "_": "Palazzolo Acreide",
       "type": "modern",
       "ref": "http://sws.geonames.org/2523922",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,14 +133,22 @@
       14.89346
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Acrae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Purchased by the Siracusa Museum, as coming from Akrai, in 1888; now in storage, magazzino B, cass.6",
     "type": "found",
+    "subtype": "discovered",
+    "notAfter": "1888",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "Depositi, Mag B, new cass.6",
+    "_": "Prag, 2014-09-11, cass. 6, magazzino B, MARPO",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -127,11 +158,18 @@
       "url": "ISic001035_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic001035_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11",
+      "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -175,44 +213,55 @@
         "n": "IG",
         "citedRange": {
           "ref": {
-            "_": "\n                                14.0214a",
+            "_": "214a",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "author": "Kaibel",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
-        "citedRange": "030a",
+        "author": "Manni Piraino",
+        "date": "1973",
+        "citedRange": "pp.56-57",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1889",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "389",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1889",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Pugliese Carratelli",
@@ -221,19 +270,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/PJDRZH66"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001394",
-          "target": "https://biblio.inscriptiones.org/epig10001394"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/PJDRZH66",
+        "inscriptionDate": "1956",
         "title": "Silloge dell' epigrafi acrensi",
-        "citation": "<span>G. Pugliese Carratelli, «Silloge dell’ epigrafi acrensi», in <i>Akrai</i>, a c. di L. Bernabó Brea (Catania, 1956), 151–81</span>"
+        "citation": "<span>G. Pugliese Carratelli, «Silloge dell’ epigrafi acrensi», in <i>Akrai</i>, a c. di L. Bernabó Brea (Catania, 1956), 151–81</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PJDRZH66",
+        "year": "1956"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -257,20 +306,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -281,44 +316,66 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised from autopsy notes and photograph",
+      "when": "2026-02-18",
+      "who": "#JP"
     }
   },
+  "tmNumber": "644932",
   "facsimile": {
     "n": "screen",
     "url": "ISic001035_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11",
     "surfaceType": "front"
   },
-  "provenance": "Acrae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 5,
+      "atMost": 8
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusPalermo",
-    "Orsi, 1889, NSA",
+    "Kaibel, 1890, IG",
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Notizie degli scavi di antichità, 1876-",
     "Pugliese Carratelli, 1956, Silloge dell' epigrafi acrensi"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F66S4X3M",
+    "4MCP2PVV",
+    "PJDRZH66"
   ],
   "keywords": [
     "isic001035",
-    "i.sicily inscription 001035",
+    "fragment of a list of names",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "list",
     "unknown",
-    "marble",
+    "coarse-grained, homogeneous, white marble, likely aphrodisian, parian-2, parian-3, parian-4, proconnesian, thasian-3. digital microscopy: indistinguishable fabric (identification based on pxrf, digital microscopy)",
     "acrae",
     "palazzolo acreide",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

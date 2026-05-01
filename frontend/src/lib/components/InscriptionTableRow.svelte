@@ -1,12 +1,37 @@
 <script>
 	import InscriptionDate from './InscriptionDate.svelte';
 	import InscriptionLink from './InscriptionLink.svelte';
+	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
 
-	let { inscription } = $props();
+	let {
+		inscription,
+		showCitedRange = false,
+		showBulletinDate = false,
+		showInventoryNumber = false
+	} = $props();
+
+	const objectType = $derived(inscription.rawObjectType || inscription.objectType);
 </script>
 
 <tr>
+	{#if showCitedRange}
+		<td>
+			{#if inscription?.bibl?.citedRange}
+				{inscription.bibl.citedRange?.ref?._ || inscription.bibl.citedRange}
+			{:else}
+				N/A
+			{/if}
+		</td>
+		{#if showBulletinDate}
+			<td>
+				{inscription.bibl?.inscriptionDate || 'N/A'}
+			</td>
+		{/if}
+	{/if}
+	{#if showInventoryNumber}
+		<td>{inscription?.idno?._ || 'N/A'}</td>
+	{/if}
 	<td class="strong">
 		<InscriptionLink id={inscription.file}>{inscription.file}</InscriptionLink>
 	</td>
@@ -15,7 +40,7 @@
 	</td>
 	<td><InscriptionDate date={inscription.date} /></td>
 	<td><InscriptionPlace {inscription} /></td>
-	<td>{inscription?.status?._ || inscription?.status || 'N/A'}</td>
+	<td><InscriptionMaterial material={inscription.material} /></td>
 	<td>
 		{#if inscription.type?.ref}
 			<a class="badge" href={inscription.type.ref}>{inscription.type?._}</a>
@@ -24,10 +49,10 @@
 		{/if}
 	</td>
 	<td>
-		{#if inscription.rawObjectType?.ref}
-			<a class="badge" href={inscription.rawObjectType.ref}>{inscription.rawObjectType?._}</a>
+		{#if objectType?.ref}
+			<a class="badge" href={objectType.ref}>{objectType?._}</a>
 		{:else}
-			{inscription.rawObjectType?._ || 'N/A'}
+			{objectType?._ || 'N/A'}
 		{/if}
 	</td>
 	<td>{inscription.textLang?._ || 'N/A'}</td>
@@ -61,5 +86,21 @@
 	:global(td .inscription-date),
 	:global(td .inscription-place li) {
 		font-size: var(--font-size-0);
+	}
+
+	/* ZL: table row hover – different in light and dark */
+
+	/* Light mode: cream / yellow highlight */
+	:global([data-color-scheme='light'] #faceted-search table tbody tr:hover),
+	:global([data-color-scheme='light'] #faceted-search table tbody tr:hover td) {
+		background-color: var(--brown-0); /* the yellow you like */
+		color: var(--text-1);
+	}
+
+	/* Dark mode: subtle lighter band, not black */
+	:global([data-color-scheme='dark'] #faceted-search table tbody tr:hover),
+	:global([data-color-scheme='dark'] #faceted-search table tbody tr:hover td) {
+		background-color: #50514f;
+		color: var(--text-1);
 	}
 </style>

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -96,10 +100,13 @@
       "_": "Montelepre",
       "type": "modern",
       "ref": "http://sws.geonames.org/2524070",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [],
+  "country": "Sicilia",
+  "provenance": "Montelepre",
   "provenanceFound": {
     "_": "Found in the 1960s during the excavations by the Soprintendenza alle Antichità della Sicilia Occidentale in the ancient necropolis in the area of Manico di Quarara (tomb XII) on the slopes of Monte d'Oro di Montelepre, 1.4km north-west of Montelepre.",
     "type": "found",
@@ -110,6 +117,10 @@
       13.17015
     ]
   },
+  "provenanceGeo": [
+    38.09802,
+    13.17015
+  ],
   "provenanceObserved": {
     "_": "No Autopsy; Recently studied and published as part of the material from the necropolis of Manico di Quarara by G. Ferreri (2012)",
     "type": "observed",
@@ -128,13 +139,12 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Montelepre",
   "repository": {
     "_": "Museo Civico di Montelepre",
     "role": "museum",
-    "ref": " http://sicily.classics.ox.ac.uk/museum/87"
+    "ref": "http://sicily.classics.ox.ac.uk/museum/87"
   },
   "idno": {
     "type": "inventory"
@@ -149,7 +159,8 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Elymian"
+      "Elymian",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -162,35 +173,41 @@
         "date": "2021",
         "citedRange": "439",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VQEP8IPT"
+          "target": "https://www.zotero.org/groups/382445/items/VQEP8IPT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002320",
           "target": "https://biblio.inscriptiones.org/epig10002320"
         },
+        "inscriptionDate": "2021",
         "title": "Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQEP8IPT",
+        "year": "2021"
       },
       {
         "author": "Ferreri",
         "date": "2012",
         "citedRange": "25",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DIZUTIAK"
+          "target": "https://www.zotero.org/groups/382445/items/DIZUTIAK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002307",
           "target": "https://biblio.inscriptiones.org/epig10002307"
         },
+        "inscriptionDate": "2012",
         "title": "Monte d'Oro di Montelepre. La necropoli di Manico di Quarara. Nuovi dati",
-        "citation": "<span>G. Ferreri, «Monte d’Oro di Montelepre. La necropoli di Manico di Quarara. Nuovi dati», in <i>Sicilia occidentale. Studi, rassegne, ricerche</i> (Pisa, 2012), 251–59</span>"
+        "citation": "<span>G. Ferreri, «Monte d’Oro di Montelepre. La necropoli di Manico di Quarara. Nuovi dati», in <i>Sicilia occidentale. Studi, rassegne, ricerche</i> (Pisa, 2012), 251–59</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DIZUTIAK",
+        "year": "2012"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      "\n                    "
+      null
     ]
   },
   "citation": {
@@ -214,19 +231,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -238,6 +242,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020439_tiled.tif",
@@ -246,11 +251,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Montelepre",
   "letterHeights": [],
   "publications": [
     "Agostiniani, 2021, IAS I, App.",
     "Ferreri, 2012, Monte d'Oro di Montelepre. La necropoli di Manico di Quarara. Nuovi dati"
+  ],
+  "zotero": [
+    "VQEP8IPT",
+    "DIZUTIAK"
   ],
   "keywords": [
     "isic020439",
@@ -262,7 +270,7 @@
     "skyphos",
     "ceramic",
     "montelepre",
-    "italy",
+    "sicilia",
     "sicily",
     "montelepre",
     "museo civico di montelepre",

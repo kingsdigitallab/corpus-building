@@ -1,7 +1,7 @@
 {
   "file": "ISic001479",
   "uri": "ISic001479",
-  "title": "I.Sicily inscription 001479",
+  "title": "Epitaph for Kleinoi",
   "status": {
     "_": "draft"
   },
@@ -31,18 +31,30 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "The upper part of a funerary stele in the local limestone. The top of what may have been a recess for a panel or similar is visible on the lower edge.",
+  "objectType": {
+    "_": "stele",
+    "ana": "#object.stele",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/250"
+  },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "53",
       "unit": "cm",
       "dimension": "width"
     },
@@ -53,22 +65,29 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Single line of letters incised across the top of the face",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Deeply incised, neatly regular letters; very shallow four-bar sigma.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "65",
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -80,21 +99,23 @@
     ]
   },
   "date": {
-    "_": "End 6th century BCE",
+    "_": "Second half of the 6th century BCE",
     "notBefore": -550,
-    "notAfter": -500,
-    "precision": "low"
+    "notAfter": -501,
+    "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Kamarina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462126"
+      "ref": "http://pleiades.stoa.org/places/462126",
+      "region": "Sicilia"
     },
     {
       "_": "Santa Croce Camerina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6540853"
+      "ref": "http://sws.geonames.org/6540853",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,16 +124,25 @@
       14.4507
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Kamarina",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "From the necropolis of Rifriscolaro, Camarina; now in Ragusa museum",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "geo": [
+      36.8650899,
+      14.4611094
+    ]
   },
+  "provenanceGeo": [
+    36.8650899,
+    14.4611094
+  ],
   "provenanceObserved": {
-    "_": "2015.01.13",
+    "_": "Observed 2015.01.13",
     "type": "observed",
     "subtype": "autopsied",
-    "resp": "#JP",
     "geo": null
   },
   "provenanceLost": null,
@@ -120,13 +150,12 @@
     {
       "n": "screen",
       "url": "ISic001479_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "1961px",
+      "width": "4368px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
   "repository": {
@@ -166,19 +195,24 @@
         "n": "SEG",
         "citedRange": "34.0939",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
+        "author": "Dubois",
+        "date": "1989",
         "citedRange": {
           "ref": {
             "_": "113",
@@ -192,9 +226,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "date": "1989",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "author": "Cordano",
@@ -207,15 +243,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001433",
           "target": "https://biblio.inscriptiones.org/epig10001433"
         },
+        "inscriptionDate": "1984",
         "title": "Camarina VII: alcuni documenti iscritti importanti per la storia della città",
-        "citation": "<span>Federica Cordano, «Camarina VII: alcuni documenti iscritti importanti per la storia della città», <i>Bollettino d’Arte</i> Anno 69 vol 26 (1984): 31–56</span>"
+        "citation": "<span>Federica Cordano, «Camarina VII: alcuni documenti iscritti importanti per la storia della città», <i>Bollettino d’Arte</i> Anno 69 vol 26 (1984): 31–56</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/C2PD3D5Q",
+        "year": "1984"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -239,20 +278,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -263,42 +288,64 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Romeo Gessaga",
+        "xml:id": "RG",
+        "ref": "https://orcid.org/0009-0003-5190-1722"
       }
     ],
     "change": {
-      "_": "Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition",
-      "when": "2021-02-22",
-      "who": "#VM"
+      "_": "tagged names and persons",
+      "when": "2026-02-02",
+      "who": "#RG"
     }
   },
+  "tmNumber": "644989",
   "facsimile": {
     "n": "screen",
     "url": "ISic001479_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "1961px",
+    "width": "4368px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13",
     "surfaceType": "front"
   },
-  "provenance": "Kamarina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 65,
+      "atMost": 65
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "IGDS1, 1989",
+    "Dubois, 1989, IGDS1",
     "Cordano, 1984, Camarina VII: alcuni documenti iscritti importanti per la storia della città"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "RWXNUFEX",
+    "C2PD3D5Q"
   ],
   "keywords": [
     "isic001479",
-    "i.sicily inscription 001479",
+    "epitaph for kleinoi",
     {
       "_": "draft"
     },
     "funerary",
+    "stele",
     "limestone",
     "kamarina",
     "santa croce camerina",
-    "italy",
+    "sicilia",
     "sicily",
     "ragusa",
     "museo archeologico ibleo",

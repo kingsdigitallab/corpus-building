@@ -26,10 +26,9 @@
   ],
   "editionAuthor": null,
   "type": {
-    "_": "honorific; building",
-    "ana": "#function.honorific #function.building",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
-    "cert": "low"
+    "_": "honorific",
+    "ana": "#function.quarry_mark",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/390.html"
   },
   "support": "A block of 'marmor luculleum' or Africano, from the Teos quarries. The block is quadrangular, but is cut back on the front in a sequence of three steps, deepest at the bottom and stepped back to the top. The rear is also cut back in a single very shallow step at the top. The exposed faces are all relatively smooth.",
   "objectType": {
@@ -39,8 +38,10 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "type": "stone.breccia",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "subtype": []
   },
   "condition": {
     "ana": "#condition.complete"
@@ -84,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -105,12 +108,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,6 +124,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Found in excavations directed by Cavallari in the ancient theatre in the period 19-24 July 1841; still visible in the theatre",
     "type": "found",
@@ -129,6 +136,10 @@
       15.292201
     ]
   },
+  "provenanceGeo": [
+    37.85237,
+    15.292201
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -137,7 +148,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -179,9 +189,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.6996",
+            "_": "6996",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650752"
           }
         },
@@ -191,22 +203,32 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
-        "author": "Lo Faso Pietrasanta",
+        "author": "Lo Faso Pietrasanta (Duca di Serradifalco)",
         "date": "1832-1842",
         "citedRange": "V.42 tav.24.10",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/EMAB7PTB"
+          "target": "https://www.zotero.org/groups/382445/items/EMAB7PTB"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001860",
           "target": "https://biblio.inscriptiones.org/epig10001860"
-        }
+        },
+        "inscriptionDate": "1832-1842",
+        "title": "Antichita Siciliane esplorate ed illustrate",
+        "citation": "<span>D. Lo Faso Pietrasanta (Duca di Serradifalco), <i>Antichita Siciliane esplorate ed illustrate</i> (Palermo, 1832)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EMAB7PTB",
+        "year": "1832"
       },
       {
-        "author": "Coarelli and Torelli",
+        "author": "Coarelli, Torelli",
         "date": "1984",
         "citedRange": "361",
         "ptr": {
@@ -215,19 +237,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002073",
           "target": "https://biblio.inscriptiones.org/epig10002073"
-        }
+        },
+        "inscriptionDate": "1984",
+        "title": "Sicilia",
+        "citation": "<span>Filippo Coarelli e Mario Torelli, <i>Sicilia</i>, 2a ed., Guide archeologiche Laterza 13 (Roma: Laterza, 1984)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/N93VVSEU",
+        "year": "1984"
       },
       {
         "author": "Manganaro",
         "date": "1988",
-        "citedRange": "25 n.101",
+        "citedRange": "25 n.101, 53 n.261, 58, 73",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Muscolino",
@@ -239,7 +271,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10003138",
           "target": "https://biblio.inscriptiones.org/epig10003138"
-        }
+        },
+        "inscriptionDate": "2023",
+        "title": "A block of marmor luculleum/africano in the ancient theatre of Taormina (CIL, X, 6996) with notae lapicidinarum (AD 108)",
+        "citation": "<span>Francesco Muscolino, ‘A Block of Marmor Luculleum/Africano in the Ancient Theatre of Taormina (CIL, X, 6996) with Notae Lapicidinarum (AD 108)’, <i>Marmora</i> 19 (2023): 123–41, <a href=\"https://doi.org/10.19272/202301401009\">https://doi.org/10.19272/202301401009</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FUT4TN9H",
+        "year": "2023"
       }
     ]
   },
@@ -256,7 +293,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       }
     ]
   },
@@ -281,20 +323,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -305,8 +333,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -315,14 +344,26 @@
       "who": "#JP"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "491492",
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    "CIL",
-    "Lo Faso Pietrasanta, 1832-1842",
-    "Coarelli and Torelli, 1984",
-    "Manganaro, 1988",
-    "Muscolino, 2023"
+    "Mommsen, 1883, CIL",
+    "Lo Faso Pietrasanta (Duca di Serradifalco), 1832-1842, Antichita Siciliane esplorate ed illustrate",
+    "Coarelli, Torelli, 1984, Sicilia",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Muscolino, 2023, A block of marmor luculleum/africano in the ancient theatre of Taormina (CIL, X, 6996) with notae lapicidinarum (AD 108)"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "EMAB7PTB",
+    "N93VVSEU",
+    "RZSFKACR",
+    "FUT4TN9H"
   ],
   "keywords": [
     "isic000284",
@@ -330,12 +371,12 @@
     {
       "_": "draft"
     },
-    "honorific; building",
+    "honorific",
     "block",
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

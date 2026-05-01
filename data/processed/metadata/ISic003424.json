@@ -1,7 +1,7 @@
 {
   "file": "ISic003424",
   "uri": "ISic003424",
-  "title": "I.Sicily inscription 003424",
+  "title": "Epitaph of Lamnos Kornelios Alkinon",
   "status": {
     "_": "draft"
   },
@@ -36,9 +36,14 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "_": "marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
     "ana": "#condition.complete.broken"
@@ -82,7 +87,9 @@
         "from": "line1",
         "to": "line1",
         "h": "29-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "29",
+        "atMost": "38"
       },
       {
         "type": "letterHeight",
@@ -90,7 +97,9 @@
         "from": "line2",
         "to": "line2",
         "h": "25-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -98,7 +107,9 @@
         "from": "line3",
         "to": "line5",
         "h": "30-34",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "34"
       },
       {
         "type": "interlinear",
@@ -112,19 +123,20 @@
   "date": {
     "_": "1st — 3rd century CE",
     "notBefore": 1,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -133,9 +145,12 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": null,
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "Exact details not recorded, found in Centuripe prior to 1906.",
+    "_": "Exact details not recorded, found in Centuripe prior to 1906, and purchased for the Siracusa museum by Paolo Orsi, 1906-01-24; currently in storage, Magazzino B, cassette 4.",
     "type": "observed",
     "subtype": "discovered",
     "notAfter": "1906",
@@ -176,7 +191,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -218,17 +232,18 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1907",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "494",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1907",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
@@ -245,7 +260,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001874",
           "target": "https://biblio.inscriptiones.org/epig10001874"
-        }
+        },
+        "inscriptionDate": "1926",
+        "title": "Centuripe",
+        "citation": "<span>Guido Libertini, <i>Centuripe</i> (Catania, 1926)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VJZRAI26",
+        "year": "1926"
       }
     ]
   },
@@ -270,35 +290,38 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag made initial edit from autopsy records and photographs",
-      "when": "2022-02-01",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2026-02-11",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "644819",
   "facsimile": {
     "n": "screen",
     "url": "ISic003424_tiled.tif",
@@ -307,23 +330,38 @@
     "desc": "Photo J. Prag, 2014-09-10, by permission of Museo Archeologico Regionale Paolo Orsi",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 29,
+      "atMost": 38
+    },
+    {
+      "atLeast": 25,
+      "atMost": 30
+    },
+    {
+      "atLeast": 30,
+      "atMost": 34
+    }
+  ],
   "publications": [
-    "Orsi, 1907, NSA"
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic003424",
-    "i.sicily inscription 003424",
+    "epitaph of lamnos kornelios alkinon",
     {
       "_": "draft"
     },
     "funerary",
     "plaque",
-    "limestone",
+    "marble",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -86,20 +90,22 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "of uncertain date, with no grounds for dating",
+    "notBefore": -500,
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,6 +114,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "According to Ansaldi, it was found in an old tile-making workshop, in contrada Capitano.",
     "type": "found",
@@ -115,6 +123,7 @@
     "notAfter": "1851",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Described by Ansaldi, who saw it in the possession of Ioseph Polizzi.",
     "type": "observed",
@@ -132,14 +141,12 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
   "repository": "",
   "textLang": {
-    "_": "Possibly Ancient Greek",
+    "_": "Ancient Greek",
     "mainLang": "grc",
-    "cert": "low",
     "languages": [
       "Ancient Greek"
     ]
@@ -150,19 +157,23 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0584",
+            "_": "584",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "author": "Ansaldi",
@@ -179,14 +190,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002182",
           "target": "https://biblio.inscriptiones.org/epig10002182"
-        }
+        },
+        "inscriptionDate": "1851",
+        "title": "I monumenti dell'antica Centuripi",
+        "citation": "<span>F. Ansaldi, <i>I monumenti dell’antica Centuripi</i> (Centuripae, 1851), <a href=\"http://arachne.uni-koeln.de/item/buch/3254\">http://arachne.uni-koeln.de/item/buch/3254</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9BF3BJJI",
+        "year": "1851"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -210,27 +226,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -239,6 +237,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "493019",
   "facsimile": {
     "n": "screen",
     "url": "ISic001403_tiled.tif",
@@ -247,11 +246,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "Ansaldi, 1851"
+    "Kaibel, 1890, IG",
+    "Ansaldi, 1851, I monumenti dell'antica Centuripi"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "9BF3BJJI"
   ],
   "keywords": [
     "isic001403",
@@ -264,10 +266,10 @@
     "stone",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
-    "possibly ancient greek",
+    "ancient greek",
     "grc"
   ]
 }

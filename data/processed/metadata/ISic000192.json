@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone",
+    "type": "stone.limestone",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "85-98",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "85",
+        "atMost": "98"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "52-70 (O=36)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "52",
+        "atMost": "70"
       },
       {
         "type": "letterHeight",
@@ -96,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "46-53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "46",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -116,12 +127,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,6 +143,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Discovered by chance in the Necropolis di S.Antonino in September 1914, together with , , and , and moved to the Museum on the 25th of that month.",
     "type": "found",
@@ -154,6 +169,10 @@
       13.6901331
     ]
   },
+  "provenanceGeo": [
+    37.9825192,
+    13.6901331
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 12, shelf 5",
     "type": "observed",
@@ -173,7 +192,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -217,16 +235,24 @@
         "n": "AE",
         "citedRange": "1980.0520",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "114",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -234,19 +260,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      {
-        "author": "Bivona",
-        "date": "1975-1976",
-        "citedRange": "545 no.8 tav.4"
-      }
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -270,20 +297,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -294,21 +307,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images and made minor revisions",
-      "when": "2024-07-25",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "175702",
   "facsimile": {
     "n": "screen",
     "url": "ISic000192_tiled.tif",
@@ -317,12 +337,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 85,
+      "atMost": 98
+    },
+    {
+      "atLeast": 52,
+      "atMost": 70
+    },
+    {
+      "atLeast": 46,
+      "atMost": 53
+    }
+  ],
   "publications": [
-    null,
-    "ILMusTermini",
-    "Bivona, 1975-1976"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000192",
@@ -335,7 +370,7 @@
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

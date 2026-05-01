@@ -47,7 +47,12 @@
   },
   "material": {
     "_": "volcanic (pietra di Fuardo)\n                                    ",
-    "ana": "#material.stone.volcanic",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -86,7 +91,9 @@
         "from": "line1",
         "to": "line1",
         "h": "60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -94,7 +101,9 @@
         "from": "line2",
         "to": "line2",
         "h": "47-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "47",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -102,7 +111,9 @@
         "from": "line3",
         "to": "line3",
         "h": "50-62",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "62"
       },
       {
         "type": "letterHeight",
@@ -110,7 +121,9 @@
         "from": "line4",
         "to": "line4",
         "h": "55-68",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "68"
       },
       {
         "type": "letterHeight",
@@ -118,7 +131,9 @@
         "from": "line5",
         "to": "line5",
         "h": "60-64",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "64"
       },
       {
         "type": "letterHeight",
@@ -126,7 +141,9 @@
         "from": "line6",
         "to": "line6",
         "h": "60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -134,7 +151,9 @@
         "from": "line8",
         "to": "line8",
         "h": "67-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "67",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -146,21 +165,23 @@
     ]
   },
   "date": {
-    "_": "1st century BCE or later (?)",
+    "_": "1st century BCE or Imperial",
     "notBefore": -100,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 300,
+    "evidence": "nomenclature"
   },
   "places": [
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -169,11 +190,14 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -191,7 +215,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
   "repository": {
@@ -233,9 +256,11 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0395",
+            "_": "395",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
@@ -245,14 +270,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001072",
           "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        },
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0396",
+            "_": "396",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
@@ -262,38 +294,54 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001072",
           "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        },
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1968.0202",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1968.0610",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "723",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
@@ -301,7 +349,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000541",
           "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        },
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
       {
         "author": "Libertini",
@@ -313,7 +366,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001875",
           "target": "https://biblio.inscriptiones.org/epig10001875"
-        }
+        },
+        "inscriptionDate": "1921",
+        "title": "Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+        "citation": "<span>Guido Libertini, <i>Le isole eolie nell’antichità greca e romana. Ricerche storiche ed archeologiche</i> (Florence, 1921)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QECEVGHN",
+        "year": "1921"
       },
       {
         "author": "Libertini",
@@ -325,7 +383,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001875",
           "target": "https://biblio.inscriptiones.org/epig10001875"
-        }
+        },
+        "inscriptionDate": "1921",
+        "title": "Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+        "citation": "<span>Guido Libertini, <i>Le isole eolie nell’antichità greca e romana. Ricerche storiche ed archeologiche</i> (Florence, 1921)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QECEVGHN",
+        "year": "1921"
       },
       {
         "author": "Manni Piraino",
@@ -338,11 +401,14 @@
           "_": "https://biblio.inscriptiones.org/epig10001778",
           "target": "https://biblio.inscriptiones.org/epig10001778"
         },
+        "inscriptionDate": "1967",
         "title": "Note di epigrafia siceliota",
-        "citation": "<span>M.T. Manni Piraino, «Note di epigrafia siceliota», <i>Kokalos</i> 13 (1967): 194–201</span>"
+        "citation": "<span>M.T. Manni Piraino, «Note di epigrafia siceliota», <i>Kokalos</i> 13 (1967): 194–201</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3AN52RNG",
+        "year": "1967"
       },
       {
-        "author": "Bernabò Brea and Cavalier",
+        "author": "Bernabò Brea, Cavalier",
         "date": "1991",
         "citedRange": "97",
         "ptr": {
@@ -351,14 +417,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002158",
           "target": "https://biblio.inscriptiones.org/epig10002158"
-        }
+        },
+        "inscriptionDate": "1991",
+        "title": "Lipari (isola). Fonti epigrafiche",
+        "citation": "<span>L. Bernabò Brea e M. Cavalier, «Lipari (isola). Fonti epigrafiche», in <i>Bibliografia topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 9 (Pisa: Scuola Normal Superiore di Pisa, 1991), 84–109</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IPZ5E4UN",
+        "year": "1991"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -382,35 +453,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Oliver Clarke",
+        "xml:id": "OC",
+        "ref": "https://orcid.org/0009-0006-5165-8381"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-12",
+      "who": "#OC"
     }
   },
+  "tmNumber": "492826",
   "facsimile": {
     "n": "screen",
     "url": "ISic000807_tiled.tif",
@@ -419,18 +483,57 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 60
+    },
+    {
+      "atLeast": 47,
+      "atMost": 60
+    },
+    {
+      "atLeast": 50,
+      "atMost": 62
+    },
+    {
+      "atLeast": 55,
+      "atMost": 68
+    },
+    {
+      "atLeast": 60,
+      "atMost": 64
+    },
+    {
+      "atLeast": 60,
+      "atMost": 60
+    },
+    {
+      "atLeast": 67,
+      "atMost": 70
+    }
+  ],
   "publications": [
-    "IG",
-    "IG",
-    null,
+    "Kaibel, 1890, IG",
+    "Kaibel, 1890, IG",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Bulletin épigraphique, 1888-",
-    "ILipara",
-    "Libertini, 1921",
-    "Libertini, 1921",
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara",
+    "Libertini, 1921, Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+    "Libertini, 1921, Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
     "Manni Piraino, 1967, Note di epigrafia siceliota",
-    "Bernabò Brea and Cavalier, 1991"
+    "Bernabò Brea, Cavalier, 1991, Lipari (isola). Fonti epigrafiche"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "Q2SBPG9F",
+    "R46KDTZX",
+    "77P5MNIR",
+    "VDAQH5D2",
+    "QECEVGHN",
+    "QECEVGHN",
+    "3AN52RNG",
+    "IPZ5E4UN"
   ],
   "keywords": [
     "isic000807",
@@ -443,7 +546,7 @@
     "volcanic (pietra di fuardo)",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
     "lipari",
     "museo archeologico regionale eoliano \"luigi bernab� brea\"",

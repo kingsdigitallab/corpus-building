@@ -37,7 +37,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -92,12 +96,14 @@
     {
       "_": "Drepanum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462187"
+      "ref": "http://pleiades.stoa.org/places/462187",
+      "region": "Sicilia"
     },
     {
       "_": "Trapani",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522876"
+      "ref": "http://sws.geonames.org/2522876",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,12 +112,15 @@
       12.53617
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Drepanum",
   "provenanceFound": {
     "_": "Observed in the 17th century in via della Balatella, near the Chiesa di San Francesco, Trapani.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -119,25 +128,14 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000541_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
-  "settlement": "",
-  "repository": "",
+  "settlement": "Trapani",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -149,21 +147,53 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "253",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "147",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7261",
+            "_": "7261",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Bivona",
@@ -176,8 +206,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002135",
           "target": "https://biblio.inscriptiones.org/epig10002135"
         },
+        "inscriptionDate": "2000",
         "title": "La documentazione epigrafica latina in area elima",
-        "citation": "<span>Livia Bivona, «La documentazione epigrafica latina in area elima», in <i>Atti delle terze giornate internazionali di studi sull’area elima (Gibellina, Erice, Contessa Entellina, 23-26 ottobre 1997)</i>, vol. 1 (Pisa-Gibellina, 2000), 153–66</span>"
+        "citation": "<span>Livia Bivona, «La documentazione epigrafica latina in area elima», in <i>Atti delle terze giornate internazionali di studi sull’area elima (Gibellina, Erice, Contessa Entellina, 23-26 ottobre 1997)</i>, vol. 1 (Pisa-Gibellina, 2000), 153–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/94ICR94M",
+        "year": "2000"
       },
       {
         "author": "Filippi",
@@ -190,15 +223,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002296",
           "target": "https://biblio.inscriptiones.org/epig10002296"
         },
+        "inscriptionDate": "2005",
         "title": "Un porto antico nel Mediterraneo. Archeologia e storia di Trapani dall'eta arcaica a quella bizantina",
-        "citation": "<span>Antonio Filippi, <i>Un porto antico nel Mediterraneo. Archeologia e storia di Trapani dall’eta arcaica a quella bizantina</i> (Erice: Il Sole editrice, 2005)</span>"
+        "citation": "<span>Antonio Filippi, <i>Un porto antico nel Mediterraneo. Archeologia e storia di Trapani dall’eta arcaica a quella bizantina</i> (Erice: Il Sole editrice, 2005)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WBLZEBQ8",
+        "year": "2005"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -222,20 +258,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -244,10 +266,6 @@
         "_": "Giorgia Capra",
         "xml:id": "GC",
         "ref": "https://orcid.org/0000-0003-1030-5679"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -256,20 +274,21 @@
       "who": "#JP"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000541_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Drepanum",
+  "tmNumber": "491763",
   "letterHeights": [],
   "publications": [
-    "CIL",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
     "Bivona, 2000, La documentazione epigrafica latina in area elima",
     "Filippi, 2005, Un porto antico nel Mediterraneo. Archeologia e storia di Trapani dall'eta arcaica a quella bizantina"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "94ICR94M",
+    "WBLZEBQ8"
   ],
   "keywords": [
     "isic000541",
@@ -282,8 +301,9 @@
     "stone",
     "drepanum",
     "trapani",
-    "italy",
+    "sicilia",
     "sicily",
+    "trapani",
     "latin",
     "la"
   ]

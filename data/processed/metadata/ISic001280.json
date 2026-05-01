@@ -43,7 +43,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -83,7 +88,9 @@
         "from": "line1",
         "to": "line4",
         "h": "70-75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "75"
       },
       {
         "type": "interlinear",
@@ -98,19 +105,20 @@
   "date": {
     "_": "2nd — 1st century BCE (Korhonen)",
     "notBefore": -200,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -1
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,11 +127,14 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded; probably from Catania, first seen in the coll. Biscari.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Observed by Kaibel in Collezione Biscari, formerly sala VI.122, now magazzino del cortile.",
     "type": "observed",
@@ -140,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -182,46 +192,58 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0456",
+            "_": "456",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/2EUC82DH"
+          "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5236",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       }
     ]
   },
@@ -233,29 +255,35 @@
         "date": "1960",
         "citedRange": "140",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/5MWGAQ82"
+          "target": "https://www.zotero.org/groups/382445/items/5MWGAQ82"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002037",
           "target": "https://biblio.inscriptiones.org/epig10002037"
         },
+        "inscriptionDate": "1960",
         "title": "Gymnasion: étude sur les monuments consacrés à l'éducation en Grèce (des origines à l'Empire Romain)",
-        "citation": "<span>J. Delorme, <i>Gymnasion: étude sur les monuments consacrés à l’éducation en Grèce (des origines à l’Empire Romain)</i> (Paris: De Boccard, 1960)</span>"
+        "citation": "<span>J. Delorme, <i>Gymnasion: étude sur les monuments consacrés à l’éducation en Grèce (des origines à l’Empire Romain)</i> (Paris: De Boccard, 1960)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5MWGAQ82",
+        "year": "1960"
       },
       {
         "author": "Manganaro",
         "date": "1999",
         "citedRange": "67",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GRB3IPD5"
+          "target": "https://www.zotero.org/groups/382445/items/GRB3IPD5"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001813",
           "target": "https://biblio.inscriptiones.org/epig10001813"
         },
         "bibl": "",
+        "inscriptionDate": "1999",
         "title": "Sikelika: studi di antichità e di epigrafia della Sicilia greca",
-        "citation": "<span>Giacomo Manganaro, <i>Sikelika: studi di antichità e di epigrafia della Sicilia greca</i>, Biblioteca di QUCC 8 (Pisa, Roma: Istituti Editoriali e Poligrafici internazionali, 1999)</span>"
+        "citation": "<span>Giacomo Manganaro, <i>Sikelika: studi di antichità e di epigrafia della Sicilia greca</i>, Biblioteca di QUCC 8 (Pisa, Roma: Istituti Editoriali e Poligrafici internazionali, 1999)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GRB3IPD5",
+        "year": "1999"
       }
     ]
   },
@@ -280,32 +308,19 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Marta Fogagnolo",
         "xml:id": "martaf",
         "ref": "https://orcid.org/0000-0001-5187-5163"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -314,6 +329,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "492885",
   "facsimile": {
     "n": "screen",
     "url": "ISic001280_tiled.tif",
@@ -322,12 +338,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 75
+    }
+  ],
   "publications": [
-    "IG",
-    "IMusCatania",
-    "SGDI, 1884-1915"
+    "Kaibel, 1890, IG",
+    "Korhonen, 2004, IMusCatania",
+    "Hoffmann, 1904, SGDI"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "2EUC82DH",
+    "DQDPC573"
   ],
   "keywords": [
     "isic001280",
@@ -340,7 +365,7 @@
     "limestone",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

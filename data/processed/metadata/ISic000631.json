@@ -31,7 +31,13 @@
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
-  "support": "Two joining fragments from a statue base, extensively damaged\n                                            on all sides. Parts of each original surface are preserved, such that it is\n                                            possible to estimate the overall original dimensions. A substantial part of\n                                            the front face is preserved, but the face is damaged on all sides except the\n                                            lower edge. On the rear face four Latin letters over two lines and a part of\n                                            the right marginal moulding are preserved from an earlier inscription\n                                            (ISic003206).",
+  "support": {
+    "_": "Two joining fragments from a statue base, extensively damaged on all sides. Parts of each original surface are preserved, such that it is possible to estimate the overall original dimensions. A substantial part of the front face is preserved, but the face is damaged on all sides except the lower edge. On the rear face four Latin letters over two lines and a part of the right marginal moulding are preserved from an earlier inscription (). A single foothole is preserved on the upper face, towards the rear left corner.",
+    "ref": {
+      "_": "ISic003206",
+      "sameAs": "ISic003206.xml"
+    }
+  },
   "objectType": {
     "_": "statue base",
     "ana": "#object.statue_base",
@@ -39,10 +45,15 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "subtype": []
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
       "_": "31",
@@ -68,7 +79,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
@@ -80,7 +93,9 @@
         "from": "line1",
         "to": "line6",
         "h": "25-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -91,21 +106,22 @@
     ]
   },
   "date": {
-    "_": "The inscription cannot be later than the end of the 5th century,\n                                    due to the archaeological evidence for the cessation of use of the theatre by that\n                                    date",
-    "notBefore": 450,
-    "notAfter": 500,
-    "precision": "low"
+    "_": "The inscription cannot be later than the end of the 5th century, due to the archaeological evidence for the cessation of use of the theatre by that date",
+    "notBefore": 451,
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,8 +130,10 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
-    "_": "Found near the lowest seats of the central part of the Roman theatre during excavation by G. Libertini in 1951",
+    "_": "Found near the lowest seats of the central part of the Roman theatre during excavation by G. Libertini in 1951. Now on display in the Civic museum.",
     "type": "found",
     "subtype": "discovered",
     "geo": [
@@ -123,9 +141,16 @@
       15.083639
     ]
   },
+  "provenanceGeo": [
+    37.502748,
+    15.083639
+  ],
   "provenanceObserved": {
-    "_": "Display, Voci di pietra no.13",
+    "_": "Prag 2016.10.13",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -135,11 +160,42 @@
       "url": "ISic000631_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-12",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000631_left_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-12",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000631_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-12",
+      "surfaceType": "rear"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000631_right_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-12",
+      "surfaceType": "right"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000631_top_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-12",
+      "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -183,16 +239,24 @@
         "n": "AE",
         "citedRange": "1956.0259",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "12",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -200,7 +264,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Mazzarino",
@@ -212,8 +281,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001753",
           "target": "https://biblio.inscriptiones.org/epig10001753"
         },
+        "inscriptionDate": "1954",
         "title": "I vandali a Catania",
-        "citation": "<span>S. Mazzarino, «I vandali a Catania», <i>Rivista del Comune di Catania</i> 4 (1954)</span>"
+        "citation": "<span>S. Mazzarino, «I vandali a Catania», <i>Rivista del Comune di Catania</i> 4 (1954)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NXHH4KNI",
+        "year": "1954"
       },
       {
         "author": "Mazzarino",
@@ -226,8 +298,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002653",
           "target": "https://biblio.inscriptiones.org/epig10002653"
         },
+        "inscriptionDate": "1956",
         "title": "\"Spectabilis Consularis provinciae Siciliae\" (A proposito di una nuova epigrafe catanese)",
-        "citation": "<span>S. Mazzarino, «“Spectabilis Consularis provinciae Siciliae” (A proposito di una nuova epigrafe catanese)», <i>Iura</i> 7 (1956): 137–41</span>"
+        "citation": "<span>S. Mazzarino, «“Spectabilis Consularis provinciae Siciliae” (A proposito di una nuova epigrafe catanese)», <i>Iura</i> 7 (1956): 137–41</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/58V8S88J",
+        "year": "1956"
       },
       {
         "author": "Wilson",
@@ -239,7 +314,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Manganaro",
@@ -251,14 +331,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -282,20 +367,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
       },
@@ -305,8 +376,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -315,23 +387,36 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "175825",
   "facsimile": {
     "n": "screen",
     "url": "ISic000631_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-12",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    null,
-    "IMusCatania",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Korhonen, 2004, IMusCatania",
     "Mazzarino, 1954, I vandali a Catania",
     "Mazzarino, 1956, \"Spectabilis Consularis provinciae Siciliae\" (A proposito di una nuova epigrafe catanese)",
-    "Wilson, 1990",
-    "Manganaro, 1993"
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C."
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "2EUC82DH",
+    "NXHH4KNI",
+    "58V8S88J",
+    "VF9MMBI9",
+    "JBI7CI5R"
   ],
   "keywords": [
     "isic000631",
@@ -344,7 +429,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

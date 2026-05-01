@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "tuff",
-    "ana": "#material.stone.tuff",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
   "condition": "",
@@ -76,7 +79,9 @@
         "from": "line1",
         "to": "line3",
         "h": "80",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "80",
+        "atMost": "80"
       },
       {
         "type": "interlinear",
@@ -97,12 +102,14 @@
     {
       "_": "Menae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462312"
+      "ref": "http://pleiades.stoa.org/places/462312",
+      "region": "Sicilia"
     },
     {
       "_": "Mineo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524142"
+      "ref": "http://sws.geonames.org/2524142",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,12 +118,15 @@
       14.69381
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Menae",
   "provenanceFound": {
     "_": "Necropolis of S. Ippolito",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -134,7 +144,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Mineo",
   "repository": {
@@ -184,15 +193,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001366",
           "target": "https://biblio.inscriptiones.org/epig10001366"
         },
+        "inscriptionDate": "2014",
         "title": "Materiale vecchio e nuovo dalla Sicilia orientale",
-        "citation": "<span>Federica Cordano, «Materiale vecchio e nuovo dalla Sicilia orientale», in <i>Dinamiche culturali ed etniche nella Sicilia orientale dall’età classica all’epoca ellenistica</i>, a c. di T. Alfieri Tonini e S. Struffolino, Aristonothos. Scritti per il Medterraneo antico. Quaderni n.4 (Trento: Tangram Edizioni Scientifiche, 2014), 105–11</span>"
+        "citation": "<span>Federica Cordano, «Materiale vecchio e nuovo dalla Sicilia orientale», in <i>Dinamiche culturali ed etniche nella Sicilia orientale dall’età classica all’epoca ellenistica</i>, a c. di T. Alfieri Tonini e S. Struffolino, Aristonothos. Scritti per il Medterraneo antico. Quaderni n.4 (Trento: Tangram Edizioni Scientifiche, 2014), 105–11</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/A3NF7B7J",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -216,20 +228,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -238,10 +236,6 @@
         "_": "Maria Barbieri",
         "xml:id": "MB",
         "ref": "https://orcid.org/0000-0003-3673-587X"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -250,6 +244,7 @@
       "who": "#MB"
     }
   },
+  "tmNumber": "644923",
   "facsimile": {
     "n": "screen",
     "url": "ISic003445_tiled.tif",
@@ -258,10 +253,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Menae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 80,
+      "atMost": 80
+    }
+  ],
   "publications": [
     "Cordano, 2014, Materiale vecchio e nuovo dalla Sicilia orientale"
+  ],
+  "zotero": [
+    "A3NF7B7J"
   ],
   "keywords": [
     "isic003445",
@@ -274,7 +276,7 @@
     "tuff",
     "menae",
     "mineo",
-    "italy",
+    "sicilia",
     "sicily",
     "mineo",
     "museo civico corrado tamburino merlini",

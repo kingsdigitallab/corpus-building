@@ -37,8 +37,15 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine-grained, homogeneous, grey marble, likely Lunense, Docimian, Pentelic. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense",
+      "Docimian",
+      "Pentelic"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -89,19 +96,20 @@
   "date": {
     "_": "5th century CE",
     "notBefore": 401,
-    "notAfter": 500,
-    "precision": "low"
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +118,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Catacomb of Santa Maria di Gesù",
     "type": "found",
@@ -119,6 +129,10 @@
       15.289549
     ]
   },
+  "provenanceGeo": [
+    37.076291,
+    15.289549
+  ],
   "provenanceObserved": {
     "_": "2018.01.19 (Manenti)",
     "type": "observed",
@@ -136,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -178,34 +191,41 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0157",
+            "_": "157",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "29.0614",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manganaro",
@@ -217,7 +237,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       },
       {
         "author": "Carini",
@@ -230,15 +255,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002090",
           "target": "https://biblio.inscriptiones.org/epig10002090"
         },
+        "inscriptionDate": "1875",
         "title": "Rassegna archeologica",
-        "citation": "<span>I. Carini, «Rassegna archeologica», <i>Archivio Storico Siciliano</i> 3, fasc. 1 (1875): 121–25</span>"
+        "citation": "<span>I. Carini, «Rassegna archeologica», <i>Archivio Storico Siciliano</i> 3, fasc. 1 (1875): 121–25</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/H7KWCRG9",
+        "year": "1875"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -262,35 +290,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Romeo Gessaga",
+        "xml:id": "RG",
+        "ref": "https://orcid.org/0009-0003-5190-1722"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-07",
+      "who": "#RG"
     }
   },
+  "tmNumber": "492604",
   "facsimile": {
     "n": "screen",
     "url": "ISic000978_tiled.tif",
@@ -299,13 +320,18 @@
     "desc": "Photograph Museo Arch. Reg. P. Orsi: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "Manganaro, 1993",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
     "Carini, 1875, Rassegna archeologica"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "JBI7CI5R",
+    "H7KWCRG9"
   ],
   "keywords": [
     "isic000978",
@@ -315,10 +341,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "fine-grained, homogeneous, grey marble, likely lunense, docimian, pentelic. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

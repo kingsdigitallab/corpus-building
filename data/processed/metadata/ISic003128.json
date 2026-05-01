@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -87,7 +92,9 @@
         "from": "line2",
         "to": "line3",
         "h": "8-10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "8",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -102,19 +109,20 @@
   "date": {
     "_": "1st — 3rd century CE?",
     "notBefore": 1,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -123,11 +131,14 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "2014-09-09 (Prag)",
     "type": "observed",
@@ -161,7 +172,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -201,15 +211,15 @@
         "n": "SEG",
         "citedRange": "31.0845",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manganaro",
@@ -222,15 +232,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001411",
           "target": "https://biblio.inscriptiones.org/epig10001411"
         },
+        "inscriptionDate": "1981",
         "title": "L'oracolo di Maie per una carestia in territorio siracusano",
-        "citation": "<span>Giacomo Manganaro, «L’oracolo di Maie per una carestia in territorio siracusano», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser. 3, 11, fasc. 3–4 (1981): 1069–82</span>"
+        "citation": "<span>Giacomo Manganaro, «L’oracolo di Maie per una carestia in territorio siracusano», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser. 3, 11, fasc. 3–4 (1981): 1069–82</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4RHZUP7V",
+        "year": "1981"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -254,27 +267,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -283,6 +283,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645469",
   "facsimile": {
     "n": "screen",
     "url": "ISic003128_tiled.tif",
@@ -291,11 +292,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 8,
+      "atMost": 10
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Manganaro, 1981, L'oracolo di Maie per una carestia in territorio siracusano"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "4RHZUP7V"
   ],
   "keywords": [
     "isic003128",
@@ -308,7 +317,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

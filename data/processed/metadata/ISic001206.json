@@ -44,7 +44,11 @@
   },
   "material": {
     "_": "sandstone\n                                    ",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -67,7 +71,7 @@
   ],
   "layoutDesc": {
     "layout": {
-      "_": "Two lines of Greek letters filling the width of the surviving stone\n                                    \n                                \t\n\t\t\t",
+      "_": "\n                                    Two lines of Greek letters filling the width of the surviving stone\n                                    \n                                ",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
@@ -85,7 +89,9 @@
         "from": "line1",
         "to": "line2",
         "h": "30-75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "75"
       },
       {
         "type": "interlinear",
@@ -100,20 +106,21 @@
     "_": "3rd century BCE?",
     "notBefore": 301,
     "notAfter": 200,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Abacaenum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462062"
+      "ref": "http://pleiades.stoa.org/places/462062",
+      "region": "Sicilia"
     },
     {
       "_": "Tripi",
       "type": "modern",
       "ref": "http://sws.geonames.org/2522853",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -122,11 +129,14 @@
       15.10158
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Abacaenum",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -144,7 +154,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -188,21 +197,26 @@
         "n": "IG",
         "citedRange": {
           "ref": {
-            "_": "\n                                14.0382a",
+            "_": "382a",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "author": "Kaibel",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "125",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -210,58 +224,71 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1886",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "464 no.d",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1886",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5208a",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://www.zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       },
       {
         "author": "Sofia",
         "date": "2015",
         "citedRange": "108 and fig.112",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/9QTE4E3Z"
+          "target": "https://www.zotero.org/groups/382445/items/9QTE4E3Z"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001575",
           "target": "https://biblio.inscriptiones.org/epig10001575"
         },
+        "inscriptionDate": "2015",
         "title": "Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi",
-        "citation": "<span>Girolamo Sofia, <i>Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi</i> (Terme Vigliatore (ME): Giambra editore, 2015)</span>"
+        "citation": "<span>Girolamo Sofia, <i>Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi</i> (Terme Vigliatore (ME): Giambra editore, 2015)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9QTE4E3Z",
+        "year": "2015"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -285,35 +312,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-16",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "492810",
   "facsimile": {
     "n": "screen",
     "url": "ISic001206_tiled.tif",
@@ -322,14 +347,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Abacaenum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 75
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusPalermo",
-    "Salinas, 1886, NSA",
-    "SGDI, 1884-1915",
+    "Kaibel, 1890, IG",
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Notizie degli scavi di antichità, 1876-",
+    "Hoffmann, 1904, SGDI",
     "Sofia, 2015, Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F66S4X3M",
+    "4MCP2PVV",
+    "DQDPC573",
+    "9QTE4E3Z"
   ],
   "keywords": [
     "isic001206",
@@ -342,7 +378,7 @@
     "sandstone",
     "abacaenum",
     "tripi",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

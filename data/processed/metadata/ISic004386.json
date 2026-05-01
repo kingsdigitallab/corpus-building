@@ -47,7 +47,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -88,7 +93,9 @@
         "from": "line1",
         "to": "line2",
         "h": "100",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "100",
+        "atMost": "100"
       },
       {
         "type": "interlinear",
@@ -102,19 +109,20 @@
   "date": {
     "_": "Late 2nd century or 1st century BCE",
     "notBefore": -150,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -1
   },
   "places": [
     {
       "_": "Ietas",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462258"
+      "ref": "http://pleiades.stoa.org/places/462258",
+      "region": "Sicilia"
     },
     {
       "_": "Monte Iato",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524540"
+      "ref": "http://sws.geonames.org/2524540",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -123,6 +131,8 @@
       13.198199
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Ietas",
   "provenanceFound": {
     "_": "From material recovered from the interior of the large Hellenistic public cistern to the west of the agora",
     "type": "found",
@@ -132,6 +142,10 @@
       13.197718
     ]
   },
+  "provenanceGeo": [
+    37.966871,
+    13.197718
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -149,7 +163,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Monte Iato",
   "repository": "Monte Iato excavation",
@@ -172,21 +185,24 @@
         "date": "2009",
         "citedRange": "101 with taf.16.9",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/8GY54CVP"
+          "target": "https://www.zotero.org/groups/382445/items/8GY54CVP"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002631",
           "target": "https://biblio.inscriptiones.org/epig10002631"
         },
+        "inscriptionDate": "2009",
         "title": "Grabungen auf dem Monte Iato im Herbst 2007 und im Jahr 2008",
-        "citation": "<span>Hans Peter Isler, ‘Grabungen auf dem Monte Iato im Herbst 2007 und im Jahr 2008’, <i>Antike Kunst</i> 52 (2009): 95–109</span>"
+        "citation": "<span>Hans Peter Isler, ‘Grabungen auf dem Monte Iato im Herbst 2007 und im Jahr 2008’, <i>Antike Kunst</i> 52 (2009): 95–109</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8GY54CVP",
+        "year": "2009"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -210,27 +226,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -244,6 +247,7 @@
       }
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004386_tiled.tif",
@@ -252,10 +256,17 @@
     "desc": "Scan of Isler 2009: taf.16.9",
     "surfaceType": "front"
   },
-  "provenance": "Ietas",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 100,
+      "atMost": 100
+    }
+  ],
   "publications": [
     "Isler, 2009, Grabungen auf dem Monte Iato im Herbst 2007 und im Jahr 2008"
+  ],
+  "zotero": [
+    "8GY54CVP"
   ],
   "keywords": [
     "isic004386",
@@ -278,7 +289,7 @@
     "limestone",
     "ietas",
     "monte iato",
-    "italy",
+    "sicilia",
     "sicily",
     "monte iato",
     "latin",

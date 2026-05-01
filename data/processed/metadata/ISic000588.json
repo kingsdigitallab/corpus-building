@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "breccia",
-    "ana": "#material.stone.breccia",
+    "ana": "#material.inorganic.stone.polygenic_breccia",
+    "type": "stone.breccia",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
   "condition": "",
@@ -78,7 +83,9 @@
         "from": "line1",
         "to": "line1",
         "h": "55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "55"
       },
       {
         "type": "interlinear",
@@ -99,12 +106,14 @@
     {
       "_": "Haluntium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462228"
+      "ref": "http://pleiades.stoa.org/places/462228",
+      "region": "Sicilia"
     },
     {
       "_": "San Marco d'Alunzio",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523425"
+      "ref": "http://sws.geonames.org/2523425",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,12 +122,15 @@
       14.70093
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Haluntium",
   "provenanceFound": {
     "_": "First noted by Gualtherus in the church of S.Maria 'ad nives' below the Norman Castle, which is perhaps Santa Maria in/di Aracoeli",
     "type": "found",
     "subtype": "first-recorded",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Part of the inscription seen by Mommsen and Salinas in the steps of the Convento dei Cappuccini",
     "type": "observed",
@@ -160,7 +172,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "S. Marco d'Alunzio",
   "repository": {
@@ -197,6 +208,20 @@
     "bibl": [
       {
         "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "145",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
@@ -205,56 +230,72 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZP8DE8KS"
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7464",
+            "_": "7464",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650804"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2001.1108",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1880",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "194-195 no.10",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1880",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
@@ -266,7 +307,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "author": "Manganaro",
@@ -278,7 +325,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Bonanno",
@@ -291,15 +343,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002130",
           "target": "https://biblio.inscriptiones.org/epig10002130"
         },
+        "inscriptionDate": "1997-1998",
         "title": "Scavi e indagini nel territorio di Caronia e San Marco d'Alunzio",
-        "citation": "<span>C. Bonanno, «Scavi e indagini nel territorio di Caronia e San Marco d’Alunzio», <i>Kokalos</i> 43–44, fasc. 2.1 (1998 1997): 423–51</span>"
+        "citation": "<span>C. Bonanno, «Scavi e indagini nel territorio di Caronia e San Marco d’Alunzio», <i>Kokalos</i> 43–44, fasc. 2.1 (1998 1997): 423–51</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GVSX7STQ",
+        "year": "1997"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -323,27 +378,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -352,6 +394,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491845",
   "facsimile": {
     "n": "screen",
     "url": "ISic000588_tiled.tif",
@@ -360,16 +403,31 @@
     "desc": "Photo J. Prag",
     "surfaceType": "front"
   },
-  "provenance": "Haluntium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 55,
+      "atMost": 55
+    }
+  ],
   "publications": [
-    "Gualtherus, 1624 [1625]",
-    "CIL",
-    null,
-    "Salinas, 1880, NSA",
-    "ILS",
-    "Manganaro, 1988",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Notizie degli scavi di antichità, 1876-",
+    "Dessau, 1892-1916, ILS",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Bonanno, 1997-1998, Scavi e indagini nel territorio di Caronia e San Marco d'Alunzio"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "R46KDTZX",
+    "4MCP2PVV",
+    "XHMS9K6S",
+    "RZSFKACR",
+    "GVSX7STQ"
   ],
   "keywords": [
     "isic000588",
@@ -382,7 +440,7 @@
     "breccia",
     "haluntium",
     "san marco d'alunzio",
-    "italy",
+    "sicilia",
     "sicily",
     "s. marco d'alunzio",
     "museo della cultura e delle arti figurative bizantine e normanne",

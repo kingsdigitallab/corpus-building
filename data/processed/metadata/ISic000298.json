@@ -38,9 +38,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble (white)",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to medium-grained, banded, white, smelly marble, likely Proconnesian. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -80,7 +95,9 @@
         "from": "line1",
         "to": "line1",
         "h": "60-80",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "80"
       },
       {
         "type": "letterHeight",
@@ -88,7 +105,9 @@
         "from": "line2",
         "to": "line4",
         "h": "40-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -96,7 +115,9 @@
         "from": "line5",
         "to": "line7",
         "h": "50-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -109,19 +130,20 @@
   "date": {
     "_": "Munatidius is not otherwise known; the mention of three Domini\n                                    requires one of the periods 337—340, 367—378, 379—383, 388—395, 402—408, and 421. A\n                                    precise choice is not possible, but the consensus amongst scholars is for a date in\n                                    the 4th century rather than later.",
     "notBefore": 337,
-    "notAfter": 421,
-    "precision": "low"
+    "notAfter": 421
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,6 +152,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found 18 May 1770 in excavations in the ancient theatre of Catania, by the Principe di Biscari",
     "type": "found",
@@ -140,6 +164,10 @@
       15.083639
     ]
   },
+  "provenanceGeo": [
+    37.502748,
+    15.083639
+  ],
   "provenanceObserved": {
     "_": "Display, Voci di pietra no.12",
     "type": "observed",
@@ -172,7 +200,6 @@
       "surfaceType": "threequarter"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -214,9 +241,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7014",
+            "_": "7014",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650756"
           }
         },
@@ -226,23 +255,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1959.0022",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "7",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -250,7 +292,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "type": "corpus",
@@ -262,31 +309,64 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "author": "Holm",
         "date": "1925",
         "citedRange": "43-44",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7VWTI6D2"
+          "target": "https://www.zotero.org/groups/382445/items/7VWTI6D2"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001919",
           "target": "https://biblio.inscriptiones.org/epig10001919"
-        }
+        },
+        "inscriptionDate": "1925",
+        "title": "Catania antica",
+        "citation": "<span>A. Holm, <i>Catania antica</i>, trad. da G Libertini (Catania: Libreria Tirelli di F. Guaitolini, 1925)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7VWTI6D2",
+        "year": "1925"
       },
       {
         "author": "Manganaro",
         "date": "1958-1959",
         "citedRange": "5-10 fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/BVD8KVF7"
+          "target": "https://www.zotero.org/groups/382445/items/BVD8KVF7"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001856",
           "target": "https://biblio.inscriptiones.org/epig10001856"
-        }
+        },
+        "inscriptionDate": "1958-1959",
+        "title": "Iscrizioni latine e greche di Catania tardo-imperiale",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni latine e greche di Catania tardo-imperiale», <i>Archivio Storico per la Sicilia Orientale</i> ser.4 vol.11-12 (1959 1958): 5–30</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BVD8KVF7",
+        "year": "1958"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "69",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -298,7 +378,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Manganaro",
@@ -310,14 +395,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -341,31 +431,18 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -374,6 +451,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "175826",
   "facsimile": {
     "n": "screen",
     "url": "ISic000298_tiled.tif",
@@ -382,17 +460,41 @@
     "desc": "Photograph of front face by J. Prag",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 80
+    },
+    {
+      "atLeast": 40,
+      "atMost": 60
+    },
+    {
+      "atLeast": 50,
+      "atMost": 70
+    }
+  ],
   "publications": [
-    "CIL",
-    null,
-    "IMusCatania",
-    "ILS",
-    "Holm, 1925",
-    "Manganaro, 1958-1959",
-    "Wilson, 1990",
-    "Manganaro, 1993"
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Korhonen, 2004, IMusCatania",
+    "Dessau, 1892-1916, ILS",
+    "Holm, 1925, Catania antica",
+    "Manganaro, 1958-1959, Iscrizioni latine e greche di Catania tardo-imperiale",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C."
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "R46KDTZX",
+    "2EUC82DH",
+    "XHMS9K6S",
+    "7VWTI6D2",
+    "BVD8KVF7",
+    "RZSFKACR",
+    "VF9MMBI9",
+    "JBI7CI5R"
   ],
   "keywords": [
     "isic000298",
@@ -402,10 +504,10 @@
     },
     "dedication",
     "plaque",
-    "marble (white)",
+    "fine to medium-grained, banded, white, smelly marble, likely proconnesian. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

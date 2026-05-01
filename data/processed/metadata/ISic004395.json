@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "volcanic (lava stone)",
-    "ana": "#material.stone.volcanic",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line2",
         "h": "60-65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -95,19 +102,21 @@
   "date": {
     "_": "5th century BCE, assuming the identification as anhellenic is correct",
     "notBefore": -500,
-    "notAfter": -400,
+    "notAfter": -401,
     "evidence": "lettering"
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +125,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Not recorded, but assumed to be local.",
     "type": "found",
@@ -123,6 +134,7 @@
     "notAfter": "1965",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "currently in store at the antiquarium / teatro; observed in 2005 and 2009 without full autopsy",
     "type": "observed",
@@ -148,7 +160,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -191,49 +202,58 @@
         "date": "1965",
         "citedRange": "163-166 fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/TKXFNC6H"
+          "target": "https://www.zotero.org/groups/382445/items/TKXFNC6H"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001452",
           "target": "https://biblio.inscriptiones.org/epig10001452"
         },
+        "inscriptionDate": "1965",
         "title": "Per la storia dei culti in Sicilia",
-        "citation": "<span>Giacomo Manganaro, «Per la storia dei culti in Sicilia», <i>La Parola del Passato</i> 20, fasc. 101 (1965): 163–78</span>"
+        "citation": "<span>Giacomo Manganaro, «Per la storia dei culti in Sicilia», <i>La Parola del Passato</i> 20, fasc. 101 (1965): 163–78</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TKXFNC6H",
+        "year": "1965"
       },
       {
-        "author": "Manganaro apud Agostiniani and Prosdocii",
+        "author": "Agostiniani, Prosdocimi",
         "date": "1976-1977",
         "citedRange": "254",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/CVY2ZP7C"
+          "target": "https://www.zotero.org/groups/382445/items/CVY2ZP7C"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002611",
           "target": "https://biblio.inscriptiones.org/epig10002611"
         },
+        "inscriptionDate": "1976-1977",
         "title": "Lingue e dialetti della Sicilia antica",
-        "citation": "<span>Luciano Agostiniani e A. L. Prosdocimi, «Lingue e dialetti della Sicilia antica», <i>Kokalos</i> 22–23, fasc. 1 (1977 1976): 215–60</span>"
+        "citation": "<span>Luciano Agostiniani e A. L. Prosdocimi, «Lingue e dialetti della Sicilia antica», <i>Kokalos</i> 22–23, fasc. 1 (1977 1976): 215–60</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CVY2ZP7C",
+        "year": "1976"
       },
       {
         "author": "Cordano",
         "date": "2012",
         "citedRange": "169",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/C7FV3MUG"
+          "target": "https://www.zotero.org/groups/382445/items/C7FV3MUG"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002066",
           "target": "https://biblio.inscriptiones.org/epig10002066"
         },
+        "inscriptionDate": "2012",
         "title": "Iscrizioni monumentali dei Siculi",
-        "citation": "<span>Federica Cordano, «Iscrizioni monumentali dei Siculi», <i>Aristonothos</i> 4 (2012): 165–84</span>"
+        "citation": "<span>Federica Cordano, «Iscrizioni monumentali dei Siculi», <i>Aristonothos</i> 4 (2012): 165–84</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/C7FV3MUG",
+        "year": "2012"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -257,27 +277,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -286,6 +293,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004395_tiled.tif",
@@ -294,12 +302,21 @@
     "desc": "Photo L. Campagna 2005-03-31",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 65
+    }
+  ],
   "publications": [
     "Manganaro, 1965, Per la storia dei culti in Sicilia",
-    "Manganaro apud Agostiniani and Prosdocii, 1976-1977, Lingue e dialetti della Sicilia antica",
+    "Agostiniani, Prosdocimi, 1976-1977, Lingue e dialetti della Sicilia antica",
     "Cordano, 2012, Iscrizioni monumentali dei Siculi"
+  ],
+  "zotero": [
+    "TKXFNC6H",
+    "CVY2ZP7C",
+    "C7FV3MUG"
   ],
   "keywords": [
     "isic004395",
@@ -312,7 +329,7 @@
     "volcanic (lava stone)",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

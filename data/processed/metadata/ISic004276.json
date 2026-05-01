@@ -39,7 +39,10 @@
   },
   "material": {
     "_": "volcanic",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": {
@@ -83,7 +86,9 @@
         "from": "line1",
         "to": "line4",
         "h": "40-50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -102,12 +107,14 @@
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,11 +123,14 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Original discovery not recorded",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Seen by Libertini (1921) in fondo Carnevali, contrada Diana.",
     "type": "observed",
@@ -138,7 +148,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lipari",
   "repository": {
@@ -180,14 +189,18 @@
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "766",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
       {
         "author": "Libertini",
@@ -199,22 +212,28 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001875",
           "target": "https://biblio.inscriptiones.org/epig10001875"
-        }
+        },
+        "inscriptionDate": "1921",
+        "title": "Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+        "citation": "<span>Guido Libertini, <i>Le isole eolie nell’antichità greca e romana. Ricerche storiche ed archeologiche</i> (Florence, 1921)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QECEVGHN",
+        "year": "1921"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1929",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "85 no. 2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1929",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Ferrua",
@@ -223,15 +242,15 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/4HR4GXBX"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001456",
-          "target": "https://biblio.inscriptiones.org/epig10001456"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/4HR4GXBX",
+        "inscriptionDate": "1941",
         "title": "Epigrafica sicula pagana e cristiana",
-        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>"
+        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4HR4GXBX",
+        "year": "1941"
       },
       {
-        "author": "Bernabò Brea and Cavalier",
+        "author": "Bernabò Brea, Cavalier",
         "date": "1991",
         "citedRange": "101",
         "ptr": {
@@ -240,14 +259,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002158",
           "target": "https://biblio.inscriptiones.org/epig10002158"
-        }
+        },
+        "inscriptionDate": "1991",
+        "title": "Lipari (isola). Fonti epigrafiche",
+        "citation": "<span>L. Bernabò Brea e M. Cavalier, «Lipari (isola). Fonti epigrafiche», in <i>Bibliografia topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 9 (Pisa: Scuola Normal Superiore di Pisa, 1991), 84–109</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IPZ5E4UN",
+        "year": "1991"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -271,20 +295,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "David Espinosa Espinosa",
         "xml:id": "DEE",
         "ref": "http://orcid.org/0000-0002-2337-9047"
@@ -293,10 +303,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -305,6 +311,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "493817",
   "facsimile": {
     "n": "screen",
     "url": "ISic004276_tiled.tif",
@@ -313,14 +320,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 50
+    }
+  ],
   "publications": [
-    "ILipara",
-    "Libertini, 1921",
-    "Orsi, 1929, NSA",
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara",
+    "Libertini, 1921, Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+    "Notizie degli scavi di antichità, 1876-",
     "Ferrua, 1941, Epigrafica sicula pagana e cristiana",
-    "Bernabò Brea and Cavalier, 1991"
+    "Bernabò Brea, Cavalier, 1991, Lipari (isola). Fonti epigrafiche"
+  ],
+  "zotero": [
+    "VDAQH5D2",
+    "QECEVGHN",
+    "4MCP2PVV",
+    "4HR4GXBX",
+    "IPZ5E4UN"
   ],
   "keywords": [
     "isic004276",
@@ -333,7 +351,7 @@
     "volcanic",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
     "lipari",
     "museo archeologico regionale eoliano \"luigi bernab� brea\"",

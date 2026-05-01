@@ -32,7 +32,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -81,19 +85,20 @@
   "date": {
     "_": "4th century CE",
     "notBefore": 301,
-    "notAfter": 400,
-    "precision": "low"
+    "notAfter": 400
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,12 +107,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Catacomb of S. Lucia",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -125,7 +133,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": "",
@@ -144,15 +151,15 @@
         "n": "SEG",
         "citedRange": "15.0589",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Agnello",
@@ -161,12 +168,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/DT8J5F5A"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002209",
-          "target": "https://biblio.inscriptiones.org/epig10002209"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/DT8J5F5A",
+        "inscriptionDate": "1955",
         "title": "Recenti esplorazioni nelle catacombe siracusane di S. Lucia",
-        "citation": "<span>S.L. Agnello, «Recenti esplorazioni nelle catacombe siracusane di S. Lucia», <i>Rivista di Archeologia Cristiana</i> 31 (1955): 7–50</span>"
+        "citation": "<span>S.L. Agnello, «Recenti esplorazioni nelle catacombe siracusane di S. Lucia», <i>Rivista di Archeologia Cristiana</i> 31 (1955): 7–50</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DT8J5F5A",
+        "year": "1955"
       },
       {
         "author": "Ferrua",
@@ -175,17 +182,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/759ZXHKQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001995",
-          "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/759ZXHKQ",
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -209,20 +218,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -233,16 +228,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2026-02-02",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "645503",
   "facsimile": {
     "n": "screen",
     "url": "ISic003173_tiled.tif",
@@ -251,12 +258,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Agnello, 1955, Recenti esplorazioni nelle catacombe siracusane di S. Lucia",
-    "Ferrua, 1989"
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "DT8J5F5A",
+    "759ZXHKQ"
   ],
   "keywords": [
     "isic003173",
@@ -268,7 +279,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "ancient greek",

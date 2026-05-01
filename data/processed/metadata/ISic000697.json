@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -84,7 +89,9 @@
         "from": "line1",
         "to": "line3",
         "h": "27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "27"
       },
       {
         "type": "interlinear",
@@ -104,12 +111,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +127,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "First published by Manganaro, details of original discovery not recorded.",
     "type": "found",
@@ -125,6 +136,7 @@
     "notAfter": "1989",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -142,7 +154,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -184,17 +195,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -218,27 +231,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -247,6 +247,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "493943",
   "facsimile": {
     "n": "screen",
     "url": "ISic000697_tiled.tif",
@@ -255,10 +256,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo L. Campagna 2004-11-16",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 27,
+      "atMost": 27
+    }
+  ],
   "publications": [
-    "Manganaro, 1989"
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
+  ],
+  "zotero": [
+    "EZMBJ6GN"
   ],
   "keywords": [
     "isic000697",
@@ -271,7 +279,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

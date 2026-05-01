@@ -35,7 +35,12 @@
   },
   "material": {
     "_": "plaster on stone",
-    "ana": "#material.plaster",
+    "ana": "#material.inorganic.mortars.plaster",
+    "type": "mortars",
+    "subtype": [
+      "plaster"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/126.html"
   },
   "condition": "",
@@ -89,19 +94,20 @@
   "date": {
     "_": "2nd century BCE",
     "notBefore": -200,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +116,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "One of thirteen found in Marsala in 1895; the original findspot was concealed.",
     "type": "found",
@@ -117,6 +125,7 @@
     "when": "1895",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Observed in the Museo Archeologico Regionale Antonino Salinas, 27.09.2021 (2nd floor, not on display)",
     "type": "observed",
@@ -134,7 +143,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -184,8 +192,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001976",
           "target": "https://biblio.inscriptiones.org/epig10001976"
         },
+        "inscriptionDate": "1929",
         "title": "Stele sepolcrali di Lilibeo a forma di Heroon",
-        "citation": "<span>E. Gabrici, «Stele sepolcrali di Lilibeo a forma di Heroon», <i>Monumenti Antichi</i> 33 (1929): 41–60</span>"
+        "citation": "<span>E. Gabrici, «Stele sepolcrali di Lilibeo a forma di Heroon», <i>Monumenti Antichi</i> 33 (1929): 41–60</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/W9I8NZBC",
+        "year": "1929"
       },
       {
         "author": "Vento",
@@ -198,8 +209,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001525",
           "target": "https://biblio.inscriptiones.org/epig10001525"
         },
+        "inscriptionDate": "2000",
         "title": "Le stele dipinte di Lilibeo",
-        "citation": "<span>M. Vento, <i>Le stele dipinte di Lilibeo</i> (Marsala: Centro europeo di studi economici e sociali, 2000)</span>"
+        "citation": "<span>M. Vento, <i>Le stele dipinte di Lilibeo</i> (Marsala: Centro europeo di studi economici e sociali, 2000)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RTAB9A28",
+        "year": "2000"
       }
     ]
   },
@@ -210,14 +224,17 @@
         "author": "Kretschmer",
         "date": "1927",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/NT9TNH4M"
+          "target": "https://www.zotero.org/groups/382445/items/NT9TNH4M"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002533",
           "target": "https://biblio.inscriptiones.org/epig10002533"
         },
+        "inscriptionDate": "1927",
         "title": "Das Femininum von ἥρως",
-        "citation": "<span>P. Kretschmer, ‘Das Femininum von ἥρως’, <i>Glotta</i> 16, no. 3–4 (1927): 306–7</span>"
+        "citation": "<span>P. Kretschmer, ‘Das Femininum von ἥρως’, <i>Glotta</i> 16, no. 3–4 (1927): 306–7</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NT9TNH4M",
+        "year": "1927"
       }
     ]
   },
@@ -242,27 +259,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -271,6 +275,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001687_tiled.tif",
@@ -279,11 +284,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
   "letterHeights": [],
   "publications": [
     "Gabrici, 1929, Stele sepolcrali di Lilibeo a forma di Heroon",
     "Vento, 2000, Le stele dipinte di Lilibeo"
+  ],
+  "zotero": [
+    "W9I8NZBC",
+    "RTAB9A28"
   ],
   "keywords": [
     "isic001687",
@@ -296,7 +304,7 @@
     "plaster on stone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

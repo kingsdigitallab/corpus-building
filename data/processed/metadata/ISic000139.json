@@ -38,9 +38,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Medium-grained, homogeneous, white, smelly marble, likely Proconnesian. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -80,7 +95,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30-34 (I = 45)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "34"
       },
       {
         "type": "letterHeight",
@@ -88,7 +105,9 @@
         "from": "line2",
         "to": "line2",
         "h": "26-32",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "32"
       },
       {
         "type": "letterHeight",
@@ -96,7 +115,9 @@
         "from": "line3",
         "to": "line3",
         "h": "26-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -116,12 +137,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,6 +153,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in early 1880 'in un fondo fuori di porta Messina, appartenente al sig. Sinibaldi Oddo', together with ISic000172, and donated to the museum",
     "type": "found",
@@ -140,6 +165,10 @@
       13.6989596
     ]
   },
+  "provenanceGeo": [
+    37.9810835,
+    13.6989596
+  ],
   "provenanceObserved": {
     "_": "Alex Antoniou 2023-07-07, in the storeroom of the Museo Civico, Termini Imerese.",
     "type": "observed",
@@ -165,7 +194,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -207,24 +235,30 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Fiorelli",
-        "title": "NSA",
-        "date": "1880",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "200",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1880",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7381",
+            "_": "7381",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650798"
           }
         },
@@ -234,11 +268,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "58",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -246,15 +287,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -278,20 +324,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -307,16 +339,23 @@
         "ref": "http://orcid.org/0000-0001-7077-0703"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy record, publications, and added images",
-      "when": "2024-04-17",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "284845",
   "facsimile": {
     "n": "screen",
     "url": "ISic000139_tiled.tif",
@@ -325,12 +364,29 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07.",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 34
+    },
+    {
+      "atLeast": 26,
+      "atMost": 32
+    },
+    {
+      "atLeast": 26,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    "Fiorelli, 1880, NSA",
-    "CIL",
-    "ILMusTermini"
+    "Notizie degli scavi di antichità, 1876-",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000139",
@@ -340,10 +396,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "medium-grained, homogeneous, white, smelly marble, likely proconnesian. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

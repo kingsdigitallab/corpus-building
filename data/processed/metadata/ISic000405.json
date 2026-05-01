@@ -32,8 +32,12 @@
   },
   "objectType": "",
   "material": {
-    "_": "\n                                        marble (white)\n                                    ",
-    "ana": "#material.stone.marble",
+    "_": "marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -81,19 +85,21 @@
   },
   "date": {
     "_": "Probably fourth century CE, debated by Agnello, Polacco, Manganaro and others",
-    "notBefore": 300,
+    "notBefore": 301,
     "notAfter": 400
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,12 +108,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "'rep. extra moenia in vinea Barth.'",
+    "_": "Following Gualtherus, 'inventa in vinea Lucretiae Falconis, in fornice', and said to be of a white marble.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "none",
     "type": "observed",
@@ -120,19 +129,9 @@
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000405_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
-  "settlement": "Lost",
+  "settlement": "Siracusa",
   "repository": "",
   "textLang": {
     "_": "Latin",
@@ -147,31 +146,37 @@
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
-        "citedRange": "no.93",
+        "citedRange": "93",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZP8DE8KS"
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7124",
+            "_": "7124",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
@@ -183,7 +188,30 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "55 n.270",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -195,10 +223,15 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       },
       {
-        "author": "Agnello and Marchese",
+        "author": "Agnello, Marchese",
         "date": "1990",
         "citedRange": "76",
         "ptr": {
@@ -208,11 +241,14 @@
           "_": "https://biblio.inscriptiones.org/epig10002203",
           "target": "https://biblio.inscriptiones.org/epig10002203"
         },
+        "inscriptionDate": "1990",
         "title": "La necropoli tardoromana",
-        "citation": "<span>S.L. Agnello e G. Marchese, «La necropoli tardoromana», in <i>Il teatro antico di Siracusa, pars altera</i>, a c. di L. Polacco (Padova: Editoriale Programma, 1990), 59–78</span>"
+        "citation": "<span>S.L. Agnello e G. Marchese, «La necropoli tardoromana», in <i>Il teatro antico di Siracusa, pars altera</i>, a c. di L. Polacco (Padova: Editoriale Programma, 1990), 59–78</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/V3MRXEBQ",
+        "year": "1990"
       },
       {
-        "author": "Polacco and Anti",
+        "author": "Polacco, Anti",
         "date": "1981",
         "citedRange": "46, 213-214",
         "ptr": {
@@ -222,8 +258,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001672",
           "target": "https://biblio.inscriptiones.org/epig10001672"
         },
+        "inscriptionDate": "1981",
         "title": "Il teatro antico di Siracusa",
-        "citation": "<span>L. Polacco e C. Anti, <i>Il teatro antico di Siracusa</i>, 2 voll. (Rimini: Maggioli, 1981)</span>"
+        "citation": "<span>L. Polacco e C. Anti, <i>Il teatro antico di Siracusa</i>, 2 voll. (Rimini: Maggioli, 1981)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HT8N5UD2",
+        "year": "1981"
       },
       {
         "author": "Rizzo",
@@ -236,15 +275,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001638",
           "target": "https://biblio.inscriptiones.org/epig10001638"
         },
+        "inscriptionDate": "1923",
         "title": "Il teatro greco di Siracusa",
-        "citation": "<span>G. E. Rizzo, <i>Il teatro greco di Siracusa</i> (Milano-Roma: Casa editrice dàrte Bestetti e Tumminelli, 1923)</span>"
+        "citation": "<span>G. E. Rizzo, <i>Il teatro greco di Siracusa</i> (Milano-Roma: Casa editrice dàrte Bestetti e Tumminelli, 1923)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HK53TEE7",
+        "year": "1923"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -268,27 +310,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -297,24 +321,27 @@
       "who": "#SS"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000405_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Syracusae",
+  "tmNumber": "491616",
   "letterHeights": [],
   "publications": [
-    "Gualtherus, 1624 [1625]",
-    "CIL",
-    "ILS",
-    "Manganaro, 1993",
-    "Agnello and Marchese, 1990, La necropoli tardoromana",
-    "Polacco and Anti, 1981, Il teatro antico di Siracusa",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Dessau, 1892-1916, ILS",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+    "Agnello, Marchese, 1990, La necropoli tardoromana",
+    "Polacco, Anti, 1981, Il teatro antico di Siracusa",
     "Rizzo, 1923, Il teatro greco di Siracusa"
+  ],
+  "zotero": [
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "XHMS9K6S",
+    "RZSFKACR",
+    "JBI7CI5R",
+    "V3MRXEBQ",
+    "HT8N5UD2",
+    "HK53TEE7"
   ],
   "keywords": [
     "isic000405",
@@ -323,12 +350,12 @@
       "_": "draft"
     },
     "building",
-    "marble (white)",
+    "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "siracusa",
     "latin",
     "la"
   ]

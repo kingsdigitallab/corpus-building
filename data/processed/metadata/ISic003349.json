@@ -36,8 +36,15 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine to coarse-grained, veined, white, calcitic, smelly marble, likely Aphrodisian, Naxian, Proconnesian. Optical microscopy: heteroblastic fabric with triple points, strained crystals. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Naxian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Naxian",
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -78,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -86,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "60-65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "65"
       },
       {
         "type": "letterHeight",
@@ -94,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -107,19 +120,21 @@
   },
   "date": {
     "_": "193—197 CE",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 200
   },
   "places": [
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -128,12 +143,15 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Found 2008.06.25 during excavation of road parallel to decumanus maximus, bordering insula III; face-down in re-use in a late-antique tomb",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "On display.",
     "type": "observed",
@@ -150,7 +168,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -190,24 +207,36 @@
         "n": "AE",
         "citedRange": "2011.0436",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2016.0623",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Silvestrini",
@@ -220,28 +249,34 @@
           "_": "https://biblio.inscriptiones.org/epig10001582",
           "target": "https://biblio.inscriptiones.org/epig10001582"
         },
+        "inscriptionDate": "2011",
         "title": "Colonia Septimia Augusta Agrigentinorum",
-        "citation": "<span>Marina Silvestrini, «Colonia Septimia Augusta Agrigentinorum», in <i>Scritti di storia per Mario Pani</i>, a c. di S. Cagnazzi et al. (Bari: Edipuglia, 2011), 455–68</span>"
+        "citation": "<span>Marina Silvestrini, «Colonia Septimia Augusta Agrigentinorum», in <i>Scritti di storia per Mario Pani</i>, a c. di S. Cagnazzi et al. (Bari: Edipuglia, 2011), 455–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JJSA8MMN",
+        "year": "2011"
       },
       {
         "author": "Silvestrini",
         "date": "2016",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/FV8QJ5DU"
+          "target": "https://www.zotero.org/groups/382445/items/FV8QJ5DU"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002604",
           "target": "https://biblio.inscriptiones.org/epig10002604"
         },
+        "inscriptionDate": "2016",
         "title": "Colonia Septimia Augusta Agrigentinorum",
-        "citation": "<span>Marina Silvestrini, «Colonia Septimia Augusta Agrigentinorum», <i>Mare Internum. Archeologia e culture del Mediterraneo</i> 8 (2016): 51–56</span>"
+        "citation": "<span>Marina Silvestrini, «Colonia Septimia Augusta Agrigentinorum», <i>Mare Internum. Archeologia e culture del Mediterraneo</i> 8 (2016): 51–56</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FV8QJ5DU",
+        "year": "2016"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -265,27 +300,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -294,6 +316,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645593",
   "facsimile": {
     "n": "screen",
     "url": "ISic003349_tiled.tif",
@@ -302,13 +325,31 @@
     "desc": "Photo R.J.A. Wilson",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 60
+    },
+    {
+      "atLeast": 60,
+      "atMost": 65
+    },
+    {
+      "atLeast": 65,
+      "atMost": 65
+    }
+  ],
   "publications": [
-    null,
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Silvestrini, 2011, Colonia Septimia Augusta Agrigentinorum",
     "Silvestrini, 2016, Colonia Septimia Augusta Agrigentinorum"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "R46KDTZX",
+    "JJSA8MMN",
+    "FV8QJ5DU"
   ],
   "keywords": [
     "isic003349",
@@ -318,10 +359,10 @@
     },
     "honorific",
     "plaque",
-    "marble",
+    "fine to coarse-grained, veined, white, calcitic, smelly marble, likely aphrodisian, naxian, proconnesian. optical microscopy: heteroblastic fabric with triple points, strained crystals. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy)",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

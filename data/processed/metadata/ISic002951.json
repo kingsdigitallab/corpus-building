@@ -40,7 +40,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -79,7 +82,9 @@
         "from": "line1",
         "to": "line3",
         "h": "40-100",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "100"
       },
       {
         "type": "interlinear",
@@ -94,19 +99,20 @@
     "_": "1st century BCE (Tullio)",
     "notBefore": -100,
     "notAfter": -1,
-    "evidence": "archaeological-context",
-    "precision": "low"
+    "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Cephaloedium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462154"
+      "ref": "http://pleiades.stoa.org/places/462154",
+      "region": "Sicilia"
     },
     {
       "_": "Cefalù",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525041"
+      "ref": "http://sws.geonames.org/2525041",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,12 +121,15 @@
       14.02285
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Cephaloedium",
   "provenanceFound": {
     "_": "South-West necropolis, tomb 508",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "On display.",
     "type": "observed",
@@ -153,7 +162,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
   "repository": {
@@ -193,42 +201,54 @@
         "n": "AE",
         "citedRange": "2009.0442",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "57.0877",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "42.0849b",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Tullio",
@@ -241,8 +261,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001551",
           "target": "https://biblio.inscriptiones.org/epig10001551"
         },
+        "inscriptionDate": "1988-1989",
         "title": "Scavi e ricerche a Cefalù (1984-1988)",
-        "citation": "<span>Amedeo Tullio, «Scavi e ricerche a Cefalù (1984-1988)», <i>Kokalos</i> 34–35, fasc. 2 (1989 1988): 679–95</span>"
+        "citation": "<span>Amedeo Tullio, «Scavi e ricerche a Cefalù (1984-1988)», <i>Kokalos</i> 34–35, fasc. 2 (1989 1988): 679–95</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82IWAJBA",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -255,8 +278,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001508",
           "target": "https://biblio.inscriptiones.org/epig10001508"
         },
+        "inscriptionDate": "1995-1996",
         "title": "Archaeology in Sicily, 1988-1995",
-        "citation": "<span>R.J.A. Wilson, ‘Archaeology in Sicily, 1988-1995’, <i>Archaeological Reports</i> 42 (1996 1995): 59–123</span>"
+        "citation": "<span>R.J.A. Wilson, ‘Archaeology in Sicily, 1988-1995’, <i>Archaeological Reports</i> 42 (1996 1995): 59–123</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPPJMW9F",
+        "year": "1995"
       },
       {
         "author": "Tullio",
@@ -269,8 +295,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001549",
           "target": "https://biblio.inscriptiones.org/epig10001549"
         },
+        "inscriptionDate": "1993",
         "title": "Cefalù",
-        "citation": "<span>Amedeo Tullio, «Cefalù», in <i>Di Terra in Terra. Nuove scoperte archeologiche nella provincia di Palermo</i>, a c. di C.A. di Stefano (Palermo: Museo archeologico regionale di Palermo, 1993), 241–50</span>"
+        "citation": "<span>Amedeo Tullio, «Cefalù», in <i>Di Terra in Terra. Nuove scoperte archeologiche nella provincia di Palermo</i>, a c. di C.A. di Stefano (Palermo: Museo archeologico regionale di Palermo, 1993), 241–50</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RQWVBFIV",
+        "year": "1993"
       },
       {
         "author": "Brugnone",
@@ -282,8 +311,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002116",
           "target": "https://biblio.inscriptiones.org/epig10002116"
         },
+        "inscriptionDate": "2005",
         "title": "Incontri di culture a Cefalù. L'epitafio di Pompeia",
-        "citation": "<span>Antonietta Brugnone, «Incontri di culture a Cefalù. L’epitafio di Pompeia», in <i>Atti del V Congresso Internazionale di Studi Fenici e Punici</i>, a c. di A.S. Giammellaro, vol. 2, 3 voll. (Palermo: Università degli Studi di Palermo, 2005), 849–50</span>"
+        "citation": "<span>Antonietta Brugnone, «Incontri di culture a Cefalù. L’epitafio di Pompeia», in <i>Atti del V Congresso Internazionale di Studi Fenici e Punici</i>, a c. di A.S. Giammellaro, vol. 2, 3 voll. (Palermo: Università degli Studi di Palermo, 2005), 849–50</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZDDSRBHN",
+        "year": "2005"
       },
       {
         "author": "Tullio",
@@ -296,15 +328,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001546",
           "target": "https://biblio.inscriptiones.org/epig10001546"
         },
+        "inscriptionDate": "2005",
         "title": "Presenze puniche nella necropoli ellenistico-romana di Cefalù",
-        "citation": "<span>Amedeo Tullio, «Presenze puniche nella necropoli ellenistico-romana di Cefalù», in <i>Atti del V Congresso Internazionale di Studi Fenici e Punici</i>, a c. di A.S. Giammellaro, vol. 2, 3 voll. (Palermo: Universita degli Studi di Palermo, 2005), 837–47</span>"
+        "citation": "<span>Amedeo Tullio, «Presenze puniche nella necropoli ellenistico-romana di Cefalù», in <i>Atti del V Congresso Internazionale di Studi Fenici e Punici</i>, a c. di A.S. Giammellaro, vol. 2, 3 voll. (Palermo: Universita degli Studi di Palermo, 2005), 837–47</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ASI7X2QE",
+        "year": "2005"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -328,35 +363,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised file from photographs and added images",
-      "when": "2022-03-05",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2026-01-19",
+      "who": "#RC"
     }
   },
+  "tmNumber": "284830",
   "facsimile": {
     "n": "screen",
     "url": "ISic02951_tiled.tif",
@@ -365,10 +398,14 @@
     "desc": "Photo J. Prag, courtesy Museo Mandralisca",
     "surfaceType": "front"
   },
-  "provenance": "Cephaloedium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 100
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Tullio, 1988-1989, Scavi e ricerche a Cefalù (1984-1988)",
@@ -376,6 +413,16 @@
     "Tullio, 1993, Cefalù",
     "Brugnone, 2005, Incontri di culture a Cefalù. L'epitafio di Pompeia",
     "Tullio, 2005, Presenze puniche nella necropoli ellenistico-romana di Cefalù"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "82IWAJBA",
+    "SPPJMW9F",
+    "RQWVBFIV",
+    "ZDDSRBHN",
+    "ASI7X2QE"
   ],
   "keywords": [
     "isic002951",
@@ -388,7 +435,7 @@
     "limestone",
     "cephaloedium",
     "cefalù",
-    "italy",
+    "sicilia",
     "sicily",
     "cefalù",
     "museo mandralisca",

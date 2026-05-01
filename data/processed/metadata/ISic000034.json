@@ -37,9 +37,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/214.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to medium-grained, banded, grey, calcitic, smelly marble, likely Proconnesian. Optical microscopy: heteroblastic fabric with triple points. Digital microscopy: heteroblastic fabric (identification based on XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -86,19 +101,21 @@
   },
   "date": {
     "_": "Imperial",
-    "notBefore": 1,
+    "notBefore": 51,
     "notAfter": 300
   },
   "places": [
     {
       "_": "Panhormus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462410"
+      "ref": "http://pleiades.stoa.org/places/462410",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,11 +124,15 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Seen in the church of S. Maria Marturana by Gualtherus. Subsequently the right hand half was recovered in February 1874 and moved to the museum.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -129,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -169,11 +189,47 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "76",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002388",
+          "target": "https://biblio.inscriptiones.org/epig10002388"
+        },
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "235",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001931",
+          "target": "https://biblio.inscriptiones.org/epig10001931"
+        },
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7311",
+            "_": "7311",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650793"
           }
         },
@@ -183,27 +239,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "34",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -227,20 +292,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -251,8 +302,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -261,6 +313,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491811",
   "facsimile": {
     "n": "screen",
     "url": "ISic000034_tiled.tif",
@@ -269,11 +322,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Panhormus",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "ILMusPalermo"
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1970, ILMusPalermo"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "FZWWPUD6"
   ],
   "keywords": [
     "isic000034",
@@ -283,10 +343,10 @@
     },
     "funerary",
     "sarcophagus",
-    "marble",
+    "fine to medium-grained, banded, grey, calcitic, smelly marble, likely proconnesian. optical microscopy: heteroblastic fabric with triple points. digital microscopy: heteroblastic fabric (identification based on xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -80,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "115",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "115",
+        "atMost": "115"
       },
       {
         "type": "interlinear",
@@ -100,12 +106,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +122,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Recorded by Henry Stevenson junior during his 1882 voyage to Sicily, preserved in Vat. lat. 10574 f.182r; not otherwise recorded/ observed",
     "type": "found",
@@ -121,6 +131,7 @@
     "notAfter": "1882",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -128,16 +139,15 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
   },
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -153,19 +163,24 @@
         "date": "2011-2012",
         "citedRange": "239 G/L1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -184,20 +199,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -209,10 +210,18 @@
       "who": "#JP"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "",
+  "letterHeights": [
+    {
+      "atLeast": 115,
+      "atMost": 115
+    }
+  ],
   "publications": [
-    "Muscolino, 2011-2012"
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "GJKY97S8"
   ],
   "keywords": [
     "isic001878",
@@ -225,7 +234,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "latin",

@@ -37,7 +37,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -97,7 +101,8 @@
     {
       "_": "Castronuovo di Sicilia",
       "type": "modern",
-      "ref": "http://pleiades.stoa.org/places/816414429"
+      "ref": "http://pleiades.stoa.org/places/816414429",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,24 +111,17 @@
       13.60346
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Castronuovo di Sicilia",
   "provenanceFound": null,
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Known since the 17th century; previously in the church of S. Maria dell'Udienza on Colle S. Vitale; Subsequently transferred to the Chiesa Madre of the Holy Trinity in Castronovo, where it is built into the wall.",
     "type": "observed",
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000477_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Castronuovo di Sicilia",
   "repository": "",
@@ -138,21 +136,58 @@
     "type": "edition",
     "bibl": [
       {
-        "type": "corpus",
-        "n": "CIL",
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "268",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "10.7196",
+            "_": "330",
+            "target": "http://arachne.uni-koeln.de/item/buchseite/310974"
+          }
+        },
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
+        "type": "corpus",
+        "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
+        "citedRange": {
+          "ref": {
+            "_": "7196",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Ferrua",
@@ -164,26 +199,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001996",
           "target": "https://biblio.inscriptiones.org/epig10001996"
-        }
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le iscrizioni datate della Sicilia paleocristiana",
+        "citation": "<span>Antonio Ferrua, «Le iscrizioni datate della Sicilia paleocristiana», <i>Kokalos</i> 28–29 (1983 1982): 3–29</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7DDNWD6",
+        "year": "1982"
       },
       {
         "author": "Giustolisi",
         "date": "1999",
         "citedRange": "16 figs.1-2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GGJ4H43M"
+          "target": "https://www.zotero.org/groups/382445/items/GGJ4H43M"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001944",
           "target": "https://biblio.inscriptiones.org/epig10001944"
-        }
+        },
+        "inscriptionDate": "1999",
+        "title": "Petra: atlante delle antiche strutture rupestri dell'alta valle del Platani (Castronovo)",
+        "citation": "<span>V. Giustolisi, <i>Petra: atlante delle antiche strutture rupestri dell’alta valle del Platani (Castronovo)</i> (Palermo: Centro di documentazione e ricerca per la Sicilia antica «Paolo Orsi», 1999)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GGJ4H43M",
+        "year": "1999"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -207,27 +252,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -236,20 +263,21 @@
       "who": "#SS"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000477_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Castronuovo di Sicilia",
+  "tmNumber": "491702",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Ferrua, 1982-1983",
-    "Giustolisi, 1999"
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Ferrua, 1982-1983, Le iscrizioni datate della Sicilia paleocristiana",
+    "Giustolisi, 1999, Petra: atlante delle antiche strutture rupestri dell'alta valle del Platani (Castronovo)"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "Q7DDNWD6",
+    "GGJ4H43M"
   ],
   "keywords": [
     "isic000477",
@@ -261,7 +289,7 @@
     "plaque",
     "stone",
     "castronuovo di sicilia",
-    "italy",
+    "sicilia",
     "sicily",
     "castronuovo di sicilia",
     "latin",

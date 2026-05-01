@@ -30,12 +30,16 @@
   },
   "objectType": {
     "_": "loom weight, of the truncated pyramidal type",
-    "ana": "#loom_weight",
+    "ana": "#object.loom_weight",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/312.html"
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -79,21 +83,23 @@
         "from": "line1",
         "to": "line1",
         "h": "3-5",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "5"
       }
     ]
   },
   "date": {
     "_": "End of the 6th — beginning of the 5th century BCE",
     "notBefore": -520,
-    "notAfter": -480,
-    "precision": "low"
+    "notAfter": -480
   },
   "places": [
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,6 +108,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
     "type": "found",
@@ -113,6 +121,10 @@
       12.84509
     ]
   },
+  "provenanceGeo": [
+    37.9424,
+    12.84509
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -130,7 +142,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "?",
   "repository": {
@@ -169,7 +180,8 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Elymian"
+      "Elymian",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -182,34 +194,40 @@
         "date": "2021",
         "citedRange": "444",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VQEP8IPT"
+          "target": "https://www.zotero.org/groups/382445/items/VQEP8IPT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002320",
           "target": "https://biblio.inscriptiones.org/epig10002320"
         },
+        "inscriptionDate": "2021",
         "title": "Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQEP8IPT",
+        "year": "2021"
       },
       {
-        "author": "Agostiniani, De Cesare, Enegren",
+        "author": "Agostiniani, de Cesare, Landenius Enegren",
         "date": "2014",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZGC2FKXJ"
+          "target": "https://www.zotero.org/groups/382445/items/ZGC2FKXJ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002553",
           "target": "https://biblio.inscriptiones.org/epig10002553"
         },
+        "inscriptionDate": "2014",
         "title": "Garments for a goddess? A propos of an inscribed loom weight from Segesta",
-        "citation": "<span>Luciano Agostiniani, Monica de Cesare, and Hedvig Landenius Enegren, ‘Garments for a Goddess? A Propos of an Inscribed Loom Weight from Segesta’, <i>Rivista Di Archeologia</i> 38 (2014): 57–73</span>"
+        "citation": "<span>Luciano Agostiniani, Monica de Cesare, and Hedvig Landenius Enegren, ‘Garments for a Goddess? A Propos of an Inscribed Loom Weight from Segesta’, <i>Rivista Di Archeologia</i> 38 (2014): 57–73</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZGC2FKXJ",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -233,19 +251,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -257,6 +262,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020440_tiled.tif",
@@ -265,11 +271,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 3,
+      "atMost": 5
+    }
+  ],
   "publications": [
     "Agostiniani, 2021, IAS I, App.",
-    "Agostiniani, De Cesare, Enegren, 2014, Garments for a goddess? A propos of an inscribed loom weight from Segesta"
+    "Agostiniani, de Cesare, Landenius Enegren, 2014, Garments for a goddess? A propos of an inscribed loom weight from Segesta"
+  ],
+  "zotero": [
+    "VQEP8IPT",
+    "ZGC2FKXJ"
   ],
   "keywords": [
     "isic020440",
@@ -281,7 +295,7 @@
     "loom weight, of the truncated pyramidal type",
     "ceramic",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "?",
     "museo archeologico regionale antonino salinas",

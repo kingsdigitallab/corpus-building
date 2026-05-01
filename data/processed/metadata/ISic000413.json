@@ -39,8 +39,18 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/119.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Very fine-grained, homogeneous, white marble, likely Aphrodisian, Lunense, Docimian, Göktepe, Hymettan, Pentelic. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Goktepe #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Lunense",
+      "Docimian",
+      "Göktepe",
+      "Hymettan",
+      "Pentelic"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -100,12 +110,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +126,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "First noted in the musem inventory in the 1880s and CIL 10 (1883)",
     "type": "found",
@@ -121,6 +135,7 @@
     "notAfter": "1883",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "In storage in magazzino C",
     "type": "observed",
@@ -145,7 +160,6 @@
       "surfaceType": "left"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -187,31 +201,41 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7133",
+            "_": "7133",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650767"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0342g",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -223,14 +247,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -254,20 +283,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -278,8 +293,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -288,6 +304,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "175782",
   "facsimile": {
     "n": "screen",
     "url": "ISic000920_tiled.tif",
@@ -296,12 +313,16 @@
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    null,
-    "Manganaro, 1989"
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "R46KDTZX",
+    "EZMBJ6GN"
   ],
   "keywords": [
     "isic000413",
@@ -311,10 +332,10 @@
     },
     "building",
     "architrave",
-    "marble",
+    "very fine-grained, homogeneous, white marble, likely aphrodisian, lunense, docimian, göktepe, hymettan, pentelic. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

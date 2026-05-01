@@ -43,7 +43,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -84,7 +89,9 @@
         "from": "line1",
         "to": "line6",
         "h": "15-20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -97,19 +104,21 @@
   },
   "date": {
     "_": "Second half of 2nd — 3rd century CE (Korhonen)",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 300
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +127,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "First recorded by Torremuzza 1784, who states that it was dug up in Taormina, and then transferred to the Museo Biscari (so also Ferrara). Now in the Museo Civico di Catania",
     "type": "found",
@@ -125,6 +136,7 @@
     "notAfter": "1784",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -150,7 +162,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -199,40 +210,55 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "type": "corpus",
         "n": "IG",
-        "bibl": {
-          "author": "Ferrara",
-          "date": "1829",
-          "citedRange": "390 no.2",
-          "ptr": {
-            "target": "http://zotero.org/groups/382445/items/82T4IWDN"
-          },
-          "ref": {
-            "_": "https://biblio.inscriptiones.org/epig10002005",
-            "target": "https://biblio.inscriptiones.org/epig10002005"
-          }
-        },
         "citedRange": {
           "ref": {
-            "_": "14.0439",
+            "_": "439",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "author": "Kaibel",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
+      },
+      {
+        "author": "Ferrara",
+        "date": "1829",
+        "citedRange": "390 no.2",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/82T4IWDN"
+        },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10002005",
+          "target": "https://biblio.inscriptiones.org/epig10002005"
+        },
+        "inscriptionDate": "1829",
+        "title": "Storia di Catania sino alla fine del secolo XVIII",
+        "citation": "<span>F. Ferrara, <i>Storia di Catania sino alla fine del secolo XVIII</i> (Catania, 1829)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82T4IWDN",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "241",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -240,31 +266,48 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5649b",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5649b",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Rizzo",
         "date": "1904",
         "citedRange": "113",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/D82CQMFK"
+          "target": "https://www.zotero.org/groups/382445/items/D82CQMFK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10003144",
           "target": "https://biblio.inscriptiones.org/epig10003144"
-        }
+        },
+        "inscriptionDate": "1904",
+        "title": "Iscrizioni tauromenitane",
+        "citation": "<span>Giovanni Rizzo, «Iscrizioni tauromenitane», <i>Archivio Storico Messinese</i> 4 (1904): 107–22</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D82CQMFK",
+        "year": "1904"
       },
       {
         "author": "Libertini",
@@ -276,26 +319,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001871",
           "target": "https://biblio.inscriptiones.org/epig10001871"
-        }
+        },
+        "inscriptionDate": "1930",
+        "title": "Il Museo Biscari",
+        "citation": "<span>Guido Libertini, <i>Il Museo Biscari</i> (Milan: Casa editrice D’arte Bestetti e Tuminelli, 1930)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SKUU2R8X",
+        "year": "1930"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "227 G10",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -319,20 +372,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -343,16 +382,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Revised from publications and photograph",
-      "when": "2024-07-30",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2025-12-10",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492871",
   "facsimile": {
     "n": "screen",
     "url": "ISic001264_tiled.tif",
@@ -361,16 +412,31 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2018-01-08",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 20
+    }
+  ],
   "publications": [
-    "Castelli, 1784",
-    "IG",
-    "IMusCatania",
-    "CIG",
-    "Rizzo, 1904",
-    "Libertini, 1930",
-    "Muscolino, 2011-2012"
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Kaibel, 1890, IG",
+    "Ferrara, 1829, Storia di Catania sino alla fine del secolo XVIII",
+    "Korhonen, 2004, IMusCatania",
+    "Boeckh, Franz, 1853, CIG",
+    "Rizzo, 1904, Iscrizioni tauromenitane",
+    "Libertini, 1930, Il Museo Biscari",
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "7PSFHSUH",
+    "Q2SBPG9F",
+    "82T4IWDN",
+    "2EUC82DH",
+    "TQMVHEVL",
+    "D82CQMFK",
+    "SKUU2R8X",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic001264",
@@ -383,7 +449,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

@@ -43,7 +43,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -84,7 +88,9 @@
         "from": "line1",
         "to": "line1",
         "h": "10-22",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "22"
       },
       {
         "type": "interlinear",
@@ -97,19 +103,21 @@
   },
   "date": {
     "_": "later 4th century CE (IG Palermo)",
-    "notBefore": 350,
+    "notBefore": 351,
     "notAfter": 400
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +126,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Found 'vicino lo Stagnone' in June 1773, from the area upslope of the Naumachia.",
     "type": "found",
@@ -128,6 +138,10 @@
       15.2860956
     ]
   },
+  "provenanceGeo": [
+    37.8536778,
+    15.2860956
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -136,7 +150,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -178,23 +191,29 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0447",
+            "_": "447",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "116",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -202,19 +221,31 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "4.9515",
+        "author": "Curtius, Kirchhoff, Roehl",
+        "date": "1877",
+        "citedRange": "9515",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/533T8HNS"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001249",
+          "target": "https://biblio.inscriptiones.org/epig10001249"
+        },
+        "inscriptionDate": "1877",
+        "title": "Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).",
+        "citation": "<span>E. Curtius, A. Kirchhoff, and H. Roehl, <i>Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).</i>, vol. 4, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1877)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/533T8HNS",
+        "year": "1877"
       },
       {
         "author": "Castelli",
@@ -226,19 +257,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Rizzo",
         "date": "1904",
         "citedRange": "117",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/D82CQMFK"
+          "target": "https://www.zotero.org/groups/382445/items/D82CQMFK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10003144",
           "target": "https://biblio.inscriptiones.org/epig10003144"
-        }
+        },
+        "inscriptionDate": "1904",
+        "title": "Iscrizioni tauromenitane",
+        "citation": "<span>Giovanni Rizzo, «Iscrizioni tauromenitane», <i>Archivio Storico Messinese</i> 4 (1904): 107–22</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D82CQMFK",
+        "year": "1904"
       },
       {
         "author": "Ferrua",
@@ -250,7 +291,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001995",
           "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "type": "corpus",
@@ -264,27 +310,35 @@
           "target": "https://biblio.inscriptiones.org/epig10000394"
         },
         "title": "Inscriptiones Graecae Christianae Veteres Occidentis",
+        "author": "Wessel",
         "date": "1989",
-        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>"
+        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9CT5ZWIK",
+        "year": "1989"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "224 G7 fig.8",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -308,20 +362,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -332,27 +372,53 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
       }
     ],
     "change": {
-      "_": "revised from publications",
-      "when": "2024-07-30",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-23",
+      "who": "#ZL"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "491455",
+  "letterHeights": [
+    {
+      "atLeast": 10,
+      "atMost": 22
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusPalermo",
-    "CIG",
-    "Castelli, 1784",
-    "Rizzo, 1904",
-    "Ferrua, 1989",
-    "IGCVO, 1989",
-    "Muscolino, 2011-2012"
+    "Kaibel, 1890, IG",
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Curtius, Kirchhoff, Roehl, 1877, CIG",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Rizzo, 1904, Iscrizioni tauromenitane",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+    "Wessel, 1989, IGCVO",
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F66S4X3M",
+    "533T8HNS",
+    "7PSFHSUH",
+    "D82CQMFK",
+    "759ZXHKQ",
+    "9CT5ZWIK",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic001272",
@@ -365,7 +431,7 @@
     "sandstone",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

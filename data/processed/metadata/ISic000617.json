@@ -36,11 +36,14 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
-    "ana": "#condition.fragment #text_condition.partly_illegible"
+    "ana": "#condition.fragment"
   },
   "dimensions": [
     {
@@ -63,7 +66,9 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.partly_illegible"
+      }
     }
   },
   "handNote": {
@@ -93,12 +98,14 @@
     {
       "_": "Morgantina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462372"
+      "ref": "http://pleiades.stoa.org/places/462372",
+      "region": "Sicilia"
     },
     {
       "_": "Morgantina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524052"
+      "ref": "http://sws.geonames.org/2524052",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,12 +114,15 @@
       14.479485
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Morgantina",
   "provenanceFound": {
     "_": "From the North Stoa of the Agora",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -130,7 +140,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Aidone",
   "repository": {
@@ -175,19 +184,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
-      {
-        "author": "Bell",
-        "date": "2010",
-        "citedRange": "726"
-      }
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -211,20 +221,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -233,10 +229,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -245,6 +237,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "644873",
   "facsimile": {
     "n": "screen",
     "url": "ISic000617_tiled.tif",
@@ -253,11 +246,12 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Morgantina",
   "letterHeights": [],
   "publications": [
-    "Wilson, 1990",
-    "Bell, 2010"
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535"
+  ],
+  "zotero": [
+    "VF9MMBI9"
   ],
   "keywords": [
     "isic000617",
@@ -270,7 +264,7 @@
     "limestone",
     "morgantina",
     "morgantina",
-    "italy",
+    "sicilia",
     "sicily",
     "aidone",
     "museo archeologico di aidone",

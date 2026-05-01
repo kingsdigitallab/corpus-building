@@ -30,8 +30,10 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -68,7 +70,9 @@
         "from": "line1",
         "to": "line4",
         "h": "6-10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "6",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -89,13 +93,15 @@
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -104,6 +110,8 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "Trench (1956) on west side of Temple A",
     "type": "found",
@@ -113,6 +121,10 @@
       14.261263
     ]
   },
+  "provenanceGeo": [
+    38.000628,
+    14.261263
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -130,7 +142,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
   "repository": {
@@ -172,37 +183,42 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Carettoni",
-        "date": "1961",
+        "author": "",
+        "date": "1876-",
         "citedRange": "318 no.12b",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1961",
+        "title": "Notizie degli scavi di antichità",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
-        "author": "Prag and Tigano",
+        "author": "Prag, Tigano",
         "date": "2017",
         "citedRange": "no.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MI64NB9L"
+          "target": "https://www.zotero.org/groups/382445/items/MI64NB9L"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002630",
           "target": "https://biblio.inscriptiones.org/epig10002630"
         },
+        "inscriptionDate": "2017",
         "title": "Alesa Archonidea: il lapidarium",
-        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>"
+        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MI64NB9L",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -226,20 +242,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Davide Massimo",
         "xml:id": "DM",
         "ref": "http://orcid.org/0000-0003-2267-0411"
@@ -250,8 +252,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -260,6 +263,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003658_tiled.tif",
@@ -268,11 +272,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 6,
+      "atMost": 10
+    }
+  ],
   "publications": [
-    "Carettoni, 1961",
-    "Prag and Tigano, 2017, Alesa Archonidea: il lapidarium"
+    "Notizie degli scavi di antichità, 1876-",
+    "Prag, Tigano, 2017, Alesa Archonidea: il lapidarium"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "MI64NB9L"
   ],
   "keywords": [
     "isic003658",
@@ -284,7 +296,7 @@
     "stone",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
     "halaesa",
     "antiquarium e sito archeologico di halaesa",

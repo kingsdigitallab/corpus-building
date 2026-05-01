@@ -40,8 +40,10 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
+    "type": "stone.breccia",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -80,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "120",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "120",
+        "atMost": "120"
       },
       {
         "type": "letterHeight",
@@ -88,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -96,7 +102,9 @@
         "from": "line3",
         "to": "line10",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -116,12 +124,14 @@
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,11 +140,14 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Display no.8",
     "type": "observed",
@@ -145,14 +158,21 @@
   "graphics": [
     {
       "n": "screen",
-      "url": "ISic000812_tiled.tif",
+      "url": "ISic000812_upper_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-18",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000812_main_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-18",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -195,12 +215,18 @@
         "n": "AE",
         "citedRange": "1966.0167",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Barbieri",
@@ -213,8 +239,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002168",
           "target": "https://biblio.inscriptiones.org/epig10002168"
         },
+        "inscriptionDate": "1963",
         "title": "Due cippi di Marsala del IV sec. d.C.",
-        "citation": "<span>G. Barbieri, «Due cippi di Marsala del IV sec. d.C.», <i>Kokalos</i> 9 (1963): 225–52</span>"
+        "citation": "<span>G. Barbieri, «Due cippi di Marsala del IV sec. d.C.», <i>Kokalos</i> 9 (1963): 225–52</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3CP5TSQF",
+        "year": "1963"
       },
       {
         "author": "Calderone",
@@ -227,15 +256,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002099",
           "target": "https://biblio.inscriptiones.org/epig10002099"
         },
+        "inscriptionDate": "1959",
         "title": "Lilybaeum",
-        "citation": "<span>S. Calderone, «Lilybaeum», in <i>Dizionario Epigrafico di Antichità romane</i>, a c. di E. De Ruggerio, vol. 4.34 (Rome: Libreria Angelo Signorelli, 1959), 1069–72</span>"
+        "citation": "<span>S. Calderone, «Lilybaeum», in <i>Dizionario Epigrafico di Antichità romane</i>, a c. di E. De Ruggerio, vol. 4.34 (Rome: Libreria Angelo Signorelli, 1959), 1069–72</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PACIVUJ6",
+        "year": "1959"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -259,49 +291,59 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Oliver Clarke",
+        "xml:id": "OC",
+        "ref": "https://orcid.org/0009-0006-5165-8381"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added pilot bilingualism annotation",
-      "when": "2024-09-24",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-12",
+      "who": "#OC"
     }
   },
+  "tmNumber": "175808",
   "facsimile": {
     "n": "screen",
-    "url": "ISic000812_tiled.tif",
+    "url": "ISic000812_upper_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-18",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 120,
+      "atMost": 120
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    },
+    {
+      "atLeast": 40,
+      "atMost": 40
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Barbieri, 1963, Due cippi di Marsala del IV sec. d.C.",
     "Calderone, 1959, Lilybaeum"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "3CP5TSQF",
+    "PACIVUJ6"
   ],
   "keywords": [
     "isic000812",
@@ -314,7 +356,7 @@
     "stone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo civico di marsala",

@@ -51,7 +51,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -100,7 +105,9 @@
         "from": "line2",
         "to": "line2",
         "h": "21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "21",
+        "atMost": "21"
       },
       {
         "type": "letterHeight",
@@ -108,7 +115,9 @@
         "from": "line3",
         "to": "line3",
         "h": "23-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -116,7 +125,9 @@
         "from": "line4",
         "to": "line4",
         "h": "25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -124,7 +135,9 @@
         "from": "line5",
         "to": "line5",
         "h": "26",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "26"
       },
       {
         "type": "letterHeight",
@@ -140,7 +153,9 @@
         "from": "line1",
         "to": "line2",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -148,7 +163,9 @@
         "from": "line2",
         "to": "line3",
         "h": "7-9",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "7",
+        "atMost": "9"
       },
       {
         "type": "interlinear",
@@ -156,7 +173,9 @@
         "from": "line3",
         "to": "line4",
         "h": "13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "13",
+        "atMost": "13"
       },
       {
         "type": "interlinear",
@@ -164,7 +183,9 @@
         "from": "line4",
         "to": "line5",
         "h": "8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "8",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -172,7 +193,9 @@
         "from": "line5",
         "to": "line6",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       }
     ]
   },
@@ -180,19 +203,20 @@
     "_": "2nd century CE",
     "notBefore": 101,
     "notAfter": 200,
-    "evidence": "lettering, textual-context",
-    "precision": "low"
+    "evidence": "lettering, textual-context"
   },
   "places": [
     {
       "_": "Adranon",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462074"
+      "ref": "http://pleiades.stoa.org/places/462074",
+      "region": "Sicilia"
     },
     {
       "_": "Adrano",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525769"
+      "ref": "http://sws.geonames.org/2525769",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -201,6 +225,8 @@
       14.83283
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Adranon",
   "provenanceFound": {
     "_": "Found during construction work for an irrigation cistern in 1959, within the so-called Dionysian walls, in contrada Mola, ",
     "type": "found",
@@ -215,6 +241,10 @@
       14.8251446
     ]
   },
+  "provenanceGeo": [
+    37.6593098,
+    14.8251446
+  ],
   "provenanceObserved": {
     "_": "Not currently on display; in the local offices of the soprintendenza",
     "type": "observed",
@@ -271,7 +301,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
   "repository": {
@@ -315,12 +344,18 @@
         "n": "AE",
         "citedRange": "1962.0314",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -333,29 +368,35 @@
           "_": "https://biblio.inscriptiones.org/epig10001447",
           "target": "https://biblio.inscriptiones.org/epig10001447"
         },
+        "inscriptionDate": "1961",
         "title": "Iscrizioni di Adrano",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni di Adrano», <i>La Parola del Passato</i> 16 (1961): 126–35</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni di Adrano», <i>La Parola del Passato</i> 16 (1961): 126–35</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6V679NMW",
+        "year": "1961"
       },
       {
         "author": "Prag",
         "date": "2015",
         "citedRange": "325-327 no. 2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SHKXSQLC"
+          "target": "https://www.zotero.org/groups/382445/items/SHKXSQLC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002338",
           "target": "https://biblio.inscriptiones.org/epig10002338"
         },
+        "inscriptionDate": "2015",
         "title": "Epigrafia",
-        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>"
+        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SHKXSQLC",
+        "year": "2015"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -379,27 +420,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -408,6 +436,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "521012",
   "facsimile": {
     "n": "screen",
     "url": "ISic000820_tiled.tif",
@@ -416,12 +445,53 @@
     "desc": "Photo J. Prag",
     "surfaceType": "front"
   },
-  "provenance": "Adranon",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 21,
+      "atMost": 21
+    },
+    {
+      "atLeast": 23,
+      "atMost": 25
+    },
+    {
+      "atLeast": 25,
+      "atMost": 25
+    },
+    {
+      "atLeast": 26,
+      "atMost": 26
+    },
+    {
+      "atLeast": 10,
+      "atMost": 10
+    },
+    {
+      "atLeast": 7,
+      "atMost": 9
+    },
+    {
+      "atLeast": 13,
+      "atMost": 13
+    },
+    {
+      "atLeast": 8,
+      "atMost": 8
+    },
+    {
+      "atLeast": 10,
+      "atMost": 10
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Manganaro, 1961, Iscrizioni di Adrano",
     "Prag, 2015, Epigrafia"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "6V679NMW",
+    "SHKXSQLC"
   ],
   "keywords": [
     "isic000820",
@@ -433,7 +503,7 @@
     "limestone",
     "adranon",
     "adrano",
-    "italy",
+    "sicilia",
     "sicily",
     "adrano",
     "museo archeologico regionale di adrano",

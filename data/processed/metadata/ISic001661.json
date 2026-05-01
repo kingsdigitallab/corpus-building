@@ -1,7 +1,7 @@
 {
   "file": "ISic001661",
   "uri": "ISic001661",
-  "title": "I.Sicily inscription 001661",
+  "title": "Funerary inscription of Magon",
   "status": {
     "_": "draft"
   },
@@ -37,8 +37,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -77,7 +79,9 @@
         "from": "line1",
         "to": "line1",
         "h": "115-160",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "115",
+        "atMost": "160"
       },
       {
         "type": "interlinear",
@@ -98,12 +102,14 @@
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +118,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Foun in excavations of 1974 in the necropolis on via Fante, tomb 7.",
     "type": "found",
@@ -122,6 +130,10 @@
       12.4366276
     ]
   },
+  "provenanceGeo": [
+    37.8054813,
+    12.4366276
+  ],
   "provenanceObserved": {
     "_": "observed on display 2023",
     "type": "observed",
@@ -130,7 +142,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -180,25 +191,31 @@
           "_": "https://biblio.inscriptiones.org/epig10002191",
           "target": "https://biblio.inscriptiones.org/epig10002191"
         },
+        "inscriptionDate": "1993",
         "title": "Appendice C. Un'iscrizione punica dalla necropoli di Lilibeo",
-        "citation": "<span>Maria Giulia Amadasi Guzzo, «Appendice C. Un’iscrizione punica dalla necropoli di Lilibeo», in <i>Lilibeo Punica</i>, a c. di C.A. Di Stefano (Marsala: Centro Socio-Culturale «Luigi Sturzo», 1993), 61</span>"
+        "citation": "<span>Maria Giulia Amadasi Guzzo, «Appendice C. Un’iscrizione punica dalla necropoli di Lilibeo», in <i>Lilibeo Punica</i>, a c. di C.A. Di Stefano (Marsala: Centro Socio-Culturale «Luigi Sturzo», 1993), 61</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8U6I8EV5",
+        "year": "1993"
       },
       {
-        "author": "De Simone",
+        "author": "",
         "date": "2024",
         "citedRange": "285 G6.26 fig.269 and 324 fig.322",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/H5GJ8WQW"
         },
+        "inscriptionDate": "2024",
         "title": "Lilibeo e il Mare. Il museo archeologico regionale di Marsala",
-        "citation": "<span>Enrico Caruso e Maria Grazia Griffo, a c. di, <i>Lilibeo e il Mare. Il museo archeologico regionale di Marsala</i> (Palermo: Regione Siciliana, Assessorato dei Beni Culturali e dell’identita siciliana, 2024)</span>"
+        "citation": "<span>Enrico Caruso e Maria Grazia Griffo, a c. di, <i>Lilibeo e il Mare. Il museo archeologico regionale di Marsala</i> (Palermo: Regione Siciliana, Assessorato dei Beni Culturali e dell’identita siciliana, 2024)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/H5GJ8WQW",
+        "year": "2024"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -222,27 +239,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -251,15 +255,24 @@
       "who": "#JP"
     }
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "tmNumber": "645119",
+  "letterHeights": [
+    {
+      "atLeast": 115,
+      "atMost": 160
+    }
+  ],
   "publications": [
     "Amadasi Guzzo, 1993, Appendice C. Un'iscrizione punica dalla necropoli di Lilibeo",
-    "De Simone, 2024, Lilibeo e il Mare. Il museo archeologico regionale di Marsala"
+    "Lilibeo e il Mare. Il museo archeologico regionale di Marsala, 2024"
+  ],
+  "zotero": [
+    "8U6I8EV5",
+    "H5GJ8WQW"
   ],
   "keywords": [
     "isic001661",
-    "i.sicily inscription 001661",
+    "funerary inscription of magon",
     {
       "_": "draft"
     },
@@ -268,7 +281,7 @@
     "limestone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

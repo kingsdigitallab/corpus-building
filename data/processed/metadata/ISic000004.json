@@ -37,8 +37,15 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine-grained, banded, grey, calcitic, smelly marble, likely Ephesian_scritto, Hymettan, Proconnesian. Optical microscopy: heteroblastic to homeoblastic fabric with fine-grained areas. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Ephesian_scritto #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Ephesian_scritto",
+      "Hymettan",
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -83,7 +90,9 @@
         "from": "line2",
         "to": "line2",
         "h": "45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "45"
       },
       {
         "type": "letterHeight",
@@ -91,7 +100,9 @@
         "from": "line3",
         "to": "line5",
         "h": "35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -104,7 +115,7 @@
   },
   "date": {
     "_": "100—150 CE",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 150,
     "evidence": "lettering"
   },
@@ -112,12 +123,14 @@
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -126,6 +139,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": " Found in contrada Gelofia in 1877, and now on display in the Palermo archaeological museum",
     "type": "found",
@@ -136,6 +151,10 @@
       14.740071
     ]
   },
+  "provenanceGeo": [
+    37.61706,
+    14.740071
+  ],
   "provenanceObserved": {
     "_": "none",
     "type": "observed",
@@ -153,7 +172,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -195,9 +213,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7004",
+            "_": "7004",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650753"
           }
         },
@@ -207,11 +227,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "4",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
@@ -219,7 +246,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002142",
           "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        },
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "type": "corpus",
@@ -231,22 +263,32 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Fiorelli",
-        "title": "NSA",
-        "date": "1877",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "226",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1877",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Libertini",
@@ -258,7 +300,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001874",
           "target": "https://biblio.inscriptiones.org/epig10001874"
-        }
+        },
+        "inscriptionDate": "1926",
+        "title": "Centuripe",
+        "citation": "<span>Guido Libertini, <i>Centuripe</i> (Catania, 1926)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VJZRAI26",
+        "year": "1926"
       },
       {
         "author": "Libertini",
@@ -270,7 +317,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001865",
           "target": "https://biblio.inscriptiones.org/epig10001865"
-        }
+        },
+        "inscriptionDate": "1949",
+        "title": "Iscrizioni Centuripine",
+        "citation": "<span>Guido Libertini, «Iscrizioni Centuripine», <i>Siculorum Gymnasium</i> 2 (1949): 91–97</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQURX85J",
+        "year": "1949"
       },
       {
         "author": "Manganaro",
@@ -282,7 +334,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -294,7 +351,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Biondi",
@@ -306,14 +368,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002664",
           "target": "https://biblio.inscriptiones.org/epig10002664"
-        }
+        },
+        "inscriptionDate": "2010",
+        "title": "Scavi nella proprietà Fiorenza in località Fontanelle (ex feudo Gelofia) e ceramiche di produzione locale.",
+        "citation": "<span>G. Biondi, «Scavi nella proprietà Fiorenza in località Fontanelle (ex feudo Gelofia) e ceramiche di produzione locale.», in <i>Centuripe. Indagini archeologiche e prospettive di ricerca</i>, a c. di G. Biondi (Enna: Consiglio Nazionale delle Ricerche, 2010), 11–34</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X8CHRU4D",
+        "year": "2010"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -337,27 +404,19 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alfredo Tosques",
+        "xml:id": "AT",
+        "ref": "https://orcid.org/0009-0009-2753-4014"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -366,6 +425,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491500",
   "facsimile": {
     "n": "screen",
     "url": "ISic000004_tiled.tif",
@@ -374,18 +434,37 @@
     "desc": "Photo J.Prag, 2022-05-23, courtesy Museo Archeologico Regionale Antonino Salinas",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 45,
+      "atMost": 45
+    },
+    {
+      "atLeast": 35,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    "CIL",
-    "ILMusPalermo",
-    "ILS",
-    "Fiorelli, 1877, NSA",
-    "Libertini, 1926",
-    "Libertini, 1949",
-    "Manganaro, 1988",
-    "Wilson, 1990",
-    "Biondi, 2010"
+    "Mommsen, 1883, CIL",
+    "Bivona, 1970, ILMusPalermo",
+    "Dessau, 1892-1916, ILS",
+    "Notizie degli scavi di antichità, 1876-",
+    "Libertini, 1926, Centuripe",
+    "Libertini, 1949, Iscrizioni Centuripine",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Biondi, 2010, Scavi nella proprietà Fiorenza in località Fontanelle (ex feudo Gelofia) e ceramiche di produzione locale."
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "FZWWPUD6",
+    "XHMS9K6S",
+    "4MCP2PVV",
+    "VJZRAI26",
+    "VQURX85J",
+    "RZSFKACR",
+    "VF9MMBI9",
+    "X8CHRU4D"
   ],
   "keywords": [
     "isic000004",
@@ -395,10 +474,10 @@
     },
     "building",
     "plaque",
-    "marble",
+    "fine-grained, banded, grey, calcitic, smelly marble, likely ephesian_scritto, hymettan, proconnesian. optical microscopy: heteroblastic to homeoblastic fabric with fine-grained areas. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

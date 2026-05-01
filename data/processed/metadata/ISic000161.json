@@ -38,8 +38,17 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine to medium-grained, homogeneous, white, smelly marble, likely Parian-1, Parian-2, Parian-4, Aphrodisian, Ephesian_white. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Ephesian_white",
+    "type": "stone.marble",
+    "subtype": [
+      "Parian-1",
+      "Parian-2",
+      "Parian-4",
+      "Aphrodisian",
+      "Ephesian_white"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +89,9 @@
         "from": "line1",
         "to": "line1",
         "h": "35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       },
       {
         "type": "letterHeight",
@@ -88,7 +99,9 @@
         "from": "line2",
         "to": "line2",
         "h": "26-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "38"
       },
       {
         "type": "letterHeight",
@@ -96,7 +109,9 @@
         "from": "line3",
         "to": "line3",
         "h": "22-28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "22",
+        "atMost": "28"
       },
       {
         "type": "interlinear",
@@ -109,7 +124,7 @@
   },
   "date": {
     "_": "Dated by Bivona between 150 and 250 CE.",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 250,
     "evidence": "lettering"
   },
@@ -117,12 +132,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -131,6 +148,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "A chance find, with three other inscriptions (ISic000161-000164) in Contrada Madonna della Catena, proprieta Gallegra (c.800m outside the city at the time)",
     "type": "found",
@@ -141,6 +160,10 @@
       13.70827
     ]
   },
+  "provenanceGeo": [
+    37.977321,
+    13.70827
+  ],
   "provenanceObserved": {
     "_": "Prag 2022-07-05, on display in the Museo Civico.",
     "type": "observed",
@@ -166,7 +189,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -210,16 +232,24 @@
         "n": "AE",
         "citedRange": "1980.0515",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "82",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -227,7 +257,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Bivona",
@@ -239,14 +274,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002140",
           "target": "https://biblio.inscriptiones.org/epig10002140"
-        }
+        },
+        "inscriptionDate": "1975-1976",
+        "title": "Nuove iscrizioni di Termini Imerese (Palermo)",
+        "citation": "<span>Livia Bivona, «Nuove iscrizioni di Termini Imerese (Palermo)», <i>Atti della Accademia di Scienze, Lettere a Arti di Palermo</i> Ser.4, 35, fasc. 2 (1976 1975): 531–58</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3JCJI9JF",
+        "year": "1975"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -270,20 +310,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -299,16 +325,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy notes",
-      "when": "2024-05-27",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "175697",
   "facsimile": {
     "n": "screen",
     "url": "ISic000161_tiled.tif",
@@ -317,12 +355,29 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-07-10",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 35,
+      "atMost": 35
+    },
+    {
+      "atLeast": 26,
+      "atMost": 38
+    },
+    {
+      "atLeast": 22,
+      "atMost": 28
+    }
+  ],
   "publications": [
-    null,
-    "ILMusTermini",
-    "Bivona, 1975-1976"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1994, ILMusTermini",
+    "Bivona, 1975-1976, Nuove iscrizioni di Termini Imerese (Palermo)"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "JCV85C79",
+    "3JCJI9JF"
   ],
   "keywords": [
     "isic000161",
@@ -332,10 +387,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "fine to medium-grained, homogeneous, white, smelly marble, likely parian-1, parian-2, parian-4, aphrodisian, ephesian_white. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

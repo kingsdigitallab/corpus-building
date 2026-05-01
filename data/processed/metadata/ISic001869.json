@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line3",
         "h": "55-95",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "95"
       },
       {
         "type": "interlinear",
@@ -90,7 +95,7 @@
   },
   "date": {
     "_": "Suggested to be of later Roman date by Orsi on the basis of lettering etc.",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 400,
     "evidence": "lettering"
   },
@@ -98,12 +103,14 @@
     {
       "_": "Kamarina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462126"
+      "ref": "http://pleiades.stoa.org/places/462126",
+      "region": "Sicilia"
     },
     {
       "_": "Santa Croce Camerina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6540853"
+      "ref": "http://sws.geonames.org/6540853",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +119,8 @@
       14.4507
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Kamarina",
   "provenanceFound": {
     "_": "A chance find during the excavations of 1896 by a farmer, found in the water at the mouth of the Hipparis (Forgia).",
     "type": "found",
@@ -122,6 +131,10 @@
       14.4377781
     ]
   },
+  "provenanceGeo": [
+    36.8759983,
+    14.4377781
+  ],
   "provenanceObserved": {
     "_": "None; the stone has not so far been located in the Siracusa museum (now in Camarina?)",
     "type": "observed",
@@ -130,7 +143,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -180,8 +192,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001709",
           "target": "https://biblio.inscriptiones.org/epig10001709"
         },
+        "inscriptionDate": "1896",
         "title": "Sicile",
-        "citation": "<span>Paolo Orsi, « Sicile », <i>Bulletin de Correspondance Hellénique</i> 20 (1896): 399‑400</span>"
+        "citation": "<span>Paolo Orsi, « Sicile », <i>Bulletin de Correspondance Hellénique</i> 20 (1896): 399‑400</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FWX5CWBN",
+        "year": "1896"
       },
       {
         "author": "Orsi",
@@ -194,8 +209,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002750",
           "target": "https://biblio.inscriptiones.org/epig10002750"
         },
+        "inscriptionDate": "1899",
         "title": "Camarina (Campagna archeologica del 1896)",
-        "citation": "<span>Paolo Orsi, «Camarina (Campagna archeologica del 1896)», <i>Monumenti di Antichità</i> 9 (1899): 201–78</span>"
+        "citation": "<span>Paolo Orsi, «Camarina (Campagna archeologica del 1896)», <i>Monumenti di Antichità</i> 9 (1899): 201–78</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ICW2M9P2",
+        "year": "1899"
       },
       {
         "author": "Pace",
@@ -208,15 +226,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001692",
           "target": "https://biblio.inscriptiones.org/epig10001692"
         },
+        "inscriptionDate": "1927",
         "title": "Camarina: topografia, storia, archeologia",
-        "citation": "<span>B. Pace, <i>Camarina: topografia, storia, archeologia</i> (Catania, 1927)</span>"
+        "citation": "<span>B. Pace, <i>Camarina: topografia, storia, archeologia</i> (Catania, 1927)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZJ6KUFMM",
+        "year": "1927"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -235,27 +256,9 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -264,12 +267,22 @@
       "who": "#JP"
     }
   },
-  "provenance": "Kamarina",
-  "letterHeights": [],
+  "tmNumber": "",
+  "letterHeights": [
+    {
+      "atLeast": 55,
+      "atMost": 95
+    }
+  ],
   "publications": [
     "Orsi, 1896, Sicile",
     "Orsi, 1899, Camarina (Campagna archeologica del 1896)",
     "Pace, 1927, Camarina: topografia, storia, archeologia"
+  ],
+  "zotero": [
+    "FWX5CWBN",
+    "ICW2M9P2",
+    "ZJ6KUFMM"
   ],
   "keywords": [
     "isic001869",
@@ -282,7 +295,7 @@
     "limestone",
     "kamarina",
     "santa croce camerina",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

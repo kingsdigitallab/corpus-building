@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble (?)",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
     "cert": "low"
   },
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line4",
         "h": "55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "55"
       },
       {
         "type": "interlinear",
@@ -101,7 +108,8 @@
     {
       "_": "Augusta",
       "type": "modern",
-      "ref": "https://sws.geonames.org/2525646/"
+      "ref": "https://sws.geonames.org/2525646/",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +118,8 @@
       15.22121
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Augusta",
   "provenanceFound": {
     "_": "Acquired in January 1902 from the Mulinello catacomb",
     "type": "found",
@@ -120,6 +130,10 @@
       15.17339
     ]
   },
+  "provenanceGeo": [
+    37.23667,
+    15.17339
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -145,7 +159,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -185,7 +198,7 @@
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -204,20 +217,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -228,8 +227,9 @@
         "ref": "https://orcid.org/0000-0002-7176-2833"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -238,6 +238,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004458_tiled.tif",
@@ -246,9 +247,14 @@
     "desc": "Photo 2017 courtesy Museo Archeologico Regionale Paolo Orsi (Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014)",
     "surfaceType": "front"
   },
-  "provenance": "Augusta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 55,
+      "atMost": 55
+    }
+  ],
   "publications": [],
+  "zotero": [],
   "keywords": [
     "isic004458",
     "i.sicily inscription 004458",
@@ -259,7 +265,7 @@
     "plaque",
     "marble (?)",
     "augusta",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

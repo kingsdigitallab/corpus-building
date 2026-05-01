@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "26-29",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "29"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "26",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "26"
       },
       {
         "type": "letterHeight",
@@ -96,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "26-31",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "31"
       },
       {
         "type": "letterHeight",
@@ -104,7 +115,9 @@
         "from": "line4",
         "to": "line4",
         "h": "25-27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "27"
       },
       {
         "type": "letterHeight",
@@ -112,7 +125,9 @@
         "from": "line5",
         "to": "line5",
         "h": "28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "28",
+        "atMost": "28"
       },
       {
         "type": "interlinear",
@@ -132,12 +147,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -146,6 +163,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "The larger fragment was discovered in 1879 in the ruins of the castle. It is unknown where and when the smaller fragment was found.",
     "type": "found",
@@ -156,6 +175,10 @@
       13.6972583
     ]
   },
+  "provenanceGeo": [
+    37.9886141,
+    13.6972583
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 3.",
     "type": "observed",
@@ -183,7 +206,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -225,24 +247,30 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Fiorelli",
-        "title": "NSA",
-        "date": "1879",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "83",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1879",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7423",
+            "_": "7423",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
@@ -252,11 +280,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "121",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -264,15 +299,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -296,20 +336,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -320,21 +346,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images",
-      "when": "2024-07-26",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285327",
   "facsimile": {
     "n": "screen",
     "url": "ISic000198_tiled.tif",
@@ -343,12 +376,37 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 26,
+      "atMost": 29
+    },
+    {
+      "atLeast": 26,
+      "atMost": 26
+    },
+    {
+      "atLeast": 26,
+      "atMost": 31
+    },
+    {
+      "atLeast": 25,
+      "atMost": 27
+    },
+    {
+      "atLeast": 28,
+      "atMost": 28
+    }
+  ],
   "publications": [
-    "Fiorelli, 1879, NSA",
-    "CIL",
-    "ILMusTermini"
+    "Notizie degli scavi di antichità, 1876-",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000198",
@@ -361,7 +419,7 @@
     "marble",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

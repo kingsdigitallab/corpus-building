@@ -38,8 +38,13 @@
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Strongly altered marble, likely unspecified (identification based on check, check, check, stable isotopes analysis)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -84,7 +89,9 @@
         "from": "line1",
         "to": "line1",
         "h": "58",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "58",
+        "atMost": "58"
       },
       {
         "type": "letterHeight",
@@ -92,7 +99,9 @@
         "from": "line2",
         "to": "line2",
         "h": "48",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "48",
+        "atMost": "48"
       },
       {
         "type": "interlinear",
@@ -105,7 +114,7 @@
   },
   "date": {
     "_": "Manganaro proposed restoring as a dedication to Commodus, but the reading is against this; it has the form of an honorific, however, likely imperial",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 250,
     "evidence": "lettering"
   },
@@ -113,12 +122,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -127,6 +138,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Found in the Theatre, 1841",
     "type": "found",
@@ -137,6 +150,10 @@
       15.292233
     ]
   },
+  "provenanceGeo": [
+    37.852352,
+    15.292233
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -154,7 +171,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -196,9 +212,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.6993",
+            "_": "6993",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650752"
           }
         },
@@ -208,19 +226,47 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0339a",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "75",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -232,14 +278,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -263,20 +314,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -287,8 +324,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -297,6 +335,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "175754",
   "facsimile": {
     "n": "screen",
     "url": "ISic000281_tiled.tif",
@@ -305,12 +344,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo L. Campagna 2004-11-16",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 58,
+      "atMost": 58
+    },
+    {
+      "atLeast": 48,
+      "atMost": 48
+    }
+  ],
   "publications": [
-    "CIL",
-    null,
-    "Manganaro, 1989"
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "R46KDTZX",
+    "RZSFKACR",
+    "EZMBJ6GN"
   ],
   "keywords": [
     "isic000281",
@@ -320,10 +374,10 @@
     },
     "honorific",
     "plaque",
-    "marble",
+    "strongly altered marble, likely unspecified (identification based on check, check, check, stable isotopes analysis)",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

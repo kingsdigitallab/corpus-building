@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line1",
         "h": "170",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "170",
+        "atMost": "170"
       },
       {
         "type": "interlinear",
@@ -97,12 +102,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,6 +118,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found during excavations in Piazza d'Armi, i.e. the ancient forum of Syracuse, in May 1897",
     "type": "found",
@@ -122,6 +131,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.066672,
+    15.285155
+  ],
   "provenanceObserved": {
     "_": "Photographed by Manganaro in the Siracusa museum some time in the 1960s.",
     "type": "observed",
@@ -139,7 +152,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -189,15 +201,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001707",
           "target": "https://biblio.inscriptiones.org/epig10001707"
         },
+        "inscriptionDate": "1900",
         "title": "Frammenti epigrafici sicelioti",
-        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>"
+        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UE3VRJA7",
+        "year": "1900"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -221,20 +236,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -246,6 +247,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001783_tiled.tif",
@@ -254,10 +256,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana (Photograph of G. Manganaro, 1960s)",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 170,
+      "atMost": 170
+    }
+  ],
   "publications": [
     "Orsi, 1900, Frammenti epigrafici sicelioti"
+  ],
+  "zotero": [
+    "UE3VRJA7"
   ],
   "keywords": [
     "isic001783",
@@ -270,7 +279,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -83,7 +86,9 @@
         "from": "line1",
         "to": "line2",
         "h": "65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "65"
       },
       {
         "type": "letterHeight",
@@ -91,7 +96,9 @@
         "from": "line3",
         "to": "line4",
         "h": "55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "55"
       },
       {
         "type": "letterHeight",
@@ -99,7 +106,9 @@
         "from": "line5",
         "to": "line6",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "letterHeight",
@@ -107,7 +116,9 @@
         "from": "line7",
         "to": "line7",
         "h": "25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -121,19 +132,20 @@
   "date": {
     "_": "1st century CE",
     "notBefore": 1,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -142,6 +154,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Recovered c.1960 in course of construction of S. Bambino hospital (so Manganaro)",
     "type": "found",
@@ -152,6 +166,10 @@
       15.0809441
     ]
   },
+  "provenanceGeo": [
+    37.5060446,
+    15.0809441
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -165,10 +183,9 @@
     "geo": null
   },
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -184,14 +201,20 @@
         "n": "AE",
         "citedRange": "1989.0341m",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
-      "",
+      null,
       {
         "author": "Manganaro",
         "date": "1988",
@@ -202,7 +225,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -211,17 +239,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -245,27 +275,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Timothy Smith",
@@ -279,12 +291,34 @@
       "who": "#JP"
     }
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "tmNumber": "175772",
+  "letterHeights": [
+    {
+      "atLeast": 65,
+      "atMost": 65
+    },
+    {
+      "atLeast": 55,
+      "atMost": 55
+    },
+    {
+      "atLeast": 40,
+      "atMost": 40
+    },
+    {
+      "atLeast": 25,
+      "atMost": 25
+    }
+  ],
   "publications": [
-    null,
-    "Manganaro, 1988",
-    "Manganaro, 1989"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "RZSFKACR",
+    "EZMBJ6GN"
   ],
   "keywords": [
     "isic000710",
@@ -297,7 +331,7 @@
     "limestone",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "latin",

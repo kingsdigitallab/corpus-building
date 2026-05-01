@@ -37,7 +37,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -79,7 +84,9 @@
         "from": "line1",
         "to": "line2",
         "h": "35-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -94,19 +101,20 @@
     "_": "1st century BCE (Giannobile, palaeographic)",
     "notBefore": -100,
     "notAfter": -1,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Soluntum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462498"
+      "ref": "http://pleiades.stoa.org/places/462498",
+      "region": "Sicilia"
     },
     {
       "_": "Solunto",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523057"
+      "ref": "http://sws.geonames.org/2523057",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,12 +123,15 @@
       13.53147
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Soluntum",
   "provenanceFound": {
     "_": "From the area of the agora.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "On display.",
     "type": "observed",
@@ -137,7 +148,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Solunto",
   "repository": {
@@ -177,36 +187,39 @@
         "n": "SEG",
         "citedRange": "58.1055.4",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Giannobile",
         "date": "2008",
         "citedRange": "119 no.4 tav.XXd",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/UKG6NGTC"
+          "target": "https://www.zotero.org/groups/382445/items/UKG6NGTC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001951",
           "target": "https://biblio.inscriptiones.org/epig10001951"
         },
+        "inscriptionDate": "2003",
         "title": "Iscrizioni greche inedite di Solunto",
-        "citation": "<span>S. Giannobile, «Iscrizioni greche inedite di Solunto», <i>Kokalos</i> 49 (2008): 117–20</span>"
+        "citation": "<span>S. Giannobile, «Iscrizioni greche inedite di Solunto», <i>Kokalos</i> 49 (2008): 117–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UKG6NGTC",
+        "year": "2008"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -230,20 +243,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -254,16 +253,23 @@
         "ref": "https://orcid.org/0000-0003-3673-587X"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Maria Barbieri encoded text",
-      "when": "2022-10-12",
-      "who": "#MB"
+      "_": "tagged names and persons",
+      "when": "2026-02-11",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "645614",
   "facsimile": {
     "n": "screen",
     "url": "ISic003396_tiled.tif",
@@ -272,11 +278,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Soluntum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 35,
+      "atMost": 40
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Giannobile, 2008, Iscrizioni greche inedite di Solunto"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "UKG6NGTC"
   ],
   "keywords": [
     "isic003396",
@@ -289,7 +303,7 @@
     "limestone",
     "soluntum",
     "solunto",
-    "italy",
+    "sicilia",
     "sicily",
     "solunto",
     "area archeologica e antiquarium di solunto",

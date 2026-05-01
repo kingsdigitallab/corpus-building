@@ -41,9 +41,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble (white)",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Very fine-grained, homogeneous, white, calcitic (with dolomite) marble, likely Pentelic. Optical microscopy: heteroblastic to homeoblastic fabric with triple points. Digital microscopy: homeoblastic to heteroblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic",
+    "type": "stone.marble",
+    "subtype": [
+      "Pentelic"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Mt. Penteli",
+        "target": "https://www.geonames.org/255609/mount-pentelicus.html"
+      },
+      "location": {
+        "geo": "38.08092,23.88291"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -94,19 +109,20 @@
   "date": {
     "_": "4th century CE",
     "notBefore": 301,
-    "notAfter": 400,
-    "precision": "low"
+    "notAfter": 400
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,12 +131,15 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found at Termini Imerese",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -180,38 +198,47 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0339",
+            "_": "339",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "38.0931",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGMusTermini",
+        "author": "Brugnone",
+        "date": "1974",
         "citedRange": "15",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/9WZ7KU5C"
@@ -220,13 +247,17 @@
           "_": "https://biblio.inscriptiones.org/epig10001397",
           "target": "https://biblio.inscriptiones.org/epig10001397"
         },
+        "inscriptionDate": "1974",
         "title": "Iscrizione greche del museo civico di Termini Imerese",
-        "date": "1974",
-        "citation": "<span>Antonietta Brugnone, «Iscrizione greche del museo civico di Termini Imerese», <i>Kokalos</i> 20 (1974): 218–64</span>"
+        "citation": "<span>Antonietta Brugnone, «Iscrizione greche del museo civico di Termini Imerese», <i>Kokalos</i> 20 (1974): 218–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9WZ7KU5C",
+        "year": "1974"
       },
       {
         "type": "corpus",
         "n": "IGRR",
+        "author": "Cagnat, Toutain, Jouguet",
+        "date": "1906-1927",
         "citedRange": "505",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/KSH4D9GK"
@@ -235,9 +266,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001116",
           "target": "https://biblio.inscriptiones.org/epig10001116"
         },
+        "inscriptionDate": "1906",
         "title": "Inscriptiones Graecae ad res Romanas pertinentes",
-        "date": "1906-1927",
-        "citation": "<span>R. Cagnat, J. Toutain, and P. Jouguet, <i>Inscriptiones Graecae ad res Romanas pertinentes</i>, 4 vols (Paris: Ernest Leroux, 1906)</span>"
+        "citation": "<span>R. Cagnat, J. Toutain, and P. Jouguet, <i>Inscriptiones Graecae ad res Romanas pertinentes</i>, 4 vols (Paris: Ernest Leroux, 1906)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/KSH4D9GK",
+        "year": "1906"
       },
       {
         "author": "Romano",
@@ -249,7 +282,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001617",
           "target": "https://biblio.inscriptiones.org/epig10001617"
-        }
+        },
+        "inscriptionDate": "1854",
+        "title": "Antichità inedite di vario genere trovate in Sicilia",
+        "citation": "<span>Baldassare Romano, <i>Antichità inedite di vario genere trovate in Sicilia</i> (Palermo, 1854)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/I5UHF9T7",
+        "year": "1854"
       },
       {
         "author": "Manganaro",
@@ -261,14 +299,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -292,20 +335,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -316,16 +345,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Romeo Gessaga",
+        "xml:id": "RG",
+        "ref": "https://orcid.org/0009-0003-5190-1722"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-18",
+      "who": "#RG"
     }
   },
+  "tmNumber": "284964",
   "facsimile": {
     "n": "screen",
     "url": "ISic001158_tiled.tif",
@@ -334,15 +375,22 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "IGMusTermini, 1974",
-    "IGRR, 1906-1927",
-    "Romano, 1854",
-    "Manganaro, 1988"
+    "Brugnone, 1974, IGMusTermini",
+    "Cagnat, Toutain, Jouguet, 1906-1927, IGRR",
+    "Romano, 1854, Antichità inedite di vario genere trovate in Sicilia",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "9WZ7KU5C",
+    "KSH4D9GK",
+    "I5UHF9T7",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic001158",
@@ -352,10 +400,10 @@
     },
     "funerary",
     "plaque",
-    "marble (white)",
+    "very fine-grained, homogeneous, white, calcitic (with dolomite) marble, likely pentelic. optical microscopy: heteroblastic to homeoblastic fabric with triple points. digital microscopy: homeoblastic to heteroblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

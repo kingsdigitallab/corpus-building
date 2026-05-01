@@ -36,11 +36,18 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/250"
   },
   "material": {
-    "_": "limestone\n                                    ",
-    "ana": "#material.stone.limestone",
+    "_": "limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
       "_": "82",
@@ -48,6 +55,7 @@
       "dimension": "height"
     },
     {
+      "_": "45",
       "unit": "cm",
       "dimension": "width"
     },
@@ -58,12 +66,15 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Text laid out over 6 lines, falling down to the right, and somewhat irregular",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
@@ -230,21 +241,22 @@
     ]
   },
   "date": {
-    "_": "End 6th century BCE, or else first\n                                half of 5th century BCE",
+    "_": "End 6th century BCE, or else first half of 5th century BCE",
     "notBefore": -550,
-    "notAfter": -450,
-    "precision": "low"
+    "notAfter": -451
   },
   "places": [
     {
       "_": "Dianae Fons",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462185"
+      "ref": "http://pleiades.stoa.org/places/462185",
+      "region": "Sicilia"
     },
     {
       "_": "Comiso",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524955"
+      "ref": "http://sws.geonames.org/2524955",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -253,6 +265,8 @@
       14.60731
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Dianae Fons",
   "provenanceFound": {
     "_": "Found in the necropolis of Castiglione",
     "type": "found",
@@ -262,6 +276,10 @@
       14.649813
     ]
   },
+  "provenanceGeo": [
+    36.950591,
+    14.649813
+  ],
   "provenanceObserved": {
     "_": "2014",
     "type": "observed",
@@ -295,7 +313,6 @@
       "surfaceType": "right"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Ragusa",
   "repository": {
@@ -339,34 +356,42 @@
         "n": "SEG",
         "citedRange": "42.0847",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "34.0946",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
+        "author": "Dubois",
+        "date": "1989",
         "citedRange": {
           "ref": {
             "_": "127",
@@ -380,16 +405,18 @@
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "date": "1989",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "type": "archive",
         "author": "Jeffery",
         "citedRange": "J.WC.Kamar.17.p.01-02-03",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ASS38955"
+          "target": "https://www.zotero.org/groups/382445/items/ASS38955"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002295",
@@ -397,42 +424,47 @@
         },
         "title": "Anne Jeffery Archive",
         "date": null,
-        "citation": "<span>L.H. Jeffery, ‘Anne Jeffery Archive’ (CSAD Oxford, n.d.), J.WC.A-K, Anne Jeffery Archive</span>"
+        "citation": "<span>L.H. Jeffery, ‘Anne Jeffery Archive’ (CSAD Oxford, n.d.), J.WC.A-K, Anne Jeffery Archive</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ASS38955",
+        "year": ""
       },
       {
         "n": "LSAG[2]",
-        "author": [
-          "Jeffery",
-          "Johnston"
-        ],
+        "author": "Jeffery, Johnston",
         "date": "1990",
         "citedRange": "276 no.17 pl. 51",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QUWGZA84"
+          "target": "https://www.zotero.org/groups/382445/items/QUWGZA84"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000678",
           "target": "https://biblio.inscriptiones.org/epig10000678"
         },
+        "inscriptionDate": "1990",
         "title": "The local scripts of archaic Greece",
-        "citation": "<span>L.H. Jeffery and A.W. Johnston, <i>The Local Scripts of Archaic Greece</i>, 2nd ed. (Oxford: Clarendon Press, 1990)</span>"
+        "citation": "<span>L.H. Jeffery and A.W. Johnston, <i>The Local Scripts of Archaic Greece</i>, 2nd edn (Oxford: Clarendon Press, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QUWGZA84",
+        "year": "1990"
       },
       {
         "author": "Jeffery",
         "date": "1961",
         "citedRange": "276 no.17 pl.51",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/V6CGSWPS"
+          "target": "https://www.zotero.org/groups/382445/items/V6CGSWPS"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000677",
           "target": "https://biblio.inscriptiones.org/epig10000677"
         },
+        "inscriptionDate": "1961",
         "title": "The Local Scripts of Archaic Greece",
-        "citation": "<span>L.H. Jeffery, <i>The Local Scripts of Archaic Greece</i>, 1st ed. (Oxford, 1961)</span>"
+        "citation": "<span>L.H. Jeffery, <i>The Local Scripts of Archaic Greece</i>, 1st edn (Oxford, 1961)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/V6CGSWPS",
+        "year": "1961"
       },
       {
-        "_": "322\n                        \n                    ",
+        "_": "\n                        322\n                        \n                    ",
         "type": "corpus",
         "n": "GV",
         "ptr": {
@@ -443,10 +475,13 @@
           "target": "https://biblio.inscriptiones.org/epig10001175"
         },
         "title": "Griechische Vers-Inschriften. Bd. 1, Grab - Epigramme",
+        "author": "Peek",
         "date": "1955",
-        "citation": "<span>W. Peek, <i>Griechische Vers-Inschriften. Bd. 1, Grab - Epigramme</i> (Berlin: Akademie-Verlag, 1955)</span>"
+        "citation": "<span>W. Peek, <i>Griechische Vers-Inschriften. Bd. 1, Grab - Epigramme</i> (Berlin: Akademie-Verlag, 1955)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RIH8AQF6",
+        "year": "1955"
       },
-      "CEG 147",
+      null,
       {
         "author": "Di Stefano",
         "date": "1988-1989",
@@ -458,8 +493,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002034",
           "target": "https://biblio.inscriptiones.org/epig10002034"
         },
+        "inscriptionDate": "1988-1989",
         "title": "Indigeni e greci nell'entroterra di Camarina",
-        "citation": "<span>G. Di Stefano, «Indigeni e greci nell’entroterra di Camarina», <i>Kokalos</i> 34–35 (1989 1988): 89–106</span>"
+        "citation": "<span>G. Di Stefano, «Indigeni e greci nell’entroterra di Camarina», <i>Kokalos</i> 34–35 (1989 1988): 89–106</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UBFVKUD2",
+        "year": "1988"
       },
       {
         "author": "Cordano",
@@ -472,23 +510,27 @@
           "_": "https://biblio.inscriptiones.org/epig10001433",
           "target": "https://biblio.inscriptiones.org/epig10001433"
         },
+        "inscriptionDate": "1984",
         "title": "Camarina VII: alcuni documenti iscritti importanti per la storia della città",
-        "citation": "<span>Federica Cordano, «Camarina VII: alcuni documenti iscritti importanti per la storia della città», <i>Bollettino d’Arte</i> Anno 69 vol 26 (1984): 31–56</span>"
+        "citation": "<span>Federica Cordano, «Camarina VII: alcuni documenti iscritti importanti per la storia della città», <i>Bollettino d’Arte</i> Anno 69 vol 26 (1984): 31–56</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/C2PD3D5Q",
+        "year": "1984"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Pugliese Carratelli",
-        "title": "NSA",
-        "date": "1942",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "321-324",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1942",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Guarducci",
@@ -501,43 +543,52 @@
           "_": "https://biblio.inscriptiones.org/epig10001928",
           "target": "https://biblio.inscriptiones.org/epig10001928"
         },
+        "inscriptionDate": "1959-1960",
         "title": "Nuove note di epigrafia siceliota arcaica",
-        "citation": "<span>Margherita Guarducci, «Nuove note di epigrafia siceliota arcaica», <i>Annuario della Scuola Archeologica di Atene e delle Missioni Italiane in Oriente</i> 21–22 (1960 1959): 249–78</span>"
+        "citation": "<span>Margherita Guarducci, «Nuove note di epigrafia siceliota arcaica», <i>Annuario della Scuola Archeologica di Atene e delle Missioni Italiane in Oriente</i> 21–22 (1960 1959): 249–78</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GPUF5NUH",
+        "year": "1959"
       },
       {
         "author": "Di Stefano",
         "date": "1987",
         "citedRange": "186 and Tav.53 fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GEGCK3HG"
+          "target": "https://www.zotero.org/groups/382445/items/GEGCK3HG"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002615",
           "target": "https://biblio.inscriptiones.org/epig10002615"
         },
+        "inscriptionDate": "1987",
         "title": "Il territorio di Camarina in età arcaica",
-        "citation": "<span>G. Di Stefano, «Il territorio di Camarina in età arcaica», <i>Kokalos</i> 33 (1987): 129–207</span>"
+        "citation": "<span>G. Di Stefano, «Il territorio di Camarina in età arcaica», <i>Kokalos</i> 33 (1987): 129–207</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GEGCK3HG",
+        "year": "1987"
       },
       {
         "author": "Di Stefano",
         "date": "2001",
         "citedRange": "62",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/G8SH2ZL7"
+          "target": "https://www.zotero.org/groups/382445/items/G8SH2ZL7"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002607",
           "target": "https://biblio.inscriptiones.org/epig10002607"
         },
+        "inscriptionDate": "2001",
         "title": "Il Museo Archeologico Ibleo di Ragusa",
-        "citation": "<span>Giovanni Di Stefano, <i>Il Museo Archeologico Ibleo di Ragusa</i> (Naples: Electa, 2001)</span>"
+        "citation": "<span>Giovanni Di Stefano, <i>Il Museo Archeologico Ibleo di Ragusa</i> (Naples: Electa, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/G8SH2ZL7",
+        "year": "2001"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -561,35 +612,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "added letterform types to handNote",
-      "when": "2025-04-24",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "644991",
   "facsimile": {
     "n": "screen",
     "url": "ISic001481_tiled.tif",
@@ -598,23 +642,36 @@
     "desc": "Photo J.Prag",
     "surfaceType": "front"
   },
-  "provenance": "Dianae Fons",
   "letterHeights": [],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "IGDS1, 1989",
+    "Dubois, 1989, IGDS1",
     "Jeffery, Anne Jeffery Archive",
-    "Jeffery,Johnston, 1990, The local scripts of archaic Greece",
+    "Jeffery, Johnston, 1990, The local scripts of archaic Greece",
     "Jeffery, 1961, The Local Scripts of Archaic Greece",
-    "GV, 1955",
-    null,
+    "Peek, 1955, GV",
     "Di Stefano, 1988-1989, Indigeni e greci nell'entroterra di Camarina",
     "Cordano, 1984, Camarina VII: alcuni documenti iscritti importanti per la storia della città",
-    "Pugliese Carratelli, 1942, NSA",
+    "Notizie degli scavi di antichità, 1876-",
     "Guarducci, 1959-1960, Nuove note di epigrafia siceliota arcaica",
     "Di Stefano, 1987, Il territorio di Camarina in età arcaica",
     "Di Stefano, 2001, Il Museo Archeologico Ibleo di Ragusa"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "RWXNUFEX",
+    "ASS38955",
+    "QUWGZA84",
+    "V6CGSWPS",
+    "RIH8AQF6",
+    "UBFVKUD2",
+    "C2PD3D5Q",
+    "4MCP2PVV",
+    "GPUF5NUH",
+    "GEGCK3HG",
+    "G8SH2ZL7"
   ],
   "keywords": [
     "isic001481",
@@ -627,7 +684,7 @@
     "limestone",
     "dianae fons",
     "comiso",
-    "italy",
+    "sicilia",
     "sicily",
     "ragusa",
     "museo archeologico ibleo",

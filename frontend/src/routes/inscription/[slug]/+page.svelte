@@ -1,16 +1,19 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
-	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import BibliographyEntry from '$lib/components/BibliographyEntry.svelte';
 	import EditionEntry from '$lib/components/EditionEntry.svelte';
+	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
+	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
+	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
+	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
+	import InscriptionMaterialDetail from '$lib/components/InscriptionMaterialDetail.svelte';
+	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
 	import { onMount } from 'svelte';
-	import { DefaultMarker, MapLibre, Popup } from 'svelte-maplibre';
-	import { goto } from '$app/navigation';
-	import InscriptionEdition from '$lib/components/inscription/InscriptionEdition.svelte';
-	import InscriptionOverview from '$lib/components/inscription/InscriptionOverview.svelte';
-	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
+	import toast, { Toaster } from 'svelte-french-toast';
+	import { DefaultMarker, MapLibre, Marker, Popup } from 'svelte-maplibre';
 
 	/**
 	 * @typedef {Object} Props
@@ -19,11 +22,12 @@
 
 	/** @type {Props} */
 	let { data } = $props();
-	let { slug, metadata, images, html, xml } = data;
+	let { slug, metadata, images, html, xml, isIncomplete, missingFields } = data;
 
-	const editions = $derived(html.divs.find((div) => div.id === 'editions'));
-	const apparatus = $derived(html.divs.find((div) => div.id === 'apparatus'));
-	const translations = $derived(html.divs.filter((div) => div.id === 'translation'));
+	const attribution = $derived(html?.editions?.[0]?.html);
+	const editions = $derived(html?.divs?.find((div) => div.id === 'editions'));
+	const apparatus = $derived(html?.divs?.find((div) => div.id === 'apparatus'));
+	const translations = $derived(html?.divs?.filter((div) => div.id === 'translation') || []);
 
 	/**
 	 * @type {{ id: string; type: string; html: string; }[]}
@@ -44,7 +48,9 @@
 			.sort((a, b) => (a.date || 0) - (b.date || 0))
 	);
 
-	const commentary = $derived(html.divs.find((div) => div.id === 'commentary'));
+	let provenanceMapZoom = $state(7);
+
+	const commentary = $derived(html?.divs?.find((div) => div.id === 'commentary') || null);
 	let activeTranslationTab = $state(0);
 
 	onMount(async () => {
@@ -74,6 +80,44 @@
 			html: translation?.html?.replace(/<h2.*?<\/h2>/g, '') || ''
 		};
 	}
+
+	/**
+	 * Copy citation to clipboard
+	 */
+	async function copyCitation() {
+		try {
+			const citation = generateCitation();
+			await navigator.clipboard.writeText(citation);
+			toast.success('Citation copied to clipboard');
+		} catch (err) {
+			console.error('Failed to copy citation:', err);
+		}
+	}
+
+	/**
+	 * Generate citation text for the inscription
+	 * @returns {string}
+	 */
+	function generateCitation() {
+		const editor = metadata.citation.principal?._ || metadata.citation.editor?._ || null;
+		const contributors =
+			metadata.citation.contributors
+				?.map((c) => c._)
+				.filter(Boolean)
+				.filter((c) => c !== editor) || [];
+
+		const contributorList = contributors.length > 0 ? contributors.join(', ') : '';
+
+		const changeDate = metadata.citation.change?.when
+			? new Date(metadata.citation.change.when).toLocaleDateString()
+			: null;
+
+		return `${editor}${contributorList ? `, ${contributorList}` : ''}.
+${metadata.file}: ${metadata.title}.
+${config.citationTemplate.itemUrl}${metadata.file}.
+${changeDate ? `Last revised: ${changeDate}.` : ''}
+(Stable deposit: ${config.citationTemplate.doi}, ${new Date(config.citationTemplate.doiDate).toLocaleDateString()}).`;
+	}
 </script>
 
 <svelte:window
@@ -92,333 +136,427 @@
 />
 
 <svelte:head>
-	<title>{metadata.file}: {metadata.title} | {config.title}</title>
-	<meta name="description" content={metadata.title} />
+	<title>{metadata.title} ({metadata.file}) | {config.title}</title>
 	<meta
-		name="tags"
-		content="sicily, inscription, {metadata.textLang?._}, {metadata.type?._}, {metadata.objectType
-			?._}"
+		name="description"
+		content={[
+			metadata.title,
+			metadata.places?.[0]?._ ? `Found at ${metadata.places[0]._}` : null,
+			metadata.date?._ ? `Date: ${metadata.date._}` : null,
+			metadata.material?._ ? `Material: ${metadata.material._}` : null,
+			metadata.textLang?._ ? `Language: ${metadata.textLang._}` : null
+		]
+			.filter(Boolean)
+			.join('. ')}
+	/>
+	<meta
+		name="keywords"
+		content="sicily, inscription, {metadata?.textLang?._}, {metadata?.type?._}, {metadata
+			?.objectType?._}"
 	/>
 </svelte:head>
 
+<Toaster />
+
 <article>
-	<InscriptionOverview {slug} {metadata} {images} />
+	{#if isIncomplete}
+		<aside class="incomplete-warning">
+			<h2>⚠️ Incomplete Inscription Data</h2>
+			<output>
+				This inscription <strong>{slug}</strong> has incomplete metadata and cannot be fully displayed.
+				The following required fields are missing:
+			</output>
+			<ul>
+				{#each missingFields as field}
+					<li><code>{field}</code></li>
+				{/each}
+			</ul>
+		</aside>
+	{:else}
+		<InscriptionOverview {slug} {metadata} {images} />
 
-	<section id="content">
-		<InscriptionEdition {slug} {metadata} {xml} {editions} />
+		<section id="content">
+			<InscriptionEdition {slug} {metadata} {xml} {editions} {attribution} />
 
-		{#if apparatus?.html}
-			<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
-		{/if}
+			{#if apparatus?.html}
+				<section id="apparatus">{@html apparatus.html.replace(/h4/g, 'h3')}</section>
+			{/if}
 
-		{#if translationDivs.length}
-			<section id="translations">
-				<h2>Translations</h2>
-				<div class="tabs">
-					{#each translationDivs as div, index}
-						<Button.Root
-							class={activeTranslationTab === index ? 'secondary' : 'secondary-inverse'}
-							onclick={() => (activeTranslationTab = index)}
-						>
-							{div.type}
-						</Button.Root>
-					{/each}
-				</div>
-				<div class="translation-content">
-					{@html translationDivs[activeTranslationTab]?.html || ''}
-				</div>
-			</section>
-		{/if}
-
-		<section id="physical-description">
-			<h2>Physical description</h2>
-			<h3>Support</h3>
-			<dl>
-				<dt>Description</dt>
-				<dd>{metadata.support?._ || metadata.support || config.EMPTY_PLACEHOLDER}</dd>
-				<dt>Object type</dt>
-				{#if metadata.objectType}
-					<dd>
-						{#if metadata.objectType?.ref}
-							<a class="badge strong" href={metadata.objectType.ref}
-								>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
+			{#if translationDivs.length}
+				<section id="translations">
+					<h2>Translations</h2>
+					<div class="tabs">
+						{#each translationDivs as div, index}
+							<Button.Root
+								class={activeTranslationTab === index ? 'secondary' : 'secondary-inverse'}
+								onclick={() => (activeTranslationTab = index)}
 							>
-						{:else}
-							{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}
-						{/if}
-					</dd>
-				{:else}
-					<dd>{config.EMPTY_PLACEHOLDER}</dd>
-				{/if}
-				<dt>Material</dt>
-				<dd>
-					{#if metadata.material?.ref}
-						<a class="badge strong" href={metadata.material.ref}
-							>{metadata.material?._ || config.EMPTY_PLACEHOLDER}</a
-						>
-					{:else}
-						{metadata.material?._ || config.EMPTY_PLACEHOLDER}
-					{/if}
-				</dd>
-				<dt>Condition</dt>
-				{#if metadata.condition?.ana}
-					<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
-				{:else}
-					<dd>{metadata.condition?._ || config.EMPTY_PLACEHOLDER}</dd>
-				{/if}
-				<dt>Dimensions</dt>
-				<dd>
-					{#each metadata.dimensions as dimension, index}
-						{dimension.dimension}: {dimension._}
-						{dimension.unit}{#if index < metadata.dimensions.length - 1},&#160;{/if}
-					{/each}
-				</dd>
-			</dl>
-			<h3>Inscription</h3>
-			<dl>
-				<dt>Layout</dt>
-				<dd>{metadata?.layoutDesc?.layout?.p || config.EMPTY_PLACEHOLDER}</dd>
-				<dt>Text condition</dt>
-				{#if metadata?.layoutDesc?.layout?.damage?.ana}
-					<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
-				{:else}
-					<dd>{metadata?.layoutDesc?.layout?.damage?._ || config.EMPTY_PLACEHOLDER}</dd>
-				{/if}
-				{#if metadata?.handNote?.lettering}
-					<dt>Lettering</dt>
-					<dd>
-						<p>{metadata.handNote.lettering._}</p>
-						{#if metadata.lettering_types}
-							<ul>
-								{#each metadata.lettering_types as aref}
-									<li><a href={aref.target}>{aref._}</a></li>
-								{/each}
-							</ul>
-						{/if}
-					</dd>
-				{/if}
-				<dt>Letter heights</dt>
-				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
-					<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
-				{/each}
-				<dt>Interlinear heights</dt>
-				{#each metadata.handNote.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
-					<dd>
-						{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
-					</dd>
-				{/each}
-			</dl>
-		</section>
+								{div.type}
+							</Button.Root>
+						{/each}
+					</div>
+					<div class="translation-content">
+						{@html translationDivs[activeTranslationTab]?.html || ''}
+					</div>
+				</section>
+			{/if}
 
-		<section id="provenance">
-			<h2>Provenance</h2>
-			<dl>
-				<dt>Place of origin</dt>
-				{#if metadata.places.length}
-					<dd>
-						{metadata.places[0].offset || ''}
-						{#if metadata.places[0]?.ref}
-							<a class="badge strong" href={metadata.places[0].ref}>{metadata.places[0]._}</a>
-						{:else}
-							{metadata.places[0]?._ || config.EMPTY_PLACEHOLDER}
-						{/if}
-					</dd>
-				{:else}
-					<dd>{config.EMPTY_PLACEHOLDER}</dd>
-				{/if}
-				<dt>Provenance found</dt>
-				<dd>{metadata.provenanceFound?._ || config.EMPTY_PLACEHOLDER}</dd>
-				{#if metadata.provenanceFound?.geo}
-					{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
-					<dt>Map</dt>
-					<dd>
-						<MapLibre center={lngLat} zoom={7} class="map" standardControls style={config.mapStyle}>
-							<DefaultMarker {lngLat}>
-								<Popup offset={[0, -10]}>
-									<div class="popup">
-										{metadata.provenanceFound._}
-									</div>
-								</Popup>
-							</DefaultMarker>
-						</MapLibre>
-					</dd>
-				{/if}
-			</dl>
-		</section>
-
-		<section id="current-location">
-			<h2>Current location</h2>
-			{#if metadata.provenanceLost}
-				<p>{metadata.provenanceLost._}</p>
-			{:else}
+			<section id="physical-description">
+				<h2>Physical description</h2>
+				<h3>Support</h3>
 				<dl>
-					<dt>Place</dt>
-					<dd>{metadata.settlement}, {metadata.country}</dd>
-					<dt>Repository</dt>
-					{#if metadata.repository}
+					<dt>Description</dt>
+					<dd>{metadata.support?._ || metadata.support || config.EMPTY_PLACEHOLDER}</dd>
+					<dt>Object type</dt>
+					{#if metadata.objectType}
 						<dd>
-							{#if metadata.repository.museum}
-								<a href={`${base}/museum/${metadata.repository.museum.slug}`}>
-									{metadata.repository.museum.name}
-								</a>
+							{#if metadata.objectType?.ref}
+								<a class="badge strong" href={metadata.objectType.ref}
+									>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
+								>
 							{:else}
-								{metadata.repository._}
-							{/if}
-							{#if metadata.idno}
-								, {metadata.idno._}
+								{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}
 							{/if}
 						</dd>
+					{:else}
+						<dd>{config.EMPTY_PLACEHOLDER}</dd>
 					{/if}
-					<dt>Autopsy</dt>
-					<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
-					{#if metadata?.repository?.museum?.location?.geo}
-						<dt>Map</dt>
-						{@const lngLat = [
-							metadata.repository.museum.location.geo.lon,
-							metadata.repository.museum.location.geo.lat
-						]}
+					<dt>Object condition</dt>
+					{#if metadata.condition?.ana}
+						<dd>{metadata.condition.ana.split('.').slice(1).join(', ')}</dd>
+					{:else}
+						<dd>{metadata.condition?._ || config.EMPTY_PLACEHOLDER}</dd>
+					{/if}
+					<dt>Dimensions</dt>
+					<dd>
+						{#each metadata?.dimensions as dimension, index}
+							{dimension.dimension}: {dimension._}
+							{dimension.unit}{#if index < metadata.dimensions.length - 1},&#160;{/if}
+						{/each}
+					</dd>
+				</dl>
+				<h3>Material</h3>
+				{#if metadata.material}
+					<InscriptionMaterialDetail material={metadata.material} />
+				{/if}
+				<h3>Inscription</h3>
+				<dl>
+					<dt>Layout</dt>
+					<dd>{metadata?.layoutDesc?.layout?.p || config.EMPTY_PLACEHOLDER}</dd>
+					<dt>Text condition</dt>
+					{#if metadata?.layoutDesc?.layout?.damage?.ana}
+						<dd>{metadata.layoutDesc.layout.damage.ana.split('.').slice(1).join(', ')}</dd>
+					{:else}
+						<dd>{metadata?.layoutDesc?.layout?.damage?._ || config.EMPTY_PLACEHOLDER}</dd>
+					{/if}
+
+					{#if metadata?.layoutDesc?.layout?.rs}
+						{@const rs = metadata.layoutDesc.layout.rs}
+						{@const technique = Array.isArray(rs) ? rs[0] : rs}
+						{@const pigment = Array.isArray(rs) ? rs.slice(-1)[0] : null}
+
+						<dt>Technique</dt>
+						<dd><a class="badge strong" href={technique.ref}>{technique._}</a></dd>
+						<dt>Pigment</dt>
+						<dd>{pigment?._ || config.EMPTY_PLACEHOLDER}</dd>
+					{:else}
+						<dt>Technique</dt>
+						<dd>{config.EMPTY_PLACEHOLDER}</dd>
+						<dt>Pigment</dt>
+						<dd>{config.EMPTY_PLACEHOLDER}</dd>
+					{/if}
+
+					<dt>Lettering</dt>
+					<dd>
+						{#if metadata?.handNote?.lettering}
+							<InscriptionLettering
+								lettering={metadata.handNote.lettering}
+								handnoteDesc={html.handnote?.[0]}
+							/>
+						{:else}
+							{config.EMPTY_PLACEHOLDER}
+						{/if}
+					</dd>
+
+					<dt>Letter heights</dt>
+					{#each metadata?.handNote?.dimensions.filter((dim) => dim?.type === 'letterHeight') as dimension}
+						<dd>{dimension.l}: {dimension.h}{dimension.unit}</dd>
+					{/each}
+					<dt>Interlinear heights</dt>
+					{#each metadata?.handNote?.dimensions.filter((dim) => dim?.type === 'interlinear') as dimension}
 						<dd>
+							{dimension.l}: {dimension.h}{dimension.h !== 'not measured' ? dimension.unit : ''}
+						</dd>
+					{/each}
+				</dl>
+			</section>
+
+			<section id="provenance">
+				<h2>Provenance</h2>
+				<dl>
+					<dt>Place of origin</dt>
+					{#if metadata.places.length}
+						{@const cert =
+							metadata.provenanceFound?.cert || metadata.provenanceFound?.geoCert || null}
+						<dd>
+							{metadata.places[0].offset || ''}
+							{#if metadata.places[0]?.ref}
+								<a class="badge strong" href={metadata.places[0].ref}>{metadata.places[0]._}</a>
+							{:else}
+								{metadata.places[0]?._ || config.EMPTY_PLACEHOLDER}
+							{/if}
+							{#if cert}<em>{cert} certainty</em>{/if}
+						</dd>
+					{:else}
+						<dd>{config.EMPTY_PLACEHOLDER}</dd>
+					{/if}
+					<dt>Provenance found</dt>
+					<dd>{metadata.provenanceFound?._ || config.EMPTY_PLACEHOLDER}</dd>
+					{#if metadata.provenanceFound?.geo}
+						{@const lngLat = [metadata.provenanceFound.geo[1], metadata.provenanceFound.geo[0]]}
+						{@const cert =
+							metadata.provenanceFound?.cert || metadata.provenanceFound?.geoCert || null}
+						{@const markerScale = Math.min(2, Math.max(0.5, provenanceMapZoom / 7))}
+						{@const markerClass = cert === 'low' ? 'lg' : cert === 'medium' ? 'md' : 'sm'}
+						<dt>Map</dt>
+						<dd style="--marker-scale: {markerScale}">
 							<MapLibre
 								center={lngLat}
-								zoom={7}
+								bind:zoom={provenanceMapZoom}
 								class="map"
 								standardControls
 								style={config.mapStyle}
 							>
-								<DefaultMarker {lngLat}>
-									<Popup offset={[0, -10]}>
-										<div class="popup">
-											{metadata.repository.museum.name}
-										</div>
-									</Popup>
-								</DefaultMarker>
+								{#if cert}
+									<Marker {lngLat} class="marker {markerClass}">
+										<Popup>
+											<div class="popup">
+												{metadata.provenanceFound._}
+											</div>
+										</Popup>
+									</Marker>
+								{:else}
+									<DefaultMarker {lngLat} class="marker {markerClass}">
+										<Popup>
+											<div class="popup">
+												{metadata.provenanceFound._}
+											</div>
+										</Popup>
+									</DefaultMarker>
+								{/if}
 							</MapLibre>
 						</dd>
 					{/if}
 				</dl>
-			{/if}
-		</section>
-
-		<section id="date">
-			<h2>Date</h2>
-			{metadata.date._} (<InscriptionDate date={metadata.date} />)
-			<dl>
-				<dt>Evidence</dt>
-				<dd>{metadata.date.evidence || config.EMPTY_PLACEHOLDER}</dd>
-			</dl>
-		</section>
-
-		<section id="text-type">
-			<h2>Text type</h2>
-			<p>
-				{#if metadata.type?.ref}
-					<a class="badge strong" href={metadata.type.ref}
-						>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
-					>
-				{:else}
-					{metadata.type?._ || config.EMPTY_PLACEHOLDER}
-				{/if}
-			</p>
-		</section>
-
-		{#if commentary?.html}
-			<section id="commentary">
-				{@html commentary.html}
 			</section>
-		{/if}
 
-		<section id="bibliography">
-			<h2>Bibliography</h2>
-			<dl>
-				<dt>Digital editions</dt>
-				<dd>
-					<ul>
-						{#each metadata.editions as edition}
-							<li><EditionEntry {edition} /></li>
-						{/each}
-					</ul>
-				</dd>
-				{#if bibliographyEdition && bibliographyEdition.length}
-					<dt>Printed editions</dt>
-					<dd>
-						<ul class="bibliography-list">
-							{#each bibliographyEdition as entry}
-								{#if entry}
-									<li>
-										<BibliographyEntry {entry} />
-									</li>
+			<section id="current-location">
+				<h2>Current location</h2>
+				{#if metadata.provenanceLost}
+					<p>{metadata.provenanceLost._}</p>
+				{:else}
+					<dl>
+						<dt>Place</dt>
+						<dd>{metadata.settlement}, {metadata.country}</dd>
+						<dt>Repository</dt>
+						{#if metadata.repository}
+							<dd>
+								{#if metadata.repository.museum}
+									<a href={`${base}/museum/${metadata.repository.museum.slug}`}>
+										{metadata.repository.museum.name}
+									</a>
+								{:else}
+									{metadata.repository._ || config.EMPTY_PLACEHOLDER}
 								{/if}
-							{/each}
-						</ul>
-					</dd>
+							</dd>
+							{#if metadata.idno}
+								<dd>
+									{metadata.idno._}
+								</dd>
+							{/if}
+						{/if}
+						<dt>Autopsy</dt>
+						<dd>{metadata.provenanceObserved?._ || config.EMPTY_PLACEHOLDER}</dd>
+						{#if metadata?.repository?.museum?.location?.geo}
+							<dt>Map</dt>
+							{@const lngLat = [
+								metadata.repository.museum.location.geo.lon,
+								metadata.repository.museum.location.geo.lat
+							]}
+							<dd>
+								<MapLibre
+									center={lngLat}
+									zoom={7}
+									class="map"
+									standardControls
+									style={config.mapStyle}
+								>
+									<DefaultMarker {lngLat}>
+										<Popup offset={[0, -10]}>
+											<div class="popup">
+												{metadata.repository.museum.name}
+											</div>
+										</Popup>
+									</DefaultMarker>
+								</MapLibre>
+							</dd>
+						{/if}
+					</dl>
 				{/if}
-				{#if bibliographyDiscussion?.length}
-					<dt>Discussion</dt>
-					<dd>
-						<ul class="bibliography-list">
-							{#each bibliographyDiscussion as entry}
-								{#if entry}
-									<li>
-										<BibliographyEntry {entry} />
-									</li>
-								{/if}
-							{/each}
-						</ul>
-					</dd>
-				{/if}
-			</dl>
-		</section>
+			</section>
 
-		<section id="citation-and-status">
-			<h2>Citation and editorial status</h2>
-			<dl>
-				<dt>Editor</dt>
-				<dd>
-					{metadata.citation.editor?._ || config.EMPTY_PLACEHOLDER}
-				</dd>
-				<dt>Principal contributor</dt>
-				<dd>
-					{metadata.citation.principal?._ || config.EMPTY_PLACEHOLDER}
-				</dd>
-				<dt>Contributors</dt>
-				<dd>
-					{#if metadata.citation.contributors.length}
-						<ul class="contributors">
-							{#each metadata.citation.contributors as contributor}
-								<li>
-									{#if contributor.ref}
-										<a href={contributor.ref}>{contributor._}</a>
-									{:else}
-										<span>{contributor._}</span>
-									{/if}
-								</li>
-							{/each}
-						</ul>
+			<section id="date">
+				<h2>Date</h2>
+				{metadata.date._} (<InscriptionDate date={metadata.date} />)
+				<dl>
+					<dt>Evidence</dt>
+					<dd>{metadata.date.evidence || config.EMPTY_PLACEHOLDER}</dd>
+				</dl>
+			</section>
+
+			<section id="text-type">
+				<h2>Text type</h2>
+				<p>
+					{#if metadata.type?.ref}
+						<a class="badge strong" href={metadata.type.ref}
+							>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
+						>
 					{:else}
-						{config.EMPTY_PLACEHOLDER}
+						{metadata.type?._ || config.EMPTY_PLACEHOLDER}
 					{/if}
-				</dd>
-				<dt>Last revision</dt>
-				<dd>
-					{metadata.citation.change?.when
-						? new Date(metadata.citation.change.when).toLocaleDateString()
-						: config.EMPTY_PLACEHOLDER}
-				</dd>
-			</dl>
-		</section>
-	</section>
+				</p>
+			</section>
 
-	<section id="page-navigation">
-		<ScrollSpy
-			root="#content"
-			displayStyle="dots"
-			excludeIds={['overview', 'image-viewer', 'content', 'page-navigation']}
-			headingSelectors={['h2']}
-		/>
-	</section>
+			{#if commentary?.html}
+				<section id="commentary">
+					{@html commentary.html}
+				</section>
+			{/if}
+
+			<section id="bibliography">
+				<h2>Bibliography</h2>
+				<dl>
+					<dt>Digital editions</dt>
+					<dd>
+						<ul>
+							{#each metadata.editions as edition}
+								<li><EditionEntry {edition} /></li>
+							{/each}
+						</ul>
+					</dd>
+					{#if bibliographyEdition && bibliographyEdition.length}
+						<dt>Printed editions</dt>
+						<dd>
+							<ul class="bibliography-list">
+								{#each bibliographyEdition as entry}
+									{#if entry}
+										<li>
+											<BibliographyEntry {entry} />
+										</li>
+									{/if}
+								{/each}
+							</ul>
+						</dd>
+					{/if}
+					{#if bibliographyDiscussion?.length}
+						<dt>Discussion</dt>
+						<dd>
+							<ul class="bibliography-list">
+								{#each bibliographyDiscussion as entry}
+									{#if entry}
+										<li>
+											<BibliographyEntry {entry} />
+										</li>
+									{/if}
+								{/each}
+							</ul>
+						</dd>
+					{/if}
+				</dl>
+			</section>
+
+			<section id="citation-and-status">
+				<h2>Citation and editorial status</h2>
+				<dl>
+					<dt>Editor</dt>
+					<dd>
+						{metadata.citation.editor?._ || config.EMPTY_PLACEHOLDER}
+					</dd>
+					<dt>Principal contributor</dt>
+					<dd>
+						{metadata.citation.principal?._ || config.EMPTY_PLACEHOLDER}
+					</dd>
+					<dt>Contributors</dt>
+					<dd>
+						{#if metadata.citation.contributors.length}
+							<ul class="contributors">
+								{#each metadata.citation.contributors as contributor}
+									<li>
+										{#if contributor.ref}
+											<a href={contributor.ref}>{contributor._}</a>
+										{:else}
+											<span>{contributor._}</span>
+										{/if}
+									</li>
+								{/each}
+							</ul>
+						{:else}
+							{config.EMPTY_PLACEHOLDER}
+						{/if}
+					</dd>
+					<dt>Last revision</dt>
+					<dd>
+						{metadata.citation.change?.when
+							? new Date(metadata.citation.change.when).toLocaleDateString()
+							: config.EMPTY_PLACEHOLDER}
+					</dd>
+				</dl>
+				<div class="citation-actions">
+					<Button.Root class="secondary" onclick={copyCitation}>Copy Citation</Button.Root>
+				</div>
+			</section>
+		</section>
+
+		<section id="page-navigation">
+			<ScrollSpy
+				root="#content"
+				displayStyle="dots"
+				excludeIds={['overview', 'image-viewer', 'content', 'page-navigation']}
+				headingSelectors={['h2']}
+			/>
+		</section>
+	{/if}
 </article>
 
 <style>
+	.incomplete-warning {
+		border-radius: var(--radius-2);
+		padding: var(--size-6);
+		margin: var(--size-4);
+	}
+
+	.incomplete-warning h2 {
+		margin-top: 0;
+		max-inline-size: unset;
+	}
+
+	.incomplete-warning output {
+		font-size: 90%;
+		opacity: 60%;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.incomplete-warning ul {
+		margin: var(--size-2) 0;
+		padding-left: var(--size-6);
+	}
+
+	.incomplete-warning code {
+		background-color: var(--color-warning-code-bg, #ffe69c);
+		font-family: var(--font-mono);
+	}
+
 	article {
 		display: grid;
 		gap: var(--size-4);
@@ -453,6 +591,21 @@
 		padding-bottom: var(--size-8);
 	}
 
+	.translation-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-2);
+	}
+
+	:global(.translation-content > :not(.translation-author)) {
+		order: 1;
+	}
+
+	:global(.translation-content > .translation-author) {
+		order: 2;
+		margin-top: var(--size-3);
+	}
+
 	.contributors {
 		display: flex;
 		flex-wrap: wrap;
@@ -474,6 +627,12 @@
 		margin-bottom: var(--size-0);
 	}
 
+	.citation-actions {
+		margin-top: var(--size-4);
+		display: flex;
+		justify-content: flex-start;
+	}
+
 	@media (max-width: 768px) {
 		article {
 			display: block;
@@ -485,5 +644,70 @@
 			height: auto;
 			overflow: visible;
 		}
+	}
+
+	#content :global(a:not(.badge):not(.strong)) {
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+	/**ZL added this for adding underlines to all text links under inscription pages to making them more identifiable without touching the homepage card views */
+
+	#content :global(a[href^='http']:not([href*='isicily']):not(.badge):not([download]))::after {
+		content: '↗';
+		display: inline-block;
+		margin-left: 0.25em;
+		font-size: 0.8em;
+		vertical-align: text-top;
+	}
+
+	:global(.marker) {
+		--marker-size: 12px;
+
+		background-color: var(--blue-10);
+		border-radius: calc(var(--radius-4) * var(--marker-scale));
+		border: none;
+		box-shadow: var(--shadow-1);
+		color: var(--gray-12);
+		cursor: pointer;
+		display: block;
+		font-size: var(--font-size-0);
+		font-weight: var(--font-weight-6);
+		height: calc(var(--marker-size) * var(--marker-scale));
+		line-height: var(--marker-size);
+		opacity: 0.8 !important;
+		padding: 0;
+		text-align: center;
+		transition: ease 0.2s;
+		width: calc(var(--marker-size) * var(--marker-scale));
+	}
+
+	:global(.marker:hover) {
+		filter: brightness(90%);
+		box-shadow: var(--shadow-4);
+	}
+	:global(.marker.sm) {
+		--marker-size: 24px;
+
+		background-color: var(--blue-8);
+	}
+
+	:global(.marker.md) {
+		--marker-size: 36px;
+
+		background-color: var(--blue-6);
+		color: white;
+	}
+
+	:global(.marker.lg) {
+		--marker-size: 64px;
+
+		background-color: var(--blue-4);
+		color: white;
+	}
+
+	:global(.epidoc .line) {
+		/* Prevents long strings in XML display to run out of parent div 
+		See ISic000006 and CU https://app.clickup.com/t/86c7kmmrk */
+		overflow-wrap: break-word;
 	}
 </style>

@@ -69,7 +69,10 @@
   },
   "material": {
     "_": "plaster",
-    "ana": "#material.plaster"
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ]
   },
   "condition": {
     "ana": "#condition.damaged"
@@ -123,7 +126,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -144,12 +149,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -158,6 +165,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "found in situ, San Giovanni catacomb, gallery no. 2, Region N",
     "type": "found",
@@ -165,6 +174,7 @@
     "xml:id": "findspot",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "in situ",
     "type": "observed",
@@ -182,7 +192,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": "San Giovanni catacomb",
@@ -197,54 +206,82 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "104",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0072",
+            "_": "72",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "4.9455",
+        "author": "Curtius, Kirchhoff, Roehl",
+        "date": "1877",
+        "citedRange": "9455",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/533T8HNS"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001249",
+          "target": "https://biblio.inscriptiones.org/epig10001249"
+        },
+        "inscriptionDate": "1877",
+        "title": "Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).",
+        "citation": "<span>E. Curtius, A. Kirchhoff, and H. Roehl, <i>Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).</i>, vol. 4, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1877)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/533T8HNS",
+        "year": "1877"
       },
       {
         "author": "Ferrua",
         "date": "1940",
         "citedRange": "pp. 61-62",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/UC29MPZC"
+          "target": "https://www.zotero.org/groups/382445/items/UC29MPZC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002002",
           "target": "https://biblio.inscriptiones.org/epig10002002"
         },
+        "inscriptionDate": "1940",
         "title": "Nuovi studi nelle catacombe di Siracusa",
-        "citation": "<span>Antonio Ferrua, «Nuovi studi nelle catacombe di Siracusa», <i>Rivista di Archeologia Cristiana</i> 17 (1940): 43–81</span>"
+        "citation": "<span>Antonio Ferrua, «Nuovi studi nelle catacombe di Siracusa», <i>Rivista di Archeologia Cristiana</i> 17 (1940): 43–81</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UC29MPZC",
+        "year": "1940"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -268,20 +305,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -292,16 +315,18 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
       }
     ],
     "change": {
-      "_": "checked against edition, updated encoding, linked to other texts on same support",
-      "when": "2022-08-04",
-      "who": "#SS"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2025-12-04",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "492519",
   "facsimile": {
     "n": "screen",
     "url": "ISic000889_tiled.tif",
@@ -310,12 +335,23 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 50
+    }
+  ],
   "publications": [
-    "IG",
-    "CIG",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Kaibel, 1890, IG",
+    "Curtius, Kirchhoff, Roehl, 1877, CIG",
     "Ferrua, 1940, Nuovi studi nelle catacombe di Siracusa"
+  ],
+  "zotero": [
+    "ZP8DE8KS",
+    "Q2SBPG9F",
+    "533T8HNS",
+    "UC29MPZC"
   ],
   "keywords": [
     "isic000889",
@@ -328,7 +364,7 @@
     "plaster",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "ancient greek",

@@ -40,7 +40,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -81,7 +85,9 @@
         "from": "line1",
         "to": "line3",
         "h": "70-90",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "90"
       },
       {
         "type": "interlinear",
@@ -95,20 +101,21 @@
   "date": {
     "_": "3rd century CE or early 4th century CE (Manganaro)",
     "notBefore": 201,
-    "notAfter": 350,
-    "precision": "low"
+    "notAfter": 350
   },
   "places": [
     {
       "_": "Adranon",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462074",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Adrano",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525769"
+      "ref": "http://sws.geonames.org/2525769",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -117,6 +124,8 @@
       14.83283
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Adranon",
   "provenanceFound": {
     "_": "In situ on the natural rock at Fonte delle Favare, contrada Polichello, 3.5 km NW of the centre of Adrano",
     "type": "found",
@@ -127,6 +136,10 @@
       14.801028
     ]
   },
+  "provenanceGeo": [
+    37.680917,
+    14.801028
+  ],
   "provenanceObserved": {
     "_": "On private property, but generally accessible; one must climb into the spring, however, to read it.",
     "type": "observed",
@@ -184,7 +197,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
   "repository": "",
@@ -201,89 +213,112 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0572",
+            "_": "572",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "42.0820.8",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1962.0394",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "author": "Pirro",
         "date": "1733",
         "citedRange": "594",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZCCYR8S7"
+          "target": "https://www.zotero.org/groups/382445/items/ZCCYR8S7"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002590",
           "target": "https://biblio.inscriptiones.org/epig10002590"
         },
+        "inscriptionDate": "1733",
         "title": "Sicilia sacra disquisitionibus, et notitiis illustrata. ... Editio tertia, emendata, & continuatione aucta cura, et studio ... Antonini Mongitore",
-        "citation": "<span>R Pirro, <i>Sicilia sacra disquisitionibus, et notitiis illustrata. ... Editio tertia, emendata, &#38; continuatione aucta cura, et studio ... Antonini Mongitore</i> (Panormi: apud haeredes Petri Coppulae, 1733)</span>"
+        "citation": "<span>R Pirro, <i>Sicilia sacra disquisitionibus, et notitiis illustrata. ... Editio tertia, emendata, &#38; continuatione aucta cura, et studio ... Antonini Mongitore</i> (Panormi: apud haeredes Petri Coppulae, 1733)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZCCYR8S7",
+        "year": "1733"
       },
       {
         "author": "Amico",
         "date": "1757-1760",
         "citedRange": "vol.III.i, p.42",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/YZEYESTP"
+          "target": "https://www.zotero.org/groups/382445/items/YZEYESTP"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002589",
           "target": "https://biblio.inscriptiones.org/epig10002589"
         },
+        "inscriptionDate": "1757-1760",
         "title": "Lexicon topographicum Siculum",
-        "citation": "<span>V. M. Amico, <i>Lexicon topographicum Siculum</i>, 3 voll. (Panormus, 1757)</span>"
+        "citation": "<span>V. M. Amico, <i>Lexicon topographicum Siculum</i>, 3 voll. (Panormus, 1757)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/YZEYESTP",
+        "year": "1757"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5741",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5741",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Russo",
@@ -296,8 +331,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001615",
           "target": "https://biblio.inscriptiones.org/epig10001615"
         },
+        "inscriptionDate": "1911",
         "title": "Illustrazione storico-archeologica di Adernò",
-        "citation": "<span>S. P. Russo, <i>Illustrazione storico-archeologica di Adernò</i> (Atesa, 1911)</span>"
+        "citation": "<span>S. P. Russo, <i>Illustrazione storico-archeologica di Adernò</i> (Atesa, 1911)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CRSSWMDV",
+        "year": "1911"
       },
       {
         "author": "Orsi",
@@ -310,8 +348,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001707",
           "target": "https://biblio.inscriptiones.org/epig10001707"
         },
+        "inscriptionDate": "1900",
         "title": "Frammenti epigrafici sicelioti",
-        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>"
+        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UE3VRJA7",
+        "year": "1900"
       },
       {
         "author": "Schmoll",
@@ -324,8 +365,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001603",
           "target": "https://biblio.inscriptiones.org/epig10001603"
         },
+        "inscriptionDate": "1958",
         "title": "Die vorgriechischen Sprachen siziliens",
-        "citation": "<span>U. Schmoll, <i>Die vorgriechischen Sprachen siziliens</i> (Wiesbaden: Otto Harrassowitz, 1958)</span>"
+        "citation": "<span>U. Schmoll, <i>Die vorgriechischen Sprachen siziliens</i> (Wiesbaden: Otto Harrassowitz, 1958)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JQNCGI8C",
+        "year": "1958"
       },
       {
         "author": "Soraci",
@@ -338,8 +382,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001571",
           "target": "https://biblio.inscriptiones.org/epig10001571"
         },
+        "inscriptionDate": "1958",
         "title": "Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita",
-        "citation": "<span>R. Soraci, «Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita», <i>Rendiconti dell’Accademia Nazionale dei Lincei. Classe di Scienze morali, storiche e filologiche</i> 7.13 (1958): 251–57</span>"
+        "citation": "<span>R. Soraci, «Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita», <i>Rendiconti dell’Accademia Nazionale dei Lincei. Classe di Scienze morali, storiche e filologiche</i> 7.13 (1958): 251–57</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZXGG3V8Z",
+        "year": "1958"
       },
       {
         "author": "Manganaro",
@@ -352,8 +399,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001447",
           "target": "https://biblio.inscriptiones.org/epig10001447"
         },
+        "inscriptionDate": "1961",
         "title": "Iscrizioni di Adrano",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni di Adrano», <i>La Parola del Passato</i> 16 (1961): 126–35</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni di Adrano», <i>La Parola del Passato</i> 16 (1961): 126–35</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6V679NMW",
+        "year": "1961"
       },
       {
         "author": "Ferrua",
@@ -362,10 +412,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/759ZXHKQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001995",
-          "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/759ZXHKQ",
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "author": "Manganaro",
@@ -378,11 +430,14 @@
           "_": "https://biblio.inscriptiones.org/epig10001830",
           "target": "https://biblio.inscriptiones.org/epig10001830"
         },
+        "inscriptionDate": "1992",
         "title": "Iscrizioni \"rupestri\" di Sicilia",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni “rupestri” di Sicilia», in <i>Rupes loquentes: atti del convegno internazionale di studio sulle iscrizioni rupestri di età romana in Italia. Roma - Bomarzo 13-15.X.1989</i>, a c. di L. Gasperini (Rome: Istituto Italiano per la Storia Antica, 1992), 447–501</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni “rupestri” di Sicilia», in <i>Rupes loquentes: atti del convegno internazionale di studio sulle iscrizioni rupestri di età romana in Italia. Roma - Bomarzo 13-15.X.1989</i>, a c. di L. Gasperini (Rome: Istituto Italiano per la Storia Antica, 1992), 447–501</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UQRFDXEG",
+        "year": "1992"
       },
       {
-        "author": "Albanese",
+        "author": "Albanese Procelli",
         "date": "1991",
         "citedRange": "546 no.2",
         "ptr": {
@@ -392,8 +447,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002196",
           "target": "https://biblio.inscriptiones.org/epig10002196"
         },
+        "inscriptionDate": "1991",
         "title": "Mendolito",
-        "citation": "<span>R.M. Albanese Procelli, «Mendolito», in <i>Bibliografia topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 9 (Pisa: Scuola Normale Superiore, 1991), 545–61</span>"
+        "citation": "<span>R.M. Albanese Procelli, «Mendolito», in <i>Bibliografia topografica della colonizzazione greca in Italia e nelle isole tirreniche</i>, a c. di G. Nenci e G. Vallet, vol. 9 (Pisa: Scuola Normale Superiore, 1991), 545–61</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IVAU3I2N",
+        "year": "1991"
       },
       {
         "author": "Libertini",
@@ -406,32 +464,51 @@
           "_": "https://biblio.inscriptiones.org/epig10001869",
           "target": "https://biblio.inscriptiones.org/epig10001869"
         },
+        "inscriptionDate": "1932",
         "title": "Adranon. Questioni storiche e topografiche",
-        "citation": "<span>Guido Libertini, «Adranon. Questioni storiche e topografiche», <i>Annuario del Regio Liceo-Ginasio “G.Verga” di Adrano</i> 10 (1932): 5–26</span>"
+        "citation": "<span>Guido Libertini, «Adranon. Questioni storiche e topografiche», <i>Annuario del Regio Liceo-Ginasio “G.Verga” di Adrano</i> 10 (1932): 5–26</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ICCT8RK8",
+        "year": "1932"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "271",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "50 no. 333",
+            "_": "333",
             "target": "http://arachne.uni-koeln.de/item/buchseite/310975"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Castelli",
         "date": "1769",
         "citedRange": {
           "ref": {
-            "_": "71 cl. 7 no. 21",
+            "_": "cl. 7 no. 21",
             "target": "http://arachne.uni-koeln.de/item/buchseite/501367"
           }
         },
@@ -441,14 +518,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
         "date": "1784",
         "citedRange": {
           "ref": {
-            "_": "76 cl. 7 no. 22",
+            "_": "cl. 7 no. 22",
             "target": "http://arachne.uni-koeln.de/item/buchseite/501779"
           }
         },
@@ -458,28 +540,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Prag",
         "date": "2015",
         "citedRange": "320-323 no. F, fig. 4-5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SHKXSQLC"
+          "target": "https://www.zotero.org/groups/382445/items/SHKXSQLC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002338",
           "target": "https://biblio.inscriptiones.org/epig10002338"
         },
+        "inscriptionDate": "2015",
         "title": "Epigrafia",
-        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>"
+        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SHKXSQLC",
+        "year": "2015"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -503,24 +593,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -532,6 +604,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "493006",
   "facsimile": {
     "n": "screen",
     "url": "ISic001391_tiled.tif",
@@ -540,28 +613,55 @@
     "desc": "Photo J. Prag",
     "surfaceType": "front"
   },
-  "provenance": "Adranon",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 90
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
     "Bulletin épigraphique, 1888-",
     "Pirro, 1733, Sicilia sacra disquisitionibus, et notitiis illustrata. ... Editio tertia, emendata, & continuatione aucta cura, et studio ... Antonini Mongitore",
     "Amico, 1757-1760, Lexicon topographicum Siculum",
-    "CIG",
+    "Boeckh, Franz, 1853, CIG",
     "Russo, 1911, Illustrazione storico-archeologica di Adernò",
     "Orsi, 1900, Frammenti epigrafici sicelioti",
     "Schmoll, 1958, Die vorgriechischen Sprachen siziliens",
     "Soraci, 1958, Appunti di epigrafia greca e romana relativa alla regione hyblense-inessea-adranita",
     "Manganaro, 1961, Iscrizioni di Adrano",
-    "Ferrua, 1989",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
     "Manganaro, 1992, Iscrizioni \"rupestri\" di Sicilia",
-    "Albanese, 1991, Mendolito",
+    "Albanese Procelli, 1991, Mendolito",
     "Libertini, 1932, Adranon. Questioni storiche e topografiche",
-    "Gualtherus, 1624 [1625]",
-    "Castelli, 1769",
-    "Castelli, 1784",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
     "Prag, 2015, Epigrafia"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "77P5MNIR",
+    "ZCCYR8S7",
+    "YZEYESTP",
+    "TQMVHEVL",
+    "CRSSWMDV",
+    "UE3VRJA7",
+    "JQNCGI8C",
+    "ZXGG3V8Z",
+    "6V679NMW",
+    "759ZXHKQ",
+    "UQRFDXEG",
+    "IVAU3I2N",
+    "ICCT8RK8",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "SHKXSQLC"
   ],
   "keywords": [
     "isic001391",
@@ -574,7 +674,7 @@
     "stone",
     "adranon",
     "adrano",
-    "italy",
+    "sicilia",
     "sicily",
     "adrano",
     "ancient greek",

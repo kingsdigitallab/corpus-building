@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -83,16 +87,16 @@
     ]
   },
   "date": {
-    "_": "\n                                Speculatively, first half of 4th century BCE (Manganaro)",
+    "_": "Speculatively, first half of 4th century BCE (Manganaro)",
     "notBefore": -400,
-    "notAfter": -350,
-    "precision": "low"
+    "notAfter": -351
   },
   "places": [
     {
       "_": "Canicattini Bagni",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525404"
+      "ref": "http://sws.geonames.org/2525404",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -101,12 +105,15 @@
       15.06388
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Canicattini Bagni",
   "provenanceFound": {
     "_": "Contr. Bibia",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -124,16 +131,21 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Canicattini Bagni",
   "repository": "",
   "textLang": {
-    "_": "Possibly Messapic",
+    "_": "Messapic",
     "mainLang": "cms",
-    "cert": "low",
+    "certainty": {
+      "locus": "value",
+      "match": "../@mainLang",
+      "assertedValue": "grc",
+      "desc": "Ancient Greek"
+    },
     "languages": [
-      "Messapic"
+      "Messapic",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -149,15 +161,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001785",
           "target": "https://biblio.inscriptiones.org/epig10001785"
         },
+        "inscriptionDate": "2008",
         "title": "Un cippo fondiario in Messapico da Canicattini Bagni (territorio siracusano)",
-        "citation": "<span>Giacomo Manganaro Perrone, «Un cippo fondiario in Messapico da Canicattini Bagni (territorio siracusano)», <i>Epigraphica</i> 70 (2008): 9–20</span>"
+        "citation": "<span>Giacomo Manganaro Perrone, «Un cippo fondiario in Messapico da Canicattini Bagni (territorio siracusano)», <i>Epigraphica</i> 70 (2008): 9–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FMU88ZQX",
+        "year": "2008"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -181,27 +196,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -210,6 +207,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645588",
   "facsimile": {
     "n": "screen",
     "url": "ISic003343_tiled.tif",
@@ -218,10 +216,12 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Canicattini Bagni",
   "letterHeights": [],
   "publications": [
     "Manganaro Perrone, 2008, Un cippo fondiario in Messapico da Canicattini Bagni (territorio siracusano)"
+  ],
+  "zotero": [
+    "FMU88ZQX"
   ],
   "keywords": [
     "isic003343",
@@ -233,10 +233,10 @@
     "stele",
     "sandstone",
     "canicattini bagni",
-    "italy",
+    "sicilia",
     "sicily",
     "canicattini bagni",
-    "possibly messapic",
+    "messapic",
     "cms"
   ]
 }

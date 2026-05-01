@@ -41,8 +41,20 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/257"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine to medium-grained, banded, white marble, likely Aphrodisian, Parian-1, Parian-2, Parian-3, Parian-4, Thasian-3, Ephesian_scritto, Ephesian_white. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Ephesian_scritto #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Ephesian_white",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-1",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Thasian-3",
+      "Ephesian_scritto",
+      "Ephesian_white"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -82,7 +94,9 @@
         "from": "line1",
         "to": "line8",
         "h": "13-20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "13",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -97,19 +111,20 @@
   "date": {
     "_": "4th century CE or first half of 5th century CE",
     "notBefore": 301,
-    "notAfter": 450,
-    "precision": "low"
+    "notAfter": 450
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,12 +133,15 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found c.1715 in the cloister of the monastery of S.Agata, buried inside a\n                                lead urn containing ashes and burnt bones.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Display, Voci di pietra no.34",
     "type": "observed",
@@ -140,7 +158,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -182,58 +199,76 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0536",
+            "_": "536",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "46.1243",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "187",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "4.9494",
+        "author": "Curtius, Kirchhoff, Roehl",
+        "date": "1877",
+        "citedRange": "9494",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/533T8HNS"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001249",
+          "target": "https://biblio.inscriptiones.org/epig10001249"
+        },
+        "inscriptionDate": "1877",
+        "title": "Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).",
+        "citation": "<span>E. Curtius, A. Kirchhoff, and H. Roehl, <i>Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).</i>, vol. 4, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1877)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/533T8HNS",
+        "year": "1877"
       },
       {
         "author": "Ferrua",
@@ -246,8 +281,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002004",
           "target": "https://biblio.inscriptiones.org/epig10002004"
         },
+        "inscriptionDate": "1938",
         "title": "Osservazioni sulle iscrizioni cristiane catanesi",
-        "citation": "<span>Antonio Ferrua, «Osservazioni sulle iscrizioni cristiane catanesi», <i>Bollettino Storico Catanese</i> 3 (1938): 60–74</span>"
+        "citation": "<span>Antonio Ferrua, «Osservazioni sulle iscrizioni cristiane catanesi», <i>Bollettino Storico Catanese</i> 3 (1938): 60–74</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BPRRV8SB",
+        "year": "1938"
       },
       {
         "author": "Agnello",
@@ -259,7 +297,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002211",
           "target": "https://biblio.inscriptiones.org/epig10002211"
-        }
+        },
+        "inscriptionDate": "1953",
+        "title": "Silloge di iscrizioni paleocristiane della Sicilia",
+        "citation": "<span>S.L. Agnello, <i>Silloge di iscrizioni paleocristiane della Sicilia</i> (Rome, 1953)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D9BZFDDR",
+        "year": "1953"
       },
       {
         "type": "corpus",
@@ -273,8 +316,11 @@
           "target": "https://biblio.inscriptiones.org/epig10001385"
         },
         "title": "Corpus of Jewish Inscriptions",
+        "author": "Frey, Lifshitz",
         "date": "1975",
-        "citation": "<span>J.-B. Frey and B. Lifshitz, <i>Corpus of Jewish Inscriptions</i>, vol. 1 (New York: Ktav Publishing House, Inc., 1975)</span>"
+        "citation": "<span>J.-B. Frey and B. Lifshitz, <i>Corpus of Jewish Inscriptions</i>, vol. 1 (New York: Ktav Publishing House, Inc., 1975)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2MBRZ952",
+        "year": "1975"
       },
       {
         "author": "Ferrua",
@@ -286,7 +332,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001995",
           "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "type": "corpus",
@@ -300,15 +351,18 @@
           "target": "https://biblio.inscriptiones.org/epig10000394"
         },
         "title": "Inscriptiones Graecae Christianae Veteres Occidentis",
+        "author": "Wessel",
         "date": "1989",
-        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>"
+        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9CT5ZWIK",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -332,20 +386,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agod",
         "xml:id": "SA"
       },
@@ -355,16 +395,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2025-12-18",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "492969",
   "facsimile": {
     "n": "screen",
     "url": "ISic001355_tiled.tif",
@@ -373,18 +420,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 13,
+      "atMost": 20
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "IMusCatania",
-    "CIG",
+    "Korhonen, 2004, IMusCatania",
+    "Curtius, Kirchhoff, Roehl, 1877, CIG",
     "Ferrua, 1938, Osservazioni sulle iscrizioni cristiane catanesi",
-    "Agnello, 1953",
-    "CIJ2, 1975",
-    "Ferrua, 1989",
-    "IGCVO, 1989"
+    "Agnello, 1953, Silloge di iscrizioni paleocristiane della Sicilia",
+    "Frey, Lifshitz, 1975, CIJ2",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+    "Wessel, 1989, IGCVO"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "2EUC82DH",
+    "533T8HNS",
+    "BPRRV8SB",
+    "D9BZFDDR",
+    "2MBRZ952",
+    "759ZXHKQ",
+    "9CT5ZWIK"
   ],
   "keywords": [
     "isic001355",
@@ -394,10 +456,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "fine to medium-grained, banded, white marble, likely aphrodisian, parian-1, parian-2, parian-3, parian-4, thasian-3, ephesian_scritto, ephesian_white. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

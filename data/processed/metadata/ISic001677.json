@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -70,7 +75,38 @@
     }
   },
   "handNote": {
-    "lettering": "Large plain letters without serifs on the flat surface, smaller but similar on the vertical face; alpha is broad with a straight bar; pi has verticals of equal length and there is no extension of the horizontal beyond the verticals.",
+    "lettering": [
+      "Large plain letters without serifs on the flat surface, smaller but similar on the vertical face; alpha is broad with a straight bar; pi has verticals of equal length and there is no extension of the horizontal beyond the verticals.",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html"
+          },
+          {
+            "_": "Α type1.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.3.html"
+          },
+          {
+            "_": "Π type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type1.html"
+          },
+          {
+            "_": "Π type1.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type1.1.html"
+          },
+          {
+            "_": "Π type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type2.html"
+          },
+          {
+            "_": "Π type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type2.1.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -92,12 +128,14 @@
       "_": "Ietas",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462258",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Monte Iato",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524540"
+      "ref": "http://sws.geonames.org/2524540",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,6 +144,8 @@
       13.198199
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Ietas",
   "provenanceFound": {
     "_": "Identified on a preserved seat of the theatre during the excavations of 1986",
     "type": "found",
@@ -117,6 +157,10 @@
       13.197898
     ]
   },
+  "provenanceGeo": [
+    37.967621,
+    13.197898
+  ],
   "provenanceObserved": {
     "_": "in situ",
     "type": "observed",
@@ -158,7 +202,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
   "repository": {
@@ -181,7 +224,10 @@
           "lon": 13.197536
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462258"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462258"
+      }
     }
   },
   "idno": {
@@ -202,21 +248,24 @@
         "date": "1986",
         "citedRange": "29-30 with fig. 3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/N52H9DRN"
+          "target": "https://www.zotero.org/groups/382445/items/N52H9DRN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001915",
           "target": "https://biblio.inscriptiones.org/epig10001915"
         },
+        "inscriptionDate": "1986",
         "title": "Monte Iato: la sedicesima campagna di scavo",
-        "citation": "<span>Hans Peter Isler, «Monte Iato: la sedicesima campagna di scavo», <i>Sicilia Archeologica</i> 19, fasc. 62 (1986): 29–48</span>"
+        "citation": "<span>Hans Peter Isler, «Monte Iato: la sedicesima campagna di scavo», <i>Sicilia Archeologica</i> 19, fasc. 62 (1986): 29–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/N52H9DRN",
+        "year": "1986"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      "\n\t       "
+      null
     ]
   },
   "citation": {
@@ -240,20 +289,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -262,16 +297,23 @@
         "xml:id": "MMohr"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag created file from template based upon publication and information/photographs provided by M. Mohr",
-      "when": "2021-05-20",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001677_tiled.tif",
@@ -280,10 +322,12 @@
     "desc": "Photo courtesy Zurich Ietas excavations",
     "surfaceType": "front"
   },
-  "provenance": "Ietas",
   "letterHeights": [],
   "publications": [
     "Isler, 1986, Monte Iato: la sedicesima campagna di scavo"
+  ],
+  "zotero": [
+    "N52H9DRN"
   ],
   "keywords": [
     "isic001677",
@@ -296,7 +340,7 @@
     "limestone",
     "ietas",
     "monte iato",
-    "italy",
+    "sicilia",
     "sicily",
     "san cipirello",
     "area archeologica del monte iato",

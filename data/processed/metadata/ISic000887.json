@@ -39,7 +39,10 @@
   },
   "material": {
     "_": "plaster",
-    "ana": "#material.plaster",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/126.html"
   },
   "condition": "",
@@ -87,20 +90,21 @@
   },
   "date": {
     "_": "4th-5th century CE",
-    "notBefore": 300,
-    "notAfter": 500,
-    "precision": "low"
+    "notBefore": 301,
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,12 +113,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Crypts of D.Ioanni et D.Luciae",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -132,7 +139,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": "",
@@ -149,38 +155,49 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0070",
+            "_": "70",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "4.9458",
+        "author": "Curtius, Kirchhoff, Roehl",
+        "date": "1877",
+        "citedRange": "9458",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/533T8HNS"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001249",
+          "target": "https://biblio.inscriptiones.org/epig10001249"
+        },
+        "inscriptionDate": "1877",
+        "title": "Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).",
+        "citation": "<span>E. Curtius, A. Kirchhoff, and H. Roehl, <i>Corpus inscriptionum Graecarum IV. Pars XXXIX. Inscriptiones locorum incertorum. Pars XL. Inscriptiones christianae. Indices (1877).</i>, vol. 4, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1877)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/533T8HNS",
+        "year": "1877"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -204,20 +221,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -226,10 +229,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -238,6 +237,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "492517",
   "facsimile": {
     "n": "screen",
     "url": "ISic000887_tiled.tif",
@@ -246,11 +246,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "CIG"
+    "Kaibel, 1890, IG",
+    "Curtius, Kirchhoff, Roehl, 1877, CIG"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "533T8HNS"
   ],
   "keywords": [
     "isic000887",
@@ -263,7 +266,7 @@
     "plaster",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "ancient greek",

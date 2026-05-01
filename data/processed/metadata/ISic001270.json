@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -82,7 +86,9 @@
         "from": "line1",
         "to": "line2",
         "h": "23",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "23"
       },
       {
         "type": "interlinear",
@@ -102,12 +108,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +124,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Following Crispi, Kaibel notes that it comes from Taormina, not Siracusa (where catalogue attributes it to catacomb of San Giovanni)",
     "type": "found",
@@ -123,6 +133,7 @@
     "notAfter": "1823",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -131,7 +142,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -181,39 +191,49 @@
           "_": "https://biblio.inscriptiones.org/epig10002230",
           "target": "https://biblio.inscriptiones.org/epig10002230"
         },
+        "inscriptionDate": "1823",
         "title": "Iscrizioni sepolcrali greche appartenenti all'epoca cristiana, interpetrate ed illustrate",
-        "citation": "<span>Giuseppe Crispi, «Iscrizioni sepolcrali greche appartenenti all’epoca cristiana, interpetrate ed illustrate», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 4 (1823): 259–73</span>"
+        "citation": "<span>Giuseppe Crispi, «Iscrizioni sepolcrali greche appartenenti all’epoca cristiana, interpetrate ed illustrate», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 4 (1823): 259–73</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F8E6LSTF",
+        "year": "1823"
       },
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0445",
+            "_": "445",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "author": "Orsi",
         "date": "2018",
         "citedRange": "Tacc. 1, p. 97",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RGRSRUHK"
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002617",
           "target": "https://biblio.inscriptiones.org/epig10002617"
         },
+        "inscriptionDate": "2018",
         "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>"
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       },
       {
         "author": "Ferrua",
@@ -225,52 +245,70 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001995",
           "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "author": "Rizzo",
         "date": "1904",
         "citedRange": "114",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/D82CQMFK"
+          "target": "https://www.zotero.org/groups/382445/items/D82CQMFK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10003144",
           "target": "https://biblio.inscriptiones.org/epig10003144"
-        }
+        },
+        "inscriptionDate": "1904",
+        "title": "Iscrizioni tauromenitane",
+        "citation": "<span>Giovanni Rizzo, «Iscrizioni tauromenitane», <i>Archivio Storico Messinese</i> 4 (1904): 107–22</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D82CQMFK",
+        "year": "1904"
       },
       {
         "author": "Wessel",
         "date": "1989",
         "citedRange": "302 no.1463",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/9CT5ZWIK"
+          "target": "https://www.zotero.org/groups/382445/items/9CT5ZWIK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000394",
           "target": "https://biblio.inscriptiones.org/epig10000394"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptiones Graecae Christianae Veteres Occidentis",
-        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>"
+        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9CT5ZWIK",
+        "year": "1989"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "235 G25",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -294,20 +332,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -318,26 +342,46 @@
         "ref": "https://orcid.org/0000-0003-3673-587X"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised metadata",
-      "when": "2024-07-30",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2025-12-10",
+      "who": "#RC"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "492877",
+  "letterHeights": [
+    {
+      "atLeast": 23,
+      "atMost": 23
+    }
+  ],
   "publications": [
     "Crispi, 1823, Iscrizioni sepolcrali greche appartenenti all'epoca cristiana, interpetrate ed illustrate",
-    "IG",
+    "Kaibel, 1890, IG",
     "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-    "Ferrua, 1989",
-    "Rizzo, 1904",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+    "Rizzo, 1904, Iscrizioni tauromenitane",
     "Wessel, 1989, Inscriptiones Graecae Christianae Veteres Occidentis",
-    "Muscolino, 2011-2012"
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "F8E6LSTF",
+    "Q2SBPG9F",
+    "RGRSRUHK",
+    "759ZXHKQ",
+    "D82CQMFK",
+    "9CT5ZWIK",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic001270",
@@ -350,7 +394,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

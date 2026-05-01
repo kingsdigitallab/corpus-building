@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +80,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -91,20 +96,21 @@
   "date": {
     "_": "Late 2nd century BCE (letter form dating of Giannobile)",
     "notBefore": -150,
-    "notAfter": -100,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Soluntum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462498"
+      "ref": "http://pleiades.stoa.org/places/462498",
+      "region": "Sicilia"
     },
     {
       "_": "Solanto",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8951582"
+      "ref": "http://sws.geonames.org/8951582",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,6 +119,8 @@
       13.53147
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Soluntum",
   "provenanceFound": {
     "_": "Found in re-use in a wall of a house on via Castello 7, Solanto",
     "type": "found",
@@ -122,6 +130,10 @@
       13.542245
     ]
   },
+  "provenanceGeo": [
+    38.076501,
+    13.542245
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -139,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Solanto",
   "repository": {
@@ -161,48 +172,57 @@
         "n": "AE",
         "citedRange": "2007.0681",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "58.1055.6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Giannobile",
         "date": "2008",
         "citedRange": "119 no.6 tav.XXf",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/UKG6NGTC"
+          "target": "https://www.zotero.org/groups/382445/items/UKG6NGTC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001951",
           "target": "https://biblio.inscriptiones.org/epig10001951"
         },
+        "inscriptionDate": "2003",
         "title": "Iscrizioni greche inedite di Solunto",
-        "citation": "<span>S. Giannobile, «Iscrizioni greche inedite di Solunto», <i>Kokalos</i> 49 (2008): 117–20</span>"
+        "citation": "<span>S. Giannobile, «Iscrizioni greche inedite di Solunto», <i>Kokalos</i> 49 (2008): 117–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UKG6NGTC",
+        "year": "2008"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -226,20 +246,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -248,10 +254,6 @@
         "_": "Maria Barbieri",
         "xml:id": "MB",
         "ref": "https://orcid.org/0000-0003-3673-587X"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -260,6 +262,7 @@
       "who": "#MB"
     }
   },
+  "tmNumber": "491427",
   "facsimile": {
     "n": "screen",
     "url": "ISic003392_tiled.tif",
@@ -268,12 +271,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Soluntum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 70
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Giannobile, 2008, Iscrizioni greche inedite di Solunto"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "UKG6NGTC"
   ],
   "keywords": [
     "isic003392",
@@ -286,7 +298,7 @@
     "limestone",
     "soluntum",
     "solanto",
-    "italy",
+    "sicilia",
     "sicily",
     "solanto",
     "private house",

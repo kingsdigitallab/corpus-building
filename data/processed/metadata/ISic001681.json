@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -93,19 +96,20 @@
     "_": "2nd century BCE",
     "notBefore": -200,
     "notAfter": -101,
-    "evidence": "archaeological-context, lettering",
-    "precision": "low"
+    "evidence": "archaeological-context, lettering"
   },
   "places": [
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     },
     {
       "_": "Segesta",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523171"
+      "ref": "http://sws.geonames.org/2523171",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +118,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found in May 2006 in a collapse layer (US 40500) relating to the mediaeval room U, on the west wing of the agora stoa",
     "type": "found",
@@ -124,6 +130,10 @@
       12.842462
     ]
   },
+  "provenanceGeo": [
+    37.939781,
+    12.842462
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -141,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
   "repository": {
@@ -164,7 +173,10 @@
           "lon": 12.8361805
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462487"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462487"
+      }
     }
   },
   "idno": {
@@ -182,23 +194,25 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "Ampolo and Erdas",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "G5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3PK3JKXR"
+          "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -222,35 +236,23 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
       }
     ],
     "change": {
-      "_": "Jonathan Prag created initial draft of text and metadata from the ed. pr. of Ampolo/Erdas",
-      "when": "2021-05-21",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-24",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001681_tiled.tif",
@@ -259,10 +261,12 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
   "letterHeights": [],
   "publications": [
-    "Ampolo and Erdas, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic001681",
@@ -275,7 +279,7 @@
     "limestone",
     "segesta",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "segesta",
     "parco archeologico di segesta",

@@ -28,12 +28,26 @@
       "type": "PHI"
     }
   ],
-  "editionAuthor": null,
-  "type": {
-    "_": "funerary; honorific",
-    "ana": "#function.funerary #function.honorific",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+  "editionAuthor": {
+    "title": "Notizie degli scavi di antichità",
+    "author": "",
+    "date": "1876-",
+    "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+    "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+    "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
   },
+  "type": {
+    "_": "funerary",
+    "ana": "#function.funerary",
+    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
+    "certainty": {
+      "locus": "value",
+      "match": "../@ana",
+      "assertedValue": "#function.honorific",
+      "desc": "possibly honorific"
+    }
+  },
+  "support": "Large irregular but broadly rectangular block of grey limestone (of moderate quality, not seemingly the compact Taormina limestone), damaged on all sides, especially upper and lower right. It is unclear whether either the top or the bottom of the text is preserved, but a clear vacat is visible at the end of lines 2, 3, and 4, although the stone is not intact on the right..",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -41,20 +55,27 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcite_limestone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "43",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "148",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "66",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -66,17 +87,53 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Large, regular letters of generally fairly broad module, but with some irregularlity in the width of the module. Lunate epsilon and sigma, uncial omega. Large round omicron. narrow alpha with broken bar.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "50-55",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "55"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "53-70",
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "70"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "45-55",
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "55"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "50-55",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "55"
       },
       {
         "type": "interlinear",
@@ -88,21 +145,23 @@
     ]
   },
   "date": {
-    "_": "4th century CE (2 century CE, SEG)",
+    "_": "2nd century CE (Guarducci)",
     "notBefore": 101,
-    "notAfter": 400,
-    "precision": "low"
+    "notAfter": 200,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,15 +170,28 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Ortygia",
+    "_": "Found during works to open Via del Littorio on Ortygia, between 1934 and 1936; one of a number of unstratified finds (apparently in secondary deposition, reused as building material) in the area of Largo Antonello Gagini, formerly Largo XXVIII Ottobre. Now in storage in the Museo Archeologico Regionale di Siracusa, magazzino C.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "notBefore": "1934",
+    "notAfter": "1936",
+    "geo": [
+      37.0629811,
+      15.2921563
+    ]
   },
+  "provenanceGeo": [
+    37.0629811,
+    15.2921563
+  ],
   "provenanceObserved": {
-    "_": "Depositi, Mag C",
+    "_": "Prag 2013-10-03",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
     "geo": null
   },
   "provenanceLost": null,
@@ -127,13 +199,12 @@
     {
       "n": "screen",
       "url": "ISic000652_tiled.tif",
-      "height": "448px",
-      "width": "1462px",
-      "desc": "Archival photograph",
+      "height": "1757px",
+      "width": "5276px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-04-26",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -177,90 +248,104 @@
         "n": "SEG",
         "citedRange": "44.0738.14",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "38.0968",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1967.0707",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1950.0241a",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Guarducci",
-        "title": "NSA",
-        "date": "1940",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "225-226",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1940",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Cultrera",
-        "title": "NSA",
-        "date": "1940",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "218 fig.26",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1940",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Manganaro",
@@ -273,8 +358,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001841",
           "target": "https://biblio.inscriptiones.org/epig10001841"
         },
+        "inscriptionDate": "1965",
         "title": "Ricerche di antichità e di epigrafia siceliote",
-        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>"
+        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGTHAFKT",
+        "year": "1965"
       },
       {
         "author": "Manganaro",
@@ -286,7 +374,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -296,8 +389,11 @@
           "target": "https://www.zotero.org/groups/382445/items/532NF7SV"
         },
         "ref": "https://www.zotero.org/groups/382445/items/532NF7SV",
+        "inscriptionDate": "1994",
         "title": "Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana», <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 106, fasc. 1 (1994): 79–118</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana», <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 106, fasc. 1 (1994): 79–118</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/532NF7SV",
+        "year": "1994"
       },
       {
         "author": "Manganaro",
@@ -308,14 +404,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001793",
           "target": "https://biblio.inscriptiones.org/epig10001793"
-        }
+        },
+        "inscriptionDate": "2010",
+        "title": "Fontane ed edifici termali nella Catina « bilingue » tardo-antica e l’editto di Eumathios del 434 d. C.",
+        "citation": "<span>Giacomo Manganaro, «Fontane ed edifici termali nella Catina “ bilingue ” tardo-antica e l’editto di Eumathios del 434 d. C.», <i>Travaux et mémoires du Centre de recherches d’histoire et civilisation byzantines</i> 16 (2010): 513–31</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZJA2JMRW",
+        "year": "2010"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -339,56 +440,77 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Oliver Clarke",
+        "xml:id": "OC",
+        "ref": "https://orcid.org/0009-0006-5165-8381"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-08",
+      "who": "#OC"
     }
   },
+  "tmNumber": "644892",
   "facsimile": {
     "n": "screen",
     "url": "ISic000652_tiled.tif",
-    "height": "448px",
-    "width": "1462px",
-    "desc": "Archival photograph",
+    "height": "1757px",
+    "width": "5276px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-04-26",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 55
+    },
+    {
+      "atLeast": 53,
+      "atMost": 70
+    },
+    {
+      "atLeast": 45,
+      "atMost": 55
+    },
+    {
+      "atLeast": 50,
+      "atMost": 55
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Bulletin épigraphique, 1888-",
     "Bulletin épigraphique, 1888-",
-    "Guarducci, 1940, NSA",
-    "Cultrera, 1940, NSA",
+    "Notizie degli scavi di antichità, 1876-",
+    "Notizie degli scavi di antichità, 1876-",
     "Manganaro, 1965, Ricerche di antichità e di epigrafia siceliote",
-    "Manganaro, 1988",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Manganaro, 1994, Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana",
-    "Manganaro, 2010"
+    "Manganaro, 2010, Fontane ed edifici termali nella Catina « bilingue » tardo-antica e l’editto di Eumathios del 434 d. C."
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "77P5MNIR",
+    "77P5MNIR",
+    "4MCP2PVV",
+    "4MCP2PVV",
+    "RGTHAFKT",
+    "RZSFKACR",
+    "532NF7SV",
+    "ZJA2JMRW"
   ],
   "keywords": [
     "isic000652",
@@ -396,12 +518,12 @@
     {
       "_": "draft"
     },
-    "funerary; honorific",
+    "funerary",
     "block",
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

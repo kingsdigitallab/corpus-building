@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line2",
         "h": "46",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "46",
+        "atMost": "46"
       },
       {
         "type": "interlinear",
@@ -94,19 +101,20 @@
   "date": {
     "_": "1st century CE",
     "notBefore": 1,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
       "_": "Aquae Segestanae",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462099"
+      "ref": "https://pleiades.stoa.org/places/462099",
+      "region": "Sicilia"
     },
     {
       "_": "Terme Segestane",
       "type": "modern",
-      "ref": "https://goo.gl/maps/HwZaGD4WFsKTx632A"
+      "ref": "https://goo.gl/maps/HwZaGD4WFsKTx632A",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +123,8 @@
       12.891676
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Aquae Segestanae",
   "provenanceFound": {
     "_": "Among material recovered from the territory of Partinico, in this case ascribed to Terme Segestane, found apparently either in 1917 or 1960.",
     "type": "found",
@@ -127,6 +137,7 @@
     },
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Metcalfe 2019.09.09",
     "type": "observed",
@@ -144,7 +155,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Partinico",
   "repository": {
@@ -184,33 +194,38 @@
         "date": "1976",
         "citedRange": "58-62, tav. XLVII",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/M2ITCPHX"
+          "target": "https://www.zotero.org/groups/382445/items/M2ITCPHX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002306",
           "target": "https://biblio.inscriptiones.org/epig10002306"
         },
+        "inscriptionDate": "1976",
         "title": "Parthenicum e le Aquae Segestanae",
-        "citation": "<span>Vittorio Giustolisi, <i>Parthenicum e le Aquae Segestanae</i> (Palermo: Centro di documentazione e ricerca per la Sicilia antica «Paolo Orsi», 1976)</span>"
+        "citation": "<span>Vittorio Giustolisi, <i>Parthenicum e le Aquae Segestanae</i> (Palermo: Centro di documentazione e ricerca per la Sicilia antica «Paolo Orsi», 1976)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M2ITCPHX",
+        "year": "1976"
       },
       {
-        "author": "Ampolo and Erdas",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "L14",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3PK3JKXR"
+          "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -234,27 +249,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -263,6 +265,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004410_tiled.tif",
@@ -271,11 +274,19 @@
     "desc": "Photo R.J.A. Wilson, 25.10.2022",
     "surfaceType": "front"
   },
-  "provenance": "Aquae Segestanae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 46,
+      "atMost": 46
+    }
+  ],
   "publications": [
     "Giustolisi, 1976, Parthenicum e le Aquae Segestanae",
-    "Ampolo and Erdas, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "M2ITCPHX",
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic004410",
@@ -288,7 +299,7 @@
     "marble",
     "aquae segestanae",
     "terme segestane",
-    "italy",
+    "sicilia",
     "sicily",
     "partinico",
     "biblioteca comunale/antiquarium comunale",

@@ -1,9 +1,9 @@
 {
   "file": "ISic003198",
   "uri": "ISic003198",
-  "title": "I.Sicily inscription 003198",
+  "title": "Epitaph of Prigomenia",
   "status": {
-    "_": "unchecked"
+    "_": "draft"
   },
   "editions": [
     {
@@ -38,20 +38,28 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
+      "_": "28",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "50",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "13",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -63,17 +71,23 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Lunate epsilon and sigma.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "25",
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -85,20 +99,22 @@
     ]
   },
   "date": {
-    "_": "Christian",
-    "notBefore": 200,
+    "_": "later Roman",
+    "notBefore": 201,
     "notAfter": 600
   },
   "places": [
     {
       "_": "Dianae Fons",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462185"
+      "ref": "http://pleiades.stoa.org/places/462185",
+      "region": "Sicilia"
     },
     {
       "_": "Comiso",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524955"
+      "ref": "http://sws.geonames.org/2524955",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,12 +123,21 @@
       14.60731
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Dianae Fons",
   "provenanceFound": {
-    "_": "Contrada Terravecchia, Comiso",
+    "_": "From the necropolis in Contrada Torravecchia, Comiso. First reported by Pace in the 1920s, then lost; according to Ferrua 1989 rediscovered by Pace in 1953.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "geo": [
+      36.917228,
+      14.533591
+    ]
   },
+  "provenanceGeo": [
+    36.917228,
+    14.533591
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -120,17 +145,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic003198_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Santa Croce Camerina",
   "repository": {
@@ -170,15 +185,15 @@
         "n": "SEG",
         "citedRange": "04.0033",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Pace",
@@ -191,8 +206,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001693",
           "target": "https://biblio.inscriptiones.org/epig10001693"
         },
+        "inscriptionDate": "1921",
         "title": "Contributi Camarinesi",
-        "citation": "<span>B. Pace, <i>Contributi Camarinesi</i> (Palermo: Scuola Tip. Boccone Del Povero, 1921)</span>"
+        "citation": "<span>B. Pace, <i>Contributi Camarinesi</i> (Palermo: Scuola Tip. Boccone Del Povero, 1921)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XTQH2GQF",
+        "year": "1921"
       },
       {
         "author": "Pace",
@@ -205,8 +223,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001692",
           "target": "https://biblio.inscriptiones.org/epig10001692"
         },
+        "inscriptionDate": "1927",
         "title": "Camarina: topografia, storia, archeologia",
-        "citation": "<span>B. Pace, <i>Camarina: topografia, storia, archeologia</i> (Catania, 1927)</span>"
+        "citation": "<span>B. Pace, <i>Camarina: topografia, storia, archeologia</i> (Catania, 1927)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZJ6KUFMM",
+        "year": "1927"
       },
       {
         "author": "Ferrua",
@@ -215,12 +236,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/4HR4GXBX"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001456",
-          "target": "https://biblio.inscriptiones.org/epig10001456"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/4HR4GXBX",
+        "inscriptionDate": "1941",
         "title": "Epigrafica sicula pagana e cristiana",
-        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>"
+        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4HR4GXBX",
+        "year": "1941"
       },
       {
         "author": "Mercurelli",
@@ -233,8 +254,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001751",
           "target": "https://biblio.inscriptiones.org/epig10001751"
         },
+        "inscriptionDate": "1945",
         "title": "Scavi e scoperte nelle catacombe siciliane (1941)",
-        "citation": "<span>C. Mercurelli, «Scavi e scoperte nelle catacombe siciliane (1941)», <i>Rivista di Archeologia Cristiana</i> 21 (1945): 5–104</span>"
+        "citation": "<span>C. Mercurelli, «Scavi e scoperte nelle catacombe siciliane (1941)», <i>Rivista di Archeologia Cristiana</i> 21 (1945): 5–104</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TGHB2QXC",
+        "year": "1945"
       },
       {
         "author": "Ferrua",
@@ -243,10 +267,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/759ZXHKQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001995",
-          "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/759ZXHKQ",
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "author": "Rizzone",
@@ -259,11 +285,14 @@
           "_": "https://biblio.inscriptiones.org/epig10001631",
           "target": "https://biblio.inscriptiones.org/epig10001631"
         },
+        "inscriptionDate": "2011",
         "title": "Opus Christi edificabit: stati e funzioni dei cristiani di Sicilia attraverso l'apporto dell'epigrafia (secoli IV-VI)",
-        "citation": "<span>Vittorio Giovanni Rizzone, <i>Opus Christi edificabit: stati e funzioni dei cristiani di Sicilia attraverso l’apporto dell’epigrafia (secoli IV-VI)</i>, Documenti e studi di Synaxis 25 (Troina: Citta aperta edizioni, 2011)</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone, <i>Opus Christi edificabit: stati e funzioni dei cristiani di Sicilia attraverso l’apporto dell’epigrafia (secoli IV-VI)</i>, Documenti e studi di Synaxis 25 (Troina: Citta aperta edizioni, 2011)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/N26B92N4",
+        "year": "2011"
       },
       {
-        "author": "Di Stefano and Rizzone",
+        "author": "Di Stefano, Rizzone",
         "date": "2012-2013",
         "citedRange": "68 fig.15",
         "ptr": {
@@ -273,8 +302,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002030",
           "target": "https://biblio.inscriptiones.org/epig10002030"
         },
+        "inscriptionDate": "2012-2013",
         "title": "Miscellanea epigrafica iblea",
-        "citation": "<span>G. Di Stefano e V.G. Rizzone, «Miscellanea epigrafica iblea», <i>Seia</i> 17–18 (2013 2012): 49–70</span>"
+        "citation": "<span>G. Di Stefano e V.G. Rizzone, «Miscellanea epigrafica iblea», <i>Seia</i> 17–18 (2013 2012): 49–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/55PIWGJQ",
+        "year": "2012"
       },
       {
         "author": "Di Stefano",
@@ -287,15 +319,32 @@
           "_": "https://biblio.inscriptiones.org/epig10002031",
           "target": "https://biblio.inscriptiones.org/epig10002031"
         },
+        "inscriptionDate": "2013",
         "title": "Camarina. Le acquisizioni, il museo tematico, la collezione \"Biagio Pace\", il lapidario",
-        "citation": "<span>G. Di Stefano, <i>Camarina. Le acquisizioni, il museo tematico, la collezione «Biagio Pace», il lapidario</i> (Ispica: Tipografia Kromatografica / Il Museo Regionale di Camarina, 2013)</span>"
+        "citation": "<span>G. Di Stefano, <i>Camarina. Le acquisizioni, il museo tematico, la collezione «Biagio Pace», il lapidario</i> (Ispica: Tipografia Kromatografica / Il Museo Regionale di Camarina, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/E6U93JGZ",
+        "year": "2013"
+      },
+      {
+        "author": "Rizzone",
+        "date": "2014-2015",
+        "citedRange": "71 no.1 fig.1",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/S3G73QA2"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001626",
+          "target": "https://biblio.inscriptiones.org/epig10001626"
+        },
+        "inscriptionDate": "2014-2015",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -319,68 +368,60 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised from publications",
+      "when": "2025-11-28",
+      "who": "#JP"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic003198_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Dianae Fons",
-  "letterHeights": [],
+  "tmNumber": "645528",
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Pace, 1921, Contributi Camarinesi",
     "Pace, 1927, Camarina: topografia, storia, archeologia",
     "Ferrua, 1941, Epigrafica sicula pagana e cristiana",
     "Mercurelli, 1945, Scavi e scoperte nelle catacombe siciliane (1941)",
-    "Ferrua, 1989",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
     "Rizzone, 2011, Opus Christi edificabit: stati e funzioni dei cristiani di Sicilia attraverso l'apporto dell'epigrafia (secoli IV-VI)",
-    "Di Stefano and Rizzone, 2012-2013, Miscellanea epigrafica iblea",
-    "Di Stefano, 2013, Camarina. Le acquisizioni, il museo tematico, la collezione \"Biagio Pace\", il lapidario"
+    "Di Stefano, Rizzone, 2012-2013, Miscellanea epigrafica iblea",
+    "Di Stefano, 2013, Camarina. Le acquisizioni, il museo tematico, la collezione \"Biagio Pace\", il lapidario",
+    "Rizzone, 2014-2015"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "XTQH2GQF",
+    "ZJ6KUFMM",
+    "4HR4GXBX",
+    "TGHB2QXC",
+    "759ZXHKQ",
+    "N26B92N4",
+    "55PIWGJQ",
+    "E6U93JGZ",
+    "S3G73QA2"
   ],
   "keywords": [
     "isic003198",
-    "i.sicily inscription 003198",
+    "epitaph of prigomenia",
     {
-      "_": "unchecked"
+      "_": "draft"
     },
     "funerary",
     "plaque",
     "limestone",
     "dianae fons",
     "comiso",
-    "italy",
+    "sicilia",
     "sicily",
     "santa croce camerina",
     "museo archeologico regionale di kamarina",

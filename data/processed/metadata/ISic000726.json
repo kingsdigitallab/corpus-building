@@ -44,7 +44,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -89,7 +94,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50-55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "55"
       },
       {
         "type": "letterHeight",
@@ -97,7 +104,9 @@
         "from": "line2",
         "to": "line2",
         "h": "50-53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "53"
       },
       {
         "type": "letterHeight",
@@ -105,7 +114,9 @@
         "from": "line3",
         "to": "line3",
         "h": "47-52",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "47",
+        "atMost": "52"
       },
       {
         "type": "interlinear",
@@ -113,7 +124,9 @@
         "from": "line1",
         "to": "line2",
         "h": "14",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "14",
+        "atMost": "14"
       },
       {
         "type": "interlinear",
@@ -121,7 +134,9 @@
         "from": "line2",
         "to": "line3",
         "h": "11-13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "13"
       }
     ]
   },
@@ -135,12 +150,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -149,6 +166,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in the area of S. Lucia, July 1917, acquired by Orsi for the museum on 6 August 1917.",
     "type": "found",
@@ -159,6 +178,10 @@
       15.289337
     ]
   },
+  "provenanceGeo": [
+    37.0724766,
+    15.289337
+  ],
   "provenanceObserved": {
     "_": "Prag 2016-10-10, Magazzino B, cassa 33.",
     "type": "observed",
@@ -184,7 +207,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -226,29 +248,36 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1920",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "312",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1920",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0342d",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -257,17 +286,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -291,20 +322,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -315,8 +332,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -325,6 +343,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "175780",
   "facsimile": {
     "n": "screen",
     "url": "ISic000726_tiled.tif",
@@ -333,12 +352,37 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2016-10-10",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 55
+    },
+    {
+      "atLeast": 50,
+      "atMost": 53
+    },
+    {
+      "atLeast": 47,
+      "atMost": 52
+    },
+    {
+      "atLeast": 14,
+      "atMost": 14
+    },
+    {
+      "atLeast": 11,
+      "atMost": 13
+    }
+  ],
   "publications": [
-    "Orsi, 1920, NSA",
-    null,
-    "Manganaro, 1989"
+    "Notizie degli scavi di antichità, 1876-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "R46KDTZX",
+    "EZMBJ6GN"
   ],
   "keywords": [
     "isic000726",
@@ -351,7 +395,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

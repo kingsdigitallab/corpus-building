@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -84,7 +88,9 @@
         "from": "line1",
         "to": "line1",
         "h": "4-5",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "4",
+        "atMost": "5"
       }
     ]
   },
@@ -98,12 +104,14 @@
     {
       "_": "Himera",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462244"
+      "ref": "https://pleiades.stoa.org/places/462244",
+      "region": "Sicilia"
     },
     {
       "_": "Imera",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524519/"
+      "ref": "http://sws.geonames.org/2524519/",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +120,8 @@
       13.82398
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Himera",
   "provenanceFound": {
     "_": "Found in Imera.",
     "type": "found",
@@ -121,6 +131,10 @@
       13.82398
     ]
   },
+  "provenanceGeo": [
+    37.97364,
+    13.82398
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -138,7 +152,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Imera",
   "repository": {
@@ -183,51 +196,65 @@
         "date": "1994",
         "citedRange": "47, pl. XIV.3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/KK5FQVHF"
+          "target": "https://www.zotero.org/groups/382445/items/KK5FQVHF"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000282",
           "target": "https://biblio.inscriptiones.org/epig10000282"
         },
+        "inscriptionDate": "1994",
         "title": "Iscrizioni greche arcaiche di Sicilia e Magna Grecia. III. Iscrizioni delle colonie euboiche",
-        "citation": "<span>Renato Arena, <i>Iscrizioni greche arcaiche di Sicilia e Magna Grecia. III. Iscrizioni delle colonie euboiche</i>, vol. 3 (Pisa: Nistri Lischi, 1994)</span>"
+        "citation": "<span>Renato Arena, <i>Iscrizioni greche arcaiche di Sicilia e Magna Grecia. III. Iscrizioni delle colonie euboiche</i>, vol. 3 (Pisa: Nistri Lischi, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/KK5FQVHF",
+        "year": "1994"
       },
       {
         "type": "corpus",
         "n": "IGDS1",
         "author": "Dubois",
         "date": "1989",
-        "citedRange": "10",
+        "citedRange": {
+          "ref": {
+            "_": "10",
+            "target": "http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1"
+          }
+        },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RWXNUFEX"
+          "target": "https://www.zotero.org/groups/382445/items/RWXNUFEX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000187",
           "target": "https://biblio.inscriptiones.org/epig10000187"
         },
+        "inscriptionDate": "1989",
         "title": "Inscriptions grecques dialectales de Sicile : contribution à l'étude du vocabulaire grec colonial",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile : contribution à l’étude du vocabulaire grec colonial</i>, CEFR 119 (Rome: Ecole française de Rome, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RWXNUFEX",
+        "year": "1989"
       },
       {
         "author": "Manni Piraino",
         "date": "1976",
         "citedRange": "680.40, pl. CXI.15",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/8AZPMSGB"
+          "target": "https://www.zotero.org/groups/382445/items/8AZPMSGB"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002467",
           "target": "https://biblio.inscriptiones.org/epig10002467"
         },
+        "inscriptionDate": "1976",
         "title": "Le iscrizioni",
-        "citation": "<span>M.T. Manni Piraino, «Le iscrizioni», in <i>Himera II. Campagne di scavo 1966-73</i>, vol. 2, 2 voll. (Roma, 1976)</span>"
+        "citation": "<span>M.T. Manni Piraino, «Le iscrizioni», in <i>Himera II. Campagne di scavo 1966-73</i>, vol. 2, 2 voll. (Roma, 1976)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8AZPMSGB",
+        "year": "1976"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -251,19 +278,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -275,6 +289,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020589_tiled.tif",
@@ -283,12 +298,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Himera",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 4,
+      "atMost": 5
+    }
+  ],
   "publications": [
     "Arena, 1994, IGASM3",
     "Dubois, 1989, IGDS1",
     "Manni Piraino, 1976, Le iscrizioni"
+  ],
+  "zotero": [
+    "KK5FQVHF",
+    "RWXNUFEX",
+    "8AZPMSGB"
   ],
   "keywords": [
     "isic020589",
@@ -301,7 +325,7 @@
     "ceramic",
     "himera",
     "imera",
-    "italy",
+    "sicilia",
     "sicily",
     "imera",
     "parco archeologico di himera e antiquarium",

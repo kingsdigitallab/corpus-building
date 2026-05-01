@@ -33,7 +33,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -88,12 +92,14 @@
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,11 +108,14 @@
       15.04385
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tyndaris",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -114,7 +123,7 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
@@ -129,10 +138,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari (?)",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -146,36 +154,60 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1880",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "200 no.33",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1880",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7483",
+            "_": "7483",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
-      "",
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "50",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
+      },
       {
         "author": "Fasolo",
         "date": "2013",
@@ -186,14 +218,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002011",
           "target": "https://biblio.inscriptiones.org/epig10002011"
-        }
+        },
+        "inscriptionDate": "2013",
+        "title": "Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+        "citation": "<span>M. Fasolo, <i>Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari</i> (Rome: MediaGEO, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X2SEXMRX",
+        "year": "2013"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -217,27 +254,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Alex Antoniou",
@@ -251,6 +270,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "491863",
   "facsimile": {
     "n": "screen",
     "url": "ISic000598_tiled.tif",
@@ -259,12 +279,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Tyndaris",
   "letterHeights": [],
   "publications": [
-    "Salinas, 1880, NSA",
-    "CIL",
-    "Fasolo, 2013"
+    "Notizie degli scavi di antichità, 1876-",
+    "Mommsen, 1883, CIL",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "GQN8UZSI",
+    "RZSFKACR",
+    "X2SEXMRX"
   ],
   "keywords": [
     "isic000598",
@@ -276,7 +302,7 @@
     "stone",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
     "tindari (?)",
     "latin",

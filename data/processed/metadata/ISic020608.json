@@ -37,7 +37,11 @@
   },
   "material": {
     "_": "clay, fired",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/130.html"
   },
   "condition": {
@@ -100,19 +104,21 @@
   "date": {
     "_": "last decades of 6th century BCE (Cultraro 1989-1990).",
     "notBefore": -530,
-    "notAfter": -500,
+    "notAfter": -501,
     "evidence": "archaeological-context, material-context"
   },
   "places": [
     {
       "_": "Inessa (?)",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/465922"
+      "ref": "http://pleiades.stoa.org/places/465922",
+      "region": "Sicilia"
     },
     {
       "_": "Poira (contrada Civita)",
       "type": "modern",
-      "ref": "http://pleiades.stoa.org/places/465922"
+      "ref": "http://pleiades.stoa.org/places/465922",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -121,6 +127,8 @@
       14.81975
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Inessa (?)",
   "provenanceFound": {
     "_": "Discovered in a grave during an episodic excavation carried out in the 1960s by the Soprintendenza di Siracusa in the area of the settlement of Poira, located on the hill that leads from the Fiume dei Margi to the Simeto valley.",
     "type": "found",
@@ -131,6 +139,10 @@
       14.81975
     ]
   },
+  "provenanceGeo": [
+    37.563161,
+    14.81975
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -148,7 +160,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
   "repository": {
@@ -192,35 +203,41 @@
         "date": "2009",
         "citedRange": "116-117 no.4, fig. 5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/63R3F4J2"
+          "target": "https://www.zotero.org/groups/382445/items/63R3F4J2"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002427",
           "target": "https://biblio.inscriptiones.org/epig10002427"
         },
+        "inscriptionDate": "2009",
         "title": "Le iscrizioni anelleniche del Museo di Adrano",
-        "citation": "<span>Luciano Agostiniani, «Le iscrizioni anelleniche del Museo di Adrano», in <i>Tra Etna e Simeto. La ricerca archeologica ad Adrano e nel suo territorio</i> (Catania, 2009), 115–18</span>"
+        "citation": "<span>Luciano Agostiniani, «Le iscrizioni anelleniche del Museo di Adrano», in <i>Tra Etna e Simeto. La ricerca archeologica ad Adrano e nel suo territorio</i> (Catania, 2009), 115–18</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/63R3F4J2",
+        "year": "2009"
       },
       {
         "author": "Cultraro",
         "date": "1989-1990",
         "citedRange": "452-453",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/WZJDK5JD"
+          "target": "https://www.zotero.org/groups/382445/items/WZJDK5JD"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002383",
           "target": "https://biblio.inscriptiones.org/epig10002383"
         },
+        "inscriptionDate": "1989-1990",
         "title": "Due nuove iscrizioni anelleniche del Museo di Adrano (Catania)",
-        "citation": "<span>Massimo Cultraro, «Due nuove iscrizioni anelleniche del Museo di Adrano (Catania)», <i>Studi Etruschi</i> 56 (1990 1989): 451–53</span>"
+        "citation": "<span>Massimo Cultraro, «Due nuove iscrizioni anelleniche del Museo di Adrano (Catania)», <i>Studi Etruschi</i> 56 (1990 1989): 451–53</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WZJDK5JD",
+        "year": "1989"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -244,27 +261,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -273,6 +272,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020608_tiled.tif",
@@ -281,11 +281,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Inessa (?)",
   "letterHeights": [],
   "publications": [
     "Agostiniani, 2009, Le iscrizioni anelleniche del Museo di Adrano",
     "Cultraro, 1989-1990, Due nuove iscrizioni anelleniche del Museo di Adrano (Catania)"
+  ],
+  "zotero": [
+    "63R3F4J2",
+    "WZJDK5JD"
   ],
   "keywords": [
     "isic020608",
@@ -298,7 +301,7 @@
     "clay, fired",
     "inessa (?)",
     "poira (contrada civita)",
-    "italy",
+    "sicilia",
     "sicily",
     "adrano",
     "museo archeologico regionale di adrano",

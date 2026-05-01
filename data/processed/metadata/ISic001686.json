@@ -43,7 +43,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -88,7 +93,9 @@
         "from": "line1",
         "to": "line1",
         "h": "51-55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "51",
+        "atMost": "55"
       },
       {
         "type": "letterHeight",
@@ -96,7 +103,9 @@
         "from": "line2",
         "to": "line2",
         "h": "51-55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "51",
+        "atMost": "55"
       },
       {
         "type": "letterHeight",
@@ -104,7 +113,9 @@
         "from": "line3",
         "to": "line3",
         "h": "50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -112,7 +123,9 @@
         "from": "line1",
         "to": "line2",
         "h": "4-7",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "4",
+        "atMost": "7"
       },
       {
         "type": "interlinear",
@@ -120,25 +133,29 @@
         "from": "line2",
         "to": "line3",
         "h": "7",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "7",
+        "atMost": "7"
       }
     ]
   },
   "date": {
     "_": "after 116 CE (if Manganaro's restoration of the text on the other side is accepted); 2nd or 3rd century CE.",
-    "notBefore": null,
-    "notAfter": null
+    "notBefore": 116,
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -147,6 +164,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in the area of S. Lucia, July 1917, acquired by Orsi for the museum on 6 August 1917.",
     "type": "found",
@@ -157,6 +176,10 @@
       15.289337
     ]
   },
+  "provenanceGeo": [
+    37.0724766,
+    15.289337
+  ],
   "provenanceObserved": {
     "_": "Prag 2016-10-10, Magazzino B, cassa 33.",
     "type": "observed",
@@ -182,7 +205,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -224,24 +246,25 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1920",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "312",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1920",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -265,27 +288,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -294,6 +304,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001686_tiled.tif",
@@ -302,10 +313,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2016-10-10",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 51,
+      "atMost": 55
+    },
+    {
+      "atLeast": 51,
+      "atMost": 55
+    },
+    {
+      "atLeast": 50,
+      "atMost": 50
+    },
+    {
+      "atLeast": 4,
+      "atMost": 7
+    },
+    {
+      "atLeast": 7,
+      "atMost": 7
+    }
+  ],
   "publications": [
-    "Orsi, 1920, NSA"
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic001686",
@@ -318,7 +352,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

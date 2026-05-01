@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -81,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "36",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "36"
       },
       {
         "type": "letterHeight",
@@ -89,7 +94,9 @@
         "from": "line2",
         "to": "line4",
         "h": "31-36",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "31",
+        "atMost": "36"
       },
       {
         "type": "letterHeight",
@@ -97,7 +104,9 @@
         "from": "line5",
         "to": "line5",
         "h": "47",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "47",
+        "atMost": "47"
       },
       {
         "type": "interlinear",
@@ -118,7 +127,8 @@
     {
       "_": "Priolo Gargallo",
       "type": "modern",
-      "ref": "https://sws.geonames.org/2523679/"
+      "ref": "https://sws.geonames.org/2523679/",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -127,6 +137,8 @@
       15.18248
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Priolo Gargallo",
   "provenanceFound": {
     "_": "Found during agricultural works on the property of the marchese di Castel Lentini, 15m to the east of the farmhouse, in the territory of Priolo",
     "type": "found",
@@ -138,6 +150,10 @@
     ],
     "geoCert": "low"
   },
+  "provenanceGeo": [
+    37.15512,
+    15.18248
+  ],
   "provenanceObserved": {
     "_": "Not yet observed",
     "type": "observed",
@@ -155,7 +171,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -197,23 +212,25 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Agnello",
-        "date": "1949",
+        "author": "",
+        "date": "1876-",
         "citedRange": "211 with fig. 1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1949",
+        "title": "Notizie degli scavi di antichità",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -237,20 +254,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -262,6 +265,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001684_tiled.tif",
@@ -270,10 +274,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Priolo Gargallo",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 36,
+      "atMost": 36
+    },
+    {
+      "atLeast": 31,
+      "atMost": 36
+    },
+    {
+      "atLeast": 47,
+      "atMost": 47
+    }
+  ],
   "publications": [
-    "Agnello, 1949"
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic001684",
@@ -285,7 +304,7 @@
     "stele",
     "limestone",
     "priolo gargallo",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

@@ -39,8 +39,10 @@
   },
   "material": {
     "_": "breccia",
-    "ana": "#material.stone.breccia",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
+    "type": "stone.breccia",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/73.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -88,7 +90,9 @@
         "from": "line2",
         "to": "line2",
         "h": "44-47",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "44",
+        "atMost": "47"
       },
       {
         "type": "letterHeight",
@@ -96,7 +100,9 @@
         "from": "line3",
         "to": "line3",
         "h": "38-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "38",
+        "atMost": "42"
       },
       {
         "type": "letterHeight",
@@ -104,7 +110,9 @@
         "from": "line4",
         "to": "line4",
         "h": "37-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "37",
+        "atMost": "42"
       },
       {
         "type": "letterHeight",
@@ -112,7 +120,9 @@
         "from": "line5",
         "to": "line5",
         "h": "28-33",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "28",
+        "atMost": "33"
       },
       {
         "type": "letterHeight",
@@ -120,7 +130,9 @@
         "from": "line6",
         "to": "line6",
         "h": "41-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "41",
+        "atMost": "42"
       },
       {
         "type": "letterHeight",
@@ -128,7 +140,9 @@
         "from": "line7",
         "to": "line2",
         "h": "36",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "36"
       },
       {
         "type": "interlinear",
@@ -150,12 +164,14 @@
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -164,6 +180,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "The three left-hand fragments were found in 1783, the fourth (upper right) at a date prior to 1829 (but Romano 1829 does not appear to have recognised the connection).",
     "type": "found",
@@ -171,6 +189,7 @@
     "when": "1783",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2022-07-06",
     "type": "observed",
@@ -188,7 +207,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -233,7 +251,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Romano",
@@ -245,14 +268,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2UJS2UVS",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7351",
+            "_": "7351",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650796"
           }
         },
@@ -262,11 +292,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "16",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -274,19 +311,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Manganaro",
         "date": "1988",
         "citedRange": "53 n.259, cf 10 n.23, 42",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RZSFKACR"
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -298,14 +345,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -329,20 +381,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -353,16 +391,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy notes",
-      "when": "2024-02-14",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285316",
   "facsimile": {
     "n": "screen",
     "url": "ISic000098_tiled.tif",
@@ -371,15 +416,47 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 44,
+      "atMost": 47
+    },
+    {
+      "atLeast": 38,
+      "atMost": 42
+    },
+    {
+      "atLeast": 37,
+      "atMost": 42
+    },
+    {
+      "atLeast": 28,
+      "atMost": 33
+    },
+    {
+      "atLeast": 41,
+      "atMost": 42
+    },
+    {
+      "atLeast": 36,
+      "atMost": 36
+    }
+  ],
   "publications": [
-    "Castelli, 1784",
-    "Romano, 1829",
-    "CIL",
-    "ILMusTermini",
-    "Manganaro, 1988",
-    "Wilson, 1990"
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Romano, 1829, Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535"
+  ],
+  "zotero": [
+    "7PSFHSUH",
+    "2UJS2UVS",
+    "GQN8UZSI",
+    "JCV85C79",
+    "RZSFKACR",
+    "VF9MMBI9"
   ],
   "keywords": [
     "isic000098",
@@ -392,7 +469,7 @@
     "breccia",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

@@ -35,7 +35,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line2",
         "h": "98-100",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "98",
+        "atMost": "100"
       },
       {
         "type": "interlinear",
@@ -95,19 +102,20 @@
     "_": "The editors adopt a cautious reading, given the plain form of the letters and the limited extent of the text, suggesting C3 BCE - C1 CE, but with a preference for C2-1 BCE.",
     "notBefore": -300,
     "notAfter": 100,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     },
     {
       "_": "Segesta",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523171"
+      "ref": "http://sws.geonames.org/2523171",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +124,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found in March/April 2021 during preparation of a new acces path on the south side of the agora. The fragments were found separately, immediately outside the 'ephebikon' on the south side of the agora.",
     "type": "found",
@@ -126,6 +136,10 @@
       12.842901
     ]
   },
+  "provenanceGeo": [
+    37.939381,
+    12.842901
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -143,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
   "repository": {
@@ -166,7 +179,10 @@
           "lon": 12.8361805
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462487"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462487"
+      }
     }
   },
   "idno": [
@@ -194,21 +210,24 @@
         "date": "2021",
         "citedRange": "G35.a-b",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/LCEMRFE2"
+          "target": "https://www.zotero.org/groups/382445/items/LCEMRFE2"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002270",
           "target": "https://biblio.inscriptiones.org/epig10002270"
         },
+        "inscriptionDate": "2021",
         "title": "Segesta. Supplemento epigrafico 2021",
-        "citation": "<span>Carmine Ampolo, «Segesta. Supplemento epigrafico 2021», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> Series 5, 13/2, supplemento (2021): 64–66</span>"
+        "citation": "<span>Carmine Ampolo, «Segesta. Supplemento epigrafico 2021», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> Series 5, 13/2, supplemento (2021): 64–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/LCEMRFE2",
+        "year": "2021"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -227,35 +246,28 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag created file from editio princeps",
-      "when": "2022-10-06",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-24",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001699_tiled.tif",
@@ -264,10 +276,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 98,
+      "atMost": 100
+    }
+  ],
   "publications": [
     "Ampolo, 2021, Segesta. Supplemento epigrafico 2021"
+  ],
+  "zotero": [
+    "LCEMRFE2"
   ],
   "keywords": [
     "isic001699",
@@ -280,7 +299,7 @@
     "limestone",
     "segesta",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "segesta",
     "parco archeologico di segesta",

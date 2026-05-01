@@ -37,7 +37,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line2",
         "h": "15-20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -88,7 +95,9 @@
         "from": "line1",
         "to": "line2",
         "h": "13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "13",
+        "atMost": "13"
       }
     ]
   },
@@ -102,12 +111,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +127,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in 1950 near the Chiesa dei Minoritelli, during excavation of the foundations of the Collegio Maria Immacolata (so Manganaro 1961: 191 n.91).",
     "type": "found",
@@ -126,6 +139,10 @@
       15.082564
     ]
   },
+  "provenanceGeo": [
+    37.504758,
+    15.082564
+  ],
   "provenanceObserved": {
     "_": "Observed by Manganaro in Museo del Castello Ursino and later transferred to the storage of the Museo Civico.",
     "type": "observed",
@@ -142,7 +159,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -185,15 +201,18 @@
         "n": "BE",
         "citedRange": "1962.0388",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -205,7 +224,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001852",
           "target": "https://biblio.inscriptiones.org/epig10001852"
-        }
+        },
+        "inscriptionDate": "1961",
+        "title": "Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia», <i>Siculorum Gymnasium</i> 14 (1961): 175–98</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HXK7DASC",
+        "year": "1961"
       },
       {
         "author": "Manganaro",
@@ -217,14 +241,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -253,20 +282,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -276,8 +291,9 @@
         "xml:id": "FP"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -286,6 +302,7 @@
       "who": "#martaf"
     }
   },
+  "tmNumber": "645353",
   "facsimile": {
     "n": "screen",
     "url": "ISic003004_tiled.tif",
@@ -294,12 +311,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 20
+    },
+    {
+      "atLeast": 13,
+      "atMost": 13
+    }
+  ],
   "publications": [
     "Bulletin épigraphique, 1888-",
-    "Manganaro, 1961",
-    "Manganaro, 1988"
+    "Manganaro, 1961, Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "77P5MNIR",
+    "HXK7DASC",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic003004",
@@ -312,7 +342,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

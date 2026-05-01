@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -90,14 +94,15 @@
   "date": {
     "_": "500—400 BCE",
     "notBefore": -500,
-    "notAfter": -400,
+    "notAfter": -401,
     "evidence": "archaeological-context, material-context, lettering"
   },
   "places": [
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,6 +111,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
     "type": "found",
@@ -115,6 +122,10 @@
       12.84509
     ]
   },
+  "provenanceGeo": [
+    37.9424,
+    12.84509
+  ],
   "provenanceObserved": {
     "_": "No autopsy",
     "type": "observed",
@@ -132,7 +143,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -170,7 +180,8 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Elymian"
+      "Elymian",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -183,35 +194,41 @@
         "date": "2021",
         "citedRange": "378",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VQEP8IPT"
+          "target": "https://www.zotero.org/groups/382445/items/VQEP8IPT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002320",
           "target": "https://biblio.inscriptiones.org/epig10002320"
         },
+        "inscriptionDate": "2021",
         "title": "Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. Le iscrizioni elime. Appendice 1978-2020</i>, Quaderni del Parco Archeologico di Segesta. Monografie, 1 (Roma: L’Erma di Bretschneider, 2021)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQEP8IPT",
+        "year": "2021"
       },
       {
         "author": "Biondi",
         "date": "2000",
         "citedRange": "136-140, pl. XXVII.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/NQI2T3HF"
+          "target": "https://www.zotero.org/groups/382445/items/NQI2T3HF"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002325",
           "target": "https://biblio.inscriptiones.org/epig10002325"
         },
+        "inscriptionDate": "2000",
         "title": "Riflessioni sull'onomastica segestana",
-        "citation": "<span>L. Biondi, «Riflessioni sull’onomastica segestana», in <i>Terze giornate internazionali di studi sull’area elima</i>, vol. I (Pisa, Gibellina, 2000), 135–51</span>"
+        "citation": "<span>L. Biondi, «Riflessioni sull’onomastica segestana», in <i>Terze giornate internazionali di studi sull’area elima</i>, vol. I (Pisa, Gibellina, 2000), 135–51</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NQI2T3HF",
+        "year": "2000"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -235,19 +252,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -259,6 +263,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020378_tiled.tif",
@@ -267,11 +272,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
   "letterHeights": [],
   "publications": [
     "Agostiniani, 2021, IAS I, App.",
     "Biondi, 2000, Riflessioni sull'onomastica segestana"
+  ],
+  "zotero": [
+    "VQEP8IPT",
+    "NQI2T3HF"
   ],
   "keywords": [
     "isic020378",
@@ -283,7 +291,7 @@
     "kylix",
     "ceramic",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

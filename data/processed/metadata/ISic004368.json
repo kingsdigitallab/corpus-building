@@ -35,8 +35,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcilutite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -74,7 +76,9 @@
         "from": "line1",
         "to": "line3",
         "h": "50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       },
       {
         "type": "letterHeight",
@@ -82,7 +86,9 @@
         "from": "line4",
         "to": "line4",
         "h": "30-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -97,19 +103,20 @@
   "date": {
     "_": "c. 120—50 BCE",
     "notBefore": -120,
-    "notAfter": -50,
-    "precision": "medium"
+    "notAfter": -51
   },
   "places": [
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +125,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Found in excavation in March 2008 in secondary deposition, having been\n                            re-used in antiquity on the street bordering the north-east side of the so-called 'insula\n                            romana' villa on Capo Boeo.",
     "type": "found",
@@ -128,6 +137,10 @@
       12.430456
     ]
   },
+  "provenanceGeo": [
+    37.804838,
+    12.430456
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +151,6 @@
   "graphics": [
     null
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -178,28 +190,37 @@
         "n": "AE",
         "citedRange": "2016.0622",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Ampolo",
         "date": "2016",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/5KHJUSED"
+          "target": "https://www.zotero.org/groups/382445/items/5KHJUSED"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002183",
           "target": "https://biblio.inscriptiones.org/epig10002183"
         },
+        "inscriptionDate": "2016",
         "title": "Il culto di Ercole a Lilibeo: un nuovo documento dei rapporti tra genti e culture diverse nella Sicilia occidentale",
-        "citation": "<span>Carmine Ampolo, «Il culto di Ercole a Lilibeo: un nuovo documento dei rapporti tra genti e culture diverse nella Sicilia occidentale», <i>Mare Internum. Archeologia e culture del Mediterraneo</i> 8 (2016): 21–37, <a href=\"https://doi.org/10.19272/201631401002\">https://doi.org/10.19272/201631401002</a></span>"
+        "citation": "<span>Carmine Ampolo, «Il culto di Ercole a Lilibeo: un nuovo documento dei rapporti tra genti e culture diverse nella Sicilia occidentale», <i>Mare Internum. Archeologia e culture del Mediterraneo</i> 8 (2016): 21–37, <a href=\"https://doi.org/10.19272/201631401002\">https://doi.org/10.19272/201631401002</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5KHJUSED",
+        "year": "2016"
       },
       {
-        "author": "Mastino and Abrignani",
+        "author": "Mastino, Abrignani",
         "date": "2021",
         "citedRange": "140-141 fig. 7-8",
         "ptr": {
@@ -209,8 +230,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002262",
           "target": "https://biblio.inscriptiones.org/epig10002262"
         },
+        "inscriptionDate": "2021",
         "title": "Ancora il circuito Africa, Sicilia, Sardegna, sotto il segno di Melqart-Ercole e Astarte-Venere: il fanum salutifero dedicato Hercolei Nouritano a Lilibeo",
-        "citation": "<span>Attilio Mastino e Alessandro Abrignani, «Ancora il circuito Africa, Sicilia, Sardegna, sotto il segno di Melqart-Ercole e Astarte-Venere: il fanum salutifero dedicato Hercolei Nouritano a Lilibeo», <i>Sicilia Antiqua</i> 18 (2021): 135–44, <a href=\"https://doi.org/10.19272//202103901015\">https://doi.org/10.19272//202103901015</a></span>"
+        "citation": "<span>Attilio Mastino e Alessandro Abrignani, «Ancora il circuito Africa, Sicilia, Sardegna, sotto il segno di Melqart-Ercole e Astarte-Venere: il fanum salutifero dedicato Hercolei Nouritano a Lilibeo», <i>Sicilia Antiqua</i> 18 (2021): 135–44, <a href=\"https://doi.org/10.19272//202103901015\">https://doi.org/10.19272//202103901015</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PGDKJ26H",
+        "year": "2021"
       },
       {
         "author": "Ruggeri",
@@ -223,15 +247,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002781",
           "target": "https://biblio.inscriptiones.org/epig10002781"
         },
+        "inscriptionDate": "2023",
         "title": "Nel segno della dea Astarte-Venere Ericina. Cesare tra Sicilia, Africa e Sardegna, lungo l'antica rotta punica dei cultores Veneris Ericinae",
-        "citation": "<span>Paola Ruggeri, «Nel segno della dea Astarte-Venere Ericina. Cesare tra Sicilia, Africa e Sardegna, lungo l’antica rotta punica dei cultores Veneris Ericinae», in <i>In Africa e a Roma: scritti mediterranei</i>, 2023, 15–58</span>"
+        "citation": "<span>Paola Ruggeri, «Nel segno della dea Astarte-Venere Ericina. Cesare tra Sicilia, Africa e Sardegna, lungo l’antica rotta punica dei cultores Veneris Ericinae», in <i>In Africa e a Roma: scritti mediterranei</i>, 2023, 15–58</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HJ5TI8K5",
+        "year": "2023"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -255,20 +282,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Carmine Ampolo",
         "xml:id": "CA"
       },
@@ -278,8 +291,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -288,13 +302,28 @@
       "who": "#JP"
     }
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "tmNumber": "",
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 50
+    },
+    {
+      "atLeast": 30,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Ampolo, 2016, Il culto di Ercole a Lilibeo: un nuovo documento dei rapporti tra genti e culture diverse nella Sicilia occidentale",
-    "Mastino and Abrignani, 2021, Ancora il circuito Africa, Sicilia, Sardegna, sotto il segno di Melqart-Ercole e Astarte-Venere: il fanum salutifero dedicato Hercolei Nouritano a Lilibeo",
+    "Mastino, Abrignani, 2021, Ancora il circuito Africa, Sicilia, Sardegna, sotto il segno di Melqart-Ercole e Astarte-Venere: il fanum salutifero dedicato Hercolei Nouritano a Lilibeo",
     "Ruggeri, 2023, Nel segno della dea Astarte-Venere Ericina. Cesare tra Sicilia, Africa e Sardegna, lungo l'antica rotta punica dei cultores Veneris Ericinae"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "5KHJUSED",
+    "PGDKJ26H",
+    "HJ5TI8K5"
   ],
   "keywords": [
     "isic004368",
@@ -307,7 +336,7 @@
     "limestone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

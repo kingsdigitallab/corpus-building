@@ -39,8 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -80,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "36-39",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "39"
       },
       {
         "type": "letterHeight",
@@ -88,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "36-41",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "41"
       },
       {
         "type": "letterHeight",
@@ -96,7 +102,9 @@
         "from": "line3",
         "to": "line3",
         "h": "40-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "42"
       },
       {
         "type": "interlinear",
@@ -116,12 +124,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,6 +140,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in Termini Imerese prior to 1829 next to the burial to which it belonged, near the garden of the pp. Cappuccini, in the place known as \"Cannitello\" (so Romano).",
     "type": "found",
@@ -140,6 +152,10 @@
       13.695793
     ]
   },
+  "provenanceGeo": [
+    37.9814237,
+    13.695793
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, on the floor of room 1.",
     "type": "observed",
@@ -167,7 +183,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -216,7 +231,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2UJS2UVS",
+        "year": "1829"
       },
       {
         "author": "Romano",
@@ -228,14 +248,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001618",
           "target": "https://biblio.inscriptiones.org/epig10001618"
-        }
+        },
+        "inscriptionDate": "1838",
+        "title": "Antichità termitane",
+        "citation": "<span>Baldassare Romano, <i>Antichità termitane</i> (Palermo: Tipografia di Francesco Lao, 1838)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/25ZN5T5X",
+        "year": "1838"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7376",
+            "_": "7376",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650798"
           }
         },
@@ -245,11 +272,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "50",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -257,15 +291,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -289,20 +328,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -313,21 +338,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images",
-      "when": "2024-01-23",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285121",
   "facsimile": {
     "n": "screen",
     "url": "ISic000131_tiled.tif",
@@ -336,13 +368,31 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 04.07.23",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 36,
+      "atMost": 39
+    },
+    {
+      "atLeast": 36,
+      "atMost": 41
+    },
+    {
+      "atLeast": 40,
+      "atMost": 42
+    }
+  ],
   "publications": [
-    "Romano, 1829",
-    "Romano, 1838",
-    "CIL",
-    "ILMusTermini"
+    "Romano, 1829, Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+    "Romano, 1838, Antichità termitane",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "2UJS2UVS",
+    "25ZN5T5X",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000131",
@@ -355,7 +405,7 @@
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

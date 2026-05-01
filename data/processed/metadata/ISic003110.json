@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -83,7 +88,9 @@
         "from": "line1",
         "to": "line3",
         "h": "32-54",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "32",
+        "atMost": "54"
       },
       {
         "type": "interlinear",
@@ -98,19 +105,20 @@
     "_": "2nd or 1st century BCE",
     "notBefore": -200,
     "notAfter": -1,
-    "evidence": "lettering, textual-context",
-    "precision": "low"
+    "evidence": "lettering, textual-context"
   },
   "places": [
     {
       "_": "Enna",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462236"
+      "ref": "http://pleiades.stoa.org/places/462236",
+      "region": "Sicilia"
     },
     {
       "_": "Enna",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524819"
+      "ref": "http://sws.geonames.org/2524819",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,6 +127,8 @@
       14.27433
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Enna",
   "provenanceFound": {
     "_": "Found on the southern slopes of Enna  prior to 1833, and initially in the collection of Giuseppe Alessi.",
     "type": "found",
@@ -130,6 +140,10 @@
     ],
     "geoCert": "low"
   },
+  "provenanceGeo": [
+    37.562767,
+    14.284584
+  ],
   "provenanceObserved": {
     "_": "Display, Voci di pietra no.3",
     "type": "observed",
@@ -170,7 +184,6 @@
       "surfaceType": "side"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -214,58 +227,72 @@
         "date": "1833",
         "citedRange": "234",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SRZQ4DSI"
+          "target": "https://www.zotero.org/groups/382445/items/SRZQ4DSI"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002538",
           "target": "https://biblio.inscriptiones.org/epig10002538"
-        }
+        },
+        "inscriptionDate": "1833",
+        "title": "III. Giuseppe Alessi al chiarissimo segretario dell'instituto archeologico, salute.",
+        "citation": "<span>Giuseppe Alessi, «III. Giuseppe Alessi al chiarissimo segretario dell’instituto archeologico, salute.», <i>Giornale di scienze, lettere e arti per la Sicilia</i> 42, fasc. 126 (1833): 225–35, <a href=\"http://digitale.bnc.roma.sbn.it/tecadigitale/giornale/UFI0049392/1833/T.42/00000257\">http://digitale.bnc.roma.sbn.it/tecadigitale/giornale/UFI0049392/1833/T.42/00000257</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SRZQ4DSI",
+        "year": "1833"
       },
       {
         "author": "Alessi",
         "date": "1833",
         "citedRange": "176",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F986DASI"
+          "target": "https://www.zotero.org/groups/382445/items/F986DASI"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002540",
           "target": "https://biblio.inscriptiones.org/epig10002540"
-        }
+        },
+        "inscriptionDate": "1833",
+        "title": "Scavi di Catania",
+        "citation": "<span>Giuseppe Alessi, «Scavi di Catania», <i>Bullettino dell’Instituto di Corrispondenza Archeologica</i>, fasc. 12 (1833): 172–76</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F986DASI",
+        "year": "1833"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "54.0899",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "4",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -289,39 +316,42 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised provenance and added bibliography and images, plus minor edits",
-      "when": "2021-02-18",
-      "who": "#JP"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2026-02-02",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "645455",
   "facsimile": {
     "n": "screen",
     "url": "ISic003110_tiled.tif",
@@ -330,13 +360,23 @@
     "desc": "Photograph of front face by students of Liceo M.M. Lazzaro, courtesy of Museo Civico di Catania",
     "surfaceType": "front"
   },
-  "provenance": "Enna",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 32,
+      "atMost": 54
+    }
+  ],
   "publications": [
-    "Alessi, 1833",
-    "Alessi, 1833",
+    "Alessi, 1833, III. Giuseppe Alessi al chiarissimo segretario dell'instituto archeologico, salute.",
+    "Alessi, 1833, Scavi di Catania",
     "Supplementum epigraphicum graecum, 1923-",
-    "IMusCatania"
+    "Korhonen, 2004, IMusCatania"
+  ],
+  "zotero": [
+    "SRZQ4DSI",
+    "F986DASI",
+    "F2GG87EQ",
+    "2EUC82DH"
   ],
   "keywords": [
     "isic003110",
@@ -349,7 +389,7 @@
     "limestone",
     "enna",
     "enna",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

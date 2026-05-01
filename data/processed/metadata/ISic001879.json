@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -79,7 +84,9 @@
         "from": "line1",
         "to": "line2",
         "h": "40-45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -92,20 +99,22 @@
   },
   "date": {
     "_": "The likely appearance of the formula \"devotus numini maiestatique eius\" belongs to the period between the early third and late fourth century CE",
-    "notBefore": 200,
-    "notAfter": 399,
+    "notBefore": 201,
+    "notAfter": 400,
     "evidence": "textual-context"
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +123,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "First recorded by Manganaro in storage at the antiquarium prior to 1964.",
     "type": "found",
@@ -121,6 +132,7 @@
     "notAfter": "1964",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -184,15 +195,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001842",
           "target": "https://biblio.inscriptiones.org/epig10001842"
         },
+        "inscriptionDate": "1964",
         "title": "Iscrizioni latine e greche dal nuovo edificio termale di Taormina",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni latine e greche dal nuovo edificio termale di Taormina», <i>Cronache di archeologia e di storia dell’arte</i> 3 (1964): 38–68</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni latine e greche dal nuovo edificio termale di Taormina», <i>Cronache di archeologia e di storia dell’arte</i> 3 (1964): 38–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FQZIP29F",
+        "year": "1964"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -211,23 +225,14 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -236,6 +241,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001879_tiled.tif",
@@ -244,10 +250,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo L. Campagna 2005-03-31",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 45
+    }
+  ],
   "publications": [
     "Manganaro, 1964, Iscrizioni latine e greche dal nuovo edificio termale di Taormina"
+  ],
+  "zotero": [
+    "FQZIP29F"
   ],
   "keywords": [
     "isic001879",
@@ -260,7 +273,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

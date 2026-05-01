@@ -1,6 +1,6 @@
 <script>
 	import InscriptionList from '$lib/components/InscriptionList.svelte';
-	import InscriptionMap from '$lib/components/InscriptionMap.svelte';
+	import InscriptionVisualisation from '$lib/components/viz/InscriptionVisualisation.svelte';
 	import InscriptionPagination from '$lib/components/InscriptionPagination.svelte';
 	import InscriptionTable from '$lib/components/InscriptionTable.svelte';
 	import * as config from '$lib/config';
@@ -12,7 +12,7 @@
 		LayoutGridIcon,
 		LucideArrowDown,
 		LucideArrowUp,
-		MapIcon,
+		BarChartIcon,
 		TableIcon,
 		TextIcon
 	} from 'lucide-svelte';
@@ -24,22 +24,38 @@
 	import { searchConfig } from './search';
 	import SearchWorker from './worker.js?worker';
 
-	const searchQueryParam = queryParam('q', ssp.string(''));
-	const searchPageParam = queryParam('page', ssp.number(1));
-	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit));
-	/** @property {'cards' | 'map' | 'table' | 'text'} */
-	const searchViewParam = queryParam('view', ssp.string('cards'));
-	const searchFiltersParam = queryParam('filters', ssp.object({}));
+	const searchQueryParam = queryParam('q', ssp.string(''), { showDefaults: false });
+	const searchPageParam = queryParam('page', ssp.number(1), { showDefaults: false });
+	const searchLimitParam = queryParam('limit', ssp.number(config.search.limit), { showDefaults: false });
+	/** @property {'cards' | 'viz' | 'table' | 'text'} */
+	const searchViewParam = queryParam('view', ssp.string('cards'), { showDefaults: false });
+	const searchFiltersParam = queryParam('filters', ssp.object({ country: ['Sicilia'] }), { showDefaults: false });
 	/** @property {import('./search').SearchOptions['searchMode']} */
-	const searchModeParam = queryParam('mode', ssp.string('all'));
-	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false));
+	const searchModeParam = queryParam('mode', ssp.string('all'), { showDefaults: false });
+	const searchIsExactSearchParam = queryParam('isExactSearch', ssp.boolean(false), { showDefaults: false });
+	const vizCategoryParam = queryParam('vizCategory', ssp.string('provenance'), { showDefaults: false });
+	const vizChartParam = queryParam('vizChart', ssp.string('map'), { showDefaults: false });
+	const vizColourByParam = queryParam('vizColourBy', ssp.string(''), { showDefaults: false });
+
+	const sortings = $derived(
+		Array.from(
+			new Map(
+				Object.values(searchConfig.sortings).map((sorting) => [
+					sorting.field,
+					{ field: sorting.field, label: sorting.label }
+				])
+			).values()
+		).sort((a, b) => a.label.localeCompare(b.label))
+	);
 
 	/** @type {import('./worker.js').WorkerStatus} */
 	let searchStatus = $state('idle');
 	let isLoading = $derived(['idle', 'load'].includes(searchStatus));
 	let isDownloading = $state(false);
+	let isAppending = $state(false);
 
 	let searchWorker = $state();
+	/** @type {any} */
 	let searchResults = $state({});
 	let searchPagination = $derived(searchResults?.pagination ?? {});
 	let searchAggregations = $derived(searchResults?.data?.aggregations ?? {});
@@ -48,13 +64,11 @@
 	let numberOfLocations = $derived(getNumberOfLocations());
 
 	let inscriptions = $derived(searchResults?.data?.items ?? []);
-	let inscriptionsGeo = $derived(
-		$searchViewParam === 'map'
+	let inscriptionsViz = $derived(
+		$searchViewParam === 'viz'
 			? inscriptions?.map((inscription) => ({
-					file: inscription.file,
-					title: inscription.title,
-					places: inscription.places,
-					geo: inscription.geo[0]
+					...inscription,
+					geo: inscription?.geo?.[0]
 				}))
 			: []
 	);
@@ -63,7 +77,9 @@
 
 	const searchOptions = $state({
 		sortAggregationsBy: 'key',
-		languageConjunction: true,
+		languageConjunction: false,
+		inscriptionTypeConjunction: false,
+		publicationConjunction: false,
 		sortResultsBy: 'file',
 		sortResultsOrder: 'asc'
 	});
@@ -84,13 +100,28 @@
 			(/** @type {{ data: { type: import('./worker.js').WorkerStatus; data: any; }}} */ event) => {
 				const { type, data } = event.data;
 
+				if (type === 'load') {
+					searchStatus = 'load';
+				}
+
 				if (type === 'ready') {
 					searchStatus = 'ready';
 					postSearchMessage();
 				}
 
 				if (type === 'results') {
-					searchResults = data;
+					if (isAppending) {
+						searchResults = {
+							...data,
+							data: {
+								...data.data,
+								items: [...(searchResults?.data?.items ?? []), ...data.data.items]
+							}
+						};
+					} else {
+						searchResults = data;
+					}
+					isAppending = false;
 				}
 			}
 		);
@@ -105,8 +136,10 @@
 	 * @param {string | null | undefined} [query]
 	 * @param {number | null | undefined} [limit]
 	 * @param {import('./search').SearchOptions['searchMode'] | null | undefined} [mode]
+	 * @param {boolean} [append]
 	 */
-	async function postSearchMessage(page, query, limit, mode) {
+	async function postSearchMessage(page, query, limit, mode, append = false) {
+		isAppending = append;
 		let currentPage = $searchPageParam;
 		let currentQuery = $searchQueryParam;
 		let currentLimit = $searchLimitParam;
@@ -235,9 +268,12 @@
 
 		$searchQueryParam = '';
 		$searchPageParam = 1;
-		$searchLimitParam = $searchViewParam === 'map' ? config.search.maxLimit : config.search.limit;
+		$searchLimitParam = $searchViewParam === 'viz' ? config.search.maxLimit : config.search.limit;
 		$searchFiltersParam = '';
 		$searchModeParam = 'all';
+		$vizCategoryParam = 'provenance';
+		$vizChartParam = 'map';
+		$vizColourByParam = '';
 		selectedDateRange = [...initDateRange()];
 		selectedLetterHeightRange = [...initLetterHeightRange()];
 		selectedFilters = { ...initFilters() };
@@ -245,7 +281,7 @@
 		postSearchMessage(
 			1,
 			'',
-			$searchViewParam === 'map' ? config.search.maxLimit : config.search.limit
+			$searchViewParam === 'viz' ? config.search.maxLimit : config.search.limit
 		);
 	}
 
@@ -255,7 +291,9 @@
 				type: 'load',
 				data: {
 					sortAggregationsBy: searchOptions.sortAggregationsBy,
-					languageConjunction: searchOptions.languageConjunction
+					languageConjunction: searchOptions.languageConjunction,
+					inscriptionTypeConjunction: searchOptions.inscriptionTypeConjunction,
+					publicationConjunction: searchOptions.publicationConjunction
 				}
 			});
 
@@ -263,13 +301,16 @@
 		}
 	}
 
-	async function handleLanguageConjunctionToggle() {
+	async function handleConjunctionToggle() {
 		if (searchOptions.sortAggregationsBy && searchWorker && searchStatus === 'ready') {
+			searchStatus = 'load';
 			searchWorker.postMessage({
 				type: 'load',
 				data: {
 					sortAggregationsBy: searchOptions.sortAggregationsBy,
-					languageConjunction: searchOptions.languageConjunction
+					languageConjunction: searchOptions.languageConjunction,
+					inscriptionTypeConjunction: searchOptions.inscriptionTypeConjunction,
+					publicationConjunction: searchOptions.publicationConjunction
 				}
 			});
 
@@ -303,14 +344,14 @@
 	}
 
 	/**
-	 * @param {'cards' | 'map' | 'table' | 'text'} newView
+	 * @param {'cards' | 'viz' | 'table' | 'text'} newView
 	 */
 	async function handleViewChange(newView) {
 		let currentLimit = $searchLimitParam;
 
-		if (newView === 'map') {
+		if (newView === 'viz') {
 			currentLimit = config.search.maxLimit;
-		} else if ($searchViewParam === 'map') {
+		} else if ($searchViewParam === 'viz') {
 			// clear the search results items to prevent non-map views to attempt to render all the inscriptions
 			searchResults = {
 				...searchResults,
@@ -437,6 +478,15 @@
 		searchWorker.addEventListener('message', downloadHandler);
 	}
 
+	/**
+	 * @param {string} newSortResultsBy
+	 */
+	async function handleSortResultsByChange(newSortResultsBy) {
+		searchOptions.sortResultsBy = newSortResultsBy;
+
+		postSearchMessage();
+	}
+
 	async function handleSortResultsOrderToggle() {
 		searchOptions.sortResultsOrder = searchOptions.sortResultsOrder === 'asc' ? 'desc' : 'asc';
 
@@ -449,6 +499,12 @@
 	async function handlePageChange(page) {
 		$searchPageParam = page;
 		postSearchMessage(page);
+	}
+
+	async function handleLoadMore() {
+		const nextPage = $searchPageParam + 1;
+		$searchPageParam = nextPage;
+		postSearchMessage(nextPage, null, null, null, true);
 	}
 
 	onMount(() => {
@@ -474,16 +530,21 @@
 
 <div class="search-layout">
 	<SearchFilters
-		show={showFilters}
+		bind:show={showFilters}
+		{isLoading}
 		aggregations={searchAggregations}
 		{total}
 		bind:sortAggregationsBy={searchOptions.sortAggregationsBy}
 		bind:languageConjunction={searchOptions.languageConjunction}
+		bind:inscriptionTypeConjunction={searchOptions.inscriptionTypeConjunction}
+		bind:publicationConjunction={searchOptions.publicationConjunction}
 		bind:selectedDateRange
 		bind:selectedLetterHeightRange
 		bind:selectedFilters
 		sortAggregationsByChange={handleSortAggregationsByChange}
-		languageConjunctionChange={handleLanguageConjunctionToggle}
+		languageConjunctionChange={handleConjunctionToggle}
+		inscriptionTypeConjunctionChange={handleConjunctionToggle}
+		publicationConjunctionChange={handleConjunctionToggle}
 		searchFiltersChange={handleSearchFiltersChange}
 	/>
 
@@ -528,50 +589,56 @@
 					query={$searchQueryParam}
 					filters={selectedFilters}
 				/>
-				<section class="reduced-block-margin">
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('cards')}
-					>
-						<LayoutGridIcon />View cards
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('text')}
-					>
-						<TextIcon />View text
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'map' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('map')}
-					>
-						<MapIcon />View map
-					</Button.Root>
-					<Button.Root
-						class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
-						onclick={() => handleViewChange('table')}
-					>
-						<TableIcon />View table
-					</Button.Root>
-					<Button.Root
-						class="secondary"
-						aria-label="Download inscription data as a CSV file"
-						disabled={isDownloading}
-						onclick={handleCSVDownload}
-						aria-busy={isDownloading}
-					>
-						<DownloadIcon />CSV
-					</Button.Root>
-					<Button.Root
-						class="secondary"
-						aria-label="Download inscriptions as XML"
-						disabled={!hasActiveFilters() || isDownloading}
-						onclick={handleXMLDownload}
-						aria-busy={isDownloading}
-					>
-						<DownloadIcon />Epidoc
-					</Button.Root>
-				</section>
+
+				<div class="buttons-row">
+					<section class="reduced-block-margin view-buttons">
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'cards' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('cards')}
+						>
+							<LayoutGridIcon />View cards
+						</Button.Root>
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'table' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('table')}
+						>
+							<TableIcon />View table
+						</Button.Root>
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'text' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('text')}
+						>
+							<TextIcon />View text
+						</Button.Root>
+						<Button.Root
+							class={`primary ${$searchViewParam !== 'viz' && 'primary-inverse'}`}
+							onclick={() => handleViewChange('viz')}
+						>
+							<BarChartIcon />Visualisations
+						</Button.Root>
+					</section>
+					<section class="reduced-block-margin download-buttons">
+						<Button.Root
+							class="secondary"
+							aria-label="Download inscription data as a CSV file"
+							disabled={isDownloading}
+							onclick={handleCSVDownload}
+							aria-busy={isDownloading}
+						>
+							<DownloadIcon />CSV
+						</Button.Root>
+						<Button.Root
+							class="secondary"
+							aria-label="Download inscriptions as XML"
+							disabled={!hasActiveFilters() || isDownloading}
+							onclick={handleXMLDownload}
+							aria-busy={isDownloading}
+						>
+							<DownloadIcon />Epidoc
+						</Button.Root>
+					</section>
+				</div>
+
 				<section class="reduced-block-margin controls">
 					<p>{total.toLocaleString()} Inscriptions</p>
 					<div class="filters-toggle">
@@ -584,17 +651,22 @@
 					</div>
 					<div class="sort-controls">
 						<label for="sort-select">Sort by:</label>
-						<select id="sort-select" bind:value={searchOptions.sortResultsBy}>
-							<option value="file">File</option>
-							<option value="notBefore">Not before</option>
-							<option value="notAfter">Not after</option>
-							<option value="title">Title</option>
+						<select
+							id="sort-select"
+							bind:value={searchOptions.sortResultsBy}
+							onchange={(option) => handleSortResultsByChange(option.target.value)}
+							disabled={isLoading || isDownloading || $searchViewParam === 'viz'}
+						>
+							{#each sortings as sorting}
+								<option value={sorting.field}>{sorting.label}</option>
+							{/each}
 						</select>
 
 						<Button.Root
 							class="order-toggle"
 							onclick={() => handleSortResultsOrderToggle()}
 							aria-label="Toggle sort order from ascending to descending to no order"
+							disabled={isLoading || isDownloading || $searchViewParam === 'viz'}
 						>
 							{#if searchOptions.sortResultsOrder === 'asc'}
 								<LucideArrowUp aria-label="Ascending" />
@@ -604,13 +676,19 @@
 						</Button.Root>
 					</div>
 				</section>
-				{#if $searchViewParam === 'map'}
+				{#if $searchViewParam === 'viz'}
 					<div
 						class="transition-container"
 						in:fade={{ duration: 500 }}
 						out:fade={{ duration: 250 }}
 					>
-						<InscriptionMap inscriptions={inscriptionsGeo} />
+						<InscriptionVisualisation
+							inscriptions={inscriptionsViz}
+							aggregations={searchAggregations}
+							bind:selectedCategory={$vizCategoryParam}
+							bind:selectedView={$vizChartParam}
+							bind:selectedColourBy={$vizColourByParam}
+						/>
 					</div>
 				{:else}
 					{#key $searchViewParam}
@@ -631,6 +709,19 @@
 							{/if}
 						</div>
 					{/key}
+
+					{#if $searchViewParam !== 'viz' && inscriptions.length > 0 && $searchPageParam * $searchLimitParam < total}
+						<div class="load-more-container reduced-block-margin">
+							<Button.Root
+								class="secondary"
+								onclick={handleLoadMore}
+								disabled={isAppending || isLoading}
+							>
+								{isAppending ? 'Loading...' : 'Load more'}
+							</Button.Root>
+						</div>
+					{/if}
+
 					<InscriptionPagination
 						page={$searchPageParam}
 						count={total}
@@ -704,15 +795,29 @@
 		margin-block: var(--size-3);
 	}
 
+	/*ZL to make changes about the layout of explore filter button*/
 	.controls {
 		align-items: center;
 		border-bottom: var(--border-size-1) solid var(--gray-4);
 		border-top: var(--border-size-1) solid var(--gray-4);
-		display: flex;
-		justify-content: space-between;
+		display: grid; /* ZL changed from flex to grid**/
+		grid-template-columns: 1fr auto 1fr; /* ZL removed justify-content: space-between to grid-template columns*/
 		padding-block: var(--size-2);
 		margin-block-end: var(--size-6);
 		width: 100%;
+	}
+
+	/* ZL added to place the component for the right places **/
+	.controls > p {
+		justify-self: start; /* ZL: count text sticks to the left */
+	}
+
+	.filters-toggle {
+		justify-self: center; /* ZL: Explore filters sits in the true centre */
+	}
+
+	.sort-controls {
+		justify-self: end; /* ZL: sort controls hug the right side */
 	}
 
 	.sort-controls {
@@ -721,7 +826,98 @@
 		gap: var(--size-2);
 	}
 
+	.sort-controls:has(select:disabled) {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+
 	.transition-container {
 		width: 100%;
+	}
+
+	.load-more-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/*ZL: disabled Table View*/
+	@media (max-width: 768px) {
+		:global(.view-table-btn) {
+			display: none;
+		}
+	}
+
+	/* ZL: added div and section, in here I tried to make the desktop back to one row*/
+	@media (min-width: 769px) {
+		.buttons-row {
+			display: flex;
+			gap: var(--size-2);
+			justify-content: center;
+			align-items: center;
+		}
+		.view-buttons,
+		.download-buttons {
+			display: flex;
+			gap: var(--size-2);
+			justify-content: center;
+		}
+		.view-buttons :global(button),
+		.download-buttons :global(button) {
+			width: auto;
+		}
+	}
+
+	/*ZL: adjusted the mobile version that making download buttons and view buttons are in different rows*/
+	@media (max-width: 768px) {
+		.buttons-row {
+			display: block;
+		}
+
+		.view-buttons {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: var(--size-1);
+			width: 100%;
+		}
+		.view-buttons :global(button) {
+			width: 100%;
+			padding-inline: var(--size-2);
+			justify-content: center;
+		}
+
+		.download-buttons {
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			gap: var(--size-1);
+			justify-content: center;
+		}
+		.download-buttons :global(button) {
+			width: auto;
+		}
+	}
+
+	/*ZL: disabled the sort by component, placing the Explore Filters on the right side, taking the place*/
+	@media (max-width: 768px) {
+		.controls .sort-controls {
+			display: none;
+		}
+		.controls {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.filters-toggle {
+			margin-left: auto;
+		}
+		.filters-toggle :global(button) {
+			width: auto;
+			padding-inline: var(
+				--size-2
+			); /* ZL: to keep the same compact size
+			as the above buttons change*/
+			justify-content: center;
+		}
 	}
 </style>

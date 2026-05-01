@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -83,7 +87,9 @@
         "from": "line1",
         "to": "line3",
         "h": "25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -97,19 +103,20 @@
   "date": {
     "_": "Gentilician of late 1st century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Leontini",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462279"
+      "ref": "http://pleiades.stoa.org/places/462279",
+      "region": "Sicilia"
     },
     {
       "_": "Lentini",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524410"
+      "ref": "http://sws.geonames.org/2524410",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +125,8 @@
       14.99737
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Leontini",
   "provenanceFound": {
     "_": "Manganaro records as found by the late avv. Alfio Sgalambro 'in zona Catalicciardo, tenere di Lentini'; current location not noted.",
     "type": "found",
@@ -125,6 +134,7 @@
     "notAfter": "1993",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -142,7 +152,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Lentini",
   "repository": "private collection?",
@@ -161,31 +170,42 @@
         "n": "AE",
         "citedRange": "1993.0831",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
         "date": "1993",
         "citedRange": "547, 544 fig. 2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JBI7CI5R"
+          "target": "https://www.zotero.org/groups/382445/items/JBI7CI5R"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -209,27 +229,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -238,6 +240,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491378",
   "facsimile": {
     "n": "screen",
     "url": "ISic000658_tiled.tif",
@@ -246,11 +249,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Leontini",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 25
+    }
+  ],
   "publications": [
-    null,
-    "Manganaro, 1993"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C."
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "JBI7CI5R"
   ],
   "keywords": [
     "isic000658",
@@ -263,7 +274,7 @@
     "marble",
     "leontini",
     "lentini",
-    "italy",
+    "sicilia",
     "sicily",
     "lentini",
     "latin",

@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -79,7 +82,9 @@
         "from": "line1",
         "to": "line3",
         "h": "70-90",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "90"
       },
       {
         "type": "interlinear",
@@ -99,7 +104,8 @@
     {
       "_": "Monte Catalfaro",
       "type": "modern",
-      "ref": "https://pleiades.stoa.org/places/50391614"
+      "ref": "https://pleiades.stoa.org/places/50391614",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,6 +114,8 @@
       14.7170002
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Monte Catalfaro",
   "provenanceFound": {
     "_": "Monte Catalfaro",
     "type": "found",
@@ -118,6 +126,10 @@
       14.7170002
     ]
   },
+  "provenanceGeo": [
+    37.280398,
+    14.7170002
+  ],
   "provenanceObserved": {
     "_": "2014.10.30 Metcalfe",
     "type": "observed",
@@ -136,7 +148,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Mineo",
   "repository": {
@@ -186,8 +197,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001439",
           "target": "https://biblio.inscriptiones.org/epig10001439"
         },
+        "inscriptionDate": "1970",
         "title": "Monte Catalfaro e l'identificazione di Noai",
-        "citation": "<span>A. Messina, «Monte Catalfaro e l’identificazione di Noai», <i>Cronache di archeologia e di storia dell’arte</i> 9 (1970): 24–34</span>"
+        "citation": "<span>A. Messina, «Monte Catalfaro e l’identificazione di Noai», <i>Cronache di archeologia e di storia dell’arte</i> 9 (1970): 24–34</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/59PEX25M",
+        "year": "1970"
       },
       {
         "author": "Cordano",
@@ -200,8 +214,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002668",
           "target": "https://biblio.inscriptiones.org/epig10002668"
         },
+        "inscriptionDate": "2005",
         "title": "Epigrafi",
-        "citation": "<span>Federica Cordano, «Epigrafi», in <i>Museo Civico «Corrado Tamburino Merlini» di Mineo: sezione archeologica</i>, a c. di Laura Maniscalco (Mineo: Comune di Mineo, 2005), 119–25</span>"
+        "citation": "<span>Federica Cordano, «Epigrafi», in <i>Museo Civico «Corrado Tamburino Merlini» di Mineo: sezione archeologica</i>, a c. di Laura Maniscalco (Mineo: Comune di Mineo, 2005), 119–25</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WECDMWG9",
+        "year": "2005"
       },
       {
         "author": "Cordano",
@@ -214,15 +231,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001366",
           "target": "https://biblio.inscriptiones.org/epig10001366"
         },
+        "inscriptionDate": "2014",
         "title": "Materiale vecchio e nuovo dalla Sicilia orientale",
-        "citation": "<span>Federica Cordano, «Materiale vecchio e nuovo dalla Sicilia orientale», in <i>Dinamiche culturali ed etniche nella Sicilia orientale dall’età classica all’epoca ellenistica</i>, a c. di T. Alfieri Tonini e S. Struffolino, Aristonothos. Scritti per il Medterraneo antico. Quaderni n.4 (Trento: Tangram Edizioni Scientifiche, 2014), 105–11</span>"
+        "citation": "<span>Federica Cordano, «Materiale vecchio e nuovo dalla Sicilia orientale», in <i>Dinamiche culturali ed etniche nella Sicilia orientale dall’età classica all’epoca ellenistica</i>, a c. di T. Alfieri Tonini e S. Struffolino, Aristonothos. Scritti per il Medterraneo antico. Quaderni n.4 (Trento: Tangram Edizioni Scientifiche, 2014), 105–11</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/A3NF7B7J",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -246,20 +266,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Sinja Küppers",
         "xml:id": "SK",
         "ref": "http://orcid.org/0000-0003-0452-7910"
@@ -270,16 +276,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Romeo Gessaga",
+        "xml:id": "RG",
+        "ref": "https://orcid.org/0009-0003-5190-1722"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised provenance",
-      "when": "2022-09-15",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2026-02-09",
+      "who": "#RG"
     }
   },
+  "tmNumber": "644926",
   "facsimile": {
     "n": "screen",
     "url": "ISic003448_tiled.tif",
@@ -288,12 +306,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Monte Catalfaro",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 70,
+      "atMost": 90
+    }
+  ],
   "publications": [
     "Messina, 1970, Monte Catalfaro e l'identificazione di Noai",
     "Cordano, 2005, Epigrafi",
     "Cordano, 2014, Materiale vecchio e nuovo dalla Sicilia orientale"
+  ],
+  "zotero": [
+    "59PEX25M",
+    "WECDMWG9",
+    "A3NF7B7J"
   ],
   "keywords": [
     "isic003448",
@@ -305,7 +332,7 @@
     "plaque",
     "limestone",
     "monte catalfaro",
-    "italy",
+    "sicilia",
     "sicily",
     "mineo",
     "museo civico corrado tamburino merlini",

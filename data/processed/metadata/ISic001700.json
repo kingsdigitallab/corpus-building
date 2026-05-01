@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -80,7 +83,9 @@
         "from": "line1",
         "to": "line6",
         "h": "28-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "28",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -94,19 +99,21 @@
   "date": {
     "_": "The archaeological context, parallel material and palaeography, all support a date in the late second or early first century BCE.",
     "notBefore": -150,
-    "notAfter": -50,
+    "notAfter": -51,
     "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     },
     {
       "_": "Segesta",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523171"
+      "ref": "http://sws.geonames.org/2523171",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +122,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found in situ in excavation on 14.05.2021 in a room below the south side of the agora (SG 21, SAS 4 Sud).",
     "type": "found",
@@ -126,6 +135,10 @@
       12.842897
     ]
   },
+  "provenanceGeo": [
+    37.939406,
+    12.842897
+  ],
   "provenanceObserved": {
     "_": "in situ",
     "type": "observed",
@@ -143,7 +156,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
   "repository": {
@@ -166,7 +178,10 @@
           "lon": 12.8361805
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462487"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462487"
+      }
     }
   },
   "idno": {
@@ -188,21 +203,24 @@
         "date": "2022",
         "citedRange": "G36",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/IQWVHITM"
+          "target": "https://www.zotero.org/groups/382445/items/IQWVHITM"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002692",
           "target": "https://biblio.inscriptiones.org/epig10002692"
         },
+        "inscriptionDate": "2022",
         "title": "Segesta. Ephebikon e ginnasio. L’iscrizione greca di Diodoros figlio di Tittelos sulla base della statua del padre e il suo significato storico (secondo supplemento epigrafico 2021)",
-        "citation": "<span>Carmine Ampolo, «Segesta. Ephebikon e ginnasio. L’iscrizione greca di Diodoros figlio di Tittelos sulla base della statua del padre e il suo significato storico (secondo supplemento epigrafico 2021)», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> Series 5, 14/2, supplemento (2022): 116–28, figs. 127–34</span>"
+        "citation": "<span>Carmine Ampolo, «Segesta. Ephebikon e ginnasio. L’iscrizione greca di Diodoros figlio di Tittelos sulla base della statua del padre e il suo significato storico (secondo supplemento epigrafico 2021)», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> Series 5, 14/2, supplemento (2022): 116–28, figs. 127–34</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IQWVHITM",
+        "year": "2022"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -225,27 +243,9 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -254,6 +254,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic000622_tiled.tif",
@@ -262,10 +263,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 28,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Ampolo, 2022, Segesta. Ephebikon e ginnasio. L’iscrizione greca di Diodoros figlio di Tittelos sulla base della statua del padre e il suo significato storico (secondo supplemento epigrafico 2021)"
+  ],
+  "zotero": [
+    "IQWVHITM"
   ],
   "keywords": [
     "isic001700",
@@ -278,7 +286,7 @@
     "limestone",
     "segesta",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "segesta",
     "parco archeologico di segesta",

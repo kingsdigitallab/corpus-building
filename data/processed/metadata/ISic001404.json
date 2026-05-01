@@ -43,7 +43,10 @@
   },
   "material": {
     "_": "volcanic",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -84,7 +87,9 @@
         "from": "line1",
         "to": "line1",
         "h": "120-130",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "120",
+        "atMost": "130"
       },
       {
         "type": "letterHeight",
@@ -92,7 +97,9 @@
         "from": "line2",
         "to": "line2",
         "h": "100-110",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "100",
+        "atMost": "110"
       },
       {
         "type": "letterHeight",
@@ -100,7 +107,9 @@
         "from": "line3",
         "to": "line3",
         "h": "100",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "100",
+        "atMost": "100"
       },
       {
         "type": "interlinear",
@@ -108,7 +117,9 @@
         "from": "line1",
         "to": "line2",
         "h": "30-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -116,26 +127,29 @@
         "from": "line2",
         "to": "line3",
         "h": "10-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "30"
       }
     ]
   },
   "date": {
     "_": "5th century CE or later (?)",
     "notBefore": 401,
-    "notAfter": 700,
-    "precision": "low"
+    "notAfter": 700
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -144,6 +158,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "First recorded by Gualtherus, it was transferred to the Adrano museum in 1975, from the ‘fondo Cancellieri-Nicolò Reina', contrada Cavalera (Centuripe), located on the right bank of the Simeto between Centuripe and Adrano",
     "type": "found",
@@ -153,6 +169,10 @@
       14.79676
     ]
   },
+  "provenanceGeo": [
+    37.6313,
+    14.79676
+  ],
   "provenanceObserved": {
     "_": "2015.07.03",
     "type": "observed",
@@ -203,7 +223,6 @@
       "surfaceType": "left"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Adrano",
   "repository": {
@@ -248,46 +267,60 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0585",
+            "_": "585",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "45.1353",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5742b",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5742b",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Manganaro",
@@ -300,22 +333,28 @@
           "_": "https://biblio.inscriptiones.org/epig10001823",
           "target": "https://biblio.inscriptiones.org/epig10001823"
         },
+        "inscriptionDate": "1994",
         "title": "Per una storia della 'chora Katanaia'",
-        "citation": "<span>Giacomo Manganaro, «Per una storia della “chora Katanaia”», in <i>Stuttgarter Kolloquium zur historischen Geographie des Altertums 4 (1990) / Geographica Historica 7. Herausgegeben von Ernst Kirsten.</i>, a c. di E. Olshausen e H. Sonnabend (Amsterdam: Verlag Adolf M. Hakkert, 1994), 127–74</span>"
+        "citation": "<span>Giacomo Manganaro, «Per una storia della “chora Katanaia”», in <i>Stuttgarter Kolloquium zur historischen Geographie des Altertums 4 (1990) / Geographica Historica 7. Herausgegeben von Ernst Kirsten.</i>, a c. di E. Olshausen e H. Sonnabend (Amsterdam: Verlag Adolf M. Hakkert, 1994), 127–74</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZHFSM94Z",
+        "year": "1994"
       },
       {
         "author": "Biondi",
         "date": "2002",
         "citedRange": "74 with n.117",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/CFHKJPUN"
+          "target": "https://www.zotero.org/groups/382445/items/CFHKJPUN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002588",
           "target": "https://biblio.inscriptiones.org/epig10002588"
         },
+        "inscriptionDate": "2002",
         "title": "Per una carta archeologica del territorio di Centuripe",
-        "citation": "<span>G. Biondi, «Per una carta archeologica del territorio di Centuripe», in <i>Scavi e ricerche a Centuripe</i>, a c. di G. Rizza (Catania, 2002), 41–81</span>"
+        "citation": "<span>G. Biondi, «Per una carta archeologica del territorio di Centuripe», in <i>Scavi e ricerche a Centuripe</i>, a c. di G. Rizza (Catania, 2002), 41–81</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CFHKJPUN",
+        "year": "2002"
       },
       {
         "author": "Biondi",
@@ -328,25 +367,44 @@
           "_": "https://biblio.inscriptiones.org/epig10002150",
           "target": "https://biblio.inscriptiones.org/epig10002150"
         },
+        "inscriptionDate": "2010",
         "title": "Centuripe (EN). Indagini su un territorio della Sicilia centro-orientale",
-        "citation": "<span>G. Biondi, «Centuripe (EN). Indagini su un territorio della Sicilia centro-orientale», in <i>Il dialogo dei saperi. Metodologie integrate per i Beni Culturali</i>, a c. di F. D’Andria et al. (Naples, Rome, 2010), 79–94</span>"
+        "citation": "<span>G. Biondi, «Centuripe (EN). Indagini su un territorio della Sicilia centro-orientale», in <i>Il dialogo dei saperi. Metodologie integrate per i Beni Culturali</i>, a c. di F. D’Andria et al. (Naples, Rome, 2010), 79–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GSAMDGK4",
+        "year": "2010"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "270",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "50 no. 332",
+            "_": "332",
             "target": "http://arachne.uni-koeln.de/item/buchseite/310975"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Castelli",
@@ -363,7 +421,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
@@ -380,56 +443,70 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Russo",
         "date": "1911",
         "citedRange": "59",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/CRSSWMDV"
+          "target": "https://www.zotero.org/groups/382445/items/CRSSWMDV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001615",
           "target": "https://biblio.inscriptiones.org/epig10001615"
         },
+        "inscriptionDate": "1911",
         "title": "Illustrazione storico-archeologica di Adernò",
-        "citation": "<span>S. P. Russo, <i>Illustrazione storico-archeologica di Adernò</i> (Atesa, 1911)</span>"
+        "citation": "<span>S. P. Russo, <i>Illustrazione storico-archeologica di Adernò</i> (Atesa, 1911)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CRSSWMDV",
+        "year": "1911"
       },
       {
         "author": "Manganaro",
         "date": "1980",
         "citedRange": "434 with n.112",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VQBJ735Q"
+          "target": "https://www.zotero.org/groups/382445/items/VQBJ735Q"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001836",
           "target": "https://biblio.inscriptiones.org/epig10001836"
         },
+        "inscriptionDate": "1980",
         "title": "La provincia Romana",
-        "citation": "<span>Giacomo Manganaro, «La provincia Romana», in <i>La Sicilia antica</i>, a c. di E. Gabba e G. Vallet, vol. 2.2 (Naples, 1980), 415–61</span>"
+        "citation": "<span>Giacomo Manganaro, «La provincia Romana», in <i>La Sicilia antica</i>, a c. di E. Gabba e G. Vallet, vol. 2.2 (Naples, 1980), 415–61</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQBJ735Q",
+        "year": "1980"
       },
       {
         "author": "Prag",
         "date": "2015",
         "citedRange": "327-330 no. 3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SHKXSQLC"
+          "target": "https://www.zotero.org/groups/382445/items/SHKXSQLC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002338",
           "target": "https://biblio.inscriptiones.org/epig10002338"
         },
+        "inscriptionDate": "2015",
         "title": "Epigrafia",
-        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>"
+        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SHKXSQLC",
+        "year": "2015"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -453,24 +530,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -482,6 +541,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "493020",
   "facsimile": {
     "n": "screen",
     "url": "ISic001404_tiled.tif",
@@ -490,21 +550,57 @@
     "desc": "Photo J. Prag, courtesy Museo Archeologico Regionale di Adrano",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 120,
+      "atMost": 130
+    },
+    {
+      "atLeast": 100,
+      "atMost": 110
+    },
+    {
+      "atLeast": 100,
+      "atMost": 100
+    },
+    {
+      "atLeast": 30,
+      "atMost": 40
+    },
+    {
+      "atLeast": 10,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "CIG",
+    "Boeckh, Franz, 1853, CIG",
     "Manganaro, 1994, Per una storia della 'chora Katanaia'",
     "Biondi, 2002, Per una carta archeologica del territorio di Centuripe",
     "Biondi, 2010, Centuripe (EN). Indagini su un territorio della Sicilia centro-orientale",
-    "Gualtherus, 1624 [1625]",
-    "Castelli, 1769",
-    "Castelli, 1784",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
     "Russo, 1911, Illustrazione storico-archeologica di Adernò",
     "Manganaro, 1980, La provincia Romana",
     "Prag, 2015, Epigrafia"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "TQMVHEVL",
+    "ZHFSM94Z",
+    "CFHKJPUN",
+    "GSAMDGK4",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "CRSSWMDV",
+    "VQBJ735Q",
+    "SHKXSQLC"
   ],
   "keywords": [
     "isic001404",
@@ -517,7 +613,7 @@
     "volcanic",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "adrano",
     "museo archeologico regionale di adrano",

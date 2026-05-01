@@ -43,7 +43,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -87,7 +92,9 @@
         "from": "line1",
         "to": "line1",
         "h": "18-28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "18",
+        "atMost": "28"
       },
       {
         "type": "letterHeight",
@@ -95,7 +102,9 @@
         "from": "line2",
         "to": "line2",
         "h": "17-21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "17",
+        "atMost": "21"
       },
       {
         "type": "letterHeight",
@@ -103,7 +112,9 @@
         "from": "line3",
         "to": "line3",
         "h": "14-18",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "14",
+        "atMost": "18"
       },
       {
         "type": "letterHeight",
@@ -111,7 +122,9 @@
         "from": "line4",
         "to": "line4",
         "h": "11-22",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "22"
       },
       {
         "type": "letterHeight",
@@ -119,7 +132,9 @@
         "from": "line5",
         "to": "line5",
         "h": "11-14",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "14"
       },
       {
         "type": "letterHeight",
@@ -127,7 +142,9 @@
         "from": "line6",
         "to": "line6",
         "h": "12-18",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "12",
+        "atMost": "18"
       },
       {
         "type": "interlinear",
@@ -135,7 +152,9 @@
         "from": "line1",
         "to": "line2",
         "h": "6",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "6",
+        "atMost": "6"
       },
       {
         "type": "interlinear",
@@ -143,7 +162,9 @@
         "from": "line2",
         "to": "line3",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -151,7 +172,9 @@
         "from": "line3",
         "to": "line4",
         "h": "4-8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "4",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -159,7 +182,9 @@
         "from": "line4",
         "to": "line5",
         "h": "4-9",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "4",
+        "atMost": "9"
       },
       {
         "type": "interlinear",
@@ -167,27 +192,30 @@
         "from": "line5",
         "to": "line6",
         "h": "3",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "3"
       }
     ]
   },
   "date": {
     "_": "Second half of 1st — first half of 2nd century CE (Korhonen)",
-    "notBefore": 50,
+    "notBefore": 51,
     "notAfter": 150,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -196,6 +224,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Faint pencil-writing on the reverse states \"Rinvenuta a Catania nell'anno 1843 sotto l'orto Manganelli\"",
     "type": "found",
@@ -203,6 +233,7 @@
     "when": "1843",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Observed by Bertucci and Kaibel in Museo dei Benedettini, later by Korhonen in magazzino del cortile, Collezione dei Benedettini (formerly sala VI.41)",
     "type": "observed",
@@ -235,7 +266,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -277,44 +307,55 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0479",
+            "_": "479",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "99",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Cassia",
         "date": "2020",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/WUV3RMI6"
+          "target": "https://www.zotero.org/groups/382445/items/WUV3RMI6"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002559",
           "target": "https://biblio.inscriptiones.org/epig10002559"
         },
+        "inscriptionDate": "2020",
         "title": "“La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale",
-        "citation": "<span>Margherita Cassia, «“La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale», <i>Gerión. Revista de Historia Antigua</i> 38, fasc. 1 (2020): 55–81, <a href=\"https://doi.org/10.5209/geri.68585\">https://doi.org/10.5209/geri.68585</a></span>"
+        "citation": "<span>Margherita Cassia, «“La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale», <i>Gerión. Revista de Historia Antigua</i> 38, fasc. 1 (2020): 55–81, <a href=\"https://doi.org/10.5209/geri.68585\">https://doi.org/10.5209/geri.68585</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WUV3RMI6",
+        "year": "2020"
       }
     ]
   },
@@ -326,54 +367,67 @@
         "date": "2009",
         "citedRange": "202",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/EPANRKPM"
+          "target": "https://www.zotero.org/groups/382445/items/EPANRKPM"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001635",
           "target": "https://biblio.inscriptiones.org/epig10001635"
         },
+        "inscriptionDate": "2009",
         "title": "Iscrizioni giudaica e cristiane di Malta",
-        "citation": "<span>Vittorio Giovanni Rizzone, «Iscrizioni giudaica e cristiane di Malta», <i>Zeitschrift für Papyrologie und Epigraphik</i> 168 (2009): 202–8</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone, «Iscrizioni giudaica e cristiane di Malta», <i>Zeitschrift für Papyrologie und Epigraphik</i> 168 (2009): 202–8</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EPANRKPM",
+        "year": "2009"
       },
       {
         "author": "Bertucci",
         "date": "1846",
         "citedRange": "32",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/Z6A8UGMR"
+          "target": "https://www.zotero.org/groups/382445/items/Z6A8UGMR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002303",
           "target": "https://biblio.inscriptiones.org/epig10002303"
         },
+        "inscriptionDate": "1846",
         "title": "Guida del Monastero dei PP. Benedettini di Catania",
-        "citation": "<span>Francesco Bertucci, <i>Guida del Monastero dei PP. Benedettini di Catania</i> (Catania, 1846)</span>"
+        "citation": "<span>Francesco Bertucci, <i>Guida del Monastero dei PP. Benedettini di Catania</i> (Catania, 1846)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Z6A8UGMR",
+        "year": "1846"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "213",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Cassia",
         "date": "2020",
         "citedRange": "66-68",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/WUV3RMI6"
+          "target": "https://www.zotero.org/groups/382445/items/WUV3RMI6"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002559",
           "target": "https://biblio.inscriptiones.org/epig10002559"
         },
+        "inscriptionDate": "2020",
         "title": "“La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale",
-        "citation": "<span>Margherita Cassia, «“La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale», <i>Gerión. Revista de Historia Antigua</i> 38, fasc. 1 (2020): 55–81, <a href=\"https://doi.org/10.5209/geri.68585\">https://doi.org/10.5209/geri.68585</a></span>"
+        "citation": "<span>Margherita Cassia, «“La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale», <i>Gerión. Revista de Historia Antigua</i> 38, fasc. 1 (2020): 55–81, <a href=\"https://doi.org/10.5209/geri.68585\">https://doi.org/10.5209/geri.68585</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WUV3RMI6",
+        "year": "2020"
       }
     ]
   },
@@ -398,20 +452,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -422,21 +462,33 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Marta Fogagnolo",
         "xml:id": "martaf",
         "ref": "https://orcid.org/0000-0001-5187-5163"
+      },
+      {
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Marta Fogagnolo revised the text encoding and added the commentary",
-      "when": "2022-05-17",
-      "who": "#martaf"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492907",
   "facsimile": {
     "n": "screen",
     "url": "ISic001302_tiled.tif",
@@ -445,12 +497,61 @@
     "desc": "Photo by students of Liceo Lazzaro, courtesy Museo Civico di Catania",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 18,
+      "atMost": 28
+    },
+    {
+      "atLeast": 17,
+      "atMost": 21
+    },
+    {
+      "atLeast": 14,
+      "atMost": 18
+    },
+    {
+      "atLeast": 11,
+      "atMost": 22
+    },
+    {
+      "atLeast": 11,
+      "atMost": 14
+    },
+    {
+      "atLeast": 12,
+      "atMost": 18
+    },
+    {
+      "atLeast": 6,
+      "atMost": 6
+    },
+    {
+      "atLeast": 10,
+      "atMost": 10
+    },
+    {
+      "atLeast": 4,
+      "atMost": 8
+    },
+    {
+      "atLeast": 4,
+      "atMost": 9
+    },
+    {
+      "atLeast": 3,
+      "atMost": 3
+    }
+  ],
   "publications": [
-    "IG",
-    "IMusCatania",
+    "Kaibel, 1890, IG",
+    "Korhonen, 2004, IMusCatania",
     "Cassia, 2020, “La stola e il silenzio”? “Parole” di donna in un epitaffio catanese d’età imperiale"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "2EUC82DH",
+    "WUV3RMI6"
   ],
   "keywords": [
     "isic001302",
@@ -463,7 +564,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

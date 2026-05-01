@@ -12,7 +12,7 @@ export function fuzzyMatch(str1, str2) {
 	// Allow for 1 character difference for strings up to 4 characters,
 	// 2 characters for strings up to 8 characters,
 	// and 3 characters for longer strings
-	const maxDistance = Math.min(3, Math.ceil(str1.length / 3));
+	const maxDistance = Math.min(3, Math.ceil(str1.length / 4));
 
 	return distance <= maxDistance;
 }

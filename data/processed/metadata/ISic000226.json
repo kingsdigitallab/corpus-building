@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "22-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "22",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "17-19",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "17",
+        "atMost": "19"
       },
       {
         "type": "interlinear",
@@ -108,12 +117,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -122,6 +133,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in excavations in the garden of the Convento dei Cappuccini, in Termini Imerese, in 1889, during the construction of new buildings, together with  and .",
     "type": "found",
@@ -142,6 +155,10 @@
       13.695378
     ]
   },
+  "provenanceGeo": [
+    37.982433,
+    13.695378
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 13, shelf 5",
     "type": "observed",
@@ -161,7 +178,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -210,14 +226,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2UJS2UVS",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7442",
+            "_": "7442",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
@@ -227,11 +250,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "151",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -239,15 +269,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -271,20 +306,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -295,13 +316,14 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -310,6 +332,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "285232",
   "facsimile": {
     "n": "screen",
     "url": "ISic000226_tiled.tif",
@@ -318,12 +341,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 22,
+      "atMost": 25
+    },
+    {
+      "atLeast": 17,
+      "atMost": 19
+    }
+  ],
   "publications": [
-    "Romano, 1829",
-    "CIL",
-    "ILMusTermini"
+    "Romano, 1829, Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "2UJS2UVS",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000226",
@@ -336,7 +372,7 @@
     "marble",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

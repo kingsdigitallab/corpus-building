@@ -44,9 +44,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to coarse-grained, banded, white, calcitic (with dolomite), smelly marble, likely Proconnesian. Optical microscopy: heteroblastic fabric with fine-grained areas. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -93,19 +108,21 @@
   },
   "date": {
     "_": "'Decisamente di III sc.d.C.; possibly of Probus, cf. Dessau ILS 594)",
-    "notBefore": 200,
+    "notBefore": 201,
     "notAfter": 300
   },
   "places": [
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,11 +131,14 @@
       15.04385
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tyndaris",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "2006.04",
     "type": "observed",
@@ -137,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari",
   "repository": {
@@ -182,7 +201,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "author": "Fasolo",
@@ -194,14 +218,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002011",
           "target": "https://biblio.inscriptiones.org/epig10002011"
-        }
+        },
+        "inscriptionDate": "2013",
+        "title": "Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+        "citation": "<span>M. Fasolo, <i>Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari</i> (Rome: MediaGEO, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X2SEXMRX",
+        "year": "2013"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -225,32 +254,19 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -259,6 +275,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "493934",
   "facsimile": {
     "n": "screen",
     "url": "ISic000676_tiled.tif",
@@ -267,11 +284,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Tyndaris",
   "letterHeights": [],
   "publications": [
-    "Manganaro, 1989",
-    "Fasolo, 2013"
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari"
+  ],
+  "zotero": [
+    "EZMBJ6GN",
+    "X2SEXMRX"
   ],
   "keywords": [
     "isic000676",
@@ -281,10 +301,10 @@
     },
     "honorific",
     "plaque",
-    "marble",
+    "fine to coarse-grained, banded, white, calcitic (with dolomite), smelly marble, likely proconnesian. optical microscopy: heteroblastic fabric with fine-grained areas. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis)",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
     "tindari",
     "antiquarium di tindari",

@@ -20,6 +20,10 @@ export const footer = {
 					href: ''
 				},
 				{
+					title: 'Technical Overview',
+					href: '/technical-overview'
+				},
+				{
 					title: 'Back to Top',
 					href: '#top',
 					class: 'small spacer'
@@ -52,11 +56,15 @@ export const footer = {
 				},
 				{
 					title: 'Accessibility',
-					href: ''
+					href: '/accessibility'
 				},
 				{
 					title: 'Credits & Acknowledgements',
 					href: '/credits'
+				},
+				{
+					title: 'How to Cite',
+					href: '/how-to-cite'
 				},
 				{
 					title: 'Cookies',
@@ -86,11 +94,11 @@ export const footer = {
 			links: [
 				{
 					title: 'Email',
-					href: 'mailto:isicily@iscriptiones.org'
+					href: 'mailto:isicily@inscriptiones.org'
 				},
 				{
 					title: 'Feedback',
-					href: ''
+					href: 'https://forms.office.com/pages/responsepage.aspx?id=G96VzPWXk0-0uv5ouFLPkYuLvvtmnolAvKHijf9sSopUNVQyWjFJQjkzS0JKUklQVlFUNEkyVjhKVS4u&route=shorturl'
 				}
 			]
 		}
@@ -99,7 +107,8 @@ export const footer = {
 		{
 			title: 'Università di Catania',
 			href: 'https://unict.it/',
-			img: '/images/logos/UniCT-Logo-Nero.png'
+			img: '/images/logos/UniCT-Logo-Nero.png',
+			class: 'add-background'
 		},
 		{
 			title: 'University of Oxford',
@@ -119,7 +128,7 @@ export const footer = {
 		},
 		{
 			title: 'Regione Siciliana',
-			href: 'https://regione.sicilia.it/',
+			href: 'https://www.regione.sicilia.it/',
 			img: '/images/logos/RegioneSiciliana.png'
 		},
 		{

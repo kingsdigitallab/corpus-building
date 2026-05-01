@@ -36,9 +36,11 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "stone.calcilutite",
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
-    "cert": "low"
+    "cert": "low",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -76,7 +78,9 @@
         "from": "line1",
         "to": "line1",
         "h": "80",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "80",
+        "atMost": "80"
       },
       {
         "type": "letterHeight",
@@ -84,7 +88,9 @@
         "from": "line2",
         "to": "line2",
         "h": "75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "75",
+        "atMost": "75"
       },
       {
         "type": "letterHeight",
@@ -92,7 +98,9 @@
         "from": "line3",
         "to": "line3",
         "h": "65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "65"
       },
       {
         "type": "letterHeight",
@@ -100,7 +108,9 @@
         "from": "line4",
         "to": "line5",
         "h": "70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -114,19 +124,21 @@
   },
   "date": {
     "_": "Hadrianic",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 150
   },
   "places": [
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -135,6 +147,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Excavated July 2010, in re-use on the decumanus maximus, Capo Boeo\n                        ",
     "type": "found",
@@ -145,6 +159,10 @@
     ],
     "geoCert": "low"
   },
+  "provenanceGeo": [
+    37.803041,
+    12.428914
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -170,7 +188,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -216,15 +233,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001581",
           "target": "https://biblio.inscriptiones.org/epig10001581"
         },
+        "inscriptionDate": "2014",
         "title": "Nuove epigrafi da Lilibeo",
-        "citation": "<span>Marina Silvestrini, «Nuove epigrafi da Lilibeo», in <i>L’Epigrafia dei porti. Atti della XVIIe recncontre sur l’épigraphie du monde romain, Aquileia, 14-16 ottobre 2010</i>, a c. di C. Zaccaria, Antichità altoadriatiche 79 (Trieste: Editreg, 2014), 207–26</span>"
+        "citation": "<span>Marina Silvestrini, «Nuove epigrafi da Lilibeo», in <i>L’Epigrafia dei porti. Atti della XVIIe recncontre sur l’épigraphie du monde romain, Aquileia, 14-16 ottobre 2010</i>, a c. di C. Zaccaria, Antichità altoadriatiche 79 (Trieste: Editreg, 2014), 207–26</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9JUZPUIJ",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -248,27 +268,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -277,6 +284,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "644936",
   "facsimile": {
     "n": "screen",
     "url": "ISic003459_tiled.tif",
@@ -285,10 +293,29 @@
     "desc": "Photo R.J.A. Wilson",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 80,
+      "atMost": 80
+    },
+    {
+      "atLeast": 75,
+      "atMost": 75
+    },
+    {
+      "atLeast": 65,
+      "atMost": 65
+    },
+    {
+      "atLeast": 70,
+      "atMost": 70
+    }
+  ],
   "publications": [
     "Silvestrini, 2014, Nuove epigrafi da Lilibeo"
+  ],
+  "zotero": [
+    "9JUZPUIJ"
   ],
   "keywords": [
     "isic003459",
@@ -301,7 +328,7 @@
     "limestone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

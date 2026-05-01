@@ -33,7 +33,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -86,20 +91,21 @@
   "date": {
     "_": "2nd century BCE (?)",
     "notBefore": -200,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Acrae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462068"
+      "ref": "http://pleiades.stoa.org/places/462068",
+      "region": "Sicilia"
     },
     {
       "_": "Palazzolo Acreide",
       "type": "modern",
       "ref": "http://sws.geonames.org/2523922",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,12 +114,15 @@
       14.89346
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Acrae",
   "provenanceFound": {
     "_": "Above the theatre",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Depositi, Mag C, box 'Akrai'",
     "type": "observed",
@@ -130,7 +139,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -174,15 +182,18 @@
         "n": "BE",
         "citedRange": "1959.0546",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "author": "Pugliese Carratelli",
@@ -191,12 +202,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/PJDRZH66"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001394",
-          "target": "https://biblio.inscriptiones.org/epig10001394"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/PJDRZH66",
+        "inscriptionDate": "1956",
         "title": "Silloge dell' epigrafi acrensi",
-        "citation": "<span>G. Pugliese Carratelli, «Silloge dell’ epigrafi acrensi», in <i>Akrai</i>, a c. di L. Bernabó Brea (Catania, 1956), 151–81</span>"
+        "citation": "<span>G. Pugliese Carratelli, «Silloge dell’ epigrafi acrensi», in <i>Akrai</i>, a c. di L. Bernabó Brea (Catania, 1956), 151–81</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PJDRZH66",
+        "year": "1956"
       },
       {
         "author": "Orsi",
@@ -209,15 +220,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002505",
           "target": "https://biblio.inscriptiones.org/epig10002505"
         },
+        "inscriptionDate": "1931",
         "title": "Notiziario archeologico sulla Sicilia orientale",
-        "citation": "<span>Paolo Orsi, «Notiziario archeologico sulla Sicilia orientale», <i>Il Mondo Classico</i> 1, fasc. 2 (1931): 40–52</span>"
+        "citation": "<span>Paolo Orsi, «Notiziario archeologico sulla Sicilia orientale», <i>Il Mondo Classico</i> 1, fasc. 2 (1931): 40–52</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9PW49ESV",
+        "year": "1931"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -241,20 +255,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -265,16 +265,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition",
-      "when": "2021-03-02",
-      "who": "#VM"
+      "_": "tagged names and persons",
+      "when": "2026-01-07",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "645321",
   "facsimile": {
     "n": "screen",
     "url": "ISic002965_tiled.tif",
@@ -283,12 +290,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Acrae",
   "letterHeights": [],
   "publications": [
     "Bulletin épigraphique, 1888-",
     "Pugliese Carratelli, 1956, Silloge dell' epigrafi acrensi",
     "Orsi, 1931, Notiziario archeologico sulla Sicilia orientale"
+  ],
+  "zotero": [
+    "77P5MNIR",
+    "PJDRZH66",
+    "9PW49ESV"
   ],
   "keywords": [
     "isic002965",
@@ -300,7 +311,7 @@
     "limestone",
     "acrae",
     "palazzolo acreide",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

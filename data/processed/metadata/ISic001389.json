@@ -40,7 +40,10 @@
   },
   "material": {
     "_": "volcanic",
-    "ana": "#material.stone.volcanic",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -91,19 +94,20 @@
   "date": {
     "_": "A date in the period 4th — 1st century BCE seems most likely, but it is impossible to be certain in the absence of further information",
     "notBefore": -400,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -1
   },
   "places": [
     {
       "_": "Adranon",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462074"
+      "ref": "http://pleiades.stoa.org/places/462074",
+      "region": "Sicilia"
     },
     {
       "_": "Adrano",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525769"
+      "ref": "http://sws.geonames.org/2525769",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,12 +116,15 @@
       14.83283
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Adranon",
   "provenanceFound": {
     "_": "Described by Gualtherus (1624) as coming from the ruins popularly identified with the shrine of the god Hadranus (not identified). All later editions derive from Gualtherus.",
     "type": "found",
     "subtype": "first-recorded",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -130,19 +137,10 @@
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001389_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
-  "settlement": "Lost",
+  "settlement": "unknown",
+  "repository": "unknown",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -156,36 +154,56 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0570",
+            "_": "570",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "274",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "50 no. 337",
+            "_": "337",
             "target": "http://arachne.uni-koeln.de/item/buchseite/310975"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Castelli",
@@ -202,7 +220,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
@@ -219,68 +242,89 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Osann",
         "date": "1834",
         "citedRange": "99",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VATSKP8P"
+          "target": "https://www.zotero.org/groups/382445/items/VATSKP8P"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002592",
           "target": "https://biblio.inscriptiones.org/epig10002592"
         },
+        "inscriptionDate": "1834",
         "title": "Sylloge inscriptionum antiquarum graecarum et latinarum",
-        "citation": "<span>F Osann, <i>Sylloge inscriptionum antiquarum graecarum et latinarum</i> (Leipzig, Darmstadt: C. G. Leske, 1834)</span>"
+        "citation": "<span>F Osann, <i>Sylloge inscriptionum antiquarum graecarum et latinarum</i> (Leipzig, Darmstadt: C. G. Leske, 1834)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VATSKP8P",
+        "year": "1834"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5739",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5739",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Russo",
         "date": "1911",
         "citedRange": "60",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/CRSSWMDV"
+          "target": "https://www.zotero.org/groups/382445/items/CRSSWMDV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001615",
           "target": "https://biblio.inscriptiones.org/epig10001615"
         },
+        "inscriptionDate": "1911",
         "title": "Illustrazione storico-archeologica di Adernò",
-        "citation": "<span>S. P. Russo, <i>Illustrazione storico-archeologica di Adernò</i> (Atesa, 1911)</span>"
+        "citation": "<span>S. P. Russo, <i>Illustrazione storico-archeologica di Adernò</i> (Atesa, 1911)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CRSSWMDV",
+        "year": "1911"
       },
       {
         "author": "Prag",
         "date": "2015",
         "citedRange": "318 no. C",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SHKXSQLC"
+          "target": "https://www.zotero.org/groups/382445/items/SHKXSQLC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002338",
           "target": "https://biblio.inscriptiones.org/epig10002338"
         },
+        "inscriptionDate": "2015",
         "title": "Epigrafia",
-        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>"
+        "citation": "<span>J.R.W. Prag, «Epigrafia», in <i>Museo Regionale Saro Franco di Adrano. Le Collezioni Archeologiche</i>, a c. di Gioconda Lamagna e Nicola Franceso Neri, vol. 2, 3 voll. (Palermo: Regione siciliana, 2015), 315–30</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SHKXSQLC",
+        "year": "2015"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -304,24 +348,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -333,25 +359,29 @@
       "who": "#JP"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001389_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Adranon",
+  "tmNumber": "493004",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "Gualtherus, 1624 [1625]",
-    "Castelli, 1769",
-    "Castelli, 1784",
+    "Kaibel, 1890, IG",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
     "Osann, 1834, Sylloge inscriptionum antiquarum graecarum et latinarum",
-    "CIG",
+    "Boeckh, Franz, 1853, CIG",
     "Russo, 1911, Illustrazione storico-archeologica di Adernò",
     "Prag, 2015, Epigrafia"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "VATSKP8P",
+    "TQMVHEVL",
+    "CRSSWMDV",
+    "SHKXSQLC"
   ],
   "keywords": [
     "isic001389",
@@ -364,9 +394,9 @@
     "volcanic",
     "adranon",
     "adrano",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "unknown",
     "ancient greek",
     "grc"
   ]

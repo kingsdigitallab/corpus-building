@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -80,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "7-9",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "7",
+        "atMost": "9"
       }
     ]
   },
@@ -94,7 +100,8 @@
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,6 +110,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found during the excavations (on the 11th of September 1965) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
     "type": "found",
@@ -112,6 +121,10 @@
       12.84509
     ]
   },
+  "provenanceGeo": [
+    37.9424,
+    12.84509
+  ],
   "provenanceObserved": {
     "_": "Mignosa 2021-12-14",
     "type": "observed",
@@ -131,7 +144,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -170,7 +182,8 @@
       "desc": "Elymian"
     },
     "languages": [
-      "Ancient Greek"
+      "Ancient Greek",
+      "Elymian (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -183,28 +196,34 @@
         "date": "1977",
         "citedRange": "60",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QR2S9AJ9"
+          "target": "https://www.zotero.org/groups/382445/items/QR2S9AJ9"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002201",
           "target": "https://biblio.inscriptiones.org/epig10002201"
         },
+        "inscriptionDate": "1977",
         "title": "Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QR2S9AJ9",
+        "year": "1977"
       },
       {
         "author": "Tusa",
         "date": "1967",
         "citedRange": "no.16",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/VKGKCTWE"
+          "target": "https://www.zotero.org/groups/382445/items/VKGKCTWE"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001538",
           "target": "https://biblio.inscriptiones.org/epig10001538"
         },
+        "inscriptionDate": "1967",
         "title": "Altri frammenti di ceramica con graffiti da Segesta",
-        "citation": "<span>Vincenzo Tusa, «Altri frammenti di ceramica con graffiti da Segesta», <i>Kokalos</i> 13 (1967): 233–48</span>"
+        "citation": "<span>Vincenzo Tusa, «Altri frammenti di ceramica con graffiti da Segesta», <i>Kokalos</i> 13 (1967): 233–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VKGKCTWE",
+        "year": "1967"
       }
     ]
   },
@@ -216,14 +235,17 @@
         "date": "1919",
         "citedRange": "259",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DAHXRRIE"
+          "target": "https://www.zotero.org/groups/382445/items/DAHXRRIE"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002562",
           "target": "https://biblio.inscriptiones.org/epig10002562"
         },
+        "inscriptionDate": "1919",
         "title": "A Handbook of Attic Red-figured Vases",
-        "citation": "<span>J.C. Hoppin, <i>A Handbook of Attic Red-Figured Vases</i>, vol. I (Cambridge: Harvard University Press, 1919)</span>"
+        "citation": "<span>J.C. Hoppin, <i>A Handbook of Attic Red-Figured Vases</i>, vol. I (Cambridge: Harvard University Press, 1919)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DAHXRRIE",
+        "year": "1919"
       }
     ]
   },
@@ -248,19 +270,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -272,6 +281,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020060_tiled.tif",
@@ -280,11 +290,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 7,
+      "atMost": 9
+    }
+  ],
   "publications": [
     "Agostiniani, 1977, IAS1",
     "Tusa, 1967, Altri frammenti di ceramica con graffiti da Segesta"
+  ],
+  "zotero": [
+    "QR2S9AJ9",
+    "VKGKCTWE"
   ],
   "keywords": [
     "isic020060",
@@ -296,7 +314,7 @@
     "lekythos",
     "ceramic",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -102,12 +106,14 @@
       "_": "Catina",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462270",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,12 +122,15 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded; seen by Amico 'apud Vincentium Michaelangelum' prior to 1740.",
     "type": "found",
     "notAfter": "1740",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -144,15 +153,16 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
-  "repository": "'apud Vicentium Michaelangelum'",
+  "repository": {
+    "_": "'apud Vicentium Michaelangelum'",
+    "role": "private"
+  },
   "textLang": {
     "_": "Latin and Ancient Greek",
     "mainLang": "la",
     "otherLangs": "grc",
-    "cert": "low",
     "ana": "#bilingualism.biversion",
     "languages": [
       "Latin",
@@ -165,31 +175,40 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7100",
+            "_": "7100",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650762"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Amico",
         "date": "1741",
         "citedRange": "228 no. 6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F5INCW3T"
+          "target": "https://www.zotero.org/groups/382445/items/F5INCW3T"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002186",
           "target": "https://biblio.inscriptiones.org/epig10002186"
-        }
+        },
+        "inscriptionDate": "1741",
+        "title": "Catana Ilustrata",
+        "citation": "<span>V. and Statella Amico E., <i>Catana Ilustrata</i>, vol. 3 (Catanae, 1741)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F5INCW3T",
+        "year": "1741"
       },
       {
         "author": "Castelli",
@@ -206,7 +225,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
@@ -223,14 +247,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -254,27 +283,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -283,6 +294,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491593",
   "facsimile": {
     "n": "screen",
     "url": "ISic000382_tiled.tif",
@@ -291,13 +303,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Amico, 1741",
-    "Castelli, 1769",
-    "Castelli, 1784"
+    "Mommsen, 1883, CIL",
+    "Amico, 1741, Catana Ilustrata",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "F5INCW3T",
+    "SPTB56H3",
+    "7PSFHSUH"
   ],
   "keywords": [
     "isic000382",
@@ -310,9 +327,10 @@
     "stone",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
+    "'apud vicentium michaelangelum'",
     "latin and ancient greek",
     "la"
   ]

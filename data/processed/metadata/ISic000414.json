@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line7",
         "h": "9-11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "9",
+        "atMost": "11"
       },
       {
         "type": "interlinear",
@@ -89,25 +96,29 @@
         "from": "line1",
         "to": "line2",
         "h": "1-3",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "1",
+        "atMost": "3"
       }
     ]
   },
   "date": {
     "_": "second or third century CE?",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 300
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +127,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "The museum inventory has a note stating 'forse dalle demolizioni delle fortificazioni' (sc. di Ortygia), but that this is not certain; a further note states that the piece was purchased by the director, Cavallari for the museum, in 1888. Mommsen in CIL, after Benndorf, states that it was found 'recently' (i.e. shortly before 1883) 'al pozzo degli ingegneri ubi forum antiquum fuit, prop portum minorem'. Lanteri 2020 discusses the location of the pozzo in Piazza d'Armi, where several other epigraphic fragments were found in 1888 (ISic000727 and 001667)",
     "type": "found",
@@ -126,6 +139,10 @@
       15.284319
     ]
   },
+  "provenanceGeo": [
+    37.066339,
+    15.284319
+  ],
   "provenanceObserved": {
     "_": "Prag 2016-10-10, MARPO magazzino B, cassette 33.",
     "type": "observed",
@@ -151,7 +168,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -193,21 +209,42 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7134",
+            "_": "7134",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650767"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
-      ""
+      null,
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "61",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
+      }
     ]
   },
   "bibliographyDiscussion": {
@@ -218,14 +255,17 @@
         "date": "2020",
         "citedRange": "p.4 n.34",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/T4PQR8CS"
+          "target": "https://www.zotero.org/groups/382445/items/T4PQR8CS"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002674",
           "target": "https://biblio.inscriptiones.org/epig10002674"
         },
+        "inscriptionDate": "2020",
         "title": "Pozzo degli ingegneri. Un toponimo urbano che conserva la forma antica della parlata siracusana",
-        "citation": "<span>Sebastiano Lanteri, «Pozzo degli ingegneri. Un toponimo urbano che conserva la forma antica della parlata siracusana», 2020, <a href=\"http://doi.org/10.5281/zenodo.4310021\">http://doi.org/10.5281/zenodo.4310021</a></span>"
+        "citation": "<span>Sebastiano Lanteri, «Pozzo degli ingegneri. Un toponimo urbano che conserva la forma antica della parlata siracusana», 2020, <a href=\"http://doi.org/10.5281/zenodo.4310021\">http://doi.org/10.5281/zenodo.4310021</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/T4PQR8CS",
+        "year": "2020"
       }
     ]
   },
@@ -250,20 +290,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -274,8 +300,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -284,6 +311,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491645",
   "facsimile": {
     "n": "screen",
     "url": "ISic000414_tiled.tif",
@@ -292,10 +320,23 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2016-10-10.",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 9,
+      "atMost": 11
+    },
+    {
+      "atLeast": 1,
+      "atMost": 3
+    }
+  ],
   "publications": [
-    "CIL"
+    "Mommsen, 1883, CIL",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000414",
@@ -308,7 +349,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

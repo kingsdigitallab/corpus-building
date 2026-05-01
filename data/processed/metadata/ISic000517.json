@@ -32,7 +32,11 @@
   },
   "material": {
     "_": "stone\n                                    ",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -80,19 +84,21 @@
   },
   "date": {
     "_": "185—192 CE (so\n                                Barbieri, Kokalos 7 (1961), 51)",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 200
   },
   "places": [
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -101,11 +107,14 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,7 +132,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": "",
@@ -138,6 +146,34 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "243",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "135",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "author": "Muratori",
         "date": "1740",
         "citedRange": {
@@ -147,31 +183,38 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/9S5VIRWZ"
+          "target": "https://www.zotero.org/groups/382445/items/9S5VIRWZ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001395",
           "target": "https://biblio.inscriptiones.org/epig10001395"
         },
+        "inscriptionDate": "1740",
         "title": "Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus",
-        "citation": "<span>Ludovico Antonio Muratori, <i>Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus</i>, vol. 2 (Mediolani: ex aedibus Palatinis, 1740), <a href=\"http://arachne.uni-koeln.de/books/Muratori1740Vol2\">http://arachne.uni-koeln.de/books/Muratori1740Vol2</a></span>"
+        "citation": "<span>Ludovico Antonio Muratori, <i>Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus</i>, vol. 2 (Mediolani: ex aedibus Palatinis, 1740), <a href=\"http://arachne.uni-koeln.de/books/Muratori1740Vol2\">http://arachne.uni-koeln.de/books/Muratori1740Vol2</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9S5VIRWZ",
+        "year": "1740"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7237",
+            "_": "7237",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
@@ -183,7 +226,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "author": "Sartori",
@@ -195,8 +244,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001604",
           "target": "https://biblio.inscriptiones.org/epig10001604"
         },
+        "inscriptionDate": "1957",
         "title": "Le dodici tribu di Lilibeo",
-        "citation": "<span>F. Sartori, «Le dodici tribu di Lilibeo», <i>Kokalos</i> 3 (1957): 38–60</span>"
+        "citation": "<span>F. Sartori, «Le dodici tribu di Lilibeo», <i>Kokalos</i> 3 (1957): 38–60</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PHEH2TTF",
+        "year": "1957"
       },
       {
         "author": "Manganaro",
@@ -209,27 +261,35 @@
           "_": "https://biblio.inscriptiones.org/epig10001836",
           "target": "https://biblio.inscriptiones.org/epig10001836"
         },
+        "inscriptionDate": "1980",
         "title": "La provincia Romana",
-        "citation": "<span>Giacomo Manganaro, «La provincia Romana», in <i>La Sicilia antica</i>, a c. di E. Gabba e G. Vallet, vol. 2.2 (Naples, 1980), 415–61</span>"
+        "citation": "<span>Giacomo Manganaro, «La provincia Romana», in <i>La Sicilia antica</i>, a c. di E. Gabba e G. Vallet, vol. 2.2 (Naples, 1980), 415–61</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQBJ735Q",
+        "year": "1980"
       },
       {
         "author": "Manganaro",
         "date": "1988",
-        "citedRange": "42 n.206",
+        "citedRange": "42 n.206, 53, 75",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -253,27 +313,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Alex Antoniou",
@@ -287,6 +329,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "491742",
   "facsimile": {
     "n": "screen",
     "url": "ISic000517_tiled.tif",
@@ -295,15 +338,26 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
   "letterHeights": [],
   "publications": [
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
     "Muratori, 1740, Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus",
-    "CIL",
-    "ILS",
+    "Mommsen, 1883, CIL",
+    "Dessau, 1892-1916, ILS",
     "Sartori, 1957, Le dodici tribu di Lilibeo",
     "Manganaro, 1980, La provincia Romana",
-    "Manganaro, 1988"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "9S5VIRWZ",
+    "GQN8UZSI",
+    "XHMS9K6S",
+    "PHEH2TTF",
+    "VQBJ735Q",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000517",
@@ -315,7 +369,7 @@
     "stone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "latin",

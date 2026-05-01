@@ -36,8 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -77,7 +79,9 @@
         "from": "line1",
         "to": "line6",
         "h": "15-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -91,20 +95,21 @@
   },
   "date": {
     "_": "later 3rd century CE (Ferrua on letter forms)",
-    "notBefore": 250,
-    "notAfter": 300,
-    "precision": "low"
+    "notBefore": 251,
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,12 +118,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Contrada Reina, close to the railway line to Noto, found 13.05.1930",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Display Sector D, cippi funerari",
     "type": "observed",
@@ -143,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -190,12 +197,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/4HR4GXBX"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001456",
-          "target": "https://biblio.inscriptiones.org/epig10001456"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/4HR4GXBX",
+        "inscriptionDate": "1941",
         "title": "Epigrafica sicula pagana e cristiana",
-        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>"
+        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4HR4GXBX",
+        "year": "1941"
       },
       {
         "author": "Manganaro",
@@ -208,15 +215,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001806",
           "target": "https://biblio.inscriptiones.org/epig10001806"
         },
+        "inscriptionDate": "2001",
         "title": "Noto greca e romana:fonti storiografiche,epigrafi e pseudo-monete",
-        "citation": "<span>Giacomo Manganaro, «Noto greca e romana:fonti storiografiche,epigrafi e pseudo-monete», in <i>Contributi alla geografia storica dell’agro netino. Atti delle Giornate di Studio. Noto, Palazzo Trigona, 29-31 maggio 1998</i>, a c. di F. Balsamo e V. La Rosa (Rosolini, 2001), 73–96</span>"
+        "citation": "<span>Giacomo Manganaro, «Noto greca e romana:fonti storiografiche,epigrafi e pseudo-monete», in <i>Contributi alla geografia storica dell’agro netino. Atti delle Giornate di Studio. Noto, Palazzo Trigona, 29-31 maggio 1998</i>, a c. di F. Balsamo e V. La Rosa (Rosolini, 2001), 73–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MRSE35A9",
+        "year": "2001"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -240,35 +250,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added reference.",
-      "when": "2023-03-21",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
+  "tmNumber": "644860",
   "facsimile": {
     "n": "screen",
     "url": "ISic003355_tiled.tif",
@@ -277,11 +285,19 @@
     "desc": "Photo J.Prag: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "Ferrua, 1941, Epigrafica sicula pagana e cristiana",
     "Manganaro, 2001, Noto greca e romana:fonti storiografiche,epigrafi e pseudo-monete"
+  ],
+  "zotero": [
+    "4HR4GXBX",
+    "MRSE35A9"
   ],
   "keywords": [
     "isic003355",
@@ -294,7 +310,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

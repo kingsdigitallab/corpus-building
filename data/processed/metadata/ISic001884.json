@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "20-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "35"
       },
       {
         "type": "letterHeight",
@@ -85,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "20-29",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "29"
       },
       {
         "type": "letterHeight",
@@ -93,7 +102,9 @@
         "from": "line3",
         "to": "line3",
         "h": "15-30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -101,7 +112,9 @@
         "from": "line4",
         "to": "line4",
         "h": "15-27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "27"
       },
       {
         "type": "letterHeight",
@@ -109,7 +122,9 @@
         "from": "line5",
         "to": "line5",
         "h": "14-19",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "14",
+        "atMost": "19"
       },
       {
         "type": "letterHeight",
@@ -117,7 +132,9 @@
         "from": "line6",
         "to": "line6",
         "h": "14-22",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "14",
+        "atMost": "22"
       },
       {
         "type": "interlinear",
@@ -125,7 +142,9 @@
         "from": "line1",
         "to": "line2",
         "h": "3-11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "11"
       },
       {
         "type": "interlinear",
@@ -133,7 +152,9 @@
         "from": "line2",
         "to": "line3",
         "h": "3-12",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "12"
       },
       {
         "type": "interlinear",
@@ -141,7 +162,9 @@
         "from": "line3",
         "to": "line4",
         "h": "0-10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "0",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -149,7 +172,9 @@
         "from": "line4",
         "to": "line5",
         "h": "0-8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "0",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -157,7 +182,9 @@
         "from": "line5",
         "to": "line6",
         "h": "0-9",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "0",
+        "atMost": "9"
       }
     ]
   },
@@ -171,12 +198,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -185,6 +214,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "First published by Libertini 1931, seen on the antiquarian market, but assumed by Libertini to come from the area of the via Androne necropolis where work had lately been taking place. It is now in the archaeological museum at Palazzolo Acreide (first floor display, case 39), with an old inventory number; but it is not published among the texts owned by the Baron Judica, so its original provenance / context remains uncertain. Absence from CIG IV and IG XIV suggests it was not known in the 19th century; the publication in NSA alone has meant it has generally been missed.",
     "type": "found",
@@ -194,6 +225,10 @@
       15.081278
     ]
   },
+  "provenanceGeo": [
+    37.509992,
+    15.081278
+  ],
   "provenanceObserved": {
     "_": "Prag 2023-05-11",
     "type": "observed",
@@ -219,7 +254,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -261,17 +295,18 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Libertini",
-        "title": "NSA",
-        "date": "1931",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "372",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1931",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Libertini",
@@ -284,22 +319,28 @@
           "_": "https://biblio.inscriptiones.org/epig10001863",
           "target": "https://biblio.inscriptiones.org/epig10001863"
         },
+        "inscriptionDate": "1981",
         "title": "Scritti su Catania antica",
-        "citation": "<span>Guido Libertini, <i>Scritti su Catania antica</i> (Catania, 1981)</span>"
+        "citation": "<span>Guido Libertini, <i>Scritti su Catania antica</i> (Catania, 1981)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZJ65DX74",
+        "year": "1981"
       },
       {
         "author": "Libertini",
         "date": "1931",
         "citedRange": "41 no.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/T67M4XMU"
+          "target": "https://www.zotero.org/groups/382445/items/T67M4XMU"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001870",
           "target": "https://biblio.inscriptiones.org/epig10001870"
         },
+        "inscriptionDate": "1931",
         "title": "Miscellanea epigrafica",
-        "citation": "<span>Guido Libertini, «Miscellanea epigrafica», <i>Archivio Storico per la Sicilia Orientale</i> 27 (1931): 39–53</span>"
+        "citation": "<span>Guido Libertini, «Miscellanea epigrafica», <i>Archivio Storico per la Sicilia Orientale</i> 27 (1931): 39–53</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/T67M4XMU",
+        "year": "1931"
       },
       {
         "type": "corpus",
@@ -313,8 +354,11 @@
           "target": "https://biblio.inscriptiones.org/epig10000394"
         },
         "title": "Inscriptiones Graecae Christianae Veteres Occidentis",
+        "author": "Wessel",
         "date": "1989",
-        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>"
+        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9CT5ZWIK",
+        "year": "1989"
       },
       {
         "author": "Ferrua",
@@ -326,14 +370,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001996",
           "target": "https://biblio.inscriptiones.org/epig10001996"
-        }
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le iscrizioni datate della Sicilia paleocristiana",
+        "citation": "<span>Antonio Ferrua, «Le iscrizioni datate della Sicilia paleocristiana», <i>Kokalos</i> 28–29 (1983 1982): 3–29</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7DDNWD6",
+        "year": "1982"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -357,27 +406,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -386,6 +422,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001884_tiled.tif",
@@ -394,14 +431,65 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-11",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 35
+    },
+    {
+      "atLeast": 20,
+      "atMost": 29
+    },
+    {
+      "atLeast": 15,
+      "atMost": 30
+    },
+    {
+      "atLeast": 15,
+      "atMost": 27
+    },
+    {
+      "atLeast": 14,
+      "atMost": 19
+    },
+    {
+      "atLeast": 14,
+      "atMost": 22
+    },
+    {
+      "atLeast": 3,
+      "atMost": 11
+    },
+    {
+      "atLeast": 3,
+      "atMost": 12
+    },
+    {
+      "atLeast": 0,
+      "atMost": 10
+    },
+    {
+      "atLeast": 0,
+      "atMost": 8
+    },
+    {
+      "atLeast": 0,
+      "atMost": 9
+    }
+  ],
   "publications": [
-    "Libertini, 1931, NSA",
+    "Notizie degli scavi di antichità, 1876-",
     "Libertini, 1981, Scritti su Catania antica",
     "Libertini, 1931, Miscellanea epigrafica",
-    "IGCVO, 1989",
-    "Ferrua, 1982-1983"
+    "Wessel, 1989, IGCVO",
+    "Ferrua, 1982-1983, Le iscrizioni datate della Sicilia paleocristiana"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "ZJ65DX74",
+    "T67M4XMU",
+    "9CT5ZWIK",
+    "Q7DDNWD6"
   ],
   "keywords": [
     "isic001884",
@@ -414,7 +502,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo archeologico gabriele judica",

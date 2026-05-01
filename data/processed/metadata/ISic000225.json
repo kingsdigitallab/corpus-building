@@ -32,10 +32,17 @@
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
   "support": "Block of dirty yellow stone. Break along top, obscuring line 1, and break along left side. Bottom and right sides complete. Modern plaster and paint on top break.",
+  "objectType": {
+    "_": "block",
+    "ana": "#object.block",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/189.html"
+  },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcite_limestone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -83,7 +90,9 @@
         "from": "line2",
         "to": "line2",
         "h": "27-29",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "29"
       },
       {
         "type": "letterHeight",
@@ -91,7 +100,9 @@
         "from": "line3",
         "to": "line3",
         "h": "36-38 (first T=45 mm, last O=20mm)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "38"
       },
       {
         "type": "letterHeight",
@@ -99,7 +110,9 @@
         "from": "line4",
         "to": "line4",
         "h": "35-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "38"
       },
       {
         "type": "letterHeight",
@@ -107,7 +120,9 @@
         "from": "line5",
         "to": "line5",
         "h": "24-29 (Ts 29-31mm)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "29"
       },
       {
         "type": "interlinear",
@@ -127,12 +142,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -141,12 +158,15 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found outside the Palermo Gate, \"stuck in a small wall of a modern nursery\", from which Palmieri had it placed \"in the House of the Civic Magistrate\". Afterwards transferred to Museo Civio Baldassare Romano.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 4",
     "type": "observed",
@@ -166,7 +186,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -211,14 +230,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2UJS2UVS",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7441",
+            "_": "7441",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
@@ -228,11 +254,35 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "50",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "150",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -240,15 +290,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -272,20 +327,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -296,13 +337,14 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -311,6 +353,7 @@
       "who": "#AA"
     }
   },
+  "tmNumber": "285233",
   "facsimile": {
     "n": "screen",
     "url": "ISic000225_tiled.tif",
@@ -319,12 +362,35 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 27,
+      "atMost": 29
+    },
+    {
+      "atLeast": 36,
+      "atMost": 38
+    },
+    {
+      "atLeast": 35,
+      "atMost": 38
+    },
+    {
+      "atLeast": 24,
+      "atMost": 29
+    }
+  ],
   "publications": [
-    "Romano, 1829",
-    "CIL",
-    "ILMusTermini"
+    "Romano, 1829, Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+    "Mommsen, 1883, CIL",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "2UJS2UVS",
+    "GQN8UZSI",
+    "RZSFKACR",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000225",
@@ -333,10 +399,11 @@
       "_": "edited"
     },
     "funerary",
+    "block",
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

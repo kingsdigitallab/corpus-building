@@ -3,7 +3,7 @@
   "uri": "ISic000699",
   "title": "Dedication by an Augustalis",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -31,75 +31,137 @@
     "ana": "#function.dedication",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/88.html"
   },
+  "support": "Fragmentary marble slab, composed of two adjoining fragments, with extensive loss at the upper left corner, and losses at the upper right and lower edges. Surface smooth and polished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Coarse-grained, banded, white marble, likely Proconnesian. Digital microscopy: heteroblastic fabric. ND only: banded, he, coarse (identification based on pXRF, digital microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
+      "_": "62",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "75",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "5.5-6.5",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Four lines of Latin text, in straight alignment. The letters in the first two lines are of larger module than those in the other lines. The letters of l. 3 appear narrower and more compressed than the others. The inscribed field is bordered by a moulded frame. In the lower part, decorative elements are visible, including a strip or handle, and a small vessel.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Elegant capital letters with slight serifs. P with open loop; A with vertical crossbar. Traces of interpuncts between words.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "50",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "55",
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "55"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3-4",
+        "from": "line3",
+        "to": "line4",
+        "h": "40",
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
-        "l": "Interlineation line 1 to 2",
+        "l": "Interlineation line 1 to 3",
         "from": "line1",
-        "to": "line2",
-        "unit": "mm"
+        "to": "line3",
+        "h": "60",
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 3 to 4",
+        "from": "line3",
+        "to": "line4",
+        "h": "80-90",
+        "unit": "mm",
+        "atLeast": "80",
+        "atMost": "90"
       }
     ]
   },
   "date": {
     "_": "1st century CE",
     "notBefore": 1,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,15 +170,27 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "The two fragments were discovered at different times within the complex of buildings near the so-called former Barbagallo Mill, i.e. the area of the so-called «Edificio degli Augustales» , in a zone overlooking the Vallata Difesa, near the Church of the Crucifix. The lower part was discovered by Guido Libertini during the excavation campaigns conducted in 1925. The contextual information is not very clear. Specifically, the author states that the fragment, and others, were found either «nelle immediate vicinanze dell'edificio rettangolare» or in small rooms «a sud dell'edificio, tra esso e il mulino». The upper part was subsequently found by Libertini himself in 1950–1951 (published in 1953), during the exploration campaigns of the remains of buildings in the same area, and specifically “nella parte meridionale dell'area antistante agli edifici, e precisamente poco più a nord dello sbocco del cunicolo che percorreva l'intercapedine tra le due costruzioni”. Currently on display on the ground floor in the Antiquarium, Room III. ",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1925",
+    "geo": [
+      37.62257,
+      14.74099
+    ]
   },
+  "provenanceGeo": [
+    37.62257,
+    14.74099
+  ],
   "provenanceObserved": {
-    "_": "2017.03.25",
+    "_": "Prado 2023-05-09",
     "type": "observed",
     "subtype": "autopsied",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -126,11 +200,10 @@
       "url": "ISic000699_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "Photo J. Prag",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2023-05-09",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
   "repository": {
@@ -174,24 +247,36 @@
         "n": "AE",
         "citedRange": "1989.0340a",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1955.0193",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
@@ -206,8 +291,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001864",
           "target": "https://biblio.inscriptiones.org/epig10001864"
         },
+        "inscriptionDate": "1953",
         "title": "Centuripe. Nuove indagini sulle costruzioni presso il Mulino Barbagallo. Campagna di scavo 1950-51",
-        "citation": "<span>Guido Libertini, «Centuripe. Nuove indagini sulle costruzioni presso il Mulino Barbagallo. Campagna di scavo 1950-51», <i>Notizie degli Scavi di Antichità</i>, 1953, 353–68</span>"
+        "citation": "<span>Guido Libertini, «Centuripe. Nuove indagini sulle costruzioni presso il Mulino Barbagallo. Campagna di scavo 1950-51», <i>Notizie degli Scavi di Antichità</i>, 1953, 353–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/B8N2BQ9F",
+        "year": "1953"
       },
       {
         "author": "Manganaro",
@@ -220,8 +308,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001846",
           "target": "https://biblio.inscriptiones.org/epig10001846"
         },
+        "inscriptionDate": "1963",
         "title": "Un senatus consultum in greco dei Lanuvini e il rinnovo della cognatio con i Centuripini",
-        "citation": "<span>Giacomo Manganaro, «Un senatus consultum in greco dei Lanuvini e il rinnovo della cognatio con i Centuripini», <i>Rendiconti dell’Accademia dell’Archeologia, Lettere e Belle Arti di Napoli</i> 38 (1963): 23–44</span>"
+        "citation": "<span>Giacomo Manganaro, «Un senatus consultum in greco dei Lanuvini e il rinnovo della cognatio con i Centuripini», <i>Rendiconti dell’Accademia dell’Archeologia, Lettere e Belle Arti di Napoli</i> 38 (1963): 23–44</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/W9MPVKRC",
+        "year": "1963"
       },
       {
         "author": "Manganaro",
@@ -233,7 +324,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -242,10 +338,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "author": "Wilson",
@@ -257,14 +355,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -273,8 +376,8 @@
       "ref": "#JP"
     },
     "principal": {
-      "_": "Jonathan Prag",
-      "ref": "#JP"
+      "_": "Francesca Prado",
+      "ref": "#FP"
     },
     "contributors": [
       {
@@ -288,66 +391,87 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Francesca Prado",
+        "xml:id": "FP",
+        "ref": "https://orcid.org/0000-0003-3326-3475"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Francesca Prado tagged named entities, added part of commentary, Italian translation and info about support, layout, letters, dimensions, provenance",
+      "when": "2025-08-13"
     }
   },
+  "tmNumber": "175758",
   "facsimile": {
     "n": "screen",
     "url": "ISic000699_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "Photo J. Prag",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2023-05-09",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 50
+    },
+    {
+      "atLeast": 55,
+      "atMost": 55
+    },
+    {
+      "atLeast": 40,
+      "atMost": 40
+    },
+    {
+      "atLeast": 60,
+      "atMost": 60
+    },
+    {
+      "atLeast": 80,
+      "atMost": 90
+    }
+  ],
   "publications": [
-    null,
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Libertini, 1953, Centuripe. Nuove indagini sulle costruzioni presso il Mulino Barbagallo. Campagna di scavo 1950-51",
     "Manganaro, 1963, Un senatus consultum in greco dei Lanuvini e il rinnovo della cognatio con i Centuripini",
-    "Manganaro, 1988",
-    "Manganaro, 1989",
-    "Wilson, 1990"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "R46KDTZX",
+    "B8N2BQ9F",
+    "W9MPVKRC",
+    "RZSFKACR",
+    "EZMBJ6GN",
+    "VF9MMBI9"
   ],
   "keywords": [
     "isic000699",
     "dedication by an augustalis",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "dedication",
     "plaque",
-    "marble",
+    "coarse-grained, banded, white marble, likely proconnesian. digital microscopy: heteroblastic fabric. nd only: banded, he, coarse (identification based on pxrf, digital microscopy)",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
     "museo archeologico regionale di centuripe",

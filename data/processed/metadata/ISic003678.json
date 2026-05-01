@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -79,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "36",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "36"
       },
       {
         "type": "interlinear",
@@ -87,7 +94,9 @@
         "from": "line1",
         "to": "line2",
         "h": "7",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "7",
+        "atMost": "7"
       }
     ]
   },
@@ -95,20 +104,21 @@
     "_": "1st — 3rd century CE",
     "notBefore": 1,
     "notAfter": 300,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -117,6 +127,8 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "Found in summer 1956 in trench 31 (5-10m east of the 'east portico', see Carettoni, NSA 1959, fig.8)",
     "type": "found",
@@ -127,6 +139,10 @@
       14.263053
     ]
   },
+  "provenanceGeo": [
+    37.998108,
+    14.263053
+  ],
   "provenanceObserved": {
     "_": "in store on site",
     "type": "observed",
@@ -151,7 +167,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
   "repository": {
@@ -189,24 +204,25 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Carettoni",
-        "title": "NSA",
-        "date": "1961",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "311 no. 12b",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1961",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -230,27 +246,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -259,6 +262,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003678_tiled.tif",
@@ -267,10 +271,21 @@
     "desc": "Photo J.Prag courtesy Soprintendenza BBCCAA di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 36,
+      "atMost": 36
+    },
+    {
+      "atLeast": 7,
+      "atMost": 7
+    }
+  ],
   "publications": [
-    "Carettoni, 1961, NSA"
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic003678",
@@ -283,7 +298,7 @@
     "marble",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
     "halaesa",
     "antiquarium e sito archeologico di halaesa",

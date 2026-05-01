@@ -35,9 +35,18 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -84,20 +93,22 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "ancient",
+    "notBefore": -500,
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Lipara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462283"
+      "ref": "http://pleiades.stoa.org/places/462283",
+      "region": "Sicilia"
     },
     {
       "_": "Lipari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524378"
+      "ref": "http://sws.geonames.org/2524378",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,11 +117,14 @@
       14.93333
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lipara",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -133,10 +147,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
-  "settlement": "Lost",
-  "repository": "",
+  "settlement": "unknown",
+  "repository": "unknown",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -150,31 +163,39 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0390",
+            "_": "390",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "ILipara",
+        "author": "Bernabò Brea, Cavalier, Campagna",
+        "date": "2003",
         "citedRange": "581",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/VDAQH5D2"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000541",
-          "target": "https://biblio.inscriptiones.org/epig10000541"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/VDAQH5D2",
+        "inscriptionDate": "2003",
+        "title": "Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie",
+        "citation": "<span>L. Bernabò Brea, M. Cavalier, e L. Campagna, <i>Meligunìs Lipára. XII. Le iscrizioni lapidarie greche e latine delle isole eolie</i> (Palermo: Mario Grispo Editore, 2003)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDAQH5D2",
+        "year": "2003"
       },
       {
         "author": "Libertini",
@@ -186,14 +207,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001875",
           "target": "https://biblio.inscriptiones.org/epig10001875"
-        }
+        },
+        "inscriptionDate": "1921",
+        "title": "Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche",
+        "citation": "<span>Guido Libertini, <i>Le isole eolie nell’antichità greca e romana. Ricerche storiche ed archeologiche</i> (Florence, 1921)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QECEVGHN",
+        "year": "1921"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -217,20 +243,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -241,16 +253,28 @@
         "ref": "https://orcid.org/0000-0002-0981-2465"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
       }
     ],
     "change": {
-      "_": "transcribed text and provided translation",
-      "when": "2021-06-04",
-      "who": "#MH"
+      "_": "tagged names and persons",
+      "when": "2025-12-16",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "492821",
   "facsimile": {
     "n": "screen",
     "url": "ISic001217_tiled.tif",
@@ -259,12 +283,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lipara",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "ILipara",
-    "Libertini, 1921"
+    "Kaibel, 1890, IG",
+    "Bernabò Brea, Cavalier, Campagna, 2003, ILipara",
+    "Libertini, 1921, Le isole eolie nell'antichità greca e romana. Ricerche storiche ed archeologiche"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "VDAQH5D2",
+    "QECEVGHN"
   ],
   "keywords": [
     "isic001217",
@@ -273,12 +301,13 @@
       "_": "draft"
     },
     "funerary",
+    "unknown",
     "stone",
     "lipara",
     "lipari",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "unknown",
     "ancient greek",
     "grc"
   ]

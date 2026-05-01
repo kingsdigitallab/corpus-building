@@ -31,7 +31,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -81,19 +85,20 @@
   "date": {
     "_": "5th — 6th century CE",
     "notBefore": 401,
-    "notAfter": 600,
-    "precision": "low"
+    "notAfter": 600
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,12 +107,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Church of the catacomb of S. Giovanni",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -125,7 +133,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": "",
@@ -149,7 +156,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       },
       {
         "author": "Agnello",
@@ -162,15 +174,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002206",
           "target": "https://biblio.inscriptiones.org/epig10002206"
         },
+        "inscriptionDate": "1960",
         "title": "Iscrizioni cemeteriali inedite di Siracusa",
-        "citation": "<span>S.L. Agnello, «Iscrizioni cemeteriali inedite di Siracusa», <i>Rivista di Archeologia Cristiana</i> 36 (1960): 19–42</span>"
+        "citation": "<span>S.L. Agnello, «Iscrizioni cemeteriali inedite di Siracusa», <i>Rivista di Archeologia Cristiana</i> 36 (1960): 19–42</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5I5RNUU8",
+        "year": "1960"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -194,20 +209,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -216,10 +217,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -228,6 +225,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645306",
   "facsimile": {
     "n": "screen",
     "url": "ISic002917_tiled.tif",
@@ -236,11 +234,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "Manganaro, 1993",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
     "Agnello, 1960, Iscrizioni cemeteriali inedite di Siracusa"
+  ],
+  "zotero": [
+    "JBI7CI5R",
+    "5I5RNUU8"
   ],
   "keywords": [
     "isic002917",
@@ -252,7 +253,7 @@
     "stone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "latin",

@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -76,7 +81,9 @@
         "from": "line1",
         "to": "line3",
         "h": "35-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "60"
       },
       {
         "type": "interlinear",
@@ -91,19 +98,20 @@
   "date": {
     "_": "1st — 3rd century CE (?)",
     "notBefore": 1,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +120,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Hypogeum in Grotticelli, excavated 4 July 1902",
     "type": "found",
@@ -119,6 +129,7 @@
     "when": "1902-07-04",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Display Sector D",
     "type": "observed",
@@ -143,7 +154,6 @@
       "surfaceType": "threequarter"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -189,19 +199,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/4HR4GXBX"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001456",
-          "target": "https://biblio.inscriptiones.org/epig10001456"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/4HR4GXBX",
+        "inscriptionDate": "1941",
         "title": "Epigrafica sicula pagana e cristiana",
-        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>"
+        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4HR4GXBX",
+        "year": "1941"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -225,35 +235,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
+  "tmNumber": "644864",
   "facsimile": {
     "n": "screen",
     "url": "ISic003359_tiled.tif",
@@ -262,10 +270,17 @@
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 35,
+      "atMost": 60
+    }
+  ],
   "publications": [
     "Ferrua, 1941, Epigrafica sicula pagana e cristiana"
+  ],
+  "zotero": [
+    "4HR4GXBX"
   ],
   "keywords": [
     "isic003359",
@@ -278,7 +293,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

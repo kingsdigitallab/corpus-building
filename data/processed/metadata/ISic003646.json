@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "52-54",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "52",
+        "atMost": "54"
       },
       {
         "type": "letterHeight",
@@ -85,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "49-53 (I = 57)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "49",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -105,12 +114,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,6 +130,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in re-use as part of a tombcover in catacomb of S. Maria di Gesu (part of Vigna Cassia), cubicoli N and O of plan of Fuhrer",
     "type": "found",
@@ -129,6 +142,10 @@
       15.288886
     ]
   },
+  "provenanceGeo": [
+    37.076224,
+    15.288886
+  ],
   "provenanceObserved": {
     "_": "Prag, 2016.06.29, rack 9b of Magazzino B",
     "type": "observed",
@@ -155,7 +172,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -197,38 +213,42 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1901",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "344",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1901",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Orsi",
         "date": "1904",
         "citedRange": "259",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R337N55M"
+          "target": "https://www.zotero.org/groups/382445/items/R337N55M"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001705",
           "target": "https://biblio.inscriptiones.org/epig10001705"
         },
+        "inscriptionDate": "1904",
         "title": "Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)",
-        "citation": "<span>Paolo Orsi, «Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 18 (1904): 235–59</span>"
+        "citation": "<span>Paolo Orsi, «Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 18 (1904): 235–59</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R337N55M",
+        "year": "1904"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -252,20 +272,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -276,8 +282,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -286,6 +293,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003646_tiled.tif",
@@ -294,11 +302,23 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2016-06-29",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 52,
+      "atMost": 54
+    },
+    {
+      "atLeast": 49,
+      "atMost": 53
+    }
+  ],
   "publications": [
-    "Orsi, 1901, NSA",
+    "Notizie degli scavi di antichità, 1876-",
     "Orsi, 1904, Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "R337N55M"
   ],
   "keywords": [
     "isic003646",
@@ -311,7 +331,7 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

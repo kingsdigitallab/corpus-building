@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "Plaster on stone",
-    "ana": "#material.plaster"
+    "ana": "#material.inorganic.mortars.plaster",
+    "type": "mortars",
+    "subtype": [
+      "plaster"
+    ],
+    "resp": "#Coccato"
   },
   "condition": {
     "ana": "#condition.fragment"
@@ -89,19 +94,20 @@
   "date": {
     "_": "1st century BCE",
     "notBefore": -100,
-    "notAfter": -1,
-    "precision": "low"
+    "notAfter": -1
   },
   "places": [
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +116,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Found in excavation 1974, via del Fante, proprieta Rallo Lidia",
     "type": "found",
@@ -121,6 +129,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.806588,
+    12.439299
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -186,7 +197,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002035",
           "target": "https://biblio.inscriptiones.org/epig10002035"
-        }
+        },
+        "inscriptionDate": "1984",
+        "title": "Lilibeo. Testimonianze archeologiche dal IV sec a.C. al V sec. d.C.",
+        "citation": "<span>C.A. Di Stefano, <i>Lilibeo. Testimonianze archeologiche dal IV sec a.C. al V sec. d.C.</i> (Palermo, 1984)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q5PB252W",
+        "year": "1984"
       },
       {
         "author": "Vento",
@@ -199,28 +215,31 @@
           "_": "https://biblio.inscriptiones.org/epig10001525",
           "target": "https://biblio.inscriptiones.org/epig10001525"
         },
+        "inscriptionDate": "2000",
         "title": "Le stele dipinte di Lilibeo",
-        "citation": "<span>M. Vento, <i>Le stele dipinte di Lilibeo</i> (Marsala: Centro europeo di studi economici e sociali, 2000)</span>"
+        "citation": "<span>M. Vento, <i>Le stele dipinte di Lilibeo</i> (Marsala: Centro europeo di studi economici e sociali, 2000)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RTAB9A28",
+        "year": "2000"
       },
       {
         "author": "De Simone",
         "date": "2020",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/NIWRHP8G"
+          "target": "https://www.zotero.org/groups/382445/items/NIWRHP8G"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002561",
           "target": "https://biblio.inscriptiones.org/epig10002561"
         },
-        "title": "Di un haruspex lilibetano",
-        "citation": "<span>Rossana De Simone, «Di un haruspex lilibetano», in <i>Studi in onore di Stefano Vassallo</i>, a c. di Monica Chiovaro e Riccardo Sapia (Palermo: Regione Siciliana, 2020), 18–20</span>"
+        "inscriptionDate": "2020",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -244,27 +263,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -273,6 +279,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003661_tiled.tif",
@@ -281,12 +288,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
   "letterHeights": [],
   "publications": [
-    "Di Stefano, 1984",
+    "Di Stefano, 1984, Lilibeo. Testimonianze archeologiche dal IV sec a.C. al V sec. d.C.",
     "Vento, 2000, Le stele dipinte di Lilibeo",
-    "De Simone, 2020, Di un haruspex lilibetano"
+    "De Simone, 2020"
+  ],
+  "zotero": [
+    "Q5PB252W",
+    "RTAB9A28",
+    "NIWRHP8G"
   ],
   "keywords": [
     "isic003661",
@@ -299,7 +310,7 @@
     "plaster on stone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

@@ -31,7 +31,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -80,19 +83,20 @@
   "date": {
     "_": "5th century BCE (?)\n                                (on the basis of the statue, not the epig; pre 397)",
     "notBefore": -500,
-    "notAfter": -401,
-    "precision": "low"
+    "notAfter": -401
   },
   "places": [
     {
       "_": "Motya",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462373"
+      "ref": "http://pleiades.stoa.org/places/462373",
+      "region": "Sicilia"
     },
     {
       "_": "Mozia",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524039"
+      "ref": "http://sws.geonames.org/2524039",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -101,11 +105,14 @@
       12.46798
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Motya",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,17 +130,16 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Mozia",
   "repository": {
-    "_": "Villa Whitaker",
+    "_": "Museo Whitaker",
     "role": "museum",
     "ref": "http://sicily.classics.ox.ac.uk/museum/107",
     "museum": {
       "slug": "107",
       "type": "museum",
-      "name": "Villa Whitaker",
+      "name": "Museo Whitaker",
       "uri": "http://sicily.classics.ox.ac.uk/museum/107",
       "description": "Comprehensive collection of Archaeological material discovered at the site of Mozia and in the surrounding area",
       "location": {
@@ -168,8 +174,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001529",
           "target": "https://biblio.inscriptiones.org/epig10001529"
         },
+        "inscriptionDate": "1975",
         "title": "Su un \"trono di Astarte\" a Mozia",
-        "citation": "<span>M. L. Uberti, «Su un “trono di Astarte” a Mozia», in <i>Saggi Fenici I</i>, a c. di G. Benigni e et al (Rome, Ist. di stud. del Vic.Oriente, 1975), 33–39</span>"
+        "citation": "<span>M. L. Uberti, «Su un “trono di Astarte” a Mozia», in <i>Saggi Fenici I</i>, a c. di G. Benigni e et al (Rome, Ist. di stud. del Vic.Oriente, 1975), 33–39</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PDPQ2T2P",
+        "year": "1975"
       },
       {
         "author": "Whitaker",
@@ -181,7 +190,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001515",
           "target": "https://biblio.inscriptiones.org/epig10001515"
-        }
+        },
+        "inscriptionDate": "1921",
+        "title": "Motya, a Phoenician colony in Sicily",
+        "citation": "<span>Joseph I. S. Whitaker, <i>Motya, a Phoenician Colony in Sicily</i> (London: G. Bell, 1921)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BI7QVGBD",
+        "year": "1921"
       },
       {
         "type": "bulletin",
@@ -195,15 +209,18 @@
           "target": "https://biblio.inscriptiones.org/epig10001377"
         },
         "title": "Bulletin d'épigraphie sémitique",
+        "author": "Teixidor",
         "date": "1986",
-        "citation": "<span>J. Teixidor, <i>Bulletin d’épigraphie sémitique</i> (Paris, 1986)</span>"
+        "citation": "<span>J. Teixidor, <i>Bulletin d’épigraphie sémitique</i> (Paris, 1986)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9EKXN2HI",
+        "year": "1986"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -227,27 +244,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -256,6 +255,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645075",
   "facsimile": {
     "n": "screen",
     "url": "ISic001619_tiled.tif",
@@ -264,12 +264,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Motya",
   "letterHeights": [],
   "publications": [
     "Uberti, 1975, Su un \"trono di Astarte\" a Mozia",
-    "Whitaker, 1921",
-    "Bulletin d'épigraphie sémitique, 1986"
+    "Whitaker, 1921, Motya, a Phoenician colony in Sicily",
+    "Teixidor, 1986, Bulletin d'épigraphie sémitique"
+  ],
+  "zotero": [
+    "PDPQ2T2P",
+    "BI7QVGBD",
+    "9EKXN2HI"
   ],
   "keywords": [
     "isic001619",
@@ -281,10 +285,10 @@
     "limestone",
     "motya",
     "mozia",
-    "italy",
+    "sicilia",
     "sicily",
     "mozia",
-    "villa whitaker",
+    "museo whitaker",
     "punic",
     "xpu"
   ]

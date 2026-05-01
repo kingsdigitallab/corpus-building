@@ -35,9 +35,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to medium-grained, banded, grey marble, likely Proconnesian. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
   "condition": {
     "ana": "#condition.damaged"
@@ -89,19 +104,21 @@
   },
   "date": {
     "_": "Second half C5 AD - first half C6 AD (staurogram)",
-    "notBefore": 450,
+    "notBefore": 451,
     "notAfter": 550
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,12 +127,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "catacomb of S. Giovanni",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -133,7 +153,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -177,22 +196,58 @@
         "date": "1896",
         "citedRange": "50 no. 85 (354)",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/H73GNMU6"
+          "target": "https://www.zotero.org/groups/382445/items/H73GNMU6"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001710",
           "target": "https://biblio.inscriptiones.org/epig10001710"
         },
+        "inscriptionDate": "1896",
         "title": "Gli scavi a S. Giovanni a Siracusa",
-        "citation": "<span>Paolo Orsi, «Gli scavi a S. Giovanni a Siracusa», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 10 (1896): 1–59</span>"
+        "citation": "<span>Paolo Orsi, «Gli scavi a S. Giovanni a Siracusa», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 10 (1896): 1–59</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/H73GNMU6",
+        "year": "1896"
       },
-      ""
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "84",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
+      },
+      {
+        "author": "Wessel",
+        "date": "1989",
+        "citedRange": "5 no. 13",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/9CT5ZWIK"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10000394",
+          "target": "https://biblio.inscriptiones.org/epig10000394"
+        },
+        "inscriptionDate": "1989",
+        "title": "Inscriptiones Graecae Christianae Veteres Occidentis",
+        "citation": "<span>C. Wessel, <i>Inscriptiones Graecae Christianae Veteres Occidentis</i>, Inscriptiones Christianae Italiae (Bari: Edipuglia, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9CT5ZWIK",
+        "year": "1989"
+      }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -211,20 +266,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -235,8 +276,9 @@
         "ref": "https://orcid.org/0000-0002-7176-2833"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -245,6 +287,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004453_tiled.tif",
@@ -253,10 +296,16 @@
     "desc": "Photo 2017 courtesy Museo Archeologico Regionale Paolo Orsi (Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014)",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "Orsi, 1896, Gli scavi a S. Giovanni a Siracusa"
+    "Orsi, 1896, Gli scavi a S. Giovanni a Siracusa",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wessel, 1989, Inscriptiones Graecae Christianae Veteres Occidentis"
+  ],
+  "zotero": [
+    "H73GNMU6",
+    "RZSFKACR",
+    "9CT5ZWIK"
   ],
   "keywords": [
     "isic004453",
@@ -266,10 +315,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "fine to medium-grained, banded, grey marble, likely proconnesian. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

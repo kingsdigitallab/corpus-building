@@ -1,7 +1,7 @@
 {
   "file": "ISic003565",
   "uri": "ISic003565",
-  "title": "I.Sicily inscription 003565",
+  "title": "Epitaph for Dionysa",
   "status": {
     "_": "draft"
   },
@@ -39,7 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -84,7 +87,9 @@
         "from": "line1",
         "to": "line4",
         "h": "28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "28",
+        "atMost": "28"
       },
       {
         "type": "interlinear",
@@ -105,12 +110,14 @@
     {
       "_": "Mutyca",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462378"
+      "ref": "http://pleiades.stoa.org/places/462378",
+      "region": "Sicilia"
     },
     {
       "_": "Modica",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541972"
+      "ref": "http://sws.geonames.org/6541972",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -119,6 +126,8 @@
       14.77399
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Mutyca",
   "provenanceFound": {
     "_": "Found in the Hypogeum of Dionysa, contrada Treppiedi (first identified 1980), and now in the Modica museo civico",
     "type": "found",
@@ -129,6 +138,10 @@
       14.7756843
     ]
   },
+  "provenanceGeo": [
+    36.8343091,
+    14.7756843
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -136,8 +149,16 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [],
-  "country": "Italy",
+  "graphics": [
+    {
+      "n": "screen",
+      "url": "ISic003565_tiled.tif",
+      "height": "3227px",
+      "width": "3282px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R.J.A. Wilson 2022-06-04",
+      "surfaceType": "front"
+    }
+  ],
   "region": "Sicily",
   "settlement": "Modica",
   "repository": {
@@ -181,27 +202,33 @@
         "n": "AE",
         "citedRange": "2003.0781",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "53.1025bis",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Di Stefano",
@@ -214,11 +241,14 @@
           "_": "https://biblio.inscriptiones.org/epig10002032",
           "target": "https://biblio.inscriptiones.org/epig10002032"
         },
+        "inscriptionDate": "2003",
         "title": "Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988",
-        "citation": "<span>G. Di Stefano, «Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988», in <i>1983-1993, dieci anni di archeologia cristiana in Italia: atti del VII Congresso nazionale di archeologia cristiana ; Cassino, 20-24 settembre 1993</i>, a c. di E. Russo, vol. 2, 3 voll. (Cassino: Edizioni dell’Università degli Studi di Cassino, 2003), 887–89</span>"
+        "citation": "<span>G. Di Stefano, «Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988», in <i>1983-1993, dieci anni di archeologia cristiana in Italia: atti del VII Congresso nazionale di archeologia cristiana ; Cassino, 20-24 settembre 1993</i>, a c. di E. Russo, vol. 2, 3 voll. (Cassino: Edizioni dell’Università degli Studi di Cassino, 2003), 887–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7B32HZQA",
+        "year": "2003"
       },
       {
-        "author": "Rizzone and Sammito",
+        "author": "Rizzone, Sammito",
         "date": "2005",
         "citedRange": "55 fig.8",
         "ptr": {
@@ -228,8 +258,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001629",
           "target": "https://biblio.inscriptiones.org/epig10001629"
         },
+        "inscriptionDate": "2005",
         "title": "Nuovi documenti epigrafici dal circondario di Modica",
-        "citation": "<span>Vittorio Giovanni Rizzone e Annamaria Sammito, «Nuovi documenti epigrafici dal circondario di Modica», in <i>Da abitato in abitato. In itinere fra le più antiche testimonianze cristiane degli Iblei</i>, a c. di F.P. Rizzo (Rome: Istituti editoriali e poligrafici internazionali, 2005), 45–62</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone e Annamaria Sammito, «Nuovi documenti epigrafici dal circondario di Modica», in <i>Da abitato in abitato. In itinere fra le più antiche testimonianze cristiane degli Iblei</i>, a c. di F.P. Rizzo (Rome: Istituti editoriali e poligrafici internazionali, 2005), 45–62</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QVZ3BJBB",
+        "year": "2005"
       },
       {
         "author": "Rizzone",
@@ -239,25 +272,31 @@
           "target": "https://www.zotero.org/groups/382445/items/8ENX9UZ5"
         },
         "ref": "https://www.zotero.org/groups/382445/items/8ENX9UZ5",
+        "inscriptionDate": "2009",
         "title": "La catacomba A e le iscrizioni di Treppiedi",
-        "citation": "<span>Vittorio Giovanni Rizzone, «La catacomba A e le iscrizioni di Treppiedi», in <i>La necropoli di Treppiedi a Modica</i>, a c. di G. Di Stefano (Palermo: Sellerio, 2009), 52–58</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone, «La catacomba A e le iscrizioni di Treppiedi», in <i>La necropoli di Treppiedi a Modica</i>, a c. di G. Di Stefano (Palermo: Sellerio, 2009), 52–58</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8ENX9UZ5",
+        "year": "2009"
       },
       {
-        "author": "Rizzone, Sammito, Sirugo",
+        "author": "",
         "date": "2009",
         "citedRange": "78 fig. 48",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/63PABBLY"
         },
+        "inscriptionDate": "2009",
         "title": "Il museo civico di Modica \"F.L. Belgiorno\"",
-        "citation": "<span>Vittorio Giovanni Rizzone, Annamaria Sammito, e Simona Sirugo, a c. di, <i>Il museo civico di Modica «F.L. Belgiorno»</i> (Monza: Polimetrica, 2009)</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone, Annamaria Sammito, e Simona Sirugo, a c. di, <i>Il museo civico di Modica «F.L. Belgiorno»</i> (Monza: Polimetrica, 2009)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/63PABBLY",
+        "year": "2009"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -281,48 +320,61 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2026-01-19",
+      "who": "#RC"
     }
   },
-  "provenance": "Mutyca",
-  "letterHeights": [],
+  "tmNumber": "175860",
+  "facsimile": {
+    "n": "screen",
+    "url": "ISic003565_tiled.tif",
+    "height": "3227px",
+    "width": "3282px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R.J.A. Wilson 2022-06-04",
+    "surfaceType": "front"
+  },
+  "letterHeights": [
+    {
+      "atLeast": 28,
+      "atMost": 28
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Di Stefano, 2003, Nuove indagini nel cimitero di Treppiedi a Modica (Ragusa). Notizie preliminari delle campagne di scavo del 1985-1988",
-    "Rizzone and Sammito, 2005, Nuovi documenti epigrafici dal circondario di Modica",
+    "Rizzone, Sammito, 2005, Nuovi documenti epigrafici dal circondario di Modica",
     "Rizzone, 2009, La catacomba A e le iscrizioni di Treppiedi",
-    "Rizzone, Sammito, Sirugo, 2009, Il museo civico di Modica \"F.L. Belgiorno\""
+    "Il museo civico di Modica \"F.L. Belgiorno\", 2009"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "7B32HZQA",
+    "QVZ3BJBB",
+    "8ENX9UZ5",
+    "63PABBLY"
   ],
   "keywords": [
     "isic003565",
-    "i.sicily inscription 003565",
+    "epitaph for dionysa",
     {
       "_": "draft"
     },
@@ -331,7 +383,7 @@
     "limestone",
     "mutyca",
     "modica",
-    "italy",
+    "sicilia",
     "sicily",
     "modica",
     "museo archeologico belgiorno",

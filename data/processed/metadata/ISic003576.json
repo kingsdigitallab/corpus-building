@@ -37,8 +37,10 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "type": "stone.breccia",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -84,7 +86,9 @@
         "from": "line1",
         "to": "line2",
         "h": "40-47",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "47"
       },
       {
         "type": "letterHeight",
@@ -92,7 +96,9 @@
         "from": "line3",
         "to": "line66",
         "h": "35-37",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "37"
       },
       {
         "type": "interlinear",
@@ -114,13 +120,15 @@
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -129,6 +137,8 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "Excavated in 1971, from taberna 7 in the west portico of the agora",
     "type": "found",
@@ -138,6 +148,10 @@
       14.262463
     ]
   },
+  "provenanceGeo": [
+    37.997856,
+    14.262463
+  ],
   "provenanceObserved": {
     "_": "On display in the lapidarium on site",
     "type": "observed",
@@ -154,7 +168,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
   "repository": {
@@ -194,25 +207,28 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "Prag and Tigano",
+        "author": "Prag, Tigano",
         "date": "2017",
         "citedRange": "no.13",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MI64NB9L"
+          "target": "https://www.zotero.org/groups/382445/items/MI64NB9L"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002630",
           "target": "https://biblio.inscriptiones.org/epig10002630"
         },
+        "inscriptionDate": "2017",
         "title": "Alesa Archonidea: il lapidarium",
-        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>"
+        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MI64NB9L",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -236,27 +252,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -265,6 +268,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645647",
   "facsimile": {
     "n": "screen",
     "url": "ISic003576_tiled.tif",
@@ -273,10 +277,21 @@
     "desc": "Photo J. Prag courtesy Soprintendenza BBCCAA di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 47
+    },
+    {
+      "atLeast": 35,
+      "atMost": 37
+    }
+  ],
   "publications": [
-    "Prag and Tigano, 2017, Alesa Archonidea: il lapidarium"
+    "Prag, Tigano, 2017, Alesa Archonidea: il lapidarium"
+  ],
+  "zotero": [
+    "MI64NB9L"
   ],
   "keywords": [
     "isic003576",
@@ -289,7 +304,7 @@
     "marble",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
     "halaesa",
     "antiquarium e sito archeologico di halaesa",

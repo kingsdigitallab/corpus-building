@@ -1,5 +1,6 @@
 import xml2js from "xml2js";
 import museums from "../../../data/processed/museums.json" with { type: "json" };
+import zotero from "../../../data/processed/zotero.json" with { type: "json" };
 
 /**
  * Extracts metadata from an XML string.
@@ -31,7 +32,10 @@ export async function extractMetadata(xmlString) {
     handNote: getHandNote(xml),
     date: getDates(xml),
     ...getPlaces(xml),
+    country: undefined,
+    provenance: undefined,
     provenanceFound: getProvenance(xml, "found"),
+    provenanceGeo: undefined,
     provenanceObserved: getProvenance(xml, "observed"),
     provenanceLost: getProvenance(xml, "not-observed", "lost"),
     graphics: getGraphics(xml),
@@ -42,14 +46,18 @@ export async function extractMetadata(xmlString) {
     citation: getCitation(xml),
   };
 
+  metadata.tmNumber =
+    metadata.editions.find((edition) => edition.type === "TM")?._ || "";
   metadata.facsimile = metadata.graphics[0];
+  metadata.country = metadata.places[0]?.region;
   metadata.provenance = metadata.places[0]?._;
+  metadata.provenanceGeo = metadata.provenanceFound?.geo || [];
 
   metadata.letterHeights = metadata.handNote?.dimensions
-    .filter((d) => d?.atLeast && d?.atMost)
+    .filter((d) => d?.quantity || (d?.atLeast && d?.atMost))
     .map((d) => ({
-      atLeast: parseFloat(d.atLeast),
-      atMost: parseFloat(d.atMost),
+      atLeast: Number.parseInt(d?.quantity || d.atLeast, 10),
+      atMost: Number.parseInt(d?.quantity || d.atMost, 10),
     }));
 
   const bibliography = Array.isArray(metadata.bibliographyEdition?.bibl)
@@ -83,6 +91,9 @@ export async function extractMetadata(xmlString) {
       return publication;
     });
 
+  metadata.zotero = bibliography
+    .filter((b) => b?.ptr?.target?.includes("zotero"))
+    .map((b) => sanitizeURL(b.ptr.target).split("/").at(-1));
   metadata.keywords = getKeywords(metadata);
 
   return metadata;
@@ -97,7 +108,7 @@ export async function extractMetadata(xmlString) {
  */
 export async function parseXML(
   xmlString,
-  options = { explicitArray: false, mergeAttrs: true }
+  options = { explicitArray: false, mergeAttrs: true },
 ) {
   const parser = new xml2js.Parser(options);
   try {
@@ -106,6 +117,17 @@ export async function parseXML(
     console.error("Error parsing XML:", error);
     return null;
   }
+}
+
+/**
+ * Removes all whitespace from a URL string.
+ * Raw XML attributes may contain leading, trailing, or embedded spaces.
+ *
+ * @param {string | undefined} url
+ * @returns {string | undefined}
+ */
+function sanitizeURL(url) {
+  return url?.replace(/\s+/g, "");
 }
 
 function getURI(xml) {
@@ -122,7 +144,7 @@ function getTitle(xml) {
 function getStatus(xml) {
   const status = xml.TEI.teiHeader.revisionDesc.status;
 
-  if (status.toLowerCase() === "deprecated") {
+  if (status?.toLowerCase() === "deprecated") {
     const changeNote = getChangeNote(xml, status);
     return {
       _: status,
@@ -143,7 +165,7 @@ function getChangeNote(xml, status) {
 
 function getEditions(xml) {
   return xml.TEI.teiHeader.fileDesc.publicationStmt.idno?.filter((idno) =>
-    ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type)
+    ["TM", "EDR", "EDH", "EDCS", "PHI"].includes(idno.type),
   );
 }
 async function getEditionAuthor(xml) {
@@ -151,14 +173,18 @@ async function getEditionAuthor(xml) {
 
   if (!edition) return null;
 
-  const source = edition.source;
+  let source = edition.source;
 
   if (!source) return null;
 
   if (source.includes("zotero")) {
+    source = source.replace(/^#/, "");
+
     const itemKey = source.split("/").at(-1);
     const zoteroData = await getZoteroData(itemKey);
-    zoteroData.ref = source;
+    if (zoteroData) {
+      zoteroData.ref = source;
+    }
     return zoteroData;
   }
 
@@ -166,8 +192,10 @@ async function getEditionAuthor(xml) {
 
   if (!respStmt) return null;
 
-  const author = respStmt.find(
-    (rs) => rs.name["xml:id"] === source.split("#").at(-1)
+  const respStmts = Array.isArray(respStmt) ? respStmt : [respStmt];
+
+  const author = respStmts.find(
+    (rs) => rs.name?.["xml:id"] === source.split("#").at(-1),
   );
 
   if (!author) return null;
@@ -185,13 +213,27 @@ function getSupport(xml) {
 }
 
 function getObjectType(xml) {
-  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
-    ?.supportDesc?.support?.objectType;
+  const objectType =
+    xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+      ?.supportDesc?.support?.objectType;
+
+  const result = Array.isArray(objectType) ? objectType[0] : objectType;
+
+  if (result?.ref) result.ref = sanitizeURL(result.ref);
+
+  return result;
 }
 
 function getMaterial(xml) {
-  return xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
+  let ret = xml.TEI.teiHeader.fileDesc.sourceDesc.msDesc.physDesc?.objectDesc
     ?.supportDesc?.support?.material;
+  
+  // convert the pipe separated list of values in the string into an array
+  if (ret && typeof ret !== 'string') {
+    ret.subtype = ((ret?.subtype || '').split("|").map((g) => g.trim())).filter(g => g)
+  }
+
+  return ret
 }
 
 function getCondition(xml) {
@@ -246,7 +288,7 @@ function getHandNote(xml) {
           h: heightText,
           ...height,
         };
-      })
+      }),
   );
 
   return { lettering, dimensions };
@@ -261,10 +303,10 @@ function getDates(xml) {
   return {
     _: origDate._,
     notBefore: origDate["notBefore-custom"]
-      ? parseInt(origDate["notBefore-custom"])
+      ? Number.parseInt(origDate["notBefore-custom"])
       : null,
     notAfter: origDate["notAfter-custom"]
-      ? parseInt(origDate["notAfter-custom"])
+      ? Number.parseInt(origDate["notAfter-custom"])
       : null,
     evidence: origDate.evidence?.replaceAll(" ", ", "),
     precision: origDate.precision,
@@ -277,6 +319,7 @@ function getPlaces(xml) {
 
   if (!origPlace) return { places: [], geo: null };
 
+  const region = origPlace.region;
   const places = [];
 
   for (const placeType of ["ancient", "modern"]) {
@@ -293,7 +336,9 @@ function getPlaces(xml) {
       place = origPlace.offset.placeName;
       place.offset = origPlace.offset._.trim();
     }
-    if (place && place._) {
+
+    if (place?._) {
+      place.region = region;
       places.push(place);
     }
   }
@@ -310,7 +355,7 @@ function getPlaces(xml) {
       g
         .split(",")
         .map((g) => g.trim())
-        .map((g) => parseFloat(g))
+        .map((g) => Number.parseFloat(g)),
     ),
   };
 }
@@ -334,18 +379,18 @@ function getProvenance(xml, provenanceType, subtype = null) {
   const provenanceArray = Array.isArray(provenance) ? provenance : [provenance];
 
   const found = provenanceArray.find(
-    (p) => p.type === provenanceType && (!subtype || p.subtype === subtype)
+    (p) => p.type === provenanceType && (!subtype || p.subtype === subtype),
   );
 
   if (!found) return null;
 
   // geo can either be a string or an object in the format { _: '37.967227, 13.198435', cert: 'medium' }
   let geo = found.geo;
-  if (geo && geo.cert) {
+  if (geo?.cert) {
     found.geoCert = geo.cert;
     geo = geo._;
   }
-  geo = geo?.split(",").map((g) => parseFloat(g.trim()));
+  geo = geo?.split(",").map((g) => Number.parseFloat(g.trim()));
 
   if (
     geo &&
@@ -377,11 +422,12 @@ function getGraphics(xml) {
         ?.map((graphic) => {
           return {
             ...graphic,
+            url: sanitizeURL(graphic.url),
             desc: graphic.desc,
             surfaceType: surface.type,
           };
         })
-        .filter((image) => image.n === "screen")
+        .filter((image) => image.n === "screen"),
   );
 
   return graphics;
@@ -395,22 +441,30 @@ function getMsIdentifier(xml) {
     return { country: null, region: null, settlement: null, repository: null };
 
   return {
-    country: msIdentifier.country?.trim(),
-    region: msIdentifier.region?.trim(),
-    settlement: msIdentifier.settlement?.trim(),
+    country: getText(msIdentifier.country),
+    region: getText(msIdentifier.region),
+    settlement: getText(msIdentifier.settlement),
     repository: getRepository(msIdentifier),
     idno: msIdentifier.idno,
   };
 }
 
+function getText(node) {
+  if (node === undefined) return undefined;
+  if (node === null) return null;
+  if (typeof node === "string") return node.trim();
+  if (Array.isArray(node)) return getText(node[0]);
+  return node._?.trim();
+};
+
 function getRepository(msIdentifier) {
-  const ref = msIdentifier.repository?.ref;
+  const ref = sanitizeURL(msIdentifier.repository?.ref);
 
   if (!ref) return msIdentifier.repository;
 
   const museum = museums.find((m) => m.uri === ref);
 
-  if (!museum) return msIdentifier.repository;
+  if (!museum) return { ...msIdentifier.repository, ref };
 
   return {
     _: museum.name,
@@ -426,11 +480,24 @@ function getTextLang(xml) {
 
   if (!textLang) return null;
 
-  const otherLangs = textLang.otherLangs ? textLang.otherLangs.split(" ") : [];
+  const otherLangs = textLang.otherLangs
+    ? textLang.otherLangs.split(" ").map(getLangName)
+    : [];
+
+  let certainty = textLang.certainty || [];
+
+  if (certainty && !Array.isArray(certainty)) {
+    certainty = [certainty];
+  }
+
+  const possibleLangs = certainty.map(
+    (certainty) => `${getLangName(certainty.assertedValue)} (possibly)`,
+  );
 
   textLang.languages = [
     getLangName(textLang.mainLang),
-    ...otherLangs.map(getLangName),
+    ...otherLangs,
+    ...possibleLangs,
   ];
 
   return textLang;
@@ -454,7 +521,7 @@ function getLangName(langCode) {
 
 async function getBibliography(xml, bibliographyType = "edition") {
   let bibliography = xml.TEI.text.body.div.find(
-    (div) => div.type === "bibliography"
+    (div) => div.type === "bibliography",
   )?.listBibl;
 
   if (!bibliography) return [];
@@ -463,8 +530,8 @@ async function getBibliography(xml, bibliographyType = "edition") {
     bibliography = [bibliography];
   }
 
-  let items = bibliography.find(
-    (listBibl) => listBibl.type === bibliographyType
+  const items = bibliography.find(
+    (listBibl) => listBibl.type === bibliographyType,
   );
 
   if (!items) return {};
@@ -474,78 +541,38 @@ async function getBibliography(xml, bibliographyType = "edition") {
   }
 
   items.bibl = await Promise.all(
-    items.bibl.map(async (item) => {
-      if (item.ptr?.target) {
-        const zoteroData = await getZoteroData(
-          item.ptr.target.split("/").at(-1)
-        );
+    items.bibl.map(
+      async (
+        /** @type {{ ptr: { target: string; }; } & Record<string, any>} */ item,
+      ) => {
+        if (item.ptr?.target) {
+          const zoteroData = await getZoteroData(
+            sanitizeURL(item.ptr.target).split("/").at(-1),
+          );
 
-        item = {
-          ...item,
-          ...zoteroData,
-        };
-      }
-
-      return item;
-    })
+          return {
+            ...item,
+            inscriptionDate: item?.date,
+            ...zoteroData,
+            year: zoteroData?.date?.match(/\d{4}/)?.[0] || ''
+          };
+        }
+      },
+    ),
   );
 
   return items;
 }
 
-const zoteroDataMap = new Map();
-
 async function getZoteroData(itemKey) {
-  const cacheKey = itemKey;
-
   if (!itemKey) return Promise.resolve("");
-  if (zoteroDataMap.has(cacheKey)) {
-    return Promise.resolve(zoteroDataMap.get(cacheKey));
+
+  if (zotero?.[itemKey]) {
+    return Promise.resolve(zotero[itemKey]);
   }
 
-  let url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=data`;
-
-  let locale = "en-GB";
-
-  const language = await fetch(url)
-    .then((response) => response.json())
-    .then((json) => json.data.language.toLowerCase())
-    .catch(() => "english");
-
-  if (language.indexOf("ge") === 0 || language.indexOf("german") === 0) {
-    locale = "de-DE";
-  } else if (
-    language.indexOf("it") === 0 ||
-    language.indexOf("italian") === 0
-  ) {
-    locale = "it-IT";
-  } else if (language.indexOf("fr") === 0 || language.indexOf("french") === 0) {
-    locale = "fr-FR";
-  } else if (
-    language.indexOf("es") === 0 ||
-    language.indexOf("spanish") === 0
-  ) {
-    locale = "es-ES";
-  }
-
-  url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=citation,data&style=chicago-fullnote-bibliography&linkwrap=1&locale=${locale}`;
-
-  return fetch(url)
-    .then((response) => (response.ok ? response.json() : null))
-    .then((json) => {
-      const data = {
-        title: json.data.title?.trim() || "",
-        date: json.data.date?.trim() || null,
-        citation: json.citation.replace(".</span>", "</span>"),
-      };
-      zoteroDataMap.set(cacheKey, data);
-
-      return data;
-    })
-    .catch(() => {
-      zoteroDataMap.set(cacheKey, null);
-      return null;
-    });
+  console.warn(`Zotero data not found for key: ${itemKey}`);
+  return Promise.resolve(null);
 }
 
 async function getXML(xmlString) {
@@ -560,7 +587,9 @@ function getCitation(xml) {
 
   const editor = titleStmt.editor;
   const principal = titleStmt.principal;
-  const contributors = titleStmt.respStmt.map((rs) => rs.name);
+  const contributors = Array.isArray(titleStmt?.respStmt)
+    ? titleStmt.respStmt.map((rs) => rs.name)
+    : [titleStmt.respStmt?.name] || [];
 
   const change = Array.isArray(revisionDesc?.listChange?.change)
     ? revisionDesc.listChange.change.at(-1)
@@ -577,10 +606,10 @@ function getKeywords(metadata) {
     metadata.type?._,
     metadata.objectType?._,
     metadata.material?._,
-    metadata.notBefore && metadata.notBefore.toString(),
-    metadata.notAfter && metadata.notAfter.toString(),
-    metadata.places && metadata.places[0]?._,
-    metadata.places && metadata.places[1]?._,
+    metadata.notBefore?.toString(),
+    metadata.notAfter?.toString(),
+    metadata.places?.[0]?._,
+    metadata.places?.[1]?._,
     metadata.country,
     metadata.region,
     metadata.settlement,
@@ -590,7 +619,7 @@ function getKeywords(metadata) {
   ]
     .filter((keyword) => keyword)
     .map((keyword) =>
-      typeof keyword === "string" ? keyword.trim().toLowerCase() : keyword
+      typeof keyword === "string" ? keyword.trim().toLowerCase() : keyword,
     );
 }
 

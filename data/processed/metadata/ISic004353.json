@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line2",
         "h": "25-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -92,20 +99,23 @@
     ]
   },
   "date": {
-    "_": "late imperial",
-    "notBefore": 300,
-    "notAfter": 500
+    "_": "consular date of 426 or 427",
+    "notBefore": 426,
+    "notAfter": 427,
+    "evidence": "internal-date"
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +124,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "From the area of the rione Forca, in the vicinity of the 'Dogana' tomb, Centuripe ",
     "type": "found",
@@ -124,6 +136,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.62527,
+    14.740939
+  ],
   "provenanceObserved": {
     "_": "2016.05.12",
     "type": "observed",
@@ -150,7 +166,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -190,7 +205,24 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "Biondi and Buscemi Felici",
+        "author": "Ferrua",
+        "date": "1982-1983",
+        "citedRange": "17 no.55 (14 fig.2a)",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/Q7DDNWD6"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001996",
+          "target": "https://biblio.inscriptiones.org/epig10001996"
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le iscrizioni datate della Sicilia paleocristiana",
+        "citation": "<span>Antonio Ferrua, «Le iscrizioni datate della Sicilia paleocristiana», <i>Kokalos</i> 28–29 (1983 1982): 3–29</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7DDNWD6",
+        "year": "1982"
+      },
+      {
+        "author": "Biondi, Buscemi Felici",
         "date": "2014",
         "citedRange": "171 no. 242 fig. 42",
         "ptr": {
@@ -200,15 +232,32 @@
           "_": "https://biblio.inscriptiones.org/epig10002149",
           "target": "https://biblio.inscriptiones.org/epig10002149"
         },
+        "inscriptionDate": "2014",
         "title": "Iscrizioni",
-        "citation": "<span>G. Biondi e G. Buscemi Felici, «Iscrizioni», in <i>Il museo archeologio dell’Università di Catania. Collezione Libertini</i>, a c. di G. Biondi, G. Buscemi Felici, e E. Tortorici (Acireale: Bonanno editore, 2014), 170–73</span>"
+        "citation": "<span>G. Biondi e G. Buscemi Felici, «Iscrizioni», in <i>Il museo archeologio dell’Università di Catania. Collezione Libertini</i>, a c. di G. Biondi, G. Buscemi Felici, e E. Tortorici (Acireale: Bonanno editore, 2014), 170–73</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8CH847SJ",
+        "year": "2014"
+      },
+      {
+        "author": "Rizzone",
+        "date": "2014-2015",
+        "citedRange": "97 no.14 fig.30",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/S3G73QA2"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001626",
+          "target": "https://biblio.inscriptiones.org/epig10001626"
+        },
+        "inscriptionDate": "2014-2015",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -232,35 +281,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images, edited text and metadata",
-      "when": "2021-12-14",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004353_tiled.tif",
@@ -269,10 +311,21 @@
     "desc": "Photo J. Prag, 2016-05-12, courtesy Museo di Archeologia dell'Universita di Catania",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 35
+    }
+  ],
   "publications": [
-    "Biondi and Buscemi Felici, 2014, Iscrizioni"
+    "Ferrua, 1982-1983, Le iscrizioni datate della Sicilia paleocristiana",
+    "Biondi, Buscemi Felici, 2014, Iscrizioni",
+    "Rizzone, 2014-2015"
+  ],
+  "zotero": [
+    "Q7DDNWD6",
+    "8CH847SJ",
+    "S3G73QA2"
   ],
   "keywords": [
     "isic004353",
@@ -285,7 +338,7 @@
     "marble",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo di archeologia dell'universita di catania",

@@ -36,8 +36,16 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Very fine-grained, homogeneous, white marble, likely Lunense, Docimian, Göktepe, Hymettan. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Goktepe #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense",
+      "Docimian",
+      "Göktepe",
+      "Hymettan"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +85,9 @@
         "from": "line1",
         "to": "line4",
         "h": "16",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "16",
+        "atMost": "16"
       },
       {
         "type": "interlinear",
@@ -90,19 +100,21 @@
   },
   "date": {
     "_": "third to fifth century CE?",
-    "notBefore": 250,
+    "notBefore": 251,
     "notAfter": 500
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,12 +123,15 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Details of original discovery are not recorded.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -134,7 +149,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -180,29 +194,36 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/759ZXHKQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001995",
-          "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/759ZXHKQ",
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "228 G12",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -226,27 +247,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -255,6 +263,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "644957",
   "facsimile": {
     "n": "screen",
     "url": "ISic003412_tiled.tif",
@@ -263,11 +272,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo L. Campagna 2004-11-16",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 16,
+      "atMost": 16
+    }
+  ],
   "publications": [
-    "Ferrua, 1989",
-    "Muscolino, 2011-2012"
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "759ZXHKQ",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic003412",
@@ -277,10 +294,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "very fine-grained, homogeneous, white marble, likely lunense, docimian, göktepe, hymettan. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -77,7 +81,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -92,22 +98,23 @@
   "date": {
     "_": "The tomb has not been excavated fully, but the cemetery went out of use around the end of the 3rd century BCE, offering a terminus ante quem",
     "notBefore": -350,
-    "notAfter": -200,
-    "evidence": "archaeological-context",
-    "precision": "low"
+    "notAfter": -201,
+    "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Abacaenum",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462062",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Tripi",
       "type": "modern",
       "ref": "http://sws.geonames.org/2522853",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +123,8 @@
       15.10158
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Abacaenum",
   "provenanceFound": {
     "_": "Tomb 105 of the necropolis in contrada Cardusa, where it remains in situ",
     "type": "found",
@@ -126,6 +135,10 @@
       15.11438
     ]
   },
+  "provenanceGeo": [
+    38.06519,
+    15.11438
+  ],
   "provenanceObserved": {
     "_": "Metcalfe 2016 visited site",
     "type": "observed",
@@ -143,7 +156,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
   "repository": {
@@ -166,7 +178,10 @@
           "lon": 15.11438
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462062"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462062"
+      }
     }
   },
   "idno": {
@@ -187,21 +202,24 @@
         "date": "2018",
         "citedRange": "108 no.9 and fig.10",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JQQKI6JP"
+          "target": "https://www.zotero.org/groups/382445/items/JQQKI6JP"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001574",
           "target": "https://biblio.inscriptiones.org/epig10001574"
         },
+        "inscriptionDate": "2018",
         "title": "Nuove iscrizioni funerarie dalla necropoli di Abakainon",
-        "citation": "<span>Girolamo Sofia, «Nuove iscrizioni funerarie dalla necropoli di Abakainon», <i>Zeitschrift für Papyrologie und Epigraphik</i> 206 (2018): 103–12</span>"
+        "citation": "<span>Girolamo Sofia, «Nuove iscrizioni funerarie dalla necropoli di Abakainon», <i>Zeitschrift für Papyrologie und Epigraphik</i> 206 (2018): 103–12</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JQQKI6JP",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -220,24 +238,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -249,6 +249,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004419_tiled.tif",
@@ -257,10 +258,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Abacaenum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Sofia, 2018, Nuove iscrizioni funerarie dalla necropoli di Abakainon"
+  ],
+  "zotero": [
+    "JQQKI6JP"
   ],
   "keywords": [
     "isic004419",
@@ -273,7 +281,7 @@
     "sandstone",
     "abacaenum",
     "tripi",
-    "italy",
+    "sicilia",
     "sicily",
     "tripi",
     "necropoli di abakainon",

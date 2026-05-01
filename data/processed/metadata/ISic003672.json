@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "limestone\n                                    ",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "24-26",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "26"
       },
       {
         "type": "interlinear",
@@ -92,20 +99,21 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,6 +122,8 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "From material found in trenches L, LI and LX excavated by Carettoni in 1956, along the front of and within the west portico of the agora",
     "type": "found",
@@ -123,6 +133,10 @@
       14.262601
     ]
   },
+  "provenanceGeo": [
+    37.997959,
+    14.262601
+  ],
   "provenanceObserved": {
     "_": "In storage on site",
     "type": "observed",
@@ -195,7 +209,6 @@
       "surfaceType": "base"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Halaesa",
   "repository": {
@@ -233,17 +246,18 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Carettoni",
-        "title": "NSA",
-        "date": "1961",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "295 no.12a fig.33",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1961",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Facella",
@@ -256,8 +270,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002013",
           "target": "https://biblio.inscriptiones.org/epig10002013"
         },
+        "inscriptionDate": "2006",
         "title": "Alesa Arconidea: ricerche su un'antica città della Sicilia tirrenica",
-        "citation": "<span>A. Facella, <i>Alesa Arconidea: ricerche su un’antica città della Sicilia tirrenica</i> (Pisa: Edizioni della Normale, 2006)</span>"
+        "citation": "<span>A. Facella, <i>Alesa Arconidea: ricerche su un’antica città della Sicilia tirrenica</i> (Pisa: Edizioni della Normale, 2006)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/J4XWZPV6",
+        "year": "2006"
       },
       {
         "author": "Prestianni Giallombardo",
@@ -270,15 +287,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001357",
           "target": "https://biblio.inscriptiones.org/epig10001357"
         },
+        "inscriptionDate": "2012",
         "title": "Spazio pubblico e memoria civica. Le epigrafi dall'agora di Alesa",
-        "citation": "<span>Anna Maria Prestianni Giallombardo, «Spazio pubblico e memoria civica. Le epigrafi dall’agora di Alesa», in <i>Agora greca e agorai di Sicilia</i>, a c. di C. Ampolo (Pisa: Edizioni della Normale, 2012), 171–200</span>"
+        "citation": "<span>Anna Maria Prestianni Giallombardo, «Spazio pubblico e memoria civica. Le epigrafi dall’agora di Alesa», in <i>Agora greca e agorai di Sicilia</i>, a c. di C. Ampolo (Pisa: Edizioni della Normale, 2012), 171–200</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CJISRIUV",
+        "year": "2012"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -302,27 +322,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -331,6 +338,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003672_tiled.tif",
@@ -339,12 +347,21 @@
     "desc": "Photo J.Prag courtesy Soprintendenza BBCCAA di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 24,
+      "atMost": 26
+    }
+  ],
   "publications": [
-    "Carettoni, 1961, NSA",
+    "Notizie degli scavi di antichità, 1876-",
     "Facella, 2006, Alesa Arconidea: ricerche su un'antica città della Sicilia tirrenica",
     "Prestianni Giallombardo, 2012, Spazio pubblico e memoria civica. Le epigrafi dall'agora di Alesa"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "J4XWZPV6",
+    "CJISRIUV"
   ],
   "keywords": [
     "isic003672",
@@ -357,7 +374,7 @@
     "limestone",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
     "halaesa",
     "antiquarium e sito archeologico di halaesa",

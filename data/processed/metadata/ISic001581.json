@@ -46,8 +46,16 @@
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Very fine to fine-grained, banded, white, calcitic marble, likely Lunense, Docimian, Göktepe, Hymettan. Digital microscopy: homeoblastic to heteroblastic fabric (identification based on pXRF, XRD)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Goktepe #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense",
+      "Docimian",
+      "Göktepe",
+      "Hymettan"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -88,7 +96,9 @@
         "from": "line1",
         "to": "line4",
         "h": "20-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -108,12 +118,14 @@
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -122,12 +134,15 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "No information on discovery is recorded, unpublished until catalogued by Manni Piraino in 1973.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -136,7 +151,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -178,14 +192,18 @@
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "117",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000531",
-          "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/F66S4X3M",
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "author": "Ferrua",
@@ -194,29 +212,36 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/759ZXHKQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001995",
-          "target": "https://biblio.inscriptiones.org/epig10001995"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/759ZXHKQ",
+        "inscriptionDate": "1989",
+        "title": "Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+        "citation": "<span>Antonio Ferrua, <i>Note e giunte alle iscrizioni cristiane antiche della Sicilia</i> (Vatican, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/759ZXHKQ",
+        "year": "1989"
       },
       {
         "author": "Muscolino",
         "date": "2011-2012",
         "citedRange": "225 G8 fig.9",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GJKY97S8"
+          "target": "https://www.zotero.org/groups/382445/items/GJKY97S8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002215",
           "target": "https://biblio.inscriptiones.org/epig10002215"
-        }
+        },
+        "inscriptionDate": "2011-2012",
+        "title": "Epigrafi funerarie greche e latine di Taormina",
+        "citation": "<span>Francesco Muscolino, «Epigrafi funerarie greche e latine di Taormina», <i>Rivista di Archeologia Cristiana</i> 87–88 (2012 2011): 209–48</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GJKY97S8",
+        "year": "2011"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -240,20 +265,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -264,22 +275,38 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from publications",
-      "when": "2024-07-30",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-24",
+      "who": "#ZL"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "493917",
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 25
+    }
+  ],
   "publications": [
-    "IGMusPalermo",
-    "Ferrua, 1989",
-    "Muscolino, 2011-2012"
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Ferrua, 1989, Note e giunte alle iscrizioni cristiane antiche della Sicilia",
+    "Muscolino, 2011-2012, Epigrafi funerarie greche e latine di Taormina"
+  ],
+  "zotero": [
+    "F66S4X3M",
+    "759ZXHKQ",
+    "GJKY97S8"
   ],
   "keywords": [
     "isic001581",
@@ -289,10 +316,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "very fine to fine-grained, banded, white, calcitic marble, likely lunense, docimian, göktepe, hymettan. digital microscopy: homeoblastic to heteroblastic fabric (identification based on pxrf, xrd)",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

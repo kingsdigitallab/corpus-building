@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "95",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "95",
+        "atMost": "95"
       },
       {
         "type": "letterHeight",
@@ -85,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "85",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "85",
+        "atMost": "85"
       },
       {
         "type": "letterHeight",
@@ -93,7 +102,9 @@
         "from": "line3",
         "to": "line4",
         "h": "60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
       },
       {
         "type": "interlinear",
@@ -113,12 +124,14 @@
     {
       "_": "Panhormus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462410"
+      "ref": "http://pleiades.stoa.org/places/462410",
+      "region": "Sicilia"
     },
     {
       "_": "Palermo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523920"
+      "ref": "http://sws.geonames.org/2523920",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -127,11 +140,14 @@
       13.33561
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Panhormus",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -149,7 +165,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -193,24 +208,34 @@
         "n": "AE",
         "citedRange": "1968.0200",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "14",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Raepsaet-Charlier",
@@ -222,7 +247,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001648",
           "target": "https://biblio.inscriptiones.org/epig10001648"
-        }
+        },
+        "inscriptionDate": "1974",
+        "title": "A propos du récent catalogue d'inscriptions latines du musée de Palerme",
+        "citation": "<span>M.-Th. Raepsaet-Charlier, « A propos du récent catalogue d’inscriptions latines du musée de Palerme », <i>Latomus</i> 33 (1974): 124‑27</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PZHQV5MN",
+        "year": "1974"
       },
       {
         "author": "Bivona",
@@ -233,14 +263,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002143",
           "target": "https://biblio.inscriptiones.org/epig10002143"
-        }
+        },
+        "inscriptionDate": "1967",
+        "title": "Una nuova dedica a Giulia Domna",
+        "citation": "<span>Livia Bivona, «Una nuova dedica a Giulia Domna», <i>Kokalos</i> 13 (1967): 205–15</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9J2C443I",
+        "year": "1967"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "76",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -264,20 +316,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -288,21 +326,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Robert Crellin",
         "xml:id": "RC",
         "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Robert Crellin added ids and lemmatizations",
-      "when": "2025-05-21",
+      "_": "Robert Crellin added new elements to the lemmatized edition",
+      "when": "2025-07-03",
       "who": "#RC"
     }
   },
+  "tmNumber": "175727",
   "facsimile": {
     "n": "screen",
     "url": "ISic000014_tiled.tif",
@@ -311,13 +351,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Panhormus",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 95,
+      "atMost": 95
+    },
+    {
+      "atLeast": 85,
+      "atMost": 85
+    },
+    {
+      "atLeast": 60,
+      "atMost": 60
+    }
+  ],
   "publications": [
-    null,
-    "ILMusPalermo",
-    "Raepsaet-Charlier, 1974",
-    "Bivona, 1967"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1970, ILMusPalermo",
+    "Raepsaet-Charlier, 1974, A propos du récent catalogue d'inscriptions latines du musée de Palerme",
+    "Bivona, 1967, Una nuova dedica a Giulia Domna",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "FZWWPUD6",
+    "PZHQV5MN",
+    "9J2C443I",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000014",
@@ -330,7 +390,7 @@
     "limestone",
     "panhormus",
     "palermo",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

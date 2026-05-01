@@ -33,7 +33,10 @@
   },
   "material": {
     "_": "\n                                        breccia (local)\n                                    ",
-    "ana": "#material.stone.breccia",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/73.html"
   },
   "condition": {
@@ -74,7 +77,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       },
       {
         "type": "interlinear",
@@ -94,12 +99,14 @@
     {
       "_": "Haluntium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462228"
+      "ref": "http://pleiades.stoa.org/places/462228",
+      "region": "Sicilia"
     },
     {
       "_": "San Marco d'Alunzio",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523425"
+      "ref": "http://sws.geonames.org/2523425",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,12 +115,15 @@
       14.70093
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Haluntium",
   "provenanceFound": {
     "_": "Found in the pavement of the church of S. Giuseppe",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "2006.04",
     "type": "observed",
@@ -132,7 +142,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "S. Marco d'Alunzio",
   "repository": {
@@ -172,12 +181,18 @@
         "n": "AE",
         "citedRange": "2001.1109",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Bonanno",
@@ -190,15 +205,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002130",
           "target": "https://biblio.inscriptiones.org/epig10002130"
         },
+        "inscriptionDate": "1997-1998",
         "title": "Scavi e indagini nel territorio di Caronia e San Marco d'Alunzio",
-        "citation": "<span>C. Bonanno, «Scavi e indagini nel territorio di Caronia e San Marco d’Alunzio», <i>Kokalos</i> 43–44, fasc. 2.1 (1998 1997): 423–51</span>"
+        "citation": "<span>C. Bonanno, «Scavi e indagini nel territorio di Caronia e San Marco d’Alunzio», <i>Kokalos</i> 43–44, fasc. 2.1 (1998 1997): 423–51</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GVSX7STQ",
+        "year": "1997"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -222,20 +240,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "David Espinosa Espinosa",
         "xml:id": "DEE",
         "ref": "http://orcid.org/0000-0002-2337-9047"
@@ -244,10 +248,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -256,6 +256,7 @@
       "who": "#DEE"
     }
   },
+  "tmNumber": "491407",
   "facsimile": {
     "n": "screen",
     "url": "ISic003635_tiled.tif",
@@ -264,11 +265,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Haluntium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 50
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Bonanno, 1997-1998, Scavi e indagini nel territorio di Caronia e San Marco d'Alunzio"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "GVSX7STQ"
   ],
   "keywords": [
     "isic003635",
@@ -280,7 +289,7 @@
     "breccia (local)",
     "haluntium",
     "san marco d'alunzio",
-    "italy",
+    "sicilia",
     "sicily",
     "s. marco d'alunzio",
     "museo della cultura e delle arti figurative bizantine e normanne",

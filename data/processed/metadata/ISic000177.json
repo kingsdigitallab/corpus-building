@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -91,19 +96,21 @@
   },
   "date": {
     "_": "Imperial",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 300
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +119,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in the garden of the Convento dei Cappuccini in or shortly before 1832 ",
     "type": "found",
@@ -122,6 +131,10 @@
       13.6935456
     ]
   },
+  "provenanceGeo": [
+    37.9828128,
+    13.6935456
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -144,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -189,7 +201,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10003145",
           "target": "https://biblio.inscriptiones.org/epig10003145"
-        }
+        },
+        "inscriptionDate": "1832",
+        "title": "Inscriptio Thermis nuper inventa",
+        "citation": "<span>Baldassare Romano, «Inscriptio Thermis nuper inventa», <i>Effemeridi Scientifiche e Letterarie per la Sicilia</i> 1, fasc. 4 (1832): 187–88</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/LXIPEQLG",
+        "year": "1832"
       },
       {
         "author": "Romano",
@@ -201,14 +218,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001618",
           "target": "https://biblio.inscriptiones.org/epig10001618"
-        }
+        },
+        "inscriptionDate": "1838",
+        "title": "Antichità termitane",
+        "citation": "<span>Baldassare Romano, <i>Antichità termitane</i> (Palermo: Tipografia di Francesco Lao, 1838)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/25ZN5T5X",
+        "year": "1838"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7406",
+            "_": "7406",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
@@ -218,11 +242,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "99",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -230,15 +261,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -262,35 +298,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from publications",
-      "when": "2024-06-25",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285318",
   "facsimile": {
     "n": "screen",
     "url": "ISic000177_tiled.tif",
@@ -299,13 +333,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo from I.L. Termini",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
   "letterHeights": [],
   "publications": [
-    "Romano, 1832",
-    "Romano, 1838",
-    "CIL",
-    "ILMusTermini"
+    "Romano, 1832, Inscriptio Thermis nuper inventa",
+    "Romano, 1838, Antichità termitane",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "LXIPEQLG",
+    "25ZN5T5X",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000177",
@@ -318,7 +357,7 @@
     "marble",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

@@ -39,8 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.breccia",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": {
     "ana": "#condition.damaged"
@@ -76,7 +78,82 @@
     }
   },
   "handNote": {
-    "lettering": "Regular widely spaced, finely incised letters, of consistent height throughout. Letters have basic triangular terminations to the strokes. Alpha is broken-bar; epsilon has short middle stroke (whether detached or not is unclear); kappa has equal length short arms; sigma has parallel top and bottom strokes, with the middle strokes extending half-width.",
+    "lettering": [
+      "Regular widely spaced, finely incised letters, of consistent height throughout. Letters have basic triangular terminations to the strokes. Alpha is broken-bar; epsilon has short middle stroke (whether detached or not is unclear); kappa has equal length short arms; sigma has parallel top and bottom strokes, with the middle strokes extending half-width.",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type2.html"
+          },
+          {
+            "_": "Δ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Δ-type2.html"
+          },
+          {
+            "_": "Ε type2.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.3.html"
+          },
+          {
+            "_": "Ε type2.3.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.3.1.html"
+          },
+          {
+            "_": "Ε type2.3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ε-type2.3.2.html"
+          },
+          {
+            "_": "Η type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Η-type1.html"
+          },
+          {
+            "_": "Ι type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+          },
+          {
+            "_": "Κ type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Κ-type1.html"
+          },
+          {
+            "_": "Κ type1.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Κ-type1.1.html"
+          },
+          {
+            "_": "Ν type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.html"
+          },
+          {
+            "_": "Ν type1.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.2.html"
+          },
+          {
+            "_": "Σ tyoe3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-tyoe3.2.html"
+          },
+          {
+            "_": "Σ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+          },
+          {
+            "_": "Τ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type2.html"
+          },
+          {
+            "_": "Τ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type2.1.html"
+          },
+          {
+            "_": "Υ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.html"
+          },
+          {
+            "_": "Υ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.1.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -84,7 +161,9 @@
         "from": "line1",
         "to": "line4",
         "h": "24-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -92,26 +171,30 @@
         "from": "line1",
         "to": "line4",
         "h": "14-15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "14",
+        "atMost": "15"
       }
     ]
   },
   "date": {
     "_": "The letter forms would suggest later third or more likely second century BCE",
     "notBefore": -250,
-    "notAfter": -100,
+    "notAfter": -101,
     "evidence": "lettering"
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -120,6 +203,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in June 1886, recovered during the demolition of the 16th century fortifications at the entrance to Ortygia.",
     "type": "found",
@@ -130,6 +215,10 @@
       15.291693
     ]
   },
+  "provenanceGeo": [
+    37.064543,
+    15.291693
+  ],
   "provenanceObserved": {
     "_": "Currently in the entry corridor to magazzino B, Museo archeologico regionale Paolo Orsi, Siracusa.",
     "type": "observed",
@@ -188,7 +277,6 @@
       "surfaceType": "base"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -230,63 +318,74 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0014a",
+            "_": "14a",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1962.0388",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "author": "Orsi",
         "date": "2018",
         "citedRange": "Tacc. 1, p.45",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RGRSRUHK"
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002617",
           "target": "https://biblio.inscriptiones.org/epig10002617"
         },
+        "inscriptionDate": "2018",
         "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>"
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1889",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "371",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1889",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Manganaro",
@@ -298,7 +397,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001852",
           "target": "https://biblio.inscriptiones.org/epig10001852"
-        }
+        },
+        "inscriptionDate": "1961",
+        "title": "Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia», <i>Siculorum Gymnasium</i> 14 (1961): 175–98</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HXK7DASC",
+        "year": "1961"
       },
       {
         "author": "Sfameni Gasparro",
@@ -310,7 +414,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001586",
           "target": "https://biblio.inscriptiones.org/epig10001586"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "I culti orientali in Sicilia",
+        "citation": "<span>G. Sfameni Gasparro, <i>I culti orientali in Sicilia</i> (Leiden: Brill, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PCGWJZ7V",
+        "year": "1973"
       },
       {
         "author": "Vidman",
@@ -323,8 +432,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000719",
           "target": "https://biblio.inscriptiones.org/epig10000719"
         },
+        "inscriptionDate": "1969",
         "title": "Sylloge inscriptionum religionis Isiacae et Sarapiacae",
-        "citation": "<span>L. Vidman, <i>Sylloge inscriptionum religionis Isiacae et Sarapiacae</i>, Religionsgeschichtliche Versuche und Vorarbeiten 28 (Berlin: Walter de Gruyter &#38; Co., 1969)</span>"
+        "citation": "<span>L. Vidman, <i>Sylloge inscriptionum religionis Isiacae et Sarapiacae</i>, Religionsgeschichtliche Versuche und Vorarbeiten 28 (Berlin: Walter de Gruyter &#38; Co., 1969)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VDM9D87R",
+        "year": "1969"
       }
     ]
   },
@@ -342,8 +454,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001841",
           "target": "https://biblio.inscriptiones.org/epig10001841"
         },
+        "inscriptionDate": "1965",
         "title": "Ricerche di antichità e di epigrafia siceliote",
-        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>"
+        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGTHAFKT",
+        "year": "1965"
       }
     ]
   },
@@ -368,20 +483,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -392,16 +493,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised file from autopsy",
-      "when": "2022-11-03",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2026-02-03",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "645352",
   "facsimile": {
     "n": "screen",
     "url": "ISic003002_tiled.tif",
@@ -410,16 +523,33 @@
     "desc": "Photo J. Prag, 12-09-2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 24,
+      "atMost": 25
+    },
+    {
+      "atLeast": 14,
+      "atMost": 15
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Bulletin épigraphique, 1888-",
     "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-    "Orsi, 1889, NSA",
-    "Manganaro, 1961",
-    "Sfameni Gasparro, 1973",
+    "Notizie degli scavi di antichità, 1876-",
+    "Manganaro, 1961, Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia",
+    "Sfameni Gasparro, 1973, I culti orientali in Sicilia",
     "Vidman, 1969, Sylloge inscriptionum religionis Isiacae et Sarapiacae"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "77P5MNIR",
+    "RGRSRUHK",
+    "4MCP2PVV",
+    "HXK7DASC",
+    "PCGWJZ7V",
+    "VDM9D87R"
   ],
   "keywords": [
     "isic003002",
@@ -432,7 +562,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

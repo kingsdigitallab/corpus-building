@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone.mosaic",
+    "type": "stone.mosaic",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -72,7 +77,66 @@
     }
   },
   "handNote": {
-    "lettering": "Letters neatly formed of small black basalt stone chips. Nu has a shorter right hand vertical; omicron is equal size to the other letters; alpha off vertical, cross-bar formed by single piece; mu formed by four equal off-vertical strokes, mid-point descending fully to the base-line.",
+    "lettering": [
+      "Letters neatly formed of small black basalt stone chips. Nu has a shorter right hand vertical; omicron is equal size to the other letters; alpha off vertical, cross-bar formed by single piece; mu formed by four equal off-vertical strokes, mid-point descending fully to the base-line.",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html"
+          },
+          {
+            "_": "Α type1.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.3.html"
+          },
+          {
+            "_": "Γ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Γ-type2.html"
+          },
+          {
+            "_": "Γ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Γ-type2.1.html"
+          },
+          {
+            "_": "Δ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Δ-type2.html"
+          },
+          {
+            "_": "Ι type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+          },
+          {
+            "_": "Μ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.html"
+          },
+          {
+            "_": "Μ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type2.1.html"
+          },
+          {
+            "_": "Ν type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.html"
+          },
+          {
+            "_": "Ν type1.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.2.html"
+          },
+          {
+            "_": "Ο type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
+          },
+          {
+            "_": "Υ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.html"
+          },
+          {
+            "_": "Υ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.1.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -94,20 +158,21 @@
     "_": "1st century BCE",
     "notBefore": -100,
     "notAfter": -1,
-    "evidence": "context",
-    "precision": "low"
+    "evidence": "context"
   },
   "places": [
     {
       "_": "Megara Hyblaea",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462307",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Megara Iblea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8063661"
+      "ref": "http://sws.geonames.org/8063661",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +181,8 @@
       15.18274
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Megara Hyblaea",
   "provenanceFound": {
     "_": "Mosaic at the entrance to room i of house 13,22 in SE quarter of Megara Hyblaea",
     "type": "found",
@@ -126,6 +193,10 @@
       15.18106
     ]
   },
+  "provenanceGeo": [
+    37.203839,
+    15.18106
+  ],
   "provenanceObserved": {
     "_": "in situ in House 13.22",
     "type": "observed",
@@ -167,7 +238,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
   "repository": {
@@ -190,7 +260,10 @@
           "lon": 15.181777
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462307"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462307"
+      }
     }
   },
   "textLang": {
@@ -208,42 +281,48 @@
         "n": "AE",
         "citedRange": "2007.0671",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "59.1107",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "26.1102",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manni Piraino",
@@ -256,8 +335,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001772",
           "target": "https://biblio.inscriptiones.org/epig10001772"
         },
+        "inscriptionDate": "1975",
         "title": "Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?",
-        "citation": "<span>M.T. Manni Piraino, «Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?», <i>Kokalos</i> 21 (1975): 121–53</span>"
+        "citation": "<span>M.T. Manni Piraino, «Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?», <i>Kokalos</i> 21 (1975): 121–53</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UUNP76BF",
+        "year": "1975"
       },
       {
         "author": "Torelli",
@@ -269,29 +351,35 @@
           "_": "https://biblio.inscriptiones.org/epig10001558",
           "target": "https://biblio.inscriptiones.org/epig10001558"
         },
+        "inscriptionDate": "2007",
         "title": "Un italico nel regno di Ierone II: Cn. Modius e il suo balneum di Megara Iblea",
-        "citation": "<span>M. Torelli, «Un italico nel regno di Ierone II: Cn. Modius e il suo balneum di Megara Iblea», <i>Sicilia Antiqua</i> 4 (2007): 99–104</span>"
+        "citation": "<span>M. Torelli, «Un italico nel regno di Ierone II: Cn. Modius e il suo balneum di Megara Iblea», <i>Sicilia Antiqua</i> 4 (2007): 99–104</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/B35EFD2T",
+        "year": "2007"
       },
       {
         "author": "Tréziny",
         "date": "2018",
         "citedRange": "273-274",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/5UHWUE4K"
+          "target": "https://www.zotero.org/groups/382445/items/5UHWUE4K"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002599",
           "target": "https://biblio.inscriptiones.org/epig10002599"
         },
+        "inscriptionDate": "2018",
         "title": "Mégara Hyblaea. 7, La ville classique, hellénistique et romaine",
-        "citation": "<span>Henry Tréziny, <i>Mégara Hyblaea. 7, La ville classique, hellénistique et romaine</i>, CEFR 1/7 (Rome: École française de Rome, 2018)</span>"
+        "citation": "<span>Henry Tréziny, <i>Mégara Hyblaea. 7, La ville classique, hellénistique et romaine</i>, CEFR 1/7 (Rome: École française de Rome, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5UHWUE4K",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -315,35 +403,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited metadata",
-      "when": "2021-04-21",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2026-02-11",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "494029",
   "facsimile": {
     "n": "screen",
     "url": "ISic003391_tiled.tif",
@@ -352,15 +438,22 @@
     "desc": "Photo J. Prag",
     "surfaceType": "front"
   },
-  "provenance": "Megara Hyblaea",
   "letterHeights": [],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Manni Piraino, 1975, Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?",
     "Torelli, 2007, Un italico nel regno di Ierone II: Cn. Modius e il suo balneum di Megara Iblea",
     "Tréziny, 2018, Mégara Hyblaea. 7, La ville classique, hellénistique et romaine"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "UUNP76BF",
+    "B35EFD2T",
+    "5UHWUE4K"
   ],
   "keywords": [
     "isic003391",
@@ -373,7 +466,7 @@
     "stone",
     "megara hyblaea",
     "megara iblea",
-    "italy",
+    "sicilia",
     "sicily",
     "megara hyblaea",
     "area archeologica di megara hyblaea",

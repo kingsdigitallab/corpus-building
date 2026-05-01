@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -77,7 +81,9 @@
         "from": "line1",
         "to": "line1",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -92,21 +98,22 @@
   "date": {
     "_": "Letter forms suggest a date in the 4th or earlier 3rd century BCE",
     "notBefore": -350,
-    "notAfter": -250,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": -251,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Abacaenum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462062"
+      "ref": "http://pleiades.stoa.org/places/462062",
+      "region": "Sicilia"
     },
     {
       "_": "Tripi",
       "type": "modern",
       "ref": "http://sws.geonames.org/2522853",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +122,8 @@
       15.10158
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Abacaenum",
   "provenanceFound": {
     "_": "Tomb 23 of the necropolis in contrada Cardusa",
     "type": "found",
@@ -124,6 +133,10 @@
       15.11438
     ]
   },
+  "provenanceGeo": [
+    38.06519,
+    15.11438
+  ],
   "provenanceObserved": {
     "_": "Metcalfe 2016 visited museum",
     "type": "observed",
@@ -141,7 +154,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
   "repository": {
@@ -181,53 +193,62 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "Bacci et al.",
+        "author": "Bacci, Coppolino, Sofia, Arizia",
         "date": "2015",
         "citedRange": "163 and fig.84",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ILQ4RQGU"
+          "target": "https://www.zotero.org/groups/382445/items/ILQ4RQGU"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002593",
           "target": "https://biblio.inscriptiones.org/epig10002593"
         },
+        "inscriptionDate": "2015",
         "title": "Tripi. Il museo archeologico \"Santi Furnari\". Guida all'esposizione",
-        "citation": "<span>Giovanna Maria Bacci et al., <i>Tripi. Il museo archeologico «Santi Furnari». Guida all’esposizione</i> (Messina: Regione Siciliana, 2015)</span>"
+        "citation": "<span>Giovanna Maria Bacci et al., <i>Tripi. Il museo archeologico «Santi Furnari». Guida all’esposizione</i> (Messina: Regione Siciliana, 2015)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ILQ4RQGU",
+        "year": "2015"
       },
       {
         "author": "Sofia",
         "date": "2015",
         "citedRange": "116 fig.121",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/9QTE4E3Z"
+          "target": "https://www.zotero.org/groups/382445/items/9QTE4E3Z"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001575",
           "target": "https://biblio.inscriptiones.org/epig10001575"
         },
+        "inscriptionDate": "2015",
         "title": "Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi",
-        "citation": "<span>Girolamo Sofia, <i>Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi</i> (Terme Vigliatore (ME): Giambra editore, 2015)</span>"
+        "citation": "<span>Girolamo Sofia, <i>Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi</i> (Terme Vigliatore (ME): Giambra editore, 2015)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9QTE4E3Z",
+        "year": "2015"
       },
       {
         "author": "Sofia",
         "date": "2018",
         "citedRange": "107 no.2 and fig.3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JQQKI6JP"
+          "target": "https://www.zotero.org/groups/382445/items/JQQKI6JP"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001574",
           "target": "https://biblio.inscriptiones.org/epig10001574"
         },
+        "inscriptionDate": "2018",
         "title": "Nuove iscrizioni funerarie dalla necropoli di Abakainon",
-        "citation": "<span>Girolamo Sofia, «Nuove iscrizioni funerarie dalla necropoli di Abakainon», <i>Zeitschrift für Papyrologie und Epigraphik</i> 206 (2018): 103–12</span>"
+        "citation": "<span>Girolamo Sofia, «Nuove iscrizioni funerarie dalla necropoli di Abakainon», <i>Zeitschrift für Papyrologie und Epigraphik</i> 206 (2018): 103–12</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JQQKI6JP",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -246,24 +267,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -275,6 +278,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004412_tiled.tif",
@@ -283,12 +287,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Abacaenum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
-    "Bacci et al., 2015, Tripi. Il museo archeologico \"Santi Furnari\". Guida all'esposizione",
+    "Bacci, Coppolino, Sofia, Arizia, 2015, Tripi. Il museo archeologico \"Santi Furnari\". Guida all'esposizione",
     "Sofia, 2015, Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi",
     "Sofia, 2018, Nuove iscrizioni funerarie dalla necropoli di Abakainon"
+  ],
+  "zotero": [
+    "ILQ4RQGU",
+    "9QTE4E3Z",
+    "JQQKI6JP"
   ],
   "keywords": [
     "isic004412",
@@ -301,7 +314,7 @@
     "sandstone",
     "abacaenum",
     "tripi",
-    "italy",
+    "sicilia",
     "sicily",
     "tripi",
     "museo archeologico santi furnari di tripi",

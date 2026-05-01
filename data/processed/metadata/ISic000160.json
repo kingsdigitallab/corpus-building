@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "19",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "19",
+        "atMost": "19"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "16-21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "16",
+        "atMost": "21"
       },
       {
         "type": "letterHeight",
@@ -96,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "16-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "16",
+        "atMost": "25"
       },
       {
         "type": "letterHeight",
@@ -104,7 +115,9 @@
         "from": "line4",
         "to": "line4",
         "h": "15-25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -125,12 +138,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -139,6 +154,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in Termini Imerese in the 18th century on the hill of S. Lucia, afterwards kept in the Palazzo Municipale (reported by Tardia to Torremuzza in 1766, and the circumstances, around 1760 are described by Romano, together with its transfer to the 'casa del civico magistrato', whence it passed to the Museo Civico.",
     "type": "found",
@@ -149,6 +166,10 @@
       13.6976633
     ]
   },
+  "provenanceGeo": [
+    37.9835964,
+    13.6976633
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 13, shelf 5",
     "type": "observed",
@@ -176,7 +197,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -221,7 +241,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
@@ -233,7 +258,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Romano",
@@ -245,40 +275,57 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001618",
           "target": "https://biblio.inscriptiones.org/epig10001618"
-        }
+        },
+        "inscriptionDate": "1838",
+        "title": "Antichità termitane",
+        "citation": "<span>Baldassare Romano, <i>Antichità termitane</i> (Palermo: Tipografia di Francesco Lao, 1838)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/25ZN5T5X",
+        "year": "1838"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.1084*",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pI1883"
+            "_": "1084*",
+            "target": "http://arachne.uni-koeln.de/item/buch/4004"
           }
         },
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/HSQETNGN"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001137",
+          "target": "https://biblio.inscriptiones.org/epig10001137"
+        },
+        "inscriptionDate": "1883",
+        "year": ""
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1982.0419",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "81",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -286,7 +333,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Ferrua",
@@ -298,14 +350,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002655",
           "target": "https://biblio.inscriptiones.org/epig10002655"
-        }
+        },
+        "inscriptionDate": "1941",
+        "title": "Analecta sicula",
+        "citation": "<span>Antonio Ferrua, «Analecta sicula», <i>Epigraphica</i> 3 (1941): 252–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P7QQ9SB6",
+        "year": "1941"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -329,20 +386,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -353,21 +396,33 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "edition on basis of autopsy",
-      "when": "2024-04-26",
-      "who": "#AA"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "175682",
   "facsimile": {
     "n": "screen",
     "url": "ISic000160_tiled.tif",
@@ -376,16 +431,41 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06.",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 19,
+      "atMost": 19
+    },
+    {
+      "atLeast": 16,
+      "atMost": 21
+    },
+    {
+      "atLeast": 16,
+      "atMost": 25
+    },
+    {
+      "atLeast": 15,
+      "atMost": 25
+    }
+  ],
   "publications": [
-    "Castelli, 1769",
-    "Castelli, 1784",
-    "Romano, 1838",
-    "CIL",
-    null,
-    "ILMusTermini",
-    "Ferrua, 1941"
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Romano, 1838, Antichità termitane",
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1994, ILMusTermini",
+    "Ferrua, 1941, Analecta sicula"
+  ],
+  "zotero": [
+    "SPTB56H3",
+    "7PSFHSUH",
+    "25ZN5T5X",
+    "HSQETNGN",
+    "R46KDTZX",
+    "JCV85C79",
+    "P7QQ9SB6"
   ],
   "keywords": [
     "isic000160",
@@ -398,7 +478,7 @@
     "marble",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

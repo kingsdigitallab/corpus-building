@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -68,7 +73,66 @@
     }
   },
   "handNote": {
-    "lettering": "Neatly cut, regular and evenly spaced letters without serifs. Broken-bar alpha; sigma with parallel top and bottom bars; omicron almost full size",
+    "lettering": [
+      "Neatly cut, regular and evenly spaced letters without serifs. Broken-bar alpha; sigma with parallel top and bottom bars; omicron almost full size",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Α type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type2.html"
+          },
+          {
+            "_": "Η type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Η-type1.html"
+          },
+          {
+            "_": "Ι type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+          },
+          {
+            "_": "Ν type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.html"
+          },
+          {
+            "_": "Ν type1.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.2.html"
+          },
+          {
+            "_": "Ο type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
+          },
+          {
+            "_": "Ρ type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.html"
+          },
+          {
+            "_": "Ρ type1.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.3.html"
+          },
+          {
+            "_": "Σ tyoe3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-tyoe3.2.html"
+          },
+          {
+            "_": "Σ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+          },
+          {
+            "_": "Τ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type2.html"
+          },
+          {
+            "_": "Τ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type2.1.html"
+          },
+          {
+            "_": "Χ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Χ-type3.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -89,20 +153,21 @@
   "date": {
     "_": "2nd century BCE",
     "notBefore": -200,
-    "notAfter": -100,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,6 +176,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Found in 2017 in re-use in the wall of a modern house in the old centre of Centuripe",
     "type": "found",
@@ -118,6 +185,7 @@
     "when": "2017",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -135,7 +203,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Centuripe",
   "repository": {
@@ -174,7 +241,7 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "Isabella di Bartolo",
+        "author": "di Bartolo",
         "date": "11.09.2017",
         "citedRange": {
           "ref": {
@@ -183,21 +250,24 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/XN2MHLWK"
+          "target": "https://www.zotero.org/groups/382445/items/XN2MHLWK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002687",
           "target": "https://biblio.inscriptiones.org/epig10002687"
         },
+        "inscriptionDate": "2017-09-18",
         "title": "Centuripe, scoperta la dedica di un \"istruttore\" di palestra del II secolo avanti Cristo",
-        "citation": "<span>Isabella di Bartolo, «Centuripe, scoperta la dedica di un “istruttore” di palestra del II secolo avanti Cristo», <i>ArcheoSicilia</i>, 9 novembre 2017, <a href=\"https://archeosicilia.blogspot.com/2017/09/centuripe-scoperta-la-dedica-di-un.html\">https://archeosicilia.blogspot.com/2017/09/centuripe-scoperta-la-dedica-di-un.html</a></span>"
+        "citation": "<span>Isabella di Bartolo, «Centuripe, scoperta la dedica di un “istruttore” di palestra del II secolo avanti Cristo», <i>ArcheoSicilia</i>, 9 novembre 2017, <a href=\"https://archeosicilia.blogspot.com/2017/09/centuripe-scoperta-la-dedica-di-un.html\">https://archeosicilia.blogspot.com/2017/09/centuripe-scoperta-la-dedica-di-un.html</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XN2MHLWK",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -221,35 +291,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004370_tiled.tif",
@@ -258,10 +321,12 @@
     "desc": "Photo from https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
   "letterHeights": [],
   "publications": [
-    "Isabella di Bartolo, 11.09.2017, Centuripe, scoperta la dedica di un \"istruttore\" di palestra del II secolo avanti Cristo"
+    "di Bartolo, 11.09.2017, Centuripe, scoperta la dedica di un \"istruttore\" di palestra del II secolo avanti Cristo"
+  ],
+  "zotero": [
+    "XN2MHLWK"
   ],
   "keywords": [
     "isic004370",
@@ -274,7 +339,7 @@
     "limestone",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
     "museo archeologico regionale di centuripe",

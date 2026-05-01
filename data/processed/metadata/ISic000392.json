@@ -40,7 +40,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -87,7 +92,9 @@
         "from": "line1",
         "to": "line1",
         "h": "75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "75",
+        "atMost": "75"
       },
       {
         "type": "letterHeight",
@@ -95,7 +102,9 @@
         "from": "line2",
         "to": "line3",
         "h": "60-65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -109,19 +118,20 @@
   "date": {
     "_": "1st century CE or early 2nd century CE (K)",
     "notBefore": 1,
-    "notAfter": 150,
-    "precision": "low"
+    "notAfter": 150
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,12 +140,15 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Seen by Carrara in 1639, said to be in a house near the Collegio de Padri Gesuiti, Catania",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "sala VI.142, mag. del cort.",
     "type": "observed",
@@ -152,7 +165,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -194,65 +206,78 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7110",
+            "_": "7110",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "\n                                10.1088*414",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
+            "_": "1088*.414",
+            "target": "http://arachne.uni-koeln.de/item/buch/4004"
           }
         },
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/HSQETNGN"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001137",
+          "target": "https://biblio.inscriptiones.org/epig10001137"
+        },
+        "inscriptionDate": "1883",
+        "year": ""
       },
       {
         "type": "corpus",
         "n": "CIL",
-        "citedRange": {
-          "ref": {
-            "_": "06.3063",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
-          }
-        },
+        "author": "Bormann and Henzen",
+        "date": "1876",
+        "citedRange": "3063",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/VVHPQFD3"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001134",
+          "target": "https://biblio.inscriptiones.org/epig10001134"
+        },
+        "inscriptionDate": "1876",
+        "year": ""
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0341e",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Libertini",
@@ -264,7 +289,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001871",
           "target": "https://biblio.inscriptiones.org/epig10001871"
-        }
+        },
+        "inscriptionDate": "1930",
+        "title": "Il Museo Biscari",
+        "citation": "<span>Guido Libertini, <i>Il Museo Biscari</i> (Milan: Casa editrice D’arte Bestetti e Tuminelli, 1930)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SKUU2R8X",
+        "year": "1930"
       },
       {
         "author": "Manganaro",
@@ -276,11 +306,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "39",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -288,15 +325,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -320,20 +362,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -344,8 +372,9 @@
         "ref": "https://orcid.org/0000-0002-0000-7611"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -354,6 +383,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491603",
   "facsimile": {
     "n": "screen",
     "url": "ISic000392_tiled.tif",
@@ -362,16 +392,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana (Photo by students of Liceo Lazzaro, 2017)",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 75,
+      "atMost": 75
+    },
+    {
+      "atLeast": 60,
+      "atMost": 65
+    }
+  ],
   "publications": [
-    "CIL",
-    "CIL",
-    "CIL",
-    null,
-    "Libertini, 1930",
-    "Manganaro, 1989",
-    "IMusCatania"
+    "Mommsen, 1883, CIL",
+    "Mommsen, 1883, CIL",
+    "Bormann and Henzen, 1876, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Libertini, 1930, Il Museo Biscari",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Korhonen, 2004, IMusCatania"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "HSQETNGN",
+    "VVHPQFD3",
+    "R46KDTZX",
+    "SKUU2R8X",
+    "EZMBJ6GN",
+    "2EUC82DH"
   ],
   "keywords": [
     "isic000392",
@@ -384,7 +431,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

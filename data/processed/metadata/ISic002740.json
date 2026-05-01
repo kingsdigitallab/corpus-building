@@ -39,7 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -78,7 +81,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -92,19 +97,20 @@
   "date": {
     "_": "c. 500—475 BCE (Nenci)",
     "notBefore": -500,
-    "notAfter": -475,
-    "precision": "medium"
+    "notAfter": -475
   },
   "places": [
     {
       "_": "Entella",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462197"
+      "ref": "http://pleiades.stoa.org/places/462197",
+      "region": "Sicilia"
     },
     {
       "_": "Rocca d'Entella",
       "type": "modern",
-      "ref": "http://sws.geonames.org/11103525"
+      "ref": "http://sws.geonames.org/11103525",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,12 +119,15 @@
       13.11509
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Entella",
   "provenanceFound": {
     "_": "Found in Necropolis B, localita Petraro, Entella",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -136,7 +145,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Contessa Entellina",
   "repository": {
@@ -180,19 +188,24 @@
         "n": "SEG",
         "citedRange": "47.1420",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IGDS2",
+        "author": "Dubois",
+        "date": "2008",
         "citedRange": "84",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/SM2KDHZC"
@@ -201,9 +214,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000160",
           "target": "https://biblio.inscriptiones.org/epig10000160"
         },
+        "inscriptionDate": "2008",
         "title": "Inscriptions grecques dialectales de Sicile. Tome II.",
-        "date": "2008",
-        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile. Tome II.</i> (Geneva: Droz, 2008)</span>"
+        "citation": "<span>Laurent Dubois, <i>Inscriptions grecques dialectales de Sicile. Tome II.</i> (Geneva: Droz, 2008)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SM2KDHZC",
+        "year": "2008"
       },
       {
         "author": "Nenci",
@@ -216,15 +231,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001729",
           "target": "https://biblio.inscriptiones.org/epig10001729"
         },
+        "inscriptionDate": "1997",
         "title": "Novità epigrafiche dall'area elima",
-        "citation": "<span>Giuseppe Nenci, «Novità epigrafiche dall’area elima», in <i>Seconde Giornate Internazionali di studi sull’area elima (Gibellina, 22-26 ottobre 1994). Atti.</i>, vol. 3, 3 voll. (Pisa: Scuola Normale Superiore di Pisa, 1997), 1187–1202</span>"
+        "citation": "<span>Giuseppe Nenci, «Novità epigrafiche dall’area elima», in <i>Seconde Giornate Internazionali di studi sull’area elima (Gibellina, 22-26 ottobre 1994). Atti.</i>, vol. 3, 3 voll. (Pisa: Scuola Normale Superiore di Pisa, 1997), 1187–1202</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4FSSHE62",
+        "year": "1997"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -248,27 +266,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -277,6 +277,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "644838",
   "facsimile": {
     "n": "screen",
     "url": "ISic002740_tiled.tif",
@@ -285,12 +286,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Entella",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 70
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "IGDS2, 2008",
+    "Dubois, 2008, IGDS2",
     "Nenci, 1997, Novità epigrafiche dall'area elima"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "SM2KDHZC",
+    "4FSSHE62"
   ],
   "keywords": [
     "isic002740",
@@ -303,7 +313,7 @@
     "limestone",
     "entella",
     "rocca d'entella",
-    "italy",
+    "sicilia",
     "sicily",
     "contessa entellina",
     "museo archeologico/antiquarium comunale di entella",

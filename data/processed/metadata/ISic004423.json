@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "stone (type unknown)",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -93,21 +97,23 @@
     ]
   },
   "date": {
-    "_": "unknown",
-    "notBefore": null,
-    "notAfter": null
+    "_": "Assumed to be ancient, but there are no clear grounds for dating with any precision.",
+    "notBefore": -500,
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Abacaenum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462062"
+      "ref": "http://pleiades.stoa.org/places/462062",
+      "region": "Sicilia"
     },
     {
       "_": "Tripi",
       "type": "modern",
       "ref": "http://sws.geonames.org/2522853",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,12 +122,15 @@
       15.10158
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Abacaenum",
   "provenanceFound": {
     "_": "Unknown, assumed to be from the local area of Tripi.",
     "type": "found",
-    "cert": "low",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Metcalfe 2016 visited museum",
     "type": "observed",
@@ -139,7 +148,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tripi",
   "repository": {
@@ -178,13 +186,13 @@
   "bibliographyEdition": {
     "type": "edition",
     "bibl": [
-      "\n                    "
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -203,27 +211,9 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -232,6 +222,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004423_tiled.tif",
@@ -240,11 +231,9 @@
     "desc": "Photo M. Metcalfe",
     "surfaceType": "front"
   },
-  "provenance": "Abacaenum",
   "letterHeights": [],
-  "publications": [
-    null
-  ],
+  "publications": [],
+  "zotero": [],
   "keywords": [
     "isic004423",
     "fragment with greek letters",
@@ -256,7 +245,7 @@
     "stone (type unknown)",
     "abacaenum",
     "tripi",
-    "italy",
+    "sicilia",
     "sicily",
     "tripi",
     "museo archeologico santi furnari di tripi",

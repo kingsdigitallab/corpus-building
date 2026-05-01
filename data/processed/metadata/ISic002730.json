@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -79,26 +83,29 @@
         "from": "line1",
         "to": "line1",
         "h": "180",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "180",
+        "atMost": "180"
       }
     ]
   },
   "date": {
     "_": "End of 2nd century BCE (Nenci 1997)",
     "notBefore": -150,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     },
     {
       "_": "Segesta",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523171"
+      "ref": "http://sws.geonames.org/2523171",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,11 +114,14 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "in situ on the threshold of the tablinum of the 'casa del navarca'.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -129,7 +139,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Segesta",
   "repository": {
@@ -152,7 +161,10 @@
           "lon": 12.8361805
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462487"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462487"
+      }
     }
   },
   "idno": "",
@@ -171,30 +183,36 @@
         "n": "SEG",
         "citedRange": "46.1452",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "45.1395",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Nenci",
@@ -207,8 +225,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001415",
           "target": "https://biblio.inscriptiones.org/epig10001415"
         },
+        "inscriptionDate": "1995",
         "title": "Iscrizioni greche e latine",
-        "citation": "<span>Giuseppe Nenci, «Iscrizioni greche e latine», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser.3, 25, fasc. 4 (1995): 1182–87</span>"
+        "citation": "<span>Giuseppe Nenci, «Iscrizioni greche e latine», <i>Annali della Scuola Normale Superiore di Pisa, Classe di Lettere e Filosofia</i> ser.3, 25, fasc. 4 (1995): 1182–87</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WHBJDH75",
+        "year": "1995"
       },
       {
         "author": "Nenci",
@@ -221,27 +242,32 @@
           "_": "https://biblio.inscriptiones.org/epig10001729",
           "target": "https://biblio.inscriptiones.org/epig10001729"
         },
+        "inscriptionDate": "1997",
         "title": "Novità epigrafiche dall'area elima",
-        "citation": "<span>Giuseppe Nenci, «Novità epigrafiche dall’area elima», in <i>Seconde Giornate Internazionali di studi sull’area elima (Gibellina, 22-26 ottobre 1994). Atti.</i>, vol. 3, 3 voll. (Pisa: Scuola Normale Superiore di Pisa, 1997), 1187–1202</span>"
+        "citation": "<span>Giuseppe Nenci, «Novità epigrafiche dall’area elima», in <i>Seconde Giornate Internazionali di studi sull’area elima (Gibellina, 22-26 ottobre 1994). Atti.</i>, vol. 3, 3 voll. (Pisa: Scuola Normale Superiore di Pisa, 1997), 1187–1202</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4FSSHE62",
+        "year": "1997"
       },
       {
-        "author": "Ampolo and Erdas",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "G19",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/3PK3JKXR"
+          "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -265,27 +291,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -294,6 +302,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "644830",
   "facsimile": {
     "n": "screen",
     "url": "ISic002730_tiled.tif",
@@ -302,14 +311,25 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 180,
+      "atMost": 180
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Nenci, 1995, Iscrizioni greche e latine",
     "Nenci, 1997, Novità epigrafiche dall'area elima",
-    "Ampolo and Erdas, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "WHBJDH75",
+    "4FSSHE62",
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic002730",
@@ -322,7 +342,7 @@
     "stone",
     "segesta",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "segesta",
     "parco archeologico di segesta",

@@ -35,8 +35,19 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "coarse-grained, homogeneous, white marble, likely Aphrodisian, Parian-1, Parian-2, Parian-3, Parian-4, Proconnesian, Thasian-3. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-1",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Proconnesian",
+      "Thasian-3"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -80,7 +91,9 @@
         "from": "line1",
         "to": "line4",
         "h": "15-20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -101,12 +114,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +130,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Ipogeo I Arangio",
     "type": "found",
@@ -122,6 +139,7 @@
     "when": "1945",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -139,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -179,7 +196,7 @@
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -198,20 +215,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -222,8 +225,9 @@
         "ref": "https://orcid.org/0000-0002-7176-2833"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -232,6 +236,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004467_tiled.tif",
@@ -240,9 +245,14 @@
     "desc": "Photo 2017 courtesy Museo Archeologico Regionale Paolo Orsi (Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014)",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 20
+    }
+  ],
   "publications": [],
+  "zotero": [],
   "keywords": [
     "isic004467",
     "i.sicily inscription 004467",
@@ -251,10 +261,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "coarse-grained, homogeneous, white marble, likely aphrodisian, parian-1, parian-2, parian-3, parian-4, proconnesian, thasian-3. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

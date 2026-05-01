@@ -30,9 +30,19 @@
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "No description is preserved",
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -81,13 +91,14 @@
   "date": {
     "_": "Republican",
     "notBefore": -200,
-    "notAfter": -1
+    "notAfter": -51
   },
   "places": [
     {
       "_": "Santo Stefano Quisquina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523247"
+      "ref": "http://sws.geonames.org/2523247",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -96,11 +107,15 @@
       13.48976
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Santo Stefano Quisquina",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "First recorded by Gualtherus in S. Stefano",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -113,20 +128,10 @@
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000478_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
-  "settlement": "Lost",
-  "repository": "",
+  "settlement": "S.Stefano",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -138,21 +143,58 @@
     "type": "edition",
     "bibl": [
       {
-        "type": "corpus",
-        "n": "CIL",
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "267",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "10.7197",
+            "_": "329",
+            "target": "http://arachne.uni-koeln.de/item/buchseite/310974"
+          }
+        },
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
+        "type": "corpus",
+        "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
+        "citedRange": {
+          "ref": {
+            "_": "7197",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
@@ -166,10 +208,13 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "author": "Mommsen",
+        "date": "1883",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Wilson",
@@ -181,7 +226,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "type": "corpus",
@@ -193,7 +243,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001379",
           "target": "https://biblio.inscriptiones.org/epig10001379"
-        }
+        },
+        "title": "Inscriptiones Latinae Liberae Rei Publicae",
+        "author": "Degrassi",
+        "date": "1965",
+        "citation": "<span>A. Degrassi, <i>Inscriptiones Latinae Liberae Rei Publicae</i>, 2nd edn, 2 vols (Florence: La Nuova Italia, 1965)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/88TW7IMC",
+        "year": "1965"
       },
       {
         "author": "Manganaro",
@@ -206,15 +262,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001828",
           "target": "https://biblio.inscriptiones.org/epig10001828"
         },
+        "inscriptionDate": "1992",
         "title": "Tra epigrafia e numismatica",
-        "citation": "<span>Giacomo Manganaro, «Tra epigrafia e numismatica», <i>Chiron</i> 22 (1992): 385–410</span>"
+        "citation": "<span>Giacomo Manganaro, «Tra epigrafia e numismatica», <i>Chiron</i> 22 (1992): 385–410</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/K86J38Q5",
+        "year": "1992"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -238,20 +297,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -260,10 +305,6 @@
         "_": "James Hua",
         "xml:id": "JH",
         "ref": "https://orcid.org/0000-0001-5453-9499"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -272,22 +313,25 @@
       "who": "#JH"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000478_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Santo Stefano Quisquina",
+  "tmNumber": "491703",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "CIL",
-    "Wilson, 1990",
-    "ILLRP",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Mommsen, 1883, CIL",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Degrassi, 1965, ILLRP",
     "Manganaro, 1992, Tra epigrafia e numismatica"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "GQN8UZSI",
+    "VF9MMBI9",
+    "88TW7IMC",
+    "K86J38Q5"
   ],
   "keywords": [
     "isic000478",
@@ -296,11 +340,12 @@
       "_": "draft"
     },
     "unknown",
+    "unknown",
     "stone",
     "santo stefano quisquina",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "s.stefano",
     "latin",
     "la"
   ]

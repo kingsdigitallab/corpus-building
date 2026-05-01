@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -88,19 +93,20 @@
   "date": {
     "_": "2nd or 3rd century CE (Ferrua)",
     "notBefore": 101,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,12 +115,15 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Foundations of teatro Vittorio Emanuele (24 Nov 1899)",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -132,7 +141,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -176,16 +184,24 @@
         "n": "AE",
         "citedRange": "1977.0329",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IMusMessina",
+        "author": "Bitto",
+        "date": "2001",
         "citedRange": "37",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/M9HMEP2R"
@@ -193,7 +209,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000029",
           "target": "https://biblio.inscriptiones.org/epig10000029"
-        }
+        },
+        "inscriptionDate": "2001",
+        "title": "Le iscrizioni greche e latine di Messina",
+        "citation": "<span>Irma Bitto, <i>Le iscrizioni greche e latine di Messina</i>, vol. 1, Pelorias 7 (Messina: Dipartimento di Scienze dell’Antichità dell’Università degli Studi di Messina, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M9HMEP2R",
+        "year": "2001"
       },
       {
         "author": "Ferrua",
@@ -205,14 +226,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002655",
           "target": "https://biblio.inscriptiones.org/epig10002655"
-        }
+        },
+        "inscriptionDate": "1941",
+        "title": "Analecta sicula",
+        "citation": "<span>Antonio Ferrua, «Analecta sicula», <i>Epigraphica</i> 3 (1941): 252–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P7QQ9SB6",
+        "year": "1941"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -236,20 +262,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -260,8 +272,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -270,6 +283,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "175728",
   "facsimile": {
     "n": "screen",
     "url": "ISic000792_tiled.tif",
@@ -278,12 +292,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
   "letterHeights": [],
   "publications": [
-    null,
-    "IMusMessina",
-    "Ferrua, 1941"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bitto, 2001, IMusMessina",
+    "Ferrua, 1941, Analecta sicula"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "M9HMEP2R",
+    "P7QQ9SB6"
   ],
   "keywords": [
     "isic000792",
@@ -296,7 +314,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "museo regionale interdisciplinare di messina",

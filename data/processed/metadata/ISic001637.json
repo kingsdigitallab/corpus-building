@@ -36,9 +36,13 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/211"
   },
   "material": {
-    "_": "natural rock\n                                    ",
-    "ana": "#material.rock",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
+    "_": "stone\n                                    ",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
+    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
   "dimensions": [
@@ -85,20 +89,21 @@
   },
   "date": {
     "_": "End 4th century CE, early 5th century CE\n                                (Ferrua)",
-    "notBefore": 350,
-    "notAfter": 450,
-    "precision": "low"
+    "notBefore": 351,
+    "notAfter": 450
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,12 +112,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Catacomb of S.Giovanni",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -130,7 +138,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -157,7 +164,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002211",
           "target": "https://biblio.inscriptiones.org/epig10002211"
-        }
+        },
+        "inscriptionDate": "1953",
+        "title": "Silloge di iscrizioni paleocristiane della Sicilia",
+        "citation": "<span>S.L. Agnello, <i>Silloge di iscrizioni paleocristiane della Sicilia</i> (Rome, 1953)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D9BZFDDR",
+        "year": "1953"
       },
       {
         "type": "bulletin",
@@ -166,14 +178,14 @@
         "date": "1893",
         "citedRange": "289 no. 45",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/V7HNHTAG"
+          "target": "https://www.zotero.org/groups/382445/items/V7HNHTAG"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001715",
-          "target": "https://biblio.inscriptiones.org/epig10001715"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/V7HNHTAG",
+        "inscriptionDate": "1893",
         "title": "Siracusa. Esplorazioni nelle catacombe di S. Giovanni ed in quelle della vigna Cassia",
-        "citation": "<span>Paolo Orsi, «Siracusa. Esplorazioni nelle catacombe di S. Giovanni ed in quelle della vigna Cassia», <i>Notizie degli Scavi di Antichità</i>, 1893, 276–314</span>"
+        "citation": "<span>Paolo Orsi, «Siracusa. Esplorazioni nelle catacombe di S. Giovanni ed in quelle della vigna Cassia», <i>Notizie degli Scavi di Antichità</i>, 1893, 276–314</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/V7HNHTAG",
+        "year": "1893"
       },
       {
         "author": "Ferrua",
@@ -182,19 +194,34 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/UC29MPZC"
         },
+        "bibl": {
+          "author": "Manganaro",
+          "date": "1988",
+          "citedRange": "85",
+          "ptr": {
+            "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+          },
+          "ref": {
+            "_": "https://biblio.inscriptiones.org/epig10001427",
+            "target": "https://biblio.inscriptiones.org/epig10001427"
+          }
+        },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002002",
           "target": "https://biblio.inscriptiones.org/epig10002002"
         },
+        "inscriptionDate": "1940",
         "title": "Nuovi studi nelle catacombe di Siracusa",
-        "citation": "<span>Antonio Ferrua, «Nuovi studi nelle catacombe di Siracusa», <i>Rivista di Archeologia Cristiana</i> 17 (1940): 43–81</span>"
+        "citation": "<span>Antonio Ferrua, «Nuovi studi nelle catacombe di Siracusa», <i>Rivista di Archeologia Cristiana</i> 17 (1940): 43–81</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UC29MPZC",
+        "year": "1940"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -218,20 +245,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -240,10 +253,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -252,6 +261,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "493922",
   "facsimile": {
     "n": "screen",
     "url": "ISic001637_tiled.tif",
@@ -260,12 +270,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "Agnello, 1953",
+    "Agnello, 1953, Silloge di iscrizioni paleocristiane della Sicilia",
     "Orsi, 1893, Siracusa. Esplorazioni nelle catacombe di S. Giovanni ed in quelle della vigna Cassia",
     "Ferrua, 1940, Nuovi studi nelle catacombe di Siracusa"
+  ],
+  "zotero": [
+    "D9BZFDDR",
+    "V7HNHTAG",
+    "UC29MPZC"
   ],
   "keywords": [
     "isic001637",
@@ -275,10 +289,10 @@
     },
     "funerary",
     "painted rock face",
-    "natural rock",
+    "stone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "catacomba di san giovanni",

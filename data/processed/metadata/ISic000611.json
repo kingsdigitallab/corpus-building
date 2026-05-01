@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -84,20 +88,22 @@
   },
   "date": {
     "_": "Septimus Severus or one of his successors (Wilson, 1990, p. 11)",
-    "notBefore": 200,
+    "notBefore": 201,
     "notAfter": 250
   },
   "places": [
     {
       "_": "Philosophiana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462423"
+      "ref": "http://pleiades.stoa.org/places/462423",
+      "region": "Sicilia"
     },
     {
       "_": "Mazzarino",
       "type": "modern",
       "ref": "http://sws.geonames.org/2524200",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,12 +112,15 @@
       14.20959
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Philosophiana",
   "provenanceFound": {
     "_": "Found in contrada Li Perni, on the track from Sofiana to Riesi",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -129,7 +138,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Mazzarino",
   "repository": "Said to be preserved 'presso la villa Alberti di Mazzarino'",
@@ -154,8 +162,8 @@
           "_": "https://biblio.inscriptiones.org/epig10001876",
           "target": "https://biblio.inscriptiones.org/epig10001876"
         },
-        "title": "Note su Philosophiana e Calloniana alla luce di nuovi rinvenimenti archeologici",
-        "citation": "<span>A. Li Gotti, «Note su Philosophiana e Calloniana alla luce di nuovi rinvenimenti archeologici», <i>Archivio Storico Siciliano</i> ser.III vol.7 (1955): 241–52</span>"
+        "inscriptionDate": "1955",
+        "year": ""
       },
       {
         "author": "Wilson",
@@ -167,7 +175,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Verbrugghe",
@@ -180,15 +193,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001524",
           "target": "https://biblio.inscriptiones.org/epig10001524"
         },
+        "inscriptionDate": "1976",
         "title": "Itinera Romana: Sicilia",
-        "citation": "<span>G.P. Verbrugghe, <i>Itinera Romana: Sicilia</i> (Berne, 1976)</span>"
+        "citation": "<span>G.P. Verbrugghe, <i>Itinera Romana: Sicilia</i> (Berne, 1976)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8KG4GRUG",
+        "year": "1976"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -212,27 +228,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -241,6 +239,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "644871",
   "facsimile": {
     "n": "screen",
     "url": "ISic000611_tiled.tif",
@@ -249,12 +248,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Philosophiana",
   "letterHeights": [],
   "publications": [
-    "Li Gotti, 1955, Note su Philosophiana e Calloniana alla luce di nuovi rinvenimenti archeologici",
-    "Wilson, 1990",
+    "Li Gotti, 1955",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
     "Verbrugghe, 1976, Itinera Romana: Sicilia"
+  ],
+  "zotero": [
+    "GKRDTQ8F",
+    "VF9MMBI9",
+    "8KG4GRUG"
   ],
   "keywords": [
     "isic000611",
@@ -267,7 +270,7 @@
     "stone",
     "philosophiana",
     "mazzarino",
-    "italy",
+    "sicilia",
     "sicily",
     "mazzarino",
     "latin",

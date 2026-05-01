@@ -3,13 +3,18 @@
 	import { Button } from 'bits-ui';
 	import { MoonIcon, SunIcon } from 'lucide-svelte';
 
-	let theme = $state((browser && localStorage.getItem('color-scheme')) || 'light');
+	let theme = $state('light');
 
 	if (browser) {
 		const preference = window.matchMedia('(prefers-color-scheme: dark)');
 
 		if (preference.matches) {
 			theme = 'dark';
+		}
+
+		const localTheme = localStorage.getItem('color-scheme');
+		if (localTheme) {
+			theme = localTheme;
 		}
 
 		setTheme();
@@ -28,6 +33,9 @@
 	function setTheme() {
 		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
+
+		document.body.classList.remove('theme-light', 'theme-dark');
+		document.body.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
 	}
 
 	function handleThemeToggle() {
@@ -39,15 +47,22 @@
 
 <svelte:head>
 	<script type="module">
-		let theme = localStorage.getItem('color-scheme') || 'light';
+		let theme = 'light';
+
 		const preference = window.matchMedia('(prefers-color-scheme: dark)');
 
 		if (preference.matches) {
 			theme = 'dark';
 		}
 
+		theme = localStorage.getItem('color-scheme') || theme;
+
 		document.documentElement.setAttribute('data-color-scheme', theme);
 		localStorage.setItem('color-scheme', theme);
+
+		// Set Unovis theme by adding a class to the body
+		document.body.classList.remove('theme-light', 'theme-dark');
+		document.body.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
 	</script>
 </svelte:head>
 
@@ -71,9 +86,22 @@
 			font-weight: inherit;
 			text-shadow: none;
 
+			/* ZL added new below (adding min-width & height to avoid getting to tiny)*/
+			min-width: 44px;
+			min-height: 44px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
 			&:hover {
 				background: var(--surface-4);
 			}
+		}
+
+		/* ZL added new below (adjusting icon proportions inside the button)*/
+		:global(button svg) {
+			width: 80%;
+			height: 80%;
 		}
 	}
 </style>

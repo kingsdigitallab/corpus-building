@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -81,7 +84,9 @@
         "from": "line1",
         "to": "line5",
         "h": "60-70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "70"
       },
       {
         "type": "interlinear",
@@ -102,12 +107,14 @@
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +123,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Recovered during excavations of the decumanus maximus, Capo Boeo, Marsala between 1999 and 2009",
     "type": "found",
@@ -128,6 +137,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.802849,
+    12.429272
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -145,7 +158,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -185,21 +197,24 @@
         "date": "2020",
         "citedRange": "298-299 no.2 with fig.6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JU3LWCJM"
+          "target": "https://www.zotero.org/groups/382445/items/JU3LWCJM"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002609",
           "target": "https://biblio.inscriptiones.org/epig10002609"
         },
+        "inscriptionDate": "2020",
         "title": "Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo",
-        "citation": "<span>Marina Silvestrini, «Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo», <i>Zeitschrift fūr Papyrologie und Epigraphik</i> 213 (2020): 294–300</span>"
+        "citation": "<span>Marina Silvestrini, «Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo», <i>Zeitschrift fūr Papyrologie und Epigraphik</i> 213 (2020): 294–300</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JU3LWCJM",
+        "year": "2020"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -223,27 +238,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -252,6 +249,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001673_tiled.tif",
@@ -260,10 +258,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 60,
+      "atMost": 70
+    }
+  ],
   "publications": [
     "Silvestrini, 2020, Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo"
+  ],
+  "zotero": [
+    "JU3LWCJM"
   ],
   "keywords": [
     "isic001673",
@@ -276,7 +281,7 @@
     "limestone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

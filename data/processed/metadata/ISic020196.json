@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -74,12 +78,16 @@
       {
         "type": "letterHeight",
         "h": "3-4",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "4"
       },
       {
         "type": "letterHeight",
         "h": "12",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "12",
+        "atMost": "12"
       }
     ]
   },
@@ -93,7 +101,8 @@
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,6 +111,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found during the excavations (on the 10th of March 1970) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
     "type": "found",
@@ -112,6 +123,10 @@
       12.84509
     ]
   },
+  "provenanceGeo": [
+    37.9424,
+    12.84509
+  ],
   "provenanceObserved": {
     "_": "Mignosa 2021-12-16",
     "type": "observed",
@@ -131,7 +146,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -170,7 +184,8 @@
       "desc": "Ancient Greek"
     },
     "languages": [
-      "Elymian"
+      "Elymian",
+      "Ancient Greek (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -183,35 +198,41 @@
         "date": "1977",
         "citedRange": "196",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QR2S9AJ9"
+          "target": "https://www.zotero.org/groups/382445/items/QR2S9AJ9"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002201",
           "target": "https://biblio.inscriptiones.org/epig10002201"
         },
+        "inscriptionDate": "1977",
         "title": "Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QR2S9AJ9",
+        "year": "1977"
       },
       {
         "author": "Tusa",
         "date": "1970",
         "citedRange": "no.114",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/P6FHJGR7"
+          "target": "https://www.zotero.org/groups/382445/items/P6FHJGR7"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002567",
           "target": "https://biblio.inscriptiones.org/epig10002567"
         },
+        "inscriptionDate": "1970",
         "title": "Frammenti di ceramica con graffiti da Segesta V",
-        "citation": "<span>Vincenzo Tusa, «Frammenti di ceramica con graffiti da Segesta V», <i>Kokalos</i> 16 (1970): 223–49, tavv.LXV–LXVI</span>"
+        "citation": "<span>Vincenzo Tusa, «Frammenti di ceramica con graffiti da Segesta V», <i>Kokalos</i> 16 (1970): 223–49, tavv.LXV–LXVI</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P6FHJGR7",
+        "year": "1970"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -235,19 +256,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -259,6 +267,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020196_tiled.tif",
@@ -267,11 +276,23 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 3,
+      "atMost": 4
+    },
+    {
+      "atLeast": 12,
+      "atMost": 12
+    }
+  ],
   "publications": [
     "Agostiniani, 1977, IAS1",
     "Tusa, 1970, Frammenti di ceramica con graffiti da Segesta V"
+  ],
+  "zotero": [
+    "QR2S9AJ9",
+    "P6FHJGR7"
   ],
   "keywords": [
     "isic020196",
@@ -283,7 +304,7 @@
     "kylix",
     "ceramic",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

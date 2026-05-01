@@ -31,17 +31,30 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A simple white marble plaque, with uneven left and right edges, straight upper and lower edges.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Coarse-grained, banded, white marble, likely Aphrodisian, Parian-2, Parian-3, Parian-4, Proconnesian, Thasian-3. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Proconnesian",
+      "Thasian-3"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
       "_": "21",
@@ -60,15 +73,19 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Four lines, centred on the stone, diminishing in size from top to bottom.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "lunate epsilon and sigma.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -89,19 +106,20 @@
   "date": {
     "_": "4th — 5th century CE",
     "notBefore": 301,
-    "notAfter": 500,
-    "precision": "low"
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,16 +128,20 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Found by Capodieci in 1782 in vigna San Giuliano",
+    "_": "Found by Capodieci in 1782 in vigna San Giuliano; currently on display in Sector F",
     "type": "found",
     "subtype": "discovered",
     "when": "1782",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "Display, sector F",
+    "_": "None",
     "type": "observed",
+    "subtype": "autopsied",
     "geo": null
   },
   "provenanceLost": null,
@@ -127,13 +149,12 @@
     {
       "n": "screen",
       "url": "ISic000846_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "3153px",
+      "width": "4724px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo archeologico regionale Paolo Orsi di Siracusa",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -175,66 +196,97 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0029",
+            "_": "29",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5399",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5399",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Strazzulla",
         "date": "1897",
         "citedRange": "no. 128",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/TUA8RN5S"
+          "target": "https://www.zotero.org/groups/382445/items/TUA8RN5S"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001390",
           "target": "https://biblio.inscriptiones.org/epig10001390"
         },
+        "inscriptionDate": "1897",
         "title": "Museum epigraphicum: seu inscriptionum Christianarum quae in Syracusanis catacumbis repertae sunt corpusculum",
-        "citation": "<span>V. Strazzulla, <i>Museum epigraphicum: seu inscriptionum Christianarum quae in Syracusanis catacumbis repertae sunt corpusculum</i>, Documenti per servire alla storia di Sicilia : 3. ser. 3 (Palermo: Lo Statuto, 1897)</span>"
+        "citation": "<span>V. Strazzulla, <i>Museum epigraphicum: seu inscriptionum Christianarum quae in Syracusanis catacumbis repertae sunt corpusculum</i>, Documenti per servire alla storia di Sicilia : 3. ser. 3 (Palermo: Lo Statuto, 1897)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TUA8RN5S",
+        "year": "1897"
       },
       {
         "author": "Ferrua",
         "date": "1941",
         "citedRange": "188 §54-55 fig. 23",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4HR4GXBX"
+          "target": "https://www.zotero.org/groups/382445/items/4HR4GXBX"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/4HR4GXBX",
+        "inscriptionDate": "1941",
+        "title": "Epigrafica sicula pagana e cristiana",
+        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4HR4GXBX",
+        "year": "1941"
+      },
+      {
+        "author": "Orsi",
+        "date": "2018",
+        "citedRange": "Tacc. 2, p. 9",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001456",
-          "target": "https://biblio.inscriptiones.org/epig10001456"
+          "_": "https://biblio.inscriptiones.org/epig10002617",
+          "target": "https://biblio.inscriptiones.org/epig10002617"
         },
-        "title": "Epigrafica sicula pagana e cristiana",
-        "citation": "<span>Antonio Ferrua, «Epigrafica sicula pagana e cristiana», <i>Rivista di Archeologia Cristiana</i> 18 (1941): 151–243</span>"
+        "inscriptionDate": "2018",
+        "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -258,50 +310,50 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag added image, minor edits",
+      "when": "2025-06-14",
+      "who": "#JP"
     }
   },
+  "tmNumber": "492474",
   "facsimile": {
     "n": "screen",
     "url": "ISic000846_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "3153px",
+    "width": "4724px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo archeologico regionale Paolo Orsi di Siracusa",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "CIG",
+    "Kaibel, 1890, IG",
+    "Boeckh, Franz, 1853, CIG",
     "Strazzulla, 1897, Museum epigraphicum: seu inscriptionum Christianarum quae in Syracusanis catacumbis repertae sunt corpusculum",
-    "Ferrua, 1941, Epigrafica sicula pagana e cristiana"
+    "Ferrua, 1941, Epigrafica sicula pagana e cristiana",
+    "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "TQMVHEVL",
+    "TUA8RN5S",
+    "4HR4GXBX",
+    "RGRSRUHK"
   ],
   "keywords": [
     "isic000846",
@@ -311,10 +363,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "coarse-grained, banded, white marble, likely aphrodisian, parian-2, parian-3, parian-4, proconnesian, thasian-3. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

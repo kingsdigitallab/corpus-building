@@ -31,9 +31,19 @@
     "ana": "#function.unknown",
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
   },
+  "support": "No description preserved, other than ''in silice', implying a flint-like stone?",
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+  },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -80,20 +90,22 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "Assumed to be Roman (imperial)",
+    "notBefore": 1,
+    "notAfter": 400
   },
   "places": [
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,11 +114,15 @@
       15.04385
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Recorded by Gualtherus as at Tindari, 'infra iconem B. Virginis'.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -114,25 +130,14 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost.",
+    "_": "Lost",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000601_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
-  "settlement": "Lost",
-  "repository": "",
+  "settlement": "Tindari",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -144,21 +149,39 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "319",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7486",
+            "_": "7486",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Fasolo",
@@ -170,14 +193,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002011",
           "target": "https://biblio.inscriptiones.org/epig10002011"
-        }
+        },
+        "inscriptionDate": "2013",
+        "title": "Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+        "citation": "<span>M. Fasolo, <i>Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari</i> (Rome: MediaGEO, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X2SEXMRX",
+        "year": "2013"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -201,27 +229,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Alex Antoniou",
@@ -235,19 +245,17 @@
       "who": "#AA"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000601_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Tyndaris",
+  "tmNumber": "491866",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Fasolo, 2013"
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari"
+  ],
+  "zotero": [
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "X2SEXMRX"
   ],
   "keywords": [
     "isic000601",
@@ -256,12 +264,13 @@
       "_": "draft"
     },
     "unknown",
+    "unknown",
     "stone",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "tindari",
     "latin",
     "la"
   ]

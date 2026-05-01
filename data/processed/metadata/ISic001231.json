@@ -42,7 +42,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line1",
         "h": "45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "45"
       },
       {
         "type": "letterHeight",
@@ -89,7 +96,9 @@
         "from": "line2",
         "to": "line2",
         "h": "35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       },
       {
         "type": "letterHeight",
@@ -97,7 +106,9 @@
         "from": "line3",
         "to": "line4",
         "h": "30",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "letterHeight",
@@ -105,7 +116,9 @@
         "from": "line5",
         "to": "line5",
         "h": "23",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "23"
       },
       {
         "type": "letterHeight",
@@ -113,7 +126,9 @@
         "from": "line6",
         "to": "line6",
         "h": "15-20",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -127,19 +142,20 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -148,6 +164,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Largo di Chiesa di San Giovanni Gerosolimitano Di Malta\n                        ",
     "type": "found",
@@ -157,6 +175,10 @@
       15.556499
     ]
   },
+  "provenanceGeo": [
+    38.199072,
+    15.556499
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -174,7 +196,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -216,23 +237,29 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0404",
+            "_": "404",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IMusMessina",
+        "author": "Bitto",
+        "date": "2001",
         "citedRange": "29",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/M9HMEP2R"
@@ -240,23 +267,36 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000029",
           "target": "https://biblio.inscriptiones.org/epig10000029"
-        }
+        },
+        "inscriptionDate": "2001",
+        "title": "Le iscrizioni greche e latine di Messina",
+        "citation": "<span>Irma Bitto, <i>Le iscrizioni greche e latine di Messina</i>, vol. 1, Pelorias 7 (Messina: Dipartimento di Scienze dell’Antichità dell’Università degli Studi di Messina, 2001)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/M9HMEP2R",
+        "year": "2001"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5625",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5625",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "De Salvo",
         "date": "1979",
+        "citedRange": "59",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/CIECXWAT"
         },
@@ -264,8 +304,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002046",
           "target": "https://biblio.inscriptiones.org/epig10002046"
         },
+        "inscriptionDate": "1979",
         "title": "A proposito di alcuni iscrizioni di naukleroi in Sicilia",
-        "citation": "<span>L. De Salvo, «A proposito di alcuni iscrizioni di naukleroi in Sicilia», <i>Archivio Storico Messinese</i> 3.30 (1979): 57–68</span>"
+        "citation": "<span>L. De Salvo, «A proposito di alcuni iscrizioni di naukleroi in Sicilia», <i>Archivio Storico Messinese</i> 3.30 (1979): 57–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CIECXWAT",
+        "year": "1979"
       },
       {
         "author": "Manganaro",
@@ -278,8 +321,28 @@
           "_": "https://biblio.inscriptiones.org/epig10001841",
           "target": "https://biblio.inscriptiones.org/epig10001841"
         },
+        "inscriptionDate": "1965",
         "title": "Ricerche di antichità e di epigrafia siceliote",
-        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>"
+        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGTHAFKT",
+        "year": "1965"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "84",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Rizzo",
@@ -291,7 +354,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001640",
           "target": "https://biblio.inscriptiones.org/epig10001640"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "La menzione del lavoro nelle epigrafi della Sicilia antica: per una storia della mentalità",
+        "citation": "<span>F.P. Rizzo, <i>La menzione del lavoro nelle epigrafi della Sicilia antica: per una storia della mentalità</i>, Seia 6 (Palermo, 1989)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/K83EWCEC",
+        "year": "1989"
       },
       {
         "author": "De Salvo",
@@ -304,15 +372,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002045",
           "target": "https://biblio.inscriptiones.org/epig10002045"
         },
+        "inscriptionDate": "1992",
         "title": "Economia privata e pubblici servizi nell'impero romano. I. Corpora naviculariorum",
-        "citation": "<span>L. De Salvo, <i>Economia privata e pubblici servizi nell’impero romano. I. Corpora naviculariorum</i> (Messina, 1992)</span>"
+        "citation": "<span>L. De Salvo, <i>Economia privata e pubblici servizi nell’impero romano. I. Corpora naviculariorum</i> (Messina, 1992)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZAA3GGNQ",
+        "year": "1992"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -336,20 +407,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -360,16 +417,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added image, encoded interpuncts",
-      "when": "2022-03-01",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2025-12-10",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492836",
   "facsimile": {
     "n": "screen",
     "url": "ISic001231_tiled.tif",
@@ -378,16 +447,47 @@
     "desc": "Photo M. Metcalfe, 2016-12-11, courtesy Museo regionale interdisciplinare di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 45,
+      "atMost": 45
+    },
+    {
+      "atLeast": 35,
+      "atMost": 35
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    },
+    {
+      "atLeast": 23,
+      "atMost": 23
+    },
+    {
+      "atLeast": 15,
+      "atMost": 20
+    }
+  ],
   "publications": [
-    "IG",
-    "IMusMessina",
-    "CIG",
+    "Kaibel, 1890, IG",
+    "Bitto, 2001, IMusMessina",
+    "Boeckh, Franz, 1853, CIG",
     "De Salvo, 1979, A proposito di alcuni iscrizioni di naukleroi in Sicilia",
     "Manganaro, 1965, Ricerche di antichità e di epigrafia siceliote",
-    "Rizzo, 1989",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Rizzo, 1989, La menzione del lavoro nelle epigrafi della Sicilia antica: per una storia della mentalità",
     "De Salvo, 1992, Economia privata e pubblici servizi nell'impero romano. I. Corpora naviculariorum"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "M9HMEP2R",
+    "TQMVHEVL",
+    "CIECXWAT",
+    "RGTHAFKT",
+    "RZSFKACR",
+    "K83EWCEC",
+    "ZAA3GGNQ"
   ],
   "keywords": [
     "isic001231",
@@ -400,7 +500,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "museo regionale interdisciplinare di messina",

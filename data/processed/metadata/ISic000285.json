@@ -33,7 +33,12 @@
   },
   "material": {
     "_": "volcanic",
-    "ana": "#material.stone.volcanic",
+    "ana": "#material.inorganic.stone.magmatic_rock.basalt",
+    "type": "stone.basalt",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -82,20 +87,21 @@
   "date": {
     "_": "Probably Augustan, early 1st century\n                                (Korhonen)",
     "notBefore": 1,
-    "notAfter": 50,
-    "precision": "low"
+    "notAfter": 50
   },
   "places": [
     {
       "_": "Aetna",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462251",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Santa Maria di Licodia",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523320"
+      "ref": "http://sws.geonames.org/2523320",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -104,11 +110,14 @@
       14.90254
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Aetna",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "sala VI.153",
     "type": "observed",
@@ -119,13 +128,12 @@
     {
       "n": "screen",
       "url": "ISic000285_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "3456px",
+      "width": "4608px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-11-18",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -165,11 +173,46 @@
     "type": "edition",
     "bibl": [
       {
-        "type": "corpus",
-        "n": "CIL",
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "273",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "10.6999",
+            "_": "335",
+            "target": "http://arachne.uni-koeln.de/item/buchseite/310975"
+          }
+        },
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
+        "type": "corpus",
+        "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
+        "citedRange": {
+          "ref": {
+            "_": "6999",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650753"
           }
         },
@@ -179,11 +222,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "25",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -191,7 +241,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Lagona",
@@ -203,7 +258,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001437",
           "target": "https://biblio.inscriptiones.org/epig10001437"
-        }
+        },
+        "inscriptionDate": "1964",
+        "title": "L'acquedotto romano di Catania",
+        "citation": "<span>S. Lagona, «L’acquedotto romano di Catania», <i>Cronache di archeologia e di storia dell’arte</i> 3 (1964): 69–86</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/W2SKMZD3",
+        "year": "1964"
       },
       {
         "author": "Manganaro",
@@ -215,7 +275,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Belvedere",
@@ -227,7 +292,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001429",
           "target": "https://biblio.inscriptiones.org/epig10001429"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "Opere pubbliche ed effici per lo spettacolo nella Sicilia di eta imperiale",
+        "citation": "<span>Oscar Belvedere, «Opere pubbliche ed effici per lo spettacolo nella Sicilia di eta imperiale», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 346–413</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8QJAZISW",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -239,7 +309,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001430",
           "target": "https://biblio.inscriptiones.org/epig10001430"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "Towns of Sicily during the Roman Empire",
+        "citation": "<span>R.J.A. Wilson, ‘Towns of Sicily during the Roman Empire’, <i>Aufstieg Und Niedergang Der Romischen Welt</i> 2.11.1 (1988): 90–206</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CR529RQD",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -251,10 +326,15 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
-        "author": "Coarelli and Torelli",
+        "author": "Coarelli, Torelli",
         "date": "1984",
         "citedRange": "334",
         "ptr": {
@@ -263,14 +343,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002073",
           "target": "https://biblio.inscriptiones.org/epig10002073"
-        }
+        },
+        "inscriptionDate": "1984",
+        "title": "Sicilia",
+        "citation": "<span>Filippo Coarelli e Mario Torelli, <i>Sicilia</i>, 2a ed., Guide archeologiche Laterza 13 (Roma: Laterza, 1984)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/N93VVSEU",
+        "year": "1984"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -294,20 +379,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -323,8 +394,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -333,25 +405,39 @@
       "who": "#RC"
     }
   },
+  "tmNumber": "491495",
   "facsimile": {
     "n": "screen",
     "url": "ISic000285_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "3456px",
+    "width": "4608px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-11-18",
     "surfaceType": "front"
   },
-  "provenance": "Aetna",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "IMusCatania",
-    "Lagona, 1964",
-    "Manganaro, 1988",
-    "Belvedere, 1988",
-    "Wilson, 1988",
-    "Wilson, 1990",
-    "Coarelli and Torelli, 1984"
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Korhonen, 2004, IMusCatania",
+    "Lagona, 1964, L'acquedotto romano di Catania",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Belvedere, 1988, Opere pubbliche ed effici per lo spettacolo nella Sicilia di eta imperiale",
+    "Wilson, 1988, Towns of Sicily during the Roman Empire",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Coarelli, Torelli, 1984, Sicilia"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "2EUC82DH",
+    "W2SKMZD3",
+    "RZSFKACR",
+    "8QJAZISW",
+    "CR529RQD",
+    "VF9MMBI9",
+    "N93VVSEU"
   ],
   "keywords": [
     "isic000285",
@@ -363,7 +449,7 @@
     "volcanic",
     "aetna",
     "santa maria di licodia",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

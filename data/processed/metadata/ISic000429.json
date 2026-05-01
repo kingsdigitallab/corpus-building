@@ -33,7 +33,11 @@
   "objectType": "",
   "material": {
     "_": "stone\n                                    ",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -82,19 +86,20 @@
   "date": {
     "_": "4th century CE (Manganaro)",
     "notBefore": 301,
-    "notAfter": 400,
-    "precision": "low"
+    "notAfter": 400
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,6 +108,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "type": "found",
     "subtype": "discovered",
@@ -115,6 +122,10 @@
       15.2848558
     ]
   },
+  "provenanceGeo": [
+    37.0767995,
+    15.2848558
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -137,10 +148,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
-  "settlement": "Lost",
-  "repository": "",
+  "settlement": "unknown",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -154,19 +164,23 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7149",
+            "_": "7149",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650768"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Agnello",
@@ -178,7 +192,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002211",
           "target": "https://biblio.inscriptiones.org/epig10002211"
-        }
+        },
+        "inscriptionDate": "1953",
+        "title": "Silloge di iscrizioni paleocristiane della Sicilia",
+        "citation": "<span>S.L. Agnello, <i>Silloge di iscrizioni paleocristiane della Sicilia</i> (Rome, 1953)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/D9BZFDDR",
+        "year": "1953"
       },
       {
         "author": "Manganaro",
@@ -190,14 +209,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -221,20 +245,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Constantin Pietschmann",
         "xml:id": "CP",
         "ref": "http://orcid.org/0000-0001-7156-3044"
@@ -248,10 +258,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -260,6 +266,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491657",
   "facsimile": {
     "n": "screen",
     "url": "ISic000429_tiled.tif",
@@ -268,12 +275,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Agnello, 1953",
-    "Manganaro, 1993"
+    "Mommsen, 1883, CIL",
+    "Agnello, 1953, Silloge di iscrizioni paleocristiane della Sicilia",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C."
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "D9BZFDDR",
+    "JBI7CI5R"
   ],
   "keywords": [
     "isic000429",
@@ -285,9 +296,9 @@
     "stone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "unknown",
     "latin",
     "la"
   ]

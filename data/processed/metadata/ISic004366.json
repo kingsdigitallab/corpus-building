@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line3",
         "h": "22-26",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "22",
+        "atMost": "26"
       },
       {
         "type": "interlinear",
@@ -89,25 +96,29 @@
         "from": "line1",
         "to": "line4",
         "h": "2-7",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "2",
+        "atMost": "7"
       }
     ]
   },
   "date": {
     "_": "Imperial period",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 500
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +127,8 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Acquired by Orsi in July 1894 in Centuripe for the Museo Archeologico Regionale Paolo Orsi, Siracusa",
     "type": "found",
@@ -123,6 +136,7 @@
     "notAfter": "1894",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2014-09-11, depositi, Magazzino B, cassette 5",
     "type": "observed",
@@ -166,7 +180,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -216,15 +229,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001707",
           "target": "https://biblio.inscriptiones.org/epig10001707"
         },
+        "inscriptionDate": "1900",
         "title": "Frammenti epigrafici sicelioti",
-        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>"
+        "citation": "<span>Paolo Orsi, «Frammenti epigrafici sicelioti», <i>Rivista di storia antica</i> 5 (1900): 39–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UE3VRJA7",
+        "year": "1900"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -248,27 +264,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -277,6 +280,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004366_tiled.tif",
@@ -285,10 +289,21 @@
     "desc": "Photo J. Prag, 2014-09-11, by permission of Museo Archeologico Regionale Paolo Orsi",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 22,
+      "atMost": 26
+    },
+    {
+      "atLeast": 2,
+      "atMost": 7
+    }
+  ],
   "publications": [
     "Orsi, 1900, Frammenti epigrafici sicelioti"
+  ],
+  "zotero": [
+    "UE3VRJA7"
   ],
   "keywords": [
     "isic004366",
@@ -301,7 +316,7 @@
     "marble",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

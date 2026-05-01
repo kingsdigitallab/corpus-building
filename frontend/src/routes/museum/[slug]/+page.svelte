@@ -12,7 +12,7 @@
 <svelte:head>
 	<title>{museum.name} | {config.title}</title>
 	<meta name="description" content={museum.name} />
-	<meta name="tags" content="museum, inscriptions, {museum.name}" />
+	<meta name="keywords" content="museum, inscriptions, {museum.name}" />
 </svelte:head>
 
 {#snippet address(/** @type {import('./$types').PageData['museum']['location']} */ location)}
@@ -24,49 +24,125 @@
 
 <article>
 	<header>
-		<hgroup>
-			<h1>
-				{museum.name}
-				<small class="badge">{museum.type}</small>
-			</h1>
-			<p class="description">
-				{museum.description}
-			</p>
-			<a href={museum.uri} target="museum">
-				View in current site <LucideExternalLink />
-			</a>
-		</hgroup>
+		<h1>
+			{museum.name}
+		</h1>
+
+		<section class="description">
+			{#if museum.description}
+				<p>
+					{museum.description}
+				</p>
+			{/if}
+
+			<ul class="links">
+				{#if museum.url}
+					<li>
+						<a href={museum.url} target="museum">{museum.url} <LucideExternalLink /></a>
+					</li>
+				{/if}
+				{#if museum.idno}
+				{@const idno = museum.idno}
+					<li>
+						<a href={idno.url} target="museum">{idno.type} <LucideExternalLink /></a>
+					</li>
+				{/if}
+			</ul>
+		</section>
+
+		<section class="location">
+			<h2>Location</h2>
+			{@render address(museum.location)}
+			{#if museum.location.geo}
+				{@const geo = museum.location.geo}
+				{@const lngLat = [geo.lon, geo.lat]}
+				<MapLibre center={lngLat} zoom={7} class="map" standardControls style={config.mapStyle}>
+					<DefaultMarker {lngLat}>
+						<Popup offset={[0, -10]}>
+							<div class="popup">
+								<h3>{museum.name}</h3>
+								{@render address(museum.location)}
+							</div>
+						</Popup>
+					</DefaultMarker>
+				</MapLibre>
+			{/if}
+		</section>
 	</header>
 
-	<section>
-		<h2>Location</h2>
-		{@render address(museum.location)}
-		{#if museum.location.geo}
-			{@const geo = museum.location.geo}
-			{@const lngLat = [geo.lon, geo.lat]}
-			<MapLibre center={lngLat} zoom={7} class="map" standardControls style={config.mapStyle}>
-				<DefaultMarker {lngLat}>
-					<Popup offset={[0, -10]}>
-						<div class="popup">
-							<h3>{museum.name}</h3>
-							{@render address(museum.location)}
-						</div>
-					</Popup>
-				</DefaultMarker>
-			</MapLibre>
-		{/if}
-	</section>
-
-	<section>
-		<h2>Inscriptions</h2>
-		<InscriptionTable {inscriptions} />
-	</section>
+	{#if inscriptions.length > 0}
+		<section class="inscriptions">
+			<h2>Inscriptions</h2>
+    		<InscriptionTable {inscriptions}
+				showInventoryNumber={true}
+				showSearch={true}
+				downloadFilename={museum.name}
+				sortOptions={[
+					{value: 'idnoSort', label: 'Inventory number'},
+					{value: 'file', label: 'FIle'},
+					{value: 'materialSort', label: 'Material'},
+					{value: 'originSort', label: 'Origin'},
+					{value: 'typeSort', label: 'Inscription type'},
+					{value: 'languageSort', label: 'Language'}
+				]} />
+		</section>
+	{/if}
 </article>
 
 <style>
-	header a {
+	article header {
+		border-left: var(--border-size-1) solid var(--border-color);
+		border-right: var(--border-size-1) solid var(--border-color);
+		height: 100%;
+		overflow-y: auto;
+		margin-top: 0;
+		padding-inline: var(--size-4);
+		padding-top: 0;
+		top: 0;
+	}
+
+	header h1,
+	section.location h2 {
+		border-bottom: var(--border-size-1) solid var(--border-color);
+		max-inline-size: none;
+		padding-block: var(--size-4);
+		text-align: center;
+	}
+
+	h1 {
+		font-size: var(--font-size-fluid-1);
+	}
+
+	h2 {
+		text-align: left !important;
+	}
+
+	p {
+		max-inline-size: none;
+	}
+
+	ul.links {
+		list-style: none;
+		padding-inline-start: 0;
+		padding-top: var(--size-4);
+	}
+
+	ul.links li {
+		padding-inline-start: 0;
+	}
+
+	ul.links a {
 		align-items: center;
 		display: inline-flex;
+		font-size: var(--font-size-1);
 		gap: var(--size-2);
+	}
+
+	address {
+		padding-block: var(--size-4);
+	}
+
+	section.inscriptions h2 {
+		padding-block: var(--size-4);
 	}
 </style>

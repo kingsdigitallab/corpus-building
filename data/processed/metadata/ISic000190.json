@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -84,7 +89,9 @@
         "from": "line1",
         "to": "line1",
         "h": "39-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "39",
+        "atMost": "42"
       },
       {
         "type": "letterHeight",
@@ -92,7 +99,9 @@
         "from": "line2",
         "to": "line2",
         "h": "41-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "41",
+        "atMost": "42"
       },
       {
         "type": "letterHeight",
@@ -100,7 +109,9 @@
         "from": "line3",
         "to": "line3",
         "h": "36-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "36",
+        "atMost": "38"
       },
       {
         "type": "interlinear",
@@ -120,12 +131,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -134,6 +147,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in the ruins of the Castle at Termini Imerese, in 1886",
     "type": "found",
@@ -144,6 +159,10 @@
       13.697916
     ]
   },
+  "provenanceGeo": [
+    37.988602,
+    13.697916
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 1",
     "type": "observed",
@@ -171,7 +190,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -209,6 +227,8 @@
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "112",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -216,22 +236,31 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1886",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "337",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1886",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "bulletin",
@@ -243,14 +272,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002649",
           "target": "https://biblio.inscriptiones.org/epig10002649"
-        }
+        },
+        "title": "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+        "author": "Henzen, Zangemeister",
+        "date": "1872-1913",
+        "citation": "<span>W. Henzen and K. F. W. Zangemeister, <i>Ephemeris Epigraphica. Corporis Inscriptionum Latinarum Supplementum, Edita Iussu Instituti Archaeologici Romani</i>, 9 vols (Berlin: G. Reimerum, 1872)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PU8UDAF3",
+        "year": "1872"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -274,40 +309,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images and minor revisions",
-      "when": "2024-07-25",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285319",
   "facsimile": {
     "n": "screen",
     "url": "ISic000190_tiled.tif",
@@ -316,12 +344,29 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 39,
+      "atMost": 42
+    },
+    {
+      "atLeast": 41,
+      "atMost": 42
+    },
+    {
+      "atLeast": 36,
+      "atMost": 38
+    }
+  ],
   "publications": [
-    "ILMusTermini",
-    "Salinas, 1886, NSA",
-    null
+    "Bivona, 1994, ILMusTermini",
+    "Notizie degli scavi di antichità, 1876-",
+    "Henzen, Zangemeister, 1872-1913, Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani"
+  ],
+  "zotero": [
+    "JCV85C79",
+    "4MCP2PVV",
+    "PU8UDAF3"
   ],
   "keywords": [
     "isic000190",
@@ -334,7 +379,7 @@
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

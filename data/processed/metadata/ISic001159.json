@@ -40,7 +40,12 @@
   },
   "material": {
     "_": "stone (grey)",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line3",
         "h": "39 (phi in line 1: 49mm)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "39",
+        "atMost": "39"
       },
       {
         "type": "interlinear",
@@ -95,19 +102,20 @@
   "date": {
     "_": "2nd century CE (?)",
     "notBefore": 101,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,12 +124,15 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "The place, date, and circumstances of the discovery are unknown, but the inscription is assumed to come from Termini Imerese",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 12, shelf 3",
     "type": "observed",
@@ -141,7 +152,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -185,21 +195,26 @@
         "n": "IG",
         "citedRange": {
           "ref": {
-            "_": "\n                                14.0340.1",
+            "_": "340.1",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "author": "Kaibel",
+        "date": "1890",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusTermini",
+        "author": "Brugnone",
+        "date": "1974",
         "citedRange": "11",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/9WZ7KU5C"
@@ -208,17 +223,19 @@
           "_": "https://biblio.inscriptiones.org/epig10001397",
           "target": "https://biblio.inscriptiones.org/epig10001397"
         },
+        "inscriptionDate": "1974",
         "title": "Iscrizione greche del museo civico di Termini Imerese",
-        "date": "1974",
-        "citation": "<span>Antonietta Brugnone, «Iscrizione greche del museo civico di Termini Imerese», <i>Kokalos</i> 20 (1974): 218–64</span>"
+        "citation": "<span>Antonietta Brugnone, «Iscrizione greche del museo civico di Termini Imerese», <i>Kokalos</i> 20 (1974): 218–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9WZ7KU5C",
+        "year": "1974"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -242,20 +259,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -266,21 +269,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "edition on basis of autopsy",
-      "when": "2024-04-24",
-      "who": "#AA"
+      "_": "Victoria Fendel's lemmatizations were added",
+      "when": "2025-07-24",
+      "who": "#VF"
     }
   },
+  "tmNumber": "492771",
   "facsimile": {
     "n": "screen",
     "url": "ISic001159_tiled.tif",
@@ -289,11 +299,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 39,
+      "atMost": 39
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusTermini, 1974"
+    "Kaibel, 1890, IG",
+    "Brugnone, 1974, IGMusTermini"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "9WZ7KU5C"
   ],
   "keywords": [
     "isic001159",
@@ -305,7 +323,7 @@
     "stone (grey)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

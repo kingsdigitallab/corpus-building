@@ -116,17 +116,26 @@
 	.discover-link {
 		align-items: center;
 		color: var(--text-1);
-		display: flex;
+		display: inline-flex;
 		font-size: var(--font-size-2);
 		font-weight: bold;
-		gap: var(--size-2);
+		gap: var(--size-4);
 		text-decoration: none;
+
+		min-height: 44px;
+		padding-block: var(--size-1);
 	}
 
 	.arrow {
 		border-radius: var(--radius);
 		border: var(--border-size-1) solid var(--border-color);
 		padding-inline: var(--size-2);
+
+		min-width: 44px;
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.discover-link-text {
@@ -172,10 +181,25 @@
 	}
 
 	@media (max-width: 768px) {
+		/* ZL only adjusted under @media, including .hero, .hero-left, .discover-link, .hero-spacer) */
+		/* ZL made changes below */
 		.hero {
 			grid-template-columns: 1fr;
-			height: auto;
+			height: auto; /* ZL adjusted here from auto to unset */
+			min-height: 0;
 		}
+
+		.hero-left {
+			justify-content: initial;
+			gap: var(--size-6);
+			padding-block: var(--size-6);
+			/* padding-block-end: 10; */
+		}
+
+		.discover-link {
+			margin-block-end: var(--size-6);
+		}
+
 		.hero-right {
 			display: none;
 		}

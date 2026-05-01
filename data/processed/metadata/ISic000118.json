@@ -1,7 +1,7 @@
 {
   "file": "ISic000118",
   "uri": "ISic000118",
-  "title": "I.Sicily inscription 000118",
+  "title": "Epitaph for Publius Acellius Eyporistus",
   "status": {
     "_": "draft"
   },
@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "conglomerate",
-    "ana": "#material.stone.conglomerate",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/74.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "50-60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -96,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "40-50",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "50"
       },
       {
         "type": "letterHeight",
@@ -104,7 +115,9 @@
         "from": "line4",
         "to": "line4",
         "h": "30-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -125,12 +138,14 @@
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -139,6 +154,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "First seen by B. Romano shortly prior to 1829 in a garden 'nella pianura di Giancaniglia fuori la porta di Palermo' , in use as a garden seat; subsequently hidden by the owner, but rediscovered in the later 19th cent.; transferred to the civic museum shortly before seen by Mommsen; seen by Bivona prior to 1994.",
     "type": "found",
@@ -148,6 +165,10 @@
       13.6867031
     ]
   },
+  "provenanceGeo": [
+    37.9871901,
+    13.6867031
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -170,7 +191,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -219,14 +239,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2UJS2UVS",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7368",
+            "_": "7368",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650797"
           }
         },
@@ -236,11 +263,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "37",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -248,15 +282,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -280,20 +319,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -304,16 +329,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from publications, added image",
-      "when": "2024-04-10",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285310",
   "facsimile": {
     "n": "screen",
     "url": "ISic000118_tiled.tif",
@@ -322,16 +354,37 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; scanned from ILTermini",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 50
+    },
+    {
+      "atLeast": 50,
+      "atMost": 60
+    },
+    {
+      "atLeast": 40,
+      "atMost": 50
+    },
+    {
+      "atLeast": 30,
+      "atMost": 40
+    }
+  ],
   "publications": [
-    "Romano, 1829",
-    "CIL",
-    "ILMusTermini"
+    "Romano, 1829, Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "2UJS2UVS",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000118",
-    "i.sicily inscription 000118",
+    "epitaph for publius acellius eyporistus",
     {
       "_": "draft"
     },
@@ -340,7 +393,7 @@
     "conglomerate",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

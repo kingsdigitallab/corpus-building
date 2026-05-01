@@ -39,9 +39,11 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
-    "cert": "low"
+    "cert": "low",
+    "subtype": []
   },
   "condition": {
     "ana": "#condition.fragments.contiguous"
@@ -77,7 +79,90 @@
     }
   },
   "handNote": {
-    "lettering": "Slightly unevenly spaced deeply v-cut letters. Delta has a slight apex; Mu has vertical first and last, middle strokes only descend half-way; Nu has lower right angle slightly above the line; omicron is full size; rhos has small closed, curved eye; sigma has prallel top and bottom strokes, with relatively shallow mid-strokes; phi has large rhomboid body, traversed by the vertical which is extended (120 mm); omega is open, rounded, with long horizontal tails, and is slightly smaller than the full line-height (75-85 mm).",
+    "lettering": [
+      "Slightly unevenly spaced deeply v-cut letters. Delta has a slight apex; Mu has vertical first and last, middle strokes only descend half-way; Nu has lower right angle slightly above the line; omicron is full size; rhos has small closed, curved eye; sigma has prallel top and bottom strokes, with relatively shallow mid-strokes; phi has large rhomboid body, traversed by the vertical which is extended (120 mm); omega is open, rounded, with long horizontal tails, and is slightly smaller than the full line-height (75-85 mm).",
+      {
+        "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+        "ref": [
+          {
+            "_": "Δ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Δ-type2.html"
+          },
+          {
+            "_": "Ι type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+          },
+          {
+            "_": "Μ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type3.html"
+          },
+          {
+            "_": "Μ type3.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Μ-type3.1.html"
+          },
+          {
+            "_": "Ν type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type2.html"
+          },
+          {
+            "_": "Ν type2.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type2.2.html"
+          },
+          {
+            "_": "Ο type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
+          },
+          {
+            "_": "Ρ type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.html"
+          },
+          {
+            "_": "Ρ type1.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.1.html"
+          },
+          {
+            "_": "Σ tyoe3.2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-tyoe3.2.html"
+          },
+          {
+            "_": "Σ type3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+          },
+          {
+            "_": "Τ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type2.html"
+          },
+          {
+            "_": "Τ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Τ-type2.1.html"
+          },
+          {
+            "_": "Υ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.html"
+          },
+          {
+            "_": "Υ type2.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.1.html"
+          },
+          {
+            "_": "Φ type2",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Φ-type2.html"
+          },
+          {
+            "_": "Φ type2.3",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Φ-type2.3.html"
+          },
+          {
+            "_": "Ω type1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ω-type1.html"
+          },
+          {
+            "_": "Ω type1.1",
+            "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ω-type1.1.html"
+          }
+        ]
+      }
+    ],
     "dimensions": [
       {
         "type": "letterHeight",
@@ -85,7 +170,9 @@
         "from": "line1",
         "to": "line1",
         "h": "90-100",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "90",
+        "atMost": "100"
       },
       {
         "type": "interlinear",
@@ -99,19 +186,20 @@
   "date": {
     "_": "3rd — 2nd century BCE (probably)",
     "notBefore": -300,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Euboia",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462203"
+      "ref": "http://pleiades.stoa.org/places/462203",
+      "region": "Sicilia"
     },
     {
       "_": "Licodia Eubea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524392"
+      "ref": "http://sws.geonames.org/2524392",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -120,6 +208,8 @@
       14.70555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Euboia",
   "provenanceFound": {
     "_": "Found in February 1903 during building works on Via V. Cordova, in reuse in late antique tombs.",
     "type": "found",
@@ -130,6 +220,10 @@
       14.7006416
     ]
   },
+  "provenanceGeo": [
+    37.1558337,
+    14.7006416
+  ],
   "provenanceObserved": {
     "_": "Depositi, Mag C",
     "type": "observed",
@@ -154,7 +248,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -196,17 +289,18 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Orsi",
-        "title": "NSA",
-        "date": "1903",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "435-436 ph",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1903",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "author": "Orsi",
@@ -219,8 +313,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001705",
           "target": "https://biblio.inscriptiones.org/epig10001705"
         },
+        "inscriptionDate": "1904",
         "title": "Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)",
-        "citation": "<span>Paolo Orsi, «Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 18 (1904): 235–59</span>"
+        "citation": "<span>Paolo Orsi, «Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 18 (1904): 235–59</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R337N55M",
+        "year": "1904"
       },
       {
         "author": "Pace",
@@ -233,8 +330,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001692",
           "target": "https://biblio.inscriptiones.org/epig10001692"
         },
+        "inscriptionDate": "1927",
         "title": "Camarina: topografia, storia, archeologia",
-        "citation": "<span>B. Pace, <i>Camarina: topografia, storia, archeologia</i> (Catania, 1927)</span>"
+        "citation": "<span>B. Pace, <i>Camarina: topografia, storia, archeologia</i> (Catania, 1927)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZJ6KUFMM",
+        "year": "1927"
       },
       {
         "author": "Libertini",
@@ -247,15 +347,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001872",
           "target": "https://biblio.inscriptiones.org/epig10001872"
         },
+        "inscriptionDate": "1929",
         "title": "Il regio museo archeologico di Siracusa",
-        "citation": "<span>Guido Libertini, <i>Il regio museo archeologico di Siracusa</i>, Guide dei musei italiani (Roma: La Libreria dello stato, 1929)</span>"
+        "citation": "<span>Guido Libertini, <i>Il regio museo archeologico di Siracusa</i>, Guide dei musei italiani (Roma: La Libreria dello stato, 1929)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/AHZ3TB5P",
+        "year": "1929"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -279,35 +382,28 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited from autopsy adding image",
-      "when": "2022-04-10",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "644870",
   "facsimile": {
     "n": "screen",
     "url": "ISic003365_tiled.tif",
@@ -316,13 +412,23 @@
     "desc": "Photo J. Prag 26.04.2022: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Euboia",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 90,
+      "atMost": 100
+    }
+  ],
   "publications": [
-    "Orsi, 1903, NSA",
+    "Notizie degli scavi di antichità, 1876-",
     "Orsi, 1904, Contributi alla Sicilia cristiana (Licodia Eubea, Grasullo, Priolo, Siracusa)",
     "Pace, 1927, Camarina: topografia, storia, archeologia",
     "Libertini, 1929, Il regio museo archeologico di Siracusa"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "R337N55M",
+    "ZJ6KUFMM",
+    "AHZ3TB5P"
   ],
   "keywords": [
     "isic003365",
@@ -335,7 +441,7 @@
     "limestone",
     "euboia",
     "licodia eubea",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

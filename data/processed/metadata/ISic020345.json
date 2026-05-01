@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "ceramic",
-    "ana": "#material.clay.fired",
+    "ana": "#material.inorganic.ceramic",
+    "type": "ceramic",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/131.html"
   },
   "condition": {
@@ -84,7 +88,9 @@
         "from": "line1",
         "to": "line1",
         "h": "8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "8",
+        "atMost": "8"
       }
     ]
   },
@@ -98,7 +104,8 @@
     {
       "_": "Segesta",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462487"
+      "ref": "https://pleiades.stoa.org/places/462487",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,6 +114,8 @@
       12.83649
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Segesta",
   "provenanceFound": {
     "_": "Found during the excavations (1974 and 1975) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro, 1.9km east of temple of Segesta.",
     "type": "found",
@@ -115,6 +124,10 @@
       12.84509
     ]
   },
+  "provenanceGeo": [
+    37.9424,
+    12.84509
+  ],
   "provenanceObserved": {
     "_": "Mignosa 2021-12-15",
     "type": "observed",
@@ -134,7 +147,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -173,7 +185,8 @@
       "desc": "Elymian"
     },
     "languages": [
-      "Ancient Greek"
+      "Ancient Greek",
+      "Elymian (possibly)"
     ]
   },
   "bibliographyEdition": {
@@ -186,28 +199,34 @@
         "date": "1977",
         "citedRange": "345",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QR2S9AJ9"
+          "target": "https://www.zotero.org/groups/382445/items/QR2S9AJ9"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002201",
           "target": "https://biblio.inscriptiones.org/epig10002201"
         },
+        "inscriptionDate": "1977",
         "title": "Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime",
-        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>"
+        "citation": "<span>Luciano Agostiniani, <i>Iscrizioni anelleniche di Sicilia. I. Le iscrizioni elime</i> (Firenze, 1977)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QR2S9AJ9",
+        "year": "1977"
       },
       {
         "author": "Tusa",
         "date": "1975",
         "citedRange": "44",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DPKBD88S"
+          "target": "https://www.zotero.org/groups/382445/items/DPKBD88S"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001532",
           "target": "https://biblio.inscriptiones.org/epig10001532"
         },
+        "inscriptionDate": "1975",
         "title": "Frammenti di ceramica con graffiti da Segesta",
-        "citation": "<span>Vincenzo Tusa, «Frammenti di ceramica con graffiti da Segesta», <i>Kokalos</i> 21 (1975): 214–25</span>"
+        "citation": "<span>Vincenzo Tusa, «Frammenti di ceramica con graffiti da Segesta», <i>Kokalos</i> 21 (1975): 214–25</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DPKBD88S",
+        "year": "1975"
       }
     ]
   },
@@ -219,14 +238,17 @@
         "date": "1909",
         "citedRange": "49-50",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4SCEIH8D"
+          "target": "https://www.zotero.org/groups/382445/items/4SCEIH8D"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002565",
           "target": "https://biblio.inscriptiones.org/epig10002565"
         },
+        "inscriptionDate": "1909",
         "title": "Merkantile Inschriften auf Attischen Vasen",
-        "citation": "<span>Rudolf Hackl, ‘Merkantile Inschriften auf Attischen Vasen’, in <i>Münchner archäologische studien. Dem andenken Adolf Furtwänglers gewidmet</i> (Munich, 1909), 1–106</span>"
+        "citation": "<span>Rudolf Hackl, ‘Merkantile Inschriften auf Attischen Vasen’, in <i>Münchner archäologische studien. Dem andenken Adolf Furtwänglers gewidmet</i> (Munich, 1909), 1–106</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4SCEIH8D",
+        "year": "1909"
       }
     ]
   },
@@ -251,19 +273,6 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -275,6 +284,7 @@
       "who": "#VM"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic020345_tiled.tif",
@@ -283,11 +293,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Segesta",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 8,
+      "atMost": 8
+    }
+  ],
   "publications": [
     "Agostiniani, 1977, IAS1",
     "Tusa, 1975, Frammenti di ceramica con graffiti da Segesta"
+  ],
+  "zotero": [
+    "QR2S9AJ9",
+    "DPKBD88S"
   ],
   "keywords": [
     "isic020345",
@@ -299,7 +317,7 @@
     "cup",
     "ceramic",
     "segesta",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

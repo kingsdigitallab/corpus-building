@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -85,19 +88,20 @@
   "date": {
     "_": "late 4th century early 3rd century BCE",
     "notBefore": -350,
-    "notAfter": -250,
-    "precision": "low"
+    "notAfter": -251
   },
   "places": [
     {
       "_": "Megara Hyblaea",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462307"
+      "ref": "http://pleiades.stoa.org/places/462307",
+      "region": "Sicilia"
     },
     {
       "_": "Megara Iblea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8063661"
+      "ref": "http://sws.geonames.org/8063661",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,12 +110,15 @@
       15.18274
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Megara Hyblaea",
   "provenanceFound": {
     "_": "Found in the south necropolis",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -129,7 +136,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
   "repository": {
@@ -169,18 +175,18 @@
         "n": "SEG",
         "citedRange": "26.1095",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
-        "author": "Vallet and Villard",
+        "author": "Vallet, Villard",
         "date": "1966",
         "citedRange": "65",
         "ptr": {
@@ -190,8 +196,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001526",
           "target": "https://biblio.inscriptiones.org/epig10001526"
         },
+        "inscriptionDate": "1966",
         "title": "Mégara Hyblaea",
-        "citation": "<span>G. Vallet et F. Villard, <i>Mégara Hyblaea</i>, vol. 4 (Paris, 1966)</span>"
+        "citation": "<span>G. Vallet et F. Villard, <i>Mégara Hyblaea</i>, vol. 4 (Paris, 1966)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CV66J2Z8",
+        "year": "1966"
       },
       {
         "author": "Manni Piraino",
@@ -204,15 +213,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001772",
           "target": "https://biblio.inscriptiones.org/epig10001772"
         },
+        "inscriptionDate": "1975",
         "title": "Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?",
-        "citation": "<span>M.T. Manni Piraino, «Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?», <i>Kokalos</i> 21 (1975): 121–53</span>"
+        "citation": "<span>M.T. Manni Piraino, «Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?», <i>Kokalos</i> 21 (1975): 121–53</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UUNP76BF",
+        "year": "1975"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -236,20 +248,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -260,16 +258,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
       }
     ],
     "change": {
-      "_": "Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition",
-      "when": "2021-02-23",
-      "who": "#VM"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2026-02-18",
+      "who": "#ZG"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic003697_tiled.tif",
@@ -278,12 +288,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Megara Hyblaea",
   "letterHeights": [],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "Vallet and Villard, 1966, Mégara Hyblaea",
+    "Vallet, Villard, 1966, Mégara Hyblaea",
     "Manni Piraino, 1975, Koiné alfabetica fra Siracusa, Megara Iblea e Selinunte?"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "CV66J2Z8",
+    "UUNP76BF"
   ],
   "keywords": [
     "isic003697",
@@ -296,7 +310,7 @@
     "limestone",
     "megara hyblaea",
     "megara iblea",
-    "italy",
+    "sicilia",
     "sicily",
     "megara hyblaea",
     "antiquarium di megara hyblaia",

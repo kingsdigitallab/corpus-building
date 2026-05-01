@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -81,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "27",
+        "atMost": "27"
       },
       {
         "type": "interlinear",
@@ -102,12 +107,14 @@
     {
       "_": "Messana",
       "ref": "http://pleiades.stoa.org/places/462538",
-      "type": "ancient"
+      "type": "ancient",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "ref": "http://sws.geonames.org/2524170",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +123,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Found in excavations of August 1984, designated tomb 4bis, in reuse of a later 'tomba a cassa', nr. 21, in isola 73 (via C. Battisti, Messina)",
     "type": "found",
@@ -126,6 +135,10 @@
       15.548299
     ]
   },
+  "provenanceGeo": [
+    38.181815,
+    15.548299
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -142,7 +155,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": "Soprintendenza stores",
@@ -164,34 +176,40 @@
         "date": "2017",
         "citedRange": "86 fig. 4 and 103 n. 10",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/NHILS9Q3"
+          "target": "https://www.zotero.org/groups/382445/items/NHILS9Q3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002109",
           "target": "https://biblio.inscriptiones.org/epig10002109"
         },
+        "inscriptionDate": "2017",
         "title": "Frammenti di architettura lapidea dall necropoli meridionale",
-        "citation": "<span>Rocco Burgio, «Frammenti di architettura lapidea dall necropoli meridionale», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di Gabriella Tigano (Palermo: Regione Siciliana, 2017), 85–104</span>"
+        "citation": "<span>Rocco Burgio, «Frammenti di architettura lapidea dall necropoli meridionale», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di Gabriella Tigano (Palermo: Regione Siciliana, 2017), 85–104</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NHILS9Q3",
+        "year": "2017"
       },
       {
         "author": "Arena",
         "date": "2021",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JAEY6YV3"
+          "target": "https://www.zotero.org/groups/382445/items/JAEY6YV3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002339",
           "target": "https://biblio.inscriptiones.org/epig10002339"
         },
+        "inscriptionDate": "2021",
         "title": "Epigrafe funeraria ellenistica inedita dalla necropoli meridionale di Messina",
-        "citation": "<span>Emiliano Arena, «Epigrafe funeraria ellenistica inedita dalla necropoli meridionale di Messina», <i>Epigraphica</i> 83, fasc. 1–2 (2021): 573–84</span>"
+        "citation": "<span>Emiliano Arena, «Epigrafe funeraria ellenistica inedita dalla necropoli meridionale di Messina», <i>Epigraphica</i> 83, fasc. 1–2 (2021): 573–84</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JAEY6YV3",
+        "year": "2021"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -210,27 +228,9 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -239,6 +239,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004384_tiled.tif",
@@ -247,11 +248,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 27,
+      "atMost": 27
+    }
+  ],
   "publications": [
     "Burgio, 2017, Frammenti di architettura lapidea dall necropoli meridionale",
     "Arena, 2021, Epigrafe funeraria ellenistica inedita dalla necropoli meridionale di Messina"
+  ],
+  "zotero": [
+    "NHILS9Q3",
+    "JAEY6YV3"
   ],
   "keywords": [
     "isic004384",
@@ -264,7 +273,7 @@
     "limestone",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "ancient greek",

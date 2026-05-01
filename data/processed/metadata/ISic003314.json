@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "volcanic",
-    "ana": "#material.stone.volcanic",
+    "ana": "#material.inorganic.stone.magmatic_rock.basalt",
+    "type": "stone.basalt",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": {
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "150",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "150",
+        "atMost": "150"
       },
       {
         "type": "interlinear",
@@ -94,19 +101,20 @@
   "date": {
     "_": "4th — 6th century CE",
     "notBefore": 301,
-    "notAfter": 600,
-    "precision": "low"
+    "notAfter": 600
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,11 +123,14 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded, but probably from Catania.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Observed by Stevenson in Antiquarium comunale (Museo dei Benedettini) and later by Korhonen in Magazzino del cortile, Museo Civico (from the Collezione dei Benedettini) (formerly sala VIII, 56).",
     "type": "observed",
@@ -136,7 +147,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -178,16 +188,20 @@
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "227",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
-      "C. Stevenson, Cod. Vat. lat. 10574, f.171r (c.1880)",
+      null,
       {
         "author": "Nicosia",
         "date": "1959-1960",
@@ -199,15 +213,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001724",
           "target": "https://biblio.inscriptiones.org/epig10001724"
         },
+        "inscriptionDate": "1959-1960",
         "title": "Un'epigrafe cristiana del territorio di Acate",
-        "citation": "<span>F. Nicosia, «Un’epigrafe cristiana del territorio di Acate», <i>Archivio Storico Siracusano</i> 5–6 (1960 1959): 125–28</span>"
+        "citation": "<span>F. Nicosia, «Un’epigrafe cristiana del territorio di Acate», <i>Archivio Storico Siracusano</i> 5–6 (1960 1959): 125–28</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4ED6KC6J",
+        "year": "1959"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -236,20 +253,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -260,8 +263,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -270,6 +274,7 @@
       "who": "#martaf"
     }
   },
+  "tmNumber": "645572",
   "facsimile": {
     "n": "screen",
     "url": "ISic003314_tiled.tif",
@@ -278,12 +283,19 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 150,
+      "atMost": 150
+    }
+  ],
   "publications": [
-    "IMusCatania",
-    null,
+    "Korhonen, 2004, IMusCatania",
     "Nicosia, 1959-1960, Un'epigrafe cristiana del territorio di Acate"
+  ],
+  "zotero": [
+    "2EUC82DH",
+    "4ED6KC6J"
   ],
   "keywords": [
     "isic003314",
@@ -296,7 +308,7 @@
     "volcanic",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

@@ -32,7 +32,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -80,19 +84,21 @@
   },
   "date": {
     "_": "Marcus Aurelius",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 200
   },
   "places": [
     {
       "_": "Gaulus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462213"
+      "ref": "http://pleiades.stoa.org/places/462213",
+      "region": "Melita"
     },
     {
       "_": "Gozo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2563049"
+      "ref": "http://sws.geonames.org/2563049",
+      "region": "Melita"
     }
   ],
   "geo": [
@@ -101,11 +107,14 @@
       14.24167
     ]
   ],
+  "country": "Melita",
+  "provenance": "Gaulus",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,7 +132,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Gozo",
   "repository": "",
@@ -140,31 +148,41 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7507 &\n                                p.994",
+            "_": "10.7507 and p.994",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2006.0518",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
@@ -176,10 +194,16 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
-        "author": "Christol and Pirino",
+        "author": "Christol, Pirino",
         "date": "2006",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/5NAZJMGT"
@@ -188,15 +212,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001367",
           "target": "https://biblio.inscriptiones.org/epig10001367"
         },
+        "inscriptionDate": "2006",
         "title": "Une famille de notables dans l'île de Gaulos (Gozo)",
-        "citation": "<span>Michel Christol et Elena Pirino, « Une famille de notables dans l’île de Gaulos (Gozo) », in <i>L’Africa Romana 16</i>, éd. par A. Akerraz et al., vol. 4, 4 vol. (Sassari: Carocci editore, 2006), 2599‑2626</span>"
+        "citation": "<span>Michel Christol et Elena Pirino, « Une famille de notables dans l’île de Gaulos (Gozo) », in <i>L’Africa Romana 16</i>, éd. par A. Akerraz et al., vol. 4, 4 vol. (Sassari: Carocci editore, 2006), 2599‑2626</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5NAZJMGT",
+        "year": "2006"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -220,27 +247,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       },
       {
         "_": "Alex Antoniou",
@@ -254,6 +263,7 @@
       "who": "AA"
     }
   },
+  "tmNumber": "285187",
   "facsimile": {
     "n": "screen",
     "url": "ISic003354_tiled.tif",
@@ -262,13 +272,18 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Gaulus",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    null,
-    "ILS",
-    "Christol and Pirino, 2006, Une famille de notables dans l'île de Gaulos (Gozo)"
+    "Mommsen, 1883, CIL",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Dessau, 1892-1916, ILS",
+    "Christol, Pirino, 2006, Une famille de notables dans l'île de Gaulos (Gozo)"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "R46KDTZX",
+    "XHMS9K6S",
+    "5NAZJMGT"
   ],
   "keywords": [
     "isic003354",
@@ -280,7 +295,7 @@
     "stone",
     "gaulus",
     "gozo",
-    "italy",
+    "melita",
     "sicily",
     "gozo",
     "latin",

@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "volcanic",
-    "ana": "#material.stone.volcanic",
+    "ana": "#material.inorganic.stone.magmatic_rock.basalt",
+    "type": "stone.basalt",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/28.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line2",
         "h": "120-130",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "120",
+        "atMost": "130"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line3",
         "to": "line4",
         "h": "90-110",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "90",
+        "atMost": "110"
       },
       {
         "type": "interlinear",
@@ -103,19 +112,20 @@
     "_": "Lettering and absence of filiation suggest a 2nd century CE date (Korhonen)",
     "notBefore": 101,
     "notAfter": 200,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -124,6 +134,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in the excavation of the foundations of the 'Cappellone' of the Chiesa di S.Agata la Vetera, in 1767, and transferred to the Biscari collection.",
     "type": "found",
@@ -135,6 +147,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.507077,
+    15.083852
+  ],
   "provenanceObserved": {
     "_": "Museum courtyard",
     "type": "observed",
@@ -167,7 +183,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -216,7 +231,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "author": "Castelli",
@@ -228,40 +248,56 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Ferrara",
         "date": "1829",
         "citedRange": "283 no.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/82T4IWDN"
+          "target": "https://www.zotero.org/groups/382445/items/82T4IWDN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002005",
           "target": "https://biblio.inscriptiones.org/epig10002005"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Storia di Catania sino alla fine del secolo XVIII",
+        "citation": "<span>F. Ferrara, <i>Storia di Catania sino alla fine del secolo XVIII</i> (Catania, 1829)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82T4IWDN",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7028",
+            "_": "7028",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "21",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -269,7 +305,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Libertini",
@@ -281,7 +322,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001867",
           "target": "https://biblio.inscriptiones.org/epig10001867"
-        }
+        },
+        "inscriptionDate": "1937",
+        "title": "Il Castello Ursino e le raccolte artistiche comunali di Catania",
+        "citation": "<span>Guido Libertini, <i>Il Castello Ursino e le raccolte artistiche comunali di Catania</i> (Zuccarello e Izzi, 1937), <a href=\"http://books.google.co.uk/books?id=lQL9ygAACAAJ\">http://books.google.co.uk/books?id=lQL9ygAACAAJ</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P7FP4UWI",
+        "year": "1937"
       },
       {
         "author": "Manganaro",
@@ -293,7 +339,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -305,10 +356,15 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
-        "author": "Mole Ventura",
+        "author": "Molè Ventura",
         "date": "1996",
         "citedRange": "184, 190",
         "ptr": {
@@ -317,14 +373,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001742",
           "target": "https://biblio.inscriptiones.org/epig10001742"
-        }
+        },
+        "inscriptionDate": "1996",
+        "title": "Catania in età imperiale",
+        "citation": "<span>Concetta Molè Ventura, «Catania in età imperiale», in <i>Catania Antica. Atti del Convegno della S.I.S.A.C. (Catania 23-24 maggio 1992)</i>, a c. di B. Gentile (Pisa, 1996), 175–222</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F9UFQEH6",
+        "year": "1996"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -348,20 +409,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
       },
@@ -371,8 +418,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -381,6 +429,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491519",
   "facsimile": {
     "n": "screen",
     "url": "ISic000312_tiled.tif",
@@ -389,18 +438,37 @@
     "desc": "Photo J. Prag, courtesy Museo Civico di Catania",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 120,
+      "atMost": 130
+    },
+    {
+      "atLeast": 90,
+      "atMost": 110
+    }
+  ],
   "publications": [
-    "Castelli, 1769",
-    "Castelli, 1784",
-    "Ferrara, 1829",
-    "CIL",
-    "IMusCatania",
-    "Libertini, 1937",
-    "Manganaro, 1988",
-    "Wilson, 1990",
-    "Mole Ventura, 1996"
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Ferrara, 1829, Storia di Catania sino alla fine del secolo XVIII",
+    "Mommsen, 1883, CIL",
+    "Korhonen, 2004, IMusCatania",
+    "Libertini, 1937, Il Castello Ursino e le raccolte artistiche comunali di Catania",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Molè Ventura, 1996, Catania in età imperiale"
+  ],
+  "zotero": [
+    "SPTB56H3",
+    "7PSFHSUH",
+    "82T4IWDN",
+    "GQN8UZSI",
+    "2EUC82DH",
+    "P7FP4UWI",
+    "RZSFKACR",
+    "VF9MMBI9",
+    "F9UFQEH6"
   ],
   "keywords": [
     "isic000312",
@@ -413,7 +481,7 @@
     "volcanic",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

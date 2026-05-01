@@ -1,7 +1,7 @@
 {
   "file": "ISic003595",
   "uri": "ISic003595",
-  "title": "I.Sicily inscription 003595",
+  "title": "Epitaph of Kloutoria",
   "status": {
     "_": "draft"
   },
@@ -29,6 +29,7 @@
     "ana": "#function.funerary",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
   },
+  "support": "A marble plaque recomposed of 6 fragments",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -36,16 +37,22 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
   "dimensions": [
     {
+      "_": "66",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "30.5",
       "unit": "cm",
       "dimension": "width"
     },
@@ -65,13 +72,27 @@
     }
   },
   "handNote": {
+    "lettering": "Rhomboid letters",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "40",
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2-7",
+        "from": "line2",
+        "to": "line7",
+        "h": "35",
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -86,18 +107,20 @@
     "_": "2nd — 3rd century CE",
     "notBefore": 101,
     "notAfter": 300,
-    "precision": "low"
+    "evidence": "archaeological-context"
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,35 +129,26 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Hypogeum 1, Villa Landolina",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "Depositi",
+    "_": "None",
     "type": "observed",
+    "subtype": "autopsied",
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic003595_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Siracusa",
-  "repository": {
-    "_": "Catacomba di San Giovanni",
-    "role": "museum"
-  },
+  "repository": "",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -147,18 +161,36 @@
     "bibl": [
       {
         "type": "bulletin",
+        "n": "BE",
+        "citedRange": "1962.0391",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001282",
+          "target": "https://biblio.inscriptiones.org/epig10001282"
+        },
+        "title": "Bulletin épigraphique",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
+      },
+      {
+        "type": "bulletin",
         "n": "SEG",
         "citedRange": "56.1105",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Agnello",
@@ -171,8 +203,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002206",
           "target": "https://biblio.inscriptiones.org/epig10002206"
         },
+        "inscriptionDate": "1960",
         "title": "Iscrizioni cemeteriali inedite di Siracusa",
-        "citation": "<span>S.L. Agnello, «Iscrizioni cemeteriali inedite di Siracusa», <i>Rivista di Archeologia Cristiana</i> 36 (1960): 19–42</span>"
+        "citation": "<span>S.L. Agnello, «Iscrizioni cemeteriali inedite di Siracusa», <i>Rivista di Archeologia Cristiana</i> 36 (1960): 19–42</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5I5RNUU8",
+        "year": "1960"
       },
       {
         "author": "Sgarlata",
@@ -185,8 +220,25 @@
           "_": "https://biblio.inscriptiones.org/epig10001583",
           "target": "https://biblio.inscriptiones.org/epig10001583"
         },
-        "title": "Morti lontano dalla patria: la documentazione epigrafica delle catacombe siracusane",
-        "citation": "<span>M. Sgarlata, «Morti lontano dalla patria: la documentazione epigrafica delle catacombe siracusane», <i>L’Africa Romana</i> 16 (2006): 1185–1201</span>"
+        "inscriptionDate": "2006",
+        "year": ""
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "84",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
@@ -200,12 +252,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/CVJICVCM"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002008",
-          "target": "https://biblio.inscriptiones.org/epig10002008"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/CVJICVCM",
+        "inscriptionDate": "1983",
         "title": "Notes d'épigraphie chrétienne (VI)",
-        "citation": "<span>Denis Feissel, « Notes d’épigraphie chrétienne (VI) », <i>Bulletin de Correspondance Hellénique</i> 107 (1983): 601‑18</span>"
+        "citation": "<span>Denis Feissel, « Notes d’épigraphie chrétienne (VI) », <i>Bulletin de Correspondance Hellénique</i> 107 (1983): 601‑18</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CVJICVCM",
+        "year": "1983"
       }
     ]
   },
@@ -230,20 +282,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -254,34 +292,50 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
       }
     ],
     "change": {
-      "_": "Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition",
-      "when": "2021-01-22",
-      "who": "#VM"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic003595_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "tmNumber": "645674",
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 40
+    },
+    {
+      "atLeast": 35,
+      "atMost": 35
+    }
+  ],
   "publications": [
+    "Bulletin épigraphique, 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Agnello, 1960, Iscrizioni cemeteriali inedite di Siracusa",
-    "Sgarlata, 2006, Morti lontano dalla patria: la documentazione epigrafica delle catacombe siracusane"
+    "Sgarlata, 2006",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "77P5MNIR",
+    "F2GG87EQ",
+    "5I5RNUU8",
+    "Q96B6VX3",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic003595",
-    "i.sicily inscription 003595",
+    "epitaph of kloutoria",
     {
       "_": "draft"
     },
@@ -290,10 +344,9 @@
     "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
-    "catacomba di san giovanni",
     "ancient greek",
     "grc"
   ]

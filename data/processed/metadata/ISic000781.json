@@ -38,8 +38,18 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble (white)",
-    "ana": "#material.stone.marble",
+    "_": "Coarse-grained, banded, white marble, likely Aphrodisian, Parian-2, Parian-3, Parian-4, Proconnesian, Thasian-3. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Proconnesian",
+      "Thasian-3"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -71,7 +81,7 @@
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
       "damage": {
-        "ana": "#text-condition.legible"
+        "ana": "#text_condition.legible"
       }
     }
   },
@@ -84,7 +94,9 @@
         "from": "line1",
         "to": "line1",
         "h": "7-15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "7",
+        "atMost": "15"
       },
       {
         "type": "letterHeight",
@@ -92,7 +104,9 @@
         "from": "line2",
         "to": "line15",
         "h": "9-19",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "9",
+        "atMost": "19"
       },
       {
         "type": "interlinear",
@@ -114,12 +128,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -128,6 +144,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in the vicinity of the Chiesa S. Teresa, on via Antonino di Sangiuliano, during works for installation of telecoms in May 1928.",
     "type": "found",
@@ -138,6 +156,10 @@
       15.088801
     ]
   },
+  "provenanceGeo": [
+    37.505019,
+    15.088801
+  ],
   "provenanceObserved": {
     "_": "Display, Voci di pietra no.32",
     "type": "observed",
@@ -178,7 +200,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -224,46 +245,60 @@
         "n": "AE",
         "citedRange": "1984.0439",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "55.1081",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "46.1243",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "228",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
@@ -271,7 +306,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000028",
           "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        },
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Libertini",
@@ -284,8 +324,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001873",
           "target": "https://biblio.inscriptiones.org/epig10001873"
         },
+        "inscriptionDate": "1929",
         "title": "Epigrafe giudaico-latina rinvenuta in Catania",
-        "citation": "<span>Guido Libertini, «Epigrafe giudaico-latina rinvenuta in Catania», <i>Atti della Accademia delle Scienze di Torino, Classe di Scienze morali, storiche e filologiche</i> 64 (1929): 185–95</span>"
+        "citation": "<span>Guido Libertini, «Epigrafe giudaico-latina rinvenuta in Catania», <i>Atti della Accademia delle Scienze di Torino, Classe di Scienze morali, storiche e filologiche</i> 64 (1929): 185–95</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7I7M6C5",
+        "year": "1929"
       },
       {
         "type": "corpus",
@@ -299,8 +342,11 @@
           "target": "https://biblio.inscriptiones.org/epig10000582"
         },
         "title": "Corpus Inscriptionum Iudaicarum: recueil des inscriptions juives qui vont du IIIe siècle avant Jésus-Christ au VIIe siècle de notre ère",
+        "author": "Frey",
         "date": "1936-1952",
-        "citation": "<span>J.-B. Frey, <i>Corpus Inscriptionum Iudaicarum: recueil des inscriptions juives qui vont du IIIe siècle avant Jésus-Christ au VIIe siècle de notre ère</i>, 2 vol. (Vatican City: Pontificio istituto di archeologia cristiana, 1936)</span>"
+        "citation": "<span>J.-B. Frey, <i>Corpus Inscriptionum Iudaicarum: recueil des inscriptions juives qui vont du IIIe siècle avant Jésus-Christ au VIIe siècle de notre ère</i>, 2 vol. (Vatican City: Pontificio istituto di archeologia cristiana, 1936)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ACIZXQF2",
+        "year": "1936"
       },
       {
         "author": "Wilson",
@@ -312,7 +358,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Manganaro",
@@ -324,7 +375,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       },
       {
         "author": "Noy",
@@ -337,8 +393,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000166",
           "target": "https://biblio.inscriptiones.org/epig10000166"
         },
+        "inscriptionDate": "1993",
         "title": "Jewish inscriptions of Western Europe",
-        "citation": "<span>D. Noy, <i>Jewish Inscriptions of Western Europe</i>, 2 vols (Cambridge: Cambridge University Press, 1993)</span>"
+        "citation": "<span>D. Noy, <i>Jewish Inscriptions of Western Europe</i>, 2 vols (Cambridge: Cambridge University Press, 1993)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IBA4JMAN",
+        "year": "1993"
       },
       {
         "author": "Grüll",
@@ -350,8 +409,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001932",
           "target": "https://biblio.inscriptiones.org/epig10001932"
         },
+        "inscriptionDate": "2000",
         "title": "\" Conquerors, Patriarchs and the Law of the Lord\". Interpretation of a late antique Jewish epitaph",
-        "citation": "<span>T. Grüll, ‘“ Conquerors, Patriarchs and the Law of the Lord”. Interpretation of a Late Antique Jewish Epitaph’, <i>Arctos: Acta Philologica Fennica</i>, no. 34 (2000): 23–38</span>"
+        "citation": "<span>T. Grüll, ‘“ Conquerors, Patriarchs and the Law of the Lord”. Interpretation of a Late Antique Jewish Epitaph’, <i>Arctos: Acta Philologica Fennica</i>, no. 34 (2000): 23–38</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZCRPNPUD",
+        "year": "2000"
       },
       {
         "author": "Manganaro",
@@ -364,29 +426,35 @@
           "_": "https://biblio.inscriptiones.org/epig10003134",
           "target": "https://biblio.inscriptiones.org/epig10003134"
         },
+        "inscriptionDate": "2004-2005",
         "title": "Giudei grecanici nella Sicilia di eta imperale (documentazione epigrafica e figurativa)",
-        "citation": "<span>Giacomo Manganaro, «Giudei grecanici nella Sicilia di eta imperale (documentazione epigrafica e figurativa)», <i>Minima Epigraphica et Papyrologica</i> 9–10 (2005 2004): 357–72</span>"
+        "citation": "<span>Giacomo Manganaro, «Giudei grecanici nella Sicilia di eta imperale (documentazione epigrafica e figurativa)», <i>Minima Epigraphica et Papyrologica</i> 9–10 (2005 2004): 357–72</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BMHLMJAM",
+        "year": "2004"
       },
       {
         "author": "Giuffrida",
         "date": "2020",
         "citedRange": "75-80",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/KISJUYBW"
+          "target": "https://www.zotero.org/groups/382445/items/KISJUYBW"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002323",
           "target": "https://biblio.inscriptiones.org/epig10002323"
         },
+        "inscriptionDate": "2020",
         "title": "Aurelius Samohil between ius and identity",
-        "citation": "<span>Claudia Giuffrida, ‘Aurelius Samohil between Ius and Identity’, <i>Codex. Giornale Romanistico Di Studi Giuridici Politici e Sociali</i> 1 (2020): 59–88</span>"
+        "citation": "<span>Claudia Giuffrida, ‘Aurelius Samohil between Ius and Identity’, <i>Codex. Giornale Romanistico Di Studi Giuridici Politici e Sociali</i> 1 (2020): 59–88</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/KISJUYBW",
+        "year": "2020"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -410,20 +478,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Serena Agodi",
         "xml:id": "SA"
       },
@@ -433,8 +487,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -443,6 +498,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "175684",
   "facsimile": {
     "n": "screen",
     "url": "ISic000781_tiled.tif",
@@ -451,21 +507,43 @@
     "desc": "Photo by students of Liceo Lazzaro, 2017-05-11",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 7,
+      "atMost": 15
+    },
+    {
+      "atLeast": 9,
+      "atMost": 19
+    }
+  ],
   "publications": [
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "IMusCatania",
+    "Korhonen, 2004, IMusCatania",
     "Libertini, 1929, Epigrafe giudaico-latina rinvenuta in Catania",
-    "CIJ, 1936-1952",
-    "Wilson, 1990",
-    "Manganaro, 1993",
+    "Frey, 1936-1952, CIJ",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
     "Noy, 1993, Jewish inscriptions of Western Europe",
     "Grüll, 2000, \" Conquerors, Patriarchs and the Law of the Lord\". Interpretation of a late antique Jewish epitaph",
     "Manganaro, 2004-2005, Giudei grecanici nella Sicilia di eta imperale (documentazione epigrafica e figurativa)",
     "Giuffrida, 2020, Aurelius Samohil between ius and identity"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "2EUC82DH",
+    "Q7I7M6C5",
+    "ACIZXQF2",
+    "VF9MMBI9",
+    "JBI7CI5R",
+    "IBA4JMAN",
+    "ZCRPNPUD",
+    "BMHLMJAM",
+    "KISJUYBW"
   ],
   "keywords": [
     "isic000781",
@@ -475,10 +553,10 @@
     },
     "funerary",
     "plaque",
-    "marble (white)",
+    "coarse-grained, banded, white marble, likely aphrodisian, parian-2, parian-3, parian-4, proconnesian, thasian-3. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

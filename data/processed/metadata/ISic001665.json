@@ -36,8 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcarenite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -77,7 +79,9 @@
         "from": "line1",
         "to": "line1",
         "h": "50-60 (but omicron sigma 40-45)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -85,7 +89,9 @@
         "from": "line2",
         "to": "line2",
         "h": "62-66",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "62",
+        "atMost": "66"
       },
       {
         "type": "interlinear",
@@ -106,12 +112,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -120,6 +128,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in 1930 (acquired 01.06.1930) on the south side of Predio di Spagna (under the modern hospital), possibly in secondary deposition",
     "type": "found",
@@ -130,6 +140,10 @@
       15.283175
     ]
   },
+  "provenanceGeo": [
+    37.073341,
+    15.283175
+  ],
   "provenanceObserved": {
     "_": "2015-01-16, Prag",
     "type": "observed",
@@ -155,7 +169,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -205,8 +218,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002213",
           "target": "https://biblio.inscriptiones.org/epig10002213"
         },
+        "inscriptionDate": "1950",
         "title": "Christiana-Byzantina Siciliae II",
-        "citation": "<span>S.L. Agnello, ‘Christiana-Byzantina Siciliae II’, <i>Nuovo Didaskaleion</i> 4 (1951 1950): 55–66</span>"
+        "citation": "<span>S.L. Agnello, ‘Christiana-Byzantina Siciliae II’, <i>Nuovo Didaskaleion</i> 4 (1951 1950): 55–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NM9R48KX",
+        "year": "1950"
       },
       {
         "author": "Manganaro",
@@ -218,14 +234,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -244,35 +265,38 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag made minor edits, added image",
-      "when": "2023-05-23",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-24",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001665_tiled.tif",
@@ -281,11 +305,23 @@
     "desc": "Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 60
+    },
+    {
+      "atLeast": 62,
+      "atMost": 66
+    }
+  ],
   "publications": [
     "Agnello, 1950-1951, Christiana-Byzantina Siciliae II",
-    "Manganaro, 1988"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "NM9R48KX",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic001665",
@@ -298,7 +334,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

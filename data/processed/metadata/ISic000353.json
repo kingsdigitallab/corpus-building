@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -97,12 +101,14 @@
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,6 +117,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "From the Convento del Carmine, reported by Alessi as one of several find in the years preceding 1833",
     "type": "found",
@@ -122,6 +130,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.509637,
+    15.088925
+  ],
   "provenanceObserved": null,
   "provenanceLost": {
     "_": "There is no evidence that the stone has been seen/recorded since the time of Alessi and it appears to be lost.",
@@ -139,10 +151,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -156,51 +167,65 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7069",
+            "_": "7069",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Alessi",
         "date": "1833",
         "citedRange": "230",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SRZQ4DSI"
+          "target": "https://www.zotero.org/groups/382445/items/SRZQ4DSI"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002538",
           "target": "https://biblio.inscriptiones.org/epig10002538"
-        }
+        },
+        "inscriptionDate": "1833",
+        "title": "III. Giuseppe Alessi al chiarissimo segretario dell'instituto archeologico, salute.",
+        "citation": "<span>Giuseppe Alessi, «III. Giuseppe Alessi al chiarissimo segretario dell’instituto archeologico, salute.», <i>Giornale di scienze, lettere e arti per la Sicilia</i> 42, fasc. 126 (1833): 225–35, <a href=\"http://digitale.bnc.roma.sbn.it/tecadigitale/giornale/UFI0049392/1833/T.42/00000257\">http://digitale.bnc.roma.sbn.it/tecadigitale/giornale/UFI0049392/1833/T.42/00000257</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SRZQ4DSI",
+        "year": "1833"
       },
       {
         "author": "Alessi",
         "date": "1833",
         "citedRange": "174",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F986DASI"
+          "target": "https://www.zotero.org/groups/382445/items/F986DASI"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002540",
           "target": "https://biblio.inscriptiones.org/epig10002540"
-        }
+        },
+        "inscriptionDate": "1833",
+        "title": "Scavi di Catania",
+        "citation": "<span>Giuseppe Alessi, «Scavi di Catania», <i>Bullettino dell’Instituto di Corrispondenza Archeologica</i>, fasc. 12 (1833): 172–76</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F986DASI",
+        "year": "1833"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -224,27 +249,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -253,6 +260,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491562",
   "facsimile": {
     "n": "screen",
     "url": "ISic000353_tiled.tif",
@@ -261,12 +269,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
   "letterHeights": [],
   "publications": [
-    "CIL",
-    "Alessi, 1833",
-    "Alessi, 1833"
+    "Mommsen, 1883, CIL",
+    "Alessi, 1833, III. Giuseppe Alessi al chiarissimo segretario dell'instituto archeologico, salute.",
+    "Alessi, 1833, Scavi di Catania"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "SRZQ4DSI",
+    "F986DASI"
   ],
   "keywords": [
     "isic000353",
@@ -279,7 +291,7 @@
     "stone",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "latin",

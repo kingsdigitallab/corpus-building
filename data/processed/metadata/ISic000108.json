@@ -39,8 +39,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.limestone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -80,7 +82,9 @@
         "from": "line1",
         "to": "line1",
         "h": "53-54",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "54"
       },
       {
         "type": "letterHeight",
@@ -88,7 +92,9 @@
         "from": "line2",
         "to": "line2",
         "h": "51-56",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "51",
+        "atMost": "56"
       },
       {
         "type": "letterHeight",
@@ -96,7 +102,9 @@
         "from": "line3",
         "to": "line3",
         "h": "53-54",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "54"
       },
       {
         "type": "letterHeight",
@@ -104,7 +112,9 @@
         "from": "line4",
         "to": "line4",
         "h": "47-48",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "47",
+        "atMost": "48"
       },
       {
         "type": "letterHeight",
@@ -112,7 +122,9 @@
         "from": "line5",
         "to": "line5",
         "h": "39-45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "39",
+        "atMost": "45"
       },
       {
         "type": "letterHeight",
@@ -120,7 +132,9 @@
         "from": "line6",
         "to": "line6",
         "h": "41-42",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "41",
+        "atMost": "42"
       },
       {
         "type": "letterHeight",
@@ -128,7 +142,9 @@
         "from": "line7",
         "to": "line7",
         "h": "48-53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "48",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -141,19 +157,21 @@
   },
   "date": {
     "_": "Bivona: 'L'iscrizione potrebbe porsi al II sec.d.C.'",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 200
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -162,6 +180,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found during the excavations carried out on 4 and 5 August 1982 by O. Belvedere of the University of Palermo. Transported to the Museo Civico Baldassare Romano ",
     "type": "found",
@@ -172,6 +192,10 @@
       13.696436
     ]
   },
+  "provenanceGeo": [
+    37.987072,
+    13.696436
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2022-07-08. On display in the courtyard, near the fountain, of Museo Civico Baldassare Romano",
     "type": "observed",
@@ -215,7 +239,6 @@
       "surfaceType": "base"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -255,16 +278,24 @@
         "n": "AE",
         "citedRange": "1994.0773",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "26",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -272,7 +303,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "author": "Belvedere",
@@ -284,14 +320,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002161",
           "target": "https://biblio.inscriptiones.org/epig10002161"
-        }
+        },
+        "inscriptionDate": "1982",
+        "title": "Termini Imerese. Saggi di scavo in Piazza Vittorio Emanuele",
+        "citation": "<span>Oscar Belvedere, «Termini Imerese. Saggi di scavo in Piazza Vittorio Emanuele», <i>Sicilia Archeologica</i> 48 (1982): 37–44</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TA5G6HWM",
+        "year": "1982"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -315,20 +356,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -339,21 +366,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "edition on basis of autopsy and photographs",
-      "when": "2023-08-30",
-      "who": "#AA"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285029",
   "facsimile": {
     "n": "screen",
     "url": "ISic000108_tiled.tif",
@@ -362,12 +396,45 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-08",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 53,
+      "atMost": 54
+    },
+    {
+      "atLeast": 51,
+      "atMost": 56
+    },
+    {
+      "atLeast": 53,
+      "atMost": 54
+    },
+    {
+      "atLeast": 47,
+      "atMost": 48
+    },
+    {
+      "atLeast": 39,
+      "atMost": 45
+    },
+    {
+      "atLeast": 41,
+      "atMost": 42
+    },
+    {
+      "atLeast": 48,
+      "atMost": 53
+    }
+  ],
   "publications": [
-    null,
-    "ILMusTermini",
-    "Belvedere, 1982"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Bivona, 1994, ILMusTermini",
+    "Belvedere, 1982, Termini Imerese. Saggi di scavo in Piazza Vittorio Emanuele"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "JCV85C79",
+    "TA5G6HWM"
   ],
   "keywords": [
     "isic000108",
@@ -380,7 +447,7 @@
     "limestone",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

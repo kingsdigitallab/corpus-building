@@ -37,7 +37,10 @@
   },
   "material": {
     "_": "tuff",
-    "ana": "#material.stone.tuff",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/30.html"
   },
   "condition": {
@@ -81,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "250",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "250",
+        "atMost": "250"
       },
       {
         "type": "interlinear",
@@ -96,19 +101,20 @@
   "date": {
     "_": "Pre 4th century BCE (?)",
     "notBefore": -600,
-    "notAfter": -400,
-    "precision": "low"
+    "notAfter": -401
   },
   "places": [
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462489"
+      "ref": "http://pleiades.stoa.org/places/462489",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523164"
+      "ref": "http://sws.geonames.org/2523164",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -117,12 +123,15 @@
       12.82522
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": {
     "_": "From the northern part of the area of Temple C (from outside the temple), probably re-used in later building work",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": null,
   "provenanceLost": {
     "_": "The stone has not been seen in recent times and is presumed lost (so already IFPCO)",
@@ -131,7 +140,6 @@
     "geo": null
   },
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -169,6 +177,8 @@
       {
         "type": "corpus",
         "n": "IFPCO",
+        "author": "Amadasi Guzzo",
+        "date": "1967",
         "citedRange": "Sic.Pun.08",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q6R2U5KS"
@@ -176,7 +186,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002195",
           "target": "https://biblio.inscriptiones.org/epig10002195"
-        }
+        },
+        "inscriptionDate": "1967",
+        "title": "Le iscrizioni fenicie e puniche delle colonie in Occidente",
+        "citation": "<span>Maria Giulia Amadasi Guzzo, <i>Le iscrizioni fenicie e puniche delle colonie in Occidente</i> (Rome: Istituto di studi del vicino Oriente, 1967)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q6R2U5KS",
+        "year": "1967"
       },
       {
         "author": "Garbini",
@@ -188,29 +203,35 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001965",
           "target": "https://biblio.inscriptiones.org/epig10001965"
-        }
+        },
+        "inscriptionDate": "1967",
+        "title": "Catalogo delle iscrizioni fenicie conservate nel Museo Archeologico Nazionale di Palermo",
+        "citation": "<span>G Garbini, «Catalogo delle iscrizioni fenicie conservate nel Museo Archeologico Nazionale di Palermo», <i>Kokalos</i> 13 (1967): 66–72</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ES8GGF2J",
+        "year": "1967"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Patricolo and Salinas",
-        "title": "NSA",
-        "date": "1888",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "602-603",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1888",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -234,27 +255,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -263,12 +266,22 @@
       "who": "#JP"
     }
   },
-  "provenance": "Selinus",
-  "letterHeights": [],
+  "tmNumber": "645011",
+  "letterHeights": [
+    {
+      "atLeast": 250,
+      "atMost": 250
+    }
+  ],
   "publications": [
-    "IFPCO",
-    "Garbini, 1967",
-    "Patricolo and Salinas, 1888, NSA"
+    "Amadasi Guzzo, 1967, IFPCO",
+    "Garbini, 1967, Catalogo delle iscrizioni fenicie conservate nel Museo Archeologico Nazionale di Palermo",
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "Q6R2U5KS",
+    "ES8GGF2J",
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic001510",
@@ -281,7 +294,7 @@
     "tuff",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

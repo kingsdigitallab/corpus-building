@@ -40,7 +40,12 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -85,7 +90,9 @@
         "from": "line1",
         "to": "line1",
         "h": "33",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "33",
+        "atMost": "33"
       },
       {
         "type": "letterHeight",
@@ -93,7 +100,9 @@
         "from": "line2",
         "to": "line2",
         "h": "28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "28",
+        "atMost": "28"
       },
       {
         "type": "letterHeight",
@@ -101,7 +110,9 @@
         "from": "line3",
         "to": "line9",
         "h": "11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "11"
       },
       {
         "type": "interlinear",
@@ -109,7 +120,9 @@
         "from": "line1",
         "to": "line2",
         "h": "13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "13",
+        "atMost": "13"
       },
       {
         "type": "interlinear",
@@ -117,7 +130,9 @@
         "from": "line2",
         "to": "line3",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       },
       {
         "type": "interlinear",
@@ -125,7 +140,9 @@
         "from": "line3",
         "to": "line9",
         "h": "6",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "6",
+        "atMost": "6"
       }
     ]
   },
@@ -139,12 +156,14 @@
     {
       "_": "Eryx",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462201"
+      "ref": "http://pleiades.stoa.org/places/462201",
+      "region": "Sicilia"
     },
     {
       "_": "Erice",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524815"
+      "ref": "http://sws.geonames.org/2524815",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -153,6 +172,8 @@
       12.58778
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Eryx",
   "provenanceFound": {
     "_": "Eryx, discovered under the ruins of the temple of Venus Erycina at the end of the 18th century according to Hager (1799, 10). The now lost fragment would have been found in the temple too. It was discovered in 1616 according to Cordici.",
     "type": "found",
@@ -164,6 +185,10 @@
       12.592056
     ]
   },
+  "provenanceGeo": [
+    38.035247,
+    12.592056
+  ],
   "provenanceObserved": {
     "_": "Vacanti 2021-08-20",
     "type": "observed",
@@ -223,7 +248,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Trapani",
   "repository": {
@@ -267,14 +291,17 @@
         "date": "2013",
         "citedRange": "461-470",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/Z4CI9KB8"
+          "target": "https://www.zotero.org/groups/382445/items/Z4CI9KB8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002216",
           "target": "https://biblio.inscriptiones.org/epig10002216"
         },
+        "inscriptionDate": "2013",
         "title": "Mommsen, Bardt, Hernandez di Carrera e l’iscrizione degli Apronii di Erice (CIL X, 7257)",
-        "citation": "<span>Francesco Muscolino, «Mommsen, Bardt, Hernandez di Carrera e l’iscrizione degli Apronii di Erice (CIL X, 7257)», <i>Epigraphica</i> 85, fasc. 1–2 (2013): 461–70</span>"
+        "citation": "<span>Francesco Muscolino, «Mommsen, Bardt, Hernandez di Carrera e l’iscrizione degli Apronii di Erice (CIL X, 7257)», <i>Epigraphica</i> 85, fasc. 1–2 (2013): 461–70</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Z4CI9KB8",
+        "year": "2013"
       },
       {
         "author": "Oliveri",
@@ -287,8 +314,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001723",
           "target": "https://biblio.inscriptiones.org/epig10001723"
         },
+        "inscriptionDate": "2009",
         "title": "Le iscrizioni latine",
-        "citation": "<span>F. Oliveri, «Le iscrizioni latine», in <i>Il museo regionale «A. Pepoli» di Trapani. Le collezioni archeologiche</i>, a c. di M.L. Famà (Bari: Edipuglia, 2009), 385–96</span>"
+        "citation": "<span>F. Oliveri, «Le iscrizioni latine», in <i>Il museo regionale «A. Pepoli» di Trapani. Le collezioni archeologiche</i>, a c. di M.L. Famà (Bari: Edipuglia, 2009), 385–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/539T7KIS",
+        "year": "2009"
       },
       {
         "author": "Manganaro",
@@ -301,8 +331,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001833",
           "target": "https://biblio.inscriptiones.org/epig10001833"
         },
+        "inscriptionDate": "1987",
         "title": "Tacfarinas e la Sicilia (ovvero L. Apronius e il santuario ericino",
-        "citation": "<span>Giacomo Manganaro, «Tacfarinas e la Sicilia (ovvero L. Apronius e il santuario ericino», in <i>L’Africa Romana. Atti del IV convegno di studio, Sassari, 12-14 dicembre 1986</i>, a c. di A. Mastino, vol. 2, 2 voll. (Sassari, 1987), 581–85</span>"
+        "citation": "<span>Giacomo Manganaro, «Tacfarinas e la Sicilia (ovvero L. Apronius e il santuario ericino», in <i>L’Africa Romana. Atti del IV convegno di studio, Sassari, 12-14 dicembre 1986</i>, a c. di A. Mastino, vol. 2, 2 voll. (Sassari, 1987), 581–85</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RVZG5HIX",
+        "year": "1987"
       },
       {
         "type": "corpus",
@@ -314,7 +347,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "type": "corpus",
@@ -326,60 +365,75 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MDD6P7SH"
+          "target": "https://www.zotero.org/groups/382445/items/MDD6P7SH"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002424",
           "target": "https://biblio.inscriptiones.org/epig10002424"
         },
         "title": "Carmina Latina Epigraphica",
+        "author": "Bücheler",
         "date": "1844-1897",
-        "citation": "<span>F. Bücheler, <i>Carmina Latina Epigraphica</i>, 2 vols (Lipsiae: Teubneri, 1844)</span>"
+        "citation": "<span>F. Bücheler, <i>Carmina Latina Epigraphica</i>, 2 vols (Lipsiae: Teubneri, 1844)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MDD6P7SH",
+        "year": "1844"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7257",
+            "_": "7257",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650782"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "bulletin",
         "n": "EE",
-        "author": "Mommsen",
-        "date": "1875",
+        "author": "Henzen, Zangemeister",
+        "date": "1872-1913",
         "citedRange": "264-269",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/PU8UDAF3"
+          "target": "https://www.zotero.org/groups/382445/items/PU8UDAF3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002649",
           "target": "https://biblio.inscriptiones.org/epig10002649"
-        }
+        },
+        "inscriptionDate": "1875",
+        "title": "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+        "citation": "<span>W. Henzen and K. F. W. Zangemeister, <i>Ephemeris Epigraphica. Corporis Inscriptionum Latinarum Supplementum, Edita Iussu Instituti Archaeologici Romani</i>, 9 vols (Berlin: G. Reimerum, 1872)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PU8UDAF3",
+        "year": "1872"
       },
       {
         "author": "Meyer",
         "date": "1835",
         "citedRange": "167, no. 1463",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/8VMQZV66"
+          "target": "https://www.zotero.org/groups/382445/items/8VMQZV66"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002423",
           "target": "https://biblio.inscriptiones.org/epig10002423"
         },
+        "inscriptionDate": "1835",
         "title": "Anthologia veterum Latinorum epigrammatum et poëmatum",
-        "citation": "<span>H. Meyer, <i>Anthologia veterum Latinorum epigrammatum et poëmatum</i>, 2 vols (Leipzig, 1835)</span>"
+        "citation": "<span>H. Meyer, <i>Anthologia veterum Latinorum epigrammatum et poëmatum</i>, 2 vols (Leipzig, 1835)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8VMQZV66",
+        "year": "1835"
       },
       {
         "author": "Castelli",
@@ -391,12 +445,17 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7PSFHSUH"
+          "target": "https://www.zotero.org/groups/382445/items/7PSFHSUH"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Castelli",
@@ -408,111 +467,132 @@
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SPTB56H3"
+          "target": "https://www.zotero.org/groups/382445/items/SPTB56H3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
-        "author": "Burmann",
+        "author": "Burmann iunior",
         "date": "1759-1773",
         "citedRange": "vol. 4, 25, no. 28",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/TPGCXHU7"
+          "target": "https://www.zotero.org/groups/382445/items/TPGCXHU7"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002442",
           "target": "https://biblio.inscriptiones.org/epig10002442"
         },
+        "inscriptionDate": "1759-1773",
         "title": "Anthologia veterum Latinorum epigrammatum et poëmatum, sive catalecta poëtarum Latinorum in VI libros digesta: ex marmoribus et monumentis inscriptionum vetustis, & codicibus mss. eruta",
-        "citation": "<span>P. Burmann iunior, <i>Anthologia veterum Latinorum epigrammatum et poëmatum, sive catalecta poëtarum Latinorum in VI libros digesta: ex marmoribus et monumentis inscriptionum vetustis, &#38; codicibus mss. eruta</i>, 6 vols (Amsterdam, 1759)</span>"
+        "citation": "<span>P. Burmann iunior, <i>Anthologia veterum Latinorum epigrammatum et poëmatum, sive catalecta poëtarum Latinorum in VI libros digesta: ex marmoribus et monumentis inscriptionum vetustis, &#38; codicibus mss. eruta</i>, 6 vols (Amsterdam, 1759)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TPGCXHU7",
+        "year": "1759"
       },
       {
         "author": "Muratori",
         "date": "1740",
         "citedRange": "762, no. 3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/9S5VIRWZ"
+          "target": "https://www.zotero.org/groups/382445/items/9S5VIRWZ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001395",
           "target": "https://biblio.inscriptiones.org/epig10001395"
         },
+        "inscriptionDate": "1740",
         "title": "Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus",
-        "citation": "<span>Ludovico Antonio Muratori, <i>Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus</i>, vol. 2 (Mediolani: ex aedibus Palatinis, 1740), <a href=\"http://arachne.uni-koeln.de/books/Muratori1740Vol2\">http://arachne.uni-koeln.de/books/Muratori1740Vol2</a></span>"
+        "citation": "<span>Ludovico Antonio Muratori, <i>Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus</i>, vol. 2 (Mediolani: ex aedibus Palatinis, 1740), <a href=\"http://arachne.uni-koeln.de/books/Muratori1740Vol2\">http://arachne.uni-koeln.de/books/Muratori1740Vol2</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9S5VIRWZ",
+        "year": "1740"
       },
       {
         "author": "Tardia",
-        "date": null,
+        "date": "1700 ca.",
         "citedRange": "71v, 72r",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QG2HNJQU"
+          "target": "https://www.zotero.org/groups/382445/items/QG2HNJQU"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002441",
           "target": "https://biblio.inscriptiones.org/epig10002441"
         },
-        "title": "Documenti varii appartenenti alla storia di Sicilia",
-        "citation": "<span>F. Tardia, «Documenti varii appartenenti alla storia di Sicilia» (s.d.)</span>"
+        "inscriptionDate": "1700 ca.",
+        "year": ""
       },
       {
         "author": "Gualtherus",
         "date": "1624",
-        "citedRange": "40, no. 259",
+        "citedRange": "259",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/GIN6NANU"
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002388",
-          "target": "https://biblio.inscriptiones.org/epig10002388"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
         "citedRange": {
           "ref": {
-            "_": "23, no. 152",
+            "_": "152",
             "target": "http://arachne.uni-koeln.de/item/buchseite/310948"
           }
         },
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZP8DE8KS"
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Cordici",
         "date": "1600 ca.",
         "citedRange": "C: 48recto, 48verso",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/TTP5SKRS"
+          "target": "https://www.zotero.org/groups/382445/items/TTP5SKRS"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002422",
           "target": "https://biblio.inscriptiones.org/epig10002422"
         },
+        "inscriptionDate": "1600 ca.",
         "title": "La istoria della città del monte Erice oggi detta Monte di san Giuliano",
-        "citation": "<span>A. Cordici, «La istoria della città del monte Erice oggi detta Monte di san Giuliano» (C, Biblioteca comunale di Erice, ca 1600)</span>"
+        "citation": "<span>A. Cordici, «La istoria della città del monte Erice oggi detta Monte di san Giuliano» (C, Biblioteca comunale di Erice, ca 1600)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TTP5SKRS",
+        "year": "1600"
       },
       {
         "author": "Cordici",
         "date": "1600 ca.",
         "citedRange": "P: 44verso, 45recto, 45verso",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/FPRG4QKA"
+          "target": "https://www.zotero.org/groups/382445/items/FPRG4QKA"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002669",
           "target": "https://biblio.inscriptiones.org/epig10002669"
         },
+        "inscriptionDate": "1600 ca.",
         "title": "La istoria della città del monte Erice oggi detta Monte di san Giuliano",
-        "citation": "<span>A. Cordici, «La istoria della città del monte Erice oggi detta Monte di san Giuliano» (Biblioteca di Palermo, ca 1600)</span>"
+        "citation": "<span>A. Cordici, «La istoria della città del monte Erice oggi detta Monte di san Giuliano» (Biblioteca di Palermo, ca 1600)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FPRG4QKA",
+        "year": "1600"
       },
       {
         "author": "Vacanti",
@@ -521,8 +601,11 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/PCJ69VIY"
         },
+        "inscriptionDate": "2024",
         "title": "«Mission accomplished?» (Re)présentations impériales de la guerre contre Tacfarinas (17-24 apr. J.-C.)",
-        "citation": "<span>Claudio Vacanti, «“Mission accomplished?” (Re)présentations impériales de la guerre contre Tacfarinas (17-24 apr. J.-C.)», <i>Revue internationale d’Histoire Militaire Ancienne</i> 13 (2024): 81–106</span>"
+        "citation": "<span>Claudio Vacanti, «“Mission accomplished?” (Re)présentations impériales de la guerre contre Tacfarinas (17-24 apr. J.-C.)», <i>Revue internationale d’Histoire Militaire Ancienne</i> 13 (2024): 81–106</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PCJ69VIY",
+        "year": "2024"
       }
     ]
   },
@@ -534,54 +617,68 @@
         "date": "1799",
         "citedRange": "10",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/V485BH8C"
+          "target": "https://www.zotero.org/groups/382445/items/V485BH8C"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002421",
           "target": "https://biblio.inscriptiones.org/epig10002421"
         },
+        "inscriptionDate": "1799",
         "title": "Nachricht von einer merkwürdigen literarischen Betrügerei. Auf einer Reise nach Sizilien im Jahre 1794",
-        "citation": "<span>J. Hager, <i>Nachricht von einer merkwürdigen literarischen Betrügerei. Auf einer Reise nach Sizilien im Jahre 1794</i> (Leipzig: Erlangen, 1799)</span>"
+        "citation": "<span>J. Hager, <i>Nachricht von einer merkwürdigen literarischen Betrügerei. Auf einer Reise nach Sizilien im Jahre 1794</i> (Leipzig: Erlangen, 1799)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/V485BH8C",
+        "year": "1799"
       },
       {
         "author": "Cagnat",
         "date": "1892",
         "citedRange": "14-15",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/NUU5KVRB"
+          "target": "https://www.zotero.org/groups/382445/items/NUU5KVRB"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002420",
           "target": "https://biblio.inscriptiones.org/epig10002420"
         },
+        "inscriptionDate": "1892",
         "title": "L’armée romaine d’Afrique et l’occupation militaire de l’Afrique sous les empereurs",
-        "citation": "<span>R. Cagnat, <i>L’armée romaine d’Afrique et l’occupation militaire de l’Afrique sous les empereurs</i> (Paris, 1892)</span>"
+        "citation": "<span>R. Cagnat, <i>L’armée romaine d’Afrique et l’occupation militaire de l’Afrique sous les empereurs</i> (Paris, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NUU5KVRB",
+        "year": "1892"
       },
       {
         "author": "Picard",
         "date": "1957",
         "citedRange": "247-248",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7NEKT6J3"
+          "target": "https://www.zotero.org/groups/382445/items/7NEKT6J3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002419",
           "target": "https://biblio.inscriptiones.org/epig10002419"
         },
+        "inscriptionDate": "1958",
         "title": "Les trophées romains. Contribution à l’histoire de la religion et de l’art triomphal de Rome",
-        "citation": "<span>G. C. Picard, <i>Les trophées romains. Contribution à l’histoire de la religion et de l’art triomphal de Rome</i>, Bibliothéque des écoles franaises d’Athénes et de Rome, 187 (Paris, 1957)</span>"
+        "citation": "<span>G. C. Picard, <i>Les trophées romains. Contribution à l’histoire de la religion et de l’art triomphal de Rome</i>, Bibliothéque des écoles franaises d’Athénes et de Rome, 187 (Paris, 1957)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7NEKT6J3",
+        "year": "1957"
       },
       {
         "author": "Manganaro",
         "date": "1988",
-        "citedRange": "61",
+        "citedRange": "61, 66-67",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RZSFKACR"
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -593,21 +690,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Thomasson",
         "date": "1996",
         "citedRange": "29, no. 21",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/AXIXFT3W"
+          "target": "https://www.zotero.org/groups/382445/items/AXIXFT3W"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002418",
           "target": "https://biblio.inscriptiones.org/epig10002418"
         },
+        "inscriptionDate": "1996",
         "title": "Fasti Africani. Senatorische und ritterliche Amtsträger in den römischen Provinzen Nordafrikas von Augustus bis Diokletian",
-        "citation": "<span>A. E. Thomasson, <i>Fasti Africani. Senatorische und ritterliche Amtsträger in den römischen Provinzen Nordafrikas von Augustus bis Diokletian</i> (Stockholm, 1996)</span>"
+        "citation": "<span>A. E. Thomasson, <i>Fasti Africani. Senatorische und ritterliche Amtsträger in den römischen Provinzen Nordafrikas von Augustus bis Diokletian</i> (Stockholm, 1996)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/AXIXFT3W",
+        "year": "1996"
       },
       {
         "author": "Bivona",
@@ -620,34 +725,46 @@
           "_": "https://biblio.inscriptiones.org/epig10002135",
           "target": "https://biblio.inscriptiones.org/epig10002135"
         },
+        "inscriptionDate": "2000",
         "title": "La documentazione epigrafica latina in area elima",
-        "citation": "<span>Livia Bivona, «La documentazione epigrafica latina in area elima», in <i>Atti delle terze giornate internazionali di studi sull’area elima (Gibellina, Erice, Contessa Entellina, 23-26 ottobre 1997)</i>, vol. 1 (Pisa-Gibellina, 2000), 153–66</span>"
+        "citation": "<span>Livia Bivona, «La documentazione epigrafica latina in area elima», in <i>Atti delle terze giornate internazionali di studi sull’area elima (Gibellina, Erice, Contessa Entellina, 23-26 ottobre 1997)</i>, vol. 1 (Pisa-Gibellina, 2000), 153–66</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/94ICR94M",
+        "year": "2000"
       },
       {
         "author": "Lietz",
         "date": "2012",
         "citedRange": "316-319",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/W9KM5PHR"
+          "target": "https://www.zotero.org/groups/382445/items/W9KM5PHR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002440",
           "target": "https://biblio.inscriptiones.org/epig10002440"
         },
+        "inscriptionDate": "2012",
         "title": "La dea di Erice e la sua diffusione nel Mediterraneo. Un culto tra Fenici, Greci e Romani",
-        "citation": "<span>B. Lietz, <i>La dea di Erice e la sua diffusione nel Mediterraneo. Un culto tra Fenici, Greci e Romani</i> (Pisa: Edizioni della Normale, 2012)</span>"
+        "citation": "<span>B. Lietz, <i>La dea di Erice e la sua diffusione nel Mediterraneo. Un culto tra Fenici, Greci e Romani</i> (Pisa: Edizioni della Normale, 2012)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/W9KM5PHR",
+        "year": "2012"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2013.0636",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       }
     ]
   },
@@ -677,35 +794,23 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
       "_": "Updated Zenodo DOI",
       "when": "2022-04-07",
-      "who": "#system"
+      "who": "#JP"
     }
   },
+  "tmNumber": "175710",
   "facsimile": {
     "n": "screen",
     "url": "ISic000537_tiled.tif",
@@ -714,27 +819,71 @@
     "desc": "Photo C. Vacanti with the collaboration and permission of the Museo Regionale di Trapani Agostino Pepoli",
     "surfaceType": "front"
   },
-  "provenance": "Eryx",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 33,
+      "atMost": 33
+    },
+    {
+      "atLeast": 28,
+      "atMost": 28
+    },
+    {
+      "atLeast": 11,
+      "atMost": 11
+    },
+    {
+      "atLeast": 13,
+      "atMost": 13
+    },
+    {
+      "atLeast": 10,
+      "atMost": 10
+    },
+    {
+      "atLeast": 6,
+      "atMost": 6
+    }
+  ],
   "publications": [
     "Muscolino, 2013, Mommsen, Bardt, Hernandez di Carrera e l’iscrizione degli Apronii di Erice (CIL X, 7257)",
     "Oliveri, 2009, Le iscrizioni latine",
     "Manganaro, 1987, Tacfarinas e la Sicilia (ovvero L. Apronius e il santuario ericino",
-    "ILS",
-    "CLE, 1844-1897",
-    "CIL",
-    "Mommsen, 1875",
+    "Dessau, 1892-1916, ILS",
+    "Bücheler, 1844-1897, CLE",
+    "Mommsen, 1883, CIL",
+    "Henzen, Zangemeister, 1872-1913, Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
     "Meyer, 1835, Anthologia veterum Latinorum epigrammatum et poëmatum",
-    "Castelli, 1784",
-    "Castelli, 1769",
-    "Burmann, 1759-1773, Anthologia veterum Latinorum epigrammatum et poëmatum, sive catalecta poëtarum Latinorum in VI libros digesta: ex marmoribus et monumentis inscriptionum vetustis, & codicibus mss. eruta",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Burmann iunior, 1759-1773, Anthologia veterum Latinorum epigrammatum et poëmatum, sive catalecta poëtarum Latinorum in VI libros digesta: ex marmoribus et monumentis inscriptionum vetustis, & codicibus mss. eruta",
     "Muratori, 1740, Novus thesaurus veterum inscriptionum in praecipuis earumdem collectionibus hactenus praetermissarum, collectore Ludovico Antonio Muratorio .... Tomus secundus",
-    "Tardia, Documenti varii appartenenti alla storia di Sicilia",
-    "Gualtherus, 1624",
-    "Gualtherus, 1624 [1625]",
+    "Tardia, 1700 ca.",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
     "Cordici, 1600 ca., La istoria della città del monte Erice oggi detta Monte di san Giuliano",
     "Cordici, 1600 ca., La istoria della città del monte Erice oggi detta Monte di san Giuliano",
     "Vacanti, 2024, «Mission accomplished?» (Re)présentations impériales de la guerre contre Tacfarinas (17-24 apr. J.-C.)"
+  ],
+  "zotero": [
+    "Z4CI9KB8",
+    "539T7KIS",
+    "RVZG5HIX",
+    "XHMS9K6S",
+    "MDD6P7SH",
+    "GQN8UZSI",
+    "PU8UDAF3",
+    "8VMQZV66",
+    "7PSFHSUH",
+    "SPTB56H3",
+    "TPGCXHU7",
+    "9S5VIRWZ",
+    "QG2HNJQU",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "TTP5SKRS",
+    "FPRG4QKA",
+    "PCJ69VIY"
   ],
   "keywords": [
     "isic000537",
@@ -747,7 +896,7 @@
     "stone",
     "eryx",
     "erice",
-    "italy",
+    "sicilia",
     "sicily",
     "trapani",
     "museo regionale agostino pepoli",

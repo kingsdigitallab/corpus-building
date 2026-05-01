@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -87,19 +91,20 @@
   "date": {
     "_": "5th century CE (Villard)",
     "notBefore": 401,
-    "notAfter": 499,
-    "precision": "low"
+    "notAfter": 500
   },
   "places": [
     {
       "_": "Megara Hyblaea",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462307"
+      "ref": "http://pleiades.stoa.org/places/462307",
+      "region": "Sicilia"
     },
     {
       "_": "Megara Iblea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8063661"
+      "ref": "http://sws.geonames.org/8063661",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,6 +113,8 @@
       15.18274
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Megara Hyblaea",
   "provenanceFound": {
     "_": "The fragment was reported in the excavation journal of Fr. Villard for 26 February 1949, recovered in the NE corner of the Hellenistic structure VI,A (=23,24), west of the agora.",
     "type": "found",
@@ -117,6 +124,10 @@
       15.181527
     ]
   },
+  "provenanceGeo": [
+    37.204118,
+    15.181527
+  ],
   "provenanceObserved": null,
   "provenanceLost": null,
   "graphics": [
@@ -129,7 +140,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
   "repository": {
@@ -169,35 +179,41 @@
         "date": "2011",
         "citedRange": "129",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DFXDQ8GT"
+          "target": "https://www.zotero.org/groups/382445/items/DFXDQ8GT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002619",
           "target": "https://biblio.inscriptiones.org/epig10002619"
         },
+        "inscriptionDate": "2011",
         "title": "À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea",
-        "citation": "<span>Henry Tréziny, « À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea », <i>Provence Historique. Hommages à Jean Guyon</i> 61, n<sup>o</sup> 243‑244 (2011): 127‑34</span>"
+        "citation": "<span>Henry Tréziny, « À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea », <i>Provence Historique. Hommages à Jean Guyon</i> 61, n<sup>o</sup> 243‑244 (2011): 127‑34</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DFXDQ8GT",
+        "year": "2011"
       },
       {
         "author": "Villard",
         "date": "1951",
         "citedRange": "51 n.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RILI2ZCV"
+          "target": "https://www.zotero.org/groups/382445/items/RILI2ZCV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002595",
           "target": "https://biblio.inscriptiones.org/epig10002595"
         },
+        "inscriptionDate": "1951",
         "title": "Megara Hyblaea",
-        "citation": "<span>F Villard, « Megara Hyblaea », <i>Mélanges d’archéologie et d’histoire</i> 63 (1951): 7‑52, <a href=\"https://doi.org/10.3406/mefr.1951.7360\">https://doi.org/10.3406/mefr.1951.7360</a></span>"
+        "citation": "<span>F Villard, « Megara Hyblaea », <i>Mélanges d’archéologie et d’histoire</i> 63 (1951): 7‑52, <a href=\"https://doi.org/10.3406/mefr.1951.7360\">https://doi.org/10.3406/mefr.1951.7360</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RILI2ZCV",
+        "year": "1951"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -221,24 +237,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -250,6 +248,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004408_tiled.tif",
@@ -258,11 +257,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Megara Hyblaea",
   "letterHeights": [],
   "publications": [
     "Tréziny, 2011, À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea",
     "Villard, 1951, Megara Hyblaea"
+  ],
+  "zotero": [
+    "DFXDQ8GT",
+    "RILI2ZCV"
   ],
   "keywords": [
     "isic004408",
@@ -275,7 +277,7 @@
     "marble",
     "megara hyblaea",
     "megara iblea",
-    "italy",
+    "sicilia",
     "sicily",
     "megara hyblaea",
     "antiquarium di megara hyblaia",

@@ -38,7 +38,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line4",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -94,7 +101,7 @@
   },
   "date": {
     "_": "Christian",
-    "notBefore": 300,
+    "notBefore": 301,
     "notAfter": 600
   },
   "places": [
@@ -102,12 +109,14 @@
       "_": "Ietas",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462258",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Monte Iato",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524540"
+      "ref": "http://sws.geonames.org/2524540",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -116,6 +125,8 @@
       13.198199
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Ietas",
   "provenanceFound": {
     "_": "Found in the area of mediaeval houses built over the south-east corner of the agora",
     "type": "found",
@@ -125,6 +136,10 @@
       13.19852
     ]
   },
+  "provenanceGeo": [
+    37.966807,
+    13.19852
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -142,7 +157,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "San Cipirello",
   "repository": {
@@ -191,7 +205,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002144",
           "target": "https://biblio.inscriptiones.org/epig10002144"
-        }
+        },
+        "inscriptionDate": "1997-1998",
+        "title": "Epigrafia Latina",
+        "citation": "<span>Livia Bivona, «Epigrafia Latina», <i>Kokalos</i> 43–44 (1998 1997): 613–24</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CK5K5DDG",
+        "year": "1997"
       },
       {
         "author": "Isler",
@@ -203,7 +222,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001910",
           "target": "https://biblio.inscriptiones.org/epig10001910"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Monte Iato: la ventiquattresima campagna di scavo",
+        "citation": "<span>Hans Peter Isler, «Monte Iato: la ventiquattresima campagna di scavo», <i>Sicilia Archeologica</i> 85–86 (1994): 27–47</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XSU8JMJV",
+        "year": "1994"
       },
       {
         "xml:id": "Rizzone2009",
@@ -216,14 +240,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001634",
           "target": "https://biblio.inscriptiones.org/epig10001634"
-        }
+        },
+        "inscriptionDate": "2009",
+        "title": "Iscrizioni tardoantiche da Mineo (CT)",
+        "citation": "<span>Vittorio Giovanni Rizzone, «Iscrizioni tardoantiche da Mineo (CT)», <i>Epigraphica</i> 71 (2009): 426–37</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/P44QBETH",
+        "year": "2009"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -247,30 +276,17 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "xml:id": "MMohr"
       },
       {
-        "xml:id": "MMohr"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -279,6 +295,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "492395",
   "facsimile": {
     "n": "screen",
     "url": "ISic000080_tiled.tif",
@@ -287,12 +304,21 @@
     "desc": "Photo courtesy Zurich Ietas excavations",
     "surfaceType": "front"
   },
-  "provenance": "Ietas",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 40
+    }
+  ],
   "publications": [
-    "Bivona, 1997-1998",
-    "Isler, 1994",
-    "Rizzone, 2009"
+    "Bivona, 1997-1998, Epigrafia Latina",
+    "Isler, 1994, Monte Iato: la ventiquattresima campagna di scavo",
+    "Rizzone, 2009, Iscrizioni tardoantiche da Mineo (CT)"
+  ],
+  "zotero": [
+    "CK5K5DDG",
+    "XSU8JMJV",
+    "P44QBETH"
   ],
   "keywords": [
     "isic000080",
@@ -305,7 +331,7 @@
     "marble",
     "ietas",
     "monte iato",
-    "italy",
+    "sicilia",
     "sicily",
     "san cipirello",
     "depot of the zurich ietas excavation",

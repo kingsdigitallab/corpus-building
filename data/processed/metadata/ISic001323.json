@@ -42,9 +42,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Very fine-grained, homogeneous, white marble, likely Lunense. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Carrara",
+        "target": "https://www.geonames.org/6542087/carrara.html"
+      },
+      "location": {
+        "geo": "44.06294,10.06069"
+      }
+    }
   },
   "condition": {
     "ana": "#condition.damaged"
@@ -92,7 +107,9 @@
         "from": "line1",
         "to": "line9",
         "h": "26-40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "26",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -106,21 +123,22 @@
   },
   "date": {
     "_": "Late 3rd — late 4th century CE (Korhonen on the basis of lettering)",
-    "notBefore": 250,
+    "notBefore": 251,
     "notAfter": 400,
-    "evidence": "lettering",
-    "precision": "low"
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -129,6 +147,8 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Found in 1594 among the ruins of the Odeon (at the house of Dott. D. Cataldo Fimia Patricio) between Porta di Mezzo and Convento di S. Agostino.",
     "type": "found",
@@ -139,6 +159,10 @@
       15.0838968
     ]
   },
+  "provenanceGeo": [
+    37.5033164,
+    15.0838968
+  ],
   "provenanceObserved": {
     "_": "Observed by Torremuzza in Museo dei Benedettini, later by Korhonen in magazzino superiore, Collezione dei Benedettini, formerly sala I.",
     "type": "observed",
@@ -171,7 +195,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -213,145 +236,194 @@
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
-        "citedRange": "no.37",
+        "citedRange": "37",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/ZP8DE8KS"
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Amico",
         "date": "1741",
         "citedRange": "238-240",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F5INCW3T"
+          "target": "https://www.zotero.org/groups/382445/items/F5INCW3T"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002186",
           "target": "https://biblio.inscriptiones.org/epig10002186"
-        }
+        },
+        "inscriptionDate": "1741",
+        "title": "Catana Ilustrata",
+        "citation": "<span>V. and Statella Amico E., <i>Catana Ilustrata</i>, vol. 3 (Catanae, 1741)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F5INCW3T",
+        "year": "1741"
       },
       {
-        "author": "Torremuzza",
+        "author": "Castelli",
         "date": "1769",
         "citedRange": "52 no.36",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SPTB56H3"
+          "target": "https://www.zotero.org/groups/382445/items/SPTB56H3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
-        "author": "Torremuzza",
+        "author": "Castelli",
         "date": "1784",
         "citedRange": "57 no.37",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7PSFHSUH"
+          "target": "https://www.zotero.org/groups/382445/items/7PSFHSUH"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002083",
           "target": "https://biblio.inscriptiones.org/epig10002083"
-        }
+        },
+        "inscriptionDate": "1784",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+        "citation": "<span>Gabriello Lancellotto Castelli Principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, &#38; auctariis evulgata</i>, 2nd (1st is 1769) (Palermo: typis regiis, 1784), <a href=\"http://arachne.uni-koeln.de/books/Castelli1784\">http://arachne.uni-koeln.de/books/Castelli1784</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7PSFHSUH",
+        "year": "1784"
       },
       {
         "author": "Ferrara",
         "date": "1829",
         "citedRange": "277-278",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/82T4IWDN"
+          "target": "https://www.zotero.org/groups/382445/items/82T4IWDN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002005",
           "target": "https://biblio.inscriptiones.org/epig10002005"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Storia di Catania sino alla fine del secolo XVIII",
+        "citation": "<span>F. Ferrara, <i>Storia di Catania sino alla fine del secolo XVIII</i> (Catania, 1829)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82T4IWDN",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0502",
+            "_": "502",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1959.0024",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "44.0738.11",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "1959.0541",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "24",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5727",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5727",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Kaibel",
@@ -364,12 +436,17 @@
           "_": "https://biblio.inscriptiones.org/epig10001900",
           "target": "https://biblio.inscriptiones.org/epig10001900"
         },
+        "inscriptionDate": "1878",
         "title": "Epigrammata graeca ex lapidibus conlecta",
-        "citation": "<span>G. Kaibel, <i>Epigrammata graeca ex lapidibus conlecta</i> (Berolini: G. Reimer, 1878)</span>"
+        "citation": "<span>G. Kaibel, <i>Epigrammata graeca ex lapidibus conlecta</i> (Berolini: G. Reimer, 1878)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R6EN7EKK",
+        "year": "1878"
       },
       {
         "type": "corpus",
         "n": "IGRR",
+        "author": "Cagnat, Toutain, Jouguet",
+        "date": "1906-1927",
         "citedRange": "491",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/KSH4D9GK"
@@ -378,21 +455,45 @@
           "_": "https://biblio.inscriptiones.org/epig10001116",
           "target": "https://biblio.inscriptiones.org/epig10001116"
         },
+        "inscriptionDate": "1906",
         "title": "Inscriptiones Graecae ad res Romanas pertinentes",
-        "date": "1906-1927",
-        "citation": "<span>R. Cagnat, J. Toutain, and P. Jouguet, <i>Inscriptiones Graecae ad res Romanas pertinentes</i>, 4 vols (Paris: Ernest Leroux, 1906)</span>"
+        "citation": "<span>R. Cagnat, J. Toutain, and P. Jouguet, <i>Inscriptiones Graecae ad res Romanas pertinentes</i>, 4 vols (Paris: Ernest Leroux, 1906)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/KSH4D9GK",
+        "year": "1906"
       },
       {
         "author": "Manganaro",
         "date": "1958-1959",
         "citedRange": "15-17",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/BVD8KVF7"
+          "target": "https://www.zotero.org/groups/382445/items/BVD8KVF7"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001856",
           "target": "https://biblio.inscriptiones.org/epig10001856"
-        }
+        },
+        "inscriptionDate": "1958-1959",
+        "title": "Iscrizioni latine e greche di Catania tardo-imperiale",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni latine e greche di Catania tardo-imperiale», <i>Archivio Storico per la Sicilia Orientale</i> ser.4 vol.11-12 (1959 1958): 5–30</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BVD8KVF7",
+        "year": "1958"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "59",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Wilson",
@@ -404,18 +505,26 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Manganaro",
         "date": "1994",
         "citedRange": "97 no.XI",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/532NF7SV"
+          "target": "https://www.zotero.org/groups/382445/items/532NF7SV"
         },
         "ref": "https://www.zotero.org/groups/382445/items/532NF7SV",
+        "inscriptionDate": "1994",
         "title": "Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana",
-        "citation": "<span>Giacomo Manganaro, «Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana», <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 106, fasc. 1 (1994): 79–118</span>"
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana», <i>Mélanges de l’École Francaise de Rome: Antiquité</i> 106, fasc. 1 (1994): 79–118</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/532NF7SV",
+        "year": "1994"
       },
       {
         "author": "Manganaro",
@@ -427,7 +536,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001793",
           "target": "https://biblio.inscriptiones.org/epig10001793"
-        }
+        },
+        "inscriptionDate": "2010",
+        "title": "Fontane ed edifici termali nella Catina « bilingue » tardo-antica e l’editto di Eumathios del 434 d. C.",
+        "citation": "<span>Giacomo Manganaro, «Fontane ed edifici termali nella Catina “ bilingue ” tardo-antica e l’editto di Eumathios del 434 d. C.», <i>Travaux et mémoires du Centre de recherches d’histoire et civilisation byzantines</i> 16 (2010): 513–31</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZJA2JMRW",
+        "year": "2010"
       },
       {
         "author": "Molè Ventura",
@@ -440,8 +554,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002256",
           "target": "https://biblio.inscriptiones.org/epig10002256"
         },
+        "inscriptionDate": "2018",
         "title": "\"De' pii l'inclita città...\" Identità civica e processi di acculturazione a Catania tra ellenismo e tarda antichità",
-        "citation": "<span>Concetta Molè Ventura, «“De’ pii l’inclita città...” Identità civica e processi di acculturazione a Catania tra ellenismo e tarda antichità», <i>Mediterraneo Antico</i> 21 (2018): 247–76</span>"
+        "citation": "<span>Concetta Molè Ventura, «“De’ pii l’inclita città...” Identità civica e processi di acculturazione a Catania tra ellenismo e tarda antichità», <i>Mediterraneo Antico</i> 21 (2018): 247–76</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/46K2DWI7",
+        "year": "2018"
       }
     ]
   },
@@ -453,14 +570,17 @@
         "date": null,
         "citedRange": "209-222",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/TCRRXBFB"
+          "target": "https://www.zotero.org/groups/382445/items/TCRRXBFB"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002244",
           "target": "https://biblio.inscriptiones.org/epig10002244"
         },
+        "inscriptionDate": "1995",
         "title": "Amphìnomos e Anapìas a Catania. Per la stori di due statue ellenistiche perdute",
-        "citation": "<span>C. Franzoni, «Amphìnomos e Anapìas a Catania. Per la stori di due statue ellenistiche perdute», <i>Kokalos</i> 41 (s.d.): 209–28</span>"
+        "citation": "<span>C. Franzoni, «Amphìnomos e Anapìas a Catania. Per la stori di due statue ellenistiche perdute», <i>Kokalos</i> 41 (s.d.): 209–28</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TCRRXBFB",
+        "year": ""
       }
     ]
   },
@@ -490,20 +610,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -514,16 +620,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images",
-      "when": "2024-01-17",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492929",
   "facsimile": {
     "n": "screen",
     "url": "ISic001323_tiled.tif",
@@ -532,27 +650,53 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 26,
+      "atMost": 40
+    }
+  ],
   "publications": [
-    "Gualtherus, 1624 [1625]",
-    "Amico, 1741",
-    "Torremuzza, 1769",
-    "Torremuzza, 1784",
-    "Ferrara, 1829",
-    "IG",
-    null,
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Amico, 1741, Catana Ilustrata",
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Castelli, 1784, Siciliae et objacentium insularum veterum inscriptionum nova collectio prolegomenis et notis illustrata, et iterum cum emendationibus, & auctariis evulgata",
+    "Ferrara, 1829, Storia di Catania sino alla fine del secolo XVIII",
+    "Kaibel, 1890, IG",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Supplementum epigraphicum graecum, 1923-",
     "Bulletin épigraphique, 1888-",
-    "IMusCatania",
-    "CIG",
+    "Korhonen, 2004, IMusCatania",
+    "Boeckh, Franz, 1853, CIG",
     "Kaibel, 1878, Epigrammata graeca ex lapidibus conlecta",
-    "IGRR, 1906-1927",
-    "Manganaro, 1958-1959",
-    "Wilson, 1990",
+    "Cagnat, Toutain, Jouguet, 1906-1927, IGRR",
+    "Manganaro, 1958-1959, Iscrizioni latine e greche di Catania tardo-imperiale",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
     "Manganaro, 1994, Iscrizioni, epigrafi ed epigrammi in Greco della Sicilia orientale di epoca romana",
-    "Manganaro, 2010",
+    "Manganaro, 2010, Fontane ed edifici termali nella Catina « bilingue » tardo-antica e l’editto di Eumathios del 434 d. C.",
     "Molè Ventura, 2018, \"De' pii l'inclita città...\" Identità civica e processi di acculturazione a Catania tra ellenismo e tarda antichità"
+  ],
+  "zotero": [
+    "ZP8DE8KS",
+    "F5INCW3T",
+    "SPTB56H3",
+    "7PSFHSUH",
+    "82T4IWDN",
+    "Q2SBPG9F",
+    "R46KDTZX",
+    "F2GG87EQ",
+    "77P5MNIR",
+    "2EUC82DH",
+    "TQMVHEVL",
+    "R6EN7EKK",
+    "KSH4D9GK",
+    "BVD8KVF7",
+    "RZSFKACR",
+    "VF9MMBI9",
+    "532NF7SV",
+    "ZJA2JMRW",
+    "46K2DWI7"
   ],
   "keywords": [
     "isic001323",
@@ -562,10 +706,10 @@
     },
     "honorific",
     "plaque",
-    "marble",
+    "very fine-grained, homogeneous, white marble, likely lunense. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy)",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

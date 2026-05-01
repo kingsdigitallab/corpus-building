@@ -43,7 +43,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
@@ -85,7 +90,9 @@
         "from": "line1",
         "to": "line5",
         "h": "22-38",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "22",
+        "atMost": "38"
       },
       {
         "type": "interlinear",
@@ -100,19 +107,20 @@
   "date": {
     "_": "1st century — first half of 2nd century CE",
     "notBefore": 1,
-    "notAfter": 150,
-    "precision": "low"
+    "notAfter": 150
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -121,11 +129,14 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Original discovery not recorded, probably Catania.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Observed by Ferrara and Kaibel in Museo Biscari, in a more complete state, later by Korhonen in magazzino superiore, collezione Biscari, formerly sala IX, 79.",
     "type": "observed",
@@ -142,7 +153,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
   "repository": {
@@ -186,43 +196,56 @@
         "date": "1829",
         "citedRange": "390 n. 1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/82T4IWDN"
+          "target": "https://www.zotero.org/groups/382445/items/82T4IWDN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002005",
           "target": "https://biblio.inscriptiones.org/epig10002005"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Storia di Catania sino alla fine del secolo XVIII",
+        "citation": "<span>F. Ferrara, <i>Storia di Catania sino alla fine del secolo XVIII</i> (Catania, 1829)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/82T4IWDN",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0488",
+            "_": "488",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "103",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
@@ -231,30 +254,37 @@
       {
         "type": "corpus",
         "n": "IMusCatania",
+        "author": "Korhonen",
+        "date": "2004",
         "citedRange": "84",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       },
       {
         "author": "Buszard",
         "date": "2018",
         "citedRange": "112-113",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/IQNM4UKF"
+          "target": "https://www.zotero.org/groups/382445/items/IQNM4UKF"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002247",
           "target": "https://biblio.inscriptiones.org/epig10002247"
         },
+        "inscriptionDate": "2018",
         "title": "The Greek Transliteration and Pronunciation of the Latin Consonant U",
-        "citation": "<span>Bradley Buszard, ‘The Greek Transliteration and Pronunciation of the Latin Consonant U’, <i>Glotta</i> 94 (2018)</span>"
+        "citation": "<span>Bradley Buszard, ‘The Greek Transliteration and Pronunciation of the Latin Consonant U’, <i>Glotta</i> 94 (2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IQNM4UKF",
+        "year": "2018"
       },
-      ""
+      null
     ]
   },
   "citation": {
@@ -283,20 +313,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
@@ -307,16 +323,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary",
-      "when": "2022-09-22",
-      "who": "#martaf"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc",
+      "when": "2025-11-05",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492916",
   "facsimile": {
     "n": "screen",
     "url": "ISic001311_tiled.tif",
@@ -325,12 +353,21 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 22,
+      "atMost": 38
+    }
+  ],
   "publications": [
-    "Ferrara, 1829",
-    "IG",
-    "IMusCatania"
+    "Ferrara, 1829, Storia di Catania sino alla fine del secolo XVIII",
+    "Kaibel, 1890, IG",
+    "Korhonen, 2004, IMusCatania"
+  ],
+  "zotero": [
+    "82T4IWDN",
+    "Q2SBPG9F",
+    "2EUC82DH"
   ],
   "keywords": [
     "isic001311",
@@ -343,7 +380,7 @@
     "marble",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "museo civico di catania",

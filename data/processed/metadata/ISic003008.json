@@ -38,7 +38,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -87,19 +90,20 @@
   "date": {
     "_": "4th century BCE (?)\n                                ('I caratteri epigrafici possono riportasi almeno al IV sec., circa, se e vero che alla\n                                lin.2 non e segnato con l'omega l'aumento del verbo.' Manganaro (however, also observes\n                                possible Hieronic parallels)",
     "notBefore": -400,
-    "notAfter": -200,
-    "precision": "low"
+    "notAfter": -201
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -108,12 +112,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found in the area of the Altar of Hieron",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -131,7 +138,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -175,34 +181,42 @@
         "n": "SEG",
         "citedRange": "34.0978",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Manganaro",
         "date": "1977",
         "citedRange": "155-156 ph dr",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JQHZXXJN"
+          "target": "https://www.zotero.org/groups/382445/items/JQHZXXJN"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001440",
           "target": "https://biblio.inscriptiones.org/epig10001440"
-        }
+        },
+        "inscriptionDate": "1977",
+        "title": "Per la storia dei culti nella Sicilia greca",
+        "citation": "<span>Giacomo Manganaro, «Per la storia dei culti nella Sicilia greca», <i>Cronache di archeologia e di storia dell’arte</i> 16 (1977): 148–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JQHZXXJN",
+        "year": "1977"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -226,20 +240,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -248,10 +248,6 @@
         "_": "Valentina Mignosa",
         "xml:id": "VM",
         "ref": "https://orcid.org/0000-0002-7122-2511"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -260,6 +256,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "645357",
   "facsimile": {
     "n": "screen",
     "url": "ISic003008_tiled.tif",
@@ -268,11 +265,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
-    "Manganaro, 1977"
+    "Manganaro, 1977, Per la storia dei culti nella Sicilia greca"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "JQHZXXJN"
   ],
   "keywords": [
     "isic003008",
@@ -285,7 +285,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

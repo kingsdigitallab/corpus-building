@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line5",
         "h": "17",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "17",
+        "atMost": "17"
       },
       {
         "type": "interlinear",
@@ -91,19 +98,20 @@
   "date": {
     "_": "2nd — 3rd century CE",
     "notBefore": 201,
-    "notAfter": 300,
-    "precision": "low"
+    "notAfter": 300
   },
   "places": [
     {
       "_": "Messana",
       "ref": "http://pleiades.stoa.org/places/462538",
-      "type": "ancient"
+      "type": "ancient",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "ref": "http://sws.geonames.org/2524170",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +120,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Recovered from demolition of a C19 house on via Quod Quaeris, Messina, and therefore presumed to come from the 'northern' necropolis",
     "type": "found",
@@ -121,6 +131,10 @@
       15.554338
     ]
   },
+  "provenanceGeo": [
+    38.202117,
+    15.554338
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -137,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": "Soprintendenza stores",
@@ -160,21 +173,24 @@
         "date": "2017",
         "citedRange": "169 no.5 fig.5",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R9M3U4WX"
+          "target": "https://www.zotero.org/groups/382445/items/R9M3U4WX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001500",
           "target": "https://biblio.inscriptiones.org/epig10001500"
         },
+        "inscriptionDate": "2017",
         "title": "Le epigrafi",
-        "citation": "<span>G. Zavettieri, «Le epigrafi», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 167–71</span>"
+        "citation": "<span>G. Zavettieri, «Le epigrafi», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 167–71</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R9M3U4WX",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -193,27 +209,14 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -222,6 +225,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004382_tiled.tif",
@@ -230,10 +234,17 @@
     "desc": "Photo courtesy of archivio fotografico della soprintendenza di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 17,
+      "atMost": 17
+    }
+  ],
   "publications": [
     "Zavettieri, 2017, Le epigrafi"
+  ],
+  "zotero": [
+    "R9M3U4WX"
   ],
   "keywords": [
     "isic004382",
@@ -246,7 +257,7 @@
     "marble",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "ancient greek",

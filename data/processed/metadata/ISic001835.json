@@ -33,8 +33,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcite_limestone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -65,6 +67,47 @@
     }
   },
   "handNote": {
+    "lettering": {
+      "_": "\n                                    Types list:\n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                    \n                                ",
+      "ref": [
+        {
+          "_": "Ι type1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ι-type1.html"
+        },
+        {
+          "_": "Λ type2",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Λ-type2.html"
+        },
+        {
+          "_": "Ο type1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html"
+        },
+        {
+          "_": "Σ type3",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html"
+        },
+        {
+          "_": "Σ type3.1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.1.html"
+        },
+        {
+          "_": "Υ type2",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.html"
+        },
+        {
+          "_": "Υ type2.1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type2.1.html"
+        },
+        {
+          "_": "Φ type2",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Φ-type2.html"
+        },
+        {
+          "_": "Φ type2.1",
+          "target": "https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Φ-type2.1.html"
+        }
+      ]
+    },
     "dimensions": [
       {
         "type": "letterHeight",
@@ -72,7 +115,9 @@
         "from": "line1",
         "to": "line1",
         "h": "117-200",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "117",
+        "atMost": "200"
       },
       {
         "type": "interlinear",
@@ -86,19 +131,20 @@
   "date": {
     "_": "2nd century BCE (palaeographic)",
     "notBefore": -200,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,12 +153,15 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Theatre",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "under the scaenae frons",
     "type": "observed",
@@ -137,7 +186,6 @@
       "surfaceType": "right"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Taormina",
   "repository": {
@@ -175,49 +223,60 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0437.4",
+            "_": "437.4",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "59.1132",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5233",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://www.zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       },
       {
         "author": "Dimartino",
@@ -230,8 +289,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002579",
           "target": "https://biblio.inscriptiones.org/epig10002579"
         },
+        "inscriptionDate": "2017",
         "title": "Iscrizioni del teatro di Taormina",
-        "citation": "<span>Alessia Dimartino, «Iscrizioni del teatro di Taormina», <i>Axon</i> 1, fasc. 1 (2017): 301–7, <a href=\"https://doi.org/10.14277/2532-6848/Axon-1-1-17-29\">https://doi.org/10.14277/2532-6848/Axon-1-1-17-29</a></span>"
+        "citation": "<span>Alessia Dimartino, «Iscrizioni del teatro di Taormina», <i>Axon</i> 1, fasc. 1 (2017): 301–7, <a href=\"https://doi.org/10.14277/2532-6848/Axon-1-1-17-29\">https://doi.org/10.14277/2532-6848/Axon-1-1-17-29</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Z4M8APUF",
+        "year": "2017"
       },
       {
         "author": "Dimartino",
@@ -244,8 +306,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001364",
           "target": "https://biblio.inscriptiones.org/epig10001364"
         },
+        "inscriptionDate": "2009",
         "title": "Ierone II, Filistide e il teatro greco di Taormina. Note in margine a IG XIV, 437",
-        "citation": "<span>Alessia Dimartino, «Ierone II, Filistide e il teatro greco di Taormina. Note in margine a IG XIV, 437», in <i>Immagine e immagini della Sicilia e di altre isole del Mediterraneo antico</i>, a c. di C. Ampolo, vol. 2, 2 voll. (Pisa: Edizioni della Normale, 2009), 721–26</span>"
+        "citation": "<span>Alessia Dimartino, «Ierone II, Filistide e il teatro greco di Taormina. Note in margine a IG XIV, 437», in <i>Immagine e immagini della Sicilia e di altre isole del Mediterraneo antico</i>, a c. di C. Ampolo, vol. 2, 2 voll. (Pisa: Edizioni della Normale, 2009), 721–26</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RPETDZMZ",
+        "year": "2009"
       },
       {
         "author": "De Spuches",
@@ -257,14 +322,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002042",
           "target": "https://biblio.inscriptiones.org/epig10002042"
-        }
+        },
+        "inscriptionDate": "1864",
+        "title": "Illustrazione d'alcune epigrafi e d'altri oggetti archeologici",
+        "citation": "<span>G. De Spuches, «Illustrazione d’alcune epigrafi e d’altri oggetti archeologici», <i>Bullettino della Commissione di Antichità e belle arti in Sicilia</i> 1 (1864): 12–17</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/NBACXKXQ",
+        "year": "1864"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -288,20 +358,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -312,16 +368,23 @@
         "ref": "https://orcid.org/0000-0003-3673-587X"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added images and amended the text",
-      "when": "2024-08-15",
-      "who": "#JP"
+      "_": "Robert Crellin added local IDs to edition elements",
+      "when": "2025-10-15",
+      "who": "#RC"
     }
   },
+  "tmNumber": "492868",
   "facsimile": {
     "n": "screen",
     "url": "ISic001835_tiled.tif",
@@ -330,15 +393,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-03-22",
     "surfaceType": "front"
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 117,
+      "atMost": 200
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
-    "SGDI, 1884-1915",
+    "Hoffmann, 1904, SGDI",
     "Dimartino, 2017, Iscrizioni del teatro di Taormina",
     "Dimartino, 2009, Ierone II, Filistide e il teatro greco di Taormina. Note in margine a IG XIV, 437",
-    "De Spuches, 1864"
+    "De Spuches, 1864, Illustrazione d'alcune epigrafi e d'altri oggetti archeologici"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "DQDPC573",
+    "Z4M8APUF",
+    "RPETDZMZ",
+    "NBACXKXQ"
   ],
   "keywords": [
     "isic001835",
@@ -350,7 +425,7 @@
     "limestone",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "taormina",
     "antiquarium del teatro antico",

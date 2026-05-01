@@ -37,7 +37,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -85,19 +89,21 @@
   },
   "date": {
     "_": "Imperial",
-    "notBefore": 100,
+    "notBefore": 101,
     "notAfter": 400
   },
   "places": [
     {
       "_": "Phintias",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462424"
+      "ref": "http://pleiades.stoa.org/places/462424",
+      "region": "Sicilia"
     },
     {
       "_": "Licata",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524393"
+      "ref": "http://sws.geonames.org/2524393",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,11 +112,15 @@
       13.93972
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Phintias",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found at the time of Fazellus at 'Alicata'.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -118,25 +128,15 @@
     "geo": null
   },
   "provenanceLost": {
-    "_": "Lost",
+    "_": "Lost.",
     "type": "not-observed",
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000468_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Licata",
-  "repository": "not located",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -152,29 +152,66 @@
         "date": "1558",
         "citedRange": "Dec. 1, book 5, p.23",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/UKMEHMF4"
+          "target": "https://www.zotero.org/groups/382445/items/UKMEHMF4"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002606",
           "target": "https://biblio.inscriptiones.org/epig10002606"
-        }
+        },
+        "inscriptionDate": "1558",
+        "title": "F. Thomæ Fazelli... de rebus Siculis decades duæ",
+        "citation": "<span>Tommaso Fazello, <i>F. Thomæ Fazelli... de rebus Siculis decades duæ</i> (Panormi, 1558)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/UKMEHMF4",
+        "year": "1558"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "71",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "231",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7191",
+            "_": "7191",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Schubring",
@@ -187,8 +224,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002684",
           "target": "https://biblio.inscriptiones.org/epig10002684"
         },
+        "inscriptionDate": "1873",
         "title": "Historisch-geographische Studien über Altsicilien. Gela. Phintias. Die südlichen Sikeler",
-        "citation": "<span>J. Schubring, ‘Historisch-geographische Studien über Altsicilien. Gela. Phintias. Die südlichen Sikeler’, <i>Rheinisches Museum für Philologie</i> 28 (1873): 65–140, <a href=\"https://www.jstor.org/stable/23216126\">https://www.jstor.org/stable/23216126</a></span>"
+        "citation": "<span>J. Schubring, ‘Historisch-geographische Studien über Altsicilien. Gela. Phintias. Die südlichen Sikeler’, <i>Rheinisches Museum für Philologie</i> 28 (1873): 65–140, <a href=\"https://www.jstor.org/stable/23216126\">https://www.jstor.org/stable/23216126</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5NHGE6V5",
+        "year": "1873"
       },
       {
         "author": "Manganaro",
@@ -200,14 +240,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -231,27 +276,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -260,21 +287,23 @@
       "who": "#SS"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000468_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Phintias",
+  "tmNumber": "491697",
   "letterHeights": [],
   "publications": [
-    "Fazello, 1558",
-    "CIL",
+    "Fazello, 1558, F. Thomæ Fazelli... de rebus Siculis decades duæ",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
     "Schubring, 1873, Historisch-geographische Studien über Altsicilien. Gela. Phintias. Die südlichen Sikeler",
-    "Manganaro, 1988"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+  ],
+  "zotero": [
+    "UKMEHMF4",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "5NHGE6V5",
+    "RZSFKACR"
   ],
   "keywords": [
     "isic000468",
@@ -287,7 +316,7 @@
     "marble",
     "phintias",
     "licata",
-    "italy",
+    "sicilia",
     "sicily",
     "licata",
     "latin",

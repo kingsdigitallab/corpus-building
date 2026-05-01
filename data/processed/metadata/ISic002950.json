@@ -25,10 +25,15 @@
   ],
   "editionAuthor": null,
   "type": {
-    "_": "honorific; dedication",
-    "ana": "#function.honorific #function.dedication",
+    "_": "honorific",
+    "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html",
-    "cert": "low"
+    "certainty": {
+      "locus": "value",
+      "match": "../@ana",
+      "assertedValue": "#function.building",
+      "desc": "possibly building"
+    }
   },
   "support": "No details about the inscription's physical form are recorded",
   "objectType": {
@@ -38,7 +43,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
@@ -85,20 +94,23 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "The use of Greek suggests a later Hellenistic date; the name 'Cornelius' suggests a very late Republican or more likely early Imperial date. A period in the second half of the first century BCE is perhaps most likely.",
+    "notBefore": -200,
+    "notAfter": 200,
+    "evidence": "textual-context"
   },
   "places": [
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,13 +119,23 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Reported by Ansaldi as among material found in the area of the ancient bath building by the Aqua Amara spring in contrada Difesa, Centuripe",
     "type": "found",
     "subtype": "discovered",
     "notAfter": "1851",
-    "geo": null
+    "geo": [
+      37.623,
+      14.741
+    ],
+    "geoCert": "high"
   },
+  "provenanceGeo": [
+    37.623,
+    14.741
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -126,20 +148,10 @@
     "subtype": "lost",
     "geo": null
   },
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic002950_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Centuripe",
-  "repository": "lost",
+  "repository": "unknown",
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -165,7 +177,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002182",
           "target": "https://biblio.inscriptiones.org/epig10002182"
-        }
+        },
+        "inscriptionDate": "1851",
+        "title": "I monumenti dell'antica Centuripi",
+        "citation": "<span>F. Ansaldi, <i>I monumenti dell’antica Centuripi</i> (Centuripae, 1851), <a href=\"http://arachne.uni-koeln.de/item/buch/3254\">http://arachne.uni-koeln.de/item/buch/3254</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9BF3BJJI",
+        "year": "1851"
       }
     ]
   },
@@ -175,14 +192,18 @@
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "cf. 004",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Wilson",
@@ -194,7 +215,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Bivona",
@@ -203,10 +229,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Libertini",
@@ -218,7 +246,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001874",
           "target": "https://biblio.inscriptiones.org/epig10001874"
-        }
+        },
+        "inscriptionDate": "1926",
+        "title": "Centuripe",
+        "citation": "<span>Guido Libertini, <i>Centuripe</i> (Catania, 1926)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VJZRAI26",
+        "year": "1926"
       },
       {
         "author": "Libertini",
@@ -230,7 +263,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001865",
           "target": "https://biblio.inscriptiones.org/epig10001865"
-        }
+        },
+        "inscriptionDate": "1949",
+        "title": "Iscrizioni Centuripine",
+        "citation": "<span>Guido Libertini, «Iscrizioni Centuripine», <i>Siculorum Gymnasium</i> 2 (1949): 91–97</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VQURX85J",
+        "year": "1949"
       }
     ]
   },
@@ -255,27 +293,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -284,18 +304,13 @@
       "who": "#JP"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic002950_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Centuripae",
+  "tmNumber": "644859",
   "letterHeights": [],
   "publications": [
-    "Ansaldi, 1851"
+    "Ansaldi, 1851, I monumenti dell'antica Centuripi"
+  ],
+  "zotero": [
+    "9BF3BJJI"
   ],
   "keywords": [
     "isic002950",
@@ -303,12 +318,12 @@
     {
       "_": "draft"
     },
-    "honorific; dedication",
+    "honorific",
     "unknown",
     "stone",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "centuripe",
     "ancient greek",

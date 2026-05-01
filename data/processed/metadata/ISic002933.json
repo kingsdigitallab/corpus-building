@@ -36,8 +36,13 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "\n                                        marble (grey)\n                                    ",
-    "ana": "#material.stone.marble",
+    "_": "marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -86,19 +91,21 @@
   "date": {
     "_": "Ferrua argues it must be the first consulship of Theodosius the younger (Manganaro and others suggest 411)",
     "notBefore": 403,
-    "notAfter": 403,
+    "notAfter": 411,
     "evidence": "internal-date"
   },
   "places": [
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,12 +114,15 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Catacomb of S. Giovanni, excavation 1895",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Depositi, Mag B, new cass.3",
     "type": "observed",
@@ -125,11 +135,18 @@
       "url": "ISic002933_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic002933_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09",
+      "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -178,7 +195,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001827",
           "target": "https://biblio.inscriptiones.org/epig10001827"
-        }
+        },
+        "inscriptionDate": "1993",
+        "title": "Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+        "citation": "<span>Giacomo Manganaro, «Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.», in <i>l’epigrafia del villaggio</i>, a c. di A. Calbi, A. Donati, e G. Poma (Faenza, 1993), 543–94</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JBI7CI5R",
+        "year": "1993"
       },
       {
         "author": "Diehl",
@@ -190,21 +212,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000357",
           "target": "https://biblio.inscriptiones.org/epig10000357"
-        }
+        },
+        "inscriptionDate": "1925",
+        "title": "Inscriptiones Latinae Christianae Veteres",
+        "citation": "<span>Ernst Johann L. Diehl, <i>Inscriptiones Latinae Christianae Veteres</i>, 4 vols (Berlin: Weidmann, 1925)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IPPB7CUI",
+        "year": "1925"
       },
       {
         "author": "Orsi",
         "date": "1896",
         "citedRange": "37 no. 66 (335)",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/H73GNMU6"
+          "target": "https://www.zotero.org/groups/382445/items/H73GNMU6"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001710",
           "target": "https://biblio.inscriptiones.org/epig10001710"
         },
+        "inscriptionDate": "1896",
         "title": "Gli scavi a S. Giovanni a Siracusa",
-        "citation": "<span>Paolo Orsi, «Gli scavi a S. Giovanni a Siracusa», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 10 (1896): 1–59</span>"
+        "citation": "<span>Paolo Orsi, «Gli scavi a S. Giovanni a Siracusa», <i>Römische Quartalschrift für christliche Alterthumskunde und für Kirchengeschichte</i> 10 (1896): 1–59</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/H73GNMU6",
+        "year": "1896"
       },
       {
         "author": "Ferrua",
@@ -216,14 +246,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001996",
           "target": "https://biblio.inscriptiones.org/epig10001996"
-        }
+        },
+        "inscriptionDate": "1982-1983",
+        "title": "Le iscrizioni datate della Sicilia paleocristiana",
+        "citation": "<span>Antonio Ferrua, «Le iscrizioni datate della Sicilia paleocristiana», <i>Kokalos</i> 28–29 (1983 1982): 3–29</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q7DDNWD6",
+        "year": "1982"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -247,20 +282,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -271,8 +292,9 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -281,21 +303,27 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "493925",
   "facsimile": {
     "n": "screen",
     "url": "ISic002933_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
   "letterHeights": [],
   "publications": [
-    "Manganaro, 1993",
-    "Diehl, 1925",
+    "Manganaro, 1993, Greco nei pagi e latino nelle città della Sicilia romana tra I e VI sec. d.C.",
+    "Diehl, 1925, Inscriptiones Latinae Christianae Veteres",
     "Orsi, 1896, Gli scavi a S. Giovanni a Siracusa",
-    "Ferrua, 1982-1983"
+    "Ferrua, 1982-1983, Le iscrizioni datate della Sicilia paleocristiana"
+  ],
+  "zotero": [
+    "JBI7CI5R",
+    "IPPB7CUI",
+    "H73GNMU6",
+    "Q7DDNWD6"
   ],
   "keywords": [
     "isic002933",
@@ -305,10 +333,10 @@
     },
     "funerary",
     "plaque",
-    "marble (grey)",
+    "marble",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

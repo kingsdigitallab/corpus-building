@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -80,14 +84,16 @@
         "from": "line1",
         "to": "line1",
         "h": "120-150",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "120",
+        "atMost": "150"
       }
     ]
   },
   "date": {
     "_": "4th — 3rd century BCE, but whether part of a Dionysian, Agathoclean, or Hieronian phase unclear.",
     "notBefore": -400,
-    "notAfter": -200,
+    "notAfter": -201,
     "evidence": "archaeological-context"
   },
   "places": [
@@ -95,12 +101,14 @@
       "_": "Syracusae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462503",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,6 +117,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "First described in situ in the galleries off the second ditch of the fortress by Schubring in the 1860s",
     "type": "found",
@@ -121,6 +131,10 @@
     ],
     "geoCert": "medium"
   },
+  "provenanceGeo": [
+    37.091182,
+    15.221975
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -138,7 +152,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -161,7 +174,10 @@
           "lon": 15.22299
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462204"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462204"
+      }
     }
   },
   "textLang": {
@@ -177,9 +193,11 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0017",
+            "_": "17",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
@@ -189,41 +207,54 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001072",
           "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        },
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7139",
+            "_": "7139",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7139a = p.992",
+            "_": "7139a = p.992",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Schubring",
@@ -236,22 +267,28 @@
           "_": "https://biblio.inscriptiones.org/epig10001601",
           "target": "https://biblio.inscriptiones.org/epig10001601"
         },
+        "inscriptionDate": "1861-1867",
         "title": "Akrä-Palazzolo. Eine topographisch-archäologische Skizze",
-        "citation": "<span>J. Schubring, ‘Akrä-Palazzolo. Eine topographisch-archäologische Skizze’, <i>Jahrbücher für classische Philologie</i> Vierter Supplementband (1867 1861): 659–73</span>"
+        "citation": "<span>J. Schubring, ‘Akrä-Palazzolo. Eine topographisch-archäologische Skizze’, <i>Jahrbücher für classische Philologie</i> Vierter Supplementband (1867 1861): 659–73</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TBDXRINA",
+        "year": "1861"
       },
       {
         "author": "Orsi",
         "date": "2018",
         "citedRange": "Tacc. 2, p. 41",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RGRSRUHK"
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002617",
           "target": "https://biblio.inscriptiones.org/epig10002617"
         },
+        "inscriptionDate": "2018",
         "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>"
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       },
       {
         "author": "Beste and Mertens",
@@ -264,15 +301,15 @@
           "_": "https://biblio.inscriptiones.org/epig10002153",
           "target": "https://biblio.inscriptiones.org/epig10002153"
         },
-        "title": "Die Mauern von Syrakus. Das Kastell Euryalos und die Befestigung der Epipolai",
-        "citation": "<span>H.-J. Beste and D. Mertens, <i>Die Mauern von Syrakus. Das Kastell Euryalos und die Befestigung der Epipolai</i>, Deutsches Archäologisches Institut Rom Sonderschriften Band 18 (Wiesbaden: Reichert Verlag, 2015)</span>"
+        "inscriptionDate": "2015",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -296,27 +333,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -325,6 +344,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491648",
   "facsimile": {
     "n": "screen",
     "url": "ISic000419_tiled.tif",
@@ -333,15 +353,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 120,
+      "atMost": 150
+    }
+  ],
   "publications": [
-    "IG",
-    "CIL",
-    "CIL",
+    "Kaibel, 1890, IG",
+    "Mommsen, 1883, CIL",
+    "Mommsen, 1883, CIL",
     "Schubring, 1861-1867, Akrä-Palazzolo. Eine topographisch-archäologische Skizze",
     "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
-    "Beste and Mertens, 2015, Die Mauern von Syrakus. Das Kastell Euryalos und die Befestigung der Epipolai"
+    "Beste and Mertens, 2015"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "GQN8UZSI",
+    "GQN8UZSI",
+    "TBDXRINA",
+    "RGRSRUHK",
+    "P5TSMI73"
   ],
   "keywords": [
     "isic000419",
@@ -354,7 +386,7 @@
     "stone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "area archeologica castello eurialo",

@@ -40,7 +40,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -90,19 +94,21 @@
   },
   "date": {
     "_": "Appears to be of a form belonging to the later Roman period.",
-    "notBefore": 200,
+    "notBefore": 201,
     "notAfter": 500
   },
   "places": [
     {
       "_": "Agrigentum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462086"
+      "ref": "http://pleiades.stoa.org/places/462086",
+      "region": "Sicilia"
     },
     {
       "_": "Agrigento",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541860"
+      "ref": "http://sws.geonames.org/6541860",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -111,6 +117,8 @@
       13.58876
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Agrigentum",
   "provenanceFound": {
     "_": "Said by Picone to have been found 'vicinissimo al sepolcro detto di Terone'. Subsequently said by Kaibel to be in the museum at Agrigento, where he saw it, but it does not seem to have been observed subsequently.",
     "type": "found",
@@ -121,6 +129,10 @@
       13.585988
     ]
   },
+  "provenanceGeo": [
+    37.288916,
+    13.585988
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -129,7 +141,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
   "repository": {
@@ -152,7 +163,10 @@
           "lon": 13.58898416
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462086"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462086"
+      }
     }
   },
   "textLang": {
@@ -168,19 +182,23 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0265",
+            "_": "265",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "author": "Picone",
@@ -193,15 +211,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002681",
           "target": "https://biblio.inscriptiones.org/epig10002681"
         },
+        "inscriptionDate": "1866",
         "title": "Memorie storiche agrigentine",
-        "citation": "<span>Giuseppe Picone, <i>Memorie storiche agrigentine</i> (Girgenti: Stamperia provinciale-commerciale di Salvatore Montes, 1866)</span>"
+        "citation": "<span>Giuseppe Picone, <i>Memorie storiche agrigentine</i> (Girgenti: Stamperia provinciale-commerciale di Salvatore Montes, 1866)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/AVMJI6YU",
+        "year": "1866"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -225,27 +246,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -254,11 +257,15 @@
       "who": "#JP"
     }
   },
-  "provenance": "Agrigentum",
+  "tmNumber": "492713",
   "letterHeights": [],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Picone, 1866, Memorie storiche agrigentine"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "AVMJI6YU"
   ],
   "keywords": [
     "isic001084",
@@ -271,7 +278,7 @@
     "marble",
     "agrigentum",
     "agrigento",
-    "italy",
+    "sicilia",
     "sicily",
     "agrigento",
     "museo regionale archeologico pietro griffo",

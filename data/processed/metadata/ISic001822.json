@@ -35,9 +35,24 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Very fine-grained, homogeneous, white, calcitic marble, likely Lunense. Optical microscopy: homeoblastic fabric with triple points, mosaic microstructure. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Carrara",
+        "target": "https://www.geonames.org/6542087/carrara.html"
+      },
+      "location": {
+        "geo": "44.06294,10.06069"
+      }
+    }
   },
   "condition": "",
   "dimensions": [
@@ -75,7 +90,9 @@
         "from": "line1",
         "to": "line1",
         "h": "65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -88,7 +105,7 @@
   },
   "date": {
     "_": "Late second to fourth century CE",
-    "notBefore": 150,
+    "notBefore": 151,
     "notAfter": 400,
     "evidence": "lettering"
   },
@@ -96,12 +113,14 @@
     {
       "_": "Centuripae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462153"
+      "ref": "http://pleiades.stoa.org/places/462153",
+      "region": "Sicilia"
     },
     {
       "_": "Centuripe",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525032"
+      "ref": "http://sws.geonames.org/2525032",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,12 +129,15 @@
       14.74049
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Centuripae",
   "provenanceFound": {
     "_": "Original discovery not recorded",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2014-09-15 and 2015-03-26",
     "type": "observed",
@@ -157,7 +179,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -183,7 +204,7 @@
     }
   },
   "idno": {
-    "_": "no inventory number",
+    "_": "108439",
     "type": "inventory"
   },
   "textLang": {
@@ -196,13 +217,13 @@
   "bibliographyEdition": {
     "type": "edition",
     "bibl": [
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -221,27 +242,14 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -250,6 +258,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001822_fr1_tiled.tif",
@@ -258,9 +267,14 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 12.09.2014",
     "surfaceType": "front"
   },
-  "provenance": "Centuripae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 65,
+      "atMost": 65
+    }
+  ],
   "publications": [],
+  "zotero": [],
   "keywords": [
     "isic001822",
     "i.sicily inscription 001822",
@@ -269,10 +283,10 @@
     },
     "unknown",
     "plaque",
-    "marble",
+    "very fine-grained, homogeneous, white, calcitic marble, likely lunense. optical microscopy: homeoblastic fabric with triple points, mosaic microstructure. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "centuripae",
     "centuripe",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

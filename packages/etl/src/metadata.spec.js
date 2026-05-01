@@ -148,7 +148,9 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getStatus(xml)).toBe("draft");
+    const status = metadataExtractors.getStatus(xml);
+
+    expect(status._).toBe("draft");
   });
 
   it("should be empty", async () => {
@@ -162,7 +164,9 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getStatus(xml)).toBe("");
+    const status = metadataExtractors.getStatus(xml);
+
+    expect(status._).toBe("");
   });
 
   it("should be undefined", async () => {
@@ -175,7 +179,9 @@ describe("getStatus function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getStatus(xml)).toBe(undefined);
+    const status = metadataExtractors.getStatus(xml);
+
+    expect(status._).toBe(undefined);
   });
 });
 
@@ -218,6 +224,34 @@ describe("getType function", () => {
 });
 
 describe("getObjectType function", () => {
+  it("removes spaces from objectType ref URL", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <physDesc>
+                  <objectDesc>
+                    <supportDesc>
+                      <support>
+                        <objectType ref="https://www.e agle-network.eu/voc/objtyp/lod/144.html">basin</objectType>
+                      </support>
+                    </supportDesc>
+                  </objectDesc>
+                </physDesc>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getObjectType(xml).ref).toBe(
+      "https://www.eagle-network.eu/voc/objtyp/lod/144.html",
+    );
+  });
+
   it("should return the object type when it exists", async () => {
     const xml = await createXmlObject(`
       <TEI>
@@ -618,13 +652,30 @@ describe("getPlaces function", () => {
 });
 
 describe("getFacsimile function", () => {
-  it("should return null when facsimile is not present", async () => {
+  it("removes spaces from graphic url", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <facsimile>
+          <surface>
+            <graphic n="screen" url=" https://example.com/img.tif "/>
+            <graphic n="print" url="https://example.com/img.jpg"/>
+          </surface>
+        </facsimile>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getFacsimile(xml)[0].url).toBe(
+      "https://example.com/img.tif",
+    );
+  });
+
+  it("should return an empty array when facsimile is not present", async () => {
     const xml = await createXmlObject(`
       <TEI>
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toBeNull();
+    expect(metadataExtractors.getFacsimile(xml).length).toBe(0);
   });
 
   it("should return facsimile data when surface is not an array", async () => {
@@ -632,20 +683,17 @@ describe("getFacsimile function", () => {
       <TEI>
         <facsimile>
           <surface>
-            <graphic url="image.tif" desc="Sample description"/>
+            <graphic url="image.tif" desc="Sample description" n="screen" />
             <graphic url="image.jpg" desc="Sample description"/>
           </surface>
         </facsimile>
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toEqual({
-      url: "image.tif",
-      desc: "Sample description",
-    });
+    expect(metadataExtractors.getFacsimile(xml).length).toEqual(1);
   });
 
-  it("should return null when no .tif file is found", async () => {
+  it("should return an empty array when no .tif file is found", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <facsimile>
@@ -657,29 +705,48 @@ describe("getFacsimile function", () => {
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toBeNull();
+    expect(metadataExtractors.getFacsimile(xml).length).toEqual(0);
   });
 
-  it("should return first .tif file when multiple are present", async () => {
+  it("should return all .tif files when multiple are present", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <facsimile>
           <surface>
-            <graphic url="image1.tif" desc="TIF 1"/>
-            <graphic url="image2.tif" desc="TIF 2"/>
+            <graphic url="image1.tif" desc="TIF 1" n="screen"/>
+            <graphic url="image2.tif" desc="TIF 2" n="screen"/>
           </surface>
         </facsimile>
       </TEI>
     `);
 
-    expect(metadataExtractors.getFacsimile(xml)).toEqual({
-      url: "image1.tif",
-      desc: "TIF 1",
-    });
+    expect(metadataExtractors.getFacsimile(xml).length).toEqual(2);
   });
 });
 
 describe("getMsIdentifier function", () => {
+  it("removes spaces from repository ref", async () => {
+    const xml = await createXmlObject(`
+      <TEI>
+        <teiHeader>
+          <fileDesc>
+            <sourceDesc>
+              <msDesc>
+                <msIdentifier>
+                  <repository ref=" http://sicily.classics.ox.ac.uk/museum/unknown">Some Museum</repository>
+                </msIdentifier>
+              </msDesc>
+            </sourceDesc>
+          </fileDesc>
+        </teiHeader>
+      </TEI>
+    `);
+
+    expect(metadataExtractors.getMsIdentifier(xml).repository.ref).toBe(
+      "http://sicily.classics.ox.ac.uk/museum/unknown",
+    );
+  });
+
   it("should handle empty strings for all properties", async () => {
     const xml = await createXmlObject(`
       <TEI>
@@ -760,7 +827,7 @@ describe("getMsIdentifier function", () => {
 });
 
 describe("getTextLang function", () => {
-  it("should return the textLang object when it exists", async () => {
+  it("should build the languages list from main, other and possible languages", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -768,7 +835,11 @@ describe("getTextLang function", () => {
             <sourceDesc>
               <msDesc>
                 <msContents>
-                  <textLang mainLang="la">Latin</textLang>
+                  <textLang mainLang="la" otherLangs="grc heb">
+                    Latin
+                    <certainty assertedValue="osc"/>
+                    <certainty assertedValue="xpu"/>
+                  </textLang>
                 </msContents>
               </msDesc>
             </sourceDesc>
@@ -776,14 +847,23 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
-    expect(metadataExtractors.getTextLang(xml)).toEqual({
-      _: "Latin",
-      languages: ["Latin"],
+
+    const textLang = metadataExtractors.getTextLang(xml);
+
+    expect(textLang?.languages).toEqual([
+      "Latin",
+      "Ancient Greek",
+      "Hebrew",
+      "Oscan (possibly)",
+      "Punic (possibly)",
+    ]);
+    expect(textLang).toMatchObject({
       mainLang: "la",
+      otherLangs: "grc heb",
     });
   });
 
-  it("should return undefined when textLang doesn't exist", async () => {
+  it("should return null when textLang doesn't exist", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -823,7 +903,7 @@ describe("getTextLang function", () => {
     });
   });
 
-  it("should return an empty object when textLang is present but empty", async () => {
+  it("should return a languages array with undefined when textLang is empty", async () => {
     const xml = await createXmlObject(`
       <TEI>
         <teiHeader>
@@ -839,6 +919,7 @@ describe("getTextLang function", () => {
         </teiHeader>
       </TEI>
     `);
+
     expect(metadataExtractors.getTextLang(xml)).toBeNull();
   });
 });

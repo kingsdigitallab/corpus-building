@@ -44,7 +44,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line9",
         "h": "130-170 (but omicron 90-110)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "130",
+        "atMost": "170"
       },
       {
         "type": "interlinear",
@@ -103,12 +110,14 @@
       "_": "Syracusae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462503",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -117,6 +126,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "In situ in the cunei of the diazoma of the theatre of Hieron II, Siracusa",
     "type": "found",
@@ -127,6 +138,10 @@
       15.275032
     ]
   },
+  "provenanceGeo": [
+    37.075999,
+    15.275032
+  ],
   "provenanceObserved": {
     "_": "Prag, April 2006",
     "type": "observed",
@@ -200,7 +215,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -223,7 +237,10 @@
           "lon": 15.2780021
         }
       },
-      "pleiades": "http://pleiades.stoa.org/places/219478548"
+      "idno": {
+        "type": "Pleiades",
+        "url": "http://pleiades.stoa.org/places/219478548"
+      }
     }
   },
   "textLang": {
@@ -239,9 +256,11 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0003",
+            "_": "3",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
@@ -251,79 +270,103 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001072",
           "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        },
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "57.0893.2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "56.1103.1.3",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "42.0820.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "34.0975",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5369",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5369",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "type": "corpus",
@@ -337,8 +380,11 @@
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
         "title": "Sammlung der griechischen Dialekt-Inschriften",
+        "author": "Bechtel, Collitz, Meister, Bezzenberger",
         "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JB4GMPBH",
+        "year": "1884"
       },
       {
         "author": "Bell",
@@ -350,8 +396,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002162",
           "target": "https://biblio.inscriptiones.org/epig10002162"
         },
+        "inscriptionDate": "1999",
         "title": "Centro e periferia nel regno siracusano di Ierone II",
-        "citation": "<span>Malcolm Bell, «Centro e periferia nel regno siracusano di Ierone II», in <i>La colonisation grecque en Méditerranée occidentale</i>, CEFR 251 (Rome, Paris, 1999), 257–77</span>"
+        "citation": "<span>Malcolm Bell, «Centro e periferia nel regno siracusano di Ierone II», in <i>La colonisation grecque en Méditerranée occidentale</i>, CEFR 251 (Rome, Paris, 1999), 257–77</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8R9SBBHV",
+        "year": "1999"
       },
       {
         "author": "Guarducci",
@@ -364,8 +413,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000193",
           "target": "https://biblio.inscriptiones.org/epig10000193"
         },
+        "inscriptionDate": "1967-1978",
         "title": "Epigrafia greca",
-        "citation": "<span>Margherita Guarducci, <i>Epigrafia greca</i>, 4 voll. (Rome: Istituto Poligrafico dello Stato, Libreria dello Stato, 1967)</span>"
+        "citation": "<span>Margherita Guarducci, <i>Epigrafia greca</i>, 4 voll. (Rome: Istituto Poligrafico dello Stato, Libreria dello Stato, 1967)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ENQ4AGD6",
+        "year": "1967"
       },
       {
         "author": "Dimartino",
@@ -378,21 +430,27 @@
           "_": "https://biblio.inscriptiones.org/epig10002022",
           "target": "https://biblio.inscriptiones.org/epig10002022"
         },
+        "inscriptionDate": "2006",
         "title": "Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II",
-        "citation": "<span>Alessia Dimartino, «Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II», in <i>Guerra e pace in Sicilia e nel Mediterraneo antico (VIII-III sec. a.C.). Arte, prassi e teoria della pace e della guerra</i>, a c. di C. Michelini, vol. 2, 2 voll., Atti Elimi V (Pisa: Edizioni della Normale, 2006), 703–17</span>"
+        "citation": "<span>Alessia Dimartino, «Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II», in <i>Guerra e pace in Sicilia e nel Mediterraneo antico (VIII-III sec. a.C.). Arte, prassi e teoria della pace e della guerra</i>, a c. di C. Michelini, vol. 2, 2 voll., Atti Elimi V (Pisa: Edizioni della Normale, 2006), 703–17</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7AQ7W2MW",
+        "year": "2006"
       },
       {
         "author": "Dimartino",
         "date": "2017",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/8DTPUFMC"
+          "target": "https://www.zotero.org/groups/382445/items/8DTPUFMC"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002579",
           "target": "https://biblio.inscriptiones.org/epig10002579"
         },
+        "inscriptionDate": "2017",
         "title": "Iscrizioni del teatro di Siracusa",
-        "citation": "<span>Alessia Dimartino, «Iscrizioni del teatro di Siracusa», <i>Axon</i> 1,1, fasc. 103 (2017): 267–76, <a href=\"https://doi.org/10.14277/2532-6848/Axon-1-1-17-25\">https://doi.org/10.14277/2532-6848/Axon-1-1-17-25</a></span>"
+        "citation": "<span>Alessia Dimartino, «Iscrizioni del teatro di Siracusa», <i>Axon</i> 1,1, fasc. 103 (2017): 267–76, <a href=\"https://doi.org/10.14277/2532-6848/Axon-1-1-17-25\">https://doi.org/10.14277/2532-6848/Axon-1-1-17-25</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8DTPUFMC",
+        "year": "2017"
       },
       {
         "author": "Dittenberger",
@@ -405,8 +463,11 @@
           "_": "https://biblio.inscriptiones.org/epig10000727",
           "target": "https://biblio.inscriptiones.org/epig10000727"
         },
+        "inscriptionDate": "1915-1924",
         "title": "Sylloge inscriptionum graecarum",
-        "citation": "<span>W. Dittenberger, <i>Sylloge inscriptionum graecarum</i>, 3rd ed., 3 vols (Leipzig: S. Hirzelium, 1915)</span>"
+        "citation": "<span>W. Dittenberger, <i>Sylloge inscriptionum graecarum</i>, 3rd edn, 3 vols (Leipzig: S. Hirzelium, 1915)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XP5NMDKZ",
+        "year": "1915"
       },
       {
         "author": "Lehmler",
@@ -419,15 +480,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001882",
           "target": "https://biblio.inscriptiones.org/epig10001882"
         },
+        "inscriptionDate": "2005",
         "title": "Syrakus unter Agathokles und Hieron II",
-        "citation": "<span>C. Lehmler, <i>Syrakus unter Agathokles und Hieron II</i> (Frankfurt am Main: Verlag Antike, 2005)</span>"
+        "citation": "<span>C. Lehmler, <i>Syrakus unter Agathokles und Hieron II</i> (Frankfurt am Main: Verlag Antike, 2005)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7S4PPJU9",
+        "year": "2005"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -451,20 +515,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -475,16 +525,23 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag revised from autopsy notes and added images",
-      "when": "2024-09-16",
-      "who": "#JP"
+      "_": "tagged names and persons",
+      "when": "2025-12-02",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "285055",
   "facsimile": {
     "n": "screen",
     "url": "ISic000824_cun2_a_tiled.tif",
@@ -493,22 +550,41 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag April 2006.",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 130,
+      "atMost": 170
+    }
+  ],
   "publications": [
-    "IG",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "CIG",
-    "SGDI, 1884-1915",
+    "Boeckh, Franz, 1853, CIG",
+    "Bechtel, Collitz, Meister, Bezzenberger, 1884-1915, SGDI",
     "Bell, 1999, Centro e periferia nel regno siracusano di Ierone II",
     "Guarducci, 1967-1978, Epigrafia greca",
     "Dimartino, 2006, Per una revisione dei documenti epigrafici siracusani pertinenti al regno di Ierone II",
     "Dimartino, 2017, Iscrizioni del teatro di Siracusa",
     "Dittenberger, 1915-1924, Sylloge inscriptionum graecarum",
     "Lehmler, 2005, Syrakus unter Agathokles und Hieron II"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "TQMVHEVL",
+    "JB4GMPBH",
+    "8R9SBBHV",
+    "ENQ4AGD6",
+    "7AQ7W2MW",
+    "8DTPUFMC",
+    "XP5NMDKZ",
+    "7S4PPJU9"
   ],
   "keywords": [
     "isic000824",
@@ -521,7 +597,7 @@
     "limestone",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "area archeologica della neapolis, orecchio di dionisio e teatro greco",

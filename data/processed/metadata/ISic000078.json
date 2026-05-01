@@ -32,7 +32,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
   },
   "condition": "",
@@ -81,19 +85,20 @@
   "date": {
     "_": "Garbini says 4th — 3rd century BCE;\n                                A-G, who didn't see it, suggests 4th — 2nd century BCE",
     "notBefore": -400,
-    "notAfter": -200,
-    "precision": "low"
+    "notAfter": -201
   },
   "places": [
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462489"
+      "ref": "http://pleiades.stoa.org/places/462489",
+      "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523164"
+      "ref": "http://sws.geonames.org/2523164",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -102,11 +107,14 @@
       12.82522
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Selinus",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -130,7 +138,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -168,6 +175,8 @@
       {
         "type": "corpus",
         "n": "IFPCO",
+        "author": "Amadasi Guzzo",
+        "date": "1967",
         "citedRange": "Sic.Pun.11",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q6R2U5KS"
@@ -175,7 +184,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002195",
           "target": "https://biblio.inscriptiones.org/epig10002195"
-        }
+        },
+        "inscriptionDate": "1967",
+        "title": "Le iscrizioni fenicie e puniche delle colonie in Occidente",
+        "citation": "<span>Maria Giulia Amadasi Guzzo, <i>Le iscrizioni fenicie e puniche delle colonie in Occidente</i> (Rome: Istituto di studi del vicino Oriente, 1967)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q6R2U5KS",
+        "year": "1967"
       },
       {
         "author": "Garbini",
@@ -187,7 +201,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001965",
           "target": "https://biblio.inscriptiones.org/epig10001965"
-        }
+        },
+        "inscriptionDate": "1967",
+        "title": "Catalogo delle iscrizioni fenicie conservate nel Museo Archeologico Nazionale di Palermo",
+        "citation": "<span>G Garbini, «Catalogo delle iscrizioni fenicie conservate nel Museo Archeologico Nazionale di Palermo», <i>Kokalos</i> 13 (1967): 66–72</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ES8GGF2J",
+        "year": "1967"
       },
       {
         "author": "Garbini",
@@ -199,14 +218,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001967",
           "target": "https://biblio.inscriptiones.org/epig10001967"
-        }
+        },
+        "inscriptionDate": "1965",
+        "title": "Note di epigrafia punica I",
+        "citation": "<span>G Garbini, «Note di epigrafia punica I», <i>Rivista degli Studi Orientali</i> 40 (1965): 205–13</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Z9V3RG3D",
+        "year": "1965"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -230,27 +254,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -259,6 +265,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "644813",
   "facsimile": {
     "n": "screen",
     "url": "ISic000078_tiled.tif",
@@ -267,12 +274,16 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Selinus",
   "letterHeights": [],
   "publications": [
-    "IFPCO",
-    "Garbini, 1967",
-    "Garbini, 1965"
+    "Amadasi Guzzo, 1967, IFPCO",
+    "Garbini, 1967, Catalogo delle iscrizioni fenicie conservate nel Museo Archeologico Nazionale di Palermo",
+    "Garbini, 1965, Note di epigrafia punica I"
+  ],
+  "zotero": [
+    "Q6R2U5KS",
+    "ES8GGF2J",
+    "Z9V3RG3D"
   ],
   "keywords": [
     "isic000078",
@@ -284,7 +295,7 @@
     "sandstone",
     "selinus",
     "selinunte",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

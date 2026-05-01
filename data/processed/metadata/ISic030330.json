@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "lead",
-    "ana": "#material.metal.lead",
+    "ana": "#material.inorganic.metal.lead",
+    "type": "metal.lead",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "https://www.eagle-network.eu/voc/material/lod/108.html"
   },
   "condition": "",
@@ -75,7 +79,9 @@
         "from": "line1",
         "to": "line11",
         "h": "5-10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "10"
       }
     ]
   },
@@ -89,12 +95,14 @@
     {
       "_": "Messana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462538"
+      "ref": "http://pleiades.stoa.org/places/462538",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524170"
+      "ref": "http://sws.geonames.org/2524170",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -103,6 +111,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Found, together with a second (fragile and unopened) defixio in the southern necropolis of Orti della Maddalena, within tomb 410 (Hellenistic), in isolato 83, IV comparto .",
     "type": "found",
@@ -113,6 +123,10 @@
       15.5498881
     ]
   },
+  "provenanceGeo": [
+    38.1837267,
+    15.5498881
+  ],
   "provenanceObserved": {
     "_": "No Autopsy",
     "type": "observed",
@@ -121,7 +135,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": {
@@ -171,15 +184,18 @@
           "_": "https://biblio.inscriptiones.org/epig10003117",
           "target": "https://biblio.inscriptiones.org/epig10003117"
         },
+        "inscriptionDate": "2023",
         "title": "Defixio inedita di epoca ellenistica dalla necropoli meridionale di Messina",
-        "citation": "<span>Emiliano Arena, «Defixio inedita di epoca ellenistica dalla necropoli meridionale di Messina», <i>Historika</i> 13 (2023): 155–76</span>"
+        "citation": "<span>Emiliano Arena, «Defixio inedita di epoca ellenistica dalla necropoli meridionale di Messina», <i>Historika</i> 13 (2023): 155–76</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WWKR5V5M",
+        "year": "2023"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -196,15 +212,6 @@
         "_": "Jonathan Prag",
         "xml:id": "JP",
         "ref": "https://orcid.org/0000-0003-3819-8537"
-      },
-      {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
       }
     ],
     "change": {
@@ -213,10 +220,18 @@
       "who": "#JP"
     }
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "tmNumber": "",
+  "letterHeights": [
+    {
+      "atLeast": 5,
+      "atMost": 10
+    }
+  ],
   "publications": [
     "Arena, 2023, Defixio inedita di epoca ellenistica dalla necropoli meridionale di Messina"
+  ],
+  "zotero": [
+    "WWKR5V5M"
   ],
   "keywords": [
     "isic030330",
@@ -229,7 +244,7 @@
     "lead",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "soprintendenza beni culturali e ambientali di messina",

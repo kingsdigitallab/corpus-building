@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -79,7 +83,9 @@
         "from": "line1",
         "to": "line1",
         "h": "12",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "12",
+        "atMost": "12"
       },
       {
         "type": "letterHeight",
@@ -87,7 +93,9 @@
         "from": "line2",
         "to": "line2",
         "h": "12-14",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "12",
+        "atMost": "14"
       },
       {
         "type": "interlinear",
@@ -95,7 +103,9 @@
         "from": "line1",
         "to": "line2",
         "h": "2",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "2",
+        "atMost": "2"
       },
       {
         "type": "interlinear",
@@ -103,27 +113,30 @@
         "from": "line2",
         "to": "line3",
         "h": "1-2",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "1",
+        "atMost": "2"
       }
     ]
   },
   "date": {
     "_": "4th century CE",
     "notBefore": 301,
-    "notAfter": 399,
-    "evidence": "lettering",
-    "precision": "low"
+    "notAfter": 400,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Megara Hyblaea",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462307"
+      "ref": "http://pleiades.stoa.org/places/462307",
+      "region": "Sicilia"
     },
     {
       "_": "Megara Iblea",
       "type": "modern",
-      "ref": "http://sws.geonames.org/8063661"
+      "ref": "http://sws.geonames.org/8063661",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -132,11 +145,14 @@
       15.18274
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Megara Hyblaea",
   "provenanceFound": {
     "_": "Original discovery not recorded.",
     "type": "found",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -154,7 +170,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
   "repository": {
@@ -194,35 +209,41 @@
         "date": "2011",
         "citedRange": "127-129 with fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DFXDQ8GT"
+          "target": "https://www.zotero.org/groups/382445/items/DFXDQ8GT"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002619",
           "target": "https://biblio.inscriptiones.org/epig10002619"
         },
+        "inscriptionDate": "2011",
         "title": "À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea",
-        "citation": "<span>Henry Tréziny, « À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea », <i>Provence Historique. Hommages à Jean Guyon</i> 61, n<sup>o</sup> 243‑244 (2011): 127‑34</span>"
+        "citation": "<span>Henry Tréziny, « À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea », <i>Provence Historique. Hommages à Jean Guyon</i> 61, n<sup>o</sup> 243‑244 (2011): 127‑34</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DFXDQ8GT",
+        "year": "2011"
       },
       {
         "author": "Tréziny",
         "date": "2018",
         "citedRange": "283-284 with fig.422",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/5UHWUE4K"
+          "target": "https://www.zotero.org/groups/382445/items/5UHWUE4K"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002599",
           "target": "https://biblio.inscriptiones.org/epig10002599"
         },
+        "inscriptionDate": "2018",
         "title": "Mégara Hyblaea. 7, La ville classique, hellénistique et romaine",
-        "citation": "<span>Henry Tréziny, <i>Mégara Hyblaea. 7, La ville classique, hellénistique et romaine</i>, CEFR 1/7 (Rome: École française de Rome, 2018)</span>"
+        "citation": "<span>Henry Tréziny, <i>Mégara Hyblaea. 7, La ville classique, hellénistique et romaine</i>, CEFR 1/7 (Rome: École française de Rome, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/5UHWUE4K",
+        "year": "2018"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -246,24 +267,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -275,6 +278,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004390_tiled.tif",
@@ -283,11 +287,31 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Megara Hyblaea",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 12,
+      "atMost": 12
+    },
+    {
+      "atLeast": 12,
+      "atMost": 14
+    },
+    {
+      "atLeast": 2,
+      "atMost": 2
+    },
+    {
+      "atLeast": 1,
+      "atMost": 2
+    }
+  ],
   "publications": [
     "Tréziny, 2011, À propos d’une inscription funéraire paléochrétienne de Mégara Hyblaea",
     "Tréziny, 2018, Mégara Hyblaea. 7, La ville classique, hellénistique et romaine"
+  ],
+  "zotero": [
+    "DFXDQ8GT",
+    "5UHWUE4K"
   ],
   "keywords": [
     "isic004390",
@@ -300,7 +324,7 @@
     "marble",
     "megara hyblaea",
     "megara iblea",
-    "italy",
+    "sicilia",
     "sicily",
     "megara hyblaea",
     "antiquarium di megara hyblaia",

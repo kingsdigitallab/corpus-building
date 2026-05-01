@@ -38,7 +38,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -79,7 +83,9 @@
         "from": "line1",
         "to": "line1",
         "h": "18",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "18",
+        "atMost": "18"
       },
       {
         "type": "letterHeight",
@@ -87,7 +93,9 @@
         "from": "line2",
         "to": "line2",
         "h": "15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "15"
       },
       {
         "type": "letterHeight",
@@ -95,7 +103,9 @@
         "from": "line3",
         "to": "line3",
         "h": "15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "15"
       },
       {
         "type": "interlinear",
@@ -109,19 +119,20 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Tauromenium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462506"
+      "ref": "http://pleiades.stoa.org/places/462506",
+      "region": "Sicilia"
     },
     {
       "_": "Taormina",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2522975"
+      "ref": "http://sws.geonames.org/2522975",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -130,6 +141,8 @@
       15.28851
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tauromenium",
   "provenanceFound": {
     "_": "Acquired in 1868 from D. Gaetano Zucchero of Taormina, having been found in the area of the Chiesa di San Pancrazio, together with a statue of a priestess of Isis",
     "type": "found",
@@ -137,6 +150,7 @@
     "notAfter": "1868",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -145,7 +159,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -194,14 +207,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10003147",
           "target": "https://biblio.inscriptiones.org/epig10003147"
-        }
+        },
+        "inscriptionDate": "1867",
+        "title": "Scavi di Taormina",
+        "citation": "<span>R. Schoene, «Scavi di Taormina», <i>Bullettino dell’Instituto di corrispondenza archeologica</i>, 1867, 172–73, <a href=\"https://archive.org/details/bullettinodellin1867inst\">https://archive.org/details/bullettinodellin1867inst</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RX6QDFXY",
+        "year": "1867"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.6989",
+            "_": "6989",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650752"
           }
         },
@@ -211,19 +231,28 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusPalermo",
+        "author": "Bivona",
+        "date": "1970",
         "citedRange": "49",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/FZWWPUD6"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10002142",
-          "target": "https://biblio.inscriptiones.org/epig10002142"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/FZWWPUD6",
+        "inscriptionDate": "1970",
+        "title": "Iscrizioni latine lapidarie del Museo di Palermo",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del Museo di Palermo</i>, Sikelia 5 (Palermo: Flaccovio, 1970)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FZWWPUD6",
+        "year": "1970"
       },
       {
         "author": "Manganaro",
@@ -235,7 +264,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001852",
           "target": "https://biblio.inscriptiones.org/epig10001852"
-        }
+        },
+        "inscriptionDate": "1961",
+        "title": "Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia», <i>Siculorum Gymnasium</i> 14 (1961): 175–98</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HXK7DASC",
+        "year": "1961"
       },
       {
         "author": "Muscolino",
@@ -246,14 +280,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002217",
           "target": "https://biblio.inscriptiones.org/epig10002217"
-        }
+        },
+        "inscriptionDate": "2014",
+        "title": "San Pancrazio e il Falcone. culti antichi e recenti da Taormina a Naxos. I.",
+        "citation": "<span>Francesco Muscolino, «San Pancrazio e il Falcone. culti antichi e recenti da Taormina a Naxos. I.», in <i>Dinamiche culturali ed etniche nella Sicilia orientale dall’età classica all’epoca ellenistica</i>, Aristonothos, Quaderni 4 (Trento: Tangram Edizioni Scientifiche, 2014), 233–35</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8Z58IHXS",
+        "year": "2014"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -277,20 +316,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -299,10 +324,6 @@
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -311,14 +332,34 @@
       "who": "#JP"
     }
   },
-  "provenance": "Tauromenium",
-  "letterHeights": [],
+  "tmNumber": "491487",
+  "letterHeights": [
+    {
+      "atLeast": 18,
+      "atMost": 18
+    },
+    {
+      "atLeast": 15,
+      "atMost": 15
+    },
+    {
+      "atLeast": 15,
+      "atMost": 15
+    }
+  ],
   "publications": [
-    "Schoene, 1867",
-    "CIL",
-    "ILMusPalermo",
-    "Manganaro, 1961",
-    "Muscolino, 2014"
+    "Schoene, 1867, Scavi di Taormina",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1970, ILMusPalermo",
+    "Manganaro, 1961, Ricerche di epigrafia siceliota. I. Per la storia del culto delle divinita orientali in Sicilia",
+    "Muscolino, 2014, San Pancrazio e il Falcone. culti antichi e recenti da Taormina a Naxos. I."
+  ],
+  "zotero": [
+    "RX6QDFXY",
+    "GQN8UZSI",
+    "FZWWPUD6",
+    "HXK7DASC",
+    "8Z58IHXS"
   ],
   "keywords": [
     "isic000048",
@@ -331,7 +372,7 @@
     "marble",
     "tauromenium",
     "taormina",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

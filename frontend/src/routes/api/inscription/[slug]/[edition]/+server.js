@@ -20,6 +20,7 @@ export async function GET({ params: { slug, edition } }) {
 
 		return json(foundEdition, {
 			headers: {
+				'Content-Type': 'application/json; charset=utf-8',
 				'Cache-Control': 'public, max-age=3600'
 			}
 		});
@@ -40,8 +41,8 @@ export async function GET({ params: { slug, edition } }) {
 export function entries() {
 	return Array.isArray(corpus)
 		? corpus.flatMap(({ file: slug }) => [
-				{ slug, edition: 'interpretive' },
-				{ slug, edition: 'diplomatic' }
-			])
+			{ slug, edition: 'interpretive' },
+			{ slug, edition: 'diplomatic' }
+		])
 		: [];
 }

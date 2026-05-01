@@ -36,8 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "type": "stone.calcilutite",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -77,7 +79,9 @@
         "from": "line1",
         "to": "line5",
         "h": "55-65",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "55",
+        "atMost": "65"
       },
       {
         "type": "interlinear",
@@ -98,12 +102,14 @@
     {
       "_": "Lilybaeum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462281"
+      "ref": "http://pleiades.stoa.org/places/462281",
+      "region": "Sicilia"
     },
     {
       "_": "Marsala",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6542148"
+      "ref": "http://sws.geonames.org/6542148",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +118,8 @@
       12.4379
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Lilybaeum",
   "provenanceFound": {
     "_": "Right fragment excavated between 1999 and 2010 in re-use on the decumanus maximus, Capo Boeo; left fragment only identified in 2020. Now in the Museo Archeologico Regionale di Marsala.\n                        ",
     "type": "found",
@@ -123,6 +131,10 @@
       12.429402
     ]
   },
+  "provenanceGeo": [
+    37.802778,
+    12.429402
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -131,9 +143,15 @@
   },
   "provenanceLost": null,
   "graphics": [
-    null
+    {
+      "n": "screen",
+      "url": "ISic004406_tiled.tif",
+      "height": "3072px",
+      "width": "4080px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-18",
+      "surfaceType": "front"
+    }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Marsala",
   "repository": {
@@ -177,35 +195,41 @@
         "date": "2020",
         "citedRange": "298-299 no.2 with fig.6",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/JU3LWCJM"
+          "target": "https://www.zotero.org/groups/382445/items/JU3LWCJM"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002609",
           "target": "https://biblio.inscriptiones.org/epig10002609"
         },
+        "inscriptionDate": "2020",
         "title": "Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo",
-        "citation": "<span>Marina Silvestrini, «Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo», <i>Zeitschrift fūr Papyrologie und Epigraphik</i> 213 (2020): 294–300</span>"
+        "citation": "<span>Marina Silvestrini, «Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo», <i>Zeitschrift fūr Papyrologie und Epigraphik</i> 213 (2020): 294–300</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JU3LWCJM",
+        "year": "2020"
       },
       {
         "author": "Silvestrini",
         "date": "2022",
         "citedRange": "",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MRDSWFG9"
+          "target": "https://www.zotero.org/groups/382445/items/MRDSWFG9"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001579",
           "target": "https://biblio.inscriptiones.org/epig10001579"
         },
+        "inscriptionDate": "2022",
         "title": "Lilibeo: un'inedita sigla in un'epigrafe per Caracalla",
-        "citation": "<span>Marina Silvestrini, «Lilibeo: un’inedita sigla in un’epigrafe per Caracalla», <i>Zeitschrift für Papyrologie und Epigraphik</i> 221 (2022): 271–75</span>"
+        "citation": "<span>Marina Silvestrini, «Lilibeo: un’inedita sigla in un’epigrafe per Caracalla», <i>Zeitschrift für Papyrologie und Epigraphik</i> 221 (2022): 271–75</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MRDSWFG9",
+        "year": "2022"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -229,20 +253,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -252,8 +262,9 @@
         "xml:id": "AT"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -262,11 +273,28 @@
       "who": "#JP"
     }
   },
-  "provenance": "Lilybaeum",
-  "letterHeights": [],
+  "tmNumber": "",
+  "facsimile": {
+    "n": "screen",
+    "url": "ISic004406_tiled.tif",
+    "height": "3072px",
+    "width": "4080px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-18",
+    "surfaceType": "front"
+  },
+  "letterHeights": [
+    {
+      "atLeast": 55,
+      "atMost": 65
+    }
+  ],
   "publications": [
     "Silvestrini, 2020, Un autorevole tribuno militare e una titolatura imperiale in due epigrafi inedite di Lilibeo",
     "Silvestrini, 2022, Lilibeo: un'inedita sigla in un'epigrafe per Caracalla"
+  ],
+  "zotero": [
+    "JU3LWCJM",
+    "MRDSWFG9"
   ],
   "keywords": [
     "isic004406",
@@ -279,7 +307,7 @@
     "limestone",
     "lilybaeum",
     "marsala",
-    "italy",
+    "sicilia",
     "sicily",
     "marsala",
     "museo archeologico regionale lilibeo marsala - baglio anselmi",

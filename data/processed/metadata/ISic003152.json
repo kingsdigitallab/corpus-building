@@ -37,7 +37,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -79,7 +83,9 @@
         "from": "line1",
         "to": "line2",
         "h": "53-57",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "57"
       },
       {
         "type": "interlinear",
@@ -93,19 +99,20 @@
   "date": {
     "_": "1st century CE or beginning 2nd century CE (Korhonen)",
     "notBefore": 1,
-    "notAfter": 150,
-    "precision": "low"
+    "notAfter": 150
   },
   "places": [
     {
       "_": "Catina",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462270"
+      "ref": "http://pleiades.stoa.org/places/462270",
+      "region": "Sicilia"
     },
     {
       "_": "Catania",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525068"
+      "ref": "http://sws.geonames.org/2525068",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -114,12 +121,15 @@
       15.07041
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Catina",
   "provenanceFound": {
     "_": "Reported by C. Stevenson in Cod. Vat. lat. 10574, f. 171r, but unpublished. He saw it in the early 1880s in the corridor of the former Museum\n                            of the Benedictines, by then the Municipal Antiquarium.",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "none",
     "type": "observed",
@@ -142,10 +152,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Catania",
-  "repository": "",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -163,17 +172,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/2EUC82DH"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000028",
-          "target": "https://biblio.inscriptiones.org/epig10000028"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/2EUC82DH",
+        "inscriptionDate": "2004",
+        "title": "Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione",
+        "citation": "<span>Kalle Korhonen, <i>Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione</i> (Helsinki: Societas Scientiarum Fennica, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2EUC82DH",
+        "year": "2004"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -197,20 +208,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -219,10 +216,6 @@
         "_": "Maria Barbieri",
         "xml:id": "MB",
         "ref": "https://orcid.org/0000-0003-3673-587X"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -231,6 +224,7 @@
       "who": "#MB"
     }
   },
+  "tmNumber": "653662",
   "facsimile": {
     "n": "screen",
     "url": "ISic003152_tiled.tif",
@@ -239,10 +233,17 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Catina",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 53,
+      "atMost": 57
+    }
+  ],
   "publications": [
-    "Korhonen, 2004"
+    "Korhonen, 2004, Le iscrizioni del Museo civico di Catania : storia delle collezioni, cultura epigrafica, edizione"
+  ],
+  "zotero": [
+    "2EUC82DH"
   ],
   "keywords": [
     "isic003152",
@@ -255,7 +256,7 @@
     "stone",
     "catina",
     "catania",
-    "italy",
+    "sicilia",
     "sicily",
     "catania",
     "latin",

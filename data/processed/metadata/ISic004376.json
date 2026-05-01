@@ -36,7 +36,10 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "type": "inorganic.stone",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -76,7 +79,9 @@
         "from": "line1",
         "to": "line6",
         "h": "53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -96,12 +101,14 @@
     {
       "_": "Messana",
       "ref": "http://pleiades.stoa.org/places/462538",
-      "type": "ancient"
+      "type": "ancient",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "ref": "http://sws.geonames.org/2524170",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -110,6 +117,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Found on the route of the 'via Pompeia' at contrada Pistunina, to the south of Messina",
     "type": "found",
@@ -119,6 +128,10 @@
       15.527276
     ]
   },
+  "provenanceGeo": [
+    38.147448,
+    15.527276
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -126,7 +139,6 @@
   },
   "provenanceLost": null,
   "graphics": [],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": "Soprintendenza stores",
@@ -145,44 +157,56 @@
     "type": "edition",
     "bibl": [
       {
-        "author": "La Torre and Toscano Raffa",
+        "author": "La Torre, Toscano Raffa",
         "date": "2017",
         "citedRange": "",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/FWIJFFH2"
+          "target": "https://www.zotero.org/groups/382445/items/FWIJFFH2"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001893",
           "target": "https://biblio.inscriptiones.org/epig10001893"
         },
+        "inscriptionDate": "2017",
         "title": "Un miliario da Pistunina e brevi considerazioni sulla viabilità cositera ionica",
-        "citation": "<span>G.F. La Torre e A. Toscano Raffa, «Un miliario da Pistunina e brevi considerazioni sulla viabilità cositera ionica», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 179–84</span>"
+        "citation": "<span>G.F. La Torre e A. Toscano Raffa, «Un miliario da Pistunina e brevi considerazioni sulla viabilità cositera ionica», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 179–84</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/FWIJFFH2",
+        "year": "2017"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "2016.0617",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Di Paola",
         "date": "2016",
         "citedRange": "73-77, figs. 1-2",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7CYA5RWX"
+          "target": "https://www.zotero.org/groups/382445/items/7CYA5RWX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002605",
           "target": "https://biblio.inscriptiones.org/epig10002605"
         },
+        "inscriptionDate": "2016",
         "title": "Il cursus publicus in età tardoantica: storia di un servizio di stato tra conservazione e mutamento",
-        "citation": "<span>Lucietta Di Paola, «Il cursus publicus in età tardoantica: storia di un servizio di stato tra conservazione e mutamento», <i>Antiquité Tardive</i> 24 (2016): 57–80</span>"
+        "citation": "<span>Lucietta Di Paola, «Il cursus publicus in età tardoantica: storia di un servizio di stato tra conservazione e mutamento», <i>Antiquité Tardive</i> 24 (2016): 57–80</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7CYA5RWX",
+        "year": "2016"
       }
     ]
   },
@@ -194,14 +218,17 @@
         "date": "2021",
         "citedRange": "400 fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/HR79MYP8"
+          "target": "https://www.zotero.org/groups/382445/items/HR79MYP8"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002495",
           "target": "https://biblio.inscriptiones.org/epig10002495"
         },
+        "inscriptionDate": "2021",
         "title": "Strade secondarie in Basilicata, Calabria e Sicilia, tra esperienze e prospettive",
-        "citation": "<span>Oscar Belvedere, «Strade secondarie in Basilicata, Calabria e Sicilia, tra esperienze e prospettive», <i>Atlante tematico di topografia antica</i> 31 (2021): 399–401</span>"
+        "citation": "<span>Oscar Belvedere, «Strade secondarie in Basilicata, Calabria e Sicilia, tra esperienze e prospettive», <i>Atlante tematico di topografia antica</i> 31 (2021): 399–401</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HR79MYP8",
+        "year": "2021"
       }
     ]
   },
@@ -226,27 +253,9 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
       }
     ],
     "change": {
@@ -255,12 +264,22 @@
       "who": "#SS"
     }
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "tmNumber": "",
+  "letterHeights": [
+    {
+      "atLeast": 53,
+      "atMost": 53
+    }
+  ],
   "publications": [
-    "La Torre and Toscano Raffa, 2017, Un miliario da Pistunina e brevi considerazioni sulla viabilità cositera ionica",
-    null,
+    "La Torre, Toscano Raffa, 2017, Un miliario da Pistunina e brevi considerazioni sulla viabilità cositera ionica",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Di Paola, 2016, Il cursus publicus in età tardoantica: storia di un servizio di stato tra conservazione e mutamento"
+  ],
+  "zotero": [
+    "FWIJFFH2",
+    "R46KDTZX",
+    "7CYA5RWX"
   ],
   "keywords": [
     "isic004376",
@@ -273,7 +292,7 @@
     "limestone",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "latin",

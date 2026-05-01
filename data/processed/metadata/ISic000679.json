@@ -1,9 +1,9 @@
 {
   "file": "ISic000679",
   "uri": "ISic000679",
-  "title": "I.Sicily inscription 000679",
+  "title": "Honours for Publius Septimius Geta",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -31,49 +31,87 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "Fragment of a thick grey marble plaque, intact along the lower edge, but broken on the other three sides. The lower edge is chipped, and the edge itself only roughly finished. The rear is finished smooth.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to medium-grained, homogeneous, grey, calcitic marble, likely Proconnesian. Optical microscopy: heteroblastic to homeoblastic fabric. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+    "type": "stone.marble",
+    "subtype": [
+      "Proconnesian"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Marmara District",
+        "target": "https://www.geonames.org/741729/marmara-adasi.html"
+      },
+      "location": {
+        "geo": "40.61972,27.61694"
+      }
+    }
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "19.8",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "22.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "2.8-3.6 (right to left)",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Traces of four lines of Latin letters, guidelines are visible top and bottom of line 3; line four is much smaller.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Deeply v-cut letters with serifs. Letters generally tend to the taller, thinner and slighly curved form. Upper horizontals curve up and away, P is sometimes open, L has a downward trailing foot, G has a very curved hook; Y in line 3 is much taller (58mm). Small triangular interpuncts.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
-        "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "l": "Line 2-3",
+        "from": "line2",
+        "to": "line3",
+        "h": "46-51",
+        "unit": "mm",
+        "atLeast": "46",
+        "atMost": "51"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "25",
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -85,20 +123,22 @@
     ]
   },
   "date": {
-    "_": "To Severus, Caracalla and\n                                Geta, so between 198 and 211",
-    "notBefore": 200,
-    "notAfter": 250
+    "_": "Presumably to fall within the period of Geta as either Caesar (from 198) or Augustus (209) and his death in late 211.",
+    "notBefore": 198,
+    "notAfter": 211
   },
   "places": [
     {
       "_": "Tyndaris",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462527"
+      "ref": "http://pleiades.stoa.org/places/462527",
+      "region": "Sicilia"
     },
     {
       "_": "Tindari",
       "type": "modern",
-      "ref": "http://sws.geonames.org/10282151"
+      "ref": "http://sws.geonames.org/10282151",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -107,13 +147,17 @@
       15.04385
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "From the site of Tindari, but details of provenance not recorded.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
-    "_": "2006.04",
+    "_": "Prag, 2022-07-12, in the antiquarium",
     "type": "observed",
     "subtype": "autopsied",
     "resp": "#JP",
@@ -126,11 +170,10 @@
       "url": "ISic000679_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Tindari",
   "repository": {
@@ -155,6 +198,10 @@
       }
     }
   },
+  "idno": {
+    "_": "ME 28744",
+    "type": "inventory"
+  },
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -170,12 +217,18 @@
         "n": "AE",
         "citedRange": "1989.0338f",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -187,7 +240,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001831",
           "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        },
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "author": "Fasolo",
@@ -199,14 +257,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002011",
           "target": "https://biblio.inscriptiones.org/epig10002011"
-        }
+        },
+        "inscriptionDate": "2013",
+        "title": "Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari",
+        "citation": "<span>M. Fasolo, <i>Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari</i> (Rome: MediaGEO, 2013)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/X2SEXMRX",
+        "year": "2013"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -230,67 +293,68 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Epidoc editing and English translation",
-      "when": "2021-05-06",
-      "who": "#AA"
+      "_": "Jonathan Prag revised from autopsy",
+      "when": "2026-03-06",
+      "who": "#JP"
     }
   },
+  "tmNumber": "175745",
   "facsimile": {
     "n": "screen",
     "url": "ISic000679_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
     "surfaceType": "front"
   },
-  "provenance": "Tyndaris",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 46,
+      "atMost": 51
+    },
+    {
+      "atLeast": 25,
+      "atMost": 25
+    }
+  ],
   "publications": [
-    null,
-    "Manganaro, 1989",
-    "Fasolo, 2013"
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "EZMBJ6GN",
+    "X2SEXMRX"
   ],
   "keywords": [
     "isic000679",
-    "i.sicily inscription 000679",
+    "honours for publius septimius geta",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "honorific",
     "plaque",
-    "marble",
+    "fine to medium-grained, homogeneous, grey, calcitic marble, likely proconnesian. optical microscopy: heteroblastic to homeoblastic fabric. digital microscopy: heteroblastic to homeoblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy)",
     "tyndaris",
     "tindari",
-    "italy",
+    "sicilia",
     "sicily",
     "tindari",
     "antiquarium di tindari",

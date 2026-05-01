@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcarenite",
+    "type": "stone.calcarenite",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -77,7 +82,9 @@
         "from": "line1",
         "to": "line4",
         "h": "32",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "32",
+        "atMost": "32"
       },
       {
         "type": "interlinear",
@@ -91,19 +98,20 @@
   "date": {
     "_": "1st — 2nd century CE",
     "notBefore": 1,
-    "notAfter": 200,
-    "precision": "low"
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Messana",
       "ref": "http://pleiades.stoa.org/places/462538",
-      "type": "ancient"
+      "type": "ancient",
+      "region": "Sicilia"
     },
     {
       "_": "Messina",
       "ref": "http://sws.geonames.org/2524170",
-      "type": "modern"
+      "type": "modern",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -112,6 +120,8 @@
       15.55256
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Messana",
   "provenanceFound": {
     "_": "Excavated in the southern necropolis, re-used in tomb t.18 of Isolato 83, III Comparto, via degli Orti",
     "type": "found",
@@ -121,6 +131,10 @@
       15.548986
     ]
   },
+  "provenanceGeo": [
+    38.183142,
+    15.548986
+  ],
   "provenanceObserved": {
     "_": "in store",
     "type": "observed",
@@ -137,7 +151,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Messina",
   "repository": "Soprintendenza stores",
@@ -160,21 +173,24 @@
         "date": "2017",
         "citedRange": "169 no.1 fig.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R9M3U4WX"
+          "target": "https://www.zotero.org/groups/382445/items/R9M3U4WX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001500",
           "target": "https://biblio.inscriptiones.org/epig10001500"
         },
+        "inscriptionDate": "2017",
         "title": "Le epigrafi",
-        "citation": "<span>G. Zavettieri, «Le epigrafi», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 167–71</span>"
+        "citation": "<span>G. Zavettieri, «Le epigrafi», in <i>Da Zancle a Messina 2016. Nuovi dati di archeologia urbana</i>, a c. di G. Tigano (Palermo: Regione Siciliana, 2017), 167–71</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R9M3U4WX",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -193,27 +209,14 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -222,6 +225,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004377_tiled.tif",
@@ -230,10 +234,17 @@
     "desc": "Photo courtesy of archivio fotografico della soprintendenza di Messina",
     "surfaceType": "front"
   },
-  "provenance": "Messana",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 32,
+      "atMost": 32
+    }
+  ],
   "publications": [
     "Zavettieri, 2017, Le epigrafi"
+  ],
+  "zotero": [
+    "R9M3U4WX"
   ],
   "keywords": [
     "isic004377",
@@ -246,7 +257,7 @@
     "limestone",
     "messana",
     "messina",
-    "italy",
+    "sicilia",
     "sicily",
     "messina",
     "ancient greek",

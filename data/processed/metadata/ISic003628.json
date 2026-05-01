@@ -3,7 +3,7 @@
   "uri": "ISic003628",
   "title": "Honorific inscription for a benefactor",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -29,15 +29,21 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
+  "support": "A small marble plaque, intact above and to the right, but broken to the left and below, the surface worn; the rear very uneven.",
   "objectType": {
-    "_": "unknown",
-    "ana": "#object.unknown",
-    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/2.html"
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "limestone",
-    "ana": "#material.stone.limestone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
+    "_": "marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": {
     "ana": "#condition.fragment"
@@ -66,26 +72,33 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Very small letters, rather worn such that terminal points are clear, but impossible to identify extent of serifs. Alpha with straight bar; epsilon with shorter middle bar; almost full-size omicron; lunate sigma; tear-drop shaped, closed omega.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1-3",
         "from": "line1",
         "to": "line3",
-        "h": "6",
-        "unit": "mm"
+        "h": "5-7",
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "7"
       },
       {
         "type": "letterHeight",
         "l": "Line 4-14",
         "from": "line4",
         "to": "line14",
-        "h": "4",
-        "unit": "mm"
+        "h": "3-5",
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "5"
       },
       {
         "type": "interlinear",
@@ -100,19 +113,21 @@
   "date": {
     "_": "2nd century BCE",
     "notBefore": -200,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101,
+    "evidence": "lettering"
   },
   "places": [
     {
       "_": "Calacte",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462123"
+      "ref": "http://pleiades.stoa.org/places/462123",
+      "region": "Sicilia"
     },
     {
       "_": "Caronia",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525344"
+      "ref": "http://sws.geonames.org/2525344",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -121,14 +136,25 @@
       14.44142
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Calacte",
   "provenanceFound": {
-    "_": "Found in a field in Caronia",
+    "_": "Found in November 2003, a chance surface find in a field on the NE slope of the hill of Caronia, immediately below the town, in an area rich in scattered material from the ancient town above.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "when": "2003",
+    "geo": [
+      38.0283617,
+      14.4408091
+    ],
+    "geoCert": "high"
   },
+  "provenanceGeo": [
+    38.0283617,
+    14.4408091
+  ],
   "provenanceObserved": {
-    "_": "None",
+    "_": "Studied but not transcribed, Prag 2019",
     "type": "observed",
     "subtype": "autopsied",
     "geo": null
@@ -140,14 +166,42 @@
       "url": "ISic003628_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic003628_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02",
+      "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Caronia",
-  "repository": "Deposito della Soprintendenza BB.CC. di Messina",
+  "repository": {
+    "_": "Soprintendenza Beni Culturali e Ambientali di Messina",
+    "role": "museum",
+    "ref": "http://sicily.classics.ox.ac.uk/museum/197",
+    "museum": {
+      "slug": "197",
+      "type": "museum",
+      "name": "Soprintendenza Beni Culturali e Ambientali di Messina",
+      "uri": "http://sicily.classics.ox.ac.uk/museum/197",
+      "description": "Offices and stores of the provincial archaeological authority",
+      "location": {
+        "settlement": "Messina",
+        "region": "Messina",
+        "country": "Italy",
+        "address": "Viale Boccetta, 38, 98122 Messina ME, Italy",
+        "geo": {
+          "lat": 38.198039,
+          "lon": 15.5508031
+        }
+      }
+    }
+  },
   "idno": {
     "_": "Caronia 25274",
     "type": "inventory"
@@ -167,45 +221,51 @@
         "n": "SEG",
         "citedRange": "59.1102",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "2011.0674",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "BE",
         "citedRange": "2010.0645",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/77P5MNIR"
+          "target": "https://www.zotero.org/groups/382445/items/77P5MNIR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001282",
           "target": "https://biblio.inscriptiones.org/epig10001282"
         },
         "title": "Bulletin épigraphique",
+        "author": "",
         "date": "1888-",
-        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>"
+        "citation": "<span>Association pour l’encouragement des études greques, « Bulletin épigraphique », <i>Revue des études grecques</i>, 1888, <a href=\"http://www.worldcat.org/oclc/797735566\">http://www.worldcat.org/oclc/797735566</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/77P5MNIR",
+        "year": "1888"
       },
       {
         "author": "Manganaro",
@@ -217,8 +277,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001794",
           "target": "https://biblio.inscriptiones.org/epig10001794"
         },
+        "inscriptionDate": "2009",
         "title": "Un frammento inscritto erratico dall'area di Caronia (Kaleakté)",
-        "citation": "<span>Giacomo Manganaro, «Un frammento inscritto erratico dall’area di Caronia (Kaleakté)», <i>Zeitschrift für Papyrologie und Epigraphik</i> 170 (2009): 87–98</span>"
+        "citation": "<span>Giacomo Manganaro, «Un frammento inscritto erratico dall’area di Caronia (Kaleakté)», <i>Zeitschrift für Papyrologie und Epigraphik</i> 170 (2009): 87–98</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QC6X4IXA",
+        "year": "2009"
       },
       {
         "author": "Battistoni",
@@ -230,8 +293,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001496",
           "target": "https://biblio.inscriptiones.org/epig10001496"
         },
+        "inscriptionDate": "2010",
         "title": "Note al nuovo decreto dall'area di Caronia",
-        "citation": "<span>Filippo Battistoni, «Note al nuovo decreto dall’area di Caronia», <i>Zeitschrift für Papyrologie und Epigraphik</i> 174 (2010): 113–17</span>"
+        "citation": "<span>Filippo Battistoni, «Note al nuovo decreto dall’area di Caronia», <i>Zeitschrift für Papyrologie und Epigraphik</i> 174 (2010): 113–17</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/WUT47HXD",
+        "year": "2010"
       },
       {
         "author": "Manganaro",
@@ -244,28 +310,43 @@
           "_": "https://biblio.inscriptiones.org/epig10001792",
           "target": "https://biblio.inscriptiones.org/epig10001792"
         },
+        "inscriptionDate": "2011",
         "title": "Il sistema anagrafico nella Sicilia in epoca ellenistica",
-        "citation": "<span>Giacomo Manganaro, «Il sistema anagrafico nella Sicilia in epoca ellenistica», in <i>Da Halaesa ad Agathyrnum. Studi in memoria di Giacomo Scibona</i>, a c. di AA.VV. (Sant’Agata di Militello: Rotary Club Sant’Agata di Militello, 2011), 33–68</span>"
+        "citation": "<span>Giacomo Manganaro, «Il sistema anagrafico nella Sicilia in epoca ellenistica», in <i>Da Halaesa ad Agathyrnum. Studi in memoria di Giacomo Scibona</i>, a c. di AA.VV. (Sant’Agata di Militello: Rotary Club Sant’Agata di Militello, 2011), 33–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/HT3P7UWH",
+        "year": "2011"
       },
       {
         "author": "Arena",
         "date": "2016",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/SHHDSKRM"
+          "target": "https://www.zotero.org/groups/382445/items/SHHDSKRM"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002178",
           "target": "https://biblio.inscriptiones.org/epig10002178"
         },
+        "inscriptionDate": "2016",
         "title": "Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione",
-        "citation": "<span>Emiliano Arena, «Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione», in <i>Studia Calactina I. Ricerche su una città greco-romana di Sicilia. Kalè Akté - Calacte</i>, a c. di F. Collura, International Series 2813 (Oxford: British Archaeological Reports, 2016), 347–68</span>"
+        "citation": "<span>Emiliano Arena, «Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione», in <i>Studia Calactina I. Ricerche su una città greco-romana di Sicilia. Kalè Akté - Calacte</i>, a c. di F. Collura, International Series 2813 (Oxford: British Archaeological Reports, 2016), 347–68</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SHHDSKRM",
+        "year": "2016"
+      },
+      {
+        "author": "Collura",
+        "date": "2016",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/LX4MRMIG"
+        },
+        "inscriptionDate": "2016",
+        "year": ""
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -289,45 +370,46 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised from publication, partial autopsy and photographs",
+      "when": "2026-02-26",
+      "who": "#JP"
     }
   },
+  "tmNumber": "645701",
   "facsimile": {
     "n": "screen",
     "url": "ISic003628_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02",
     "surfaceType": "front"
   },
-  "provenance": "Calacte",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 5,
+      "atMost": 7
+    },
+    {
+      "atLeast": 3,
+      "atMost": 5
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Bulletin épigraphique, 1888-",
@@ -335,22 +417,34 @@
     "Manganaro, 2009, Un frammento inscritto erratico dall'area di Caronia (Kaleakté)",
     "Battistoni, 2010, Note al nuovo decreto dall'area di Caronia",
     "Manganaro, 2011, Il sistema anagrafico nella Sicilia in epoca ellenistica",
-    "Arena, 2016, Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione"
+    "Arena, 2016, Il decreto onorifico tardo-ellenistico da Caronia (SEG LIX, 1102): per una nuova edizione",
+    "Collura, 2016"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "77P5MNIR",
+    "77P5MNIR",
+    "QC6X4IXA",
+    "WUT47HXD",
+    "HT3P7UWH",
+    "SHHDSKRM",
+    "LX4MRMIG"
   ],
   "keywords": [
     "isic003628",
     "honorific inscription for a benefactor",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "honorific",
-    "unknown",
-    "limestone",
+    "plaque",
+    "marble",
     "calacte",
     "caronia",
-    "italy",
+    "sicilia",
     "sicily",
     "caronia",
+    "soprintendenza beni culturali e ambientali di messina",
     "ancient greek",
     "grc"
   ]

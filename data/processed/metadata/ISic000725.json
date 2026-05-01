@@ -38,9 +38,24 @@
     "cert": "low"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
+    "_": "Fine to medium-grained, homogeneous, white, dolomitic marble, likely Thasian-3. Optical microscopy: homeoblastic to heteroblastic fabric. Digital microscopy: homeoblastic to heteroblastic fabric. dolomitic (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)\n",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3",
+    "type": "stone.marble",
+    "subtype": [
+      "Thasian-3"
+    ],
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
+    "placeName": {
+      "type": "provenance",
+      "ref": {
+        "_": "Vathy-Saliara",
+        "target": "https://www.geonames.org/734093/thassos-island.html"
+      },
+      "location": {
+        "geo": "40.69417,24.66118"
+      }
+    }
   },
   "condition": {
     "ana": "#condition.damaged"
@@ -84,7 +99,9 @@
         "from": "line1",
         "to": "line1",
         "h": "63-66",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "63",
+        "atMost": "66"
       },
       {
         "type": "letterHeight",
@@ -92,7 +109,9 @@
         "from": "line2",
         "to": "line2",
         "h": "60",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "60",
+        "atMost": "60"
       },
       {
         "type": "letterHeight",
@@ -100,7 +119,9 @@
         "from": "line3",
         "to": "line3",
         "h": "52 (S=65)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "52",
+        "atMost": "52"
       },
       {
         "type": "letterHeight",
@@ -108,7 +129,9 @@
         "from": "line4",
         "to": "line4",
         "h": "45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -116,7 +139,9 @@
         "from": "line1",
         "to": "line2",
         "h": "25",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -124,7 +149,9 @@
         "from": "line2",
         "to": "line3",
         "h": "21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "21",
+        "atMost": "21"
       },
       {
         "type": "interlinear",
@@ -132,7 +159,9 @@
         "from": "line3",
         "to": "line4",
         "h": "20-21",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "21"
       }
     ]
   },
@@ -146,12 +175,14 @@
     {
       "_": "Syracusae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462503"
+      "ref": "http://pleiades.stoa.org/places/462503",
+      "region": "Sicilia"
     },
     {
       "_": "Siracusa",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523083"
+      "ref": "http://sws.geonames.org/2523083",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -160,6 +191,8 @@
       15.27628
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Syracusae",
   "provenanceFound": {
     "_": "Found during excavations in the 1950s in the eastern part of the new school building erected in the block between via Eumelo, via Archia, and via Carabelli. Also found in the area (but no explicit association) were marble columns and capitals, and various remains of the Roman imperial period, including a refined nymphaeum ('un leggiadro nifneo quandrifoliato') in situ in a polygonal space, remains of a rich domus with mosaics of the C3 CE, and older cocciopesto pavements and walls.",
     "type": "found",
@@ -170,6 +203,10 @@
       15.2840343
     ]
   },
+  "provenanceGeo": [
+    37.0712571,
+    15.2840343
+  ],
   "provenanceObserved": {
     "_": "basement corridor",
     "type": "observed",
@@ -234,7 +271,6 @@
       "surfaceType": "top"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -278,36 +314,54 @@
         "n": "AE",
         "citedRange": "2014.0532",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1996.0797",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "type": "bulletin",
         "n": "AE",
         "citedRange": "1989.0342c",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R46KDTZX"
+          "target": "https://www.zotero.org/groups/382445/items/R46KDTZX"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001283",
           "target": "https://biblio.inscriptiones.org/epig10001283"
-        }
+        },
+        "title": "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine.",
+        "author": "",
+        "date": "1888-",
+        "citation": "<span>« L’année épigraphique: revue des publications épigraphiques relatives a l’antiquité romaine. », <i>L’année épigraphique : revue des publications épigraphiques relatives a l’antiquité romaine.</i>, 1888, <a href=\"http://www.worldcat.org/oclc/630058599\">http://www.worldcat.org/oclc/630058599</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R46KDTZX",
+        "year": "1888"
       },
       {
         "author": "Gentili",
@@ -320,8 +374,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001955",
           "target": "https://biblio.inscriptiones.org/epig10001955"
         },
+        "inscriptionDate": "1961",
         "title": "Nuovi elementi di epigrafia siracusana",
-        "citation": "<span>G.V. Gentili, «Nuovi elementi di epigrafia siracusana», <i>Archivio Storico Siracusano</i> 7 (1961): 5–25</span>"
+        "citation": "<span>G.V. Gentili, «Nuovi elementi di epigrafia siracusana», <i>Archivio Storico Siracusano</i> 7 (1961): 5–25</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CBDGFVEG",
+        "year": "1961"
       },
       {
         "author": "Manganaro",
@@ -333,7 +390,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -342,10 +404,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/EZMBJ6GN"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001831",
-          "target": "https://biblio.inscriptiones.org/epig10001831"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/EZMBJ6GN",
+        "inscriptionDate": "1989",
+        "title": "Iscrizioni Latine nuove e vecchie della Sicilia",
+        "citation": "<span>Giacomo Manganaro, «Iscrizioni Latine nuove e vecchie della Sicilia», <i>Epigraphica</i> 51 (1989): 161–96</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EZMBJ6GN",
+        "year": "1989"
       },
       {
         "author": "Wilson",
@@ -357,7 +421,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Eck",
@@ -369,7 +438,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002014",
           "target": "https://biblio.inscriptiones.org/epig10002014"
-        }
+        },
+        "inscriptionDate": "1996",
+        "title": "Senatoren und senatorische Grundbesitz auf Sizilien",
+        "citation": "<span>W. Eck, „Senatoren und senatorische Grundbesitz auf Sizilien“, in <i>Catania antica. Atti del Convegno della societa italiana di studi sull’antichita classica, Catania 1992</i> (Pisa-Rome, 1996), 231–56</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7T8K8ATA",
+        "year": "1996"
       },
       {
         "author": "Eck",
@@ -381,14 +455,19 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001475",
           "target": "https://biblio.inscriptiones.org/epig10001475"
-        }
+        },
+        "inscriptionDate": "1996",
+        "title": "Senatorische familien der kaiserzeit in der provinz Sizilien",
+        "citation": "<span>W. Eck, „Senatorische familien der kaiserzeit in der provinz Sizilien“, <i>Zeitschrift für Papyrologie und Epigraphik</i> 113 (1996): 109–28</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4HE5CIGJ",
+        "year": "1996"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -412,20 +491,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -436,8 +501,9 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -446,6 +512,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "175779",
   "facsimile": {
     "n": "screen",
     "url": "ISic000725_tiled.tif",
@@ -454,18 +521,57 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-03-15",
     "surfaceType": "front"
   },
-  "provenance": "Syracusae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 63,
+      "atMost": 66
+    },
+    {
+      "atLeast": 60,
+      "atMost": 60
+    },
+    {
+      "atLeast": 52,
+      "atMost": 52
+    },
+    {
+      "atLeast": 45,
+      "atMost": 45
+    },
+    {
+      "atLeast": 25,
+      "atMost": 25
+    },
+    {
+      "atLeast": 21,
+      "atMost": 21
+    },
+    {
+      "atLeast": 20,
+      "atMost": 21
+    }
+  ],
   "publications": [
-    null,
-    null,
-    null,
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
+    "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Gentili, 1961, Nuovi elementi di epigrafia siracusana",
-    "Manganaro, 1988",
-    "Manganaro, 1989",
-    "Wilson, 1990",
-    "Eck, 1996",
-    "Eck, 1996"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Eck, 1996, Senatoren und senatorische Grundbesitz auf Sizilien",
+    "Eck, 1996, Senatorische familien der kaiserzeit in der provinz Sizilien"
+  ],
+  "zotero": [
+    "R46KDTZX",
+    "R46KDTZX",
+    "R46KDTZX",
+    "CBDGFVEG",
+    "RZSFKACR",
+    "EZMBJ6GN",
+    "VF9MMBI9",
+    "7T8K8ATA",
+    "4HE5CIGJ"
   ],
   "keywords": [
     "isic000725",
@@ -475,10 +581,10 @@
     },
     "building",
     "base",
-    "marble",
+    "fine to medium-grained, homogeneous, white, dolomitic marble, likely thasian-3. optical microscopy: homeoblastic to heteroblastic fabric. digital microscopy: homeoblastic to heteroblastic fabric. dolomitic (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "syracusae",
     "siracusa",
-    "italy",
+    "sicilia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

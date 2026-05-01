@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "marble\n                                    ",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +85,9 @@
         "from": "line1",
         "to": "line1",
         "h": "10-11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "11"
       },
       {
         "type": "letterHeight",
@@ -88,7 +95,9 @@
         "from": "line2",
         "to": "line2",
         "h": "11-13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "13"
       },
       {
         "type": "letterHeight",
@@ -96,7 +105,9 @@
         "from": "line3",
         "to": "line3",
         "h": "10-13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "13"
       },
       {
         "type": "letterHeight",
@@ -104,7 +115,9 @@
         "from": "line4",
         "to": "line4",
         "h": "11-13",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "13"
       },
       {
         "type": "letterHeight",
@@ -112,7 +125,9 @@
         "from": "line5",
         "to": "line5",
         "h": "11-14",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "14"
       },
       {
         "type": "interlinear",
@@ -120,7 +135,9 @@
         "from": "line1",
         "to": "line2",
         "h": "11",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "11",
+        "atMost": "11"
       },
       {
         "type": "interlinear",
@@ -128,7 +145,9 @@
         "from": "line2",
         "to": "line3",
         "h": "5-8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -136,7 +155,9 @@
         "from": "line3",
         "to": "line4",
         "h": "5-8",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "8"
       },
       {
         "type": "interlinear",
@@ -144,25 +165,29 @@
         "from": "line4",
         "to": "line5",
         "h": "4-5",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "4",
+        "atMost": "5"
       }
     ]
   },
   "date": {
     "_": "Roman Imperial period",
-    "notBefore": 50,
+    "notBefore": 51,
     "notAfter": 250
   },
   "places": [
     {
       "_": "Agrigentum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462086"
+      "ref": "http://pleiades.stoa.org/places/462086",
+      "region": "Sicilia"
     },
     {
       "_": "Agrigento",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541860"
+      "ref": "http://sws.geonames.org/6541860",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -171,6 +196,8 @@
       13.58876
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Agrigentum",
   "provenanceFound": {
     "_": "Found near the so-called 'Tomb of Theron', and donated to the musem by Evangelista Zucchi (so Mommsen in CIL); seen by Mommsen in 1877.",
     "type": "found",
@@ -181,6 +208,10 @@
       13.5853883
     ]
   },
+  "provenanceGeo": [
+    37.2888341,
+    13.5853883
+  ],
   "provenanceObserved": {
     "_": "2018.07.17 Prag, on display in the museum",
     "type": "observed",
@@ -207,7 +238,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
   "repository": {
@@ -230,7 +260,10 @@
           "lon": 13.58898416
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462086"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462086"
+      }
     }
   },
   "idno": {
@@ -250,27 +283,31 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7193",
+            "_": "7193",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650772"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -294,27 +331,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -323,6 +347,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491699",
   "facsimile": {
     "n": "screen",
     "url": "ISic000474_tiled.tif",
@@ -331,10 +356,49 @@
     "desc": "Photo J. Prag, courtesy Museo archeologico regionale P.Griffo, Agrigento",
     "surfaceType": "front"
   },
-  "provenance": "Agrigentum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 10,
+      "atMost": 11
+    },
+    {
+      "atLeast": 11,
+      "atMost": 13
+    },
+    {
+      "atLeast": 10,
+      "atMost": 13
+    },
+    {
+      "atLeast": 11,
+      "atMost": 13
+    },
+    {
+      "atLeast": 11,
+      "atMost": 14
+    },
+    {
+      "atLeast": 11,
+      "atMost": 11
+    },
+    {
+      "atLeast": 5,
+      "atMost": 8
+    },
+    {
+      "atLeast": 5,
+      "atMost": 8
+    },
+    {
+      "atLeast": 4,
+      "atMost": 5
+    }
+  ],
   "publications": [
-    "CIL"
+    "Mommsen, 1883, CIL"
+  ],
+  "zotero": [
+    "GQN8UZSI"
   ],
   "keywords": [
     "isic000474",
@@ -347,7 +411,7 @@
     "marble",
     "agrigentum",
     "agrigento",
-    "italy",
+    "sicilia",
     "sicily",
     "agrigento",
     "museo regionale archeologico pietro griffo",

@@ -40,7 +40,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone",
+    "type": "stone.limestone",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line1",
         "h": "85",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "85",
+        "atMost": "85"
       },
       {
         "type": "letterHeight",
@@ -89,7 +96,9 @@
         "from": "line2",
         "to": "line2",
         "h": "75-80",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "75",
+        "atMost": "80"
       },
       {
         "type": "interlinear",
@@ -97,26 +106,30 @@
         "from": "line1",
         "to": "line2",
         "h": "10-15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "15"
       }
     ]
   },
   "date": {
     "_": "Later Hellenistic (letter forms)",
     "notBefore": -200,
-    "notAfter": -50
+    "notAfter": -51
   },
   "places": [
     {
       "_": "Cephaloedium",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462154",
-      "corresp": "#findspot"
+      "corresp": "#findspot",
+      "region": "Sicilia"
     },
     {
       "_": "Cefalù",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2525041"
+      "ref": "http://sws.geonames.org/2525041",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -125,6 +138,8 @@
       14.02285
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Cephaloedium",
   "provenanceFound": {
     "_": "In re-use in the external wall to the left of the main entrance of the Chiesa SS. Sacramento, Piazza Duomo",
     "type": "found",
@@ -135,11 +150,16 @@
       14.022922
     ]
   },
+  "provenanceGeo": [
+    38.039634,
+    14.022922
+  ],
   "provenanceObserved": {
     "_": "2018-07-16 Prag",
     "type": "observed",
     "subtype": "autopsied",
     "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -169,7 +189,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Cefalù",
   "repository": "Oratorio del Santissimo Sacramento, Piazza Duomo",
@@ -184,63 +203,108 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "136",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "296",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0351",
+            "_": "351",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "58.1045",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "bulletin",
         "n": "SEG",
         "citedRange": "37.0763",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000796",
           "target": "https://biblio.inscriptiones.org/epig10000796"
         },
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5593",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5593",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Manganaro",
@@ -253,36 +317,45 @@
           "_": "https://biblio.inscriptiones.org/epig10001841",
           "target": "https://biblio.inscriptiones.org/epig10001841"
         },
+        "inscriptionDate": "1965",
         "title": "Ricerche di antichità e di epigrafia siceliote",
-        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>"
+        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGTHAFKT",
+        "year": "1965"
       },
       {
         "author": "Tullio",
         "date": "1974",
         "citedRange": "131 n. 70",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/QRB9I8X3"
+          "target": "https://www.zotero.org/groups/382445/items/QRB9I8X3"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002336",
           "target": "https://biblio.inscriptiones.org/epig10002336"
         },
+        "inscriptionDate": "1974",
         "title": "Saggio sulla topografia e sulle antichità di Cefalù",
-        "citation": "<span>Amedeo Tullio, «Saggio sulla topografia e sulle antichità di Cefalù», <i>Kokalos</i> 20 (1974): 119–51</span>"
+        "citation": "<span>Amedeo Tullio, «Saggio sulla topografia e sulle antichità di Cefalù», <i>Kokalos</i> 20 (1974): 119–51</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/QRB9I8X3",
+        "year": "1974"
       },
       {
         "author": "Arena",
         "date": "1987",
         "citedRange": "14-15",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/DMCKW4KJ"
+          "target": "https://www.zotero.org/groups/382445/items/DMCKW4KJ"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002335",
           "target": "https://biblio.inscriptiones.org/epig10002335"
         },
+        "inscriptionDate": "1987",
         "title": "Spigolature siceliote",
-        "citation": "<span>Renato Arena, «Spigolature siceliote», <i>Acme. Annali della Facoltà di Lettere e Filosofia dell’Università degli Studi di Milano</i> 40, fasc. 3 (1987): 5–16</span>"
+        "citation": "<span>Renato Arena, «Spigolature siceliote», <i>Acme. Annali della Facoltà di Lettere e Filosofia dell’Università degli Studi di Milano</i> 40, fasc. 3 (1987): 5–16</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DMCKW4KJ",
+        "year": "1987"
       },
       {
         "author": "Montalbano",
@@ -295,8 +368,8 @@
           "_": "https://biblio.inscriptiones.org/epig10001740",
           "target": "https://biblio.inscriptiones.org/epig10001740"
         },
-        "title": "Reperti da vecchi scavi e ricognizioni",
-        "citation": "<span>M. G. Montalbano, «Reperti da vecchi scavi e ricognizioni», in <i>Cefalù. La necropoli ellenistica I</i>, a c. di A. Tullio (Rome: «L’Erma» di Bretschneider, 2008), 169–90</span>"
+        "inscriptionDate": "2008",
+        "year": ""
       },
       {
         "author": "Brugnone",
@@ -309,15 +382,18 @@
           "_": "https://biblio.inscriptiones.org/epig10002116",
           "target": "https://biblio.inscriptiones.org/epig10002116"
         },
+        "inscriptionDate": "2005",
         "title": "Incontri di culture a Cefalù. L'epitafio di Pompeia",
-        "citation": "<span>Antonietta Brugnone, «Incontri di culture a Cefalù. L’epitafio di Pompeia», in <i>Atti del V Congresso Internazionale di Studi Fenici e Punici</i>, a c. di A.S. Giammellaro, vol. 2, 3 voll. (Palermo: Università degli Studi di Palermo, 2005), 849–50</span>"
+        "citation": "<span>Antonietta Brugnone, «Incontri di culture a Cefalù. L’epitafio di Pompeia», in <i>Atti del V Congresso Internazionale di Studi Fenici e Punici</i>, a c. di A.S. Giammellaro, vol. 2, 3 voll. (Palermo: Università degli Studi di Palermo, 2005), 849–50</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZDDSRBHN",
+        "year": "2005"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -341,35 +417,33 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag added minor edits and bibl",
-      "when": "2022-03-02",
-      "who": "#JP"
+      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
+      "when": "2025-12-10",
+      "who": "#RC"
     }
   },
+  "tmNumber": "284913",
   "facsimile": {
     "n": "screen",
     "url": "ISic001173_tiled.tif",
@@ -378,18 +452,45 @@
     "desc": "Photo J. Prag",
     "surfaceType": "front"
   },
-  "provenance": "Cephaloedium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 85,
+      "atMost": 85
+    },
+    {
+      "atLeast": 75,
+      "atMost": 80
+    },
+    {
+      "atLeast": 10,
+      "atMost": 15
+    }
+  ],
   "publications": [
-    "IG",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Kaibel, 1890, IG",
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
-    "CIG",
+    "Boeckh, Franz, 1853, CIG",
     "Manganaro, 1965, Ricerche di antichità e di epigrafia siceliote",
     "Tullio, 1974, Saggio sulla topografia e sulle antichità di Cefalù",
     "Arena, 1987, Spigolature siceliote",
-    "Montalbano, 2008, Reperti da vecchi scavi e ricognizioni",
+    "Montalbano, 2008",
     "Brugnone, 2005, Incontri di culture a Cefalù. L'epitafio di Pompeia"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "Q2SBPG9F",
+    "F2GG87EQ",
+    "F2GG87EQ",
+    "TQMVHEVL",
+    "RGTHAFKT",
+    "QRB9I8X3",
+    "DMCKW4KJ",
+    "N8BEV89J",
+    "ZDDSRBHN"
   ],
   "keywords": [
     "isic001173",
@@ -402,7 +503,7 @@
     "limestone",
     "cephaloedium",
     "cefalù",
-    "italy",
+    "sicilia",
     "sicily",
     "cefalù",
     "ancient greek",

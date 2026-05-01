@@ -1,5 +1,4 @@
 <script>
-	import { Tooltip } from 'bits-ui';
 	import { onMount } from 'svelte';
 
 	let {
@@ -18,6 +17,7 @@
 	let activeSection = $state('');
 
 	let activeHover = $state(null);
+	let scrollY = $state(0);
 
 	onMount(() => {
 		sections = Array.from(document.querySelectorAll(rootSelector))
@@ -47,7 +47,18 @@
 
 		return () => observer.disconnect();
 	});
+
+	// Force last section active when scrolled to the bottom
+	$effect(() => {
+		if (sections.length === 0) return;
+		const { scrollHeight, clientHeight } = document.documentElement;
+		if (scrollHeight - scrollY - clientHeight < 2) {
+			activeSection = sections[sections.length - 1].id;
+		}
+	});
 </script>
+
+<svelte:window bind:scrollY />
 
 <nav aria-label={label}>
 	<ul class={displayStyle}>
@@ -156,5 +167,11 @@
 	.active.dot {
 		height: var(--size-3);
 		width: var(--size-3);
+	}
+
+	@media (max-width: 768px) {
+		nav {
+			display: none;
+		}
 	}
 </style>

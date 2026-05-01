@@ -36,7 +36,12 @@
   },
   "material": {
     "_": "limestone",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcite_limestone",
+    "type": "stone.calcite_limestone",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": {
@@ -81,7 +86,9 @@
         "from": "line1",
         "to": "line2",
         "h": "30-35",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "35"
       },
       {
         "type": "interlinear",
@@ -101,12 +108,14 @@
     {
       "_": "Haluntium",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462228"
+      "ref": "http://pleiades.stoa.org/places/462228",
+      "region": "Sicilia"
     },
     {
       "_": "San Marco d'Alunzio",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523425"
+      "ref": "http://sws.geonames.org/2523425",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,12 +124,15 @@
       14.70093
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Haluntium",
   "provenanceFound": {
     "_": "Found in a tomb in Localita Calvario, presumed to be from ancient necropolis",
     "type": "found",
     "subtype": "discovered",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2006-04",
     "type": "observed",
@@ -155,7 +167,6 @@
       "surfaceType": "right"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "S. Marco d'Alunzio",
   "repository": {
@@ -197,19 +208,19 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/RGTHAFKT"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001841",
-          "target": "https://biblio.inscriptiones.org/epig10001841"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/RGTHAFKT",
+        "inscriptionDate": "1965",
         "title": "Ricerche di antichità e di epigrafia siceliote",
-        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>"
+        "citation": "<span>Giacomo Manganaro, «Ricerche di antichità e di epigrafia siceliote», <i>Archeologia Classica</i> 17 (1965): 183–210</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGTHAFKT",
+        "year": "1965"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -233,27 +244,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -262,6 +260,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic004362_tiled.tif",
@@ -270,10 +269,17 @@
     "desc": "Photo J. Prag, 2018-07-05",
     "surfaceType": "front"
   },
-  "provenance": "Haluntium",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 35
+    }
+  ],
   "publications": [
     "Manganaro, 1965, Ricerche di antichità e di epigrafia siceliote"
+  ],
+  "zotero": [
+    "RGTHAFKT"
   ],
   "keywords": [
     "isic004362",
@@ -286,7 +292,7 @@
     "limestone",
     "haluntium",
     "san marco d'alunzio",
-    "italy",
+    "sicilia",
     "sicily",
     "s. marco d'alunzio",
     "museo della cultura e delle arti figurative bizantine e normanne",

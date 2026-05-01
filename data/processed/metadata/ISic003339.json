@@ -30,15 +30,20 @@
     "ana": "#function.honorific",
     "ref": "http://www.eagle-network.eu/voc/typeins/lod/69.html"
   },
-  "support": "A rectangular off-white marble slab, broken in three joining fragments, the lower\n                                        right corner missing. The reverse is unfinished.",
+  "support": "A rectangular off-white marble slab, broken in three joining fragments, the lower right corner missing. The reverse is unfinished.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "\n                                        marble (white)\n                                    ",
-    "ana": "#material.stone.marble",
+    "_": "marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -79,7 +84,9 @@
         "from": "line1",
         "to": "line1",
         "h": "42-61",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "42",
+        "atMost": "61"
       },
       {
         "type": "letterHeight",
@@ -87,7 +94,9 @@
         "from": "line2",
         "to": "line2",
         "h": "41-43",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "41",
+        "atMost": "43"
       },
       {
         "type": "letterHeight",
@@ -95,7 +104,9 @@
         "from": "line3",
         "to": "line3",
         "h": "15",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "15"
       },
       {
         "type": "interlinear",
@@ -115,12 +126,14 @@
     {
       "_": "Agathyrnum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462079"
+      "ref": "http://pleiades.stoa.org/places/462079",
+      "region": "Sicilia"
     },
     {
       "_": "Capo d'Orlando",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2523961"
+      "ref": "http://sws.geonames.org/2523961",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -129,6 +142,8 @@
       14.75064
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Agathyrnum",
   "provenanceFound": {
     "_": "Found when digging a well in or before 1882, on the farm of Filippo\n                            Cangemi, Capo d'Orlando (Casa Cangemi is marked on the 1:25000 map)\n                        ",
     "type": "found",
@@ -138,6 +153,10 @@
       14.73646
     ]
   },
+  "provenanceGeo": [
+    38.13686,
+    14.73646
+  ],
   "provenanceObserved": {
     "_": "2006.04",
     "type": "observed",
@@ -172,7 +191,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Capo d'Orlando",
   "repository": {
@@ -210,17 +228,18 @@
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1884",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "162-163 = 309-310",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1884",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "bulletin",
@@ -232,7 +251,30 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002649",
           "target": "https://biblio.inscriptiones.org/epig10002649"
-        }
+        },
+        "title": "Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+        "author": "Henzen, Zangemeister",
+        "date": "1872-1913",
+        "citation": "<span>W. Henzen and K. F. W. Zangemeister, <i>Ephemeris Epigraphica. Corporis Inscriptionum Latinarum Supplementum, Edita Iussu Instituti Archaeologici Romani</i>, 9 vols (Berlin: G. Reimerum, 1872)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/PU8UDAF3",
+        "year": "1872"
+      },
+      {
+        "author": "Manganaro",
+        "date": "1988",
+        "citedRange": "65",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001427",
+          "target": "https://biblio.inscriptiones.org/epig10001427"
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Spigo",
@@ -245,15 +287,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001570",
           "target": "https://biblio.inscriptiones.org/epig10001570"
         },
+        "inscriptionDate": "2004",
         "title": "Archeologia a Capo d'Orlando: studi per l'Antiquarium",
-        "citation": "<span>Umberto Spigo, <i>Archeologia a Capo d’Orlando: studi per l’Antiquarium</i> (Milazzo: Rebus, 2004)</span>"
+        "citation": "<span>Umberto Spigo, <i>Archeologia a Capo d’Orlando: studi per l’Antiquarium</i> (Milazzo: Rebus, 2004)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/8BMIW98A",
+        "year": "2004"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -277,27 +322,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -306,6 +338,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "492390",
   "facsimile": {
     "n": "screen",
     "url": "ISic003339_tiled.tif",
@@ -314,12 +347,31 @@
     "desc": "Photo J.Prag",
     "surfaceType": "front"
   },
-  "provenance": "Agathyrnum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 42,
+      "atMost": 61
+    },
+    {
+      "atLeast": 41,
+      "atMost": 43
+    },
+    {
+      "atLeast": 15,
+      "atMost": 15
+    }
+  ],
   "publications": [
-    "Salinas, 1884, NSA",
-    null,
+    "Notizie degli scavi di antichità, 1876-",
+    "Henzen, Zangemeister, 1872-1913, Ephemeris epigraphica. Corporis inscriptionum Latinarum supplementum, edita iussu Instituti archaeologici Romani",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Spigo, 2004, Archeologia a Capo d'Orlando: studi per l'Antiquarium"
+  ],
+  "zotero": [
+    "4MCP2PVV",
+    "PU8UDAF3",
+    "RZSFKACR",
+    "8BMIW98A"
   ],
   "keywords": [
     "isic003339",
@@ -329,10 +381,10 @@
     },
     "honorific",
     "plaque",
-    "marble (white)",
+    "marble",
     "agathyrnum",
     "capo d'orlando",
-    "italy",
+    "sicilia",
     "sicily",
     "capo d'orlando",
     "antiquarium di capo d'orlando",

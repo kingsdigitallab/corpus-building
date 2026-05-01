@@ -25,7 +25,7 @@ async function transformToHtml(filePath) {
     "../../../",
     "xslt",
     "epidoc",
-    "start-edition.sef.json"
+    "start-edition.sef.json",
   );
 
   const result = await SaxonJS.transform({
@@ -36,7 +36,7 @@ async function transformToHtml(filePath) {
 
   const $ = cheerio.load(result.principalResult);
 
-  const divs = $("body > div:not(#facsimile-images)")
+  const divs = $("body > div:not(#facsimile-images #handnote)")
     .map((i, div) => ({
       id: $(div).attr("id"),
       cls: $(div).attr("class"),
@@ -60,12 +60,21 @@ async function transformToHtml(filePath) {
     }))
     .get();
 
+  const handnote = $("div#handnote p")
+    .first()
+    .map((_, div) => ({
+      id: $(div).attr("id"),
+      html: $(div).html().trim(),
+    }))
+    .get();
+
   return {
     title: $("title").text(),
     body: $("body").html(),
     divs,
     editions,
     images,
+    handnote,
   };
 }
 
@@ -157,14 +166,14 @@ async function processFile(filePath, outputPath, options = {}) {
     const json = JSON.parse(html);
 
     try {
-      const words = await extractLemmas(json.editions[0].html);
+      const words = await extractLemmas(json.editions[1].html);
       result = { ...result, ...words };
 
       await fs.mkdir(lemmasOutputPath, { recursive: true });
       await fs.writeFile(lemmasOutputFile, JSON.stringify(words, null, 2));
     } catch (error) {
       console.error(
-        `Error extracting lemmas for ${baseName}: ${error.message}`
+        `Error extracting lemmas for ${baseName}: ${error.message}`,
       );
     }
   }
@@ -184,6 +193,7 @@ async function processFile(filePath, outputPath, options = {}) {
  * @param {boolean} [options.extractMetadata] - Whether to extract metadata from the XML files.
  * @param {boolean} [options.transformToHtml] - Whether to transform the XML files to HTML.
  * @param {boolean} [options.extractLemmas] - Whether to extract lemmas from the XML files.
+ * @param {boolean} [options.extractBibliography] - Whether to extract bibliography from the XML files.
  * @param {string} [options.inscriptionFilter] - Process inscriptions matching that pattern.
  * @returns {Promise<Array>} A promise that resolves to an array of objects, each containing the processing results for a single file.
  * @throws {Error} If there's an error reading the directory or processing files.
@@ -192,11 +202,15 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   const files = await fs.readdir(inputPath);
   const results = [];
   const lemmas = [];
+  const bibliography = {};
 
   for (const file of files) {
     if (file.endsWith(".xml")) {
-      if (options.inscriptionFilter && !file.includes(options.inscriptionFilter)) {
-        continue
+      if (
+        options.inscriptionFilter &&
+        !file.includes(options.inscriptionFilter)
+      ) {
+        continue;
       }
 
       const filePath = path.join(inputPath, file);
@@ -225,6 +239,29 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
           result.repository.repository = undefined;
         }
 
+        const bibls =
+          result?.bibliographyEdition?.bibl?.filter(
+            (b) => b?.ptr?.target && b?.title,
+          ) || [];
+
+        if (bibls) {
+          for (const bibl of bibls) {
+            const key = bibl.ptr.target.split("/").at(-1);
+
+            if (key) {
+              if (!bibliography[key]) {
+                bibliography[key] = {
+                  key,
+                  ...bibl,
+                  inscriptions: [],
+                };
+              }
+
+              bibliography[key]["inscriptions"].push(result.file);
+            }
+          }
+        }
+
         result.bibliographyEdition = undefined;
         result.bibliographyDiscussion = undefined;
         result.citation = undefined;
@@ -246,6 +283,18 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   if (options.extractLemmas) {
     const lemmasOutputFile = path.join(outputPath, "lemmas.json");
     await fs.writeFile(lemmasOutputFile, JSON.stringify(lemmas, null, 2));
+  }
+
+  if (options.extractBibliography) {
+    const bibliographyArray = Object.values(bibliography).sort((a, b) =>
+      a.title.localeCompare(b.title),
+    );
+
+    const bibliographyOutputFile = path.join(outputPath, "bibliography.json");
+    await fs.writeFile(
+      bibliographyOutputFile,
+      JSON.stringify(bibliographyArray, null, 2),
+    );
   }
 
   return results;
@@ -272,7 +321,7 @@ async function main() {
         "../../../",
         "data",
         "raw",
-        "inscriptions"
+        "inscriptions",
       ),
     })
     .option("output", {
@@ -296,8 +345,13 @@ async function main() {
       description: "Extract lemmas",
       default: true,
     })
+    .option("bibliography", {
+      type: "boolean",
+      description: "Extract bibliography",
+      default: true,
+    })
     .option("filter", {
-      alias: 'f',
+      alias: "f",
       type: "string",
       description: "Pattern to filter which inscriptions to process",
       default: null,
@@ -314,7 +368,8 @@ async function main() {
     extractMetadata: argv.metadata,
     transformToHtml: argv.html,
     extractLemmas: argv.lemmas,
-    inscriptionFilter: argv.filter
+    extractBibliography: argv.bibliography,
+    inscriptionFilter: argv.filter,
   };
 
   try {
@@ -326,4 +381,9 @@ async function main() {
   }
 }
 
-main();
+// Only run if this file is being run directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { extractLemmas };

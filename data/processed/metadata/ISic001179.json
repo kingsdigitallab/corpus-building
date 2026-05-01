@@ -39,7 +39,11 @@
   },
   "material": {
     "_": "stone",
-    "ana": "#material.stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": {
@@ -96,20 +100,22 @@
   },
   "date": {
     "_": "Kaibel speculates that it is 'aetatis fortasse Byzantinae'! (?)",
-    "notBefore": 300,
+    "notBefore": 301,
     "notAfter": 600
   },
   "places": [
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -118,6 +124,8 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "Dug up from the ruins of Halaesa (according to Torremuzza)",
     "type": "found",
@@ -125,6 +133,7 @@
     "notAfter": "1624",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Recorded as beside the great door in the front of the Church of S. Maria dei Palazzi by Gualtherus, 1621-1624.",
     "type": "observed",
@@ -142,7 +151,6 @@
       "surfaceType": "antiquarianEdition"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "lost",
   "repository": "",
@@ -159,36 +167,51 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0357",
+            "_": "357",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "author": "Gualtherus",
-        "date": "(no date)",
-        "citedRange": "no.143"
+        "date": "1624",
+        "citedRange": "143",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
       },
       {
         "author": "Gualtherus",
         "date": "1624 [1625]",
-        "citedRange": "no.297",
+        "citedRange": "297",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001931",
-          "target": "https://biblio.inscriptiones.org/epig10001931"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
       },
       {
         "author": "Castelli",
@@ -201,8 +224,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002086",
           "target": "https://biblio.inscriptiones.org/epig10002086"
         },
+        "inscriptionDate": "1753",
         "title": "Storia di Alesa, antica città di Sicilia",
-        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Storia di Alesa, antica città di Sicilia</i> (Palermo: Stamperia de SS. Appostoli in Piazza Vigliena, presso Pietro Bentivenga, 1753), <a href=\"http://arachne.uni-koeln.de/books/Castelli1763\">http://arachne.uni-koeln.de/books/Castelli1763</a></span>"
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Storia di Alesa, antica città di Sicilia</i> (Palermo: Stamperia de SS. Appostoli in Piazza Vigliena, presso Pietro Bentivenga, 1753), <a href=\"http://arachne.uni-koeln.de/books/Castelli1763\">http://arachne.uni-koeln.de/books/Castelli1763</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/U7S4ZAG3",
+        "year": "1753"
       },
       {
         "author": "Castelli",
@@ -214,40 +240,55 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002084",
           "target": "https://biblio.inscriptiones.org/epig10002084"
-        }
+        },
+        "inscriptionDate": "1769",
+        "title": "Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Siciliae et objacentium insularum veterum inscriptionum nova collectio</i> (Panormus: Excudebat Cajetanus Maria Bentivenga, 1769), <a href=\"http://arachne.uni-koeln.de/books/Castelli1769\">http://arachne.uni-koeln.de/books/Castelli1769</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/SPTB56H3",
+        "year": "1769"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "citedRange": "3.5599",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5599",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
-        "author": "Prag and Tigano",
+        "author": "Prag, Tigano",
         "date": "2017",
         "citedRange": "no.50",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/MI64NB9L"
+          "target": "https://www.zotero.org/groups/382445/items/MI64NB9L"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002630",
           "target": "https://biblio.inscriptiones.org/epig10002630"
         },
+        "inscriptionDate": "2017",
         "title": "Alesa Archonidea: il lapidarium",
-        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>"
+        "citation": "<span>J.R.W. Prag e G. Tigano, <i>Alesa Archonidea: il lapidarium</i>, Introduzione all’archeologia di Halaesa 8 (Palermo: Regione Siciliana, Assessorato beni culturali e identità siciliana, Dipartimento beni culturali e identità siciliana, 2017)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/MI64NB9L",
+        "year": "2017"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -271,24 +312,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -300,6 +323,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "492784",
   "facsimile": {
     "n": "screen",
     "url": "ISic001179_tiled.tif",
@@ -308,16 +332,24 @@
     "desc": "Copy of Gualtherus 1624 no.297 (from Arachne edition)",
     "surfaceType": "antiquarianEdition"
   },
-  "provenance": "Halaesa",
   "letterHeights": [],
   "publications": [
-    "IG",
-    "Gualtherus, (no date)",
-    "Gualtherus, 1624 [1625]",
+    "Kaibel, 1890, IG",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
     "Castelli, 1753, Storia di Alesa, antica città di Sicilia",
-    "Castelli, 1769",
-    "CIG",
-    "Prag and Tigano, 2017, Alesa Archonidea: il lapidarium"
+    "Castelli, 1769, Siciliae et objacentium insularum veterum inscriptionum nova collectio",
+    "Boeckh, Franz, 1853, CIG",
+    "Prag, Tigano, 2017, Alesa Archonidea: il lapidarium"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "U7S4ZAG3",
+    "SPTB56H3",
+    "TQMVHEVL",
+    "MI64NB9L"
   ],
   "keywords": [
     "isic001179",
@@ -330,7 +362,7 @@
     "stone",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
     "lost",
     "ancient greek",

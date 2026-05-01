@@ -2,18 +2,29 @@
 	import { Button } from 'bits-ui';
 	import { slide } from 'svelte/transition';
 	import RangeSlider from './RangeSlider.svelte';
+	import TooltipInfo from '$lib/components/TooltipInfo.svelte';
+	import * as config from '$lib/config';
+	import { ChevronDownIcon, ChevronUpIcon } from 'lucide-svelte';
 
 	let {
-		show = false,
+		show = $bindable(false),
+		isLoading,
 		aggregations = {},
 		total = 0,
 		languageConjunction = $bindable(true),
+		inscriptionTypeConjunction = $bindable(true),
+		publicationConjunction = $bindable(true),
 		sortAggregationsBy = $bindable('key'),
 		selectedDateRange = $bindable([0, 0]),
-		selectedLetterHeightRange = $bindable([0, 0]),
+		selectedLetterHeightRange = $bindable([
+			config.search.minLetterHeight,
+			config.search.maxLetterHeight
+		]),
 		selectedFilters = $bindable({}),
 		sortAggregationsByChange,
 		languageConjunctionChange,
+		inscriptionTypeConjunctionChange,
+		publicationConjunctionChange,
 		searchFiltersChange
 	} = $props();
 
@@ -26,6 +37,8 @@
 			.filter(([_, value]) => value.length > 0)
 			.flatMap(([key, value]) => value.map((v) => [key, v]))
 	);
+
+	let showAllFilters = $state(false);
 
 	const sortAggregationsOptions = [
 		{ label: 'Name', value: 'key' },
@@ -76,7 +89,11 @@
 	 */
 	function filterBuckets(buckets, key) {
 		const filter = filterContains[key]?.toLowerCase() || '';
-		return filter ? buckets.filter((b) => b.key.toLowerCase().includes(filter)) : buckets;
+
+		return buckets.map((bucket) => ({
+			...bucket,
+			found: !filter || bucket.key.toLowerCase().includes(filter)
+		}));
 	}
 
 	/**
@@ -100,6 +117,7 @@
 {#if show}
 	<aside
 		class="filters surface-1"
+		class:is-loading={isLoading}
 		tabindex="-1"
 		transition:slide={{ axis: 'x', duration: 300 }}
 		onintroend={handleIntroEnd}
@@ -107,6 +125,7 @@
 	>
 		<section class="filters-header">
 			<h2>Filters</h2>
+
 			<Button.Root class="close-button" onclick={handleClose} aria-label="Close filters"
 				>×</Button.Root
 			>
@@ -123,6 +142,7 @@
 							value={option.value}
 							bind:group={sortAggregationsBy}
 							onchange={() => sortAggregationsByChange()}
+							disabled={isLoading}
 						/>
 						{option.label}
 					</label>
@@ -141,54 +161,139 @@
 						class="clear-filters-button"
 						aria-label="Clear all filters"
 						onclick={handleClearFilters}
+						disabled={isLoading}
 					>
 						Clear all filters
 					</Button.Root>
 				{/if}
 			</div>
-			<ul>
-				{#each selectedFiltersEntries as [key, value]}
-					{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
-					<li>
+			{#if selectedFiltersEntries.length > 0}
+				{@const maxVisibleFilters = 9}
+
+				<ul class="filters-selected">
+					{#each selectedFiltersEntries as [key, value], index}
+						{@const displayValue = value.replaceAll('_', ' ').replaceAll(':::', ' ')}
+						<li class:hidden={index > maxVisibleFilters - 1 && !showAllFilters}>
+							<Button.Root
+								class="remove-filter-button surface-3"
+								aria-label="Remove {key} filter with value {displayValue}"
+								title="Remove {key} filter with value {displayValue}"
+								onclick={() => handleRemoveFilter(key, value)}
+								disabled={isLoading}
+							>
+								{displayValue}
+							</Button.Root>
+						</li>
+					{/each}
+				</ul>
+				{#if selectedFiltersEntries.length > maxVisibleFilters}
+					<div class="filters-show-all-button-wrapper">
 						<Button.Root
-							class="remove-filter-button surface-3"
-							aria-label="Remove {key} filter with value {displayValue}"
-							title="Remove {key} filter with value {displayValue}"
-							onclick={() => handleRemoveFilter(key, value)}
+							class="filters-show-all-button secondary-inverse"
+							aria-label={showAllFilters ? 'Show less filters' : 'Show all filters'}
+							title={showAllFilters ? 'Show less filters' : 'Show all filters'}
+							onclick={() => (showAllFilters = !showAllFilters)}
+							disabled={isLoading}
 						>
-							{displayValue}
+							{#if showAllFilters}
+								<ChevronUpIcon /> Show less filters
+							{:else}
+								<ChevronDownIcon /> Show all filters
+							{/if}
 						</Button.Root>
-					</li>
-				{/each}
-			</ul>
+					</div>
+				{/if}
+			{/if}
 		</section>
 
 		<section class="filters-groups">
 			{#if aggregations?.notBefore}
 				<section class="filters-group">
 					<RangeSlider
-						title="Date"
+						title="Date range"
 						min={-700}
-						max={1830}
+						max={1900}
 						step={1}
-						startLabel="No earlier than"
-						endLabel="No later than"
+						startLabel={selectedDateRange[0] <= 0
+							? `${-1 * selectedDateRange[0]} BCE `
+							: `${selectedDateRange[0]} CE`}
+						endLabel={selectedDateRange[1] <= 0
+							? `${-1 * selectedDateRange[1]} BCE`
+							: `${selectedDateRange[1]} CE`}
+						tooltip={config.tooltips.date.text}
 						bind:selectedRange={selectedDateRange}
 						rangeChange={() => searchFiltersChange()}
+						disabled={isLoading}
 					/>
 				</section>
 			{/if}
 			{#each Object.keys(selectedFilters) as key}
 				{#if key in aggregations && aggregations[key].title}
+					{@const filteredBuckets = filterBuckets(aggregations[key].buckets, key)}
 					<section class="filters-group">
 						<details>
 							<summary>
-								<h3>{aggregations[key].title}</h3>
+								<hgroup>
+									<h3>{aggregations[key].title}</h3>
+									{#if key in config.tooltips}
+										{@const tooltip =
+											config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
+										<TooltipInfo>
+											{tooltip.text}
+											{#if tooltip.link}
+												<a
+													href={tooltip.link}
+													target="_blank"
+													rel="noopener noreferrer"
+													class="tooltip-link"
+												>
+													{tooltip.linkLabel || 'Learn more'}
+												</a>
+											{/if}
+										</TooltipInfo>
+									{/if}
+								</hgroup>
 							</summary>
 							<div>
+								{#if config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
+									{@const tooltip =
+										config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
+									<small>
+										<a
+											href={tooltip.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											class="tooltip-link external"
+										>
+											{tooltip.linkLabel || 'Learn more'}
+										</a>
+									</small>
+									<br />
+								{/if}
+
 								<small
 									>Options: {aggregations[key].buckets.filter((b) => b.doc_count > 0).length}
 								</small>
+								{#if filterBuckets(aggregations[key].buckets, key)}
+									<div class="select-all">
+										<label>
+											<input
+												type="checkbox"
+												checked={selectedFilters[key].length === filteredBuckets.length}
+												disabled={filteredBuckets.length === 0 || isLoading}
+												onchange={() => {
+													if (selectedFilters[key].length === filteredBuckets.length) {
+														selectedFilters[key] = [];
+													} else {
+														selectedFilters[key] = filteredBuckets.map((bucket) => bucket.key);
+													}
+													searchFiltersChange();
+												}}
+											/>
+											Select all
+										</label>
+									</div>
+								{/if}
 								{#if key === 'language'}
 									<div class="conjunction-options">
 										<label>
@@ -196,8 +301,35 @@
 												type="checkbox"
 												bind:checked={languageConjunction}
 												onchange={() => languageConjunctionChange()}
+												disabled={isLoading}
 											/>
 											Match all selected languages (AND)
+										</label>
+									</div>
+								{/if}
+								{#if key === 'inscriptionType'}
+									<div class="conjunction-options">
+										<label>
+											<input
+												type="checkbox"
+												bind:checked={inscriptionTypeConjunction}
+												onchange={() => inscriptionTypeConjunctionChange()}
+												disabled={isLoading}
+											/>
+											Match all selected inscription types (AND)
+										</label>
+									</div>
+								{/if}
+								{#if key === 'publications'}
+									<div class="conjunction-options">
+										<label>
+											<input
+												type="checkbox"
+												bind:checked={publicationConjunction}
+												onchange={() => publicationConjunctionChange()}
+												disabled={isLoading}
+											/>
+											Match all selected publications (AND)
 										</label>
 									</div>
 								{/if}
@@ -207,27 +339,32 @@
 										placeholder="Filter options..."
 										bind:value={filterContains[key]}
 										class="filter-input"
+										disabled={isLoading}
 									/>
 								{/if}
-								<ul>
-									{#each filterBuckets(aggregations[key].buckets, key) as bucket}
-										<li>
-											<label>
-												<input
-													type="checkbox"
-													value={bucket.key}
-													bind:group={selectedFilters[key]}
-													disabled={bucket.doc_count === 0}
-													onchange={() => searchFiltersChange()}
-												/>
-												<div>
-													<span>{getBucketDisplayValue(bucket.key)}</span>
-													<small>matches: {bucket.doc_count.toLocaleString()}</small>
-												</div>
-											</label>
-										</li>
-									{/each}
-								</ul>
+								{#if filterBuckets(aggregations[key].buckets, key)}
+									<ul>
+										{#each filteredBuckets as bucket}
+											<li>
+												<label class:active={bucket.found}>
+													<input
+														type="checkbox"
+														value={bucket.key}
+														bind:group={selectedFilters[key]}
+														disabled={bucket.doc_count === 0 || isLoading}
+														onchange={() => searchFiltersChange()}
+													/>
+													<div>
+														<span title={bucket.key.replaceAll(':::', ' > ')}
+															>{getBucketDisplayValue(bucket.key)}</span
+														>
+														<small>matches: {bucket.doc_count.toLocaleString()}</small>
+													</div>
+												</label>
+											</li>
+										{/each}
+									</ul>
+								{/if}
 							</div>
 						</details>
 					</section>
@@ -239,12 +376,14 @@
 							title="Letter height"
 							unit="mm"
 							min={0}
-							max={100}
+							max={config.search.maxLetterHeight}
 							step={1}
-							startLabel="At least"
-							endLabel="At most"
+							startLabel="Minimum"
+							endLabel="Maximum"
+							tooltip={config.tooltips.letterHeight.text}
 							bind:selectedRange={selectedLetterHeightRange}
 							rangeChange={() => searchFiltersChange()}
+							disabled={isLoading}
 						/>
 					</section>
 				{/if}
@@ -262,8 +401,12 @@
 		overflow-y: auto;
 		max-width: 450px;
 		min-width: 400px;
-		padding: var(--size-4);
+		/* padding: var(--size-4); */
 		z-index: 10;
+	}
+
+	.is-loading * {
+		cursor: wait;
 	}
 
 	@media (max-width: 992px) {
@@ -285,13 +428,20 @@
 
 	section {
 		margin-block: var(--size-4);
+		padding-inline: var(--size-4);
 	}
 
 	.filters-header {
 		align-items: baseline;
+		background: var(--surface-1);
 		display: flex;
 		justify-content: space-between;
 		margin-block-start: 0;
+		padding-block-start: var(--size-4);
+		padding-block-end: var(--size-2);
+		position: sticky;
+		top: 0;
+		z-index: 1;
 	}
 
 	.filters-header h2 {
@@ -313,6 +463,35 @@
 	.filters-sort div {
 		display: flex;
 		gap: var(--size-4);
+	}
+
+	.filters-selected {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-2);
+		justify-content: flex-start;
+		list-style: none;
+		padding: 0;
+	}
+
+	.filters-selected li.hidden {
+		display: none;
+	}
+
+	.filters-show-all-button-wrapper {
+		margin-block-start: var(--size-2);
+	}
+
+	:global(.filters-show-all-button) {
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		color: var(--text-4);
+		font-size: var(--font-size-1);
+		font-weight: normal;
+		margin-left: auto;
+		padding-inline: var(--size-4);
+		text-decoration: underline;
 	}
 
 	h3,
@@ -396,6 +575,11 @@
 		padding-inline: var(--size-3);
 	}
 
+	.filters-group summary hgroup {
+		align-items: flex-start;
+		display: flex;
+	}
+
 	.filters-group details[open] summary {
 		margin-bottom: var(--size-00);
 	}
@@ -410,7 +594,8 @@
 		transform: rotate(45deg);
 	}
 
-	.filters-group .conjunction-options {
+	.filters-group .conjunction-options,
+	.filters-group .select-all {
 		margin-block: var(--size-2);
 	}
 
@@ -466,6 +651,10 @@
 		gap: var(--size-2);
 	}
 
+	.filters-group ul li label:not(.active) {
+		display: none;
+	}
+
 	.filters-group ul li label div {
 		align-items: baseline;
 		display: flex;
@@ -483,5 +672,11 @@
 	.filters-group ul li label div small {
 		overflow-wrap: balance;
 		white-space: nowrap;
+	}
+
+	label:has(input[disabled]),
+	input[disabled] {
+		opacity: 0.5;
+		cursor: not-allowed;
 	}
 </style>

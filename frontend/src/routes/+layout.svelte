@@ -29,10 +29,20 @@
 
 <svelte:head>
 	{#if $page.data.title}
-		<title>{config.title} | {$page.data.title}</title>
+		<title>{$page.data.title} | {config.title}</title>
 	{:else}
-		<title>{config.title}</title>
+		<title>{config.title} — {config.subtitle}</title>
 	{/if}
+	<meta name="description" content={config.description} />
+	<link rel="canonical" href={`${config.url}${$page.url.pathname}`} />
+	<meta property="og:site_name" content={config.title} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={`${config.url}${$page.url.pathname}`} />
+	<meta
+		property="og:title"
+		content={$page.data.title ? `${$page.data.title} | ${config.title}` : config.title}
+	/>
+	<meta property="og:description" content={config.description} />
 </svelte:head>
 
 <div class="layout">

@@ -38,8 +38,20 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "homogeneous, white marble, likely Parian-1, Aphrodisian, Proconnesian, Parian-2, Parian-3, Thasian-3, Pentelic, Ephesian_white (identification based on pXRF, ?)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Ephesian_white",
+    "type": "stone.marble",
+    "subtype": [
+      "Parian-1",
+      "Aphrodisian",
+      "Proconnesian",
+      "Parian-2",
+      "Parian-3",
+      "Thasian-3",
+      "Pentelic",
+      "Ephesian_white"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -80,7 +92,9 @@
         "from": "line1",
         "to": "line1",
         "h": "23",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "23"
       },
       {
         "type": "letterHeight",
@@ -88,7 +102,9 @@
         "from": "line2",
         "to": "line2",
         "h": "23-28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "28"
       },
       {
         "type": "letterHeight",
@@ -96,7 +112,9 @@
         "from": "line3",
         "to": "line3",
         "h": "23-26",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "23",
+        "atMost": "26"
       },
       {
         "type": "letterHeight",
@@ -104,7 +122,9 @@
         "from": "line4",
         "to": "line4",
         "h": "24-28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "28"
       },
       {
         "type": "letterHeight",
@@ -112,7 +132,9 @@
         "from": "line5",
         "to": "line5",
         "h": "18-28",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "18",
+        "atMost": "28"
       },
       {
         "type": "interlinear",
@@ -132,12 +154,14 @@
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -146,6 +170,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Found in Termini Imerese in 1880, during work carried out on a building owned by Giuseppe Catanzaro, near Porta Messina ",
     "type": "found",
@@ -156,6 +182,10 @@
       13.6989596
     ]
   },
+  "provenanceGeo": [
+    37.9810835,
+    13.6989596
+  ],
   "provenanceObserved": {
     "_": "Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 13, shelf 5",
     "type": "observed",
@@ -183,7 +213,6 @@
       "surfaceType": "rear"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -225,9 +254,11 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.8317",
+            "_": "8317",
             "target": "http://arachne.uni-koeln.de/item/buchseite/651027"
           }
         },
@@ -237,11 +268,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "61",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -249,29 +287,38 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Fiorelli",
-        "title": "NSA",
-        "date": "1881",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "98",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001392",
           "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        },
+        "inscriptionDate": "1881",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -295,20 +342,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -319,21 +352,28 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "edition on basis of autopsy",
-      "when": "2024-04-25",
-      "who": "#AA"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "285263",
   "facsimile": {
     "n": "screen",
     "url": "ISic000142_tiled.tif",
@@ -342,12 +382,37 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2023-07-06.",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 23,
+      "atMost": 23
+    },
+    {
+      "atLeast": 23,
+      "atMost": 28
+    },
+    {
+      "atLeast": 23,
+      "atMost": 26
+    },
+    {
+      "atLeast": 24,
+      "atMost": 28
+    },
+    {
+      "atLeast": 18,
+      "atMost": 28
+    }
+  ],
   "publications": [
-    "CIL",
-    "ILMusTermini",
-    "Fiorelli, 1881, NSA"
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini",
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "JCV85C79",
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic000142",
@@ -357,10 +422,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "homogeneous, white marble, likely parian-1, aphrodisian, proconnesian, parian-2, parian-3, thasian-3, pentelic, ephesian_white (identification based on pxrf, ?)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "bronze",
-    "ana": "#material.metal.bronze",
+    "ana": "#material.inorganic.metal.bronze",
+    "type": "metal.bronze",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/109.html"
   },
   "condition": {
@@ -79,7 +83,9 @@
         "from": "line1",
         "to": "line10",
         "h": "5",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "5",
+        "atMost": "5"
       },
       {
         "type": "interlinear",
@@ -101,12 +107,14 @@
     {
       "_": "Agrigentum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462086"
+      "ref": "http://pleiades.stoa.org/places/462086",
+      "region": "Sicilia"
     },
     {
       "_": "Agrigento",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541860"
+      "ref": "http://sws.geonames.org/6541860",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -115,6 +123,8 @@
       13.58876
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Agrigentum",
   "provenanceFound": {
     "_": "Purchased by Hartung near Gavignano, in October 1846, where it was apparently also found, although this remains uncertain (see Kajava 2014: 208 for full discussion)",
     "type": "found",
@@ -122,6 +132,7 @@
     "notAfter": "1846",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "none",
     "type": "observed",
@@ -139,7 +150,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "France",
   "region": "",
   "settlement": "Paris",
   "repository": {
@@ -162,32 +172,42 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0954",
+            "_": "954",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "CIG",
-        "author": "Franz",
-        "citedRange": "3.5491.b (add. p.1248)",
+        "author": "Boeckh, Franz",
+        "date": "1853",
+        "citedRange": "5491.b (add. p.1248)",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/HTUDQBXS"
+          "target": "https://www.zotero.org/groups/382445/items/TQMVHEVL"
         },
         "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001252",
-          "target": "https://biblio.inscriptiones.org/epig10001252"
-        }
+          "_": "https://biblio.inscriptiones.org/epig10001250",
+          "target": "https://biblio.inscriptiones.org/epig10001250"
+        },
+        "inscriptionDate": "1853",
+        "title": "Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)",
+        "citation": "<span>A. Boeckh and J. Franz, <i>Corpus inscriptionum Graecarum III. Pars XVII. Inscriptiones Phrygiae. Pars XVIII. Inscriptiones Galatiae. Pars XIX. Inscriptiones Paphlagoniae. Pars XX. Inscriptiones ponticae. Pars XXI. Inscriptiones Cappadociae. Pars XXII. Inscriptiones Lyciae. Pars XXIII. Inscriptiones Pamphyliae. Pars XXIV. Inscriptiones Pisidiae et Isauriae. Pars XXV. Inscriptiones Ciliciae. Pars XXVI. Inscriptiones Syriae. Pars XXVII. Inscriptiones Mesopotamiae et Assyriae. Pars XXVIII. Inscriptiones Mediae et Persidis. Pars XXIX. Inscriptiones Aegypti. Pars XXX. Inscriptiones Aethiopiae supra Aegyptum. Pars XXXI. Inscriptiones Cyrenaicae. Pars XXXII. Inscriptiones Siciliae cum Melita, Lipara, Sardinia.Pars XXXIII. Inscriptiones Italiae. Pars XXXIV. Inscriptiones Galliarum. Pars XXXV. Inscriptiones Hispaniae. Pars XXXVI. Inscriptiones Brittanniae. Pars XXXVII. Inscriptiones Germaniae. Pars XXXVIII. Inscriptiones Pannoniae, Daciae, Illyrici. Addenda et corrigenda (1853)</i>, vol. 3, 4 vols, Königlich Preussische Akademie der Wissenschaften zu Berlin (Berlin: Ex Officina Academica, 1853), <a href=\"https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up\">https://archive.org/details/bub_gb_s5X4lUGIFBkC/page/n3/mode/2up</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/TQMVHEVL",
+        "year": "1853"
       },
       {
         "author": "Garrucci",
@@ -200,8 +220,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002226",
           "target": "https://biblio.inscriptiones.org/epig10002226"
         },
+        "inscriptionDate": "1847",
         "title": "I piombi antichi raccolti dall'eminentissimo principe il cardinale Lodovico Altieri",
-        "citation": "<span>Raffaele Garrucci, <i>I piombi antichi raccolti dall’eminentissimo principe il cardinale Lodovico Altieri</i> (Rome: Clemente Puccinelli, 1847), <a href=\"https://books.google.co.uk/books?id=5xNfAAAAcAAJ&#38;pg=PP7#v=onepage&#38;q&#38;f=false\">https://books.google.co.uk/books?id=5xNfAAAAcAAJ&#38;pg=PP7#v=onepage&#38;q&#38;f=false</a></span>"
+        "citation": "<span>Raffaele Garrucci, <i>I piombi antichi raccolti dall’eminentissimo principe il cardinale Lodovico Altieri</i> (Rome: Clemente Puccinelli, 1847), <a href=\"https://books.google.co.uk/books?id=5xNfAAAAcAAJ&#38;pg=PP7#v=onepage&#38;q&#38;f=false\">https://books.google.co.uk/books?id=5xNfAAAAcAAJ&#38;pg=PP7#v=onepage&#38;q&#38;f=false</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JLU3FB74",
+        "year": "1847"
       },
       {
         "author": "Robert",
@@ -214,8 +237,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001271",
           "target": "https://biblio.inscriptiones.org/epig10001271"
         },
+        "inscriptionDate": "1936",
         "title": "Collection Froehner. 1. Inscriptions grecques",
-        "citation": "<span>L. Robert, <i>Collection Froehner. 1. Inscriptions grecques</i> (Paris: Editions des Bibliothèques nationales, 1936)</span>"
+        "citation": "<span>L. Robert, <i>Collection Froehner. 1. Inscriptions grecques</i> (Paris: Editions des Bibliothèques nationales, 1936)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6XN6SKDD",
+        "year": "1936"
       },
       {
         "author": "Manganaro",
@@ -228,8 +254,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001847",
           "target": "https://biblio.inscriptiones.org/epig10001847"
         },
+        "inscriptionDate": "1963",
         "title": "Tre tavole di bronzo con decreti di proxenia del Museo di Napoli e il problema dei proagori in Sicilia",
-        "citation": "<span>Giacomo Manganaro, «Tre tavole di bronzo con decreti di proxenia del Museo di Napoli e il problema dei proagori in Sicilia», <i>Kokalos</i> 9 (1963): 205–20</span>"
+        "citation": "<span>Giacomo Manganaro, «Tre tavole di bronzo con decreti di proxenia del Museo di Napoli e il problema dei proagori in Sicilia», <i>Kokalos</i> 9 (1963): 205–20</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/EEMEBTIG",
+        "year": "1963"
       },
       {
         "author": "Kajava",
@@ -242,8 +271,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001420",
           "target": "https://biblio.inscriptiones.org/epig10001420"
         },
+        "inscriptionDate": "2014",
         "title": "Two Greek Documents on Bronze (IG XIV 954; IG XIV 955 = IGUR 4)",
-        "citation": "<span>Mika Kajava, ‘Two Greek Documents on Bronze (IG XIV 954; IG XIV 955 = IGUR 4)’, <i>Arctos: Acta Philologica Fennica</i> 48 (2014): 205–9</span>"
+        "citation": "<span>Mika Kajava, ‘Two Greek Documents on Bronze (IG XIV 954; IG XIV 955 = IGUR 4)’, <i>Arctos: Acta Philologica Fennica</i> 48 (2014): 205–9</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JWFF42KQ",
+        "year": "2014"
       }
     ]
   },
@@ -251,10 +283,7 @@
     "type": "discussion",
     "bibl": [
       {
-        "author": [
-          "Korhonen",
-          "Soraci"
-        ],
+        "author": "Korhonen, Soraci",
         "date": "2019",
         "citedRange": "102-103",
         "ptr": {
@@ -263,7 +292,12 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002542",
           "target": "https://biblio.inscriptiones.org/epig10002542"
-        }
+        },
+        "inscriptionDate": "2019",
+        "title": "Forme amministrative e scelte linguistiche nelle epigrafi e nelle monete della Sicilia romana",
+        "citation": "<span>Kalle Korhonen e Cristina Soraci, «Forme amministrative e scelte linguistiche nelle epigrafi e nelle monete della Sicilia romana», <i>Gerión. Revista de Historia Antigua</i> 37, fasc. 1 (2019): 97–116, <a href=\"https://doi.org/10.5209/GERI.63870\">https://doi.org/10.5209/GERI.63870</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/I8LT7XNE",
+        "year": "2019"
       }
     ]
   },
@@ -288,24 +322,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -317,6 +333,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic030281_tiled.tif",
@@ -325,15 +342,27 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Agrigentum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 5,
+      "atMost": 5
+    }
+  ],
   "publications": [
-    "IG",
-    "Franz, CIG",
+    "Kaibel, 1890, IG",
+    "Boeckh, Franz, 1853, CIG",
     "Garrucci, 1847, I piombi antichi raccolti dall'eminentissimo principe il cardinale Lodovico Altieri",
     "Robert, 1936, Collection Froehner. 1. Inscriptions grecques",
     "Manganaro, 1963, Tre tavole di bronzo con decreti di proxenia del Museo di Napoli e il problema dei proagori in Sicilia",
     "Kajava, 2014, Two Greek Documents on Bronze (IG XIV 954; IG XIV 955 = IGUR 4)"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "TQMVHEVL",
+    "JLU3FB74",
+    "6XN6SKDD",
+    "EEMEBTIG",
+    "JWFF42KQ"
   ],
   "keywords": [
     "isic030281",
@@ -346,7 +375,7 @@
     "bronze",
     "agrigentum",
     "agrigento",
-    "france",
+    "sicilia",
     "paris",
     "formerly in the collection froehner",
     "ancient greek",

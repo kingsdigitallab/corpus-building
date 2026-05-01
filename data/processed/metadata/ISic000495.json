@@ -37,7 +37,12 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -84,20 +89,22 @@
     ]
   },
   "date": {
-    "_": "Imperial",
-    "notBefore": 1,
-    "notAfter": 300
+    "_": "first or second century CE",
+    "notBefore": 51,
+    "notAfter": 200
   },
   "places": [
     {
       "_": "Mazara",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462305"
+      "ref": "http://pleiades.stoa.org/places/462305",
+      "region": "Sicilia"
     },
     {
       "_": "Mazara del Vallo",
       "type": "modern",
-      "ref": "http://sws.geonames.org/2524205"
+      "ref": "http://sws.geonames.org/2524205",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -106,8 +113,10 @@
       12.59304
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Mazara",
   "provenanceFound": {
-    "_": "Found in the 18th century on a porphyry pavement in the area of S. Maria di Gesù, Mazara del Vallo; now walled into the cathedral.",
+    "_": "Found in the early 18th century on a porphyry pavement in the area of S. Maria di Gesù, Mazara del Vallo; subsequently used as a basin in the chiesa della Madonna dell'Alto, and transferred to the Cathedral in 1906; now walled into the cathedral.",
     "type": "found",
     "subtype": "discovered",
     "notBefore": "1700",
@@ -116,6 +125,10 @@
       12.588326
     ]
   },
+  "provenanceGeo": [
+    37.661297,
+    12.588326
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -133,7 +146,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Mazara del Vallo",
   "repository": "",
@@ -148,42 +160,87 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624",
+        "citedRange": "235",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/GIN6NANU"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/GIN6NANU",
+        "inscriptionDate": "1624",
+        "title": "Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+        "citation": "<span>G. Gualtherus, <i>Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri</i> (Panormi, 1624)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GIN6NANU",
+        "year": "1624"
+      },
+      {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "129",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7215",
+            "_": "7215",
             "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
+      },
+      {
+        "author": "Bonanno",
+        "date": "1933",
+        "citedRange": "41 drawing",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/VEL246T8"
+        },
+        "inscriptionDate": "1933",
+        "year": ""
       },
       {
         "author": "Di Stefano",
         "date": "1982-1983",
         "citedRange": "351 with Tav. XLVII.1",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/7GRQNY98"
+          "target": "https://www.zotero.org/groups/382445/items/7GRQNY98"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002459",
           "target": "https://biblio.inscriptiones.org/epig10002459"
         },
+        "inscriptionDate": "1982-1983",
         "title": "La documentazione archeologica del III e IV sec. d.C. nella provincia di Trapani",
-        "citation": "<span>C. A. Di Stefano, «La documentazione archeologica del III e IV sec. d.C. nella provincia di Trapani», <i>Kokalos</i> 28–29 (1983 1982): 350–67</span>"
+        "citation": "<span>C. A. Di Stefano, «La documentazione archeologica del III e IV sec. d.C. nella provincia di Trapani», <i>Kokalos</i> 28–29 (1983 1982): 350–67</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/7GRQNY98",
+        "year": "1982"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -207,32 +264,19 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -241,6 +285,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "491721",
   "facsimile": {
     "n": "screen",
     "url": "ISic000495_tiled.tif",
@@ -249,11 +294,20 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Mazara",
   "letterHeights": [],
   "publications": [
-    "CIL",
+    "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Bonanno, 1933",
     "Di Stefano, 1982-1983, La documentazione archeologica del III e IV sec. d.C. nella provincia di Trapani"
+  ],
+  "zotero": [
+    "GIN6NANU",
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "VEL246T8",
+    "7GRQNY98"
   ],
   "keywords": [
     "isic000495",
@@ -266,7 +320,7 @@
     "marble",
     "mazara",
     "mazara del vallo",
-    "italy",
+    "sicilia",
     "sicily",
     "mazara del vallo",
     "latin",

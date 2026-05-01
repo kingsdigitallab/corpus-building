@@ -38,8 +38,14 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
-    "_": "marble",
-    "ana": "#material.stone.marble",
+    "_": "Fine-grained, homogeneous, grey, calcitic, smelly marble, likely Lunense, Hymettan. Optical microscopy: homeoblastic to heteroblastic fabric with triple points, mosaic microstructure. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan",
+    "type": "stone.marble",
+    "subtype": [
+      "Lunense",
+      "Hymettan"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -72,7 +78,7 @@
     }
   },
   "handNote": {
-    "lettering": "Large wide letters in a thin v-cut, reducing in height to line 4, with elegant serfis, comma-shaped interpuncts, and use of ligature.",
+    "lettering": "Large wide letters in a thin v-cut, reducing in height to line 4, with elegant serifs, comma-shaped interpuncts, and use of ligature.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -80,7 +86,9 @@
         "from": "line1",
         "to": "line1",
         "h": "75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "75",
+        "atMost": "75"
       },
       {
         "type": "letterHeight",
@@ -88,7 +96,9 @@
         "from": "line2",
         "to": "line2",
         "h": "70",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "70"
       },
       {
         "type": "letterHeight",
@@ -96,7 +106,9 @@
         "from": "line3",
         "to": "line3",
         "h": "62-65 (I = 70)",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "62",
+        "atMost": "65"
       },
       {
         "type": "letterHeight",
@@ -104,7 +116,9 @@
         "from": "line4",
         "to": "line4",
         "h": "50-53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -126,12 +140,14 @@
       "_": "Thermae Himeraeae",
       "type": "ancient",
       "ref": "http://pleiades.stoa.org/places/462513",
-      "cert": "low"
+      "cert": "low",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -140,6 +156,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "One of several pieces first recorded in the civic collection by Romano in 1829, as having been found subsequent to the publication of the corpus in 1784 by Castelli, Principe di Torremuzza",
     "type": "found",
@@ -148,6 +166,7 @@
     "notAfter": "1829",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Prag 2022-07-05, on display in the Museo Civico.",
     "type": "observed",
@@ -173,7 +192,6 @@
       "surfaceType": "right"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -222,14 +240,21 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002748",
           "target": "https://biblio.inscriptiones.org/epig10002748"
-        }
+        },
+        "inscriptionDate": "1829",
+        "title": "Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+        "citation": "<span>Baldassare Romano, «Antiche iscrizioni inedite appartenenti alla città di Termini Imerese», <i>Giornale di scienze, letteratura ed arti per la Sicilia</i> 28 (1829): 289–308</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/2UJS2UVS",
+        "year": "1829"
       },
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7387",
+            "_": "7387",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650798"
           }
         },
@@ -239,11 +264,18 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000589",
           "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        },
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
         "n": "ILMusTermini",
+        "author": "Bivona",
+        "date": "1994",
         "citedRange": "67",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/JCV85C79"
@@ -251,15 +283,20 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10002137",
           "target": "https://biblio.inscriptiones.org/epig10002137"
-        }
+        },
+        "inscriptionDate": "1994",
+        "title": "Iscrizioni latine lapidarie del museo civico di Termini Imerese",
+        "citation": "<span>Livia Bivona, <i>Iscrizioni latine lapidarie del museo civico di Termini Imerese</i>, vol. 9/8, Kokalos Supplementi / Sikelika serie storica (Palermo / Rome, 1994)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/JCV85C79",
+        "year": "1994"
       },
-      ""
+      null
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -283,20 +320,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Tuuli Ahlholm",
         "xml:id": "TA",
         "ref": "https://orcid.org/0000-0001-8417-7089"
@@ -307,16 +330,23 @@
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited from autopsy",
-      "when": "2024-05-01",
-      "who": "#JP"
+      "_": "Robert Crellin moved global IDs to inner w elements",
+      "when": "2025-08-13",
+      "who": "#RC"
     }
   },
+  "tmNumber": "284849",
   "facsimile": {
     "n": "screen",
     "url": "ISic000148_tiled.tif",
@@ -325,12 +355,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-07-10.",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 75,
+      "atMost": 75
+    },
+    {
+      "atLeast": 70,
+      "atMost": 70
+    },
+    {
+      "atLeast": 62,
+      "atMost": 65
+    },
+    {
+      "atLeast": 50,
+      "atMost": 53
+    }
+  ],
   "publications": [
-    "Romano, 1829",
-    "CIL",
-    "ILMusTermini"
+    "Romano, 1829, Antiche iscrizioni inedite appartenenti alla città di Termini Imerese",
+    "Mommsen, 1883, CIL",
+    "Bivona, 1994, ILMusTermini"
+  ],
+  "zotero": [
+    "2UJS2UVS",
+    "GQN8UZSI",
+    "JCV85C79"
   ],
   "keywords": [
     "isic000148",
@@ -340,10 +391,10 @@
     },
     "funerary",
     "plaque",
-    "marble",
+    "fine-grained, homogeneous, grey, calcitic, smelly marble, likely lunense, hymettan. optical microscopy: homeoblastic to heteroblastic fabric with triple points, mosaic microstructure. digital microscopy: homeoblastic fabric (identification based on pxrf, digital microscopy, xrd, optical microscopy, stable isotopes analysis, epr, la-icp-ms)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

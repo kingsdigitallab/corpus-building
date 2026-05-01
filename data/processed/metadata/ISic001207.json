@@ -44,8 +44,11 @@
   },
   "material": {
     "_": "sandstone",
-    "ana": "#material.stone.sandstone",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
+    "ana": "#material.inorganic.stone.sedimentary_rock.sandstone",
+    "type": "stone.sandstone",
+    "resp": "#Coccato",
+    "ref": "http://www.eagle-network.eu/voc/material/lod/75.html",
+    "subtype": []
   },
   "condition": "",
   "dimensions": [
@@ -85,7 +88,9 @@
         "from": "line1",
         "to": "line5",
         "h": "30-45",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -99,20 +104,21 @@
   "date": {
     "_": "2nd century BCE(?)",
     "notBefore": -200,
-    "notAfter": -100,
-    "precision": "low"
+    "notAfter": -101
   },
   "places": [
     {
       "_": "Abacaenum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462062"
+      "ref": "http://pleiades.stoa.org/places/462062",
+      "region": "Sicilia"
     },
     {
       "_": "Tripi",
       "type": "modern",
       "ref": "http://sws.geonames.org/2522853",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -121,6 +127,8 @@
       15.10158
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Abacaenum",
   "provenanceFound": {
     "_": "From the area of the necropolis in contrada Cardusa",
     "type": "found",
@@ -130,6 +138,10 @@
       15.11438
     ]
   },
+  "provenanceGeo": [
+    38.06519,
+    15.11438
+  ],
   "provenanceObserved": {
     "_": "Palermo Museum, July 2017",
     "type": "observed",
@@ -154,7 +166,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -196,23 +207,29 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0382b",
+            "_": "382b",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusPalermo",
+        "author": "Manni Piraino",
+        "date": "1973",
         "citedRange": "126",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/F66S4X3M"
@@ -220,63 +237,81 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000531",
           "target": "https://biblio.inscriptiones.org/epig10000531"
-        }
+        },
+        "inscriptionDate": "1973",
+        "title": "Iscrizioni greche lapidarie del Museo di Palermo",
+        "citation": "<span>M.T. Manni Piraino, <i>Iscrizioni greche lapidarie del Museo di Palermo</i>, Sikelika 6 (Palermo: S. F. Flaccovio, 1973)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F66S4X3M",
+        "year": "1973"
       },
       {
         "type": "bulletin",
         "n": "NSA",
-        "author": "Salinas",
-        "title": "NSA",
-        "date": "1886",
+        "author": "",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "464  no.a",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1886",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       },
       {
         "type": "corpus",
         "n": "SGDI",
+        "author": "Hoffmann",
+        "date": "1904",
         "citedRange": "5208b",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/JB4GMPBH"
+          "target": "https://www.zotero.org/groups/382445/items/DQDPC573"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000817",
           "target": "https://biblio.inscriptiones.org/epig10000817"
         },
-        "title": "Sammlung der griechischen Dialekt-Inschriften",
-        "date": "1884-1915",
-        "citation": "<span>F. Bechtel et al., <i>Sammlung der griechischen Dialekt-Inschriften</i>, 4 vols (Göttingen: Vandenhoeck and Ruprecht, 1884)</span>"
+        "inscriptionDate": "1904",
+        "title": "Die Inschriften von Sicilien und Abu-Simbel",
+        "citation": "<span>Otto Hoffmann, ‘Die Inschriften von Sicilien und Abu-Simbel’, in <i>Sammlung der Griechischen Dialekt-Inschriften</i>, ed. F. Bechtel and H. Collitz, vol. 3.2.4 (Göttingen: Verlag von Vandenhoeck &#38; Ruprecht, 1904)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/DQDPC573",
+        "year": "1904"
       },
       {
         "author": "Manni Piraino",
         "date": "1976",
         "citedRange": "392",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/R9M263EA"
+          "target": "https://www.zotero.org/groups/382445/items/R9M263EA"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001783",
           "target": "https://biblio.inscriptiones.org/epig10001783"
         },
+        "inscriptionDate": "1976",
         "title": "Contribution Épigraphique à l'Étude de l'esclavage en Sicile",
-        "citation": "<span>M.T. Manni Piraino, « Contribution Épigraphique à l’Étude de l’esclavage en Sicile », in <i>Actes du Colloque 1973 sur l’Esclavage</i> (Besançon: Presses Universitaires de Franche-Comté, 1976), 385‑97, <a href=\"https://www.persee.fr/doc/girea_0000-0000_1976_act_4_1_946\">https://www.persee.fr/doc/girea_0000-0000_1976_act_4_1_946</a></span>"
+        "citation": "<span>M.T. Manni Piraino, « Contribution Épigraphique à l’Étude de l’esclavage en Sicile », in <i>Actes du Colloque 1973 sur l’Esclavage</i> (Besançon: Presses Universitaires de Franche-Comté, 1976), 385‑97, <a href=\"https://www.persee.fr/doc/girea_0000-0000_1976_act_4_1_946\">https://www.persee.fr/doc/girea_0000-0000_1976_act_4_1_946</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/R9M263EA",
+        "year": "1976"
       },
       {
         "author": "Manganaro",
         "date": "1988",
         "citedRange": "20 n.73",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/RZSFKACR"
+          "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Sofia",
@@ -289,15 +324,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001575",
           "target": "https://biblio.inscriptiones.org/epig10001575"
         },
+        "inscriptionDate": "2015",
         "title": "Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi",
-        "citation": "<span>Girolamo Sofia, <i>Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi</i> (Terme Vigliatore (ME): Giambra editore, 2015)</span>"
+        "citation": "<span>Girolamo Sofia, <i>Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi</i> (Terme Vigliatore (ME): Giambra editore, 2015)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9QTE4E3Z",
+        "year": "2015"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -321,35 +359,38 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoé Lienard",
+        "xml:id": "ZL",
+        "ref": "https://orcid.org/0009-0007-0586-7956"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "tagged names and persons",
+      "when": "2025-12-16",
+      "who": "#ZL"
     }
   },
+  "tmNumber": "492811",
   "facsimile": {
     "n": "screen",
     "url": "ISic001207_tiled.tif",
@@ -358,16 +399,29 @@
     "desc": "Photo J. Prag, courtesy Museo Archeologico Regionale Antonino Salinas",
     "surfaceType": "front"
   },
-  "provenance": "Abacaenum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 45
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusPalermo",
-    "Salinas, 1886, NSA",
-    "SGDI, 1884-1915",
+    "Kaibel, 1890, IG",
+    "Manni Piraino, 1973, IGMusPalermo",
+    "Notizie degli scavi di antichità, 1876-",
+    "Hoffmann, 1904, SGDI",
     "Manni Piraino, 1976, Contribution Épigraphique à l'Étude de l'esclavage en Sicile",
-    "Manganaro, 1988",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Sofia, 2015, Abakainon. Nella dimora di Ade. La necropoli in contrada Cardusa a Tripi"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "F66S4X3M",
+    "4MCP2PVV",
+    "DQDPC573",
+    "R9M263EA",
+    "RZSFKACR",
+    "9QTE4E3Z"
   ],
   "keywords": [
     "isic001207",
@@ -380,7 +434,7 @@
     "sandstone",
     "abacaenum",
     "tripi",
-    "italy",
+    "sicilia",
     "sicily",
     "palermo",
     "museo archeologico regionale antonino salinas",

@@ -11,9 +11,9 @@
 				{#if place}
 					{#if place.offset}<em>{place.offset}</em>{/if}
 					{#if place.ref}
-						<a class="strong" href={place.ref}>{place._}</a>
+						<a class="strong" href={place.ref} title={place._}>{place._}</a>
 					{:else}
-						<span class="strong">{place._}</span>
+						<span class="strong" title={place._}>{place._}</span>
 					{/if}
 					({place.type})
 				{/if}

@@ -36,7 +36,11 @@
   },
   "material": {
     "_": "marble",
-    "ana": "#material.stone.marble",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -98,13 +102,15 @@
     {
       "_": "Halaesa",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462225"
+      "ref": "http://pleiades.stoa.org/places/462225",
+      "region": "Sicilia"
     },
     {
       "_": "Castel di Tusa",
       "type": "modern",
       "ref": "http://sws.geonames.org/2525099",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -113,12 +119,15 @@
       14.26197
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Halaesa",
   "provenanceFound": {
     "_": "First recorded by Torremuzza in 1749 and 1753 'fra le ruine' of Halaesa",
     "type": "found",
     "subtype": "first-recorded",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -141,10 +150,9 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
-  "settlement": "Lost",
-  "repository": "",
+  "settlement": "unknown",
+  "repository": "unknown",
   "textLang": {
     "_": "Latin",
     "mainLang": "la",
@@ -158,19 +166,23 @@
       {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10 p.768 comm. ad no. 7458",
+            "_": "p.768 comm. ad no. 7458",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650802"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "author": "Castelli",
@@ -188,8 +200,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002087",
           "target": "https://biblio.inscriptiones.org/epig10002087"
         },
+        "inscriptionDate": "1749",
         "title": "Dissertazione sopra una statua di marmo: scoverta nelle rovine dell'antica città d'Alesa in Sicilia",
-        "citation": "<span>Gabriele Lancillotto Castelli, <i>Dissertazione sopra una statua di marmo: scoverta nelle rovine dell’antica città d’Alesa in Sicilia</i> (Italy: Nella Nuova stamperia de’ SS. Appostoli ..., 1749), <a href=\"http://arachne.uni-koeln.de/item/buch/1949\">http://arachne.uni-koeln.de/item/buch/1949</a></span>"
+        "citation": "<span>Gabriele Lancillotto Castelli, <i>Dissertazione sopra una statua di marmo: scoverta nelle rovine dell’antica città d’Alesa in Sicilia</i> (Italy: Nella Nuova stamperia de’ SS. Appostoli ..., 1749), <a href=\"http://arachne.uni-koeln.de/item/buch/1949\">http://arachne.uni-koeln.de/item/buch/1949</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/542PCSHF",
+        "year": "1749"
       },
       {
         "author": "Castelli",
@@ -207,8 +222,11 @@
           "_": "https://biblio.inscriptiones.org/epig10002086",
           "target": "https://biblio.inscriptiones.org/epig10002086"
         },
+        "inscriptionDate": "1753",
         "title": "Storia di Alesa, antica città di Sicilia",
-        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Storia di Alesa, antica città di Sicilia</i> (Palermo: Stamperia de SS. Appostoli in Piazza Vigliena, presso Pietro Bentivenga, 1753), <a href=\"http://arachne.uni-koeln.de/books/Castelli1763\">http://arachne.uni-koeln.de/books/Castelli1763</a></span>"
+        "citation": "<span>Gabriele Lancillotto Castelli principe di Torremuzza, <i>Storia di Alesa, antica città di Sicilia</i> (Palermo: Stamperia de SS. Appostoli in Piazza Vigliena, presso Pietro Bentivenga, 1753), <a href=\"http://arachne.uni-koeln.de/books/Castelli1763\">http://arachne.uni-koeln.de/books/Castelli1763</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/U7S4ZAG3",
+        "year": "1753"
       },
       {
         "author": "Prestianni Giallombardo",
@@ -221,27 +239,32 @@
           "_": "https://biblio.inscriptiones.org/epig10001357",
           "target": "https://biblio.inscriptiones.org/epig10001357"
         },
+        "inscriptionDate": "2012",
         "title": "Spazio pubblico e memoria civica. Le epigrafi dall'agora di Alesa",
-        "citation": "<span>Anna Maria Prestianni Giallombardo, «Spazio pubblico e memoria civica. Le epigrafi dall’agora di Alesa», in <i>Agora greca e agorai di Sicilia</i>, a c. di C. Ampolo (Pisa: Edizioni della Normale, 2012), 171–200</span>"
+        "citation": "<span>Anna Maria Prestianni Giallombardo, «Spazio pubblico e memoria civica. Le epigrafi dall’agora di Alesa», in <i>Agora greca e agorai di Sicilia</i>, a c. di C. Ampolo (Pisa: Edizioni della Normale, 2012), 171–200</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/CJISRIUV",
+        "year": "2012"
       },
       {
-        "author": "Ampolo and Erdas",
+        "author": "Ampolo, Erdas",
         "date": "2019",
         "citedRange": "111-112",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/3PK3JKXR"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001036",
-          "target": "https://biblio.inscriptiones.org/epig10001036"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/3PK3JKXR",
+        "inscriptionDate": "2019",
+        "title": "Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta",
+        "citation": "<span>Carmine Ampolo e Donatella Erdas, <i>Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta</i> (Pisa: Edizioni della Normale, 2019)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/3PK3JKXR",
+        "year": "2019"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -260,20 +283,6 @@
         "ref": "http://orcid.org/0000-0003-3819-8537"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -285,6 +294,7 @@
       "who": "#JP"
     }
   },
+  "tmNumber": "",
   "facsimile": {
     "n": "screen",
     "url": "ISic001705_tiled.tif",
@@ -293,14 +303,20 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Halaesa",
   "letterHeights": [],
   "publications": [
-    "CIL",
+    "Mommsen, 1883, CIL",
     "Castelli, 1749, Dissertazione sopra una statua di marmo: scoverta nelle rovine dell'antica città d'Alesa in Sicilia",
     "Castelli, 1753, Storia di Alesa, antica città di Sicilia",
     "Prestianni Giallombardo, 2012, Spazio pubblico e memoria civica. Le epigrafi dall'agora di Alesa",
-    "Ampolo and Erdas, 2019"
+    "Ampolo, Erdas, 2019, Inscriptiones Segestanae. Le iscrizioni greche e latine di Segesta"
+  ],
+  "zotero": [
+    "GQN8UZSI",
+    "542PCSHF",
+    "U7S4ZAG3",
+    "CJISRIUV",
+    "3PK3JKXR"
   ],
   "keywords": [
     "isic001705",
@@ -313,9 +329,9 @@
     "marble",
     "halaesa",
     "castel di tusa",
-    "italy",
+    "sicilia",
     "sicily",
-    "lost",
+    "unknown",
     "latin",
     "la"
   ]

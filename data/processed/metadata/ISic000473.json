@@ -39,7 +39,12 @@
   },
   "material": {
     "_": "limestone\n                                    ",
-    "ana": "#material.stone.limestone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unspecified"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
   "condition": "",
@@ -86,7 +91,9 @@
         "from": "line1",
         "to": "line1",
         "h": "65-71",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "71"
       },
       {
         "type": "letterHeight",
@@ -94,7 +101,9 @@
         "from": "line2",
         "to": "line2",
         "h": "68-74",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "68",
+        "atMost": "74"
       },
       {
         "type": "letterHeight",
@@ -102,7 +111,9 @@
         "from": "line3",
         "to": "line3",
         "h": "70-74",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "70",
+        "atMost": "74"
       },
       {
         "type": "letterHeight",
@@ -110,7 +121,9 @@
         "from": "line4",
         "to": "line4",
         "h": "72-75",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "72",
+        "atMost": "75"
       },
       {
         "type": "letterHeight",
@@ -118,7 +131,9 @@
         "from": "line5",
         "to": "line5",
         "h": "67-72",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "67",
+        "atMost": "72"
       },
       {
         "type": "letterHeight",
@@ -126,7 +141,9 @@
         "from": "line6",
         "to": "line6",
         "h": "67-74",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "67",
+        "atMost": "74"
       },
       {
         "type": "letterHeight",
@@ -134,7 +151,9 @@
         "from": "line7",
         "to": "line7",
         "h": "74-78",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "74",
+        "atMost": "78"
       },
       {
         "type": "interlinear",
@@ -142,7 +161,9 @@
         "from": "line1",
         "to": "line2",
         "h": "50-52",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "52"
       },
       {
         "type": "interlinear",
@@ -150,7 +171,9 @@
         "from": "line2",
         "to": "line3",
         "h": "47-51",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "47",
+        "atMost": "51"
       },
       {
         "type": "interlinear",
@@ -158,7 +181,9 @@
         "from": "line3",
         "to": "line4",
         "h": "50-52",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "52"
       },
       {
         "type": "interlinear",
@@ -166,7 +191,9 @@
         "from": "line4",
         "to": "line5",
         "h": "50-53",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "53"
       },
       {
         "type": "interlinear",
@@ -174,7 +201,9 @@
         "from": "line5",
         "to": "line6",
         "h": "52-55",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "52",
+        "atMost": "55"
       },
       {
         "type": "interlinear",
@@ -182,26 +211,29 @@
         "from": "line6",
         "to": "line7",
         "h": "45-52",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "45",
+        "atMost": "52"
       }
     ]
   },
   "date": {
     "_": "Mid-1st century CE",
     "notBefore": 1,
-    "notAfter": 100,
-    "precision": "low"
+    "notAfter": 100
   },
   "places": [
     {
       "_": "Agrigentum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462086"
+      "ref": "http://pleiades.stoa.org/places/462086",
+      "region": "Sicilia"
     },
     {
       "_": "Agrigento",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541860"
+      "ref": "http://sws.geonames.org/6541860",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -210,6 +242,8 @@
       13.58876
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Agrigentum",
   "provenanceFound": {
     "_": "Found in the area of the Temple of Concord in the C16 AD",
     "type": "found",
@@ -219,6 +253,10 @@
       13.592091
     ]
   },
+  "provenanceGeo": [
+    37.28967,
+    13.592091
+  ],
   "provenanceObserved": {
     "_": "On display.",
     "type": "observed",
@@ -251,7 +289,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Agrigento",
   "repository": {
@@ -274,7 +311,10 @@
           "lon": 13.58898416
         }
       },
-      "pleiades": "https://pleiades.stoa.org/places/462086"
+      "idno": {
+        "type": "Pleiades",
+        "url": "https://pleiades.stoa.org/places/462086"
+      }
     }
   },
   "idno": {
@@ -292,21 +332,39 @@
     "type": "edition",
     "bibl": [
       {
+        "author": "Gualtherus",
+        "date": "1624 [1625]",
+        "citedRange": "115",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/ZP8DE8KS"
+        },
+        "ref": "https://www.zotero.org/groups/382445/items/ZP8DE8KS",
+        "inscriptionDate": "1624 [1625]",
+        "title": "Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+        "citation": "<span>G. Gualtherus, <i>Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib</i> (Messanae: apvd Petrvs Bream, 1624), <a href=\"http://arachne.uni-koeln.de/books/Gualtieri1624\">http://arachne.uni-koeln.de/books/Gualtieri1624</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ZP8DE8KS",
+        "year": "1624"
+      },
+      {
         "type": "corpus",
         "n": "CIL",
+        "author": "Mommsen",
+        "date": "1883",
         "citedRange": {
           "ref": {
-            "_": "10.7192",
+            "_": "7192",
             "target": "http://arachne.uni-koeln.de/item/buchseite/650772"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000589",
-          "target": "https://biblio.inscriptiones.org/epig10000589"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
+        "inscriptionDate": "1883",
+        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
+        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
+        "year": "1883"
       },
       {
         "type": "corpus",
@@ -318,7 +376,13 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10000352",
           "target": "https://biblio.inscriptiones.org/epig10000352"
-        }
+        },
+        "title": "Inscriptiones Latinae Selectae",
+        "author": "Dessau",
+        "date": "1892-1916",
+        "citation": "<span>H. Dessau, <i>Inscriptiones Latinae Selectae</i>, 3 vols (Berlin: Weidmann, 1892)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/XHMS9K6S",
+        "year": "1892"
       },
       {
         "author": "Wilson",
@@ -330,19 +394,29 @@
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001509",
           "target": "https://biblio.inscriptiones.org/epig10001509"
-        }
+        },
+        "inscriptionDate": "1990",
+        "title": "Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+        "citation": "<span>R.J.A. Wilson, <i>Sicily under the Roman Empire: The Archaeology of a Roman Province, 36 B.C. - A.D. 535</i> (Warminster: Aris and Philips, 1990)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/VF9MMBI9",
+        "year": "1990"
       },
       {
         "author": "Manganaro",
         "date": "1988",
-        "citedRange": "19 tav.1",
+        "citedRange": "19 tav.1, 54, 68 n.349",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/RZSFKACR"
         },
         "ref": {
           "_": "https://biblio.inscriptiones.org/epig10001427",
           "target": "https://biblio.inscriptiones.org/epig10001427"
-        }
+        },
+        "inscriptionDate": "1988",
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Salmeri",
@@ -354,8 +428,11 @@
           "_": "https://biblio.inscriptiones.org/epig10001608",
           "target": "https://biblio.inscriptiones.org/epig10001608"
         },
+        "inscriptionDate": "1984",
         "title": "Un magister ovium di Domizia Longina in Sicilia",
-        "citation": "<span>G. Salmeri, «Un magister ovium di Domizia Longina in Sicilia», <i>Annali della Scuola Normale Superiore di Pisa</i> 3.14 (1984): 13–23</span>"
+        "citation": "<span>G. Salmeri, «Un magister ovium di Domizia Longina in Sicilia», <i>Annali della Scuola Normale Superiore di Pisa</i> 3.14 (1984): 13–23</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ME6MW6GJ",
+        "year": "1984"
       },
       {
         "author": "Manganaro",
@@ -368,15 +445,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001816",
           "target": "https://biblio.inscriptiones.org/epig10001816"
         },
+        "inscriptionDate": "1998",
         "title": "Homonoia dei Kimissaioi, Eunomia dei Geloi e la ninfa (termitana) Sardo",
-        "citation": "<span>Giacomo Manganaro, «Homonoia dei Kimissaioi, Eunomia dei Geloi e la ninfa (termitana) Sardo», in <i>Spudasmata, Studien Kl. Phil. 69, Festschrift E. Olshausen zum 60 Geburtstag</i>, a c. di U. Fellmeth e H. Sonnabend (Hildesheim, Zurich, 1998), 131–42</span>"
+        "citation": "<span>Giacomo Manganaro, «Homonoia dei Kimissaioi, Eunomia dei Geloi e la ninfa (termitana) Sardo», in <i>Spudasmata, Studien Kl. Phil. 69, Festschrift E. Olshausen zum 60 Geburtstag</i>, a c. di U. Fellmeth e H. Sonnabend (Hildesheim, Zurich, 1998), 131–42</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/56WTI3CU",
+        "year": "1998"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -400,27 +480,14 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
@@ -429,6 +496,7 @@
       "who": "#SS"
     }
   },
+  "tmNumber": "491698",
   "facsimile": {
     "n": "screen",
     "url": "ISic000473_tiled.tif",
@@ -437,15 +505,77 @@
     "desc": "Photo M. Metcalfe",
     "surfaceType": "front"
   },
-  "provenance": "Agrigentum",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 65,
+      "atMost": 71
+    },
+    {
+      "atLeast": 68,
+      "atMost": 74
+    },
+    {
+      "atLeast": 70,
+      "atMost": 74
+    },
+    {
+      "atLeast": 72,
+      "atMost": 75
+    },
+    {
+      "atLeast": 67,
+      "atMost": 72
+    },
+    {
+      "atLeast": 67,
+      "atMost": 74
+    },
+    {
+      "atLeast": 74,
+      "atMost": 78
+    },
+    {
+      "atLeast": 50,
+      "atMost": 52
+    },
+    {
+      "atLeast": 47,
+      "atMost": 51
+    },
+    {
+      "atLeast": 50,
+      "atMost": 52
+    },
+    {
+      "atLeast": 50,
+      "atMost": 53
+    },
+    {
+      "atLeast": 52,
+      "atMost": 55
+    },
+    {
+      "atLeast": 45,
+      "atMost": 52
+    }
+  ],
   "publications": [
-    "CIL",
-    "ILS",
-    "Wilson, 1990",
-    "Manganaro, 1988",
+    "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
+    "Mommsen, 1883, CIL",
+    "Dessau, 1892-1916, ILS",
+    "Wilson, 1990, Sicily under the Roman Empire: the archaeology of a Roman province, 36 B.C. - A.D. 535",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Salmeri, 1984, Un magister ovium di Domizia Longina in Sicilia",
     "Manganaro, 1998, Homonoia dei Kimissaioi, Eunomia dei Geloi e la ninfa (termitana) Sardo"
+  ],
+  "zotero": [
+    "ZP8DE8KS",
+    "GQN8UZSI",
+    "XHMS9K6S",
+    "VF9MMBI9",
+    "RZSFKACR",
+    "ME6MW6GJ",
+    "56WTI3CU"
   ],
   "keywords": [
     "isic000473",
@@ -458,7 +588,7 @@
     "limestone",
     "agrigentum",
     "agrigento",
-    "italy",
+    "sicilia",
     "sicily",
     "agrigento",
     "museo regionale archeologico pietro griffo",

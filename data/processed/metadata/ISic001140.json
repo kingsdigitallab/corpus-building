@@ -39,8 +39,19 @@
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
-    "_": "marble (white)",
-    "ana": "#material.stone.marble",
+    "_": "Coarse-grained, banded, white marble, likely Aphrodisian, Parian-1, Parian-2, Parian-3, Parian-4, Proconnesian, Thasian-3. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy)",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3",
+    "type": "stone.marble",
+    "subtype": [
+      "Aphrodisian",
+      "Parian-1",
+      "Parian-2",
+      "Parian-3",
+      "Parian-4",
+      "Proconnesian",
+      "Thasian-3"
+    ],
+    "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
   "condition": "",
@@ -81,7 +92,9 @@
         "from": "line1",
         "to": "line1",
         "h": "24",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "24"
       },
       {
         "type": "letterHeight",
@@ -89,7 +102,9 @@
         "from": "line2",
         "to": "line2",
         "h": "17-27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "17",
+        "atMost": "27"
       },
       {
         "type": "letterHeight",
@@ -97,7 +112,9 @@
         "from": "line3",
         "to": "line3",
         "h": "20-31",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "31"
       },
       {
         "type": "letterHeight",
@@ -105,7 +122,9 @@
         "from": "line4",
         "to": "line4",
         "h": "24-27",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "24",
+        "atMost": "27"
       },
       {
         "type": "interlinear",
@@ -119,19 +138,20 @@
   "date": {
     "_": "4th century CE",
     "notBefore": 301,
-    "notAfter": 400,
-    "precision": "low"
+    "notAfter": 400
   },
   "places": [
     {
       "_": "Thermae Himeraeae",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462513"
+      "ref": "http://pleiades.stoa.org/places/462513",
+      "region": "Sicilia"
     },
     {
       "_": "Termini Imerese",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6539140"
+      "ref": "http://sws.geonames.org/6539140",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -140,6 +160,8 @@
       13.69555
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Thermae Himeraeae",
   "provenanceFound": {
     "_": "Reportedly found in 1879 'one hundred meters from the city walls' of Termini Imerese, in 'the house of Mr. Sinibaldi Oddo'. It was placed 'above a brick-covered tomb'. (Brugnone 1974, quoting Fiorelli).",
     "type": "found",
@@ -147,6 +169,7 @@
     "when": "1879",
     "geo": null
   },
+  "provenanceGeo": [],
   "provenanceObserved": {
     "_": "Antoniou, 2022-07-13. Brugnone (1974) saw in the Museo Civico Baldassare Romano both the original fragment, and a plaster cast of the whole. Remaining in the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 1, shelf 4, is now only the original fragment.",
     "type": "observed",
@@ -166,7 +189,6 @@
       "surfaceType": "front"
     }
   ],
-  "country": "Italy",
   "region": "Sicily",
   "settlement": "Termini Imerese",
   "repository": {
@@ -208,23 +230,29 @@
       {
         "type": "corpus",
         "n": "IG",
+        "author": "Kaibel",
+        "date": "1890",
         "citedRange": {
           "ref": {
-            "_": "14.0321",
+            "_": "321",
             "target": "https://clio.columbia.edu/catalog/6873760"
           }
         },
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/Q2SBPG9F"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001072",
-          "target": "https://biblio.inscriptiones.org/epig10001072"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/Q2SBPG9F",
+        "inscriptionDate": "1890",
+        "title": "Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus",
+        "citation": "<span>G. Kaibel, <i>Inscriptiones Graecae Siciliae et Italiae, additis graecis Galliae Hispaniae, Britanniae, Germaniae inscriptionibus</i>, Inscriptiones Graecae consilio et auctoritate Academiae Litterarum Regiae Borussicae Editae. Volumen XIV., XIV (Berlin: Georgius Reimerus, 1890)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/Q2SBPG9F",
+        "year": "1890"
       },
       {
         "type": "corpus",
         "n": "IGMusTermini",
+        "author": "Brugnone",
+        "date": "1974",
         "citedRange": "19",
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/9WZ7KU5C"
@@ -233,31 +261,34 @@
           "_": "https://biblio.inscriptiones.org/epig10001397",
           "target": "https://biblio.inscriptiones.org/epig10001397"
         },
+        "inscriptionDate": "1974",
         "title": "Iscrizione greche del museo civico di Termini Imerese",
-        "date": "1974",
-        "citation": "<span>Antonietta Brugnone, «Iscrizione greche del museo civico di Termini Imerese», <i>Kokalos</i> 20 (1974): 218–64</span>"
+        "citation": "<span>Antonietta Brugnone, «Iscrizione greche del museo civico di Termini Imerese», <i>Kokalos</i> 20 (1974): 218–64</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/9WZ7KU5C",
+        "year": "1974"
       },
       {
         "type": "bulletin",
         "n": "NSA",
         "author": "",
-        "title": "NSA",
-        "date": "1879",
+        "title": "Notizie degli scavi di antichità",
+        "date": "1876-",
         "citedRange": "254",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/4MCP2PVV"
+          "target": "https://www.zotero.org/groups/382445/items/4MCP2PVV"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001392",
-          "target": "https://biblio.inscriptiones.org/epig10001392"
-        }
+        "ref": "https://www.zotero.org/groups/382445/items/4MCP2PVV",
+        "inscriptionDate": "1879",
+        "citation": "<span>Accademia nazionale dei Lincei, Istituto nazionale di archeologia e storia dell’arte (Italy), e Reale Accademia d’Italia, «Notizie degli scavi di antichità», <i>Notizie degli Scavi di Antichità</i>, 1876, <a href=\"http://www.worldcat.org/oclc/1646037\">http://www.worldcat.org/oclc/1646037</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/4MCP2PVV",
+        "year": "1876"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -281,20 +312,6 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
@@ -305,21 +322,28 @@
         "ref": "https://orcid.org/0000-0002-7122-2511"
       },
       {
-        "_": "system",
-        "xml:id": "system"
-      },
-      {
         "_": "Alex Antoniou",
         "xml:id": "AA",
         "ref": "http://orcid.org/0000-0001-7077-0703"
+      },
+      {
+        "_": "Victoria Fendel",
+        "xml:id": "VF",
+        "ref": "https://orcid.org/0000-0001-6302-3726"
+      },
+      {
+        "_": "Alessia Coccato",
+        "xml:id": "Coccato",
+        "ref": "https://orcid.org/0000-0002-6641-2820"
       }
     ],
     "change": {
-      "_": "edition on basis of autopsy and photographs",
-      "when": "2023-09-07",
-      "who": "#AA"
+      "_": "Victoria Fendel's lemmatizations were added",
+      "when": "2025-07-24",
+      "who": "#VF"
     }
   },
+  "tmNumber": "492753",
   "facsimile": {
     "n": "screen",
     "url": "ISic001140_tiled.tif",
@@ -328,12 +352,33 @@
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
     "surfaceType": "front"
   },
-  "provenance": "Thermae Himeraeae",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 24,
+      "atMost": 24
+    },
+    {
+      "atLeast": 17,
+      "atMost": 27
+    },
+    {
+      "atLeast": 20,
+      "atMost": 31
+    },
+    {
+      "atLeast": 24,
+      "atMost": 27
+    }
+  ],
   "publications": [
-    "IG",
-    "IGMusTermini, 1974",
-    "NSA, 1879"
+    "Kaibel, 1890, IG",
+    "Brugnone, 1974, IGMusTermini",
+    "Notizie degli scavi di antichità, 1876-"
+  ],
+  "zotero": [
+    "Q2SBPG9F",
+    "9WZ7KU5C",
+    "4MCP2PVV"
   ],
   "keywords": [
     "isic001140",
@@ -343,10 +388,10 @@
     },
     "funerary",
     "plaque",
-    "marble (white)",
+    "coarse-grained, banded, white marble, likely aphrodisian, parian-1, parian-2, parian-3, parian-4, proconnesian, thasian-3. digital microscopy: heteroblastic fabric (identification based on pxrf, digital microscopy)",
     "thermae himeraeae",
     "termini imerese",
-    "italy",
+    "sicilia",
     "sicily",
     "termini imerese",
     "museo civico baldassare romano",

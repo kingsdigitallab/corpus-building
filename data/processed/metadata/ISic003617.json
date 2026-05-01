@@ -36,9 +36,13 @@
     "ref": "https://www.eagle-network.eu/voc/objtyp/lod/211.html"
   },
   "material": {
-    "_": "natural rock",
-    "ana": "#material.rock",
-    "ref": "http://www.eagle-network.eu/voc/material/lod/1.html"
+    "_": "stone",
+    "ana": "#material.inorganic.stone",
+    "type": "stone.unspecified",
+    "subtype": [
+      "unverified"
+    ],
+    "ref": "http://www.eagle-network.eu/voc/material/lod/2.html"
   },
   "condition": "",
   "dimensions": [
@@ -74,7 +78,9 @@
         "from": "line1",
         "to": "line1",
         "h": "40",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "40"
       },
       {
         "type": "interlinear",
@@ -87,20 +93,22 @@
   },
   "date": {
     "_": "Byzantine, or alternatively Norman (11th or 12th century) (Rizzone)",
-    "notBefore": 550,
+    "notBefore": 551,
     "notAfter": 800
   },
   "places": [
     {
       "_": "Netum",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462388"
+      "ref": "http://pleiades.stoa.org/places/462388",
+      "region": "Sicilia"
     },
     {
       "_": "Noto",
       "type": "modern",
       "ref": "http://sws.geonames.org/2523998",
-      "offset": "near"
+      "offset": "near",
+      "region": "Sicilia"
     }
   ],
   "geo": [
@@ -109,12 +117,22 @@
       15.02365
     ]
   ],
+  "country": "Sicilia",
+  "provenance": "Netum",
   "provenanceFound": {
     "_": "Chiesa rupestre di S. Marco nel casale Cardinale a Nord Ovest di Noto",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "xml:id": "findspot",
+    "geo": [
+      36.9920254,
+      15.0076917
+    ]
   },
+  "provenanceGeo": [
+    36.9920254,
+    15.0076917
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -122,20 +140,13 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic003617_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
-  "country": "Italy",
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Noto",
-  "repository": "Chiesa rupestre di S. Marco nel casale Cardinale",
+  "repository": {
+    "_": "in situ, Chiesa rupestre di S. Marco nel casale Cardinale",
+    "corresp": "#findspot"
+  },
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -151,15 +162,15 @@
         "n": "SEG",
         "citedRange": "58.1049.4",
         "ptr": {
-          "target": "http://zotero.org/groups/382445/items/F2GG87EQ"
+          "target": "https://www.zotero.org/groups/382445/items/F2GG87EQ"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10000796",
-          "target": "https://biblio.inscriptiones.org/epig10000796"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/F2GG87EQ",
         "title": "Supplementum epigraphicum graecum",
+        "author": "",
         "date": "1923-",
-        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>"
+        "citation": "<span>‘Supplementum Epigraphicum Graecum’, <i>Supplementum Epigraphicum Graecum</i>, 1923, <a href=\"http://www.worldcat.org/oclc/1607583\">http://www.worldcat.org/oclc/1607583</a></span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/F2GG87EQ",
+        "year": "1923"
       },
       {
         "author": "Rizzone",
@@ -168,12 +179,12 @@
         "ptr": {
           "target": "https://www.zotero.org/groups/382445/items/K7PQWD75"
         },
-        "ref": {
-          "_": "https://biblio.inscriptiones.org/epig10001636",
-          "target": "https://biblio.inscriptiones.org/epig10001636"
-        },
+        "ref": "https://www.zotero.org/groups/382445/items/K7PQWD75",
+        "inscriptionDate": "2008",
         "title": "Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina",
-        "citation": "<span>Vittorio Giovanni Rizzone, «Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina», <i>Nea Rhome</i> 5 (2008): 17–26</span>"
+        "citation": "<span>Vittorio Giovanni Rizzone, «Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina», <i>Nea Rhome</i> 5 (2008): 17–26</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/K7PQWD75",
+        "year": "2008"
       },
       {
         "author": "Orsi",
@@ -186,15 +197,18 @@
           "_": "https://biblio.inscriptiones.org/epig10001708",
           "target": "https://biblio.inscriptiones.org/epig10001708"
         },
+        "inscriptionDate": "1898",
         "title": "Chiese bizantine nel territorio di Siracusa",
-        "citation": "<span>Paolo Orsi, «Chiese bizantine nel territorio di Siracusa», <i>Byzantinische Zeitschrift</i> 7 (1898): 1–28</span>"
+        "citation": "<span>Paolo Orsi, «Chiese bizantine nel territorio di Siracusa», <i>Byzantinische Zeitschrift</i> 7 (1898): 1–28</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/ISIQRHX6",
+        "year": "1898"
       }
     ]
   },
   "bibliographyDiscussion": {
     "type": "discussion",
     "bibl": [
-      ""
+      null
     ]
   },
   "citation": {
@@ -218,49 +232,48 @@
         "ref": "http://orcid.org/0000-0002-6686-3728"
       },
       {
-        "_": "James Chartrand",
-        "xml:id": "JCh",
-        "ref": "http://orcid.org/0000-0001-6823-0265"
-      },
-      {
-        "_": "Valeria Vitale",
-        "xml:id": "VV",
-        "ref": "http://orcid.org/0000-0002-9695-0240"
-      },
-      {
-        "_": "Michael Metcalfe",
-        "xml:id": "MM"
-      },
-      {
         "_": "Simona Stoyanova",
         "xml:id": "SS",
         "ref": "https://orcid.org/0000-0003-3914-9569"
       },
       {
-        "_": "system",
-        "xml:id": "system"
+        "_": "Dmitry Dundua",
+        "xml:id": "DD",
+        "ref": "https://orcid.org/0009-0003-5889-9362"
+      },
+      {
+        "_": "Robert Crellin",
+        "xml:id": "RC",
+        "ref": "https://orcid.org/0000-0002-0100-7437"
+      },
+      {
+        "_": "Zoe Greblunas",
+        "xml:id": "ZG",
+        "ref": "https://orcid.org/0009-0008-0871-248X"
       }
     ],
     "change": {
-      "_": "Jonathan Prag edited draft edition from publication",
-      "when": "2023-02-06",
-      "who": "#JP"
+      "_": "Zoe Greblunas tagged names and persons",
+      "when": "2026-02-18",
+      "who": "#ZG"
     }
   },
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic003617_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "provenance": "Netum",
-  "letterHeights": [],
+  "tmNumber": "645690",
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 40
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Rizzone, 2008, Vecchie e nuove, vere e presunte iscrizioni tardo-antiche della campagna Netina",
     "Orsi, 1898, Chiese bizantine nel territorio di Siracusa"
+  ],
+  "zotero": [
+    "F2GG87EQ",
+    "K7PQWD75",
+    "ISIQRHX6"
   ],
   "keywords": [
     "isic003617",
@@ -270,12 +283,13 @@
     },
     "funerary",
     "rock face",
-    "natural rock",
+    "stone",
     "netum",
     "noto",
-    "italy",
+    "sicilia",
     "sicily",
     "noto",
+    "in situ, chiesa rupestre di s. marco nel casale cardinale",
     "ancient greek",
     "grc"
   ]
