@@ -18,11 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>EpiDoc template creation</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -59,7 +74,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of the lower left corner of a thick tablet of off-white marble, intact left and below, broken right and above. The rear is smooth, with traces of mortar. Light chipping/damage to the left edge.</p>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">21.2</height>
@@ -84,39 +99,39 @@
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="41" atMost="42">41-42</height>
+                                    <height unit="mm">41-42</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="32" atMost="33">32-33</height>
+                                    <height unit="mm">32-33</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="18" atMost="20">18-20</height>
+                                    <height unit="mm">18-20</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="21" atMost="21">21</height>
+                                    <height unit="mm">21</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="23" atMost="23">23</height>
+                                    <height unit="mm">23</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="12" atMost="17">12-17</height>
+                                    <height unit="mm">12-17</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0051" notAfter-custom="0200" evidence="lettering textual-context">later 1st or 2nd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" evidence="lettering textual-context" precision="low">later 1st or 2nd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1888-12-17">Found in the vicinity of the <placeName ref="https://pleiades.stoa.org/places/473876126">amphitheatre at Siracusa</placeName>, entered into the museum on 17.12.1888<geo cert="medium">37.074981, 15.278856</geo></provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP" when="2015-07-01">Autopsy, Prag, 2015-07-01, magazzino B, cassa 26</provenance>
@@ -189,7 +204,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><unclear>Buro</unclear><gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><name><expan><abbr>T</abbr><ex>itus</ex></expan></name> <g ref="#interpunct">·</g> <name><seg part="I">Flav</seg></name><gap reason="lost" extent="unknown" unit="character"/>
@@ -220,7 +235,7 @@
                         <title>NSA</title>
                         <date>1889</date>
                         <citedRange>385</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                  </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

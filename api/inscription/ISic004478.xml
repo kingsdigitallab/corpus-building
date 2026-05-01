@@ -14,6 +14,18 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
+               <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -54,7 +66,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Substantial marble plaque, broken on right and below</p>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">17</height>
@@ -86,7 +98,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
@@ -146,29 +158,21 @@
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic004478_tiled.tif" height="4128px" width="6192px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo I. Gradante 2022-06-30</desc>
+            <graphic n="screen" url="ISic004478_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-            <graphic n="print" url="ISic004478.jpg" height="4128px" width="6192px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo I. Gradante 2022-06-30</desc>
-            </graphic>
-        </surface>
-        <surface type="rear">
-            <graphic n="screen" url="ISic004478_rear_tiled.tif" height="4128px" width="6192px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo I. Gradante 2022-06-30</desc>
-            </graphic>
-            <graphic n="print" url="ISic004478_rear.jpg" height="4128px" width="6192px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo I. Gradante 2022-06-30</desc>
+            <graphic n="print" url="ISic004478.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>ἔνθα κῖτ<supplied reason="lost">ε</supplied> <persName type="attested"><name><supplied reason="lost">Ἰάκ</supplied>
+                    <lb n="1"/>ἔνθα κῖτ<supplied reason="lost">ε</supplied> <persName><name><supplied reason="lost">Ἰάκ</supplied>
                     <lb n="2"/>ωβος</name> <persName type="attested"><name type="patronymic">Ἀ<unclear>ν</unclear><supplied reason="lost">δρέ</supplied>
-                    <lb n="3"/>ου</name></persName> <placeName type="ethnic">Σύρ<unclear>ο</unclear><supplied reason="lost">ς</supplied></placeName></persName> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/>ου</name></persName> <placeName type="ethnic">Σύρο<supplied reason="lost">ς</supplied></placeName></persName> <gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -188,20 +192,13 @@
                         <author>Orsi</author>
                         <date>1893</date>
                         <citedRange>299 no. 80</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/V7HNHTAG"/>
+                        <ptr target="http://zotero.org/groups/382445/items/V7HNHTAG"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref></bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1988</date>
-                        <citedRange>84</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
-                    </bibl>   
                     <bibl>
                         <author>Wessel</author>
                         <date>1989</date>
                         <citedRange>12 no. 41</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>
+                        <ptr target="http://zotero.org/groups/382445/items/9CT5ZWIK"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref></bibl>
                   </listBibl>
 	   <listBibl type="discussion">

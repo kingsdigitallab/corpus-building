@@ -19,6 +19,18 @@
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -58,7 +70,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Volute krater.</p>
-                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType ana="#object.vessel.krater" ref="http://kerameikos.org/id/krater">volute krater</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -66,18 +78,18 @@
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.complete"/>
+                                <condition/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
                                     <p>The inscription is placed on the upper rim of the krater.</p>
-                                    <damage ana="#text_condition.complete"/>
+                                    <damage ana="#condition.complete"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>o
+                            <handNote>
                                 <!-- Based on Glyph table: -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
@@ -88,12 +100,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient">unknown</placeName>
                                 <placeName type="modern">unknown</placeName>
                                 <geo/>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0520" notAfter-custom="-0501">ca. 520—500 BCE (so Arena on letters)</origDate>
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0520" notAfter-custom="-0500" precision="medium">ca. 520—500 BCE (so Arena on letters)</origDate>
                         </origin>
                         <provenance type="found">unknown<geo/></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -160,7 +172,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
                     <lb n="1"/>τᾶς <persName type="attested"><name><choice><reg>Καλλικράτεος</reg><orig>Καλικράτεος</orig></choice></name> <persName type="attested"><name type="patronymic">Μεννάδος</name></persName></persName> ε̄̓μί
                 </ab>
@@ -196,19 +208,19 @@
                         <author>Arena</author>
                         <date>1989</date>
                         <citedRange>74, fig. 12</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VC9IHZAR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000638">https://biblio.inscriptiones.org/epig10000638</ref></bibl>
                     <bibl>
                         <author>Villa</author>
                         <date>1979</date>
                         <citedRange>64ff., fig. 1, pl. 12, figs. 1-2</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/BUZEARMI"/>
+                        <ptr target="http://zotero.org/groups/382445/items/BUZEARMI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001461">https://biblio.inscriptiones.org/epig10001461</ref></bibl>
                     <bibl>
                         <author>Tusa</author>
                         <date>1971</date>
                         <citedRange>27, pl. 6d</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/V74EPNKB"/>
+                        <ptr target="http://zotero.org/groups/382445/items/V74EPNKB"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001534">https://biblio.inscriptiones.org/epig10001534</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion"><bibl/>

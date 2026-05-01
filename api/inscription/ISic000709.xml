@@ -18,6 +18,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -26,7 +38,10 @@
                     <name xml:id="AL" ref="https://orcid.org/0000-0002-0000-7611">Andoni Llamazares</name>
                     <resp>text edition</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -64,13 +79,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A large, thick plaque of fine white crystalline marble. Broken into 14 pieces, which can be joined together, leaving lacunae int he upper right corner and at two points in the interior, upper and lower left. The stone appears to re-use an earlier monument, from the traces of large Hellenistic Greek letters visible along the face of the lower edge, and due to the fact that each edge is differently finished reflecting a mixture of earlier surfaces and subsequent cutting down for the Latin inscription. The Greek letters are very slightly truncated along the lower edge. The top edge is roughly finished and cut back behind; the right edge has a smooth finish to half its depth and then becomes rough; the lower edge is finished, but with a distinct patina from the other finished faces, and the left edge has the same finish, albeit with what appear to be deliberate cut-aways from the surface. The face is square and finished smooth, bordered by a double moulding. The rear is cut straight and finished smooth.</p>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan" type="stone.marble" subtype="Hymettan" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Very fine-grained, homogeneous, white, calcitic marble, likely Hymettan. Optical microscopy: heteroblastic fabric with mortar microstructure, fine-grained areas. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)
-<placeName type="provenance">
- <ref target="https://www.geonames.org/261786/ymittos-oros.html">Mt. Hymettos</ref>
- <location>
-  <geo>37.93508,23.80974</geo>
- </location>
-</placeName></material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">45.5</height>
@@ -91,43 +100,43 @@
                             <handNote><p>Fine v-cut monumental letters, with a medium width module, tending to curved and narrow. Pronounced serifs. Triangular interpunct end of line 3 after the name, but plain interpuncts in line 4.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="80" atMost="80">80</height>
+                                    <height unit="mm">80</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="72" atMost="72">72</height>
+                                    <height unit="mm">72</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="70" atMost="72">70-72</height>
+                                    <height unit="mm">70-72</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="37" atMost="37">37</height>
+                                    <height unit="mm">37</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="35" atMost="35">35</height>
+                                    <height unit="mm">35</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="18" atMost="18">18</height>
+                                    <height unit="mm">18</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="15" atMost="15">15</height>
+                                    <height unit="mm">15</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" evidence="lettering">1st century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0099" evidence="lettering">1st century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1957">Recovered from the foundations of the palazzo Rinascente during construction, 1957-1959, on the site of the Palazzo Spitaleri (so Manganaro, reporting one sig. Noe <geo>37.5087111,15.0856723</geo></provenance><!--location of palazzo-->
                         <provenance type="observed" subtype="autopsied" resp="#JP">Prag 2024-09-23</provenance>
@@ -181,7 +190,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-08" who="#AL">Andoni Llamazares encoded the text edition</change>
                 <change when="2025-01-23" who="#JP">Jonathan Prag revised text and metadata from autopsy</change>
@@ -200,7 +209,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#AL #JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AL #JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>P</abbr><ex>ublius</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Scri<unclear>b</unclear><unclear>o</unclear>
                     <lb n="2" break="no"/><space unit="character" quantity="2"/>nius</name> <space unit="character" quantity="3"/>
@@ -224,7 +233,7 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1989.0341l</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl/>
                     <bibl>

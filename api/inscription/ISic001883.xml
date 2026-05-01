@@ -18,6 +18,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -26,9 +38,9 @@
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
-                    <resp>named entity annotation</resp>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -50,7 +62,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository>unknown</repository>
+                        <repository/>
                         <idno/>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -66,7 +78,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Described as the lid of a marble pyxis, broken into a number of fragments. The statement that it is made of marble is based upon second-hand verbal report. No measurements are provided, and the profile drawing suggests the lid lacked any sort of central handle</p>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.vessel.pyxis" ref="http://kerameikos.org/id/pyxis">pyxis</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -98,12 +110,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462228">Haluntium</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523425">San Marco d'Alunzio</placeName>
                             	<geo>38.07261, 14.70093</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0251" evidence="lettering">later fourth or earlier third, simply on the basis of object type and lettering</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0250" precision="low" evidence="lettering">later fourth or earlier third, simply on the basis of object type and lettering</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1979">Found in unpublished excavations of c.1979 by G. Scibona at the extra-mural religious site of Piano Cupa, below the settlement of ancient Haluntium<geo>38.0759879,14.6932689</geo></provenance><!-- location of Piano Cupa -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -154,7 +166,6 @@
         <revisionDesc status="draft">
             <listChange>
               <change when="2024-09-16" who="#JP">Jonathan Prag created draft file from publication</change>
-                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -171,9 +182,9 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP"> 
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP"> 
                 <ab>
-                    <lb n="1" style="text-direction:circular-anticlockwise"/><persName type="attested"><name>Διονύσιος</name> <persName type="attested"><name type="patronym">Ἀπολλοδώρου</name></persName></persName> 
+                    <lb n="1" style="text-direction:circular-anticlockwise"/><persName type="attested"><name>Διονύσιος</name> <persName type="attested"><name>Ἀπολλοδώρου</name></persName></persName> 
                     <lb n="2" style="text-direction:circular-anticlockwise"/><persName type="divine"><name>Ἀφροδίτα</name></persName> ἀνέθηκε
                 </ab>
             </div>

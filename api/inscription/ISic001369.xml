@@ -23,6 +23,18 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
                 </respStmt>
@@ -30,7 +42,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -68,7 +83,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Marble plaque with rounded corners.</p>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
                                     <dimensions><!--measurements from Korhonen-->
                                         <height unit="cm">20</height>
@@ -90,11 +105,11 @@
                                 <!--measurements from Korhonen-->
                                 <locus from="line1" to="line6">Lines 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="14" atMost="20">14-20</height>
+                                    <height unit="mm">14-20</height>
                                 </dimensions>
                                 <locus from="line7" to="line7">Lines 7</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="34" atMost="34">34</height>
+                                    <height unit="mm">34</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -105,12 +120,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" cert="low">4th century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" cert="low" precision="low">4th century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1739">Found in 1739 “in via, quae ad suburbium ducit” according to Amico, “fuori la Porta di Aci”, according to Ferrara”.</provenance>
                         <provenance type="observed">Observed by Amico and Castelli in Museo Biscari, later by Korhonen in Magazzino superiore, Collezione Biscari (formerly sala VIII 65).</provenance>
@@ -166,7 +181,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
@@ -184,7 +199,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
                     <lb n="1"/><w>Ἐνθάδε</w> <w>κῖτε</w>
                     <lb n="2"/><persName type="attested"><name>Σωτηρίς</name></persName> <w>τελευ<lb n="3" break="no"/>τᾷ</w> <w>τῇ</w> <w>πρὸ</w> <hi rend="supraline"><num value="6">ς</num></hi> <w><expan><abbr>καλ</abbr><ex>αν</ex></expan><lb n="4" break="no"/>δῶν</w> <w>Δεκενβρί<lb n="5" break="no"/>ω<supplied reason="omitted">ν</supplied></w> <w>ζήσασα</w> <w>ἒτη</w>
@@ -215,46 +230,40 @@
                         <author>Amico</author>
                         <date>1741</date>
                         <citedRange>268 no.11</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F5INCW3T"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref></bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>256 no.55</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>275 no.63</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
                     <bibl>
                         <author>Ferrara</author>
                         <date>1829</date>
                         <citedRange>370 no.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/82T4IWDN"/>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref></bibl>
                     <bibl type="corpus" n="IG">
-                        <author>Kaibel</author>
-                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">550</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0550</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
                         <citedRange>197</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                     <bibl type="corpus" n="CIG">
-                        <author>Kirchhoff</author>
-                        <date>1877</date>
-                        <citedRange>9481</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/533T8HNS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref></bibl>
+                        <citedRange>4.9481</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
                     <bibl type="corpus" n="IGCVO">
                         <citedRange>332</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>

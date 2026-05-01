@@ -18,11 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -62,7 +77,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Naxian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian" type="stone.marble" subtype="Aphrodisian|Naxian|Proconnesian" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Fine to coarse-grained, veined, white, calcitic, smelly marble, likely Aphrodisian, Naxian, Proconnesian. Optical microscopy: heteroblastic fabric with triple points, strained crystals. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy)</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!-- measurements from Silvestrini 2011 -->
                                         <height unit="cm">37</height>
@@ -85,15 +100,15 @@
                                 <p>Letters are relatively tall, with marked serifs and an ornate interpunct on line 1. P is open with extended foot at base; R is closed; G is formed by single curved stroke</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="60" atMost="60">60</height>
+                                    <height unit="mm">60</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="60" atMost="65">60-65</height>
+                                    <height unit="mm">60-65</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="65" atMost="65">65</height>
+                                    <height unit="mm">65</height>
                                 </dimensions>
                                 <locus from="line1" to="line2"/>
                                 <dimensions type="interlinear">
@@ -104,12 +119,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0200">193—197 CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0200">193—197 CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found 2008.06.25 during excavation of road parallel to decumanus maximus, bordering insula III; face-down in re-use in a late-antique tomb</provenance>
                         <provenance type="observed">On display.</provenance>
@@ -167,7 +182,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
@@ -184,7 +199,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><expan><abbr>col</abbr><ex>oniae</ex></expan> · Septimiae ·
                     <lb n="2"/><expan><abbr>Aug</abbr><ex>ustae</ex></expan> ·
@@ -204,11 +219,11 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>2011.0436</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>2016.0623</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl>
                         <author>Silvestrini</author>
@@ -219,7 +234,7 @@
                     <bibl>
                         <author>Silvestrini</author>
                         <date>2016</date>
-                        <ptr target="https://www.zotero.org/groups/382445/items/FV8QJ5DU"/>
+                        <ptr target="http://zotero.org/groups/382445/items/FV8QJ5DU"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002604">https://biblio.inscriptiones.org/epig10002604</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

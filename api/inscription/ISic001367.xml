@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,9 +9,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder>
-                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
-                </funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -21,20 +19,28 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
-                    <resp>lemmatization and linguistic analysis</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
-                    <resp>lemmatization and linguistic analysis</resp>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -74,7 +80,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -83,12 +89,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-                            </supportDesc>
+		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -106,12 +112,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                                <geo>37.49223, 15.07041</geo>
-                            </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="lettering">4th — 5th century CE</origDate>
+                            	<geo>37.49223, 15.07041</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="lettering" precision="low">4th — 5th century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1833">From the Convento del Carmine, reported by Alessi as one of several find in the years preceding 1833<geo cert="medium">37.509637, 15.088925</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -121,18 +127,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
-                    <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
-                    <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
-        </encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -161,17 +167,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2020-10-22" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                            <change when="2020-10-22" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-02-17" who="#JP">Jonathan Prag  added Alessi reference, provenance, and revised text from photograph</change>
-                <change when="2025-12-10" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
-                <change when="2025-12-10" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
-            </listChange>
+	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -182,49 +186,26 @@
             <graphic n="print" url="ISic001367.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-        </surface>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
-                    <lb n="0"/><g ref="#staurogram" n="5">𐆠</g> <g ref="#staurogram" n="10">𐆠</g> <g ref="#staurogram" n="15">𐆠</g>
-                    <lb n="1"/><w n="20">Ἐνθάδε</w> <w n="25">κῖτε</w>
-                    <lb n="2"/><persName type="attested"><name><w n="30">Ῥοδίνη</w></name></persName> <w n="35">ἔζησεν</w>
-                    <lb n="3"/><w n="40">ἔτη</w> <w n="45">εἴ<supplied reason="lost">κ</supplied>οσι</w> <w n="50"><expan><abbr>πέν</abbr><ex>τε</ex></expan></w>
-                    <lb n="4"/><w n="55">ἐτελεύτησεν</w>
-                    <lb n="5"/><w n="60">δὲ</w> <w n="65">τῇ</w> <w n="70">πρὸ</w> <g ref="#interpunct" n="75">·</g> <num value="11"><w n="80"><hi rend="supraline">ι</hi><g ref="#interpunct" n="85">·</g><hi rend="supraline">α</hi></w></num> <g ref="#interpunct" n="90">·</g> <w n="95">εἰ
-                    <lb n="6" break="no"/>δῶν</w> <w n="100">Νοβεμβρί
-                    <lb n="7" break="no"/>ων</w> <space quantity="4" unit="character" n="105"/> <g ref="#alpha" n="110">Α</g> <g ref="#christogram" n="115">☧</g> <g ref="#omega" n="120">Ω</g>
-                </ab>
-            </div>
-            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
-                <ab>
-                    <w n="20" lemma="ἐνθάδε">Ἐνθάδε</w>
-                    <w n="25" lemma="κεῖμαι">κῖτε</w>
-                    <w n="30" lemma="Ῥοδίνη">Ῥοδίνη</w>
-                    <w n="35" lemma="ζῶ">ἔζησεν</w>
-                    <w n="40" lemma="ἔτος">ἔτη</w>
-                    <w n="45" lemma="εἴκοσι">εἴκοσι</w>
-                    <w n="50" lemma="πέντε">πέντε</w>
-                    <w n="55" lemma="τελευτάω">ἐτελεύτησεν</w>
-                    <w n="60" lemma="δέ">δὲ</w>
-                    <w n="65" lemma="ὁ">τῇ</w>
-                    <w n="70" lemma="πρό">πρὸ</w>
-                    <w n="80" lemma="εἷς">ια</w>
-                    <w n="95" lemma="Idus">εἰδῶν</w>
-                    <w n="100" lemma="November">Νοβεμβρίων</w>
-                    <space quantity="4" unit="character" n="105"/>
+                    <lb n="0"/><g ref="#staurogram">𐆠</g> <g ref="#staurogram">𐆠</g> <g ref="#staurogram">𐆠</g>
+                    <lb n="1"/>Ἐνθάδε κῖτε
+                    <lb n="2"/>Ῥοδίνη ἔζησεν
+                    <lb n="3"/>ἔτη εἴ<supplied reason="lost">κ</supplied>οσι <expan><abbr>πέν</abbr><ex>τε</ex></expan>
+                    <lb n="4"/>ἐτελεύτησεν
+                    <lb n="5"/>δὲ τῇ πρὸ <g ref="#interpunct">·</g> <num value="11"><hi rend="supraline">ι</hi> <g ref="#interpunct">·</g> <hi rend="supraline">α</hi></num> <g ref="#interpunct">·</g> εἰ
+                    <lb n="6" break="no"/>δῶν Νοβεμβρί
+                    <lb n="7" break="no"/>ων <space quantity="4" unit="character"/> <g ref="#alpha">Α</g> <g ref="#christogram">☧</g> <g ref="#omega">Ω</g>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app>
-                        <note>Text of IGPalermo but corrected against photograph; note that Kaibel followed Alessi's apograph, which does not observe the original layout.</note>
-                    </app>
-                    <app loc="line 5">
-                        <note>Alessi: ΠΡΟΤΑ; Kirchoff: προτ[έρ]ᾳ; Manni Piraino: πρὸ ⟨ι⟩α’; the two numerals ι α are clearly distinguished by interpuncts and a line above, which joins the top of the iota (whence misinterpretation as Τ).</note>
-                    </app>
+                    <app><note>Text of IGPalermo but corrected against photograph; note that Kaibel followed Alessi's apograph, which does not observe the original layout.</note></app>
+                    <app loc="line 5"><note>Alessi: ΠΡΟΤΑ; Kirchoff: προτ[έρ]ᾳ; Manni Piraino: πρὸ ⟨ι⟩α’; the two numerals ι α are clearly distinguished by interpuncts and a line above, which joins the top of the iota (whence misinterpretation as Τ).</note></app>
                 </listApp>
             </div>
             <div type="translation">
@@ -237,46 +218,33 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
-                        <author>Kaibel</author>
-                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">548</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0548</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                        <author>Manni Piraino</author>
-                        <date>1973</date>
                         <citedRange>8</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
                     <bibl type="corpus" n="CIG">
-                        <author>Kirchhoff</author>
-                        <date>1877</date>
-                        <citedRange>9484</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/533T8HNS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref>
-                    </bibl>
+                        <citedRange>4.9484</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
                     <bibl>
                         <author>Alessi</author>
                         <date>1833</date>
                         <citedRange>229</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/SRZQ4DSI"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002538">https://biblio.inscriptiones.org/epig10002538</ref>
-                    </bibl>
+                        <ptr target="http://zotero.org/groups/382445/items/SRZQ4DSI"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002538">https://biblio.inscriptiones.org/epig10002538</ref></bibl>
                     <bibl>
                         <author>Alessi</author>
                         <date>1833</date>
                         <citedRange>174</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F986DASI"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002540">https://biblio.inscriptiones.org/epig10002540</ref>
-                    </bibl>
+                        <ptr target="http://zotero.org/groups/382445/items/F986DASI"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002540">https://biblio.inscriptiones.org/epig10002540</ref></bibl>
                 </listBibl>
-                <listBibl type="discussion">
-                    <bibl/>
-                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
     </text>

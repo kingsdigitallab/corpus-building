@@ -18,10 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>establishment of EpiDoc template</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +74,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A rectangular brick, broken on the lower part</p>
-                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/131.html">clay</material>
+                                    <material ana="#material.clay.fired" ref="http://www.eagle-network.eu/voc/material/lod/131.html">clay</material>
                                     <objectType ana="#object.brick" ref="https://www.eagle-network.eu/voc/objtyp/lod/147.html">brick</objectType>
                                     <dimensions>
                                         <!--  from Rizza -->
@@ -88,12 +104,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
                             	<geo>37.62336, 14.74049</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" evidence="archaeological-context">Rizza dates the structure as a whole to the 2nd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" evidence="archaeological-context" precision="low">Rizza dates the structure as a whole to the 2nd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1949-01-29">Found during repair works to via Traiano, in 'room c' of a structure identified as remains of imperial-era bath-building, between via Traiano and via Adriano<geo>37.623389, 14.741257</geo> in Centuripe</provenance><!-- geo is junction of via Traiano and via Adriano -->
                         <provenance type="observed" subtype="autopsied">No autopsy</provenance>
@@ -158,7 +174,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>R</orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
@@ -180,13 +196,13 @@
                         <author>Rizza</author>
                         <date>1949</date>
                         <citedRange>192 with fig. 2</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                     <bibl>
                         <author>Biondi and Rizza</author>
                         <date>2017</date>
                         <citedRange>fig. 59</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/47AF76JW"/>
+                        <ptr target="http://zotero.org/groups/382445/items/47AF76JW"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002221">https://biblio.inscriptiones.org/epig10002221</ref></bibl>
                    </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

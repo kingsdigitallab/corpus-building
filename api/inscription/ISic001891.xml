@@ -14,12 +14,23 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	  <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
-            </titleStmt>
+	  </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001891</idno>
@@ -55,7 +66,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of a marble plaque, with a projecting lower edge. Intact on right and below, preserving lower right corner, broken to left and above.</p>
-                                    <material type="stone.calcilutite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!-- Brugnone 2024 -->
                                         <height unit="cm">133</height>
@@ -76,19 +87,19 @@
                             <handNote><p>Plainly cut letters without serifs. Omicron slightly smaller and raised; omega open with short horizontal tails; sigma with full length strokes, parallel top and bottom; epsilon with shorter middle bar.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="13" atMost="18">13-18</height><!-- Brugnone 2024 -->
+                                    <height unit="mm">13-18</height><!-- Brugnone 2024 -->
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100" evidence="lettering">first century BCE or first century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0099" evidence="lettering">first century BCE or first century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="2008">Excavated in 2008 in the Parco archeologico di Lilibeo, in the area sacra of insula III, SAS VI, US 117</provenance> 
                         <provenance type="observed" subtype="autopsied">observed on display 2023, no formal autopsy</provenance>
@@ -154,7 +165,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">σσυν</w>
                     <lb n="2"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/><w part="F">δωρος</w></name>
@@ -180,7 +191,7 @@
                         <author>Brugnone</author>
                         <date>2016</date>
                         <citedRange>228-229 fig.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/8782UYU2"/>
+                        <ptr target="http://zotero.org/groups/382445/items/8782UYU2"/>
                     </bibl>
                     <bibl>
                         <author>Brugnone</author>

@@ -21,6 +21,18 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -29,10 +41,13 @@
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>Lemmatization</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -70,7 +85,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--ILPal-->
                                         <height unit="cm">78</height>
@@ -91,15 +106,15 @@
                             <handNote><!--ILPal-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="95" atMost="95">95</height>
+                                    <height unit="mm">95</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="85" atMost="85">85</height>
+                                    <height unit="mm">85</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Line 3-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="60" atMost="60">60</height>
+                                    <height unit="mm">60</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -110,7 +125,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                                 <geo>38.13205, 13.33561</geo>
@@ -170,11 +185,9 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-05-21" who="#RC">Robert Crellin added ids and lemmatizations</change>
-                <change when="2025-07-03" who="#RC">Robert Crellin added local ids to new elements</change>
-                <change when="2025-07-03" who="#RC">Robert Crellin added new elements to the lemmatized edition</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,14 +203,14 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
-                    <lb n="1"/><persName type="attested" subtype="imperial"><name><w n="5">Iuliae</w></name> <g ref="#interpunct" n="10">·</g> <name><w n="15"><expan><abbr>Au<supplied reason="lost">g</supplied></abbr><ex>ustae</ex></expan></w></name></persName>
+                    <lb n="1"/><w n="5">Iuliae</w> <g ref="#interpunct" n="10">·</g> <name><w n="15"><expan><abbr>Au<supplied reason="lost">g</supplied></abbr><ex>ustae</ex></expan></w></name>
                     <lb n="2"/><w n="20">matri</w> <g ref="#interpunct" n="25">·</g> <w n="30"><expan><abbr>castro<supplied reason="lost">r</supplied></abbr><ex>um</ex></expan></w>
-                    <lb n="3"/><persName type="attested" subtype="imperial"><roleName type="supracivic" subtype="imperator"><name><w n="35"><expan><abbr>Imp</abbr><ex>eratoris</ex></expan></w></name></roleName> <g ref="#interpunct" n="40">·</g> <name><w n="45"><expan><abbr>L</abbr><ex>uci</ex></expan></w></name> <g ref="#interpunct" n="50">·</g> <name><w n="55">Septimi</w></name> <g ref="#interpunct" n="60">·</g> <name><w n="65">Severi</w></name> <g ref="#interpunct" n="70">·</g> <name><w n="75"><unclear>P</unclear><supplied reason="lost">ii</supplied></w></name>
+                    <lb n="3"/><roleName type="supracivic" subtype="imperator"><name><w n="35"><expan><abbr>Imp</abbr><ex>eratoris</ex></expan></w></name></roleName> <g ref="#interpunct" n="40">·</g> <name><w n="45"><expan><abbr>L</abbr><ex>uci</ex></expan></w></name> <g ref="#interpunct" n="50">·</g> <name><w n="55">Septimi</w></name> <g ref="#interpunct" n="60">·</g> <name><w n="65">Severi</w></name> <g ref="#interpunct" n="70">·</g> <name><w n="75"><unclear>P</unclear><supplied reason="lost">ii</supplied></w></name>
                     <lb n="4"/><name><w n="80"><unclear>P</unclear>ertin<unclear>acis</unclear></w></name> <name><w n="85"><expan><abbr><unclear>Au</unclear>g</abbr><ex>usti</ex></expan></w></name> <g ref="#interpunct" n="90">·</g> <name><w n="95">Arabi<unclear>c</unclear><supplied reason="lost">i</supplied></w></name>
-                    <lb n="5"/><name><w n="100"><supplied reason="lost">Adiabenici</supplied></w></name> <name><w n="105"><supplied reason="lost">Parth</supplied><unclear>i</unclear><supplied reason="lost">ci</supplied></w></name> <name><w n="110"><supplied reason="lost">Maximi</supplied></w></name></persName> <gap reason="lost" extent="unknown" unit="character" n="115"/>
-                    <lb n="6"/><gap reason="lost" extent="unknown" unit="line" n="120"/>
+                    <lb n="5"/><name><w n="100"><supplied reason="lost">Adiabenici</supplied></w></name> <name><w n="105"><supplied reason="lost">Parth</supplied><unclear>i</unclear><supplied reason="lost">ci</supplied></w></name> <name><w n="110"><supplied reason="lost">Maximi</supplied></w></name> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="6"/><gap reason="lost" extent="unknown" unit="line"/>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -217,8 +230,8 @@
                     <w n="100" lemma="Adiabenicus">Adiabenici</w>
                     <w n="105" lemma="Parthicus">Parthici</w>
                     <w n="110" lemma="magnus">Maximi</w>
-                    <gap reason="lost" extent="unknown" unit="character" n="115"><desc>[-?-]</desc></gap>
-                    <gap reason="lost" extent="unknown" unit="line" n="120"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character">[-?-]</gap>
+                    <gap reason="lost" extent="unknown" unit="line"> [-unknown-] </gap>
                 </ab>
             </div>
             <div type="apparatus">
@@ -239,12 +252,10 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1968.0200</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
-                         <author>Bivona</author>
-                         <date>1970</date> 
                         <citedRange>14</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
@@ -261,13 +272,6 @@
                         <date>1967</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/9J2C443I"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002143">https://biblio.inscriptiones.org/epig10002143</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1988</date>
-                        <citedRange>76</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">

@@ -18,10 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Epidoc editing and addition of metadata</resp>
@@ -65,7 +81,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Upper part of stele with smooth surfaces, irregularly broken below and on the right side</p>
-                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (gray rhyolite)</material>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (gray rhyolite)</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions>
                                         <height unit="cm">39</height>
@@ -86,11 +102,11 @@
                             <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="42" atMost="52">42-52</height>
+                                    <height unit="mm">42-52</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="45" atMost="52">45-52</height>
+                                    <height unit="mm">45-52</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -101,12 +117,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0001">1st century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0001" precision="low">1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1984">Discovered in 1984 during the excavation of zone K of trench XXXVI (Zagami property)<geo>38.467130, 14.953871</geo></provenance><!-- representative geo for contrada Diana -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -159,7 +175,7 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-04-06" who="#AA">Alex Antoniou Epidoc editing and addition of metadata</change>
 	</listChange>
@@ -177,7 +193,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
                     <lb n="1"/><persName type="attested"><name><seg part="I">Δαμα</seg><gap reason="lost" atLeast="1" atMost="2" unit="character"/></name></persName>
                     <lb n="2"/>χαῖρε
@@ -197,13 +213,9 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>45.1381.63</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="corpus" n="ILipara">
-                          <author>Bernabó-Brea</author>
-                          <author>Cavalier</author>
-                          <author>Campagna</author>
-                          <date>2003</date> 
                         <citedRange>378</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VDAQH5D2"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref></bibl>

@@ -18,10 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="TNS" ref="https://orcid.org/0000-0003-2684-2030">Timothy Smith</name>
                     <resp>Epidoc editing</resp>
@@ -65,7 +81,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -96,12 +112,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0501" notAfter-custom="0600" cert="low">Mang. suggests
+                            <origDate datingMethod="#julian" notBefore-custom="0501" notAfter-custom="0600" cert="low" precision="low">Mang. suggests
                                 the two boys commemorated could have been killed by the plague of 542 CE - i.e. 6th century CE
                                 (?)</origDate>
                         </origin>
@@ -157,7 +173,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-11" who="#TNS">Epidoc editing</change>
 	</listChange>
@@ -175,7 +191,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TNS">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TNS">
                 <ab>
                 <lb n="1"/><supplied reason="lost"><g ref="#latincross">✝</g> Hic requ</supplied>iescunt pace filii <name><seg part="I">Te<unclear>l</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name>
                 <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">sc</supplied>ribonis sacri <expan><abbr>pal</abbr><ex>atii</ex></expan> id est <unclear>r</unclear><gap reason="lost" extent="unknown" unit="character"/>

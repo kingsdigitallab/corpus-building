@@ -18,11 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -59,12 +74,12 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan" type="stone.marble" subtype="Lunense|Hymettan" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Very fine-grained, homogeneous, grey, smelly marble, likely Lunense, Hymettan. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Bivona-->
-                                        <height unit="cm">30.5</height>
-                                        <width unit="cm">30.5</width>
-                                        <depth unit="cm">1.5-2.5</depth>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -77,10 +92,10 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Bivona-->
-                                <locus from="line1" to="line4">Line 1-4</locus>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="25" atMost="35">25-35</height>
+                                    <height unit="mm"/>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -91,14 +106,14 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462168">Cossura</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523889">Pantelleria</placeName>
                             	<geo>36.78333, 12</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200">1st — 2nd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200" precision="low">1st — 2nd century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found on Cossura (Pantelleria)</provenance>
+                        <provenance type="found">Original discovery not recorded.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -152,10 +167,9 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-30" who="#JP">Jonathan Prag tagged named entities</change>
-                <change when="2025-12-02" who="#JP">Jonathan Prag added metadata and a note in the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -171,7 +185,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP" source="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>C</abbr><ex>aius</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Iulius</name> <g ref="#interpunct">·</g> <name type="cognomen">Felix</name></persName>
                     <lb n="2"/><w>vixit</w> <g ref="#interpunct">·</g> <w><expan><abbr>ann</abbr><ex>os</ex></expan></w>
@@ -189,21 +203,17 @@
                 <p>Gaio Giulio Felice visse anni [--]. Appuleia Rogata visse anni [--]</p>
             </div>
             <div type="commentary">
-                <p>The absence of the ages for both individuals is unusual, and the best explanation is that the inscription was engraved before the death of the two and was never completed with their age of death. Theoretically, the age might have been added using paint, which has since been lost.</p>
+                <p><!--commentary--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="CIL">
-                        <author>Mommsen</author>
-                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650810">7512</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650810">10.7512</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusPalermo">
-                         <author>Bivona</author>
-                         <date>1970</date> 
                         <citedRange>6</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>

@@ -18,6 +18,22 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>EpiDoc template development</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -57,7 +73,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A substantial bronze plate over 5 mm thick, to which were affixed, by means of rivets, a number of relief elements giving it the form of a temple facade: crepidoma, a framing pair of Corinthian columns, an entabulature containing a frieze with triglyphs and metopes surmounted by a cornice with dentils, and a pediment, the tympanum of which is undecorated. The relief elements differ in detail between this example and the second copy (ISic030277), although not in essentials.</p>
-                                    <material ana="#material.inorganic.metal.bronze" type="metal.bronze" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
                                     <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
                                         <height unit="cm">46.3</height>
@@ -78,15 +94,15 @@
                             <handNote><p>The letters of line 1 are largest (c. 7-11 mm high); those of lines 2-7 smaller (3-7 mm), and those of lines 8-32 smaller again (generally 3-5 mm). In l. 1, epsilon and sigma are quadrate (Ε, Σ), but omega is lunate (Ω) – contrast A with closed omega; in ll. 2-32 all three letters are lunate (ϵ, ϲ, ω), as in A. There are a number of minor variations in letter-form compared with A: delta shows a marked tendency to include an apex, which is found irregularly also in alpha and lamda; eta almost always takes the standard form in B (in contrast to the ‘reversed nu’ form in A); the xsi is similar; the tendency in A for pi to show curvature in the tail of one or both of the vertical hastas is not generally visible in B; broken-bar alpha is wholly absent from B (with the possible exception of line 4); the occasional equivalence between tau and upsilon in A is not found in B. B is inscribed by means of chasing with a chisel, like A. Terminal points at the end of strokes are however much less pronounced, or absent, which finds its counterpoint in the presence of apices or serifs on some of the letters made up of long strokes: as in stone inscriptions, serifs in part serve a functional purpose in assisting in the termination of the chisel stroke and its extraction from the surface. At the same time, the letters of B are generally thinner and so slightly more lightly chased (in so far as this is not simply a consequence of partial loss of the surface following damage in the fire and cleaning). In other words, there are grounds for thinking that, although the tools are the same, the technique and stylistic choices of the individual at work are subtly different from that in A, and hence that a different engraver was at work here. (This view is further encouraged by the slight differences in treatment of iota adscript and iotacism on four occasions, noted below.)</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="7" atMost="11">7-11</height>
+                                    <height unit="mm">7-11</height>
                                 </dimensions>
                                 <locus from="line2" to="line7">Lines 2-7</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="3" atMost="7">3-7</height>
+                                    <height unit="mm">3-7</height>
                                 </dimensions>
                                 <locus from="line8" to="line32">Lines 8-32</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="3" atMost="5">3-5</height>
+                                    <height unit="mm">3-5</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation</locus>
                                 <dimensions type="interlinear">
@@ -97,7 +113,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
                                 <offset>near
                                     <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
@@ -175,7 +191,7 @@
         </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/>Ἐπὶ <roleName type="civic.religious" subtype="hiereus">ἱερέων</roleName> <choice><corr>Δ</corr><sic>Λ</sic></choice>ιὸς
                     <lb n="2"/>Δωροθέου Ἀπολλωνίου <abbr>Λαβ</abbr>
@@ -254,52 +270,52 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>59.1100.B</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>2010.0646</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
                     <bibl>
                         <author>Scibona</author>
                         <date>2009</date>
                         <citedRange>Tavola B</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ANG99H3X"/>
+                        <ptr target="http://zotero.org/groups/382445/items/ANG99H3X"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001592">https://biblio.inscriptiones.org/epig10001592</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2009</date>
                         <citedRange>21-28</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ZDVZC4BR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/ZDVZC4BR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001795">https://biblio.inscriptiones.org/epig10001795</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2011</date>
                         <citedRange>52-60</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HT3P7UWH"/>
+                        <ptr target="http://zotero.org/groups/382445/items/HT3P7UWH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001792">https://biblio.inscriptiones.org/epig10001792</ref></bibl>
                     <bibl>
                         <author>Dubois</author>
                         <date>2013</date>
-                        <ptr target="https://www.zotero.org/groups/382445/items/NIW7N2U6"/>
+                        <ptr target="http://zotero.org/groups/382445/items/NIW7N2U6"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002432">https://biblio.inscriptiones.org/epig10002432</ref></bibl>
                    <bibl>
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no. 35</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/MI64NB9L"/>
+                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
                     <bibl>
                         <author>Prag</author>
                         <date>2018</date>
                         <citedRange>Tablet B</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/5WS2YM59"/>
+                        <ptr target="http://zotero.org/groups/382445/items/5WS2YM59"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001669">https://biblio.inscriptiones.org/epig10001669</ref></bibl>
                     <bibl>
                         <author>Prestianni Giallombardo</author>
                         <date>2018</date>
                         <citedRange>Tablet B</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/3XXYQ8H5"/>
+                        <ptr target="http://zotero.org/groups/382445/items/3XXYQ8H5"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002430">https://biblio.inscriptiones.org/epig10002430</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion">
@@ -307,24 +323,24 @@
 	           <author>Manganaro</author>
 	           <date>2009</date>
 	           <citedRange>90 n.26</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/QC6X4IXA"/>
+	           <ptr target="http://zotero.org/groups/382445/items/QC6X4IXA"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10001794">https://biblio.inscriptiones.org/epig10001794</ref></bibl>
 	       <bibl>
 	           <author>Prestianni Giallombardo</author>
 	           <date>2012</date>
 	           <citedRange>178-179, 182, 185-187</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/CJISRIUV"/>
+	           <ptr target="http://zotero.org/groups/382445/items/CJISRIUV"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10001357">https://biblio.inscriptiones.org/epig10001357</ref></bibl>
 	       <bibl>
 	           <author>Prestianni Giallombardo</author>
 	           <date>2018</date>
 	           <citedRange>132-135</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/RSYGETMY"/>
+	           <ptr target="http://zotero.org/groups/382445/items/RSYGETMY"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002602">https://biblio.inscriptiones.org/epig10002602</ref></bibl>
 	       <bibl>
 	           <author>Cappelletti</author>
 	           <date>2020</date>
-	           <ptr target="https://www.zotero.org/groups/382445/items/W77PFV38"/>
+	           <ptr target="http://zotero.org/groups/382445/items/W77PFV38"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002352">https://biblio.inscriptiones.org/epig10002352</ref></bibl>
 	   </listBibl>
             </div>

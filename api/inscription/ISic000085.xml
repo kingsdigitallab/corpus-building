@@ -21,12 +21,28 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
@@ -36,7 +52,6 @@
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>Lemmatization</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,7 +90,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Large rectangular white limestone plinth. Top cornice is heavily broken on all sides, but with inset for statue on top. Front face has a horizontal fracture near middle, abrasions to sides and broken at bottom.</p>
-                                    <material type="stone.limestone" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">statue base</objectType>
                                     <dimensions>
                                         <height unit="cm">84 (roughly including broken top), 70 (from base to bottom of cornice)</height>
@@ -117,7 +132,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                                 <geo>37.98365, 13.69555</geo>
@@ -177,7 +192,7 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-28" who="#AA">edition on basis of autopsy and photographs</change>
                 <change when="2025-06-10" who="#RC">Robert Crellin added ids and lemmatizations</change>
@@ -196,14 +211,14 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TA #AA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1" xml:id="AIyAK"/><persName type="divine" xml:id="AIyAU"><name><w n="5" xml:id="AIyAe">Soli</w></name>
-                    <lb n="2" xml:id="AIyAo"/><name><w n="10" xml:id="AIyAy">Invicto</w></name></persName>
+                    <lb n="1" xml:id="AIyAK"/><persName type="divine" xml:id="AIyAU"><name xml:id="AIyAe"><w n="5">Soli</w></name>
+                    <lb n="2" xml:id="AIyAo"/><name xml:id="AIyAy"><w n="10">Invicto</w></name></persName>
                     <lb n="3" xml:id="AIyAΙ"/><w xml:id="AIyAΤ" n="15">conserva
                     <lb n="4" break="no" xml:id="AIyAε"/><unclear xml:id="AIyAο">tori</unclear></w> <persName type="attested" subtype="imperial" xml:id="AIyBA"><roleName type="supracivic" subtype="imperator" xml:id="AIyBK"><w xml:id="AIyBU" n="20"><expan xml:id="AIyBe"><abbr xml:id="AIyBo"><supplied reason="lost" xml:id="AIyBy">im</supplied>p</abbr><ex xml:id="AIyBΙ">eratoris</ex></expan></w></roleName>
-                    <lb n="5" xml:id="AIyBΤ"/><name><w n="25" xml:id="AIyBε"><unclear xml:id="AIyBο">Anton</unclear><supplied reason="lost" xml:id="AIyCA">ini</supplied></w></name>
-                    <lb n="6" xml:id="AIyCK"/><name><w n="30" xml:id="AIyCU"><expan xml:id="AIyCe"><abbr xml:id="AIyCo">Au<supplied reason="lost" xml:id="AIyCy">g</supplied></abbr><supplied reason="lost" xml:id="AIyCΙ"><ex xml:id="AIyCΤ">usti</ex></supplied></expan></w></name></persName>
+                    <lb n="5" xml:id="AIyBΤ"/><name xml:id="AIyBε"><w n="25"><unclear xml:id="AIyBο">Anton</unclear><supplied reason="lost" xml:id="AIyCA">ini</supplied></w></name>
+                    <lb n="6" xml:id="AIyCK"/><name xml:id="AIyCU"><w n="30"><expan xml:id="AIyCe"><abbr xml:id="AIyCo">Au<supplied reason="lost" xml:id="AIyCy">g</supplied></abbr><supplied reason="lost" xml:id="AIyCΙ"><ex xml:id="AIyCΤ">usti</ex></supplied></expan></w></name></persName>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -238,17 +253,13 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="CIL">
-                        <author>Mommsen</author>
-                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650795">7337</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650795">10.7337</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
-                         <author>Bivona</author>
-                         <date>1994</date> 
                         <citedRange>1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
@@ -260,12 +271,6 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/PCGWJZ7V"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001586">https://biblio.inscriptiones.org/epig10001586</ref>
                     </bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1988</date>
-                        <citedRange>69</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">
                     <bibl/>

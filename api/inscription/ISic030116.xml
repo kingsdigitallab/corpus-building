@@ -19,6 +19,18 @@
                     <resp>establishment of EpiDoc template</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -58,7 +70,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Bronze caduceus</p>
-                                    <material ana="#material.inorganic.metal.bronze" type="metal.bronze" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
                                     <objectType ana="#object.caduceus" ref="https://www.eagle-network.eu/voc/objtyp/lod/58.html">caduceus</objectType>
                                     <dimensions>
                                         <height unit="cm">45.7</height>
@@ -89,12 +101,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462287">Longane</placeName>
                                 <placeName type="modern" ref="https://sws.geonames.org/2523592/">Rodì Milici</placeName>
                                 <geo>38.091842, 15.158206</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0401" evidence="lettering">5th century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0401" precision="low" evidence="lettering">5th century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1875">Exact provenance is not recorded; said to come from a Sicilian tomb, acquired subsequently  by the British Museum</provenance>
                         <provenance type="observed" subtype="autopsied">none</provenance>
@@ -160,7 +172,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                <ab>
                     <lb n="1"/><placeName type="ethnic">Λονγε̄ναῖός</placeName> ε̄̓μι <expan><abbr>δε̄μόσ</abbr><ex>ιος</ex></expan>
                 </ab>
@@ -178,13 +190,11 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1077.B5</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="corpus" n="IG">
-                        <author>Kaibel</author>
-                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">594</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0594</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
@@ -192,23 +202,21 @@
                         <author>Crome</author>
                         <date>1938-1939</date>
                         <citedRange>118 no.3 pl. 18.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/UJKEXWLE"/>
+                        <ptr target="http://zotero.org/groups/382445/items/UJKEXWLE"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002449">https://biblio.inscriptiones.org/epig10002449</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1996</date>
                         <citedRange>141 with n.63 and tav. 13 fig. 11</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/KS57W5TB"/>
+                        <ptr target="http://zotero.org/groups/382445/items/KS57W5TB"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001821">https://biblio.inscriptiones.org/epig10001821</ref></bibl>
                     <bibl>
                         <author>Ampolo</author>
                         <date>2006</date>
                         <citedRange>186 appendix B no.5</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/LCT7H63L"/>
+                        <ptr target="http://zotero.org/groups/382445/items/LCT7H63L"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002458">https://biblio.inscriptiones.org/epig10002458</ref></bibl>
                     <bibl type="corpus" n="IGDS1">
-                         <author>Dubois</author>
-                         <date>1989</date> 
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">200</ref>
                         </citedRange>
@@ -218,7 +226,7 @@
                         <author>Ampolo</author>
                         <date>2013</date>
                         <citedRange>24 fig.10</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/QH9SAMXQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/QH9SAMXQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002450">https://biblio.inscriptiones.org/epig10002450</ref></bibl>
                    </listBibl>
 	   <listBibl type="discussion">
@@ -226,7 +234,7 @@
 	           <author>Hornbostel</author>
 	           <date>1979</date>
 	           <citedRange>55</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/7ABVBVIQ"/>
+	           <ptr target="http://zotero.org/groups/382445/items/7ABVBVIQ"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002454">https://biblio.inscriptiones.org/epig10002454</ref></bibl>
 	   </listBibl>
             </div>

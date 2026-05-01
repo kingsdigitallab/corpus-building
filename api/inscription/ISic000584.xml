@@ -18,12 +18,27 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	<respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
-            </titleStmt>
+	</titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000584</idno>
@@ -62,7 +77,7 @@
                             <supportDesc>
                                 <support>
                                     <p>A thick tablet of compact white limestone. The lower left and lower right corners are lost, and the slab is cracked in half vertically down the middle. Left edge is finished smooth and straight; top edge is lightly cut back to the rear and rough; the right and lower edges preserve a carefully cut moulding, which strongly implies that the slab has been re-used from a previous base or other structure.</p>
-                                    <material type="stone.calcilutite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">37</height>
@@ -85,43 +100,43 @@
                                 <p>The letters are large and simply cut, without serifs. M has hastae of equal length, all off-vertical; S is shallow; R is closed with a long tail extending from the eye; B has small upper eye, closed; V is wide; F has shorter lower bar; E has equal short bars; C is not perfectly curved/circular, but rather shallow. Interpuncts throughout, formed of light vertical strokes.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="42" atMost="45">42-45</height>
+                                    <height unit="mm">42-45</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="38" atMost="42">38-42</height>
+                                    <height unit="mm">38-42</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="33" atMost="38">33-38</height>
+                                    <height unit="mm">33-38</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="36" atMost="40">36-40</height>
+                                    <height unit="mm">36-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="17" atMost="20">17-20</height>
+                                    <height unit="mm">17-20</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="18" atMost="20">18-20</height>
+                                    <height unit="mm">18-20</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="14" atMost="17">14-17</height>
+                                    <height unit="mm">14-17</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
                                 <geo>37.99907, 14.26197</geo>
 	           </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" evidence="lettering">1st century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" evidence="lettering" precision="low">1st century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="first-recorded">First reported by Antonio Agustín in the church of S. Maria dei Palazzi<geo>37.996456, 14.261844</geo>.</provenance>
                         <provenance type="not-observed" subtype="lost">Lost by the time of Castelli, Principe di Torremuzza (later C18).</provenance> 
@@ -176,12 +191,12 @@
                     <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                     <change when="2017-01-20" who="#JP">Jonathan Prag checked the EpiDoc and added an image</change>
                     <change when="2019-07-15" who="#JP">Jonathan Prag revised the file based on autopsy</change>
-                    <change when="2020-09-09" who="#JP">Updated Zenodo DOI</change>
+                    <change when="2020-09-09" who="#system">Updated Zenodo DOI</change>
             	    <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                     <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                     <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                     <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
                     <change when="2021-01-19" who="#SS">Simona Stoyanovarenumbered files, uris and references</change>
                     <change when="2022-02-07" who="#JP">Jonathan Prag made minor edits incl named entities, bibl refs</change>
 	</listChange>
@@ -199,7 +214,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>M</abbr><ex>arcus</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Limbricius</name> <g ref="#interpunct">·</g> <persName type="attested"><name type="patronym"><expan><abbr>M</abbr><ex>arci</ex></expan></name></persName> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilius</ex></expan> <g ref="#interpunct">·</g>
                     <lb n="2"/><orgName><expan><abbr>Fal</abbr><ex>erna tribu</ex></expan></orgName> <g ref="#interpunct">·</g> <name type="cognomen">Rufus</name></persName> <g ref="#interpunct">·</g>
@@ -221,13 +236,13 @@
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624</date>
-                        <citedRange>142</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
+                        <citedRange>no. 142</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/GIN6NANU"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref></bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310972">301</ref></citedRange>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310972">47 no. 301</ref></citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
                     <bibl>
@@ -255,10 +270,8 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
                     <bibl type="corpus" n="CIL">
-                        <author>Mommsen</author>
-                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650803">7460</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650803">10.7460</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
@@ -290,7 +303,7 @@
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no.38</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/MI64NB9L"/>
+                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

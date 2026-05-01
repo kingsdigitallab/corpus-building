@@ -14,11 +14,26 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -40,7 +55,7 @@
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
-                        <idno type="inventory">108439</idno>
+                        <idno type="inventory">no inventory number</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -55,13 +70,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Two joining fragments of a marble plaque. The larger left fragment (a) is intact along the lower edge, but broken on the other three sides (W 13 cm, H 11.1 cm, D 2.9cm); the smaller right fragment (b) is broken on all sides (W 8cm, H 11.5cm, D 3cm). The rear is finished and smooth. Traces of red paint are visible in the letters.</p>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense" type="stone.marble" subtype="Lunense" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Very fine-grained, homogeneous, white, calcitic marble, likely Lunense. Optical microscopy: homeoblastic fabric with triple points, mosaic microstructure. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)
-<placeName type="provenance">
- <ref target="https://www.geonames.org/6542087/carrara.html">Carrara</ref>
- <location>
-  <geo>44.06294,10.06069</geo>
- </location>
-</placeName></material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -82,7 +91,7 @@
                             <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="65" atMost="65">65</height>
+                                    <height unit="mm">65</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -93,12 +102,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
                                 <geo>37.62336, 14.74049</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0400" evidence="lettering">Late second to fourth century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0400" evidence="lettering">Late second to fourth century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Original discovery not recorded</provenance>
                         <provenance type="observed" subtype="autopsied">Prag 2014-09-15 and 2015-03-26</provenance>
@@ -183,7 +192,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/>ul <g ref="#interpunct">·</g> de<gap reason="lost" extent="unknown" unit="character"/>
                 </ab>

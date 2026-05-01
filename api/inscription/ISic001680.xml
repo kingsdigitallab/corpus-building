@@ -18,13 +18,25 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>original EpiDoc template development</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-                <respStmt>
-                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
-                    <resp>named entity annotation</resp>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -61,7 +73,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Limestone statue base, largely intact at the front, with two large cuttings in the upper surface (probably secondary). The front has a moulding above and below the epigraphic field.</p>
-                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!-- from I.Segesta-->
                                         <height unit="cm">31.7</height>
@@ -82,7 +94,7 @@
                             <handNote><!-- from I.Segesta-->
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="27" atMost="31">27-31</height>
+                                    <height unit="mm">27-31</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -93,12 +105,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101" source="https://www.zotero.org/groups/382445/items/3PK3JKXR" evidence="archaeological-context lettering prosopography">2nd century BCE; the honorand is named in ISic001111, which is dated to the 2nd century BCE from its archaeological context</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101" source="http://zotero.org/groups/382445/items/3PK3JKXR" evidence="archaeological-context lettering prosopography" precision="low">2nd century BCE; the honorand is named in ISic001111, which is dated to the 2nd century BCE from its archaeological context</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="2002">A chance find on the east side of the modern square overlying the ancient agora, facing the north stoa<geo>37.939580, 12.843057</geo></provenance><!-- geo is based upon map in fig.139 of I.Segesta-->
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -148,7 +160,6 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2021-05-21" who="#JP">Jonathan Prag created initial draft of text and metadata from the ed. pr. of Ampolo/Erdas</change>
-                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -164,10 +175,10 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc">
                 <ab>
-                    <lb n="1"/>ὁ δᾶμος τῶν <placeName type="ethnic">Ἐγεσταίων</placeName>
-                    <lb n="2"/><persName type="attested"><name>Φάωνα</name> <persName type="attested"><name type="patronym">Νύμφωνος</name></persName> <name>Σωπολιανόν</name></persName>
+                    <lb n="1"/>ὁ δᾶμος τῶν <name>Ἐγεσταίων</name>
+                    <lb n="2"/><persName type="attested"><name>Φάωνα</name> <persName type="attested"><name>Νύμφωνος</name></persName> <name>Σωπολιανόν</name></persName>
                     <lb n="3"/>ἀρετᾶς ἕνεκα 
                 </ab>
             </div>
@@ -179,7 +190,7 @@
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>The people of the Segestans (dedicate this statue of) Phaon Sopolianos, son of Nymphon, on account of his excellence</p>
             </div>
-            <div type="translation" xml:lang="it" source="https://www.zotero.org/groups/382445/items/3PK3JKXR">
+            <div type="translation" xml:lang="it" source="http://zotero.org/groups/382445/items/3PK3JKXR">
                 <p>Il popolo dei Segestani (ha onorato/ha eretto la statua di) Phaon, figlio di Nymphon, Sopolianos, per il suo valore[transl. from I.Segesta]</p>
             </div>
             <div type="commentary">
@@ -191,7 +202,7 @@
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>G4</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/3PK3JKXR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion">

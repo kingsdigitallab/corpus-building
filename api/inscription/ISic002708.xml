@@ -18,10 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Epidoc editing and addition of metadata</resp>
@@ -62,7 +78,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Large intact stele, very carefully squared and with smooth surfaces. In the upper half of the front face, it has a wide and shallow hollow, with an arched upper end. Inside there remain traces of applied elements (perhaps stucco), also arched at the top, no longer preserved. The recess measures 44cm x 58cm.</p>
-                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions><!--ILipara-->
                                         <height unit="cm">94</height>
@@ -83,7 +99,7 @@
                             <handNote><!--ILipara-->
                                 <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="50" atMost="60">50-60</height>
+                                    <height unit="mm">50-60</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -94,12 +110,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0300" evidence="lettering textual-context">Roman period</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500" precision="low">3rd century CE or later (?) Appears to have two names and chairete, but v. faint)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1941">Found in 1941 during the excavation of a cistern in the villa owned by Ziino in the Diana district.<geo>38.467130, 14.953871</geo></provenance><!-- representative geo for contrada Diana -->
                         <provenance type="transferred" when="1942">Donated to the Superintendency in 1942, which deposited it in the Bishop's property, from where it was later transferred to Museo Archeologico Regionale Eoliano</provenance>
@@ -153,7 +169,7 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-05-15" who="#AA">Alex Antoniou text edition and addition of metadata</change>
 	</listChange>
@@ -172,7 +188,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
                     <cb n="1"/>
                     <lb n="1" break="no"/><persName type="attested"><name>Ἐλεύθερε
@@ -203,13 +219,9 @@
                         <title>NSA</title>
                         <date>1947</date>
                         <citedRange>218 no. VI</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                     <bibl type="corpus" n="ILipara">
-                          <author>Bernabó-Brea</author>
-                          <author>Cavalier</author>
-                          <author>Campagna</author>
-                          <date>2003</date> 
                         <citedRange>394</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VDAQH5D2"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref></bibl>

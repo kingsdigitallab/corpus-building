@@ -18,6 +18,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -25,6 +37,10 @@
                 <respStmt>
                     <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
                     <resp>EpiDoc editing</resp>
+                </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -47,7 +63,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Mineo</settlement>
-                        <repository>unknown</repository>
+                        <repository><!--Add Repository Here--></repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -63,7 +79,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>No description is preserved other than 'a stone found in Mineo'.</p>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -95,7 +111,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462312">Menae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
                             	<geo>37.26494, 14.69381</geo>
@@ -153,7 +169,7 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-09-22" who="#MB">encoded text</change>
 	</listChange>
@@ -170,14 +186,14 @@
          </surface></facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#MB">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
                 <ab>
                 <lb n="1"/>ἐπί <roleName type="civic.religious" subtype="hieropolos">ἱεροπόλου</roleName>
-                    <lb n="2"/><persName type="attested"><gap reason="lost" extent="unknown" unit="character"/><w part="F"><orig>ΤΟΣ</orig></w>
+                    <lb n="2"/><persName><gap reason="lost" extent="unknown" unit="character"/><w part="F"><orig>ΤΟΣ</orig></w>
                     <lb n="3"/><name type="patronym">Ἀπολλωνίου</name></persName>
                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><num type="acrophonic"><orig>Νbb</orig></num>
-                    <lb n="5"/><persName type="attested"><name>Θεόδωρος</name>
-                     <lb n="6"/><persName type="attested"><name type="patronym"><supplied reason="lost">Ἀ</supplied>πολλόδρου</name></persName></persName>
+                    <lb n="5"/><persName><name>Θεόδωρος</name>
+                     <lb n="6"/><persName><name type="patronym"><supplied reason="lost">Ἀ</supplied>πολλόδρου</name></persName></persName>
                      <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><num type="acrophonic"><orig>ΝΝb</orig></num>
                      <lb n="8"/>Κράτυλος
                      <lb n="9"/><w part="I">Εὐκ</w><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>

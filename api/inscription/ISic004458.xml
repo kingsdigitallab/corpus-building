@@ -14,6 +14,18 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
+               <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>              
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -22,7 +34,10 @@
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
                     <resp>file creation and encoding</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -60,7 +75,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of marble (?) plaque.</p>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble (?)</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble (?)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!-- Ferrua -->
                                         <height unit="cm">24</height>
@@ -81,7 +96,7 @@
                             <handNote><!-- Ferrua -->
                               <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="55" atMost="55">55</height>
+                                    <height unit="mm">55</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -95,7 +110,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient"/>
                                 <placeName type="modern" ref="https://sws.geonames.org/2525646/">Augusta</placeName>
                                 <geo>37.24065, 15.22121</geo>
@@ -175,7 +190,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#IG">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
                     <lb n="1"/><supplied reason="lost" cert="low">Σ</supplied>ατυρ<unclear>ί</unclear><supplied reason="lost" cert="low">ων</supplied>
                     <lb n="2"/><supplied reason="lost">ἐ</supplied>νθάδε 
@@ -204,7 +219,7 @@
                         <title>NSA</title>
                         <date>1902</date>
                         <citedRange>429</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                     <bibl>
                         <author>Ferrua</author>
@@ -216,7 +231,7 @@
                         <author>Führer and Schultze</author>
                         <date>1907</date>
                         <citedRange>184</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/52GBQ6AW"/>
+                        <ptr target="http://zotero.org/groups/382445/items/52GBQ6AW"/>
                       <ref target="https://biblio.inscriptiones.org/epig10001979">https://biblio.inscriptiones.org/epig10001979</ref></bibl>
                     <bibl/>
                 </listBibl>

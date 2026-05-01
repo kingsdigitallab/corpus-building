@@ -18,11 +18,26 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -59,7 +74,7 @@
                             <supportDesc>
                                 <support>
                                     <p>The original block, of the local stone, is said to have been approximately 1.5 m tall, with a maximum width of 0.46m and depth of 0.33m (so Di Vita 1955). However only two fragments are preserved (it having been broken up on discovery), both set into cement: the upper fragment (1), being max W 42 cm, max H 38 cm (face 33 cm), max D 36 cm; the lower fragment (2) is max W 32 cm, max H 27 cm across the face; the depth is uncertain, being only a piece off the front of the stone, now set into cement. A fragment is clearly missing from the left side, equivalent to a couple of letters, but the right side of the upper fragment appears original, and the top may well be also, both roughly finished.</p>
-                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--from DiVita-->
                                         <height unit="cm">150</height>
@@ -80,19 +95,19 @@
                             <handNote><p>Deep and well carved, with a U-shaped cut letters of generally regular height. Most letters are c.75mm tall; O is consistently smaller than the other letters (55-60 mm), S taller at 95 mm, and the numeral 50 is 110 mm. A deep round interpunct is viisble at the end of line 3.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="75" atMost="95">75-95</height>
+                                    <height unit="mm">75-95</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="55" atMost="95">55-95</height>
+                                    <height unit="mm">55-95</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="60" atMost="75">60-75</height>
+                                    <height unit="mm">60-75</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="70" atMost="110">70-110</height>
+                                    <height unit="mm">70-110</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -103,7 +118,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient"/>
                                 <placeName type="modern" ref="http://pleiades.stoa.org/places/462323">Corleone</placeName>		
                             	<geo>37.7905564, 13.3101399</geo>
@@ -164,7 +179,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-10-31" who="#JP">Jonathan Prag revised after fresh autopsy</change>
 	</listChange>
@@ -206,7 +221,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><supplied reason="lost"><expan><abbr>C</abbr><ex>aius</ex></expan></supplied> <supplied reason="lost">A</supplied>urelius
                     <lb n="2"/><supplied reason="lost"><expan><abbr>L</abbr><ex>uci</ex></expan></supplied> <supplied reason="lost"><expan><abbr>f</abbr><ex>ilius</ex></expan></supplied> Cottas
@@ -227,11 +242,11 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1963.0131</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1957.0172</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="corpus" n="ILLRP">
                         <citedRange>1277</citedRange>
@@ -266,13 +281,13 @@
                     <bibl>
                         <author>Kreiler</author>
                         <date>2011</date>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q3VXGR7I"/>
+                        <ptr target="http://zotero.org/groups/382445/items/Q3VXGR7I"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001894">https://biblio.inscriptiones.org/epig10001894</ref></bibl>
                     <bibl>
                         <author>Tribulato</author>
                         <date>2012</date>
                         <citedRange>302-303</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/X5ZZ4GPT"/>
+                        <ptr target="http://zotero.org/groups/382445/items/X5ZZ4GPT"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001557">https://biblio.inscriptiones.org/epig10001557</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

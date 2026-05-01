@@ -23,6 +23,18 @@
                     <resp>original data collection and editing</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -62,7 +74,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Lamina.</p>
-                                    <material ana="#material.inorganic.metal.lead" type="metal.lead" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
+                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -92,13 +104,13 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName/>
                                 <placeName type="ancient" ref=""/><!-- add ancient place name and pleiades ref -->
                                 <placeName type="modern"/><!-- add modern place name and geonames ref -->
                                 <geo/> <!-- add geo coordinates -->
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0500" notAfter-custom="-0401">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
                         </origin>
                         <provenance type="found" subtype="discovered">Found in ...<geo>...</geo>.</provenance> <!-- add specific geo coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -165,7 +177,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
                 <ab>
                     <lb n="1"/>
                 </ab>
@@ -190,7 +202,7 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>04.0039</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion"><bibl/>

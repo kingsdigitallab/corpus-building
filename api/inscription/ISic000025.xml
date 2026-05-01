@@ -19,6 +19,18 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -26,7 +38,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -66,8 +81,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -98,7 +112,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                             	<geo>38.13205, 13.33561</geo>
@@ -158,35 +172,35 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic000025_tiled.tif" height="4496px" width="3000px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R. Henzel, 2016-11-07</desc>
+            <graphic n="screen" url="ISic000025_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-            <graphic n="print" url="ISic000025.jpg" height="4496px" width="3000px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R. Henzel, 2016-11-07</desc>
+            <graphic n="print" url="ISic000025.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-        </surface>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TA">
+            <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><persName type="attested" subtype="imperial"><roleName type="supracivic" subtype="dominus"><w n="5"><expan><abbr>D</abbr><ex>omino</ex></expan></w></roleName> <g ref="#interpunct" n="10">·</g> <w n="15"><expan><abbr>n</abbr><ex>ostro</ex></expan></w> <g ref="#interpunct" n="20">·</g> <name><w n="25">Galerio</w></name> <g ref="#interpunct" n="30">·</g> <name><w n="35"><expan><abbr>Val</abbr><ex>erio</ex></expan></w></name>
-                    <lb n="2"/><name><w n="40">Maximino</w></name> <g ref="#interpunct" n="45">·</g> <w n="50">nobi
-                    <lb n="3" break="no"/>lissimo</w> <g ref="#interpunct" n="55">·</g> <name><w n="60"><expan><abbr>Caes</abbr><ex>ari</ex></expan></w></name></persName>
-                    <lb n="4"/><w n="65">res</w> <w n="70"><expan><abbr>p</abbr><ex>ublica</ex></expan></w> <g ref="#interpunct" n="75">·</g> <name><w n="80"><expan><abbr>Panhorm</abbr><ex>itanorum</ex></expan></w></name>
-                    <lb n="5"/><w n="85"><expan><abbr>d</abbr><ex>evota</ex></expan></w> <g ref="#interpunct" n="90">·</g> <w n="95"><expan><abbr>n</abbr><ex>umini</ex></expan></w> <g ref="#interpunct" n="100">·</g> <w n="105"><expan><abbr>m</abbr><ex>aiestati</ex></expan></w> <g ref="#interpunct" n="110">·</g> <w n="115"><expan><abbr>q</abbr><ex>ue</ex></expan></w> <g ref="#interpunct" n="120">·</g> <w n="125">eius</w>
+                    <lb n="1"/><roleName type="supracivic" subtype="dominus"><expan><abbr>D</abbr><ex>omino</ex></expan></roleName> <g ref="#interpunct">·</g> <expan><abbr>n</abbr><ex>ostro</ex></expan> <g ref="#interpunct">·</g> Galerio <g ref="#interpunct">·</g> <expan><abbr>Val</abbr><ex>erio</ex></expan>
+                    <lb n="2"/>Maximino <g ref="#interpunct">·</g> nobi
+                    <lb n="3" break="no"/>lissimo <g ref="#interpunct">·</g> <expan><abbr>Caes</abbr><ex>ari</ex></expan>
+                    <lb n="4"/>res <expan><abbr>p</abbr><ex>ublica</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>Panhorm</abbr><ex>itanorum</ex></expan>
+                    <lb n="5"/><expan><abbr>d</abbr><ex>evota</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>n</abbr><ex>umini</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>m</abbr><ex>aiestati</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>q</abbr><ex>ue</ex></expan> <g ref="#interpunct">·</g> eius
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of IMusPalermo</note></app>
+                    <app><note>Text of <hi rend="italic">IMusPalermo</hi></note></app>
                 </listApp>
             </div>
             <div type="translation">
@@ -198,31 +212,13 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl>
-                        <author>Gualtherus</author>
-                        <date>1624</date>
-                        <citedRange>9</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Gualtherus</author>
-                        <date>1624 [1625]</date>
-                        <citedRange>166</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
-                    </bibl>
                     <bibl type="corpus" n="CIL">
-                        <author>Mommsen</author>
-                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650790">7283</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650790">10.7283</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusPalermo">
-                         <author>Bivona</author>
-                         <date>1970</date> 
                         <citedRange>25</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>

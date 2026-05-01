@@ -14,6 +14,18 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -22,7 +34,6 @@
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
                     <resp>file creation and encoding</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -60,7 +71,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of white marble plaque, cut down on all sides for re-use, and broken on the upper left subsequent to the re-use for this inscription. Opisthographic plaque, with earlier text on the reverse, <ref sameAs="ISic001911.xml">ISic001911</ref></p>
-                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic" type="stone.marble" subtype="Lunense|Pentelic" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Very fine-grained, homogeneous, white marble, likely Lunense, Pentelic. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)</material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257.html">plaque</objectType>
                                     <dimensions><!--IG-->
                                         <height unit="cm">16</height>
@@ -81,46 +92,46 @@
                             <handNote><p>lunate eipsilon and sigma, uncial omega, use of ligatures and supralines, and some interpunctuation.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="25" atMost="33">25-33</height>
+                                    <height unit="mm">25-33</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="27" atMost="30">27-30</height>
+                                    <height unit="mm">27-30</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="15" atMost="25">15-25</height>
+                                    <height unit="mm">15-25</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus> 
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="7" atMost="20">7-20</height>
+                                    <height unit="mm">7-20</height>
                                 </dimensions>
                                 <locus from="line5" to="line5">Line 5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="4" atMost="15">4-15</height>
+                                    <height unit="mm">4-15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="11" atMost="15">11-15</height>
+                                    <height unit="mm">11-15</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="5" atMost="8">5-8</height>
+                                    <height unit="mm">5-8</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="5" atMost="10">5-10</height>
+                                    <height unit="mm">5-10</height>
                                 </dimensions>
                                 <locus from="line4" to="line5">Interlineation line 4 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm" atLeast="1" atMost="1">1</height>
+                                    <height unit="mm">1</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
@@ -198,7 +209,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="#IG">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="#IG">
                 <ab>
                     <lb n="1"/><persName type="attested"><name><gap reason="lost" unit="character" atLeast="1" atMost="2"/><w part="F">λια</w></name></persName> <g ref="#interpunct">·</g> ἄμεμ
                     <lb n="2" break="no"/><supplied reason="lost">πτο</supplied>ς <g ref="#interpunct">·</g> χρηστια<hi rend="ligature">νὴ</hi>
@@ -228,7 +239,7 @@
                     <author>Orsi</author>
                     <date>2018</date>
                     <citedRange>Tacc. 2, p. 21</citedRange>
-                    <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
+                    <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref>
                     </bibl>
                      <bibl>
