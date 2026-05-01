@@ -9,7 +9,7 @@ tags:
   - inscriptions
 ---
 
-# Credits
+## Credits
 
 I.Sicily has been funded by the University of Oxford John Fell Fund, Merton College Oxford, and the ERC Advanced Grant Crossreads (grant agreement no.885040).
 
@@ -27,7 +27,7 @@ The original web interface, live since 2017, was constructed by James Chartrand 
 
 The new web interface and data processing infrastructure, developed in 2025, was designed and built by King's Digital Lab. This included the development of a comprehensive system for processing TEI XML files, metadata extraction and transformation, lemma processing, and the conversion of raw epigraphic data into structured formats for web presentation. The system processes over 4,700 inscriptions and generates HTML, JSON, and structured data outputs that are used by the web application.
 
-# Image rights
+## Image rights
 
 All images, with the exception of those noted below, are reproduced with the permission of the [Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/assessorato-beni-culturali-identita-siciliana), according to article 1 of the convention between the Assessorato and the [Faculty of Classics](https://www.classics.ox.ac.uk/), University of Oxford, most recently renewed on 11 September 2025. In most cases, additional permission has been obtained from the relevant institution with immediate responsibility for the object in question.
 
@@ -42,7 +42,7 @@ The majority of images have been taken by members of the Crossreads project, or 
 Images derived from publications are reproduced where an inscription is now lost or unrecoverable and where possible are taken from publications no longer in copyright, or with the relevant permission.
 
 
-# Acknowledgements
+## Acknowledgements
 
 We are grateful to the Regione Siciliana for its continued support of this project. That support was formalised with a convention between the Assessorato regionale dei Beni Culturali e dell’Identità siciliana (Regional Office for Cultural Heritage and Sicilian Identity) and the Faculty of Classics, University of Oxford, first signed in 2022 and renewed in September 2025.
 
