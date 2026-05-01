@@ -18,26 +18,11 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>original development of EpiDoc template</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -74,7 +59,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A plaque of limestone, intact across the top, but broken on the other three sides. Roughly finished on the reverse.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="stone.calcarenite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--De Simone 2013-->
                                         <height unit="cm">20.2</height>
@@ -95,7 +80,7 @@
                             <handNote n="hand1" xml:id="h1"><p>De Simone notes that line 1 is written in a different hand from lines 2-3</p>
                            <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">40-50</height>
+                                    <height unit="mm" atLeast="40" atMost="50">40-50</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation</locus>
                                 <dimensions type="interlinear">
@@ -105,7 +90,7 @@
                             <handNote n="hand2" xml:id="h2"><p>second hand for lines 2-3</p>
                                 <locus from="line2" to="line3">Lines 2-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">40-50</height>
+                                    <height unit="mm" atLeast="40" atMost="50">40-50</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation</locus>
                                 <dimensions type="interlinear">
@@ -116,19 +101,17 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName>
                             	<geo>37.58337, 12.82522</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0409" notAfter-custom="-0300" evidence="lettering">4th cent. BCE (after 409 BCE on historical grounds)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0409" notAfter-custom="-0301" evidence="lettering">4th cent. BCE (after 409 BCE on historical grounds)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">From the site of Selinunte, but exact details unknown.</provenance>
-                        <provenance type="observed">On display</provenance>
+                        <provenance type="found" subtype="discovered">From the site of Selinunte, but exact details unknown. Currently on display in the Palermo museum.</provenance>
                         <provenance type="observed" subtype="autopsied">Photographed in Palermo museum, Prag 2017-07-21</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -188,7 +171,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="transliteration" xml:space="preserve" xml:lang="xpu-Latn" resp="#JP"><!-- transcribed in conventional phonetic alphabet for Phoenician, etc.; underdots present form part of this convention and are not the same as unclear leiden underdots; this remains an issue to resolve -->
+            <div type="edition" subtype="transliteration-primary" xml:space="preserve" xml:lang="xpu-Latn" resp="#JP"><!-- transcribed in conventional phonetic alphabet for Phoenician, etc.; underdots present form part of this convention and are not the same as unclear leiden underdots -->
                 <ab>
                     <lb n="1" style="text-direction:r-to-l"/><handShift new="#h1"/><gap reason="lost" extent="unknown" unit="character"/>wzḥṭyklmnsʾpṣqršt<gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2" style="text-direction:r-to-l"/><handShift new="#h2"/><gap reason="lost" extent="unknown" unit="character"/>lzyṣnqṭʾq<gap reason="lost" extent="unknown" unit="character"/>
@@ -210,17 +193,18 @@
                         <author>De Simone</author>
                         <date>2010</date>
                         <citedRange>51 no.12 ph</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/QGZVD5TK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002543">https://biblio.inscriptiones.org/epig10002543</ref></bibl><bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QGZVD5TK"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002543">https://biblio.inscriptiones.org/epig10002543</ref></bibl>
+                    <bibl>
                         <author>De Simone</author>
                         <date>2013</date>
                         <citedRange>33 SEL.2 fig.24 and pp.47-50</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/EGNUE9CZ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/EGNUE9CZ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002545">https://biblio.inscriptiones.org/epig10002545</ref></bibl>
                     <bibl>
                         <author>De Simone</author>
                         <date>2013</date>
-                        <ptr target="http://zotero.org/groups/382445/items/P8Y26F46"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/P8Y26F46"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002547">https://biblio.inscriptiones.org/epig10002547</ref></bibl>
                  </listBibl>
 	   <listBibl type="discussion">
@@ -228,7 +212,7 @@
 	           <author>De Simone</author>
 	           <date>2010</date>
 	           <citedRange>185-186 fig.4</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/JW3WK2BN"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/JW3WK2BN"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002546">https://biblio.inscriptiones.org/epig10002546</ref></bibl>
 	   </listBibl>
             </div>

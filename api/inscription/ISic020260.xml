@@ -19,18 +19,6 @@
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -70,7 +58,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Fragment of foot of a black-glaze kylix.</p>
-                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType ana="#object.vessel.kylix" ref="http://kerameikos.org/id/kylix">kylix</objectType> <!-- ref="https://www.eagle-network.eu/voc/objtyp/lod/305.html" -->
                                     <dimensions>
                                         <height unit="cm"/>
@@ -93,14 +81,14 @@
                                 <!--  Based on Glyph table: alpha03; heta05; iota01; mu02. -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">5-7</height>
+                                    <height unit="mm" atLeast="5" atMost="7">5-7</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>
                                 <placeName type="modern"/>
                                 <geo>37.94171, 12.83649</geo>
@@ -172,7 +160,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="xly-Grek"> 
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="xly-Grek"> 
                     <ab>
                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ΜΙͰΑ<gap reason="lost" extent="unknown" unit="character"/>
                     </ab>
@@ -202,19 +190,19 @@
                         <author>Agostiniani</author>
                         <date>1977</date>
                         <citedRange>260</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/QR2S9AJ9"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QR2S9AJ9"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002201">https://biblio.inscriptiones.org/epig10002201</ref></bibl>
                     <bibl>
                         <author>Ambrosini</author>
                         <date>1970</date>
                         <citedRange>469</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/CMVPRJZD"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CMVPRJZD"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002187">https://biblio.inscriptiones.org/epig10002187</ref></bibl>
                     <bibl>
                         <author>Tusa</author>
                         <date>1970</date>
                         <citedRange>no.6</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/P6FHJGR7"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/P6FHJGR7"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002567">https://biblio.inscriptiones.org/epig10002567</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">

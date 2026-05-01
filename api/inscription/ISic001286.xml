@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -19,24 +21,20 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -59,7 +57,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository>unknown</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -74,8 +72,9 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Described as a very large fragment of high quality marble, seemingly part of a base, possibly belonging to a monumental structure or building. No measurements are recorded.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                <support>
+                                    <p>Described as a very large fragment of high quality marble, seemingly part of a base, possibly belonging to a monumental structure or building. No measurements are recorded.</p>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html" cert="low">base</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -84,16 +83,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>parts of five lines are recorded, but with no indication of the relationship of the text to the preserved surface.</p>
+                                <layout>
+                                    <p>parts of five lines are recorded, but with no indication of the relationship of the text to the preserved surface.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Lunate sigma and epsilon are indicated in Ferrara's transcription.</p>
+                            <handNote>
+                                <p>Lunate sigma and epsilon are indicated in Ferrara's transcription.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -107,34 +108,34 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500" cert="low">Presumably later Roman imperial in date.</origDate>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500" cert="low">Presumably later Roman imperial in date.</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1829">First recorded by Ferrara 1829 as part of the collection of Baron Recupero, without further indications of provenance (other than Catania).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <provenance type="not-observed" subtype="lost">Lost</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -163,17 +164,21 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-07-10" who="#JP">Jonathan Prag revised from publication</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+                <change when="2025-12-23" who="#ZL">tagged names and persons</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
+    <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001286_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -185,25 +190,50 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΚΑΙϹΙ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                 <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΗΤΑΡϹΤ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>ισταμένη <orig>Υ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><name>Ἀυξέντιον</name> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΚΗΝΔΙΚΛΕ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/><orig n="10">ΚΑΙϹΙ</orig><gap reason="lost" extent="unknown" unit="character" n="15"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" n="20"/><orig n="25">ΗΤΑΡϹΤ</orig><gap reason="lost" extent="unknown" unit="character" n="30"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character" n="35"/> <w n="40">ισταμένη</w> <orig n="45">Υ</orig><gap reason="lost" extent="unknown" unit="character" n="50"/>
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character" n="55"/> <persName type="attested"><name><w n="60">Ἀυξέντιον</w></name></persName> <gap reason="lost" extent="unknown" unit="character" n="65"/>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character" n="70"/><orig n="75">ΚΗΝΔΙΚΛΕ</orig><gap reason="lost" extent="unknown" unit="character" n="80"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character" n="5"><desc>[-?-]</desc></gap>
+                    <orig n="10">ΚΑΙϹΙ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="15"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="20"><desc>[-?-]</desc></gap>
+                    <orig n="25">ΗΤΑΡϹΤ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="30"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="35"><desc>[-?-]</desc></gap>
+                    <w n="40" lemma="ἵστημι">ισταμένη</w>
+                    <orig n="45">Υ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="50"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="55"><desc>[-?-]</desc></gap>
+                    <w n="60" lemma="Ἀυξέντιος">Ἀυξέντιον</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="65"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="70"><desc>[-?-]</desc></gap>
+                    <orig n="75">ΚΗΝΔΙΚΛΕ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="80"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text after Ferrara</note></app>
-                <app loc="4"><note>Ferrara: ΑΥΖΕΝΤΙΟΝ, but Ζ surely for the crossed Ζ commonly used for ξ</note></app>
+                <listApp>
+                    <app>
+                        <note>Text after Ferrara</note>
+                    </app>
+                    <app loc="4">
+                        <note>Ferrara: ΑΥΖΕΝΤΙΟΝ, but Ζ surely for the crossed Ζ commonly used for ξ</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -211,17 +241,23 @@
                         <author>Ferrara</author>
                         <date>1829</date>
                         <citedRange>383 no.16</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/82T4IWDN"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref>
+                    </bibl>
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0462</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">462</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

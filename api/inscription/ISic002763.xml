@@ -18,26 +18,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+                <respStmt> 
+                    <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
+                    <resp>named entity annotation</resp> 
+                </respStmt> 
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -76,7 +64,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>An oval limestone plaque, inscribed on both faces</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Manganaro 1994-->
                                         <height unit="cm">22.5</height>
@@ -97,7 +85,7 @@
                             <handNote><p>Alpha tending to cursive (crossbar descending to lower left corner); eta variously standard or cursive (as a reversed N); nu is consistently reversed; theta, circle open above and blelow with cross bar overextended; kappa, upper bar joins lower left, lower bar attached to the upper bar; mu sometimes cursive; epsilon lunate; simga lunate; omega uncial.</p>
                                 <locus from="line1" to="line20">Line 1-20</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">5-10</height><!-- Manganaro 1994 -->
+                                    <height unit="mm" atLeast="5" atMost="10">5-10</height><!-- Manganaro 1994 -->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -108,7 +96,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462378">Mutyca</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6541972">Modica</placeName>
                             	<geo>36.84594, 14.77399</geo>
@@ -166,58 +154,59 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-04-10" who="#JP">Jonathan Prag revised encoding and editing from publication</change>
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
+    <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic002763_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            <graphic n="screen" url="ISic002763_a_tiled.tif" height="4892px" width="3377px">
+                <desc>Face A. I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R.J.A. Wilson 2022-06-04</desc>
             </graphic>
-            <graphic n="print" url="ISic002763.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            <graphic n="print" url="ISic002763_a.jpg" height="4892px" width="3377px">
+                <desc>Face A. I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R.J.A. Wilson 2022-06-04</desc>
             </graphic>
-         </surface> -->
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/XAJ8Q2QU">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/XAJ8Q2QU">
                 <ab>
                     <milestone unit="face" n="a"/>
                     <lb n="1"/><g ref="#cross_uninterpreted"/> πρὸς <choice><orig><expan><abbr>ἐνκαρ
-                    <lb n="2" break="no"/>πήα</abbr><ex>ν</ex></expan><reg>εὐκαρπίαν</reg></orig></choice> <choice><orig>χουρίον</orig><reg>χωρίων</reg></choice> <expan><abbr><am><g ref="#sinusoid">&#65932;</g></am></abbr><ex>καἰ</ex></expan> κλα
+                    <lb n="2" break="no"/>πήα</abbr><ex>ν</ex></expan></orig><reg>εὐκαρπίαν</reg></choice> <choice><orig>χουρίον</orig><reg>χωρίων</reg></choice> <expan><abbr><am><g ref="#sinusoid">&#65932;</g></am></abbr><ex>καἰ</ex></expan> κλα
                     <lb n="3" break="no"/>ρίον ἄνγελος τοῦ <expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan>
-                    <lb n="4"/> ω Κραμαμιλαν Φιναὴλ
-                    <lb n="5"/> Λουὶλ Αμεγαωθ <expan><abbr>Κρεφι</abbr><ex>ὴλ</ex></expan>
-                    <lb n="6"/>Φακτωὲλ Ἀνεμουὴλ Μου
-                    <lb n="7"/>Μουκαθὰλ λουιχανδα
-                    <lb n="8"/>Εεισδραμὲλ γιάμεν σε
-                    <lb n="9"/>Ἰεσοῦ <expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan> τε δὸς τὸν καρ
+                    <lb n="4"/> ω <persName type="divine"><name>Κραμαμιλαν</name></persName> <persName type="divine"><name>Φιναὴλ</name></persName>
+                    <lb n="5"/> <persName type="divine"><name>Λουὶλ</name></persName> <persName type="divine"><name>Αμεγαωθ</name></persName> <persName type="divine"><name><expan><abbr>Κρεφι</abbr><ex>ὴλ</ex></expan></name></persName>
+                    <lb n="6"/><persName type="divine"><name>Φακτωὲλ</name></persName> <persName type="divine"><name>Ἀνεμουὴλ</name></persName> Μου
+                    <lb n="7"/><persName type="divine"><name>Μουκαθὰλ</name></persName> λουιχανδα
+                    <lb n="8"/><persName type="divine"><name>Εεισδραμὲλ</name></persName> γιάμεν σε
+                    <lb n="9"/><persName type="divine"><name>Ἰεσοῦ</name> <name><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan></name></persName> τε δὸς τὸν καρ
                     <lb n="10" break="no"/>πὸν κὲ τὶν ἰσφορὰν ἰς τὸν
                     <lb n="11"/>ἀνπελο͂ναν ἀποὺ καρποῦ
                     <lb n="12"/>σίτου κὲ ὔνου <expan><abbr><am><g ref="#sinusoid">&#65932;</g></am></abbr><ex>καἰ</ex></expan> ἐλέου τοῦ
-                    <lb n="13"/><expan><abbr>Πέτρο</abbr><ex>υ</ex></expan> οὕπου κῖτε τοὺ φυλα
+                    <lb n="13"/><persName type="attested"><name><expan><abbr>Πέτρο</abbr><ex>υ</ex></expan></name></persName> οὕπου κῖτε τοὺ φυλα
                     <lb n="14" break="no"/>κτήριον τοῦτου <w part="I">εω</w><gap reason="lost" unit="character" quantity="6" precision="low"/>
-                    <lb n="15"/><gap reason="lost" unit="character" atLeast="1" atMost="2"/><w part="F">τητο</w> κτήσαντα Μιχαὴλ
-                    <lb n="16"/><supplied reason="lost">Γ</supplied>αβριάυλ Οὐριήλ Ῥαφαὴλ
-                    <lb n="17"/>τὸν Μισχοῦτον τὸν δυνατὸν
+                    <lb n="15"/><gap reason="lost" unit="character" atLeast="1" atMost="2"/><w part="F">τητο</w> κτήσαντα <persName type="divine"><name>Μιχαὴλ</name></persName>
+                    <lb n="16"/><persName type="divine"><name><supplied reason="lost">Γ</supplied>αβριάυλ</name></persName> <persName type="divine"><name>Οὐριήλ</name></persName> <persName type="divine"><name>Ῥαφαὴλ</name></persName>
+                    <lb n="17"/>τὸν <persName type="divine"><name>Μισχοῦτον</name> τὸν δυνατὸν</persName>
                     <lb n="18"/>δὸς χάριν ἰς τὴν σύνθε
                     <lb n="19" break="no"/>σην ἀποὺ καρποῦ
                     <lb n="20"/>σίτου <expan><abbr><am><g ref="#sinusoid">&#65932;</g></am></abbr><ex>καἰ</ex></expan> ὔνου <expan><abbr><am><g ref="#sinusoid">&#65932;</g></am></abbr><ex>καἰ</ex></expan> ἐλέ
                     <lb n="21" break="no"/>ου
                     <milestone unit="face" n="b"/>
                     <lb n="22"/>ἐλεο͂να τὸν ἀν
-                    <lb n="23"/>πελο͂να τοῦ Πέτρου
+                    <lb n="23"/>πελο͂να τοῦ <persName type="attested"><name>Πέτρου</name></persName>
                     <lb n="24"/>πλίθυνον πλύθυ
-                    <lb n="25" break="no"/>νον <expan><abbr>νῦ</abbr><ex>ν</ex></expan> <expan><abbr>Κύ</abbr><ex>ριε</ex></expan> Ἰεσοῦ
-                    <lb n="26"/><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan> τε νὲ ἀμέν
+                    <lb n="25" break="no"/>νον <expan><abbr>νῦ</abbr><ex>ν</ex></expan> <persName type="divine"><expan><abbr>Κύ</abbr><ex>ριε</ex></expan> <name>Ἰεσοῦ</name>
+                    <lb n="26"/><name><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan></name></persName> τε νὲ ἀμέν
                     <lb n="28"/><g ref="#cross_uninterpreted"/>
                 </ab>
             </div>
-            <!-- <div type="edition" xml:space="preserve" n="PHI332960">Text of Manganaro 1994, converted automatically from PHI
+            <!-- <div type="edition" subtype="primary" xml:space="preserve" n="PHI332960">Text of Manganaro 1994, converted automatically from PHI
                 <ab>
                     <lb n="1"/>☩ πρὸς ε<supplied reason="omitted">ὐ</supplied>καρ-
                     <lb n="2"/> πήα<supplied reason="omitted">ν</supplied>, χουρίον <surplus>²⁶χωρίων</surplus>²⁶ (καὶ) κλα-
@@ -263,31 +252,31 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>2006.00517a-b</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>57.0883</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1097</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>55.1017</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>50.1017</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>44.0781</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1995.0750</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>

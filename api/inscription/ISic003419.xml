@@ -18,26 +18,11 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,7 +60,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Although damaged around the edges, the block appears essentially intact top, left and below, but appears to have been cut down on the right, with a significant part of the text (same block or a second block?) missing from the right. The stone is a soft coarse stone of poor quality and the surface is not well preserved. The block was found in re-use in a later wall.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--Calascibetta and Di Leonardo-->
                                         <height unit="cm">33</height>
@@ -96,46 +81,46 @@
                             <handNote><p>Lunate epislon and sigma, with broken bar alpha, xsi of the form of I with extended cross-bars. Letters of a plain, regular and wide module.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-37</height>
+                                    <height unit="mm" atLeast="30" atMost="37">30-37</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-35</height>
+                                    <height unit="mm" atLeast="30" atMost="35">30-35</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30</height>
+                                    <height unit="mm" atLeast="30" atMost="30">30</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">28-30</height>
+                                    <height unit="mm" atLeast="28" atMost="30">28-30</height>
                                 </dimensions>
                                 <locus from="line5" to="line5">Line 5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-33</height>
+                                    <height unit="mm" atLeast="30" atMost="33">30-33</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">20-25</height>
+                                    <height unit="mm" atLeast="20" atMost="25">20-25</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">23</height>
+                                    <height unit="mm" atLeast="23" atMost="23">23</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">20-23</height>
+                                    <height unit="mm" atLeast="20" atMost="23">20-23</height>
                                 </dimensions>
                                 <locus from="line4" to="line5">Interlineation line 4 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">18-20</height>
+                                    <height unit="mm" atLeast="18" atMost="20">18-20</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462498">Soluntum</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523057">Solunto</placeName>
                             	<geo>38.09296, 13.53147</geo>
@@ -194,7 +179,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-05-09" who="#JP">Jonathan Prag revised from autopsy notes</change>
 	</listChange>
@@ -212,7 +197,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="#autopsy">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="#autopsy">
                 <ab>
                     <lb n="1"/>τὸ κοινὸ<unclear>ν</unclear> <gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><persName type="attested"><name>Σέξστον</name> <name>Πεδ<unclear>ο</unclear><supplied reason="lost">υκαῖον</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>
@@ -237,7 +222,7 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>62.0691</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Calascibetta and Di Leonardo</author>

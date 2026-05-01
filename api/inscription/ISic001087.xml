@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -19,29 +21,18 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
                 </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -84,8 +75,9 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Large block of yellow tuff, broken in 8 pieces when found, subsequently restored and set together in plaster. Most of the block is preserved, damaged at the left and right ends, with some of the left half of the face and lower edge missing. The inscribed field (108 cm wide) is cut back from the right and left margins; the upper surface is finished with traces of clamp holes for the fitting of a block above. The rear is uneven.</p>
-                                    <material ana="#material.stone.tuff" ref="http://www.eagle-network.eu/voc/material/lod/30.html">tuff (yellow)</material>
+                                <support>
+                                    <p>Large block of yellow tuff, broken in 8 pieces when found, subsequently restored and set together in plaster. Most of the block is preserved, damaged at the left and right ends, with some of the left half of the face and lower edge missing. The inscribed field (108 cm wide) is cut back from the right and left margins; the upper surface is finished with traces of clamp holes for the fitting of a block above. The rear is uneven.</p>
+                                    <material type="stone.calcarenite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/30.html">tuff (yellow)</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--IGPal-->
                                         <height unit="cm">43.5</height>
@@ -94,12 +86,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>11 lines of Greek, filling the finished recessed field from the top and extending fully to both margins, with vacat at the end of the last line and below.</p>
+                                <layout>
+                                    <p>11 lines of Greek, filling the finished recessed field from the top and extending fully to both margins, with vacat at the end of the last line and below.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -130,6 +123,7 @@
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.html">Ν type1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ν-type1.1.html">Ν type1.1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.html">Ο type1</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ο-type1.1.html">Ο type1.1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type1.html">Π type1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Π-type1.1.html">Π type1.1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type1.html">Ρ type1</ref>
@@ -138,13 +132,15 @@
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.html">Ρ type2</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.5.html">Ρ type2.5</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Ρ-type2.6.html">Ρ type2.6</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.html">Σ type3</ref>
+                                    <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Σ-type3.1.html">Σ type3.1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Υ-type1.html">Υ type1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Φ-type1.html">Φ type1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Χ-type2.html">Χ type2</ref>
                                 </p>
                                 <locus from="line1" to="line11">Line 1-11</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-30</height>
+                                    <height unit="mm" atLeast="25" atMost="30">25-30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -155,12 +151,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>		
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName>
-                            	<geo>37.58337, 12.82522</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0450">475—450 BCE</origDate>
+                                <geo>37.58337, 12.82522</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0451">475—450 BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1871">Found by Cavallari in 1871 in the left anta of the entrance to the adyton of Temple G (Zeus), Selinunte<geo>37.5881651,12.8335283</geo></provenance><!-- dropped pin in google earth of location of adyton entrance -->
                         <provenance type="observed" subtype="seen">On display, ground floor, Palermo archaeological museum</provenance>
@@ -171,18 +167,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -211,17 +207,18 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                   <change when="2020-10-15" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-15" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-01-24" who="#JP">Jonathan Prag made edits to file metadata, annotated names in TEI, and added images.</change>
                 <change when="2024-02-19" who="#SS">tokenised and generared token IDs</change>
                 <change when="2025-04-24" who="#SS">added letterform types to handNote</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -232,7 +229,7 @@
             <graphic n="print" url="ISic001087.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 23.05.2022</desc>
             </graphic>
-         </surface>
+        </surface>
         <surface type="right">
             <graphic n="screen" url="ISic001087_right_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 21.07.2017</desc>
@@ -244,112 +241,141 @@
     </facsimile>
     <text>
         <body>
-           <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
-               <ab>
-                    <lb n="1" xml:id="BIΤAK"/><w xml:id="BIΤAU"><supplied reason="lost" xml:id="BIΤAe">δι</supplied>ὰ</w> <w xml:id="BIΤAo">το̄̀ς</w> <w xml:id="BIΤAy">θεο̄̀ς</w> <w xml:id="BIΤAΙ">το̄́<supplied reason="lost" xml:id="BIΤAΤ">σ</supplied>δε</w> <w xml:id="BIΤAε">νικο͂ντι</w> <w xml:id="BIΤAο">τοὶ</w> <placeName type="ethnic" ref="http://pleiades.stoa.org/places/462489" xml:id="BIΤBA"><w xml:id="BIΤBK">Σελινο̄́ν</w> <w xml:id="BIΤBU"><supplied reason="lost" xml:id="BIΤBe">τιοι</supplied></w></placeName> 
-                    <lb n="2" xml:id="BIΤBo"/><w xml:id="BIΤBy"><supplied reason="lost" xml:id="BIΤBΙ">δι</supplied>ὰ</w> <w xml:id="BIΤBΤ">τὸν</w> <persName type="divine" xml:id="BIΤBε"><name xml:id="BIΤBο">Δία</name></persName> <w xml:id="BIΤCA">νικο͂μες</w> <w xml:id="BIΤCK">καὶ</w> <w xml:id="BIΤCU">διὰ</w> <w xml:id="BIΤCe">τὸν</w> <persName type="divine" xml:id="BIΤCo"><name xml:id="BIΤCy">Φόβον</name></persName> <w xml:id="BIΤCΙ"><supplied reason="lost" xml:id="BIΤCΤ">καὶ</supplied></w> 
-                    <lb n="3" xml:id="BIΤCε"/><w xml:id="BIΤCο"><supplied reason="lost" xml:id="BIΤDA">δ</supplied>ιὰ</w> <persName type="divine" xml:id="BIΤDK"><name xml:id="BIΤDU">hερακλέα</name></persName> <w xml:id="BIΤDe">καὶ</w> <w xml:id="BIΤDo">δι’</w> <persName type="divine" xml:id="BIΤDy"><name xml:id="BIΤDΙ">Ἀπόλλο̄να</name></persName> <w xml:id="BIΤDΤ">καὶ</w> <w xml:id="BIΤDε">διὰ</w> <persName type="divine" xml:id="BIΤDο"><name xml:id="BIΤEA">Π<supplied reason="lost" xml:id="BIΤEK">οτ</supplied>
-                    <lb n="4" break="no" xml:id="BIΤEU"/>ει<supplied reason="lost" xml:id="BIΤEe">δᾶ</supplied>να</name></persName> <w xml:id="BIΤEo">καὶ</w> <w xml:id="BIΤEy">διὰ</w> <persName type="divine" xml:id="BIΤEΙ"><name xml:id="BIΤEΤ">Τυνδαρίδας</name></persName> <w xml:id="BIΤEε">καὶ</w> <w xml:id="BIΤEο">δι᾿</w> <persName type="divine" xml:id="BIΤFA"><name xml:id="BIΤFK">Ἀθ<supplied reason="lost" xml:id="BIΤFU">α</supplied>
-                    <lb n="5" break="no" xml:id="BIΤFe"/>ναίαν</name></persName> <w xml:id="BIΤFo">καὶ</w> <w xml:id="BIΤFy">διὰ</w> <persName type="divine" xml:id="BIΤFΙ"><name xml:id="BIΤFΤ">Μ<supplied reason="lost" xml:id="BIΤFε">α</supplied>λοφόρον</name></persName> <w xml:id="BIΤFο">καὶ</w> <w xml:id="BIΤGA">διὰ</w> <persName type="divine" xml:id="BIΤGK"><name xml:id="BIΤGU">Πασι<supplied reason="lost" xml:id="BIΤGe">κ</supplied>
-                    <lb n="6" break="no" xml:id="BIΤGo"/>ρά<supplied reason="lost" xml:id="BIΤGy">τ</supplied>ειαν</name></persName> <w xml:id="BIΤGΙ">καὶ</w> <w xml:id="BIΤGΤ">διὰ</w> <w xml:id="BIΤGε">το̄̀ς</w> <w xml:id="BIΤGο">ἄλλο̄ς</w> <w xml:id="BIΤHA">θεο̄̀ς</w> <w xml:id="BIΤHK">διὰ</w> <w xml:id="BIΤHU">δ<supplied reason="lost" xml:id="BIΤHe">ὲ</supplied></w> <persName type="divine" xml:id="BIΤHo"><name xml:id="BIΤHy">Δία</name></persName> 
-                    <lb n="7" xml:id="BIΤHΙ"/><w xml:id="BIΤHΤ">μάλιστα</w> <w xml:id="BIΤHε">φιλία<supplied reason="lost" xml:id="BIΤHο">ς</supplied></w> <w xml:id="BIΤIA">δὲ</w> <w xml:id="BIΤIK">γενομένας</w> <w xml:id="BIΤIU">ἐν</w> <w xml:id="BIΤIe">χ<supplied reason="lost" xml:id="BIΤIo">ρ</supplied>υσ
-                    <lb n="8" break="no" xml:id="BIΤIy"/>έο̄ι</w> <w xml:id="BIΤIΙ">ἐλά<supplied reason="lost" xml:id="BIΤIΤ">με</supplied>ν</w> <w xml:id="BIΤIε">τὰ</w> <w xml:id="BIΤIο"><supplied reason="lost" xml:id="BIΤJA">δ᾿</supplied></w> <w xml:id="BIΤJK"><supplied reason="lost" xml:id="BIΤJU">ἔτι</supplied></w> <w xml:id="BIΤJe">ὀνύματα</w> <w xml:id="BIΤJo">ταῦτα</w> <w xml:id="BIΤJy">κολ
-                    <lb n="9" break="no" xml:id="BIΤJΙ"/>άψαντ<supplied reason="lost" xml:id="BIΤJΤ">ες</supplied></w> <w xml:id="BIΤJε"><supplied reason="lost" xml:id="BIΤJο">εἰς</supplied></w> <w xml:id="BIΤKA"><supplied reason="lost" xml:id="BIΤKK">τ</supplied>ὸ</w> <w xml:id="BIΤKU"><supplied reason="lost" xml:id="BIΤKe">Ἀπο</supplied>λλο̄́νιον</w> <w xml:id="BIΤKo">κάθθεμε
-                    <lb n="10" break="no" xml:id="BIΤKy"/>ν</w> <w xml:id="BIΤKΙ">τὸ</w> <persName type="divine" xml:id="BIΤKΤ"><name xml:id="BIΤKε">Διὸ<supplied reason="lost" xml:id="BIΤKο">ς</supplied></name></persName> <w xml:id="BIΤLA"><supplied reason="lost" xml:id="BIΤLK">προ</supplied>γρά<supplied reason="lost" xml:id="BIΤLU">ψα</supplied>ντες</w> <w xml:id="BIΤLe">τὸ</w> <w xml:id="BIΤLo">δὲ</w> <w xml:id="BIΤLy">χρυσίον</w> 
-                    <lb n="11" xml:id="BIΤLΙ"/><w xml:id="BIΤLΤ"><supplied reason="omitted" xml:id="BIΤLε">h</supplied>εξε̄́κ<supplied reason="lost" xml:id="BIΤLο">οντα</supplied></w> <w xml:id="BIΤMA"><supplied reason="lost" xml:id="BIΤMK">τ</supplied>αλάντο̄ν</w> <w xml:id="BIΤMU">ἐ͂μεν</w>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1" xml:id="BIΤAK"/><w xml:id="BIΤAU" n="5"><supplied reason="lost" xml:id="BIΤAe">δι</supplied>ὰ</w> <w xml:id="BIΤAo" n="10">το̄̀ς</w> <w xml:id="BIΤAy" n="15">θεο̄̀ς</w> <w xml:id="BIΤAΙ" n="20">το̄́<supplied reason="lost" xml:id="BIΤAΤ">σ</supplied>δε</w> <w xml:id="BIΤAε" n="25">νικο͂ντι</w> <w xml:id="BIΤAο" n="30">τοὶ</w> <placeName type="ethnic" ref="http://pleiades.stoa.org/places/462489" xml:id="BIΤBA"><w xml:id="BIΤBK" n="35">Σελινο̄́ν<supplied reason="lost" xml:id="BIΤBe">τιοι</supplied></w></placeName>
+                    <lb n="2" xml:id="BIΤBo"/><w xml:id="BIΤBy" n="45"><supplied reason="lost" xml:id="BIΤBΙ">δι</supplied>ὰ</w> <w xml:id="BIΤBΤ" n="50">τὸν</w> <persName type="divine" xml:id="BIΤBε"><name xml:id="BIΤBο">Δία</name></persName> <w xml:id="BIΤCA" n="55">νικο͂μες</w> <w xml:id="BIΤCK" n="60">καὶ</w> <w xml:id="BIΤCU" n="65">διὰ</w> <w xml:id="BIΤCe" n="70">τὸν</w> <persName type="divine" xml:id="BIΤCo"><name xml:id="BIΤCy">Φόβον</name></persName> <w xml:id="BIΤCΙ" n="75"><supplied reason="lost" xml:id="BIΤCΤ">καὶ</supplied></w>
+                    <lb n="3" xml:id="BIΤCε"/><w xml:id="BIΤCο" n="80"><supplied reason="lost" xml:id="BIΤDA">δ</supplied>ιὰ</w> <persName type="divine" xml:id="BIΤDK"><name xml:id="BIΤDU">hερακλέα</name></persName> <w xml:id="BIΤDe" n="85">καὶ</w> <w xml:id="BIΤDo" n="90">δι’</w> <persName type="divine" xml:id="BIΤDy"><name xml:id="BIΤDΙ">Ἀπόλλο̄να</name></persName> <w xml:id="BIΤDΤ" n="95">καὶ</w> <w xml:id="BIΤDε" n="100">διὰ</w> <persName type="divine" xml:id="BIΤDο"><name xml:id="BIΤEA">Π<supplied reason="lost" xml:id="BIΤEK">οτ</supplied>
+                    <lb n="4" break="no" xml:id="BIΤEU"/>ει<supplied reason="lost" xml:id="BIΤEe">δᾶ</supplied>να</name></persName> <w xml:id="BIΤEo" n="105">καὶ</w> <w xml:id="BIΤEy" n="110">διὰ</w> <persName type="divine" xml:id="BIΤEΙ"><name xml:id="BIΤEΤ">Τυνδαρίδας</name></persName> <w xml:id="BIΤEε" n="115">καὶ</w> <w xml:id="BIΤEο" n="120">δι᾿</w> <persName type="divine" xml:id="BIΤFA"><name xml:id="BIΤFK">Ἀθ<supplied reason="lost" xml:id="BIΤFU">α</supplied>
+                    <lb n="5" break="no" xml:id="BIΤFe"/>ναίαν</name></persName> <w xml:id="BIΤFo" n="125">καὶ</w> <w xml:id="BIΤFy" n="130">διὰ</w> <persName type="divine" xml:id="BIΤFΙ"><name xml:id="BIΤFΤ">Μ<supplied reason="lost" xml:id="BIΤFε">α</supplied>λοφόρον</name></persName> <w xml:id="BIΤFο" n="135">καὶ</w> <w xml:id="BIΤGA" n="140">διὰ</w> <persName type="divine" xml:id="BIΤGK"><name xml:id="BIΤGU">Πασι<supplied reason="lost" xml:id="BIΤGe">κ</supplied>
+                    <lb n="6" break="no" xml:id="BIΤGo"/>ρά<supplied reason="lost" xml:id="BIΤGy">τ</supplied>ειαν</name></persName> <w xml:id="BIΤGΙ" n="145">καὶ</w> <w xml:id="BIΤGΤ" n="150">διὰ</w> <w xml:id="BIΤGε" n="155">το̄̀ς</w> <w xml:id="BIΤGο" n="160">ἄλλο̄ς</w> <w xml:id="BIΤHA" n="165">θεο̄̀ς</w> <w xml:id="BIΤHK" n="170">διὰ</w> <w xml:id="BIΤHU" n="175">δ<supplied reason="lost" xml:id="BIΤHe">ὲ</supplied></w> <persName type="divine" xml:id="BIΤHo"><name xml:id="BIΤHy">Δία</name></persName>
+                    <lb n="7" xml:id="BIΤHΙ"/><w xml:id="BIΤHΤ" n="180">μάλιστα</w> <w xml:id="BIΤHε" n="185">φιλία<supplied reason="lost" xml:id="BIΤHο">ς</supplied></w> <w xml:id="BIΤIA" n="190">δὲ</w> <w xml:id="BIΤIK" n="195">γενομένας</w> <w xml:id="BIΤIU" n="200">ἐν</w> <w xml:id="BIΤIe" n="205">χ<supplied reason="lost" xml:id="BIΤIo">ρ</supplied>υσ
+                    <lb n="8" break="no" xml:id="BIΤIy"/>έο̄ι</w> <w xml:id="BIΤIΙ" n="210">ἐλά<supplied reason="lost" xml:id="BIΤIΤ">με</supplied>ν</w> <w xml:id="BIΤIε" n="215">τὰ</w> <w xml:id="BIΤIο" n="220"><supplied reason="lost" xml:id="BIΤJA">δ᾿</supplied></w> <w xml:id="BIΤJK" n="225"><supplied reason="lost" xml:id="BIΤJU">ἔτι</supplied></w> <w xml:id="BIΤJe" n="230">ὀνύματα</w> <w xml:id="BIΤJo" n="235">ταῦτα</w> <w xml:id="BIΤJy" n="240">κολ
+                    <lb n="9" break="no" xml:id="BIΤJΙ"/>άψαντ<supplied reason="lost" xml:id="BIΤJΤ">ες</supplied></w> <w xml:id="BIΤJε" n="245"><supplied reason="lost" xml:id="BIΤJο">εἰς</supplied></w> <w xml:id="BIΤKA" n="250"><supplied reason="lost" xml:id="BIΤKK">τ</supplied>ὸ</w> <w xml:id="BIΤKU" n="255"><supplied reason="lost" xml:id="BIΤKe">Ἀπο</supplied>λλο̄́νιον</w> <w xml:id="BIΤKo" n="260">κάθθεμε
+                    <lb n="10" break="no" xml:id="BIΤKy"/>ν</w> <w xml:id="BIΤKΙ" n="265">τὸ</w> <persName type="divine" xml:id="BIΤKΤ"><name xml:id="BIΤKε">Διὸ<supplied reason="lost" xml:id="BIΤKο">ς</supplied></name></persName> <w xml:id="BIΤLA" n="270"><supplied reason="lost" xml:id="BIΤLK">προ</supplied>γρά<supplied reason="lost" xml:id="BIΤLU">ψα</supplied>ντες</w> <w xml:id="BIΤLe" n="275">τὸ</w> <w xml:id="BIΤLo" n="280">δὲ</w> <w xml:id="BIΤLy" n="285">χρυσίον</w>
+                    <lb n="11" xml:id="BIΤLΙ"/><w xml:id="BIΤLΤ" n="290"><supplied reason="omitted" xml:id="BIΤLε">h</supplied>εξε̄́κ<supplied reason="lost" xml:id="BIΤLο">οντα</supplied></w> <w xml:id="BIΤMA" n="295"><supplied reason="lost" xml:id="BIΤMK">τ</supplied>αλάντο̄ν</w> <w xml:id="BIΤMU" n="300">ἐ͂μεν</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text of IGPalermo</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text of IGPalermo</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>It is through the gods listed here that the Selinuntines win victory. Through Zeus we conquer and through Phobos and through Herakles and through Apollo and through Poseidon and through the Tyndaridai and through Athena and through Malophoros and through Pasikrateia and through the other gods, but through Zeus above all. Since there is friendship (it is resolved), that having forged in gold, and having engraved these names, to dedicate in the Apollonion, having written the name of Zeus in first place; and that the gold be sixty talents.</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0268</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">268</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>59.1116</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1100</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>53.1030</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>50.0989</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>49.1328</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>46.1271</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>45.2302</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>45.1414</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>43.0628</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>38.0960</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>34.0970</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>33.0933</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>32.0933</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>27.0659</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>15.0595</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1997.0729</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGDS1">
+                        <author>Dubois</author>
+                        <date>1989</date>
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">78</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>49</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl>
                         <author>Buck</author>
                         <date>1955</date>
@@ -362,32 +388,39 @@
                         <date>1996</date>
                         <citedRange>no.53</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/BJUFRNS9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001374">https://biblio.inscriptiones.org/epig10001374</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001374">https://biblio.inscriptiones.org/epig10001374</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1996</date>
                         <citedRange>33-38 no.5 fig.9-10</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FGU3JFCM"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001817">https://biblio.inscriptiones.org/epig10001817</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001817">https://biblio.inscriptiones.org/epig10001817</ref>
+                    </bibl>
                     <bibl>
                         <author>Holm</author>
                         <date>1871</date>
                         <citedRange>ph</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FFIHNAMR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001920">https://biblio.inscriptiones.org/epig10001920</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001920">https://biblio.inscriptiones.org/epig10001920</ref>
+                    </bibl>
                     <bibl>
                         <author>Brugnone</author>
                         <date>1999</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/2XBFXWWX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002119">https://biblio.inscriptiones.org/epig10002119</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002119">https://biblio.inscriptiones.org/epig10002119</ref>
+                    </bibl>
                     <bibl>
                         <author>Agostiniani</author>
                         <date>2012</date>
                         <citedRange>140-141 fig.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/54T9H7FS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002654">https://biblio.inscriptiones.org/epig10002654</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002654">https://biblio.inscriptiones.org/epig10002654</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

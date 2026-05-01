@@ -18,25 +18,13 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -60,7 +48,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Taormina</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository>unknown</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -75,8 +63,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>marble plaque seemingly broken on all sides</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                <support><p>Described as a 'tabella marmorea' by Kaibel (after Benndorf), seemingly broken on all sides. It is impossible to know whether it was actually a true marble plaque, or rather a plaque of the local fine Taormina limestone, which can be polished and is employed for the other gymnasium and civic inscriptions. The fact that it is a plaque, rather than a block or stele, in contrast to all the other surviving pieces, might encourage the idea that it was indeed a plaque of imported marble.</p>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Kaibel from Benndorf-->
                                         <height unit="cm"/>
@@ -108,16 +96,16 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
                             	<geo>37.85358, 15.28851</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100" precision="low">2nd century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101">2nd century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Recorded in Taormina in the 19th century, but not since more recently.</provenance>
+                        <provenance type="found" subtype="discovered">Recorded in Taormina in the 19th century, but not seen more recently.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <provenance type="not-observed" subtype="lost">lost</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -168,8 +156,9 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-12-23" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -186,7 +175,7 @@
     </facsimile>
     <text>
         <body>
-           <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/5Q2B5T7T">
+           <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/5Q2B5T7T">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">παρὰ</supplied> <supplied reason="lost">δὲ</supplied> <supplied reason="lost">τὰ</supplied> <supplied reason="lost">γεγραμμένα</supplied> <supplied reason="lost">μηδενὶ</supplied> <supplied reason="lost">ἐξέστω</supplied> <supplied reason="lost">ἐσφέρειν</supplied>
                     <lb n="2"/><supplied reason="lost">τῶν</supplied> <supplied reason="lost">νεανίσκ</supplied>ων ἄλλα μηδαμά, εἰ μὴ καὶ <supplied reason="lost">τοῖς</supplied>
@@ -196,7 +185,7 @@
                     <lb n="5"/><supplied reason="lost">ἄλλο</supplied> <supplied reason="lost">τι</supplied> <supplied reason="lost">ἀγ</supplied><unclear>ά</unclear>γῃ δυσαγείτω καὶ αὐτὸς καὶ γέ<supplied reason="lost">νος</supplied> <supplied reason="lost">αὐτοῦ</supplied> <supplied reason="lost">καθάπερ</supplied>
                     <lb n="6"/><supplied reason="lost">καὶ</supplied> <supplied reason="lost">ἐπὶ</supplied> <supplied reason="lost">ἱε</supplied>ροῦ χρήματος καταβλαβέος <unclear>γ</unclear><supplied reason="lost">έγραπται</supplied> <gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="7"/><gap reason="lost" unit="character" quantity="8" precision="medium"/> καὶ τῶν νεανίσκων τῶν ἀλε<supplied reason="lost">ιφομένων</supplied><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="8"/><gap reason="lost" unit="character" quantity="9" precision="medium"/> ὀφιλόντωι τῶι Ἑρμᾶι καὶ τῶι Ἡρα<supplied reason="lost">κλεῖ</supplied> <supplied reason="lost">καὶ</supplied> <supplied reason="lost">τοῖς</supplied> <supplied reason="lost">νεανί</supplied>
+                    <lb n="8"/><gap reason="lost" unit="character" quantity="9" precision="medium"/> ὀφιλόντωι τῶι <persName type="divine"><name>Ἑρμᾶι</name></persName> καὶ τῶι <persName type="divine"><name>Ἡρα<supplied reason="lost">κλεῖ</supplied></name></persName> <supplied reason="lost">καὶ</supplied> <supplied reason="lost">τοῖς</supplied> <supplied reason="lost">νεανί</supplied>
                     <lb n="9" break="no"/><supplied reason="lost">σκοις</supplied> <supplied reason="lost">τοῖς</supplied> <supplied reason="lost">ἀ</supplied>λειφομένοις δικασάσθω δὲ <supplied reason="lost">αὐτοῖς</supplied> <supplied reason="lost">ὥσπερ</supplied> <supplied reason="lost">ἐπὶ</supplied> <supplied reason="lost">ἱε</supplied>
                     <lb n="10" break="no"/><supplied reason="lost">ροῦ</supplied> <supplied reason="lost">χρήματο</supplied><unclear>ς</unclear> καταβλαβέος ἄνις ἐπιδε<supplied reason="lost">κάτου</supplied> <supplied reason="lost">ὁ</supplied> <supplied reason="lost">βουλόμενος</supplied>
                     <lb n="11"/><gap reason="lost" unit="character" quantity="10" precision="medium"/>ι νεανίσκοι μὴ δόγμα τι <unclear>π</unclear><supplied reason="lost">αρβαινόντω</supplied> <supplied reason="lost">ἀλλὰ</supplied> <supplied reason="lost">φυλασσόν</supplied>
@@ -215,24 +204,30 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0432</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">432</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>04.0058</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="corpus" n="IGDS1">
+                         <author>Dubois</author>
+                         <date>1989</date> 
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">187</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
                     <bibl type="corpus" n="SGDI">
+                        <author>Hoffmann</author>
+                        <date>1904</date>
                         <citedRange>5230</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/DQDPC573"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
                     <bibl>
                         <author>Latte</author>

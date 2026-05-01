@@ -19,18 +19,6 @@
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -74,7 +62,7 @@
                             <supportDesc>
                                 <support>
                                     <p/>
-                                    <material ana="#material.metal.lead" ref="">lead</material> <!-- add ref to eagle vocabulary -->
+                                    <material ana="#material.inorganic.metal.lead" type="metal.lead" subtype="unverified" ref="">lead</material> <!-- add ref to eagle vocabulary -->
                                     <objectType ana="#object.lamina" ref="">lamina</objectType> <!-- add ref to eagle vocabulary -->
                                     <dimensions>
                                         <height unit="cm"/> <!-- add value -->
@@ -104,12 +92,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462489">Selinus</placeName>
                                 <placeName type="modern">Selinunte</placeName>
                                 <geo>37.5853775, 12.8298666</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0600" notAfter-custom="-0400" precision="low">6th—5th century BCE</origDate> <!-- check date -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0600" notAfter-custom="-0401">6th—5th century BCE</origDate> <!-- check date -->
                         </origin>
                         <provenance type="found">Found in the archaeological area of Selinunte<geo>37.5853775, 12.8298666</geo>.</provenance> <!-- check provenance -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -176,7 +164,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS"> <!-- add text, apparatus, translation and commentary -->
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#TS"> <!-- add text, apparatus, translation and commentary -->
                 <ab>
                     <lb n="1"/>
                     <lb n="2"/>
@@ -210,11 +198,11 @@
                         <author>Arena</author>
                         <date>1989</date>
                         <citedRange>62</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VC9IHZAR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000638">https://biblio.inscriptiones.org/epig10000638</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>26.1114</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion"><bibl/>

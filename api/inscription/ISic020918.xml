@@ -14,26 +14,10 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -70,7 +54,7 @@
                             <supportDesc>
                                 <support>
                                     <p>The fragmentary lid of a large lekanis, with a truncated cone profile. The lekanis body is lost. The lid is 42 cm in diameter.</p>
-                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType ana="#object.vessel.lekanis" ref="http://kerameikos.org/id/lekanis">lekanis</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -93,7 +77,7 @@
                             <handNote><p>Lunate epsilon and sigma, cursive omega; alpha with straight bar.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">10</height>
+                                    <height unit="mm" atLeast="10" atMost="10">10</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -104,12 +88,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                   <placeName ref="http://pleiades.stoa.org/places/462538" type="ancient">Messana</placeName>
                                 <placeName ref="http://sws.geonames.org/2524170" type="modern">Messina</placeName>
                                 <geo>38.19394, 15.55256</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0150" evidence="archaeological-context nomenclature">first half of the 2nd century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0151" evidence="archaeological-context nomenclature">first half of the 2nd century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Excavated in 1971, found in a stone built chamber tomb in Largo Avignone, Messina<geo cert="high">38.182636, 15.548695</geo></provenance>
                         <provenance type="observed">in store</provenance>
@@ -175,7 +159,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Πακύας</name> <name>Ποντίας</name></persName>
                     <lb n="2"/>ἐ<unclear>τ</unclear>έων <num value="86">ϝπ</num>
@@ -198,19 +182,19 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>44.0773</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Tagliamonte</author>
                         <date>1994</date>
                         <citedRange>196</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/AFXW2VT5"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/AFXW2VT5"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002361">https://biblio.inscriptiones.org/epig10002361</ref></bibl>
                     <bibl>
                         <author>Arena</author>
                         <date>2021</date>
                         <citedRange>125-139 no. 2, figs. 6-7</citedRange>
-                         <ptr target="http://zotero.org/groups/382445/items/6K4YSQQS"/>
+                         <ptr target="https://www.zotero.org/groups/382445/items/6K4YSQQS"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002337">https://biblio.inscriptiones.org/epig10002337</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion">
@@ -218,7 +202,7 @@
 	           <author>Bitto</author>
 	           <date>2001</date>
 	           <citedRange>71</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/M9HMEP2R"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10000029">https://biblio.inscriptiones.org/epig10000029</ref></bibl>
 	   </listBibl>
             </div>

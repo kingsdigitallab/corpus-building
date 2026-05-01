@@ -15,18 +15,6 @@
                     <resp>original data collection and editing</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="AB">Antonietta Brugnone</name>
                     <resp>editio princeps</resp>
                 </respStmt>
@@ -34,10 +22,6 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -77,7 +61,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A limestone cippus, slightly tapered towards the top, intact but with some minor damage to the right edge</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
                                     <dimensions><!--measurements of AB-->
                                         <height unit="cm">61</height>
@@ -109,12 +93,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489" cert="low">Selinus</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName>
                             	<geo>37.58337, 12.82522</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0500" precision="low">Mid-6th century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0501">Mid-6th century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Recovered by the Trapani provincial authorities prior to 2017; the formula suggests a Selinuntine origin</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -168,7 +152,7 @@
                             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-21" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
@@ -185,7 +169,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AB">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AB">
                 <ab>
                     <lb n="1" style="text-direction:r-to-l"/>οἴμοι ὀ̃ Δίογνι
                 </ab>
@@ -205,13 +189,13 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="BE">
                         <citedRange>2018.0518</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
                     <bibl>
                         <author>Brugnone</author>
                         <date>2018</date>
                         <citedRange><ref target="https://doi.org/10.13130/2037-4488/10233">135 and fig.1</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/AHRDQ3D8"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/AHRDQ3D8"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002279">https://biblio.inscriptiones.org/epig10002279</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

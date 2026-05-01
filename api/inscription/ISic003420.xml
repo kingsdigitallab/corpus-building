@@ -18,26 +18,11 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,7 +60,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A thick white marble plaque, broken in half vertically, preserving left edge with two clamp holes (with rust staining), at 16 and 54.5 cm from the top edge. Top and bottom edges appear intact; nature of break across the right edge unclear as buried in the ground. The stone is also cracked across the middle. The stone is preserved in re-use in the front of the scaenae frons, as part of the facing to an access staircase from the floor of the orchestra to the stage.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian #material.inorganic.stone.metamorphic_rock.marble.dolomitic_marble.Thasian-3" type="stone.marble" subtype="Aphrodisian|Parian-2|Parian-3|Parian-4|Proconnesian|Thasian-3" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Coarse-grained, homogeneous, white marble, likely Aphrodisian, Parian-2, Parian-3, Parian-4, Proconnesian, Thasian-3 (identification based on digital microscopy)</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">72.5</height>
@@ -96,22 +81,22 @@
                             <handNote><p>Deep, very regular, v-cut letters, with a broad v-cut, hair-line extensions to wedge serifs, and a quite wide square module. The I in line one is extended.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">68 (I = 87)</height>
+                                    <height unit="mm" atLeast="68" atMost="68">68 (I = 87)</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">58</height>
+                                    <height unit="mm" atLeast="58" atMost="58">58</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">57</height>
+                                    <height unit="mm" atLeast="57" atMost="57">57</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270" corresp="#findspot">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
@@ -170,7 +155,7 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-09-08" who="#JP">Jonathan Prag drafted file from autopsy</change>
 	</listChange>
@@ -208,7 +193,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/>div<supplied reason="lost">o</supplied> <gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/>tri<supplied reason="lost">bunicia</supplied> <supplied reason="lost">potestate</supplied> <gap reason="lost" extent="unknown" unit="character"/>
@@ -224,7 +209,7 @@
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary" resp="#JP">
-                <p>Korhonen offered the first publication, based upon observation from a distance after the theatre re-opened to the public. His edition assumes at least one line is missing from before the preserved text, containing the name of an emperor, with DIV[---] being part of 'divi filio' or 'divi nepoti'. However, for reasons noted above, this seems less easy to sustain from observation of the stone, and a dedication to a deified emperor as Divus, seems more likely. This does little to limit the possibilities, since such dedications range from Augustus (together with Tiberius, to explain the presence of tribunicia potestate), through to various of the Antonine and Severan emperors. The form of the lettering perhaps favours an earlier rather than later date, perhaps either Julio-Claudian or Trajan/Hadrian, and the re-use of the stone means that it could originally have come from e.g. the forum, rather than the theatre.</p>
+                <p>Korhonen offered the first publication (alluded to by Manganaro 1988), based upon observation from a distance after the theatre re-opened to the public. His edition assumes at least one line is missing from before the preserved text, containing the name of an emperor, with DIV[---] being part of 'divi filio' or 'divi nepoti'. However, for reasons noted above, this seems less easy to sustain from observation of the stone, and a dedication to a deified emperor as Divus, seems more likely. This does little to limit the possibilities, since such dedications range from Augustus (together with Tiberius, to explain the presence of tribunicia potestate), through to various of the Antonine and Severan emperors. The form of the lettering perhaps favours an earlier rather than later date, perhaps either Julio-Claudian or Trajan/Hadrian, and the re-use of the stone means that it could originally have come from e.g. the forum, rather than the theatre.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -234,6 +219,12 @@
                         <citedRange>241</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/NMS48IZF"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001897">https://biblio.inscriptiones.org/epig10001897</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>73</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

@@ -18,26 +18,10 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>corpus editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -73,7 +57,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A statue base in the local limestone, with moulded cornices projecting top and bottom on the front and sides; the rear is roughly finished without mouldings. Intact, with minor damage to the upper mouldings and upper surface. Two footholes for a statue on the upper surface. The inscription is on the upper part of the front face, immediately below the upper moulding. Measurements provided are the maxima.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">Statue base</objectType>
                                     <dimensions><!-- Ampolo -->
                                         <height unit="cm">120</height>
@@ -94,7 +78,7 @@
                             <handNote><p resp="#JP">Letters deeply and regularly cut, with minimal terminal serifs only. Alpha with straight bar; beta with equal closed loops; epsilon with shorter middle stroke; theta circular with detached middle stroke; kappa with nearly full length arms; omicron almost full-size; pi with equal length verticals, horizontal slightly over extended; rho with closed medium loop; sigma with horizontal top and bottom, mid-strokes join approx half-way across; phi with small circular loop, vertical extended; omega either closed or slightly open, extended tear-drop in shape. Note that phi is taller than the rest at 35 mm, omega smaller at 25-28 mm.</p>
                                 <locus from="line1" to="line6">Line 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">28-30</height><!-- Ampolo -->
+                                    <height unit="mm" atLeast="28" atMost="30">28-30</height><!-- Ampolo -->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -105,12 +89,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0050" evidence="archaeological-context">The archaeological context, parallel material and palaeography, all support a date in the late second or early first century BCE.</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0051" evidence="archaeological-context">The archaeological context, parallel material and palaeography, all support a date in the late second or early first century BCE.</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="2021-05-14" xml:id="findspot">Found in situ in excavation on 14.05.2021 in a room below the south side of the agora (SG 21, SAS 4 Sud).<geo>37.939406, 12.842897</geo></provenance><!-- placed using googlemaps, may need refining -->
                         <provenance type="observed" corresp="#findspot">in situ</provenance>
@@ -176,7 +160,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Διόδωρος</name> <persName type="attested"><name type="patronym">Τιττελου</name></persName> <name>Ἀππειραῖος</name></persName>
                     <lb n="2"/><space unit="character" quantity="1"/>τὰν εἰκόνα τοῦ πατρὸς
@@ -208,7 +192,7 @@
                         <author>Ampolo</author>
                         <date>2022</date>
                         <citedRange>G36</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/IQWVHITM"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/IQWVHITM"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002692">https://biblio.inscriptiones.org/epig10002692</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

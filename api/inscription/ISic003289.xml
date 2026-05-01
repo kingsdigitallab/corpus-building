@@ -23,18 +23,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -42,10 +30,7 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -83,7 +68,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Two joining fragments of marble plaque damaged on all sides.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Strongly altered marble, likely unspecified (identification based on pXRF)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
                                     <dimensions><!--measurements from Korhonen-->
                                         <height unit="cm">19</height>
@@ -104,7 +89,7 @@
                             <handNote><p>A with broken bar, squared E (except at l. 3 where it is lunate), lunate Σ, cursive Ω. At ll. 2 and 4, Π and Τ are crossed by slanting bars, which could indicate an abbreviation. Small H and Ο above Τ and Π at l. 4, small curved signs at the upper right of T at l. 2, T and Ν at l. 4. Small curved signs below Υ and inside Ω and Α at l. 2, which could be now decoration marks, now abbreviation marks.</p><!--measurements from Korhonen-->
                                 <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">33-37</height>
+                                    <height unit="mm" atLeast="33" atMost="37">33-37</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -115,12 +100,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName> 
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0501" notAfter-custom="0900" precision="low">6th — 9 century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0501" notAfter-custom="0900">6th — 9 century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1766-11-21">Original discovery not recorded, but probably from Catania; Tardìa, Cod. Bibl. Comunale Palermo Qq C 17 a, f. 136r mentions the inscription as coming from Catania, communicated to him by Torremuzza 21 November 1766.</provenance>
                         <provenance type="observed">Observed by Libertini in Museo Biscari, later by Korhonen in Magazzino superiore, Collezione Biscari (formerly sala VII 288).</provenance>
@@ -175,7 +160,7 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
@@ -193,12 +178,12 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
                     <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΖΙΕΙΑΔ<unclear>OMA</unclear></orig><gap reason="illegible" quantity="3" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w><expan><abbr>ἐτ</abbr><ex cert="low">ῶν</ex></expan></w> <num value="40">μ</num> <w>υἱὸς</w> <persName type="attested"><name><expan><abbr>Ἰσιδώρα</abbr><ex>ς</ex></expan></name></persName> <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">κατ</supplied><unclear>ε</unclear>τέθει</w> <w>δὲ</w> <w>καὶ</w> <persName><name><w part="I">Ἰσιδω<supplied reason="lost">ρ</supplied></w> <gap reason="lost" extent="unknown" unit="character"/></name></persName>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">κατ</supplied><unclear>ε</unclear>τέθει</w> <w>δὲ</w> <w>καὶ</w> <persName type="attested"><name><w part="I">Ἰσιδω<supplied reason="lost">ρ</supplied></w> <gap reason="lost" extent="unknown" unit="character"/></name></persName>
                     <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><unclear>Υ</unclear>Τ<hi rend="superscript">Η</hi> <w><expan><abbr>τ</abbr><ex>ῶν</ex></expan></w> <placeName type="ethnic"><expan><abbr>Καταν</abbr><ex>ῶν</ex></expan></placeName> Π<hi rend="superscript">Ο</hi>ΖΗ<unclear>Λ</unclear><gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="5"/><gap reason="lost" extent="unknown" unit="line"/>
                 </ab>
@@ -224,6 +209,8 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IMusCatania">
+                         <author>Korhonen</author>
+                         <date>2004</date> 
                         <citedRange>191</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>

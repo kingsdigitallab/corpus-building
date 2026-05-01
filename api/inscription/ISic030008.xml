@@ -19,18 +19,6 @@
                     <resp>data collation and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -79,7 +67,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Oval shape. Heavily corroded.</p>
-                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material> 
+                                    <material ana="#material.inorganic.metal.lead" type="metal.lead" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material> 
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
                                         <!--  from Bettarini  -->
@@ -103,7 +91,7 @@
                                 <!-- Based on Glyph table: -->
                                 <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">3</height>
+                                    <height unit="mm" atLeast="3" atMost="3">3</height>
                                     <!--  from Bettarini  -->
                                 </dimensions>
                             </handNote>
@@ -111,12 +99,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
                                 <geo>37.58337, 12.82522</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0450">499-450 BCE</origDate> <!-- from Arena -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0500" notAfter-custom="-0451">499-450 BCE</origDate> <!-- from Arena -->
                         </origin>
                        <provenance type="found" subtype="discovered">Gaggera, Sanctuary of Malophoros<geo>37.586763, 12.816874</geo>.</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -183,7 +171,7 @@
          </surface></facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SN"> 
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#SN"> 
                 <ab>
                     <cb n="1"/>
                     <lb n="1"/><persName type="attested"><name type="idionym">Πολυκλε͂ς</name></persName>
@@ -225,25 +213,25 @@
                         <author>Arena</author>
                         <date>1989</date>
                         <citedRange>no. 64</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VC9IHZAR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000638">https://biblio.inscriptiones.org/epig10000638</ref></bibl>
                     <bibl>
                         <author>Comparetti</author>
                         <date>1918</date>
                         <citedRange>197-199, no. 27</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/6F4NP6IC"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/6F4NP6IC"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002434">https://biblio.inscriptiones.org/epig10002434</ref></bibl>
                     <bibl type="corpus" n="IGDS1">
-                        <author>Dubois</author>
+                         <author>Dubois</author>               
                         <date>1989</date>
-                        <citedRange><ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">45, no. 35</ref></citedRange>
+                        <citedRange><ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">35</ref></citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/isicily/items/RWXNUFEX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
                     <bibl>
                         <author>López-Jimeno</author>
                         <date>1991</date>
                         <citedRange>no. 8</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/N5IF2DZR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/N5IF2DZR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001858">https://biblio.inscriptiones.org/epig10001858</ref></bibl>
                     <bibl>
                         <author>Bettarini</author>
@@ -257,13 +245,13 @@
                         <author>Jordan</author>
                         <date>1985</date>
                         <citedRange>175-176, no. 101</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7UQBFBPB"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7UQBFBPB"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001391">https://biblio.inscriptiones.org/epig10001391</ref></bibl>
                     <bibl>
                         <author>Curbera</author>
                         <date>1999</date>
                         <citedRange>178, no. 24</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/9DL74VZN"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9DL74VZN"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002060">https://biblio.inscriptiones.org/epig10002060</ref></bibl>
                 </listBibl>
             </div>

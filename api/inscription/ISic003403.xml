@@ -18,26 +18,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,7 +59,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A large block of compact limestone ('calcare di Canicattini')</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--Orsi's measurements in the taccuini-->
                                         <height unit="cm">36</height>
@@ -96,7 +80,7 @@
                             <handNote><p>Elegant deep (14mm), v-cut letters of regular form. Kappa with short equal arms; sigma with horizontal top and bottom strokes; alpha with straight bar.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">210</height>
+                                    <height unit="mm" atLeast="210" atMost="210">210</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -107,12 +91,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0100" evidence="lettering" precision="low">3rd or 2nd century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0101" evidence="lettering">3rd or 2nd century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1888">Ortygia, extracted from the wall bordering the last canal/ditch linking the great and small harbours, on the corner looking towards the great harbour<geo>37.0626632,15.288339</geo>, in late 1888, at which point noted and recorded by Orsi, and transfered to the museum 4 December 1888.</provenance>
                         <provenance type="not-observed" subtype="not-found">Not yet located</provenance>
@@ -166,7 +150,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
                 <change when="2020-11-26" who="#JP">Jonathan Prag revised the file based upon Orsi's notebook</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
@@ -183,7 +167,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΣΚΑΤΑ</orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
@@ -201,8 +185,10 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0015b</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">15b</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
@@ -211,13 +197,13 @@
                         <title>NSA</title>
                         <date>1889</date>
                         <citedRange>371</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>2018</date>
                         <citedRange>Tacc. 2, p. 74</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

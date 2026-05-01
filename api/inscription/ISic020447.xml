@@ -19,18 +19,6 @@
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -70,7 +58,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Fragments of Megarian black-glazed cup.</p>
-                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType ana="#object.vessel.cup" ref="http://kerameikos.org/id/cup">cup (Megarian type)</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -100,12 +88,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462214">Selinus</placeName>
                                 <placeName type="modern">Selinunte</placeName>
                                 <geo>37.5853775, 12.8298666</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0620" notAfter-custom="-0580" precision="medium">ca. 620—580 BCE (so Arena on letters)</origDate>
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0620" notAfter-custom="-0580">ca. 620—580 BCE (so Arena on letters)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in a tomb in Selinunte<geo>37.5853775, 12.8298666</geo>.</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -172,7 +160,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
                     <lb n="1" style="text-direction:l-to-r"/><persName type="attested"><name><supplied reason="lost">Ἐ</supplied>παμείνον
                     <lb n="2" style="text-direction:r-to-l" break="no"/>ος</name></persName> hα ϙύλιξς
@@ -203,20 +191,20 @@
                         <author>Arena</author>
                         <date>1989</date>
                         <citedRange>73, pl. 28.1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VC9IHZAR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000638">https://biblio.inscriptiones.org/epig10000638</ref></bibl>
                     <bibl>
                         <author>Manni Piraino</author>
                         <date>1980-1981</date>
                         <citedRange>464ff., pl. 28</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7AMKR6ZP"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7AMKR6ZP"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002773">https://biblio.inscriptiones.org/epig10002773</ref>
                     </bibl>
                     <bibl type="corpus" n="EGOTI">
                         <author>Guarducci</author>
                         <date>1987</date>
                         <citedRange>362</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/MQWK2BNK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/MQWK2BNK"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001923">https://biblio.inscriptiones.org/epig10001923</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">
@@ -224,7 +212,7 @@
                             <author>Arena</author>
                             <date>1967</date>
                             <citedRange>57ff.</citedRange>
-                            <ptr target="http://zotero.org/groups/382445/items/KWMAFM92"/>
+                            <ptr target="https://www.zotero.org/groups/382445/items/KWMAFM92"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001347">https://biblio.inscriptiones.org/epig10001347</ref></bibl>
                 </listBibl>
             </div>

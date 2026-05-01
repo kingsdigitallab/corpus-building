@@ -19,18 +19,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="DEE" ref="http://orcid.org/0000-0002-2337-9047">David Espinosa Espinosa</name>
                     <resp>editing, EpiDoc encoding, and full name and word tagging</resp>
                 </respStmt>
@@ -38,10 +26,6 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -64,8 +48,8 @@
                     <msIdentifier><!--Default country and region-->
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <settlement>unknown</settlement>
+                        <repository>unknown</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,7 +65,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A slab of marble with molding broken into numerous pieces although with the text partially preserved.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--from IMusMessina V-->
                                         <height unit="cm">not recorded</height>
@@ -113,17 +97,17 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462538">Messana</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
                             	<geo>38.19394, 15.55256</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0400" cert="low" precision="low">3rd — 4th century CE
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0400" cert="low">3rd — 4th century CE
                                 (?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Necropolis of San Placido</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <provenance type="not-observed" subtype="lost">Lost</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -172,7 +156,7 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-07-23" who="#DEE">David Espinosa Espinosa edited, encoded the text division, and tagged full name and word</change>
 	</listChange>
@@ -190,7 +174,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#DEE">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#DEE">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name type="nomen"><seg part="F"><unclear>io</unclear></seg></name> <name type="cognomen"><supplied reason="lost">I</supplied><unclear>nnoc</unclear>enti</name></persName>
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>v</orig> <gap reason="lost" extent="unknown" unit="character"/>
@@ -202,7 +186,7 @@
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text according to IMusMessina V and PHI313633</note></app></listApp>
+                <listApp><app><note>Text according to IMusMessina V</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#DEE">
                 <p>To [...]ius Innocens. [...] dies from the will of him (that his) bones are in a vaulted room (?) [...] their statues [...] and a seated statue of him has been allowed [...] mother at her own expense.</p>
@@ -218,6 +202,8 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IMusMessina">
+                         <author>Bitto</author>
+                         <date>2001</date> 
                         <citedRange>V</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000029">https://biblio.inscriptiones.org/epig10000029</ref></bibl>

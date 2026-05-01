@@ -18,26 +18,11 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -77,7 +62,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A block of worked limestone. The block is broken on the left; on the right margin the remains of 'anathyrosis' indicate that the edge of the stone is intact, but that a further block was joined to this one. The upper and lower margins are preserved.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--measurements from Isler 2009-->
                                         <height unit="cm">42</height>
@@ -98,7 +83,7 @@
                             <handNote><p>Plainly carved monumental letters without serifs.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">100</height>
+                                    <height unit="mm" atLeast="100" atMost="100">100</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -109,12 +94,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462258">Ietas</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524540">Monte Iato</placeName>
                             	<geo>37.967050, 13.198199</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0001" precision="low">Late 2nd century or 1st century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0001">Late 2nd century or 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">From material recovered from the interior of the large Hellenistic public cistern to the west of the agora<geo>37.966871, 13.197718</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -169,7 +154,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-21" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-05-04" who="#JP" xml:id="deprecated">Jonathan Prag merged the file with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004385">ISic004385</ref> as the two fragments are considered part of a single text and marked this file as deprecated</change>
 	</listChange>
@@ -187,7 +172,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/>ti<space unit="character" quantity="1"/>ma<gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><unclear>d</unclear>osin<gap reason="lost" extent="unknown" unit="character"/>
@@ -211,7 +196,7 @@
                         <author>Isler</author>
                         <date>2009</date>
                         <citedRange>101 with taf.16.9</citedRange>
-                          <ptr target="http://zotero.org/groups/382445/items/8GY54CVP"/>
+                          <ptr target="https://www.zotero.org/groups/382445/items/8GY54CVP"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002631">https://biblio.inscriptiones.org/epig10002631</ref></bibl>
               </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

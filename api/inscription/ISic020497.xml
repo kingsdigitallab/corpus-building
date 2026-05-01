@@ -19,18 +19,6 @@
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -70,7 +58,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Black-glazed lekythos (Attic).</p>
-                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType ana="#object.vessel.lekythos" ref="http://kerameikos.org/id/lekythos">lekythos</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -100,7 +88,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462214">Gela</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524653/">Gela</placeName>
                                 <geo>37.0630925, 14.2584705</geo>
@@ -172,7 +160,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Ἐξάκεσστος</name></persName>
                     <lb n="2"/><persName type="attested"><name>Ἀριόμο̄ν</name></persName>
@@ -200,17 +188,19 @@
                         <author>Arena</author>
                         <date>2002</date>
                         <citedRange>51, pl. XVIII.3</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/65P7AM6N"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/65P7AM6N"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001373">https://biblio.inscriptiones.org/epig10001373</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>16.0560</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="corpus" n="IGDS1">
-                        <author>Dubois</author>
+                         <author>Dubois</author> 
                         <date>1989</date>
-                        <citedRange>140</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RWXNUFEX"/>
+                        <citedRange>
+                            <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">140</ref>
+                            </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">

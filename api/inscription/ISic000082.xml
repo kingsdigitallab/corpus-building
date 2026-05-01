@@ -18,26 +18,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -77,7 +61,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone
                                     </material>
                                     <dimensions>
                                         <height unit="cm">40</height>
@@ -113,12 +97,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" cert="low"/>
                                 <placeName type="modern" ref="http://pleiades.stoa.org/places/816414429">Castronuovo di Sicilia</placeName>		
                             	<geo>37.67894, 13.60346</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0401" notAfter-custom="0600" precision="low">5th — 6th century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0401" notAfter-custom="0600">5th — 6th century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Cassero-Colonne de Castronovo, summit of hill S. Vitale de Kassar, seen already in 1939.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -175,12 +159,12 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic000082_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -188,11 +172,11 @@
             <graphic n="print" url="ISic000082.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/>
                     <expan>
@@ -232,7 +216,7 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1996.0811</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl>
                         <author>Bivona</author>
@@ -248,7 +232,7 @@
                     <bibl><author>Giustolisi</author>
                         <date>1999</date>
                         <citedRange>17</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/GGJ4H43M"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GGJ4H43M"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001944">https://biblio.inscriptiones.org/epig10001944</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

@@ -14,18 +14,6 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-               <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -33,6 +21,10 @@
                 <respStmt>
                     <name xml:id="AJ" ref="https://orcid.org/0000-0003-0176-2077">Anne Jing</name>
                     <resp>EpiDoc editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
               </titleStmt>
             <publicationStmt>
@@ -70,7 +62,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p/>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -102,7 +94,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
@@ -158,6 +150,7 @@
             <listChange>
                 <change when="2023-01-12" who="#JP">Created stub file</change>
                 <change when="2023-02-10" who="#AJ">Added an edition and apparatus</change>
+                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -173,10 +166,10 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AJ">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AJ">
                 <ab>
-                    <lb n="1"/><g ref="#ivy-leaf">❦</g> <persName type="attested"><name><expan><abbr>Γ</abbr><ex>άϊος</ex></expan></name> <g ref="#interpunct">·</g> <name>Βέτουος</name>
-                    <lb n="2"/><g ref="#ivy-leaf">❦</g> <name>Δημήτριος</name></persName>
+                    <lb n="1"/><g ref="#ivy-leaf">❦</g> <persName type="attested"><name type="praenomen"><expan><abbr>Γ</abbr><ex>άϊος</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Βέτουος</name>
+                    <lb n="2"/><g ref="#ivy-leaf">❦</g> <name type="cognomen">Δημήτριος</name></persName>
                     <lb n="3"/>χρηστὸς καὶ <g ref="#interpunct">·</g> ἂ<g ref="#ivy-leaf">❦</g>
                     <lb n="4" break="no"/>μεμπτος ἒζη
                     <lb n="5" break="no"/>σε <g ref="#interpunct">·</g> ἒτη <g ref="#ivy-leaf">❦</g> <num value="60">ξ</num> <expan><abbr>μῆ</abbr><ex>νας</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="8">η</num>
@@ -199,19 +192,19 @@
                         <author>Orsi</author>
                         <date>1893</date>
                         <citedRange>297 no. 69</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/V7HNHTAG"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/V7HNHTAG"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref></bibl>
                     <bibl>
                         <author>Strazzulla</author>
                         <date>1897</date>
                         <citedRange>146 no. 192</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/TUA8RN5S"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TUA8RN5S"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001390">https://biblio.inscriptiones.org/epig10001390</ref></bibl>
                     <bibl>
                         <author>Orsi</author>
                          <date>2018</date>
                         <citedRange>Tacc. 2, p. 4</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref></bibl>
                     <bibl>
                         <author>Ferrua</author>

@@ -14,26 +14,11 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -70,7 +55,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Table, found fragmented (the top broken into multiple fragments), but fully restored: legs (travertine) are solid slabs towards the rear, but the front profile carved to lion claw feet, with feathers to the top, and a volute profile.; table top (marble) has a raised moulding aroudn the edge, recessed upper surface, and a cornice profile to the sides. Legs are 65.5 cm tall, 11.3 cm wide, dimensions below are those of the table top slab itself.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.table" ref="https://www.eagle-network.eu/voc/objtyp/lod/157.html">table</objectType>
                                     <dimensions><!--table top-->
                                         <height unit="cm">7.8</height>
@@ -83,7 +68,7 @@
                             <layoutDesc>
                                 <layout><p>The text is inscised in a single line along the right half of the smooth lower portion of the front profile, with a two-step moulding projecting above. Text is 494 mm long.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text-condition.legible"/>
+                                	<damage ana="#text_condition.legible"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -91,7 +76,7 @@
                             <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">4-14</height>
+                                    <height unit="mm" atLeast="4" atMost="14">4-14</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -102,12 +87,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462168">Cossura</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523889">Pantelleria</placeName>
                             	<geo>36.78333, 12</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0050" evidence="lettering">Rollig dates by lettering to between the later third and first century BCE.</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0051" evidence="lettering">Rollig dates by lettering to between the later third and first century BCE.</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="2011">Found in 2011 in excavation of the access staircase to the south of the sanctuary on the top of the acropolis; table found immediately in front of the staircase.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -178,9 +163,9 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="pu" resp="#JP">
+            <div type="edition" subtype="transliteration-primary" xml:space="preserve" xml:lang="pu" resp="#JP">
                 <ab>
-                    <lb n="1"/><!-- text to be added -->
+                    <lb n="1"/><!-- to be added! -->
                 </ab>
             </div>
             <div type="apparatus">

@@ -19,18 +19,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -38,10 +26,6 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -81,7 +65,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -113,7 +97,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                             	<geo>38.13205, 13.33561</geo>
@@ -173,12 +157,12 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--  
         <surface type="front">
             <graphic n="screen" url="ISic000032_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -186,11 +170,11 @@
             <graphic n="print" url="ISic000032.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface>-->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><expan><abbr>M</abbr><ex>arcus</ex></expan> <g ref="#interpunct">·</g> Cornelius <g ref="#interpunct">·</g> <unclear>Res</unclear><gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><expan><abbr>Sex</abbr><ex>tus</ex></expan> <g ref="#interpunct">·</g> Clod<unclear>i</unclear><gap reason="lost" extent="unknown" unit="character"/>
@@ -198,7 +182,7 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of <hi rend="italic">IMusPalermo</hi></note></app>
+                    <app><note>Text of IMusPalermo</note></app>
                 </listApp>
             </div>
             <div type="translation">
@@ -209,13 +193,31 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>19</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624 [1625]</date>
+                        <citedRange>177</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7305</ref>
+                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7305</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusPalermo">
+                         <author>Bivona</author>
+                         <date>1970</date> 
                         <citedRange>32</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>

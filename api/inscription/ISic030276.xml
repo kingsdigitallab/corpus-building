@@ -18,26 +18,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>EpiDoc template development</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -74,7 +58,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of a thin bronze sheet, broken on all sides, surface corroded on left.</p>
-                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <material ana="#material.inorganic.metal.bronze" type="metal.bronze" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
                                     <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions><!--Manganaro-->
                                         <height unit="cm">7.0</height>
@@ -95,7 +79,7 @@
                             <handNote><p>Epsilon has shorter middle bar; kappa has short arms; omicron is very small and midline; pi has shorter second vertical; sigma is slightly open four-bar.</p>
                                 <locus from="line1" to="line8">Line 1-8</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">5</height><!--Manganaro-->
+                                    <height unit="mm" atLeast="5" atMost="5">5</height><!--Manganaro-->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -106,12 +90,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient">unknown</placeName>		
                                 <placeName type="modern">unknown</placeName>
                             	<geo/>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0200" cert="low" evidence="lettering">Early Hellenistic</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0201" cert="low" evidence="lettering">Early Hellenistic</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded</provenance>
                         <provenance type="observed" subtype="recorded" notAfter="1999">Observed in a private collection by Manganaro and published in 1999</provenance>
@@ -177,7 +161,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <cb n="1"/>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ατά<supplied reason="lost">ν</supplied>ου
@@ -217,7 +201,7 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>49.1341</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                    <bibl>
                         <author>Manganaro</author>

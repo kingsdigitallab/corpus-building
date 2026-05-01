@@ -19,18 +19,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
                 </respStmt>
@@ -38,14 +26,15 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
                 <respStmt>
                     <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
                     <resp>editing, translation and commentary</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -86,7 +75,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Three joining fragments of marble plaque, damaged in the upper left corner and below, set separately in plaster in modern times. Fr.A1 and fr.A2 were joined at the time of Amico and Torremuzza.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                 </support>
                                 <condition/>
@@ -103,7 +92,7 @@
                                 <!--measurements from Korhonen-->
                                 <locus from="line1" to="line1">Lines 1-12</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">13-22</height>
+                                    <height unit="mm" atLeast="13" atMost="22">13-22</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -114,12 +103,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0350" precision="low">3rd century CE or beginning 4th century CE (Korhonen)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0350">3rd century CE or beginning 4th century CE (Korhonen)</origDate>
                         </origin>
                         <acquisition/>
                     </history>
@@ -253,9 +242,10 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-11-15" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, the italian translation and the commentary</change>
+                <change when="2025-12-23" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -271,11 +261,11 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" resp="#martaf" xml:lang="grc">
+            <div type="edition" subtype="primary" xml:space="preserve" resp="#martaf" xml:lang="grc">
                 <ab>
-                        <lb n="1"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ιος</seg></name> <g ref="#ivy-leaf">❦</g> <name>Φιλο
-                        <lb n="2" break="no"/><supplied reason="undefined" evidence="previouseditor">ζ<gap reason="illegible" unit="character" quantity="1"/>ας</supplied></name></persName> <w>καὶ</w> <persName type="attested"><name>Αὐρη
-                         <lb n="3" break="no"/><supplied reason="undefined" evidence="previouseditor">λια</supplied></name> <supplied reason="undefined" evidence="previouseditor"><g ref="#ivy-leaf">❦</g></supplied> <name>Κλωδία</name></persName> <w>ἡ</w>
+                        <lb n="1"/><persName type="attested"><name type="nomen"><gap reason="lost" extent="unknown" unit="character"/><w part="F">ιος</w></name> <g ref="#ivy-leaf">❦</g> <name type="cognomen">Φιλο
+                        <lb n="2" break="no"/><supplied reason="undefined" evidence="previouseditor">ζ<gap reason="illegible" unit="character" quantity="1"/>ας</supplied></name></persName> <w>καὶ</w> <persName type="attested"><name type="nomen">Αὐρη
+                         <lb n="3" break="no"/><supplied reason="undefined" evidence="previouseditor">λια</supplied></name> <supplied reason="undefined" evidence="previouseditor"><g ref="#ivy-leaf">❦</g></supplied> <name type="cognomen">Κλωδία</name></persName> <w>ἡ</w>
                         <lb n="4"/><w>σύνβιος</w> <w>μου</w> <w>ἐ
                         <lb n="5" break="no"/>κτησάμε<unclear>θ</unclear>α</w> <w>χώραν</w>
                         <lb n="6"/><w>καθαρὰν</w> <w>καὶ</w> <w>ἐθεμε<unclear>λ</unclear><supplied reason="lost">ιώ</supplied>
@@ -315,43 +305,49 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0464</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">464</ref>
                         </citedRange>
                         <ptr target="https://zotero.org/groups/382445/items/Q2SBPG9F"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="corpus" n="IMusCatania">
+                         <author>Korhonen</author>
+                         <date>2004</date> 
                         <citedRange>118</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                     <bibl type="corpus" n="CIG">
-                        <citedRange>3.5730</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/HTUDQBXS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
+                        <author>Franz</author>
+                        <date>1853</date>
+                        <citedRange>5730</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
                     <bibl>
                         <author>Amico</author>
                         <date>1741</date>
                         <citedRange>258 no. 14</citedRange> 
-                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F5INCW3T"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref></bibl>
                     <bibl>
-                        <author>Torremuzza</author>
+                        <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>263 n0. 8 and no. 11</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
                     <bibl>
-                        <author>Torremuzza</author>
+                        <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>281 no. 8 and no. 11</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">
                     <bibl>
                         <author>Korhonen</author>
                         <citedRange>77-78</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                     <bibl/></listBibl>
             </div>

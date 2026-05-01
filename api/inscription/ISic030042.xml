@@ -15,18 +15,6 @@
                     <resp>original data collection and editing</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -66,7 +54,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Lamina. Broken into twelve heavily damaged and burnt fragments, of which 4 are the most complete and legible.</p>
-                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <material ana="#material.inorganic.metal.bronze" type="metal.bronze" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -89,20 +77,20 @@
                                 <!-- Based on Glyph table: -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">7-10</height>
+                                    <height unit="mm" atLeast="7" atMost="10">7-10</height>
                                 </dimensions>
                             </handNote>                       
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName/>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462365"/>
                                 <placeName type="modern" ref="https://sws.geonames.org/10626427/">Monte San Mauro (di Caltagirone)</placeName>
                                 <geo>37.21765, 14.46907</geo> 
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0499" notAfter-custom="-0400">6th century BCE (so Dubois on letters).</origDate>
+                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0401">6th century BCE (so Dubois on letters).</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in Monte San Mauro (di Caltagirone), at the top of Hill 3 (in Orsi's 1910 numbering), 30 cm below the ground level, 
                             in the area where the building in square blocks that Orsi interpreted as an 'anaktoron' was found. The fragments would have penetrated the rammed earth, which was the original walking surface of the structure.<geo>37.21765, 14.46907</geo>.</provenance><!-- generic coordinates for Monte San Mauro -->
@@ -165,7 +153,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM"><!-- right layout? potentially line 1 of fragment 1 continues on line 1 of fragment 5. But we have multiple fragments, and potentially more than one lamina, so not clear -->
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM"><!-- right layout? potentially line 1 of fragment 1 continues on line 1 of fragment 5. But we have multiple fragments, and potentially more than one lamina, so not clear -->
                 <div type="textpart" subtype="fragment-physical" n="1">
                     <ab>
                         <lb n="1" style="text-direction:r-to-l"/><gap reason="lost" extent="unknown" unit="character"/>φον<unclear>ε</unclear><gap reason="lost" extent="unknown" unit="character"/>
@@ -210,65 +198,67 @@
                         <author>Arena</author>
                         <date>1994</date>
                         <citedRange>84, pl. XXIV</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/KK5FQVHF"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KK5FQVHF"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000282">https://biblio.inscriptiones.org/epig10000282</ref></bibl>
                     <bibl type="corpus" n="IGDS1">
-                        <author>Dubois</author>
+                         <author>Dubois</author>
                         <date>1989</date>
-                        <citedRange>15</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RWXNUFEX"/>
+                        <citedRange>                            
+                            <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">15</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
                     <bibl>
                         <author>Cordano</author>
                         <date>1986</date>
-                        <ptr target="http://zotero.org/groups/382445/items/FDUDK9DD"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FDUDK9DD"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002374">https://biblio.inscriptiones.org/epig10002374</ref></bibl>
                     <bibl>
                         <author>Guarducci</author>
                         <date>1967</date>
                         <citedRange>vol. 1, 234, figs. 96-97</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/ENQ4AGD6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ENQ4AGD6"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000193">https://biblio.inscriptiones.org/epig10000193</ref></bibl>
                     <bibl n="LSAG[2]">
                         <author>Jeffery</author>
                         <author>Johnston</author>
                         <date>1990</date>
                         <citedRange>247 no.2</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/QUWGZA84"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QUWGZA84"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000678">https://biblio.inscriptiones.org/epig10000678</ref></bibl>
                     <bibl n="LSAG">
                         <author>Jeffery</author>
                         <date>1961</date>
                         <citedRange>247 no.2</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/V6CGSWPS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/V6CGSWPS"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref></bibl>
                     <bibl type="archive">
                         <author>Jeffery</author>
                         <citedRange>J.WC.Leont.02.p.01-02a-l</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/QV9CP9PX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QV9CP9PX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002294">https://biblio.inscriptiones.org/epig10002294</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>04.0064</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Arangio Ruiz, Olivieri</author>
                         <date>1925</date>
                         <citedRange>171-185</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/5Q2B5T7T"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5Q2B5T7T"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001378">https://biblio.inscriptiones.org/epig10001378</ref></bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>1910</date>
                         <citedRange>830-846</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/PN7SKJ24"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PN7SKJ24"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001717">https://biblio.inscriptiones.org/epig10001717</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">
                     <bibl>
                         <author>Guzzo</author>
                         <date>2019</date>
-                        <ptr target="http://zotero.org/groups/382445/items/2FKE33JF"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2FKE33JF"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002373">https://biblio.inscriptiones.org/epig10002373</ref></bibl>
                 </listBibl>
             </div>

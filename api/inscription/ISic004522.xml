@@ -14,26 +14,10 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
                   <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -70,7 +54,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of a marble plaque, broken on all sides. The plaque originally bore a monumental Latin inscription on the reverse (<ref sameAs="ISic000418.xml">ISic000418</ref>, with the trace of a moulding on along the broken lower edge, and was subsequently re-used for this text</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">15</height>
@@ -91,7 +75,7 @@
                             <handNote><p>Curdely cut letters with basic serifs on some strokes; the mid-strokes of the M only descen halfway.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">41</height>
+                                    <height unit="mm" atLeast="41" atMost="41">41</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -102,12 +86,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500">later Roman, after the second century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500">later Roman, after the second century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1865">Schubring in his autopsy notes of 1865 for the inscription on the obverse (no.144) states that the piece was found in the area of the great altar of Hieron; Mommsen in CIL states that it was found by Serradifaclo among the ruins of the great altar (but does not reference the source for this claim). Found with ISic000417.</provenance>
                         <provenance type="observed" subtype="autopsied" when="2018-09-19">Flavio Santini, 2018-09-19, Magazzino B, cassette 50</provenance>
@@ -180,7 +164,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>DEM</orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
@@ -202,7 +186,7 @@
                     <author>Orsi</author>
                         <date>2018</date>
                         <citedRange>Tacc. 1, p. 71 no. 84</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref>
                   </bibl>
                 </listBibl>

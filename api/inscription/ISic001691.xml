@@ -14,26 +14,10 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-              <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -71,7 +55,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A large limestone base, somewhat worn, and damaged upper right corner and lower left. Mouldings top and bottom of the main base, with a further moulding above the top part of the base. the face is very worn, and the texts hard to discern.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="https://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--ISegesta-->
                                         <height unit="cm">120</height>
@@ -92,7 +76,7 @@
                             <handNote><!--ISegesta-->
                                 <locus from="line1" to="line7">Line 1-7</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">40-44</height>
+                                    <height unit="mm" atLeast="40" atMost="44">40-44</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -103,12 +87,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                                 <geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100" precision="low" evidence="material-context">1st century BCE - 1st century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100" evidence="material-context">1st century BCE - 1st century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Said to have been found in the 'zona Badia', signifying the area immediately below the agora; the base currently stands in front of the entrance to the offices and stores of the archaeological park, at Case Barbaro.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -173,10 +157,10 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <div type="textpart" subtype="section" n="1">
                     <ab>
-                        <lb n="`1"/><gap reason="lost" extent="unknown" unit="character"/><orig>Ο<unclear>Ι</unclear></orig><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΜΙ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>Ο<unclear>Ι</unclear></orig><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΜΙ</orig><gap reason="lost" extent="unknown" unit="character"/>
                         <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>
                     </ab>
                 </div>
@@ -205,7 +189,7 @@
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>G6</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/3PK3JKXR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

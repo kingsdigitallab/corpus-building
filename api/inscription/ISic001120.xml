@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -19,25 +21,22 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="OC" ref="https://orcid.org/0009-0006-5165-8381">Oliver Clarke</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -77,8 +76,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
-                                    </material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-1 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2" type="stone.marble" subtype="Parian-1|Parian-2" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Fine to medium-grained, homogeneous, white marble, likely Parian-1, Parian-2. Optical microscopy: heteroblastic fabric with triple points, mosaic microstructure. Digital microscopy: heteroblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions><!--from IG Palermo 33-->
                                         <height unit="cm">54</height>
@@ -87,19 +85,19 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote><!--IG Palermo 33 measurements-->
                                 <locus from="line1" to="line3">Lines 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">10-15</height>
+                                    <height unit="mm" atLeast="10" atMost="15">10-15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -110,11 +108,11 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
-                            	<geo>38.13205, 13.33561</geo>
-		</origPlace>
+                                <geo>38.13205, 13.33561</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" evidence="lettering">2nd — 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">First observed outside the 'porta sud', in the former Garden of the 'Compagnia di Gesu'</provenance>
@@ -125,18 +123,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -166,42 +164,63 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-12-08" who="#JP">Jonathan Prag revised the EpiDoc and added images</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-12-09" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2025-12-09" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+                <change when="2026-01-19" who="#OC">tagged names and persons</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-          <surface type="front">
-                 <graphic n="screen" url="ISic001120_tiled.tif" height="2812px" width="2031px">
-                     <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
-                </graphic>
-                <graphic n="print" url="ISic001120.jpg" height="2812px" width="2031px">
-                    <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
-                </graphic>
-              <graphic n="screen" url="ISic001120_detail_tiled.tif" height="1750px" width="3045px">
-                  <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
-              </graphic>
-              <graphic n="print" url="ISic001120_detail.jpg" height="1750px" width="3045px">
-                  <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
-              </graphic>
+        <surface type="front">
+            <graphic n="screen" url="ISic001120_tiled.tif" height="2812px" width="2031px">
+                <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="print" url="ISic001120.jpg" height="2812px" width="2031px">
+                <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001120_detail_tiled.tif" height="1750px" width="3045px">
+                <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="print" url="ISic001120_detail.jpg" height="1750px" width="3045px">
+                <desc>Photo from IGPalermo tav.XXI, by permission of the Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
                 <ab>
-                    <lb n="1"/>Κίσσος καὶ Τρύφων οἱ Εἰκαδίου
-                    <lb n="2"/><supplied reason="lost">ταλαίπωρ</supplied>οι καὶ ἄωροι χρηστο<supplied reason="lost">ὶ</supplied>
-                    <lb n="3"/>χαίρετε
+                    <lb n="1"/><persName type="attested"><name><w n="5">Κίσσος</w></name></persName> <w n="10">καὶ</w> <persName type="attested"><name><w n="15">Τρύφων</w></name> <w n="20">οἱ</w> <persName type="attested"><name type="patronym"><w n="25">Εἰκαδίου</w></name></persName></persName>
+                    <lb n="2"/><w n="30"><supplied reason="lost">ταλαίπωρ</supplied>οι</w> <w n="35">καὶ</w> <w n="40">ἄωροι</w> <w n="45">χρηστο<supplied reason="lost">ὶ</supplied></w>
+                    <lb n="3"/><w n="50">χαίρετε</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Κίσσος">Κίσσος</w>
+                    <w n="10" lemma="καί">καὶ</w>
+                    <w n="15" lemma="Τρύφων">Τρύφων</w>
+                    <w n="20" lemma="ὁ">οἱ</w>
+                    <w n="25" lemma="Εἰκάδιος">Εἰκαδίου</w>
+                    <w n="30" lemma="ταλαίπωρος">ταλαίπωροι</w>
+                    <w n="35" lemma="καί">καὶ</w>
+                    <w n="40" lemma="ἄωρος">ἄωροι</w>
+                    <w n="45" lemma="χρηστός">χρηστοὶ</w>
+                    <w n="50" lemma="χαίρω">χαίρετε</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text of IGPalermo no.33</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text of IGPalermo no.33</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Kissos and Tryphon, sons of Eikadios, miserable and untimely (in death), good men, farewell!</p>
@@ -212,48 +231,78 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>48</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624 [1625]</date>
+                        <citedRange>206</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0300</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">300</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>33</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>cl.XIV no.72</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                    </bibl>
                     <bibl type="corpus" n="SGDI">
+                        <author>Hoffmann</author>
+                        <date>1904</date>
                         <citedRange>5194</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/DQDPC573"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
-                        <citedRange>3.5574</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
+                        <author>Franz</author>
+                        <date>1853</date>
+                        <citedRange>5574</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
+                    </bibl>
                     <bibl>
                         <author>De Simone</author>
                         <date>1998</date>
                         <citedRange>432 E1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/U7GN22AN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002651">https://biblio.inscriptiones.org/epig10002651</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002651">https://biblio.inscriptiones.org/epig10002651</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2000</date>
                         <citedRange>264</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/3Z3E49UU"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001812">https://biblio.inscriptiones.org/epig10001812</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001812">https://biblio.inscriptiones.org/epig10001812</ref>
+                    </bibl>
                     <bibl>
                         <author>Prestianni Giallombardo</author>
                         <date>1993</date>
                         <citedRange>529 fig.1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HQDFME9N"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001659">https://biblio.inscriptiones.org/epig10001659</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001659">https://biblio.inscriptiones.org/epig10001659</ref>
+                    </bibl>
                     <bibl>
                         <author>Muscolino</author>
                         <date>2022</date>
@@ -262,7 +311,9 @@
                         <ref target="https://biblio.inscriptiones.org/epig10002809">https://biblio.inscriptiones.org/epig10002809</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

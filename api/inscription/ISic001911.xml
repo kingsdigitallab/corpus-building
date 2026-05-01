@@ -14,18 +14,6 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -34,7 +22,8 @@
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
                     <resp>file creation and encoding</resp>
                 </respStmt>
-	</titleStmt>
+	<respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001911</idno>
@@ -70,7 +59,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of white marble plaque, subsequently cut down on all sides for re-use, and broken on the upper right subsequent to the re-use for the reverse text. Opisthographic plaque, with later text on the reverse, <ref sameAs="ISic001912.xml">ISic001912</ref></p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic" type="stone.marble" subtype="Lunense|Pentelic" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Very fine-grained, homogeneous, white marble, likely Lunense, Pentelic. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257.html">plaque</objectType>
                                     <dimensions><!--IG-->
                                         <height unit="cm">22</height>
@@ -91,18 +80,18 @@
                             <handNote><p>elegant V-cut letters with serifs</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">155</height>
+                                    <height unit="mm" atLeast="155" atMost="155">155</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">68</height>
+                                    <height unit="mm" atLeast="68" atMost="68">68</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
@@ -180,7 +169,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="#IG">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP" source="#IG">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>AE</orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
@@ -204,7 +193,7 @@
                         <author>Orsi</author>
                         <date>2018</date>
                         <citedRange>Tacc. 2, p. 21</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref>
                     </bibl>
                      <bibl>

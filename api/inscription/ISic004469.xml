@@ -14,18 +14,6 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-               <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>              
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -34,10 +22,7 @@
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
                     <resp>file creation and encoding</resp>
                 </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,7 +60,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Rectangular plaque of "bardiglio" marble with irregular borders. Lower left corner broken in antiquity.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Goktepe #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan" type="stone.marble" subtype="Lunense|Docimian|Göktepe|Hymettan" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Fine-grained, veined and spotted, white marble, likely Lunense, Docimian, Göktepe, Hymettan. Digital microscopy: homeoblastic to heteroblastic fabric (identification based on pXRF, digital microscopy)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -112,7 +97,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName> 		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName> 
                                 <geo>37.08415, 15.27628</geo>
@@ -183,7 +168,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
                     <lb n="1"/><g ref="#cross_greek">🞣</g> <g ref="#staurogram">𐆠</g> <g ref="#cross_greek">🞣</g>
                 </ab> 
@@ -203,7 +188,7 @@
                         <author>Ferrua</author>
                         <date>1989</date>
                         <citedRange>82 no. 330b</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/759ZXHKQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref></bibl>
                     <bibl/>
                 </listBibl>

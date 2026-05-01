@@ -14,26 +14,11 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -70,7 +55,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A large rectangular slab of the local yellowish limestone. Intact on all sides, with traces of plaster around the outer edges of the front face, suggesting it was mounted in a wall at some point. Uncertain whether it was always a distinct slab, or was sawn out of the rock on discovery, though the former seems more likely. The rear is rough and unfinished. The front face is arranged into three distinct panels, with three distinct inscriptions. The central text is inset in a panel, which is framed by relief carved columns and a tympanum, which are however incomplete: the column on the left is lightly delineated in relief, with the mouldings below the capital detailed, but the capital itself not detailed; the central area of the tympanum is recessed, but the rest of the pediment only marked out by incised lines; the right column is likewise only marked by incised lines, but faint lines tracing a Corinthian capital are visible. The texts on the left and right are aligned with this via grid lines. Although broadly similar, there are notable stylistic differences between all three texts, suggesting different masons, and potentially separate moments of carving, and for that reason they are here recorded as separate texts. This is the left-hand text. Same support as <ref sameAs="ISic001872.xml">ISic001872</ref> and <ref sameAs="ISic001873.xml">ISic001873</ref></p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="stone.calcarenite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">35.5-36.5</height>
@@ -91,23 +76,23 @@
                             <handNote><p>Deep and wide slightly crude v-cut, producing consistent fairly square letters without serifs. Alpha has mostly downward left sloping cross-bar; epsilon is lunate with mostly shorter middle bar; zeta has slight curvature to the strokes; kappa has short arms; mu has four full-length diagonal strokes; lunate sigma, but note final square lunate for digamma / stigma for numeral 6.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">27-30</height>
+                                    <height unit="mm" atLeast="27" atMost="30">27-30</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-30</height>
+                                    <height unit="mm" atLeast="25" atMost="30">25-30</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-30</height>
+                                    <height unit="mm" atLeast="25" atMost="30">25-30</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">21-30</height>
+                                    <height unit="mm" atLeast="21" atMost="30">21-30</height>
                                 </dimensions>
                                 <locus from="line5" to="line5">Line 5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-30</height>
+                                    <height unit="mm" atLeast="25" atMost="30">25-30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -118,12 +103,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                                 <geo>37.08415, 15.27628</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0300" evidence="lettering">Roman imperial in date</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="lettering">Roman imperial in date</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1895">Purchased by the Siracusa museum on 05.02.1895, said to come from the Grotticelli necropolis / Teracati<geo>37.0784545,15.2786827</geo></provenance><!-- representative point for the necropolis -->
                         <provenance type="observed" subtype="autopsied">Prag 2022-04-28, Magazzino B, Museo Archeologico Regionale Paolo Orsi, Siracusa</provenance>
@@ -202,7 +187,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Γαμική</name></persName> <w>χρη
                     <lb n="2" break="no"/>στὰ</w> <w>καὶ</w> <w>ἄ

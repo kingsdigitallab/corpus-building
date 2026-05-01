@@ -19,28 +19,12 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
                     <resp>EpiDoc editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -79,7 +63,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Text is incised in a plaster wall, framed by an incised tabula ansata, within the context of a white painted wall with panels framed in red. Dimensions are for the main frame of the tabula ansata (Orsi).</p>
-                                    <material ana="#material.plaster" ref="https://www.eagle-network.eu/voc/material/lod/126.html">plaster</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/126.html">plaster</material>
                                     <objectType ana="#object.arch_element.wall" ref="http://www.eagle-network.eu/voc/objtyp/lod/416.html">wall</objectType>
                                     <dimensions>
                                         <height unit="cm">37</height>
@@ -111,12 +95,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                                 <geo>37.49223, 15.07041</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500" cert="low">late Roman(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500" cert="low">late Roman(?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1916">Excavation spring 1916, via Vittorio Emanuele, east of Duomo</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -169,7 +153,7 @@
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-09-22" who="#MB">encoded text</change>
             </listChange>
@@ -187,17 +171,17 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#MB">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#MB">
                 <ab>
                     <lb n="1"/><num value="17">XVII</num> <expan><abbr>K</abbr><ex>alendas</ex></expan> <expan><abbr>Septemb</abbr><ex>res</ex></expan>
-                    <lb n="2"/><persName><name>Feridius</name> <persName><name>Cereris</name></persName> dominae <supplied reason="lost"><expan><abbr>s</abbr><ex>ervus</ex></expan></supplied></persName>
+                    <lb n="2"/><persName type="attested"><name>Feridius</name> <persName type="attested"><name>Cereris</name></persName> dominae <supplied reason="lost"><expan><abbr>s</abbr><ex>ervus</ex></expan></supplied></persName>
                     <lb n="3"/>hic sibi <choice><reg>suaviter</reg><orig>suabiter</orig></choice> <expan><abbr>fec</abbr><ex>it</ex></expan> e<supplied reason="lost">o</supplied>
                     <lb n="4" break="no"/>rum tres adulescentes
                     <lb n="5"/>quorum nomina lege
-                    <lb n="6"/><persName><name>Onesimus</name></persName> et <persName><name><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <name>Valerius</name>
-                    <lb n="7"/><name><choice><reg>Cassianus</reg><orig>Casianus</orig></choice></name></persName> et <persName><name>Filumenus</name></persName>
+                    <lb n="6"/><persName type="attested"><name>Onesimus</name></persName> et <persName type="attested"><name><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <name>Valerius</name>
+                    <lb n="7"/><name><choice><reg>Cassianus</reg><orig>Casianus</orig></choice></name></persName> et <persName type="attested"><name>Filumenus</name></persName>
                     <lb n="8"/>unus cum <choice><reg>muliere</reg><orig>mulierae</orig></choice> ea
-                    <lb n="9"/><persName><name>Taurus</name></persName> multis annis <choice><reg>have</reg><orig>habe</orig></choice> <expan><abbr>facian</abbr><ex>t</ex></expan>
+                    <lb n="9"/><persName type="attested"><name>Taurus</name></persName> multis annis <choice><reg>have</reg><orig>habe</orig></choice> <expan><abbr>facian</abbr><ex>t</ex></expan>
                     <lb n="10"/><choice><reg>coniunximus</reg><orig>coiuximus</orig></choice>
                     <lb n="11"/>propitiam
                 </ab>
@@ -215,15 +199,27 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1919.0057</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
                         <title>NSA</title>
                         <date>1918</date>
                         <citedRange>58-60 fig.7</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1962</date>
+                        <citedRange>490-491</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q7KT855P"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001851">https://biblio.inscriptiones.org/epig10001851</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>68 n.348</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion"><bibl/></listBibl>
             </div>

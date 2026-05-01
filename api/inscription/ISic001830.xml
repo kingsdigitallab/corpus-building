@@ -14,22 +14,14 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
 	   </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -67,7 +59,7 @@
                             <supportDesc>
                                 <support>
                                     <p>9 fragments of a white marble plaque. The fragments consist of two joining sets, with an unquantifiable gap between them. Two fragments join to preserve part of the left margin; seven fragments join to preserve part of the upper and right margin, including the upper right corner; the lower margin is not preserved. The total width of the preserved fragments is 86cm, therefore the original total width was greater; the maximum preserved height is 35cm (so the total height was greater); thickness is 3 cm.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">35 (preserved minimum)</height>
@@ -88,18 +80,18 @@
                             <handNote><p>Tall, regular, narrow letters, v-cut, with small serifs on the termination of strokes. Small deep triangular interpuncts. Alpha has broken bar; epsilon tall, narrow, with equal short horizontals; theta and omicron are rhomboid; mu has vertical first and last, with the diagonals starting below the top and only desencing to the mid-point; nu is similar; rho has small curved, closed loop; sigma is lunate but rectilinear, with very short horizontals.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">110</height>
+                                    <height unit="mm" atLeast="110" atMost="110">110</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">20</height>
+                                    <height unit="mm" atLeast="20" atMost="20">20</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
                             	<geo>37.32084, 13.58876</geo>
@@ -154,6 +146,7 @@
         <revisionDesc status="draft">
             <listChange>
                <change when="2023-11-03" who="#JP">Jonathan Prag created draft edition from ed. pr.</change>
+                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
             	  </listChange>
         </revisionDesc>
     </teiHeader>
@@ -169,9 +162,9 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name><unclear>Φ</unclear><supplied reason="lost">λάβιος</supplied></name> <name><unclear>Μ</unclear>αρτει<unclear>ν</unclear><supplied reason="lost">ι</supplied>ανός</name></persName>
+                    <lb n="1"/><persName type="attested"><name type="nomen"><unclear>Φ</unclear><supplied reason="lost">λάβιος</supplied></name> <name type="cognomen"><unclear>Μ</unclear>αρτει<unclear>ν</unclear><supplied reason="lost">ι</supplied>ανός</name></persName>
                     <lb n="2"/>ὁ <g ref="#interpunct">·</g> <expan><abbr>λ</abbr><ex>αμπρότατος</ex></expan> <g ref="#interpunct">·</g> <expan><abbr><unclear>ὑ</unclear><supplied reason="lost">πατ</supplied></abbr><supplied reason="lost"><ex>ικὸς</ex></supplied></expan> <unclear>τ</unclear>ὰς θερμ<unclear>ὰς</unclear> <space unit="character" quantity="3"/>
                     <lb n="3"/><gap reason="lost" unit="character" quantity="10" cert="low"/><gap reason="illegible" unit="character" quantity="2"/><gap reason="lost" unit="character" quantity="1"/><gap reason="illegible" unit="character" atLeast="4" atMost="5"/><gap reason="lost" unit="character" atLeast="1" atMost="5"/>
                 </ab>

@@ -14,22 +14,6 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -75,7 +59,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Plinth (support for a stele) with mouldings top and bottom, of the local sandstone; the upper moulding is damaged, principally at the corners. The plinth is the left one of a pair mounted on a single base, classified as an epitymbion of type C.</p>
-                                    <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.arch_element.plinth" ref="https://www.eagle-network.eu/voc/objtyp/lod/1910.html">plinth</objectType>
                                     <dimensions><!--from Sofia 2018-->
                                         <height unit="cm">32</height>
@@ -96,7 +80,7 @@
                             <handNote><p>Small simple letters. Kappa has short equal arms, attached to the vertical; rho has small closed eye; mu has slanting first and final strokes, with the mid-strokes joining as a curve and only descending half-way; alpha is broad with straight bar, in one case slightly curved with the apex extending at the top; nu has shorter right vertical joining the diagonal above the line; omicron is small and mid-line.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30</height><!--from Sofia 2018-->
+                                    <height unit="mm" atLeast="30" atMost="30">30</height><!--from Sofia 2018-->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -107,14 +91,14 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462062" corresp="#findspot">Abacaenum</placeName>		
                                 <offset>near
                                     <placeName type="modern" ref="http://sws.geonames.org/2522853">Tripi</placeName>
                                 </offset>
                             	<geo>38.05191, 15.10158</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0200" evidence="archaeological-context" precision="low">The tomb has not been excavated fully, but the cemetery went out of use around the end of the 3rd century BCE or early 2nd century, offering a terminus ante quem</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0201" evidence="archaeological-context">The tomb has not been excavated fully, but the cemetery went out of use around the end of the 3rd century BCE or early 2nd century, offering a terminus ante quem</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" xml:id="findspot">Tomb 69/70 of the necropolis in contrada Cardusa<geo>38.065190, 15.114380</geo>, where it remains in situ</provenance>
                         <provenance type="observed" subtype="autopsied">Metcalfe 2016 visited site</provenance>
@@ -164,11 +148,11 @@
         <revisionDesc status="edited">
             <listChange>
                  <change when="2020-05-27" who="#JP">Jonathan Prag created the file from template and publications</change>
-                <change when="2020-09-10" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-09-10" who="#JP">Updated Zenodo DOI</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-21" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
@@ -185,7 +169,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1"/>Κριμμα Αυνακου
                 </ab>
@@ -205,13 +189,13 @@
                         <author>Bacci and Coppolino</author>
                         <date>2009</date>
                         <citedRange>28 fig.15 (and ref on p.113)</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/DX8AWC9Q"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/DX8AWC9Q"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002171">https://biblio.inscriptiones.org/epig10002171</ref></bibl>
                     <bibl>
                         <author>Sofia</author>
                         <date>2018</date>
                         <citedRange>107 no.5 and fig.6</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/JQQKI6JP"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JQQKI6JP"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001574">https://biblio.inscriptiones.org/epig10001574</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

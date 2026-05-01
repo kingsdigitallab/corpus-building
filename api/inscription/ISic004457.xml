@@ -14,18 +14,6 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-               <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>              
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -34,10 +22,7 @@
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
                     <resp>file creation and encoding</resp>
                 </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,7 +60,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Limestone aedicula with tympanum and twisted semi-columns; traces of red color on the moldings.</p>
-                                    <material ana="#material.stone.limestone" ref="https://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="https://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.aedicula" ref="https://www.eagle-network.eu/voc/objtyp/lod/6.html">aedicula</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -111,12 +96,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0450" notAfter-custom="0550" cert="low">Second half C5 - first half C6 AD (staurogram)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0451" notAfter-custom="0550" cert="low">Second half C5 - first half C6 AD (staurogram)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">catacomb of S. Giovanni</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -182,7 +167,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#IG">
                    <div type="textpart" subtype="tympanum" n="1">
                       <ab>
                           <lb n="1"/><g ref="#staurogram">𐆠</g>
@@ -216,7 +201,7 @@
                         <author>Orsi</author>
                         <date>1896</date>
                         <citedRange>38 no. 67 (336)</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/H73GNMU6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/H73GNMU6"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001710">https://biblio.inscriptiones.org/epig10001710</ref></bibl>
                     <bibl/>
                 </listBibl>

@@ -14,25 +14,13 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -71,7 +59,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Fragment of a thick marble plaque, belonging to the lower left corner (intact to left and below, broken above and to the right; the face of the lower left corner is lost also)</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!-- from Orsi -->
                                         <height unit="cm">6.5</height>
@@ -105,7 +93,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
@@ -161,6 +149,7 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2022-11-15" who="#JP">Jonathan Prag created file from publication and inventory</change>
+                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
              </listChange>
         </revisionDesc>
     </teiHeader>
@@ -175,11 +164,11 @@
          </surface></facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                    <ab>
                        <lb n="0"/><gap reason="lost" unit="line" extent="unknown"/>
-                    <lb n="1"/>Ἄρτε<unclear>μ</unclear><supplied reason="lost" cert="low">ις</supplied><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/>Διόνυσ<supplied reason="lost" cert="low">ος</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><persName type="divine"><name>Ἄρτε<unclear>μ</unclear><supplied reason="lost" cert="low">ις</supplied></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><persName type="divine"><name>Διόνυσ<supplied reason="lost" cert="low">ος</supplied></name></persName><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
           <div type="apparatus">

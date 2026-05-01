@@ -21,28 +21,12 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
@@ -86,7 +70,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Large tablet of limestone, broken into nine joining fragments, with a small fragment missing from the upper left part of the field. The tablet has a moulded frame.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--ILPalermo-->
                                         <height unit="cm">82.5</height>
@@ -120,7 +104,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                                 <geo>38.13205, 13.33561</geo>
@@ -181,7 +165,7 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-05-21" who="#RC">Robert Crellin added ids and lemmatizations</change>
             </listChange>
@@ -200,7 +184,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
                 <ab>
                     <lb n="1"/><roleName type="supracivic" subtype="imperator"><w n="5"><expan><abbr><unclear>Imp</unclear></abbr><ex>eratori</ex></expan></w></roleName> <name><w n="10"><expan><abbr><unclear>Ca</unclear><supplied reason="lost">es</supplied></abbr><supplied reason="lost"><ex>ari</ex></supplied></expan></w></name> <name><w n="15"><supplied reason="lost"><expan><abbr>L</abbr><ex>ucio</ex></expan></supplied></w></name> <name><w n="20"><unclear>S</unclear>eptimio</w></name> <g ref="#interpunct" n="25">·</g> <name><w n="30">Severo</w></name>
                     <lb n="2"/><name><w n="35"><unclear>Pio</unclear></w></name> <name><w n="40"><unclear>P</unclear><supplied reason="lost">ertinaci</supplied></w></name> <name><w n="45"><expan><abbr><supplied reason="lost">A</supplied><unclear>u</unclear>g</abbr><ex>usto</ex></expan></w></name> <name><w n="50"><expan><abbr>Arab</abbr><ex>ico</ex></expan></w></name> <g ref="#interpunct" n="55">·</g> <name><w n="60"><expan><abbr>Adiabe</abbr><ex>nico</ex></expan></w></name>
@@ -307,14 +291,32 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>11</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624 [1625]</date>
+                        <citedRange>168</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650788">10.7274</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650788">7274</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
+                         <author>Bivona</author>
+                         <date>1970</date> 
                         <citedRange>16</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
@@ -329,7 +331,7 @@
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
-                        <citedRange>43</citedRange>
+                        <citedRange>43, 76</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
                     </bibl>

@@ -22,26 +22,11 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -80,7 +65,7 @@
                             <supportDesc>
                                 <support>
                                     <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">Statue base</objectType>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <p>A statue base, according to Mommsen 1883 (CIL 10.7257) and Bücheler (CIL 2.7257). A stone slab with fractures on all sides. The surviving piece has an irregular rectangular shape. The fracture on the left side cuts the stone from top to bottom at an angle of about 20 degrees, which then decreases gradually. The fracture on the right side is almost parallel to the one on the left. The base therefore widens from bottom to top on the left side, while on the right side it narrows. The two fractures cut the text of the inscription irregularly to the left and right, while the inscription does not seem to continue at either the bottom or the top. The back of the stone appears roughly worked.</p>
                                     <dimensions>
                                         <height unit="cm">26</height>
@@ -102,34 +87,34 @@
                             <handNote><p>Scriptura actuaria with letters made with the brush edge at an angle of less than 30 degrees to the writing line (rustica). All letters, except the last "a" in column 2, line 8, are rubricated, but most of the colour appears too bright to be ancient (and appears identical to that with which the inventory number on the lower left corner has been applied); it also appears that not all the interpuncts have been rubricated.</p>
                                 <locus from="line1" to="line1">Line a 1</locus> <!-- NB Le misure delle linee sono quelle assolute, senza cioè il riferimento alle sottosessioni che abbiamo inserito nel testo e nella traduzione. Per adesso le linee 1 e 2 sono le linee 1 e 2 della sezione a; le linee 3-9 sono quelle che poi diventano 1-2 sez. b; 1-6 sez. c e 7 sez. f-->
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">33</height> 
+                                    <height unit="mm" atLeast="33" atMost="33">33</height> 
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line a1 to a2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">13</height>
+                                    <height unit="mm" atLeast="13" atMost="13">13</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line a2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">28</height> 
+                                    <height unit="mm" atLeast="28" atMost="28">28</height> 
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line a2 to bc1</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">10</height>
+                                    <height unit="mm" atLeast="10" atMost="10">10</height>
                                 </dimensions>
                                 <locus from="line3" to="line9">columns b, c, codicil</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">11</height> 
+                                    <height unit="mm" atLeast="11" atMost="11">11</height> 
                                 </dimensions>
                                 <locus from="line3" to="line9">Interlineation columns b, c, codicil</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">6</height>
+                                    <height unit="mm" atLeast="6" atMost="6">6</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462201">Eryx</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524815">Erice</placeName>
                                 <geo>38.03785, 12.58778</geo>
@@ -188,10 +173,10 @@
             	       <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	       <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 	       <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	       <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+	       <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	       <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                       <change when="2021-09-15" who="#CV">encoded text, added apparatus, translation, commentary and photograph</change>
-	    <change when="2022-04-07" who="#system">Updated Zenodo DOI</change>
+	    <change when="2022-04-07" who="#JP">Updated Zenodo DOI</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -243,7 +228,7 @@
 </facsimile> 
     <text>
         <body>
-                <div type="edition" xml:space="preserve" xml:lang="la" resp="#CV">
+                <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#CV">
                     <div type="textpart" subtype="praescriptio" n="a">
                         <ab>
                             <lb n="1"/><persName type="attested"><supplied reason="lost"><name type="praenomen"><expan><abbr>L</abbr><ex>ucius</ex></expan></name></supplied> <supplied reason="lost"><name type="nomen">Apronius</name></supplied> <supplied reason="lost"><name type="patronym"><expan><abbr>L</abbr><ex>ucii</ex></expan></name></supplied> <supplied reason="lost"><expan><abbr>f</abbr><ex>ilius</ex></expan></supplied> <name type="cognomen"><supplied reason="lost">Caesian</supplied>us</name></persName> <g ref="#interpunct">·</g> <roleName type="supracivic.religious" subtype="septemvir.epulonum"><num value="7">VII</num> <g ref="#interpunct">·</g> vir <supplied reason="lost">epulonu</supplied><supplied reason="lost" evidence="previouseditor">m</supplied></roleName>
@@ -293,7 +278,7 @@
                     </div>
                     <div type="textpart" subtype="codicil" n="e">
                         <ab>
-                            <lb n="1"/><supplied reason="lost">Curante</supplied> <persName type="attested"><name type="praenomen"><expan><abbr>L</abbr><ex>ucio</ex></expan></name> <name type="nomen">Apronio</name> <supplied reason="lost"><persName><name type="patronym"><expan><abbr>L</abbr><ex>ucii</ex></expan></name></persName></supplied><supplied reason="lost"><expan><abbr>f</abbr><ex>ilio</ex></expan></supplied></persName> <gap reason="lost" extent="unknown" unit="character"/>
+                            <lb n="1"/><supplied reason="lost">Curante</supplied> <persName type="attested"><name type="praenomen"><expan><abbr>L</abbr><ex>ucio</ex></expan></name> <name type="nomen">Apronio</name> <supplied reason="lost"><persName type="attested"><name type="patronym"><expan><abbr>L</abbr><ex>ucii</ex></expan></name></persName></supplied><supplied reason="lost"><expan><abbr>f</abbr><ex>ilio</ex></expan></supplied></persName> <gap reason="lost" extent="unknown" unit="character"/>
                         </ab>
                     </div>
                 </div>
@@ -572,7 +557,7 @@
                         <author>Muscolino</author>
                         <date>2013</date>
                         <citedRange>461-470</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/Z4CI9KB8"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Z4CI9KB8"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002216">https://biblio.inscriptiones.org/epig10002216</ref></bibl>
                     <bibl>
                         <author>Oliveri</author>
@@ -592,11 +577,13 @@
                     <ref target="https://biblio.inscriptiones.org/epig10000352">https://biblio.inscriptiones.org/epig10000352</ref></bibl>
                     <bibl type="corpus" n="CLE">
                         <citedRange><ref target="https://archive.org/details/anthologialatina00lipsuoft/page/721">2.1525, p. 721-723</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/MDD6P7SH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/MDD6P7SH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002424">https://biblio.inscriptiones.org/epig10002424</ref></bibl>
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650782">10.7257</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650782">7257</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
@@ -604,67 +591,67 @@
                         <author>Mommsen</author>
                         <date>1875</date>
                         <citedRange>264-269</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/PU8UDAF3"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref></bibl>
                     <bibl>
                         <author>Meyer</author>
                         <date>1835</date> 
                         <citedRange>167, no. 1463</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/8VMQZV66"/> 
+                        <ptr target="https://www.zotero.org/groups/382445/items/8VMQZV66"/> 
                     <ref target="https://biblio.inscriptiones.org/epig10002423">https://biblio.inscriptiones.org/epig10002423</ref></bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date> 
                         <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501992">289-290, cl. 18, no. 56</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/> 
+                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/> 
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date> 
                         <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501563">271-272, cl. 18, no. 55</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/> 
+                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/> 
                     <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
                     <bibl>
                         <author>Burmann</author>
                         <date>1759-1773</date>
                         <citedRange>vol. 4, 25, no. 28</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/TPGCXHU7"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TPGCXHU7"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002442">https://biblio.inscriptiones.org/epig10002442</ref></bibl>
                     <bibl>
                         <author>Muratori</author>
                         <date>1740</date>
                         <citedRange>762, no. 3</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/9S5VIRWZ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9S5VIRWZ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001395">https://biblio.inscriptiones.org/epig10001395</ref></bibl>
                     <bibl>
                         <author>Tardia</author>
                         <date>1700 ca.</date>
                         <citedRange>71v, 72r</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/QG2HNJQU"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QG2HNJQU"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002441">https://biblio.inscriptiones.org/epig10002441</ref></bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624</date>
-                        <citedRange>40, no. 259</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/GIN6NANU"/>
+                        <citedRange>259</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref></bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310948">23, no. 152</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310948">152</ref></citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
                     <bibl>
                         <author>Cordici</author>
                         <date>1600 ca.</date>
                         <citedRange>C: 48recto, 48verso</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/TTP5SKRS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TTP5SKRS"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002422">https://biblio.inscriptiones.org/epig10002422</ref></bibl>
                     <bibl>
                         <author>Cordici</author>
                         <date>1600 ca.</date>
                         <citedRange>P: 44verso, 45recto, 45verso</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/FPRG4QKA"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FPRG4QKA"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002669">https://biblio.inscriptiones.org/epig10002669</ref></bibl>
                     <bibl>
                         <author>Vacanti</author>
@@ -678,25 +665,25 @@
 	           <author>Hager</author>
 	           <date>1799</date>
 	           <citedRange>10</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/V485BH8C"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/V485BH8C"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002421">https://biblio.inscriptiones.org/epig10002421</ref></bibl>
 	       <bibl>
 	           <author>Cagnat</author>
 	           <date>1892</date> 
 	           <citedRange>14-15</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/NUU5KVRB"/> 
+	           <ptr target="https://www.zotero.org/groups/382445/items/NUU5KVRB"/> 
 	       <ref target="https://biblio.inscriptiones.org/epig10002420">https://biblio.inscriptiones.org/epig10002420</ref></bibl>
 	       <bibl>
 	           <author>Picard</author>
 	           <date>1958</date>
 	           <citedRange>247-248</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/7NEKT6J3"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/7NEKT6J3"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002419">https://biblio.inscriptiones.org/epig10002419</ref></bibl>
 	       <bibl>
 	           <author>Manganaro</author>
 	           <date>1988</date>
-	           <citedRange>61</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/RZSFKACR"/>
+	           <citedRange>61, 66-67</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
 	       <bibl>
 	           <author>Wilson</author>
@@ -708,7 +695,7 @@
 	           <author>Thomasson</author>
 	           <date>1996</date>
 	           <citedRange>29, no. 21</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/AXIXFT3W"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/AXIXFT3W"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002418">https://biblio.inscriptiones.org/epig10002418</ref></bibl>
 	       <bibl>
 	           <author>Bivona</author>
@@ -720,11 +707,11 @@
 	               <author>Lietz</author>
 	               <date>2012</date>
 	               <citedRange>316-319</citedRange>
-	               <ptr target="http://zotero.org/groups/382445/items/W9KM5PHR"/>
+	               <ptr target="https://www.zotero.org/groups/382445/items/W9KM5PHR"/>
 	           <ref target="https://biblio.inscriptiones.org/epig10002440">https://biblio.inscriptiones.org/epig10002440</ref></bibl>
 	       <bibl type="bulletin" n="AE">
 	           <citedRange>2013.0636</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
 	   </listBibl>
             </div>

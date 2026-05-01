@@ -27,18 +27,6 @@
                     <resp>data collation and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -78,7 +66,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Rectangular lamina.</p>
-                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
+                                    <material ana="#material.inorganic.metal.lead" type="metal.lead" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
                                         <height unit="cm" atMost="4.6">4.6</height>
@@ -108,13 +96,13 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName/>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
                                 <geo>37.58337, 12.82522</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0450" notAfter-custom="-0300">late fifth or fourth century BCE (so Bettarini on letters).</origDate>
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0450" notAfter-custom="-0301">late fifth or fourth century BCE (so Bettarini on letters).</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in the deposits of Selinunte<geo>37.58337, 12.82522</geo>.</provenance> <!-- generic Selinunte coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -183,7 +171,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SN">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#SN">
                 <ab>
                     <lb n="1"/><persName type="attested"><name><choice><orig>Πύρ<unclear>ο</unclear>ν</orig><reg>Πύρρον</reg></choice></name></persName> <w>καἴ</w> <w>τι</w>
                     <lb n="2"/><orig>Δ</orig> <w>ὑπὲρ</w> <persName type="attested"><name type="idionym"><expan><abbr>Ἀρτάμων</abbr><ex>ος</ex></expan></name></persName>
@@ -217,11 +205,11 @@
                         <author>Bettarini</author>
                         <date>2005</date>
                         <citedRange>5</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SEW88NC7"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SEW88NC7"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001388">https://biblio.inscriptiones.org/epig10001388</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>55.1025</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">

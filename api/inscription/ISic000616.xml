@@ -18,26 +18,11 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -77,7 +62,7 @@
                             <supportDesc>
                                 <support>
                                     <p>A large rectangular block of shell-bearing limestone, intact on top, left, right and behind, but damaged below. Appears intact lower right underside, so the only significant loss/damage is the lower left corner. The left edge of the stone is clearly preserved, which implies at least one additional block originally stood to the left.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html"/>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html"/>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions>
                                         <height unit="cm">36.5</height>
@@ -98,22 +83,22 @@
                             <handNote>Plain broad Latin letters of the Republican style without serifs. P and R are closed; E has all three bars of equal length; M is open, with the mid-point not always descending to the lower line; S is somewhat flat at top and bottom. Simple triangular interpuncts between words.
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">90-105</height>
+                                    <height unit="mm" atLeast="90" atMost="105">90-105</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">85-95</height>
+                                    <height unit="mm" atLeast="85" atMost="95">85-95</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">30-45</height>
+                                    <height unit="mm" atLeast="30" atMost="45">30-45</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
                             	<geo>37.32084, 13.58876</geo>
@@ -176,7 +161,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
 	</listChange>
         </revisionDesc>
@@ -199,7 +184,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>us · <expan><abbr>M</abbr><ex>arci</ex></expan> · <expan><abbr>f</abbr><ex>ilius</ex></expan> ·<expan><abbr>Ter</abbr><ex>etina tribu</ex></expan> · <space quantity="1" unit="character"/>Pius
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><expan><abbr><unclear>f</unclear></abbr><ex>iliam</ex></expan> · matrem · suam ·
@@ -246,13 +231,13 @@
                         <title>NSA</title>
                         <date>1926</date>
                         <citedRange>110-111 fig.14</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                     <bibl>
                         <author>De Miro</author>
                         <date>2000</date>
                         <citedRange> 95-6, esp. n.160</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/AMX5FZJR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/AMX5FZJR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002050">https://biblio.inscriptiones.org/epig10002050</ref></bibl>
                     <bibl>
                         <author>Campagna</author>

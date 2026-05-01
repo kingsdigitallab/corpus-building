@@ -19,18 +19,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SA">Serena Agodi</name>
                     <resp>Italian translation</resp>
                 </respStmt>
@@ -38,10 +26,11 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -56,9 +45,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001279</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4352285</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -82,7 +69,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <p>A very wide text laid out across multiple marble slabs of
                                             differing widths, of which 8 pieces are preserved (originally 6, but two
@@ -115,18 +102,18 @@
                                     marked with a supraline.</p>
                                 <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">44-62</height>
+                                    <height unit="mm" atLeast="44" atMost="62">44-62</height>
                                 </dimensions>
                                 <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">9-27</height>
+                                    <height unit="mm" atLeast="9" atMost="27">9-27</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
@@ -190,37 +177,75 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-10" who="#JP">Jonathan Prag added images</change>
+                <change when="2025-12-23" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic001279_tiled.tif" height="3680px" width="5520px">
+            <graphic n="screen" url="ISic001279_tiled.tif" height="354px" width="2152px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-            <graphic n="print" url="ISic001279.jpg" height="3680px" width="5520px">
+            <graphic n="print" url="ISic001279.jpg" height="354px" width="2152px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001279_fr1_tiled.tif" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="print" url="ISic001279_fr1.jpg" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001279_fr2_tiled.tif" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="print" url="ISic001279_fr2.jpg" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001279_fr3_tiled.tif" height="2912px" width="3678px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="print" url="ISic001279_fr3.jpg" height="2912px" width="3678px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001279_fr4_tiled.tif" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="print" url="ISic001279_fr4.jpg" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001279_fr5_tiled.tif" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="print" url="ISic001279_fr5.jpg" height="2912px" width="4368px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001279_fr6_tiled.tif" height="2912px" width="3512px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
+            </graphic>
+            <graphic n="print" url="ISic001279_fr6.jpg" height="2912px" width="3512px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Liceo Lazzaro 2017-04-07</desc>
             </graphic>
          </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/2EUC82DH">
                 <ab>
                     <lb n="1"/>
-                    Φλάβιος Φῆλιξ Εὐμάθιος ὁ <roleName type="paracivic" subtype="clarissimus">λαμπρ<supplied reason="lost">ότατος</supplied></roleName> <roleName type="supracivic" subtype="consularis"><supplied reason="lost">ὑπατικὸς</supplied></roleName> <supplied reason="lost">τῆς</supplied> <supplied reason="lost">Σικελῶν</supplied> <supplied reason="lost">ἐπα</supplied>ρχίας
-                    εἶπεν · αἱ θερμαὶ αἱ Ἀχιλλιαναὶ ἐξ ἀρ<supplied reason="lost">χ</supplied>αίας διατυπώσεως ἀνήλ
+                    <persName type="attested"><name type="nomen">Φλάβιος</name> <name type="cognomen">Φῆλιξ</name> <name type="cognomen">Εὐμάθιος</name></persName> ὁ <roleName type="paracivic" subtype="clarissimus">λαμπρ<supplied reason="lost">ότατος</supplied></roleName> <roleName type="supracivic" subtype="consularis"><supplied reason="lost">ὑπατικὸς</supplied></roleName> <supplied reason="lost">τῆς</supplied> <placeName type="ethnic"><supplied reason="lost">Σικελῶν</supplied></placeName> <supplied reason="lost">ἐπα</supplied>ρχίας
+                    εἶπεν · <placeName>αἱ θερμαὶ αἱ Ἀχιλλιαναὶ</placeName> ἐξ ἀρ<supplied reason="lost">χ</supplied>αίας διατυπώσεως ἀνήλ
                     <supplied reason="lost" evidence="previouseditor">ω</supplied>
                     <supplied reason="lost">σαν</supplied> <supplied reason="lost">πήσας</supplied>
                     <gap reason="lost" extent="unknown" unit="character"/>
                     <supplied reason="lost" cert="low">καθ’</supplied> <supplied reason="lost" cert="low">ἑκάστην</supplied> <supplied reason="lost" cert="low">ἡμέραν</supplied>
                     <gap reason="lost" extent="unknown" unit="character"/>
                     <gap reason="illegible" quantity="1" unit="character"/>ιούσης τῆς ἐπισκευῆς ἐ
-                    <supplied reason="lost" cert="low">πιμελείᾳ</supplied> <supplied reason="lost" cert="low">Φλαβίου</supplied>
+                    <supplied reason="lost" cert="low">πιμελείᾳ</supplied> <persName type="attested"><name type="nomen"><supplied reason="lost" cert="low">Φλαβίου</supplied></name>
                     <lb n="2"/>
-                    Λιβεραλίου τοῦ <roleName type="supracivic" subtype="devotissimus">εὐκαθωσιώτου</roleName>, ἀνή<supplied reason="lost" cert="low">λωσαν</supplied> <supplied reason="lost" cert="low">ἔλαττον</supplied>. <supplied reason="lost" cert="low">τὸ</supplied> <supplied reason="lost" cert="low">καπνιστήριον
+                    <name type="cognomen">Λιβεραλίου</name></persName> τοῦ <roleName type="supracivic" subtype="devotissimus">εὐκαθωσιώτου</roleName>, ἀνή<supplied reason="lost" cert="low">λωσαν</supplied> <supplied reason="lost" cert="low">ἔλαττον</supplied>. <supplied reason="lost" cert="low">τὸ</supplied> <supplied reason="lost" cert="low">καπνιστήριον
                 </supplied> καθ’ ἑκάστην ἡμέραν πήσας <hi rend="supraline">λβ</hi> ἔλαττον ἔκαυσεν εἰς τὴν
                     πρόκαυσιν <supplied reason="lost">καὶ</supplied> <supplied reason="lost">εἰς</supplied> <supplied reason="lost">τὴν</supplied> <supplied reason="lost">ὑπόκαυσιν</supplied> <supplied reason="lost">ἔλαττον</supplied> <supplied reason="lost">ἔκαυ</supplied>σεν πήσας <hi rend="supraline">ιη</hi>, ἐ
                     <supplied reason="lost">π</supplied>
@@ -248,8 +273,8 @@
                     <gap reason="illegible" quantity="1" unit="character"/>
                     <gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="4"/>
-                    τοῦ ἀρχιτέκτονος· μετὰ τὴν <roleName type="supracivic" subtype="consul">ὑπ<supplied reason="lost">ατείαν</supplied></roleName> <supplied reason="lost">τοῦ</supplied> <roleName type="supracivic" subtype="dominus"><supplied reason="lost">δεσπότου</supplied></roleName> <supplied reason="lost">ἡμῶν</supplied> <supplied reason="lost">Θεοδο</supplied>σίου
-                    αἰωνίου Αὐγούστου τὸ διʹ κ<supplied reason="lost" evidence="previouseditor">α</supplied>ὶ Μαξίμου
+                    τοῦ ἀρχιτέκτονος· μετὰ τὴν <roleName type="supracivic" subtype="consul">ὑπ<supplied reason="lost">ατείαν</supplied></roleName> <supplied reason="lost">τοῦ</supplied> <roleName type="supracivic" subtype="dominus"><supplied reason="lost">δεσπότου</supplied></roleName> <supplied reason="lost">ἡμῶν</supplied> <persName type="attested"><name><supplied reason="lost">Θεοδο</supplied>σίου
+                    αἰωνίου</name> <name type="cognomen">Αὐγούστου</name></persName> τὸ διʹ κ<supplied reason="lost" evidence="previouseditor">α</supplied>ὶ <persName type="attested"><name>Μαξίμου</name></persName>
                     τοῦ <roleName type="supracivic" subtype="clarissimus">λαμπ
                     <supplied reason="lost">ροτάτου</supplied></roleName>
                 </ab>
@@ -295,47 +320,53 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0455</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">455</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>2010.0608</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1959.0026</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>60.1010</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>43.0623</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>38.0919</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>2011.0732</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1959.0541</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
                     <bibl type="corpus" n="IMusCatania">
+                         <author>Korhonen</author>
+                         <date>2004</date> 
                         <citedRange>11</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                     <bibl type="corpus" n="CIG">
-                        <citedRange>3.5694</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
+                        <author>Franz</author>
+                        <date>1853</date>
+                        <citedRange>5694</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1958-1959</date>

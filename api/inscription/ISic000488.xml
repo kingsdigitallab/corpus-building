@@ -18,26 +18,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
                 <respStmt>
                     <name xml:id="AR" ref="https://orcid.org/0000-0001-5677-4679">Alessandra Rocchetti</name>
                     <resp>Epidoc editing and translation</resp>
@@ -81,7 +65,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.arch_element.capital" ref="http://www.eagle-network.eu/voc/objtyp/lod/64.html">column capital
                                     </objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -114,7 +98,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462305">Mazara</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524205">Mazara del Vallo</placeName>
                             	<geo>37.65418, 12.59304</geo>
@@ -173,7 +157,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-05-21" who="#AR">edited text division and added translation</change>
 	</listChange>
@@ -191,7 +175,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AR">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#AR">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>tate et iustitia pr<choice><reg>ae</reg><orig>e</orig></choice>di<supplied reason="lost">tus</supplied> <gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">e</supplied>t <g ref="#interpunct">·</g> singulari <g ref="#interpunct">·</g> sincerita<supplied reason="lost">te</supplied> <gap reason="lost" extent="unknown" unit="character"/>
@@ -219,8 +203,10 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7208</ref>
+                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7208</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>

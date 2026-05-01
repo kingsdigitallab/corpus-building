@@ -21,24 +21,8 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SW">Susan Walker</name>
                     <resp>preparation of new edition</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -48,6 +32,7 @@
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>Lemmatization</resp>
                 </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -87,7 +72,7 @@
                             <supportDesc>
                                 <support>
                                     <p>The stone is reconstructed from six fragments. The upper right corner is lost, as is a piece left of centre of the upper edge down into the second line of text, and smaller chips from the left edge and the lower right corner. The stone is filled with plaster extending from the lower left corner of the upper right break to the fourth line of text. The fragment below is stained red. The stone has been filled with plaster in all these breaks. It was not removed from its slate frame in 2012.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">Limestone</material>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">Limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">18.6</height>
@@ -111,7 +96,7 @@
                                 <p>rhomboid omega, xsi in the form of zeta with a cross-bar, regular quadrate sigma and epsilon, and frequent use of letters in ligature</p>
                                 <locus from="line1" to="line5">Lines 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">32</height>
+                                    <height unit="mm" atLeast="32" atMost="32">32</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Not measured</locus>
                                 <dimensions type="interlinear">
@@ -122,7 +107,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                                 <geo>37.08415, 15.27628</geo>
@@ -131,7 +116,7 @@
                         </origin>
                         <provenance type="found" subtype="discovered">Salvatore Politi (ap. IG XIV.36) reports found next to the so-called 'tomb of Archimedes', a rock-cut tomb in the Grotticelli necropolis; according to Wilshere (letter to De Rossi), 'da un fosso sulle confine di Caradicia (? illegible) ed Epipoli'; according to Ferrua 1941 reporting De Rossi, 'trovata in una fossa tra Agradina e Tyche'. Transported to Siracusa museum in 1880 after discovery, but then purchased by Wilshere in May 1885; subsequently in the Wilshere collection at Pusey House; now in the Ashmolean<geo>37.078359, 15.281140</geo></provenance><!-- location of tomb of archimedes -->
                         <provenance type="observed" subtype="autopsied">Walker 2015</provenance>
-                        </history>
+                    </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -177,12 +162,12 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-02-08" who="#JP">Jonathan Prag edited the file on the basis of draft of new edition by Susan Walker</change>
-                <change when="2020-09-10" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-09-10" who="#JP">Updated Zenodo DOI</change>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-06-13" who="#RC">Robert Crellin provided lemmatizations</change>
                 <change when="2025-06-14" who="#JP">Jonathan Prag minor edits</change>
@@ -201,7 +186,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="#SW">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="#SW">
                 <ab>
                     <lb n="1"/><w n="5"><supplied reason="lost"><expan><abbr>θ</abbr><ex>εοῖς</ex></expan></supplied></w> <g ref="#interpunct" n="10">·</g> <w n="15"><expan><abbr>κ</abbr><ex>αταχθονίοις</ex></expan></w>
                     <lb n="2"/><persName type="attested"><name><w n="20"><expan><abbr>Κ</abbr><ex>λαυδία</ex></expan></w></name> <g ref="#interpunct" n="25">·</g> <name><w n="30">Σωτή<supplied reason="lost">ρ</supplied>ις</w></name></persName>
@@ -252,8 +237,10 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0036</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">36</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>

@@ -18,26 +18,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
                 <respStmt>
                     <name xml:id="TNS" ref="https://orcid.org/0000-0003-2684-2030">Timothy Smith</name>
                     <resp>Epidoc editing</resp>
@@ -63,7 +47,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository>unknown</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,7 +63,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Described as 'calcare' by Manganaro, a fine plaque  missing the upper right and lower right corners, and with the surviving upper right portion broken but still connecting.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType><dimensions>
                                         <!--Manganaro-->
                                         <height unit="cm">46</height>
@@ -100,19 +84,19 @@
                             <handNote><p>Several of the letter T are taller than other letters; use of apices and interpuncts.</p><!-- measurements from Manganaro -->
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">65</height>
+                                    <height unit="mm" atLeast="65" atMost="65">65</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Line 3-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">55</height>
+                                    <height unit="mm" atLeast="55" atMost="55">55</height>
                                 </dimensions>
                                 <locus from="line5" to="line6">Line 5-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">40</height>
+                                    <height unit="mm" atLeast="40" atMost="40">40</height>
                                 </dimensions>
                                 <locus from="line7" to="line7">Line 7</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25</height>
+                                    <height unit="mm" atLeast="25" atMost="25">25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -123,12 +107,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" precision="low">1st century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100">1st century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1960">Recovered c.1960 in course of construction of S. Bambino hospital (so Manganaro)<geo>37.5060446,15.0809441</geo></provenance><!-- hospital location -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -184,7 +168,7 @@
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-04" who="#TNS">Epidoc editing</change>
                 <change when="2025-01-23" who="#JP">Jonathan Prag revised from published edition and photograph</change>
@@ -204,7 +188,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TNS #JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TNS #JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Grattia</name> <g ref="#interpunct">·</g> <name><expan><abbr>C</abbr><ex>ai</ex></expan></name> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilia</ex></expan><g ref="#interpunct">·</g>
                     <lb n="2"/><name>Paulla</name></persName>
@@ -228,7 +212,7 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1989.0341m</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl/>
                     <bibl>

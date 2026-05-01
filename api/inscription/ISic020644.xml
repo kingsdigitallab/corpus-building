@@ -19,18 +19,6 @@
                     <resp>original data collection</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -70,7 +58,7 @@
                             <supportDesc>
                                 <support>
                                     <p>Fragment of vessel.</p><!-- check vessel type -->
-                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <material ana="#material.inorganic.ceramic" type="ceramic" subtype="unverified" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType ana="#object.vessel" ref="https://www.eagle-network.eu/voc/objtyp/lod/305.html">vessel</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -101,12 +89,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/465970">Palikè</placeName>		
                                 <placeName type="modern">Area archeologica di Palikè</placeName>
                                 <geo>37.329954, 14.697361</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0400" precision="low">6th—5th century BCE</origDate><!-- check -->
+                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0401">6th—5th century BCE</origDate><!-- check -->
                         </origin>
                         <provenance><geo>37.329954, 14.697361</geo>.</provenance><!-- generic coordinates for Palikè -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -175,7 +163,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="scx-Grek" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="scx-Grek" resp="#VM">
                 <ab>
                     <lb n="1"/><!-- add text here -->
                 </ab>
@@ -207,7 +195,7 @@
                         <author>Agostiniani</author>
                         <date>Forthcoming</date>
                         <citedRange>???</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/UE7VX29V"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/UE7VX29V"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002519">https://biblio.inscriptiones.org/epig10002519</ref></bibl>
                 </listBibl>
                 <listBibl type="discussion">

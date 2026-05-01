@@ -14,26 +14,7 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-               <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
+              <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -71,7 +52,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Fragment of a fine white limestone, broken on all sides, including the rear (so not preserving original thickness), now of roughly trapezoidal shape; presumably part of a plaque or stele.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="stone.calcilutite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--from Arena-->
                                         <height unit="cm">10.5</height>
@@ -92,29 +73,28 @@
                             <handNote><!--Arena--><p>Arena notes that the quadrangular module of the individual letters is regular, with the combined module of omicron-nu (used as a control across multiple similar fragments) being 9-10mm from centre to centre. Letters with neat terminal serifs, elegantly cut.</p>
                                 <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">8</height>
+                                    <height unit="mm" atLeast="8" atMost="8">8</height>
                                 </dimensions>
                                 <locus from="line1" to="line5">Interlineation</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">6</height>
+                                    <height unit="mm" atLeast="6" atMost="6">6</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
                                 <offset>near
                                     <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-00150" notAfter-custom="-0050" evidence="lettering" precision="low">Later 2nd century BCE or early C1 BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-00150" notAfter-custom="-0051" evidence="lettering">Later 2nd century BCE or early C1 BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found by Francesco Modico in spring 2019, 2 m east of the city walls, in the direction of the Masseria di Salvo.</provenance>
-                        <provenance type="observed">In the archaeological stores of the Soprintendenza di Messina</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">Found by Francesco Modico in spring 2019, 2 m east of the city walls, in the direction of the Masseria di Salvo<geo cert="high">37.9964141,14.2625583</geo>; now on display in the ecomuseo, in Castel di Tusa.</provenance><!-- approx findspot, based on map in Arena 2020 tav.VI -->
+                    <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -158,13 +138,14 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2022-09-23" who="#JP">Jonathan Prag created file from template based on editio princeps of Arena 2020</change>
+                <change when="2026-03-18" who="#JP">Jonathan Prag added text</change>
              </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001695_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -172,27 +153,30 @@
             <graphic n="print" url="ISic001695.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
          </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <lb n="2"/>
-                    <lb n="3"/>
-                    <lb n="4"/>
-                    <lb n="5"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΑΤΑΙΕ</orig>
+                    <lb n="2"/><orig>ΣΑΔΕΚΑ<supplied reason="lost" cert="low">Ι</supplied></orig>
+                    <lb n="3"/><orig>ΙΑΝΑΤΑ</orig>
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">καὶ</supplied> <supplied reason="lost">τοῖς</supplied> <supplied reason="lost">ἐ</supplied><unclear>γ</unclear>γόνοις
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ν</unclear>Τ<unclear>ΑΣ</unclear></orig>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text of Arena 2020</note></app></listApp>
+                <listApp>
+                    <app><note>Text of Arena 2020</note></app>
+                    <app loc="2"><note>As Arena notes, the break at the end of the line need not conceal a letter and the numeral δεκα is just as possible as κα[ι]</note></app>
+                </listApp>
               </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->Presence of [--ἐ]γγόνοις in line 4 strongly suggests an honorific decree (so Arena).</p>
+                <p>The apparent presence of [--ἐ]γγόνοις in line 4 strongly suggests an honorific decree (so Arena).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -200,7 +184,7 @@
                         <author>Arena</author>
                         <date>2020</date>
                         <citedRange>81-83 no. 6</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/KAIR5ZLR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KAIR5ZLR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002404">https://biblio.inscriptiones.org/epig10002404</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion">

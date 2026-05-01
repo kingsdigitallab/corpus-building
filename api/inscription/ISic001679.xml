@@ -18,25 +18,13 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>original EpiDoc template development</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,7 +61,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Remains of a limestone statue base, preserving part of the left margin, but damaged above, below, and to the right.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!-- from I.Segesta-->
                                         <height unit="cm">21</height>
@@ -94,7 +82,7 @@
                             <handNote><!-- from I.Segesta-->
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-35</height>
+                                    <height unit="mm" atLeast="25" atMost="35">25-35</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -105,12 +93,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101" source="http://zotero.org/groups/382445/items/3PK3JKXR" evidence="archaeological-context lettering" precision="low">2nd century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101" source="https://www.zotero.org/groups/382445/items/3PK3JKXR" evidence="archaeological-context lettering">2nd century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1995">Found in excavations of 1995/1997 in a layer of collapsed material (US 3805) in amb. I1<geo>37.939839, 12.842065</geo>, area of the bouleuterion, near ISic003505</provenance><!-- geo is for the location of room I1 -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -153,17 +141,19 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.dedication #function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html http://www.eagle-network.eu/voc/typeins/lod/69.html">dedication; honorific</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
                 </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
                 <change when="2021-05-21" who="#JP">Jonathan Prag created initial draft of text and metadata from the ed. pr. of Ampolo/Erdas</change>
+                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001679_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -171,14 +161,14 @@
             <graphic n="print" url="ISic001679.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><name>Δ<unclear>ιὶ</unclear></name> ὁ δᾶμ<supplied reason="lost">ος</supplied> <supplied reason="lost">τῶν</supplied> <supplied reason="lost"><name>Ἐγεσταίων</name></supplied>
-                    <lb n="2"/><name>Ἡράκλειον</name> <name>Νύμφωνος</name> <name><seg part="I">Π<unclear>ε</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name>
+                    <lb n="1"/><persName type="divine"><name>Δ<unclear>ιὶ</unclear></name></persName> ὁ δᾶμ<supplied reason="lost">ος</supplied> <supplied reason="lost">τῶν</supplied> <supplied reason="lost"><placeName type="ethnic">Ἐγεσταίων</placeName></supplied>
+                    <lb n="2"/><persName type="attested"><name>Ἡράκλειον</name> <persName type="attested"><name type="patronym">Νύμφωνος</name></persName> <name><w part="I">Π<unclear>ε</unclear></w><gap reason="lost" extent="unknown" unit="character"/></name></persName>
                     <lb n="3"/>ἀρετᾶς ἕνεκα
                 </ab>
             </div>
@@ -190,7 +180,7 @@
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>To Zeus. The people of the Segestans (have dedicated this statue of) Herakleios Pe[---] son of Nymphon, on account of his excellence</p>
             </div>
-            <div type="translation" xml:lang="it" source="http://zotero.org/groups/382445/items/3PK3JKXR">
+            <div type="translation" xml:lang="it" source="https://www.zotero.org/groups/382445/items/3PK3JKXR">
                 <p>A Zeus. Il popolo dei Segestani (ha onorator/ha eretto la statua di) Herakleios, figlio di Nymphon, Pe[---], per il suo valore [transl. from I.Segesta]</p>
             </div>
             <div type="commentary">
@@ -202,7 +192,7 @@
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>G3</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/3PK3JKXR"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion">
@@ -210,13 +200,13 @@
 	           <author>De Cesare, Parra</author>
 	           <date>2001</date>
 	           <citedRange>418 with n.6</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/ZMWCSJG3"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/ZMWCSJG3"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002470">https://biblio.inscriptiones.org/epig10002470</ref></bibl>
 	       <bibl>
 	           <author>Ampolo et al</author>
 	           <date>2010</date>
 	           <citedRange>523</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/7XYUIJ6I"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/7XYUIJ6I"/>
 	       <ref target="https://biblio.inscriptiones.org/epig10002469">https://biblio.inscriptiones.org/epig10002469</ref></bibl>
 	   </listBibl>
             </div>

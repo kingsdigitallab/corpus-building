@@ -21,18 +21,6 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
@@ -41,13 +29,10 @@
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>Lemmatization</resp>
                 </respStmt>
+            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -86,7 +71,7 @@
                             <supportDesc>
                                 <support>
                                     <p>A large grey marble plaque, broken in two down the middle. The left edge is smooth, the other edges more roughly finished. The inscription field is complete, but the right side of the plaque is chipped and damaged. Remains of a raised border visible along the left edge. The two halves join, but the surface is very damaged on both sides of the break, with the loss of approx one letter on each line. The rear is carved with acanthus leaves and dentils at right angles to the text. Bivona appears to assume that the stone was re-used for the inscription, but this is not immediately clear.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Hymettan" type="stone.marble" subtype="Lunense|Hymettan" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Fine-grained, homogeneous, grey, calcitic, smelly marble, likely Lunense, Hymettan. Optical microscopy: homeoblastic to heteroblastic fabric with triple points, mosaic microstructure. Digital microscopy: homeoblastic fabric (identification based on pXRF, digital microscopy, XRD, optical microscopy, stable isotopes analysis, EPR, LA-ICP-MS)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">39</height>
@@ -109,19 +94,19 @@
                                 <p>Large wide letters in a thin v-cut, reducing in height to line 4, with elegant serifs, comma-shaped interpuncts, and use of ligature.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">75</height>
+                                    <height unit="mm" atLeast="75" atMost="75">75</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">70</height>
+                                    <height unit="mm" atLeast="70" atMost="70">70</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">62-65 (I = 70)</height>
+                                    <height unit="mm" atLeast="62" atMost="65">62-65 (I = 70)</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">50-53</height>
+                                    <height unit="mm" atLeast="50" atMost="53">50-53</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -132,7 +117,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Sicilia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                                 <geo>37.98365, 13.69555</geo>
@@ -192,11 +177,12 @@
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
                 <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-04-22" who="#JP">Jonathan Prag added images</change>
                 <change when="2024-05-01" who="#JP">Jonathan Prag edited from autopsy</change>
                 <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -220,12 +206,12 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1" xml:id="AOεAK"/><persName type="attested" xml:id="AOεAU"><name xml:id="AOεAe"><w n="5">Ces<unclear xml:id="AOεAo">t</unclear>iae</w></name>
-                    <lb n="2" xml:id="AOεAy"/><name xml:id="AOεAΙ"><w n="10">Catull<hi rend="ligature" xml:id="AOεAΤ">ae</hi></w></name></persName>
+                    <lb n="1" xml:id="AOεAK"/><persName type="attested" xml:id="AOεAU"><name><w n="5" xml:id="AOεAe">Ces<unclear xml:id="AOεAo">t</unclear>iae</w></name>
+                    <lb n="2" xml:id="AOεAy"/><name><w n="10" xml:id="AOεAΙ">Catull<hi rend="ligature" xml:id="AOεAΤ">ae</hi></w></name></persName>
                     <lb n="3" xml:id="AOεAε"/><w xml:id="AOεAο" n="15">piae</w> <g ref="#interpunct" xml:id="AOεBA" n="20">·</g> <w xml:id="AOεBK" n="25">v<hi rend="tall" xml:id="AOεBU">i</hi>xit</w>
-                    <lb n="4" xml:id="AOεBe"/><w xml:id="AOεBo" n="30"><expan xml:id="AOεBy"><abbr xml:id="AOεBΙ">ann</abbr><ex xml:id="AOεBΤ">is</ex></expan></w> <g ref="#interpunct" xml:id="AOεBε" n="35">·</g> <num value="35" xml:id="AOεBο"><w n="40">XXXV</w></num>
+                    <lb n="4" xml:id="AOεBe"/><w xml:id="AOεBo" n="30"><expan xml:id="AOεBy"><abbr xml:id="AOεBΙ">ann</abbr><ex xml:id="AOεBΤ">is</ex></expan></w> <g ref="#interpunct" xml:id="AOεBε" n="35">·</g> <num value="35"><w n="40" xml:id="AOεBο">XXXV</w></num>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -264,13 +250,17 @@
                         <ref target="https://biblio.inscriptiones.org/epig10002748">https://biblio.inscriptiones.org/epig10002748</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
+                        <author>Mommsen</author>
+                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">10.7387</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">7387</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
+                         <author>Bivona</author>
+                         <date>1994</date> 
                         <citedRange>67</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
