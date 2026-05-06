@@ -258,17 +258,19 @@
 								{#if config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
 									{@const tooltip =
 										config.tooltips[/** @type {keyof typeof config.tooltips} */ (key)]}
-									<small>
-										<a
-											href={tooltip.link}
-											target="_blank"
-											rel="noopener noreferrer"
-											class="tooltip-link external"
-										>
-											{tooltip.linkLabel || 'Learn more'}
-										</a>
-									</small>
-									<br />
+									{#if tooltip.link}
+										<small>
+											<a
+												href={tooltip.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="tooltip-link external"
+											>
+												{tooltip.linkLabel || 'Learn more'}
+											</a>
+										</small>
+										<br />
+									{/if}
 								{/if}
 
 								<small
