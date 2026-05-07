@@ -1,5 +1,12 @@
 
 
+## [0.27.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.27.0...v0.27.1) (2026-05-07)
+
+
+### Bug Fixes
+
+* **search:** Preserve leading zeros in file identifier ([e9adfd8](https://github.com/kingsdigitallab/corpus-building/commit/e9adfd856d7503231a4c5db6f0daa90617045d29))
+
 # [0.27.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.26.0...v0.27.0) (2026-05-07)
 
 
