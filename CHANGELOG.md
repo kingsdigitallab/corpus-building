@@ -1,5 +1,27 @@
 
 
+# [0.27.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.26.0...v0.27.0) (2026-05-07)
+
+
+### Bug Fixes
+
+* credits.md should use h2 ## not h1 # for headings in the body ([1cc6281](https://github.com/kingsdigitallab/corpus-building/commit/1cc628143d618d900427986eaa8c3109e68e5a1e))
+* **doc:** Fixed the link to the palaeographic env in the technical overview, added link to its docs, and distinguished the types of users.. ([467faab](https://github.com/kingsdigitallab/corpus-building/commit/467faab1b9a04102afe6f4a80b2c25e869033c3e))
+* **etl:** metadata.js getMaterial failed when passed an element without attributes ([e798c30](https://github.com/kingsdigitallab/corpus-building/commit/e798c30beeafe39bab854daaa6f65e4f814f3d59))
+* **import:** ana attribute removed from material element when it has no values ([aee8322](https://github.com/kingsdigitallab/corpus-building/commit/aee832204ecdbb9b562638f5bc11ceeaaaf249c6))
+* **inscription:** Long strings (e.g. urls) in epidoc display were running off the parent div ([04fd51d](https://github.com/kingsdigitallab/corpus-building/commit/04fd51de6441b7a4c768b556632043df0b3608d9))
+* **petro:** petrography-import.js removes type and sybtype attributes from material element if their value is empty ([7c3b9ce](https://github.com/kingsdigitallab/corpus-building/commit/7c3b9ce154a8b02ff389e574f5c1017ddca394ea))
+* Removed links leading to museum or inscription pages on old ISicily site ([bae2152](https://github.com/kingsdigitallab/corpus-building/commit/bae21522d4bf391382821a5208d860e3c18b6b08))
+* **search:** Empty or absent material/[@subtype](https://github.com/subtype) was not handled properly and caused blank option in facet ([38552aa](https://github.com/kingsdigitallab/corpus-building/commit/38552aa645b5b4e49d752534e63a0fc376eea379))
+* **searchfilters:** Render tooltip link only when defined ([78f8686](https://github.com/kingsdigitallab/corpus-building/commit/78f86865ed19ef8e48092107e9434e739c750d23))
+
+
+### Features
+
+* Added new facet for lithotype and reprocessed all files ([3a3a746](https://github.com/kingsdigitallab/corpus-building/commit/3a3a7465a9af42890012aa33ea18d4b90d59a7a0))
+* Updated processed data after import of petro datasheets ([45c737c](https://github.com/kingsdigitallab/corpus-building/commit/45c737c88b89953774e829474b9de779b8af8f9c))
+* Updated processed data after import of petro datasheets; updated material filter to material/[@type](https://github.com/type) ([0cdd924](https://github.com/kingsdigitallab/corpus-building/commit/0cdd92460244c8a393df65cda06df0940ea13372))
+
 # [0.26.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.25.0...v0.26.0) (2026-04-16)
 
 
