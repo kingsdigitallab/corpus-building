@@ -51,8 +51,9 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "ci(frontend): update etl output and test results"
+          commit_message: "ci(frontend): update etl output and test results [skip ci]"
           file_pattern: "frontend/src/data/*.json frontend/src/lib/prerender-errors.json frontend/test-results/*.json data/raw xslt/epidoc frontend/static/fonts/nau"
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
 
   pages:
     needs: test
