@@ -71,3 +71,12 @@
 		</dd>
 	{/if}
 </dl>
+
+<style>
+	a.badge {
+		max-width: none;
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+	}
+</style>
