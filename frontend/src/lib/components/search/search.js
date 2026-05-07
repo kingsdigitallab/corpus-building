@@ -319,18 +319,18 @@ export function load({
 			const letterHeights =
 				item.letterHeights && item.letterHeights.length > 0
 					? item.letterHeights.map((d) => {
-						if (d.quantity) {
-							return {
-								atLeast: Number.parseInt(d.quantity),
-								atMost: Number.parseInt(d.quantity)
-							};
-						} else {
-							return {
-								atLeast: Number.parseInt(d.atLeast ?? '0'),
-								atMost: Number.parseInt(d.atMost ?? '250')
-							};
-						}
-					})
+							if (d.quantity) {
+								return {
+									atLeast: Number.parseInt(d.quantity),
+									atMost: Number.parseInt(d.quantity)
+								};
+							} else {
+								return {
+									atLeast: Number.parseInt(d.atLeast ?? '0'),
+									atMost: Number.parseInt(d.atMost ?? '250')
+								};
+							}
+						})
 					: [{ atLeast: 0, atMost: 0 }];
 
 			let repositoryRole = item.repository?.role?.toLowerCase() ?? undefined;
@@ -338,13 +338,13 @@ export function load({
 
 			const repository =
 				repositoryRole?.indexOf('private') !== -1 ||
-					item.repository?._?.toLowerCase().indexOf('private') !== -1
+				item.repository?._?.toLowerCase().indexOf('private') !== -1
 					? 'private'
 					: (item.repository?._?.trim() ?? undefined);
 
 			return {
 				...item,
-				fileClean: [item.file, item.file.replace('ISic', ''), `${parseInt(item.file.replace('ISic', ''))}`],
+				fileClean: [item.file, item.file.replace('ISic', ''), `${item.file.replace('ISic', '')}`],
 				lemmas: [...itemLemmas, ...itemLemmas.flatMap((l) => [`lemma_${l}`, `text_${l}`])],
 				text: [...itemText, ...itemText.map((t) => `text_${t}`)],
 				status: item?.status?._ ?? undefined,
@@ -354,7 +354,12 @@ export function load({
 				notAfter: item?.date?.notAfter ?? 0,
 				notBefore: item?.date?.notBefore ?? 1900,
 				language: item?.textLang?.languages ?? undefined,
-				inscriptionType: [...(getHierarchicalValues(item.type?.ana) || []), ...(getHierarchicalValues(item.type?.certainty?.assertedValue)?.map(v => `${v} (possibly)`) || [])],
+				inscriptionType: [
+					...(getHierarchicalValues(item.type?.ana) || []),
+					...(getHierarchicalValues(item.type?.certainty?.assertedValue)?.map(
+						(v) => `${v} (possibly)`
+					) || [])
+				],
 				objectType: getHierarchicalValues(item.objectType?.ana),
 				material: getHierarchicalValues(item.material?.type, false),
 				lithotype: item.material?.subtype,
@@ -431,18 +436,20 @@ function getLetteringOptions(lettering) {
 	// Normalize to an array to handle both single objects and arrays uniformly
 	const items = Array.isArray(lettering) ? lettering : [lettering];
 
-	return items
-		// Keep only objects that have a 'ref' property
-		.filter((item) => typeof item === 'object' && item.ref)
-		// Extract refs and flatten them (handles both array and single object refs)
-		.flatMap((item) => item.ref)
-		// Only keep the list of refs with a type format
-		.filter((ref) => ref?._?.match(/ type[\d.]+$/))
-		.map((ref) => {
-			// Extract the script from the url and display it in the option
-			const script = ref.target.replace(/^.*\/types\/(\w+)-.*$/, '$1');
-			return `${capitalizeFirstLetter(script)} ${ref._}`;
-		});
+	return (
+		items
+			// Keep only objects that have a 'ref' property
+			.filter((item) => typeof item === 'object' && item.ref)
+			// Extract refs and flatten them (handles both array and single object refs)
+			.flatMap((item) => item.ref)
+			// Only keep the list of refs with a type format
+			.filter((ref) => ref?._?.match(/ type[\d.]+$/))
+			.map((ref) => {
+				// Extract the script from the url and display it in the option
+				const script = ref.target.replace(/^.*\/types\/(\w+)-.*$/, '$1');
+				return `${capitalizeFirstLetter(script)} ${ref._}`;
+			})
+	);
 }
 
 /**
