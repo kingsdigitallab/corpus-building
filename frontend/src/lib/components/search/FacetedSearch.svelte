@@ -943,4 +943,9 @@
 			justify-content: center;
 		}
 	}
+
+	/* ZL: slightly improve disabled button contrast in dark mode */
+	:global(button:disabled) {
+		opacity: 0.75;
+	}
 </style>
