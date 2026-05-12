@@ -15,7 +15,7 @@ This interface is currently under development in collaboration with [King's Digi
 I.Sicily is a long-term project to construct and maintain a digital corpus of
 the inscriptions of ancient Sicily. The project aims to provide free open access
 data, and to follow the principles of Linked Open Data wherever possible. The
-online corpus, live since 2017, can be found at: <http://sicily.classics.ox.ac.uk>.
+online corpus, live since 2017, can be found at: <https://sicily.classics.ox.ac.uk>.
 
 The I.Sicily project aims to include all types of inscribed text, in all languages,
 across the whole of antiquity, beginning with the first written texts at the end
@@ -37,7 +37,7 @@ inscription, directly encoded in EpiDoc, which enables processing of all the
 information. These individual editions are published as HTML pages on the website but can also be
 searched and filtered through the website, as well as being freely available for
 download. All editing takes place in GitHub (which provides a full version history) and the data can also be accessed through the public [I.Sicily repository](https://github.com/ISicily/ISicily). We also present high resolution images where available, via a IIIF server (currently being upgraded). Bibliography is published in [Zotero](https://www.zotero.org/groups/382445/isicily/library), but also in the [FAIR Epigraphy bibliography](https://biblio.inscriptiones.org/).
-Collection data (museums, sites, etc.) was originally gathered in a database of [Sicilian museums](http://sicily.classics.ox.ac.uk/museums).
+[Collection data](http://sicily.classics.ox.ac.uk/museum) (museums, sites, etc.) was originally gathered in a database of Sicilian museums.
 Data is standardised and made potentially interopable by the use of
 recognised vocabularies, such as the [Pleiades gazetteer of ancient
 places](https://pleiades.stoa.org/) and the [EAGLE epigraphic
