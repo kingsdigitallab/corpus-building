@@ -80,7 +80,7 @@
 			html: translation?.html?.replace(/<h2.*?<\/h2>/g, '') || ''
 		};
 	}
-
+	/**ZL haha */
 	/**
 	 * Copy citation to clipboard
 	 */
@@ -705,7 +705,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 		color: white;
 	}
 
-	/**ZL comment test*/
+	/* *ZL comment test */
 	:global(.epidoc .line) {
 		/* Prevents long strings in XML display to run out of parent div 
 		See ISic000006 and CU https://app.clickup.com/t/86c7kmmrk */
