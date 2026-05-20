@@ -29,9 +29,9 @@
 			<li><BaseLink href="/museum">Museums</BaseLink></li>
 			<li>Guide</li>
 			{#if dev && debug}
-				<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>
-				<li><BaseLink href="/_qa">QA</BaseLink></li>
 			{/if}
+			<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>
+			<li><BaseLink href="/_qa">QA</BaseLink></li>
 			<li>
 				<ThemeToggle />
 			</li>
