@@ -13,11 +13,11 @@ export const footer = {
 				},
 				{
 					title: 'Guide',
-					href: ''
+					href: '/guide'
 				},
 				{
 					title: 'FAQ',
-					href: ''
+					href: '/faqs'
 				},
 				{
 					title: 'Technical Overview',
