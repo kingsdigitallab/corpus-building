@@ -1,9 +1,9 @@
 {
   "file": "ISic003343",
   "uri": "ISic003343",
-  "title": "I.Sicily inscription 003343",
+  "title": "A late antique terminus?",
   "status": {
-    "_": "unchecked"
+    "_": "draft"
   },
   "editions": [
     {
@@ -27,55 +27,69 @@
   "type": {
     "_": "terminus",
     "ana": "#function.terminus",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/96.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Boundary_marker",
+    "cert": "low"
   },
+  "support": "Described by Manganaro as 'un parallelepipedo rettangolare di arenaria' (a quadrangular cippus), recovered during ploughing and so damaged across the right side of one face. The stone is likely therefore to be of the coarse local limestone.",
   "objectType": {
     "_": "stele",
     "ana": "#object.stele",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/250.html"
   },
   "material": {
-    "_": "sandstone",
+    "_": "limestone",
     "ana": "#material.inorganic.stone",
     "type": "stone.unspecified",
     "subtype": [
       "unverified"
     ],
-    "ref": "http://www.eagle-network.eu/voc/material/lod/75.html"
+    "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "41",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "26",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "17",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Text on two of the faces (A) and (B), although it is unclear from Managanaro's description if these are the front and rear faces, or adjoining faces, and also on the upper surface.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Somewhat irregular and uneven letters, which include broken-bar alpha, Latin S, quadrate E, uncial omega.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-8",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line8",
+        "h": "20-30",
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -87,9 +101,10 @@
     ]
   },
   "date": {
-    "_": "Speculatively, first half of 4th century BCE (Manganaro)",
-    "notBefore": -400,
-    "notAfter": -351
+    "_": "Manganaro suggests first half of the fourth century BCE, but given the letter forms involved, and the potential confusion of alphabets, a late antique date seems far more likely",
+    "notBefore": 201,
+    "notAfter": 700,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -108,12 +123,19 @@
   "country": "Sicilia",
   "provenance": "Canicattini Bagni",
   "provenanceFound": {
-    "_": "Contr. Bibia",
+    "_": "Manganaro merely says that it probably emerged during ploughing in contrada Bibia (territory of Canicattini Bagni, SA), at some point prior to his publication in 2008. No further details are provided and current location is unknown.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "geo": [
+      37.062,
+      15.079
+    ],
+    "geoCert": "medium"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.062,
+    15.079
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -121,31 +143,16 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic003343_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Canicattini Bagni",
   "repository": "",
   "textLang": {
-    "_": "Messapic",
-    "mainLang": "cms",
-    "certainty": {
-      "locus": "value",
-      "match": "../@mainLang",
-      "assertedValue": "grc",
-      "desc": "Ancient Greek"
-    },
+    "_": "Ancient Greek?",
+    "mainLang": "grc",
+    "cert": "low",
     "languages": [
-      "Messapic",
-      "Ancient Greek (possibly)"
+      "Ancient Greek"
     ]
   },
   "bibliographyEdition": {
@@ -202,21 +209,18 @@
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised file from publication and other information",
+      "when": "2026-05-14",
+      "who": "#JP"
     }
   },
   "tmNumber": "645588",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic003343_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Manganaro Perrone, 2008, Un cippo fondiario in Messapico da Canicattini Bagni (territorio siracusano)"
   ],
@@ -225,18 +229,18 @@
   ],
   "keywords": [
     "isic003343",
-    "i.sicily inscription 003343",
+    "a late antique terminus?",
     {
-      "_": "unchecked"
+      "_": "draft"
     },
     "terminus",
     "stele",
-    "sandstone",
+    "limestone",
     "canicattini bagni",
     "sicilia",
     "sicily",
     "canicattini bagni",
-    "messapic",
-    "cms"
+    "ancient greek?",
+    "grc"
   ]
 }

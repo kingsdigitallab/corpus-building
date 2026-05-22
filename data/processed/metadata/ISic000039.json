@@ -29,28 +29,38 @@
   "type": {
     "_": "unknown",
     "ana": "#function.unknown",
-    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/2.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine"
+  },
+  "objectType": {
+    "_": "unknown",
+    "ana": "#object.unknown",
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine"
   },
   "material": {
     "_": "marble",
-    "ana": "#material.inorganic.stone",
-    "type": "stone.unspecified",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
     "subtype": [
       "unverified"
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "20",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "10.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "5",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -62,17 +72,22 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-2",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line2",
+        "h": "40-45",
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -84,9 +99,10 @@
     ]
   },
   "date": {
-    "_": "2nd — 3rd century CE",
+    "_": "2nd — 3rd century CE (so Bivona)",
     "notBefore": 101,
-    "notAfter": 300
+    "notAfter": 300,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -111,11 +127,19 @@
   "country": "Sicilia",
   "provenance": "Panhormus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in the ruins of the former monastery of the Stimmate (demolished 1785), in the area of the later Piazza G. Verdi",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "geo": [
+      38.1206299,
+      13.3544993
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.1206299,
+    13.3544993
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,16 +147,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000039_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -234,15 +249,12 @@
     }
   },
   "tmNumber": "644806",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000039_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 45
+    }
+  ],
   "publications": [
     "Bivona, 1970, ILMusPalermo"
   ],
@@ -255,6 +267,7 @@
     {
       "_": "draft"
     },
+    "unknown",
     "unknown",
     "marble",
     "panhormus",

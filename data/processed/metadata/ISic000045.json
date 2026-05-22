@@ -1,7 +1,7 @@
 {
   "file": "ISic000045",
   "uri": "ISic000045",
-  "title": "I.Sicily inscription 000045",
+  "title": "Fragmentary Latin funerary inscription",
   "status": {
     "_": "draft"
   },
@@ -28,51 +28,67 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
   },
-  "objectType": "",
+  "support": "Fragment of a marble plaque, missing the left side.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
     "_": "marble",
-    "ana": "#material.inorganic.stone",
-    "type": "stone.unspecified",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
     "subtype": [
       "unverified"
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "18",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "12.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "2",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Five lines of Latin letters, with a centred header in line 1.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-5",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line5",
+        "h": "25",
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -84,8 +100,8 @@
     ]
   },
   "date": {
-    "_": "2nd century CE (?)",
-    "notBefore": 101,
+    "_": "Later first or second century CE",
+    "notBefore": 51,
     "notAfter": 200
   },
   "places": [
@@ -111,8 +127,10 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Acquired by Gaetano di Cesare in January 1756, in Syracuse, but exact provenance not recorded; subsequently passed to the Museo della Regia Accademia, Palermo",
     "type": "found",
+    "subtype": "discovered ",
+    "when": "1756",
     "geo": null
   },
   "provenanceGeo": [],
@@ -123,16 +141,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000045_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -258,15 +267,12 @@
     }
   },
   "tmNumber": "491665",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000045_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 25,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "Mommsen, 1883, CIL",
     "Bivona, 1970, ILMusPalermo"
@@ -277,11 +283,12 @@
   ],
   "keywords": [
     "isic000045",
-    "i.sicily inscription 000045",
+    "fragmentary latin funerary inscription",
     {
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "marble",
     "syracusae",
     "siracusa",

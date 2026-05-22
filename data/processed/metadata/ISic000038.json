@@ -1,7 +1,7 @@
 {
   "file": "ISic000038",
   "uri": "ISic000038",
-  "title": "I.Sicily inscription 000038",
+  "title": "Epitaph of Maurica",
   "status": {
     "_": "draft"
   },
@@ -29,28 +29,39 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
+  },
+  "support": "Small irregular plaque of marble",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
     "_": "marble",
-    "ana": "#material.inorganic.stone",
-    "type": "stone.unspecified",
+    "ana": "#material.inorganic.stone.metamorphic_rock.marble",
+    "type": "stone.marble",
     "subtype": [
       "unverified"
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
+      "_": "22.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "25.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "2",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -62,17 +73,23 @@
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Poor quality carving in cursive lettering.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "15-25",
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -84,9 +101,10 @@
     ]
   },
   "date": {
-    "_": "Christian",
-    "notBefore": 201,
-    "notAfter": 600
+    "_": "Catacombs of the C4-C5 CE.",
+    "notBefore": 301,
+    "notAfter": 500,
+    "evidence": "archaeological-context"
   },
   "places": [
     {
@@ -111,11 +129,19 @@
   "country": "Sicilia",
   "provenance": "Panhormus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found underground during excavations for the foundations of the monastery of the Cappuchins near Porta d'Ossuna, in a large early Christian catacomb",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "geo": [
+      38.1160906,
+      13.3508104
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.1160906,
+    13.3508104
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -123,16 +149,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000038_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -258,15 +275,12 @@
     }
   },
   "tmNumber": "491830",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000038_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 15,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "Mommsen, 1883, CIL",
     "Bivona, 1970, ILMusPalermo"
@@ -277,11 +291,12 @@
   ],
   "keywords": [
     "isic000038",
-    "i.sicily inscription 000038",
+    "epitaph of maurica",
     {
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "marble",
     "panhormus",
     "palermo",
