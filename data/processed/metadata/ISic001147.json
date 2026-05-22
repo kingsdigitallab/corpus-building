@@ -1,7 +1,7 @@
 {
   "file": "ISic001147",
   "uri": "ISic001147",
-  "title": "I.Sicily inscription 001147",
+  "title": "Epitaph for Marcus Mounatios Philippos",
   "status": {
     "_": "draft"
   },
@@ -42,7 +42,13 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
+  },
+  "support": "A white marble plaque, well preserved",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
   },
   "material": {
     "_": "marble",
@@ -54,39 +60,51 @@
     "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
+      "_": "24.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "34",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "4.5",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Text is approximately centred, over three lines, reducing in size, with words broken to maintain the centring.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Lunate sigma and epsilon, curved bar alpha, phi with a triangular body, xsi formed like Zeta but with a crossed diagonal, mu with extended vertical strokes.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-3",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line3",
+        "h": "35-45",
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
@@ -125,8 +143,9 @@
   "country": "Sicilia",
   "provenance": "Thermae Himeraeae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Acquired by the Palermo museum 24 July 1873, from Di Giorgi of Termini Imerese.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -143,7 +162,7 @@
       "url": "ISic001147_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-05-23",
       "surfaceType": "front"
     }
   ],
@@ -281,9 +300,9 @@
       }
     ],
     "change": {
-      "_": "tagged names and persons",
-      "when": "2025-12-16",
-      "who": "#RG"
+      "_": "Jonathan Prag revised from photograph and publication",
+      "when": "2026-05-14",
+      "who": "#JP"
     }
   },
   "tmNumber": "492760",
@@ -292,10 +311,15 @@
     "url": "ISic001147_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-05-23",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 35,
+      "atMost": 45
+    }
+  ],
   "publications": [
     "Kaibel, 1890, IG",
     "Manni Piraino, 1973, IGMusPalermo"
@@ -306,11 +330,12 @@
   ],
   "keywords": [
     "isic001147",
-    "i.sicily inscription 001147",
+    "epitaph for marcus mounatios philippos",
     {
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "marble",
     "thermae himeraeae",
     "termini imerese",

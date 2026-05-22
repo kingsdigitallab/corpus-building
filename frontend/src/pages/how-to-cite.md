@@ -21,4 +21,4 @@ For more details on design and software products designed and developed by King'
 
 - [Code](https://github.com/kingsdigitallab/crossreads-petrography) repository for Petrographic environment 
 
-- Code and associated [dynamic](https://github.com/ISicily/ISicily) and [stable](https://doi.org/10.5281/zenodo.2556743) data repository for the overall Corpus building edition 
+- [Code](https://github.com/kingsdigitallab/corpus-building) and associated [dynamic](https://github.com/ISicily/ISicily) and [stable](https://doi.org/10.5281/zenodo.2556743) data repository for the overall Corpus building edition 

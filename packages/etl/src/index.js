@@ -205,6 +205,11 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   const bibliography = {};
 
   for (const file of files) {
+    if (file.includes('ISic09')) {
+      // GN: 22/05/2026, exclude those inscription files, out of CR research scope
+      continue;
+    }
+
     if (file.endsWith(".xml")) {
       if (
         options.inscriptionFilter &&

@@ -29,8 +29,14 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html",
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary",
     "cert": "low"
+  },
+  "support": "Three joining fragments of a marble plaque, broken / sawn off above, and probably on the left and right sides, but intact below.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
   },
   "material": {
     "_": "Fine to medium-grained, banded, white, smelly marble, likely Parian-2, Parian-4, Aphrodisian. Digital microscopy: homeoblastic to heteroblastic fabric (identification based on digital microscopy)",
@@ -44,29 +50,37 @@
     "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragments.contiguous"
+  },
   "dimensions": [
     {
+      "_": "34",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "26.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "3.5",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Two lines of Latin, with a large vacat below, partly occupied by palm branches.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -75,8 +89,11 @@
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line2",
+        "h": "30",
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -90,7 +107,8 @@
   "date": {
     "_": "later Roman",
     "notBefore": 301,
-    "notAfter": 500
+    "notAfter": 500,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -115,8 +133,10 @@
   "country": "Sicilia",
   "provenance": "Panhormus",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Recovered from the pavement of the Martorana church, and transferred to the museum 22 September 1873.",
     "type": "found",
+    "subtype": "discovered",
+    "when": "1873",
     "geo": null
   },
   "provenanceGeo": [],
@@ -127,16 +147,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic000037_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Palermo",
   "repository": {
@@ -301,15 +312,12 @@
     }
   },
   "tmNumber": "491829",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic000037_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
     "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
@@ -329,6 +337,7 @@
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "fine to medium-grained, banded, white, smelly marble, likely parian-2, parian-4, aphrodisian. digital microscopy: homeoblastic to heteroblastic fabric (identification based on digital microscopy)",
     "panhormus",
     "palermo",

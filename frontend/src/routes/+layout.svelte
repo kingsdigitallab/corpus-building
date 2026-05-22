@@ -54,7 +54,7 @@
 		</Transition>
 	</main>
 
-	<Footer />
+	<Footer debug={data.debug}  />
 </div>
 
 <style>
