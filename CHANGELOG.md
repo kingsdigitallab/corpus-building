@@ -1,5 +1,12 @@
 
 
+## [0.27.2](https://github.com/kingsdigitallab/corpus-building/compare/v0.27.1...v0.27.2) (2026-05-22)
+
+
+### Bug Fixes
+
+* moved style guide and qa links to footer (in debug + dev), fixed links to FAQ & guide ([2b22f49](https://github.com/kingsdigitallab/corpus-building/commit/2b22f491bdc07f6e7acd77f2dbed484103418ad3))
+
 ## [0.27.1](https://github.com/kingsdigitallab/corpus-building/compare/v0.27.0...v0.27.1) (2026-05-07)
 
 
