@@ -16,14 +16,14 @@
 			{#if material?.ref}
 				<a class="badge strong" href={material.ref}>
 					{material.type}
-					{#if material.subtype}
-						> {material.subtype}
+					{#if material.subtype && material.subtype.length }
+						> {material.subtype.join(', ')}
 					{/if}
 				</a>
 			{:else}
 				{material.type}
-				{#if material.subtype}
-					> {material.subtype}
+				{#if material.subtype && material.subtype.length }
+					> {material.subtype.join(', ')}
 				{/if}
 			{/if}
 		</dd>
