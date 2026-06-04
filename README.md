@@ -96,17 +96,29 @@ You can also run tests for specific workspaces from the root:
 See the [frontend README](frontend/README.md#adding-content) for instructions on
 how to add static pages to the site via markdown files.
 
-## Editorial workflow
+## Editorial and release workflow
 
-New editorial content should be added in the `research` branch. This branch is
-automatically deployed to the preview site in [GitHub Pages](https://kingsdigitallab.github.io/corpus-building/),
-together with the `develop` and `main` branches.
+Changes to the content or code should normally happen on the `develop` branch. 
+Any commit on that branch will automatically trigger a release to the **[staging/preview site](https://kingsdigitallab.github.io/corpus-building/)**.
 
-Content that needs to be visible to the public should be added to the `main`
-branch. Content to the `main` branch needs to be added via a pull request.
+Once the changes accumulated on the staging site are ready for public release
+they can be merged into the `main` branch by a developer or with [a new Pull Request](https://github.com/kingsdigitallab/corpus-building/compare/main...develop).
+Any update of that branch will automatically trigger a release to the Oxford **[public/live/production site](https://sicily.classics.ox.ac.uk/)** via SSH.
 
-## Deployment
+In both cases [the automated release process](https://github.com/kingsdigitallab/corpus-building/blob/main/.github/workflows/frontend.yml) from a modified branch first does the following:
+1. fetches the latest version of the TEI corpus from https://github.com/ISicily/ISicily
+2. run the ETL process from that corpus to rebuild the site metadata and indices
+3. run some automated tests and stops the release if they fail
+4. commit the updated metadata and indices to the branch
 
-The site is automatically deployed, via a [GitHub Actions workflow](.github/workflows/frontend.yml), to GitHub Pages whenever there are commits to the `develop`, `main` or `research` branches.
+The release process may take up to 30 minutes to complete. 
+[Current and past release workflows are visible on the Actions tab](https://github.com/kingsdigitallab/corpus-building/actions) 
+of the repository. 
+There can be a slight delay between the end of the action 
+and the actual refresh of the content on the target site. 
+Also note that [hard-refresh in your browser](https://www.wikihow.com/Force-Refresh-in-Your-Internet-Browser) 
+may be needed to flush old, cached content.
 
-The preview site is available at [https://kingsdigitallab.github.io/corpus-building/](https://kingsdigitallab.github.io/corpus-building/).
+Small **hot fixes** to the code or content of the live site can be done 
+with a Pull Request directly on the `main` branch. 
+In that situation extra care should be taken when verifying the changes.
