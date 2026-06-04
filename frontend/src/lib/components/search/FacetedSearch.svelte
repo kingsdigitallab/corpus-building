@@ -574,6 +574,7 @@
 					<option value="all">All data</option>
 					<option value="lemmas-text-only">Text only</option>
 					<option value="lemmas-text-only-exact">Text only (lemma)</option>
+					<option value="isic-numbers">ISic number</option>
 				</select>
 				<Button.Root class="primary" type="submit" disabled={!$searchQueryParam}>Search</Button.Root
 				>
