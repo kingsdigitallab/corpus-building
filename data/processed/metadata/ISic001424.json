@@ -49,7 +49,13 @@
   "type": {
     "_": "lex sacra",
     "ana": "#function.lex_sacra",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/10.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Lex_sacra"
+  },
+  "support": "A large block of limestone reused in a later (Hellenistic) wall, near the SW gate of the Hellenistic city. The block tapers in both dimensions, and is very worn. The text begins on the front face and continues on the left side face.",
+  "objectType": {
+    "_": "block",
+    "ana": "#object.block",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/189.html"
   },
   "material": {
     "_": "limestone",
@@ -64,14 +70,17 @@
   },
   "dimensions": [
     {
+      "_": "108",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "62-44",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "39-22",
       "unit": "cm",
       "dimension": "depth"
     }
@@ -92,10 +101,23 @@
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
-        "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "l": "Line a.1 to a.8",
+        "from": "linea.1",
+        "to": "linea.8",
+        "h": "40-75",
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "75"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line b.9 to b.10",
+        "from": "lineb.9",
+        "to": "lineb.8",
+        "h": "50-58",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "58"
       },
       {
         "type": "interlinear",
@@ -134,8 +156,9 @@
   "country": "Sicilia",
   "provenance": "Megara Hyblaea",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found in 1953 in re-use in the Hellenistic wall near the SW gate.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -146,16 +169,7 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [
-    {
-      "n": "screen",
-      "url": "ISic001424_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-      "surfaceType": "front"
-    }
-  ],
+  "graphics": [],
   "region": "Sicily",
   "settlement": "Megara Hyblaea",
   "repository": {
@@ -487,15 +501,16 @@
     }
   },
   "tmNumber": "644974",
-  "facsimile": {
-    "n": "screen",
-    "url": "ISic001424_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
-    "surfaceType": "front"
-  },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 40,
+      "atMost": 75
+    },
+    {
+      "atLeast": 50,
+      "atMost": 58
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Supplementum epigraphicum graecum, 1923-",
@@ -535,6 +550,7 @@
       "_": "draft"
     },
     "lex sacra",
+    "block",
     "limestone",
     "megara hyblaea",
     "megara iblea",

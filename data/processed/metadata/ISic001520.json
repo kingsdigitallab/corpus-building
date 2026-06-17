@@ -1,7 +1,7 @@
 {
   "file": "ISic001520",
   "uri": "ISic001520",
-  "title": "I.Sicily inscription 001520",
+  "title": "Epitaph for Alexander and Rhodope",
   "status": {
     "_": "draft"
   },
@@ -27,8 +27,9 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "http://www.eagle-network.eu/voc/typeins/lod/92.html"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
   },
+  "support": "A square marble plaque, broken in half vertically, and reconnected.",
   "material": {
     "_": "Fine-grained marble, likely Lunense, Docimian, Pentelic. Digital microscopy: heteroblastic to homeoblastic fabric (identification based on pXRF, digital microscopy)",
     "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Lunense #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Docimian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Pentelic",
@@ -41,13 +42,17 @@
     "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete.broken"
+  },
   "dimensions": [
     {
+      "_": "20",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "20",
       "unit": "cm",
       "dimension": "width"
     },
@@ -58,15 +63,19 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Seven lines of crudely incised Greek letters, filling the face.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Very crudely scratched letters, lunate epsilon and sigma, uncial omega",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -85,9 +94,9 @@
     ]
   },
   "date": {
-    "_": "Christian (?);\n                                Orsi, followed by Agnello, hypothesis a ref. to a bishop of Syracuse in the early 7th century CE",
-    "notBefore": 601,
-    "notAfter": 700
+    "_": "Orsi speculated on an identification with a hypothetical bishop of the early 7th century, but this remains highly speculative.",
+    "notBefore": 451,
+    "notAfter": 650
   },
   "places": [
     {
@@ -112,7 +121,7 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Catacomb of S.Giovanni",
+    "_": "The left fragment (inv.14469) was found in the Catacomb of S.Giovanni in 1895, in the first northern gallery, III corsia est; the right fragment (inv.191) was already in the museum collection before 1888 and recorded so by Orsi in his Taccuini. Now on display, sector F, Museo Archeologico Regionale Paolo Orsi",
     "type": "found",
     "subtype": "discovered",
     "geo": null
@@ -129,9 +138,9 @@
     {
       "n": "screen",
       "url": "ISic001520_tiled.tif",
-      "height": "3680px",
-      "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "height": "4705px",
+      "width": "4921px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo Archeologico Regionale Paolo Orsi",
       "surfaceType": "front"
     }
   ],
@@ -159,10 +168,16 @@
       }
     }
   },
-  "idno": {
-    "_": "14469",
-    "type": "inventory"
-  },
+  "idno": [
+    {
+      "_": "191",
+      "type": "inventory"
+    },
+    {
+      "_": "14469",
+      "type": "inventory"
+    }
+  ],
   "textLang": {
     "_": "Ancient Greek",
     "mainLang": "grc",
@@ -223,6 +238,23 @@
         "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
         "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
         "year": "1988"
+      },
+      {
+        "author": "Orsi",
+        "date": "2018",
+        "citedRange": "Tacc. 1, p. 119",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/RGRSRUHK"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002617",
+          "target": "https://biblio.inscriptiones.org/epig10002617"
+        },
+        "inscriptionDate": "2018",
+        "title": "I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4",
+        "citation": "<span>Paolo Orsi, <i>I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4</i>, a c. di Gioconda Lamagna e Giuseppina Monterosso, Accademia Nazionale dei Lincei. Monumenti Antichi. Serie Miscellanea 20 (Rome: Giorgio Bretschneider Editore, 2018)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RGRSRUHK",
+        "year": "2018"
       }
     ]
   },
@@ -284,34 +316,36 @@
       }
     ],
     "change": {
-      "_": "Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts",
-      "when": "2026-01-19",
-      "who": "#RC"
+      "_": "Jonathan Prag added image, revised file",
+      "when": "2026-05-11",
+      "who": "#JP"
     }
   },
   "tmNumber": "645020",
   "facsimile": {
     "n": "screen",
     "url": "ISic001520_tiled.tif",
-    "height": "3680px",
-    "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "height": "4705px",
+    "width": "4921px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo Archeologico Regionale Paolo Orsi",
     "surfaceType": "front"
   },
   "letterHeights": [],
   "publications": [
     "Agnello, 1953, Silloge di iscrizioni paleocristiane della Sicilia",
     "Orsi, 1895, Nuove esplorazioni nelle catacombe di S. Giovanni nel 1894",
-    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano"
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
+    "Orsi, 2018, I Taccuini. I. Riproduzione anastatica e trascrizione dei Taccuini 1-4"
   ],
   "zotero": [
     "D9BZFDDR",
     "3T2DS245",
-    "RZSFKACR"
+    "RZSFKACR",
+    "RGRSRUHK"
   ],
   "keywords": [
     "isic001520",
-    "i.sicily inscription 001520",
+    "epitaph for alexander and rhodope",
     {
       "_": "draft"
     },

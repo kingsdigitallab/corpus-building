@@ -2,7 +2,8 @@
 	import * as config from '$lib/config';
 	import { VisBulletLegend, VisLeafletMap } from '@unovis/svelte';
 	import { BulletShape, LeafletMap, Tooltip } from '@unovis/ts';
-	import { Plus, Minus, Maximize } from 'lucide-svelte';
+	import { Plus, Minus, Maximize, Expand, Shrink } from 'lucide-svelte';
+	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { formatKey, getLeaves } from '../utils.js';
 
@@ -19,6 +20,7 @@
 
 	/** @type {any} */
 	let mapRef = $state();
+	let fullscreen = $state(false);
 
 	const PALETTE = Array.from({ length: 12 }, (_, i) => `var(--vis-color${i})`);
 
@@ -130,6 +132,23 @@
 			}
 		}
 	};
+
+	function toggleFullscreen() {
+		const el = document.querySelector('.inscription-map');
+		if (!document.fullscreenElement) {
+			el?.requestFullscreen();
+		} else {
+			document.exitFullscreen();
+		}
+	}
+
+	onMount(() => {
+		function onChange() {
+			fullscreen = !!document.fullscreenElement;
+		}
+		document.addEventListener('fullscreenchange', onChange);
+		return () => document.removeEventListener('fullscreenchange', onChange);
+	});
 </script>
 
 {#key selectedColourBy}
@@ -176,6 +195,18 @@
 				title="Fit view"
 			>
 				<Maximize size={16} />
+			</button>
+			<button
+				class="map-control-btn"
+				onclick={toggleFullscreen}
+				aria-label={fullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+				title={fullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+			>
+				{#if fullscreen}
+					<Shrink size={16} />
+				{:else}
+					<Expand size={16} />
+				{/if}
 			</button>
 		</div>
 	</div>
@@ -236,5 +267,10 @@
 	.map-control-btn:hover {
 		background: var(--surface-2);
 		color: var(--text-2);
+	}
+
+	.inscription-map:fullscreen {
+		height: 100vh;
+		width: 100vw;
 	}
 </style>

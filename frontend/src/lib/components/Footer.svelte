@@ -1,10 +1,19 @@
 <script>
+	import { dev } from '$app/environment';
 	import { base } from '$app/paths';
 	import * as config from '$lib/config';
 	import { footer } from '$lib/footer';
 	import BaseLink from '$lib/components/BaseLink.svelte';
 
 	const version = import.meta.env.APP_VERSION;
+
+	/**
+	 * @typedef {Object} Props
+	 * @property {boolean} [debug]
+	 */
+
+	/** @type {Props} */
+	let { debug = false } = $props();
 </script>
 
 <footer>
@@ -69,6 +78,12 @@
 				>
 			</li>
 		</ul>
+		{#if dev && debug}
+			<ul>
+				<li><BaseLink href="/_qa">QA</BaseLink></li>
+				<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>
+			</ul>
+		{/if}
 	</section>
 </footer>
 

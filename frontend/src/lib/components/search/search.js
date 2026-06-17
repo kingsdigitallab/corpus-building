@@ -492,7 +492,7 @@ function getHierarchicalValues(value, discardRoot = true) {
  * @typedef {{
  *   limit?: number;
  *   query?: string;
- *   searchMode?: 'all' | 'lemmas-text-only' | 'lemmas-text-only-exact';
+ *   searchMode?: 'all' | 'lemmas-text-only' | 'lemmas-text-only-exact' | 'isic-numbers';
  *   page?: number;
  *   sort?: string;
  *   filters?: Record<string, any>;
@@ -520,16 +520,31 @@ export function search({
 		throw new Error('Error loading itemsjs engine');
 	}
 
-	let transformedQuery = query;
-	if (query.trim() && searchMode === 'lemmas-text-only-exact') {
-		transformedQuery = `lemma_${query}`;
-	} else if (query.trim() && searchMode === 'lemmas-text-only') {
-		transformedQuery = `text_${query}`;
-	}
+	const queryTrimmed = query.trim()
 
-	const textSearchResults = searchEngine.flexIndex.search(transformedQuery, {
-		limit: 5000
-	});
+	let isicNumbersToMatch = null
+	let fullTextResultIds = null
+
+	if (searchMode === 'isic-numbers') {
+		const idTemplate = 'ISic000000'
+		isicNumbersToMatch = queryTrimmed.split(/\s+/).map(
+			qid => (idTemplate.substring(0, idTemplate.length - qid.length) + qid).toLowerCase()
+		)
+	} else {
+		if (queryTrimmed) {
+			let transformedQuery = queryTrimmed;
+			if (searchMode === 'lemmas-text-only-exact') {
+				transformedQuery = `lemma_${query}`;
+			}
+			if (searchMode === 'lemmas-text-only') {
+				transformedQuery = `text_${query}`;
+			}
+			fullTextResultIds = searchEngine.flexIndex.search(transformedQuery, {
+				limit: 5000
+			});
+
+		}
+	}
 
 	const searchOptions = {
 		per_page: limit,
@@ -537,6 +552,14 @@ export function search({
 		sort,
 		filters,
 		filter: (item) => {
+			// GN: note that when ids are provided to itemsjs.search()
+			// option.filter() will be ignored.
+			if (isicNumbersToMatch) {
+				if (!isicNumbersToMatch.includes(item.file.toLowerCase())) {
+					return false
+				}
+			}
+
 			const matchesDateRange =
 				(dateRange[0] === undefined && dateRange[1] === undefined) ||
 				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
@@ -550,8 +573,9 @@ export function search({
 		}
 	};
 
-	if (transformedQuery) {
-		searchOptions.ids = textSearchResults;
+	// move inside condition above
+	if (fullTextResultIds !== null) {
+		searchOptions.ids = fullTextResultIds
 	}
 
 	return searchEngine.itemsEngine.search(searchOptions);
