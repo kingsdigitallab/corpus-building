@@ -25,7 +25,7 @@
 		</hgroup>
 	</header>
 
-	<section class="inscriptions">
+	<section id="inscriptions" class="inscriptions">
 		<h2>Inscriptions</h2>
 		<InscriptionTable
 			{inscriptions}

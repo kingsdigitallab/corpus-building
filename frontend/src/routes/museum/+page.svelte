@@ -180,9 +180,13 @@
 								: ''}{entry.location?.country ? ` • ${entry.location.country}` : ''}
 						</span>
 						{#if entry.inscriptionCount > 0}
-							<span class="badge" title="Linked inscriptions">
+							<a
+								class="badge"
+								href={`museum/${entry.slug}#inscriptions`}
+								title="View linked inscriptions"
+							>
 								{entry.inscriptionCount} inscription{entry.inscriptionCount === 1 ? '' : 's'}
-							</span>
+							</a>
 						{/if}
 					</div>
 					{#if entry.description}

@@ -11,11 +11,14 @@
 				{#if place}
 					{#if place.offset}<em>{place.offset}</em>{/if}
 					{#if place.ref}
-						<a class="strong" href={place.ref} title={place._}>{place._}</a>
+						<a class="strong" href={place.ref} title={place._}>
+							{place._} ({place.type})
+						</a>
 					{:else}
-						<span class="strong" title={place._}>{place._}</span>
+						<span class="strong" title={place._}>
+							{place._} ({place.type})
+						</span>
 					{/if}
-					({place.type})
 				{/if}
 			</li>
 		{/each}
@@ -29,5 +32,14 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+	}
+	/**ZL: changed the focus ring size - covering the entire badge*/
+	li.badge:focus-within {
+		outline: 2px solid var(--yellow-3);
+		outline-offset: 4px;
+	}
+
+	li.badge a:focus {
+		outline: none;
 	}
 </style>

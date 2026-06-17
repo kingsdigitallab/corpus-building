@@ -113,6 +113,7 @@
 		text-wrap: balance;
 	}
 
+	/**ZL: adjust discover-link style */
 	.discover-link {
 		align-items: center;
 		color: var(--text-1);
@@ -124,9 +125,30 @@
 
 		min-height: 44px;
 		padding-block: var(--size-1);
+
+		border: var(--border-size-1) solid var(--border-color);
+		border-radius: var(--radius);
+		padding: var(--size-2) var(--size-3);
+		width: fit-content;
 	}
 
+	/**ZL: adding hover state for the discover-link button */
+	.discover-link:hover {
+		border-color: var(--brown-1);
+	}
+
+	.discover-link:hover .discover-link-text {
+		text-decoration: underline;
+	}
+
+	/**ZL: adjust discover-link style */
 	.arrow {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/*.arrow {
 		border-radius: var(--radius);
 		border: var(--border-size-1) solid var(--border-color);
 		padding-inline: var(--size-2);
@@ -136,10 +158,11 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-	}
+	} */
 
+	/**ZL: adjust discover-link style */
 	.discover-link-text {
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 	.hero-right {

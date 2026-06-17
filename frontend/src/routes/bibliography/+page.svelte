@@ -169,9 +169,13 @@
 							{entry.author || '—'}{entry.date ? ` • ${entry.date}` : ''}
 						</span>
 						{#if countInscriptions(entry) > 0}
-							<span class="badge" title="Linked inscriptions">
+							<a
+								class="badge"
+								href={`bibliography/${entry.key}#inscriptions`}
+								title="View linked inscriptions"
+							>
 								{countInscriptions(entry)} inscription{countInscriptions(entry) === 1 ? '' : 's'}
-							</span>
+							</a>
 						{/if}
 					</div>
 					<div class="actions">

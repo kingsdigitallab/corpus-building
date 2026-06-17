@@ -83,6 +83,21 @@
 		color: var(--text-1);
 	}
 
+	/* ZL: table row, keeps links colours stable after visited */
+	:global([data-color-scheme='dark'] td a.badge),
+	:global([data-color-scheme='dark'] td a.badge:visited),
+	:global([data-color-scheme='dark'] td .badge a),
+	:global([data-color-scheme='dark'] td .badge a:visited) {
+		color: var(--text-2) !important;
+	}
+
+	:global([data-color-scheme='light'] td a.badge),
+	:global([data-color-scheme='light'] td a.badge:visited),
+	:global([data-color-scheme='light'] td .badge a),
+	:global([data-color-scheme='light'] td .badge a:visited) {
+		color: var(--text-2) !important;
+	}
+
 	:global(td .inscription-date),
 	:global(td .inscription-place li) {
 		font-size: var(--font-size-0);

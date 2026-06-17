@@ -782,6 +782,17 @@
 		}
 	}
 
+	form :global(button) {
+		transition:
+			border-color 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	form :global(button:hover:not(:disabled)) {
+		border-color: var(--brand-2);
+		box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand-2) 35%, transparent);
+	}
+
 	@media (max-width: 768px) {
 		form {
 			flex-direction: column;
