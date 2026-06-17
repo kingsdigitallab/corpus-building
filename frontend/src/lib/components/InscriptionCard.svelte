@@ -265,6 +265,16 @@
 		font-size: var(--font-size-1);
 	}
 
+	/* ZL: added new badge rules for keyboard navigation - enlarge the focus ring */
+	dd.badge:focus-within {
+		outline: 2px solid var(--yellow-3);
+		outline-offset: 4px;
+	}
+
+	dd.badge a:focus {
+		outline: none;
+	}
+
 	.card-footer {
 		border-top: 0.5px solid color-mix(in srgb, var(--border-color) 70%, transparent);
 		bottom: 0;
