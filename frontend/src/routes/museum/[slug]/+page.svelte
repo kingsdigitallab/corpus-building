@@ -71,7 +71,7 @@
 	</header>
 
 	{#if inscriptions.length > 0}
-		<section class="inscriptions">
+		<section id="inscriptions" class="inscriptions">
 			<h2>Inscriptions</h2>
     		<InscriptionTable {inscriptions}
 				showInventoryNumber={true}
