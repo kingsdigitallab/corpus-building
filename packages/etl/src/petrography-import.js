@@ -21,7 +21,12 @@ export function updateMaterialElement(xml, entry) {
   // Match the opening <material ...> tag, possibly spanning a line
   const materialTagRegex = /<material(\s[^>]*)>/;
   const match = xml.match(materialTagRegex);
-  if (!match) return xml;
+  if (!match) { 
+    console.warn(
+      `[petrography-import] ${entry.isic}: material element not found`,
+    );
+    return xml;
+  }
 
   let attrs = match[1];
 
@@ -142,8 +147,9 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
       ? allRecords.filter((r) => normalizedFilter.includes(r.isic))
       : allRecords;
 
-  let modified = 0;
-  let skipped = 0;
+  let changedCount = 0;
+  let missingXmlCount = 0;
+  let unchangedCount = 0;
 
   for (const entry of records) {
     const xmlPath = path.join(xmlDir, `${entry.isic}.xml`);
@@ -152,9 +158,9 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
       xml = await fs.readFile(xmlPath, "utf-8");
     } catch {
       console.warn(
-        `[petrography-import] Skipping ${entry.isic}: XML file not found`,
+        `[petrography-import] ${entry.isic}: no XML file found, skipped`,
       );
-      skipped++;
+      missingXmlCount++;
       continue;
     }
 
@@ -162,18 +168,22 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
 
     if (updated === xml) {
       console.warn(
-        `[petrography-import] No changes made to ${entry.isic} (material element not found?)`,
+        `[petrography-import] ${entry.isic}: unchanged`,
       );
-      skipped++;
+      unchangedCount++;
       continue;
+    } else {
+      console.info(
+        `[petrography-import] ${entry.isic}: modified`,
+      );
     }
 
     await fs.writeFile(xmlPath, updated);
-    modified++;
+    changedCount++;
   }
 
   console.log(
-    `[petrography-import] Done. Modified: ${modified}, Skipped: ${skipped}`,
+    `[petrography-import] Done. Changed: ${changedCount}, Unchanged: ${unchangedCount}, No XML: ${missingXmlCount}`,
   );
 }
 
