@@ -150,8 +150,18 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
   let changedCount = 0;
   let missingXmlCount = 0;
   let unchangedCount = 0;
+  let duplicatedCount = 0;
+  let lastEntry = null;
 
   for (const entry of records) {
+    if (entry.isic == lastEntry?.isic) {
+      console.warn(
+        `[petrography-import] ${entry.isic}: duplicated entry`
+      )
+      duplicatedCount++;
+    }
+    lastEntry = entry
+
     const xmlPath = path.join(xmlDir, `${entry.isic}.xml`);
     let xml;
     try {
@@ -183,7 +193,7 @@ export async function importPetrographyJson(jsonPath, xmlDir, filter = []) {
   }
 
   console.log(
-    `[petrography-import] Done. Changed: ${changedCount}, Unchanged: ${unchangedCount}, No XML: ${missingXmlCount}`,
+    `[petrography-import] Done. Changed: ${changedCount}, Unchanged: ${unchangedCount}, No XML: ${missingXmlCount}, Duplicated: ${duplicatedCount}`,
   );
 }
 
