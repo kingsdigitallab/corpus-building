@@ -8,6 +8,7 @@
 	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
 	import InscriptionMaterialDetail from '$lib/components/InscriptionMaterialDetail.svelte';
+	import InscriptionType from '$lib/components/InscriptionType.svelte';
 	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
@@ -417,13 +418,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 			<section id="text-type">
 				<h2>Text type</h2>
 				<p>
-					{#if metadata.type?.ref}
-						<a class="badge strong" href={metadata.type.ref}
-							>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
-						>
-					{:else}
-						{metadata.type?._ || config.EMPTY_PLACEHOLDER}
-					{/if}
+					<InscriptionType {metadata} />
 				</p>
 			</section>
 

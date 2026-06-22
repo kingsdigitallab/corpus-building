@@ -3,6 +3,7 @@
 	import * as config from '$lib/config';
 	import { LucideExternalLink } from 'lucide-svelte';
 	import { onMount } from 'svelte';
+	import InscriptionType from '../InscriptionType.svelte';
 
 	const { slug, metadata, images } = $props();
 	let curImageTitle = $state(images[0]?.desc || '');
@@ -87,19 +88,7 @@
 		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
 		<dd class="inscription-type">
-			{#if metadata.type}
-				{@const inscriptionType = metadata.type}
-				{#if inscriptionType?.ref}
-					<a class="badge strong" href={inscriptionType.ref}
-						>{inscriptionType?._ || config.EMPTY_PLACEHOLDER}</a
-					>
-				{:else}
-					{inscriptionType?._ || config.EMPTY_PLACEHOLDER}
-				{/if}
-				{#if inscriptionType.certainty}
-					<span class="badge">{inscriptionType.certainty.desc}</span>
-				{/if}
-			{/if}
+			<InscriptionType {metadata} showCertainty=true />
 		</dd>
 		<dt>Object type</dt>
 		{#if metadata?.objectType}

@@ -3,6 +3,7 @@
 	import InscriptionLink from './InscriptionLink.svelte';
 	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
+	import InscriptionType from './InscriptionType.svelte';
 
 	let {
 		inscription,
@@ -42,11 +43,7 @@
 	<td><InscriptionPlace {inscription} /></td>
 	<td><InscriptionMaterial material={inscription.material} /></td>
 	<td>
-		{#if inscription.type?.ref}
-			<a class="badge" href={inscription.type.ref}>{inscription.type?._}</a>
-		{:else}
-			{inscription.type?._ || 'N/A'}
-		{/if}
+		<InscriptionType {metadata} aClass="badge" />
 	</td>
 	<td>
 		{#if objectType?.ref}
