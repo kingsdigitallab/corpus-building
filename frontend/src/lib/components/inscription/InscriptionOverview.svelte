@@ -88,7 +88,7 @@
 		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
 		<dt>Text type</dt>
 		<dd class="inscription-type">
-			<InscriptionType {metadata} showCertainty=true />
+			<InscriptionType inscription={metadata} showCertainty=true />
 		</dd>
 		<dt>Object type</dt>
 		{#if metadata?.objectType}

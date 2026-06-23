@@ -43,7 +43,7 @@
 	<td><InscriptionPlace {inscription} /></td>
 	<td><InscriptionMaterial material={inscription.material} /></td>
 	<td>
-		<InscriptionType {metadata} aClass="badge" />
+		<InscriptionType {inscription} aClass="badge" />
 	</td>
 	<td>
 		{#if objectType?.ref}

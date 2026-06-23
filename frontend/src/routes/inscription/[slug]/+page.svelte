@@ -418,7 +418,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 			<section id="text-type">
 				<h2>Text type</h2>
 				<p>
-					<InscriptionType {metadata} />
+					<InscriptionType inscription={metadata} />
 				</p>
 			</section>
 
