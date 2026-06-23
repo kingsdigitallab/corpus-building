@@ -594,10 +594,11 @@ export function search({
 				(dateRange[0] === undefined && dateRange[1] === undefined) ||
 				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
 
-			const matchesLetterHeightRange = true;
-			(letterHeightRange[0] === undefined && letterHeightRange[1] === undefined) ||
-				(item.letterHeightAtLeast >= letterHeightRange[0] &&
-					item.letterHeightAtMost <= letterHeightRange[1]);
+			const matchesLetterHeightRange = (
+					letterHeightRange[0] === undefined && letterHeightRange[1] === undefined
+				) || (item.letterHeightAtLeast >= letterHeightRange[0] &&
+					item.letterHeightAtMost <= letterHeightRange[1]
+				);
 
 			return matchesDateRange && matchesLetterHeightRange;
 		}
