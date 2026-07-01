@@ -58,7 +58,7 @@ jobs:
   pages:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refers/heads/develop'
+    if: github.ref == 'refs/heads/develop'
 
     strategy:
       matrix:
