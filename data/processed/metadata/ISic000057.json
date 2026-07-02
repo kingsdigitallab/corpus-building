@@ -1,7 +1,7 @@
 {
   "file": "ISic000057",
   "uri": "ISic000057",
-  "title": "I.Sicily inscription 000057",
+  "title": "Epitaph for Laelia Coprilla",
   "status": {
     "_": "draft"
   },
@@ -31,6 +31,12 @@
     "ana": "#function.funerary",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
   },
+  "support": "A thick square plaque of limestone",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
     "_": "limestone",
     "type": "inorganic.stone",
@@ -39,39 +45,61 @@
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
+      "_": "36",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "36",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "15.5",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The text is centred on the stone, with the last line much smaller",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Plainly cut letters, or a fairly tall and narrow module, with simple bar serifs; C and O remain quite wide.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "50-60",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "60"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 5",
+        "from": "line5",
+        "to": "line5",
+        "h": "20-25",
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "25"
       },
       {
         "type": "interlinear",
@@ -83,9 +111,9 @@
     ]
   },
   "date": {
-    "_": "Imperial",
+    "_": "First or second century CE",
     "notBefore": 1,
-    "notAfter": 300
+    "notAfter": 200
   },
   "places": [
     {
@@ -110,8 +138,9 @@
   "country": "Sicilia",
   "provenance": "Thermae Himeraeae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Observed in Termini already by Gualtherus 1624.",
     "type": "found",
+    "subtype": "discovered",
     "geo": null
   },
   "provenanceGeo": [],
@@ -321,13 +350,22 @@
       }
     ],
     "change": {
-      "_": "Victoria Fendel's lemmatizations were added",
-      "when": "2025-07-24",
-      "who": "#VF"
+      "_": "Jonathan Prag revised from published data",
+      "when": "2026-05-25",
+      "who": "#JP"
     }
   },
   "tmNumber": "285311",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 60
+    },
+    {
+      "atLeast": 20,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "Gualtherus, 1624, Siciliae obiacentium insular et Bruttiorum antiquae tabulae cum animadversionibus Georgii Gualtheri",
     "Gualtherus, 1624 [1625], Siciliæ obiacentium insular. et Bruttiorum antiquæ tabulæ, cum animadversionib",
@@ -346,11 +384,12 @@
   ],
   "keywords": [
     "isic000057",
-    "i.sicily inscription 000057",
+    "epitaph for laelia coprilla",
     {
       "_": "draft"
     },
     "funerary",
+    "plaque",
     "limestone",
     "thermae himeraeae",
     "termini imerese",

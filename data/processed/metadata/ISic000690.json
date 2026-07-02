@@ -1,9 +1,9 @@
 {
   "file": "ISic000690",
   "uri": "ISic000690",
-  "title": "I.Sicily inscription 000690",
+  "title": "Epitaph for Ionia Iulia",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -28,8 +28,13 @@
   "type": {
     "_": "funerary",
     "ana": "#function.funerary",
-    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary",
-    "cert": "low"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
+  },
+  "support": "A tall narrow stele of coarse 'sandstone', rectangular in form with a triangular pediment c.10 cm high.",
+  "objectType": {
+    "_": "stele",
+    "ana": "#object.stele",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/250"
   },
   "material": {
     "_": "sandstone",
@@ -39,39 +44,51 @@
     "ref": "http://www.eagle-network.eu/voc/material/lod/75.html",
     "subtype": []
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete"
+  },
   "dimensions": [
     {
+      "_": "122",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "37",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "15",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The text is set out over a single line across the width of the stele, some 25cm below the pediment.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Plain letters of a fairly square module; triangular interpunct.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "42-52",
+        "unit": "mm",
+        "atLeast": "42",
+        "atMost": "52"
       },
       {
         "type": "interlinear",
@@ -83,9 +100,10 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "Probably first century CE.",
+    "notBefore": -21,
+    "notAfter": 100,
+    "evidence": "lettering, archaeological-context"
   },
   "places": [
     {
@@ -110,17 +128,25 @@
   "country": "Sicilia",
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Found in excavations by T. Sidoti in Contrada Scozia (or Scrozzo), in front of the 'porta a tenaglia', in the area of a necropolis",
+    "_": "Found in excavations by T. Sidoti in Contrada Scozia (or Scrozzo), in front of the 'porta a tenaglia', in the area of a necropolis ",
     "type": "found",
     "subtype": "discovered",
     "when": "1970",
-    "geo": null
+    "geo": [
+      38.1416969,
+      15.0421195
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.1416969,
+    15.0421195
+  ],
   "provenanceObserved": {
-    "_": "Prag 2022-07-14, in the depositi at the archaeological site.",
+    "_": "Prag 2022-07-14, in the depositi at the archaeological site (but with limited accessibility).",
     "type": "observed",
     "subtype": "autopsied",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -130,7 +156,7 @@
       "url": "ISic000690_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
       "surfaceType": "front"
     }
   ],
@@ -248,9 +274,9 @@
       }
     ],
     "change": {
-      "_": "Epidoc editing",
-      "when": "2021-05-21",
-      "who": "#AA"
+      "_": "Jonathan Prag revised from autopsy notes",
+      "when": "2026-05-28",
+      "who": "#JP"
     }
   },
   "tmNumber": "493941",
@@ -259,10 +285,15 @@
     "url": "ISic000690_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 42,
+      "atMost": 52
+    }
+  ],
   "publications": [
     "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
     "Fasolo, 2013, Tyndaris e il suo territorio. Volume 1. Introduzione alla carta archeologica del territorio di Tindari"
@@ -273,11 +304,12 @@
   ],
   "keywords": [
     "isic000690",
-    "i.sicily inscription 000690",
+    "epitaph for ionia iulia",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "funerary",
+    "stele",
     "sandstone",
     "tyndaris",
     "tindari",
