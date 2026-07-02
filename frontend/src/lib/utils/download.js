@@ -43,11 +43,6 @@ export async function downloadInscriptionsCSV(summary, inscriptions, onProgress)
 				diplomatic: ''
 			};
 
-			// GN: get the EDR edition reference number or blank if absent
-			const editionsRefs = (inscription?.editions || []).filter(
-				e => e?._ && e?.type === 'EDR'
-			).map(e => e._).join('')
-
 			return [
 				inscription.file,
 				`"${inscription?.tmNumber || ''}"`,
@@ -69,7 +64,7 @@ export async function downloadInscriptionsCSV(summary, inscriptions, onProgress)
 				`"${inscription.idno?._ || ''}"`,
 				`"${escapeCSV(editions.interpretive)}"`,
 				`"${escapeCSV(editions.diplomatic)}"`,
-				`"${escapeCSV(editionsRefs)}"`,
+				`"${getInscriptionEdition(inscription)}"`,
 			].join(',');
 		})
 		.join('\n');
@@ -163,6 +158,17 @@ export function downloadCSV(headers, rows, filename) {
 	a.remove();
 }
 
+/**
+ * @param {any} inscription
+ * @param {string} type
+ */
+export function getInscriptionEdition(inscription, type='EDR') {
+	// GN: get the EDR edition reference number or blank if absent
+	let ret = (inscription?.editions || []).filter(
+		e => e?._ && (e?.type === type)
+	).map(e => e._).join('')
+	return escapeCSV(ret)
+}
 
 /**
  * @param {any} inscription
