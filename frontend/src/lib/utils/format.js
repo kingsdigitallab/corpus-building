@@ -9,7 +9,7 @@ export function formatInscriptionDate(date) {
     const parts = [];
     for (const value of [date.notBefore, date.notAfter]) {
         if (value) {
-            parts.push(value < 0 ? `${Math.abs(value)} BC` : `AD ${value}`);
+            parts.push(value < 0 ? `${Math.abs(value)} BCE` : `CE ${value}`);
         } else {
             parts.push('Unknown');
         }
