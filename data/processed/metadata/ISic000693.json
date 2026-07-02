@@ -1,9 +1,9 @@
 {
   "file": "ISic000693",
   "uri": "ISic000693",
-  "title": "I.Sicily inscription 000693",
+  "title": "Epitaph for Tullia Symbiosis",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -30,6 +30,12 @@
     "ana": "#function.funerary",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
   },
+  "support": "A tablet of yellowish stone with pinkish red veins running through it. The tablet is broken into at least 6 fragments and has been recomposed and mounted on a stand. Intact on all sides, but with a hole upper middle where one fragment is lost. The edges are straight, but the rear is very rough and irregular.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
     "_": "marble",
     "type": "stone.breccia",
@@ -37,39 +43,81 @@
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html",
     "subtype": []
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete.broken"
+  },
   "dimensions": [
     {
+      "_": "28",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "29.4",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "max 4.1",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Four lines of Latin letters approximately centred on the stone and reducing in height.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "A moderately deep v-cut, with wide modules in lines 1-2, narrower in line 3. Letters have pronounced but simple wedge serifs, and pronounced curvature on Y and X. The interpuncts in line 3 (only) have the form of hederae.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "50",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "44-46 (Y=50)",
+        "unit": "mm",
+        "atLeast": "44",
+        "atMost": "46"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "37-45",
+        "unit": "mm",
+        "atLeast": "37",
+        "atMost": "45"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 4",
+        "from": "line4",
+        "to": "line4",
+        "h": "30",
+        "unit": "mm",
+        "atLeast": "30",
+        "atMost": "30"
       },
       {
         "type": "interlinear",
@@ -81,9 +129,10 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "second century CE",
+    "notBefore": 101,
+    "notAfter": 200,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -108,16 +157,26 @@
   "country": "Sicilia",
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "From tomb 25, one of 69 burials in a necropolis of the period C1 BCE - C2 CE excavated in 1956 in contrada Scozzo (immediately outside the main gate on the southern side of the city) by Ferruccio Barreca. The burial contained votive terracottas, ceramic relief medalions, and glass perfume bottles.",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1956",
+    "geo": [
+      38.1416969,
+      15.0421195
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.1416969,
+    15.0421195
+  ],
   "provenanceObserved": {
-    "_": "2006.04",
+    "_": "Prag 2022-07-14, in the Antiquarium, room 5, case 5, third shelf.",
     "type": "observed",
     "subtype": "autopsied",
     "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -127,8 +186,16 @@
       "url": "ISic000693_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000693_right_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
+      "surfaceType": "right"
     }
   ],
   "region": "Sicily",
@@ -259,9 +326,9 @@
       }
     ],
     "change": {
-      "_": "Epidoc editing and English translation",
-      "when": "2021-05-07",
-      "who": "#AA"
+      "_": "Jonathan Prag fully revised file from autopsy notes.",
+      "when": "2026-05-28",
+      "who": "#JP"
     }
   },
   "tmNumber": "175752",
@@ -270,10 +337,27 @@
     "url": "ISic000693_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 50,
+      "atMost": 50
+    },
+    {
+      "atLeast": 44,
+      "atMost": 46
+    },
+    {
+      "atLeast": 37,
+      "atMost": 45
+    },
+    {
+      "atLeast": 30,
+      "atMost": 30
+    }
+  ],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
@@ -286,11 +370,12 @@
   ],
   "keywords": [
     "isic000693",
-    "i.sicily inscription 000693",
+    "epitaph for tullia symbiosis",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "funerary",
+    "plaque",
     "marble",
     "tyndaris",
     "tindari",

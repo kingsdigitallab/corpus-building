@@ -1,9 +1,9 @@
 {
   "file": "ISic000692",
   "uri": "ISic000692",
-  "title": "I.Sicily inscription 000692",
+  "title": "Epitaph for Onomaste",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -30,6 +30,12 @@
     "ana": "#function.funerary",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Funerary"
   },
+  "support": "A thin rectangular plaque of white marble, with straight left edge but the other three edges more irregular, and taller on the right side than the left. Broken in half vertically, but the two pieces join. The rear is finished smooth.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "http://www.eagle-network.eu/voc/objtyp/lod/259"
+  },
   "material": {
     "_": "Coarse-grained, banded, white marble, likely Aphrodisian, Parian-2, Parian-3, Parian-4, Proconnesian. Digital microscopy: heteroblastic fabric (identification based on digital microscopy)",
     "ana": "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Aphrodisian #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-2 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-3 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Parian-4 #material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
@@ -44,39 +50,71 @@
     "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/48.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete.broken"
+  },
   "dimensions": [
     {
+      "_": "13.5-14 (L to R)",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "22.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "1.1",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Three lines of Latin letters, approximately centred. Guidelines above and below each line.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Thick v-cut letters, of fairly regular and moderately narrow module, with deep wedge serifs. E shows slight curvature to the bars, A with a sloping cross-bar.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "32-38",
+        "unit": "mm",
+        "atLeast": "32",
+        "atMost": "38"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "31-33",
+        "unit": "mm",
+        "atLeast": "31",
+        "atMost": "33"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "31",
+        "unit": "mm",
+        "atLeast": "31",
+        "atMost": "31"
       },
       {
         "type": "interlinear",
@@ -88,9 +126,10 @@
     ]
   },
   "date": {
-    "_": "(?)",
-    "notBefore": null,
-    "notAfter": null
+    "_": "later first or second century CE",
+    "notBefore": 51,
+    "notAfter": 200,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -115,16 +154,26 @@
   "country": "Sicilia",
   "provenance": "Tyndaris",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "From a necropolis of the period C1 BCE - C2 CE excavated in 1956 in contrada Scozzo (immediately outside the main gate on the southern side of the city) by Ferruccio Barreca.",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "when": "1956",
+    "geo": [
+      38.1416969,
+      15.0421195
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    38.1416969,
+    15.0421195
+  ],
   "provenanceObserved": {
-    "_": "2006.04",
+    "_": "Autopsy by Alex Antoniou, 2022-07-14, Antiquarium room 5, case 6, second shelf.",
     "type": "observed",
     "subtype": "autopsied",
-    "resp": "#JP",
+    "resp": "#AA",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -134,8 +183,16 @@
       "url": "ISic000692_tiled.tif",
       "height": "3680px",
       "width": "5520px",
-      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
       "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000692_rear_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
+      "surfaceType": "rear"
     }
   ],
   "region": "Sicily",
@@ -161,6 +218,10 @@
         }
       }
     }
+  },
+  "idno": {
+    "_": "11 (75361 / 75362)",
+    "type": "inventory"
   },
   "textLang": {
     "_": "Latin",
@@ -266,9 +327,9 @@
       }
     ],
     "change": {
-      "_": "Epidoc editing and English translation",
-      "when": "2021-05-07",
-      "who": "#AA"
+      "_": "Jonathan Prag edited file on the basis of Antoniou's autopsy notes",
+      "when": "2026-05-28",
+      "who": "#JP"
     }
   },
   "tmNumber": "175751",
@@ -277,10 +338,23 @@
     "url": "ISic000692_tiled.tif",
     "height": "3680px",
     "width": "5520px",
-    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-14",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 32,
+      "atMost": 38
+    },
+    {
+      "atLeast": 31,
+      "atMost": 33
+    },
+    {
+      "atLeast": 31,
+      "atMost": 31
+    }
+  ],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
     "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
@@ -293,11 +367,12 @@
   ],
   "keywords": [
     "isic000692",
-    "i.sicily inscription 000692",
+    "epitaph for onomaste",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "funerary",
+    "plaque",
     "coarse-grained, banded, white marble, likely aphrodisian, parian-2, parian-3, parian-4, proconnesian. digital microscopy: heteroblastic fabric (identification based on digital microscopy)",
     "tyndaris",
     "tindari",
