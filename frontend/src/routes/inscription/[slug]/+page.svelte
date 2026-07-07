@@ -25,6 +25,27 @@
 	let { data } = $props();
 	let { slug, metadata, images, html, xml, isIncomplete, missingFields } = data;
 
+	/**
+	 * @param {{ id: string; html: string; }} div
+	 * @returns {{ id: string; html: string; }}
+	 */
+	function nullIfDivEmpty(div) {
+		// Example
+		// div.html = "<h2>commentary</h2>  <p>  </p>" => returns null 
+		let ret = div
+		if (ret && ret.html) {
+			let html = ret.html.trim()
+			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, "");
+			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
+			html = html.trim()
+			if (!html.length) {
+				ret = null
+			}
+
+		}
+		return ret
+	}
+
 	const attribution = $derived(html?.editions?.[0]?.html);
 	const editions = $derived(html?.divs?.find((div) => div.id === 'editions'));
 	const apparatus = $derived(html?.divs?.find((div) => div.id === 'apparatus'));
@@ -51,7 +72,11 @@
 
 	let provenanceMapZoom = $state(7);
 
-	const commentary = $derived(html?.divs?.find((div) => div.id === 'commentary') || null);
+	const commentary = $derived(
+		nullIfDivEmpty(
+			html?.divs?.find((div) => div.id === 'commentary') || null
+		)
+	);
 	let activeTranslationTab = $state(0);
 
 	onMount(async () => {
