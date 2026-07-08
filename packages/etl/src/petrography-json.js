@@ -265,6 +265,7 @@ export async function buildRecords({
     let preWarnings = [];
 
     if (subtypeCol === "unverified") {
+      continue
       // Derive type from the existing XML @ana value.
       // Leave existing <material> text content unchanged.
       const { xml, warning } = await readXml(isic);
@@ -279,7 +280,7 @@ export async function buildRecords({
       subtype = "unspecified";
       addCoccatoResp = true;
     } else {
-      // blank — subtype and description come from detail CSVs
+      // blank — subtype and description come from detail CSVs 
       type = typeFromCsv || "";
       const detailSubtype = detailSubtypes.get(isic);
       if (!detailSubtype) {
