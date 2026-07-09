@@ -28,6 +28,14 @@ describe("parseCsv", () => {
     const rows = await parseCsv(csv);
     expect(rows).toHaveLength(2);
   });
+
+  it("trims surrounding whitespace from header names", async () => {
+    const csv = ` ISic , type \nISic000001, ceramic\n`;
+    const rows = await parseCsv(csv);
+    expect(rows).toHaveLength(1);
+    expect(Object.keys(rows[0])).toEqual(["ISic", "type"]);
+    expect(rows[0].ISic).toBe("ISic000001");
+  });
 });
 
 // ---------------------------------------------------------------------------
