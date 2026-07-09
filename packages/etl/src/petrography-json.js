@@ -16,7 +16,11 @@ const DATA_DIR = path.resolve(__dirname, "../../../data");
  */
 export async function parseCsv(content) {
   const rows = [];
-  const parser = parse(content, { columns: true, trim: true, skip_empty_lines: true });
+  const parser = parse(content, {
+    columns: (headerNames) => headerNames.map((name) => name.trim()),
+    trim: true,
+    skip_empty_lines: true,
+  });
   for await (const row of parser) {
     rows.push(row);
   }
