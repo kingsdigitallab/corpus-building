@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import { readFileSync } from 'node:fs';
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "csv-parse";
@@ -19,8 +20,36 @@ export async function parseCsv(content) {
   for await (const row of parser) {
     rows.push(row);
   }
+
   return rows;
 }
+
+
+/**
+ * @param {string[]} expectedColumnNames
+ * @returns {Promise<Record<string, string>[]>}
+ */
+export async function parseCsvFile(csvPath, expectedColumnNames) {
+  let content = readFileSync(csvPath, "utf-8")
+
+  let ret = await parseCsv(content)
+
+  console.log(`${csvPath} has ${ret.length} rows`)
+
+  if (ret.length && expectedColumnNames) {
+    let columnNames = new Set(Object.keys(ret[0]))
+    let missingColumnNames = expectedColumnNames.filter(
+      ecn => !columnNames.has(ecn)
+    )
+    if (missingColumnNames.length) {
+      console.error(`ERROR: column headers missing from ${csvPath}: ${missingColumnNames.join(", ")}`)
+      process.exit()
+    }
+  }
+
+  return ret
+}
+
 
 /**
  * Build a lookup Map from the reference CSV rows.
@@ -344,31 +373,21 @@ export async function buildRecords({
  * }} paths
  */
 export async function buildPetrographyJson(paths) {
-  const [
-    refContent,
-    stonesContent,
-    nonstonesContent,
-    metaContent,
-    sedContent,
-    otherContent,
-  ] = await Promise.all([
-    fs.readFile(paths.reference, "utf-8"),
-    fs.readFile(paths.stones, "utf-8"),
-    fs.readFile(paths.nonstones, "utf-8"),
-    fs.readFile(paths.metamorphic, "utf-8"),
-    fs.readFile(paths.sedimentary, "utf-8"),
-    fs.readFile(paths.other, "utf-8"),
-  ]);
+  const expectedColumnNames = ["ISic", "subtype", "text description"]
 
   const [refRows, stoneRows, nonstoneRows, metaRows, sedRows, otherRows] =
-    await Promise.all([
-      parseCsv(refContent),
-      parseCsv(stonesContent),
-      parseCsv(nonstonesContent),
-      parseCsv(metaContent),
-      parseCsv(sedContent),
-      parseCsv(otherContent),
-    ]);
+  await Promise.all([
+    parseCsvFile(paths.reference, ["type", "subtype", "ana", "placeName", "coordinates", "radius (m)", "uri"]),
+    parseCsvFile(paths.stones, ["ISic", "type", "subtype", "identification based on"]),
+    parseCsvFile(paths.nonstones, ["ISic", "type"]),
+    parseCsvFile(paths.metamorphic, expectedColumnNames),
+    parseCsvFile(paths.sedimentary, expectedColumnNames),
+    parseCsvFile(paths.other, expectedColumnNames),
+  ]);
+
+  console.log('finished')
+
+  process.exit()
 
   const refLookup = buildReferenceLookup(refRows);
   const provenanceLookup = buildProvenance(refRows);
