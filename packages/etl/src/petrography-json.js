@@ -389,10 +389,6 @@ export async function buildPetrographyJson(paths) {
     parseCsvFile(paths.other, expectedColumnNames),
   ]);
 
-  console.log('finished')
-
-  process.exit()
-
   const refLookup = buildReferenceLookup(refRows);
   const provenanceLookup = buildProvenance(refRows);
   const detailRows = [...metaRows, ...sedRows, ...otherRows];
