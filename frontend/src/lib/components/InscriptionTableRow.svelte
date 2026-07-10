@@ -59,7 +59,7 @@
 <style>
 	tr {
 		font-size: var(--font-size-0);
-		vertical-align: top;
+		vertical-align: middle;
 		padding-block: var(--size-1);
 	}
 
@@ -67,8 +67,10 @@
 		font-weight: 600;
 	}
 
+	/**ZL changed as for adjusting the alignment*/
 	td {
 		padding-block: var(--size-4);
+		padding-inline: var(--size-3);
 		text-align: left;
 	}
 
@@ -114,5 +116,29 @@
 	:global([data-color-scheme='dark'] #faceted-search table tbody tr:hover td) {
 		background-color: #50514f;
 		color: var(--text-1);
+	}
+
+	/* ZL: hide secondary metadata cells on mobile */
+	@media (max-width: 768px) {
+		tr td:nth-child(5),
+		tr td:nth-child(6),
+		tr td:nth-child(7),
+		tr td:nth-child(8),
+		tr td:nth-child(9) {
+			display: none;
+		}
+
+		/* ZL: give date column a little more space on mobile */
+		tr td:nth-child(3) {
+			min-width: 5.5rem;
+		}
+	}
+
+	/* ZL: stack origin badges vertically in table view */
+	td :global(.inscription-place ul) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--size-2);
 	}
 </style>

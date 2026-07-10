@@ -82,14 +82,13 @@
 	<dl>
 		<dt>ID</dt>
 		<dd>{metadata.file}</dd>
-		<dt>Language</dt>
-		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
+
 		<dt>Status</dt>
 		<dd>{metadata?.status?._ || metadata._ || config.EMPTY_PLACEHOLDER}</dd>
-		<dt>Text type</dt>
-		<dd class="inscription-type">
-			<InscriptionType inscription={metadata} showCertainty=true />
-		</dd>
+
+		<dt>Language</dt>
+		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
+
 		<dt>Object type</dt>
 		{#if metadata?.objectType}
 			<dd>
@@ -102,6 +101,11 @@
 				{/if}
 			</dd>
 		{/if}
+
+		<dt>Text type</dt>
+		<dd class="inscription-type">
+			<InscriptionType inscription={metadata} showCertainty=true />
+		</dd>
 	</dl>
 </section>
 
@@ -156,14 +160,17 @@
 
 	#overview dl {
 		border-top: var(--border-size-1) solid var(--border-color);
-		column-count: 2;
-		column-gap: var(--size-4);
 		padding-block: var(--size-4);
+
+		display: grid;
+		grid-template-columns: max-content 1fr max-content 1fr;
+		column-gap: var(--size-4);
+		row-gap: var(--size-1);
+		grid-auto-flow: row;
 	}
 
 	#overview dl dt,
 	#overview dl dd {
-		display: inline;
 		margin: 0;
 	}
 
@@ -174,7 +181,7 @@
 	#overview dl dd::after {
 		content: '';
 		display: block;
-		margin-bottom: var(--size-2);
+		margin-bottom: 0;
 	}
 
 	#overview dl dd a {
