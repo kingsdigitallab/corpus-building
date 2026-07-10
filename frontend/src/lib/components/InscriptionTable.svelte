@@ -148,7 +148,7 @@
 	</section>
 {/if}
 
-<table>
+<table class="inscription-table">
 	<thead class="surface-1">
 		<tr>
 			{#if showCitedRange}
@@ -239,6 +239,7 @@
 		border-radius: unset;
 		border-spacing: 0;
 		border-top: 1px solid var(--border-color);
+
 		width: 100%;
 	}
 
@@ -248,6 +249,46 @@
 	}
 
 	th {
+		padding-inline: var(--size-3);
 		text-align: left;
+	}
+
+	/* ZL: fixed column widths for better desktop table balance */
+	@media (min-width: 769px) {
+		.inscription-table th:nth-child(1) {
+			width: 8rem;
+		}
+
+		.inscription-table th:nth-child(2) {
+			width: 14rem;
+		}
+
+		.inscription-table th:nth-child(3) {
+			width: 10rem;
+		}
+
+		.inscription-table th:nth-child(4) {
+			width: 16rem;
+		}
+	}
+
+	/* ZL: mobile layout for inscription table */
+	@media (max-width: 768px) {
+		.inscription-table {
+			font-size: var(--font-size-0);
+		}
+
+		.inscription-table th:nth-child(5),
+		.inscription-table th:nth-child(6),
+		.inscription-table th:nth-child(7),
+		.inscription-table th:nth-child(8),
+		.inscription-table th:nth-child(9) {
+			display: none;
+		}
+
+		/* ZL: give date column a little more space on mobile */
+		.inscription-table th:nth-child(3) {
+			min-width: 5.5rem;
+		}
 	}
 </style>
