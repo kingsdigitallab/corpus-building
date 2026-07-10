@@ -33,6 +33,7 @@
 		padding: 0;
 		margin: 0;
 	}
+
 	/**ZL: changed the focus ring size - covering the entire badge*/
 	li.badge:focus-within {
 		outline: 2px solid var(--yellow-3);
