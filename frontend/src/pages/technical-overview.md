@@ -65,7 +65,7 @@ For additional technical details, please the [documentation in the github reposi
 
 Petrographic analysis has been undertaken on hundreds of items across the corpus. The dataset includes raw and processed data from (geo)chemical and minero-petrographic analyses on epigraphic supports, supporting the identification of rock types and their provenance. Geology-specific vocabularies ([The BGS Rock Classification Scheme](https://www.bgs.ac.uk/technologies/bgs-rock-classification-scheme/)) are used as reference to update the XML files with material and material provenance data. Materials description has been augmented via a dedicated RSE-supported workflow which aggregates the multi-analytical data collected by the project’s material scientist and supports (pre)processing and analysis of different data by streamlining repetitive tasks and simplifying data interpretation, eventually leading to the identification of the rocks where the texts (in Latin, Greek and other languages) are inscribed, and therefore their provenance. This research workflow is summarised in technical documentation (see diagram below), research dissemination (e.g. [Coccato et al., 2025a](https://gmpca2025.sciencesconf.org/); [Coccato et al., 2025b](https://doi.org/10.3301/ABSGI.2025.03); [Ciula et. al., 2025](https://doi.org/10.5281/zenodo.17967411); [Ciula, 2025](https://kdl.kcl.ac.uk/blog/role-and-responsibilities-rsa/)) and the actual [code used to implement the petrographic research environment](https://github.com/kingsdigitallab/crossreads-petrography).
 
-<picture>
+<!-- <picture>
 	<source
 		srcset="images/technical_overview/Flowchart01DarkMode.png"
 		media="(prefers-color-scheme: dark)"
@@ -78,9 +78,9 @@ Petrographic analysis has been undertaken on hundreds of items across the corpus
 		src="images/technical_overview/Flowchart01LightMode.png"
 		alt="Flowchart showing the petrographic analysis workflow. An Inscribed Object yields a Sample and Digital Microscopy images. The Sample is divided into Powders and Fragments. Powders undergo pXRF spectral analysis and XRD diffractometry. Fragments are examined via Digital and Optical Microscopy. All four analytical results feed into a decision point: is the material Marble? If no, the workflow proceeds directly to Analysis and Interpretation. If yes, Isotopic Analysis and Maximum Grain Size comparisons are performed before reaching the final Analysis and Interpretation stage."
 	/>
-</picture>
+</picture> -->
 
-<!-- ![Flowchart showing the petrographic analysis workflow. An Inscribed Object yields a Sample and Digital Microscopy images. The Sample is divided into Powders and Fragments. Powders undergo pXRF spectral analysis and XRD diffractometry. Fragments are examined via Digital and Optical Microscopy. All four analytical results feed into a decision point: is the material Marble? If no, the workflow proceeds directly to Analysis and Interpretation. If yes, Isotopic Analysis and Maximum Grain Size comparisons are performed before reaching the final Analysis and Interpretation stage.](images/technical_overview/Flowchart01DarkMode.png) -->
+![Flowchart showing the petrographic analysis workflow. An Inscribed Object yields a Sample and Digital Microscopy images. The Sample is divided into Powders and Fragments. Powders undergo pXRF spectral analysis and XRD diffractometry. Fragments are examined via Digital and Optical Microscopy. All four analytical results feed into a decision point: is the material Marble? If no, the workflow proceeds directly to Analysis and Interpretation. If yes, Isotopic Analysis and Maximum Grain Size comparisons are performed before reaching the final Analysis and Interpretation stage.](images/technical_overview/Flowchart.png)
 
 _Figure 1: Petrographic analysis workflow, from sample preparation through multi-analytical characterisation to rock identification and provenance determination._
 
