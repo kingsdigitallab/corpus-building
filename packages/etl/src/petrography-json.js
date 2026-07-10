@@ -46,8 +46,7 @@ export async function parseCsvFile(csvPath, expectedColumnNames) {
       ecn => !columnNames.has(ecn)
     )
     if (missingColumnNames.length) {
-      console.error(`ERROR: column headers missing from ${csvPath}: ${missingColumnNames.join(", ")}`)
-      process.exit()
+      throw Error(`column headers missing from ${csvPath}: ${missingColumnNames.join(", ")}`)
     }
   }
 
@@ -312,7 +311,7 @@ export async function buildRecords({
       type = typeFromCsv || "";
       subtype = "unspecified";
       addCoccatoResp = true;
-    } else {
+    } else if (subtypeCol.length === 0) {
       // blank — subtype and description come from detail CSVs 
       type = typeFromCsv || "";
       const detailSubtype = detailSubtypes.get(isic);
@@ -333,6 +332,8 @@ export async function buildRecords({
       } else {
         preWarnings = [...preWarnings, `No text description found for ${isic}`];
       }
+    } else {
+      throw Error(`unexpected value in petrography-stones.csv:subtype "${subtypeCol}"`)
     }
 
     // Provenance: look up by subtype only for single-value specific subtypes
