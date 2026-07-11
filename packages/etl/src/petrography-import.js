@@ -19,7 +19,7 @@ const COCCATO_RESP_STMT = `<respStmt><name xml:id="Coccato" ref="https://orcid.o
  */
 export function updateMaterialElement(xml, entry) {
   // Match the opening <material ...> tag, possibly spanning a line
-  const materialTagRegex = /<material(\s[^>]*)>/;
+  const materialTagRegex = /<material\b([^>]*)>/;
   const match = xml.match(materialTagRegex);
   if (!match) { 
     console.warn(
