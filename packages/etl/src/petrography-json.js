@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename);
 
 const DATA_DIR = path.resolve(__dirname, "../../../data");
 
+const IGNORE_DUPLICATE_SUBTYPE_IN_REFERENCE = false
+
 /**
  * Parse CSV content string into an array of row objects.
  * @param {string} content
@@ -83,6 +85,7 @@ export function buildReferenceLookup(rows) {
  */
 export function buildProvenance(rows) {
   const lookup = new Map();
+  let duplicateSubtypes = new Set()
   for (const row of rows) {
     const subtype = row["subtype"]?.trim();
     const placeName = row["placeName"]?.trim();
@@ -91,9 +94,17 @@ export function buildProvenance(rows) {
     const radius = row["radius (m)"]?.trim() || null;
     const uri = row["uri"]?.trim();
     if (subtype && placeName && coordinates && uri) {
+      if (lookup.get(subtype)) {
+        duplicateSubtypes.add(subtype)
+      }
       lookup.set(subtype, { placeName, coordinates, radius, uri });
     }
   }
+
+  if (!IGNORE_DUPLICATE_SUBTYPE_IN_REFERENCE && duplicateSubtypes.size) {
+    throw Error(`petrography-reference.csv has multiple rows for subtype = ${[...duplicateSubtypes].join(', ')}`)
+  }
+
   return lookup;
 }
 
