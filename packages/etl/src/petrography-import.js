@@ -9,6 +9,61 @@ const DATA_DIR = path.resolve(__dirname, "../../../data");
 
 const COCCATO_RESP_STMT = `<respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>`;
 
+const DEFAULT_MATERIAL_CONTENT = "marble";
+
+/**
+ * Ensure a <material> element exists inside <support>.
+ * If <material> is already present, returns xml unchanged.
+ * Otherwise inserts <material>marble</material> after the last <p> within
+ * <support>, or immediately after the opening <support> tag when no <p>
+ * is present.
+ *
+ * @param {string} xml
+ * @returns {string}
+ */
+export function ensureMaterialElement(xml) {
+  let ret = xml;
+
+  if (/<material\b/.test(ret)) return ret;
+
+  const supportRegex = /(<support\b[^>]*>)([\s\S]*?)(<\/support>)/;
+  const supportMatch = ret.match(supportRegex);
+  if (!supportMatch) {
+    console.warn(
+      "[petrography-import] no <support> element found, cannot create <material>",
+    );
+    return ret;
+  }
+
+  const openTag = supportMatch[1];
+  const supportContent = supportMatch[2];
+  const closeTag = supportMatch[3];
+
+  const indentMatch = supportContent.match(/\n([ \t]*)<[a-zA-Z]/);
+  const indent = indentMatch ? indentMatch[1] : "                                    ";
+
+  const materialTag = `${indent}<material>${DEFAULT_MATERIAL_CONTENT}</material>`;
+
+  let newSupportContent;
+  const pCloseMatches = [...supportContent.matchAll(/<\/p>/g)];
+  if (pCloseMatches.length > 0) {
+    const last = pCloseMatches[pCloseMatches.length - 1];
+    const insertPos = last.index + last[0].length;
+    newSupportContent =
+      supportContent.slice(0, insertPos) +
+      "\n" + materialTag +
+      supportContent.slice(insertPos);
+  } else {
+    newSupportContent = "\n" + materialTag + supportContent;
+  }
+
+  ret = ret.replace(
+    supportRegex,
+    () => openTag + newSupportContent + closeTag,
+  );
+  return ret;
+}
+
 /**
  * Update the attributes on the <material> opening tag.
  * Replaces @ana (always), and adds/replaces @type, @subtype, @resp.
@@ -105,7 +160,8 @@ export function buildProvenanceXml(provenance) {
  * @returns {string}
  */
 export function applyPetrographyImport(xml, entry) {
-  let result = updateMaterialElement(xml, entry);
+  let result = ensureMaterialElement(xml);
+  result = updateMaterialElement(result, entry);
   if (entry.description != null) {
     const content = entry.provenance
       ? entry.description + buildProvenanceXml(entry.provenance)
