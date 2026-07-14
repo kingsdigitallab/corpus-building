@@ -120,6 +120,14 @@ html {
 	}
 }
 
+/* GN: classes to show element only in light or dark mode */
+.light-mode-only {
+	display: none;
+}
+.dark-mode-only {
+	display: none;
+}
+
 [data-color-scheme='light'] {
 	color-scheme: light;
 
@@ -140,6 +148,10 @@ html {
 	--focus-color: var(--focus-color-light);
 
 	--logo-background: var(--logo-background-light);
+
+	.light-mode-only {
+		display: inherit;
+	}
 }
 
 [data-color-scheme='dark'] {
@@ -162,6 +174,10 @@ html {
 	--focus-color: var(--focus-color-dark);
 
 	--logo-background: var(--logo-background-dark);
+
+	.dark-mode-only {
+		display: inherit;
+	}
 }
 
 .brand {
