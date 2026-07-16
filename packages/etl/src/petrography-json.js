@@ -75,6 +75,13 @@ export function buildReferenceLookup(rows) {
   return lookup;
 }
 
+export function isSpecificSingleSubtype(subtype) {
+  return subtype &&
+    subtype !== "unverified" &&
+    subtype !== "unspecified" &&
+    !subtype.includes("|");
+}
+
 /**
  * Build a lookup Map of provenance data from the reference CSV rows.
  * Key: subtype value. Value: { placeName, coordinates, radius, uri }.
@@ -88,6 +95,11 @@ export function buildProvenance(rows) {
   let duplicateSubtypes = new Set()
   for (const row of rows) {
     const subtype = row["subtype"]?.trim();
+
+    if (!isSpecificSingleSubtype(subtype)) {
+      continue;
+    }
+
     const placeName = row["placeName"]?.trim();
     // Strip all whitespace including non-breaking spaces (U+00A0) to get "lat,lon"
     const coordinates = row["coordinates"]?.replace(/[^\d.,\-]/g, "").trim();
@@ -348,14 +360,16 @@ export async function buildRecords({
     }
 
     // Provenance: look up by subtype only for single-value specific subtypes
-    const isSpecificSingleSubtype =
-      subtype &&
-      subtype !== "unverified" &&
-      subtype !== "unspecified" &&
-      !subtype.includes("|");
-    const provenance = isSpecificSingleSubtype
-      ? (provenanceLookup.get(subtype) ?? null)
-      : null;
+    // GN: why not simply having this condition in the construction of provenanceLookup?
+    // const isSpecificSingleSubtype =
+    //   subtype &&
+    //   subtype !== "unverified" &&
+    //   subtype !== "unspecified" &&
+    //   !subtype.includes("|");
+    // const provenance = isSpecificSingleSubtype
+    //   ? (provenanceLookup.get(subtype) ?? null)
+    //   : null;
+    const provenance = provenanceLookup.get(subtype) ?? null
 
     const { ana, warnings: anaWarnings } = resolveAna(refLookup, type, subtype);
     results.push({
