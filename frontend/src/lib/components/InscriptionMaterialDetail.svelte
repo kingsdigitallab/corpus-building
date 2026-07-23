@@ -8,7 +8,7 @@
 <dl>
 	<dt>Description</dt>
 	<dd>
-		{material?._.trim() || config.EMPTY_PLACEHOLDER}
+		{material?._?.trim() || config.EMPTY_PLACEHOLDER}
 	</dd>
 	{#if material?.type}
 		<dt>Type > subtype</dt>

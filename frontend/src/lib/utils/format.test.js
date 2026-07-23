@@ -7,26 +7,26 @@ describe('formatInscriptionDate', () => {
         expect(formatInscriptionDate(undefined)).toBe('');
     });
 
-    test('should format both AD dates', () => {
-        expect(formatInscriptionDate({ notBefore: 100, notAfter: 200 })).toBe('AD 100 - AD 200');
+    test('should format both CE dates', () => {
+        expect(formatInscriptionDate({ notBefore: 100, notAfter: 200 })).toBe('CE 100 - CE 200');
     });
 
-    test('should format both BC dates', () => {
+    test('should format both BCE dates', () => {
         expect(formatInscriptionDate({ notBefore: -500, notAfter: -300 })).toBe(
-            '500 BC - 300 BC'
+            '500 BCE - 300 BCE'
         );
     });
 
-    test('should format mixed BC and AD dates', () => {
-        expect(formatInscriptionDate({ notBefore: -100, notAfter: 50 })).toBe('100 BC - AD 50');
+    test('should format mixed BCE and CE dates', () => {
+        expect(formatInscriptionDate({ notBefore: -100, notAfter: 50 })).toBe('100 BCE - CE 50');
     });
 
     test('should show Unknown for missing notBefore', () => {
-        expect(formatInscriptionDate({ notAfter: 200 })).toBe('Unknown - AD 200');
+        expect(formatInscriptionDate({ notAfter: 200 })).toBe('Unknown - CE 200');
     });
 
     test('should show Unknown for missing notAfter', () => {
-        expect(formatInscriptionDate({ notBefore: 100 })).toBe('AD 100 - Unknown');
+        expect(formatInscriptionDate({ notBefore: 100 })).toBe('CE 100 - Unknown');
     });
 
     test('should show Unknown for both missing dates', () => {
@@ -34,6 +34,6 @@ describe('formatInscriptionDate', () => {
     });
 
     test('should handle zero values as falsy (Unknown)', () => {
-        expect(formatInscriptionDate({ notBefore: 0, notAfter: 100 })).toBe('Unknown - AD 100');
+        expect(formatInscriptionDate({ notBefore: 0, notAfter: 100 })).toBe('Unknown - CE 100');
     });
 });

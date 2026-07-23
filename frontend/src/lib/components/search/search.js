@@ -295,6 +295,41 @@ searchConfig.searchableFields = [
 
 export { searchConfig };
 
+/**
+ * Extracts all type facet options from an inscription object.
+ * 
+ * This function processes the `type` property of the inscription,
+ * which can be an object or an array of objects. For each type,
+ * it retrieves hierarchical values from `ana` and `certainty.assertedValue`,
+ * appending "(possibly)" to the latter.
+ *
+ * @param {Object} inscription - The inscription object containing type information.
+ * @param {(Object|Object[])} inscription.type - The type field, either a string or array of type objects.
+ * @returns {string[]} An array of extracted facet option strings.
+ */
+function getTypeFacetOptions(inscription) {
+	/**
+	 * @type {string[]}
+	 */
+	let ret = []
+	if (inscription.type) {
+		let types = inscription.type
+		if (!Array.isArray(types)) {
+			types = [types]
+		}
+		for (let atype of types) {
+			ret = [
+				...ret,
+				...(getHierarchicalValues(atype?.ana) || []),
+				...(getHierarchicalValues(atype?.certainty?.assertedValue)?.map(
+					(v) => `${v} (possibly)`
+				) || [])
+			]
+		}
+	}
+	return ret
+}
+
 export function load({
 	sortAggregationsBy = 'key',
 	languageConjunction = false,
@@ -354,12 +389,7 @@ export function load({
 				notAfter: item?.date?.notAfter ?? 0,
 				notBefore: item?.date?.notBefore ?? 1900,
 				language: item?.textLang?.languages ?? undefined,
-				inscriptionType: [
-					...(getHierarchicalValues(item.type?.ana) || []),
-					...(getHierarchicalValues(item.type?.certainty?.assertedValue)?.map(
-						(v) => `${v} (possibly)`
-					) || [])
-				],
+				inscriptionType: getTypeFacetOptions(item),
 				objectType: getHierarchicalValues(item.objectType?.ana),
 				material: getHierarchicalValues(item.material?.type, false),
 				lithotype: item.material?.subtype,
@@ -564,10 +594,11 @@ export function search({
 				(dateRange[0] === undefined && dateRange[1] === undefined) ||
 				(item.notBefore >= dateRange[0] && item.notAfter <= dateRange[1]);
 
-			const matchesLetterHeightRange = true;
-			(letterHeightRange[0] === undefined && letterHeightRange[1] === undefined) ||
-				(item.letterHeightAtLeast >= letterHeightRange[0] &&
-					item.letterHeightAtMost <= letterHeightRange[1]);
+			const matchesLetterHeightRange = (
+					letterHeightRange[0] === undefined && letterHeightRange[1] === undefined
+				) || (item.letterHeightAtLeast >= letterHeightRange[0] &&
+					item.letterHeightAtMost <= letterHeightRange[1]
+				);
 
 			return matchesDateRange && matchesLetterHeightRange;
 		}

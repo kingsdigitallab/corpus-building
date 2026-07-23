@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import { readFileSync } from 'node:fs';
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "csv-parse";
@@ -8,6 +9,8 @@ const __dirname = path.dirname(__filename);
 
 const DATA_DIR = path.resolve(__dirname, "../../../data");
 
+const IGNORE_DUPLICATE_SUBTYPE_IN_REFERENCE = false
+
 /**
  * Parse CSV content string into an array of row objects.
  * @param {string} content
@@ -15,12 +18,43 @@ const DATA_DIR = path.resolve(__dirname, "../../../data");
  */
 export async function parseCsv(content) {
   const rows = [];
-  const parser = parse(content, { columns: true, skip_empty_lines: true });
+  const parser = parse(content, {
+    columns: (headerNames) => headerNames.map((name) => name.trim()),
+    trim: true,
+    skip_empty_lines: true,
+  });
   for await (const row of parser) {
     rows.push(row);
   }
+
   return rows;
 }
+
+
+/**
+ * @param {string[]} expectedColumnNames
+ * @returns {Promise<Record<string, string>[]>}
+ */
+export async function parseCsvFile(csvPath, expectedColumnNames) {
+  let content = readFileSync(csvPath, "utf-8")
+
+  let ret = await parseCsv(content)
+
+  console.log(`${csvPath} has ${ret.length} rows`)
+
+  if (ret.length && expectedColumnNames) {
+    let columnNames = new Set(Object.keys(ret[0]))
+    let missingColumnNames = expectedColumnNames.filter(
+      ecn => !columnNames.has(ecn)
+    )
+    if (missingColumnNames.length) {
+      throw Error(`column headers missing from ${csvPath}: ${missingColumnNames.join(", ")}`)
+    }
+  }
+
+  return ret
+}
+
 
 /**
  * Build a lookup Map from the reference CSV rows.
@@ -41,6 +75,13 @@ export function buildReferenceLookup(rows) {
   return lookup;
 }
 
+export function isSpecificSingleSubtype(subtype) {
+  return subtype &&
+    subtype !== "unverified" &&
+    subtype !== "unspecified" &&
+    !subtype.includes("|");
+}
+
 /**
  * Build a lookup Map of provenance data from the reference CSV rows.
  * Key: subtype value. Value: { placeName, coordinates, radius, uri }.
@@ -51,17 +92,31 @@ export function buildReferenceLookup(rows) {
  */
 export function buildProvenance(rows) {
   const lookup = new Map();
+  let duplicateSubtypes = new Set()
   for (const row of rows) {
     const subtype = row["subtype"]?.trim();
+
+    if (!isSpecificSingleSubtype(subtype)) {
+      continue;
+    }
+
     const placeName = row["placeName"]?.trim();
     // Strip all whitespace including non-breaking spaces (U+00A0) to get "lat,lon"
     const coordinates = row["coordinates"]?.replace(/[^\d.,\-]/g, "").trim();
     const radius = row["radius (m)"]?.trim() || null;
     const uri = row["uri"]?.trim();
     if (subtype && placeName && coordinates && uri) {
+      if (lookup.get(subtype)) {
+        duplicateSubtypes.add(subtype)
+      }
       lookup.set(subtype, { placeName, coordinates, radius, uri });
     }
   }
+
+  if (!IGNORE_DUPLICATE_SUBTYPE_IN_REFERENCE && duplicateSubtypes.size) {
+    throw Error(`petrography-reference.csv has multiple rows for subtype = ${[...duplicateSubtypes].join(', ')}`)
+  }
+
   return lookup;
 }
 
@@ -265,6 +320,7 @@ export async function buildRecords({
     let preWarnings = [];
 
     if (subtypeCol === "unverified") {
+      continue
       // Derive type from the existing XML @ana value.
       // Leave existing <material> text content unchanged.
       const { xml, warning } = await readXml(isic);
@@ -278,8 +334,8 @@ export async function buildRecords({
       type = typeFromCsv || "";
       subtype = "unspecified";
       addCoccatoResp = true;
-    } else {
-      // blank — subtype and description come from detail CSVs
+    } else if (subtypeCol.length === 0) {
+      // blank — subtype and description come from detail CSVs 
       type = typeFromCsv || "";
       const detailSubtype = detailSubtypes.get(isic);
       if (!detailSubtype) {
@@ -299,17 +355,21 @@ export async function buildRecords({
       } else {
         preWarnings = [...preWarnings, `No text description found for ${isic}`];
       }
+    } else {
+      throw Error(`unexpected value in petrography-stones.csv:subtype "${subtypeCol}"`)
     }
 
     // Provenance: look up by subtype only for single-value specific subtypes
-    const isSpecificSingleSubtype =
-      subtype &&
-      subtype !== "unverified" &&
-      subtype !== "unspecified" &&
-      !subtype.includes("|");
-    const provenance = isSpecificSingleSubtype
-      ? (provenanceLookup.get(subtype) ?? null)
-      : null;
+    // GN: why not simply having this condition in the construction of provenanceLookup?
+    // const isSpecificSingleSubtype =
+    //   subtype &&
+    //   subtype !== "unverified" &&
+    //   subtype !== "unspecified" &&
+    //   !subtype.includes("|");
+    // const provenance = isSpecificSingleSubtype
+    //   ? (provenanceLookup.get(subtype) ?? null)
+    //   : null;
+    const provenance = provenanceLookup.get(subtype) ?? null
 
     const { ana, warnings: anaWarnings } = resolveAna(refLookup, type, subtype);
     results.push({
@@ -343,31 +403,17 @@ export async function buildRecords({
  * }} paths
  */
 export async function buildPetrographyJson(paths) {
-  const [
-    refContent,
-    stonesContent,
-    nonstonesContent,
-    metaContent,
-    sedContent,
-    otherContent,
-  ] = await Promise.all([
-    fs.readFile(paths.reference, "utf-8"),
-    fs.readFile(paths.stones, "utf-8"),
-    fs.readFile(paths.nonstones, "utf-8"),
-    fs.readFile(paths.metamorphic, "utf-8"),
-    fs.readFile(paths.sedimentary, "utf-8"),
-    fs.readFile(paths.other, "utf-8"),
-  ]);
+  const expectedColumnNames = ["ISic", "subtype", "text description"]
 
   const [refRows, stoneRows, nonstoneRows, metaRows, sedRows, otherRows] =
-    await Promise.all([
-      parseCsv(refContent),
-      parseCsv(stonesContent),
-      parseCsv(nonstonesContent),
-      parseCsv(metaContent),
-      parseCsv(sedContent),
-      parseCsv(otherContent),
-    ]);
+  await Promise.all([
+    parseCsvFile(paths.reference, ["type", "subtype", "ana", "placeName", "coordinates", "radius (m)", "uri"]),
+    parseCsvFile(paths.stones, ["ISic", "type", "subtype", "identification based on"]),
+    parseCsvFile(paths.nonstones, ["ISic", "type"]),
+    parseCsvFile(paths.metamorphic, expectedColumnNames),
+    parseCsvFile(paths.sedimentary, expectedColumnNames),
+    parseCsvFile(paths.other, expectedColumnNames),
+  ]);
 
   const refLookup = buildReferenceLookup(refRows);
   const provenanceLookup = buildProvenance(refRows);

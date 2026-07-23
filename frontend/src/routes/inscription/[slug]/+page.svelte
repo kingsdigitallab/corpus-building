@@ -8,6 +8,7 @@
 	import InscriptionDate from '$lib/components/InscriptionDate.svelte';
 	import InscriptionLettering from '$lib/components/InscriptionLettering.svelte';
 	import InscriptionMaterialDetail from '$lib/components/InscriptionMaterialDetail.svelte';
+	import InscriptionType from '$lib/components/InscriptionType.svelte';
 	import ScrollSpy from '$lib/components/ScrollSpy.svelte';
 	import * as config from '$lib/config';
 	import { Button } from 'bits-ui';
@@ -23,6 +24,27 @@
 	/** @type {Props} */
 	let { data } = $props();
 	let { slug, metadata, images, html, xml, isIncomplete, missingFields } = data;
+
+	/**
+	 * @param {{ id: string; html: string; }} div
+	 * @returns {{ id: string; html: string; }}
+	 */
+	function nullIfDivEmpty(div) {
+		// Example
+		// div.html = "<h2>commentary</h2>  <p>  </p>" => returns null 
+		let ret = div
+		if (ret && ret.html) {
+			let html = ret.html.trim()
+			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, "");
+			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
+			html = html.trim()
+			if (!html.length) {
+				ret = null
+			}
+
+		}
+		return ret
+	}
 
 	const attribution = $derived(html?.editions?.[0]?.html);
 	const editions = $derived(html?.divs?.find((div) => div.id === 'editions'));
@@ -50,7 +72,11 @@
 
 	let provenanceMapZoom = $state(7);
 
-	const commentary = $derived(html?.divs?.find((div) => div.id === 'commentary') || null);
+	const commentary = $derived(
+		nullIfDivEmpty(
+			html?.divs?.find((div) => div.id === 'commentary') || null
+		)
+	);
 	let activeTranslationTab = $state(0);
 
 	onMount(async () => {
@@ -417,13 +443,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 			<section id="text-type">
 				<h2>Text type</h2>
 				<p>
-					{#if metadata.type?.ref}
-						<a class="badge strong" href={metadata.type.ref}
-							>{metadata.type?._ || config.EMPTY_PLACEHOLDER}</a
-						>
-					{:else}
-						{metadata.type?._ || config.EMPTY_PLACEHOLDER}
-					{/if}
+					<InscriptionType inscription={metadata} />
 				</p>
 			</section>
 

@@ -231,7 +231,8 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
         result.lemmas = undefined;
         result.text = undefined;
 
-        result.editions = undefined;
+        // GN: keep it just for the export of EDR to CSV
+        // result.editions = undefined;
         result.support = undefined;
         result.dimensions = undefined;
         result.provenanceFound = undefined;

@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
   normalizeIsic,
+  ensureMaterialElement,
   updateMaterialElement,
   updateMaterialContent,
   addCoccatoRespStmt,
@@ -47,6 +48,52 @@ const ENTRY_WITHOUT_COCCATO = {
   description: null,
 };
 
+const XML_NO_MATERIAL = `<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISic003691</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <supportDesc>
+                <support>
+                    <dimensions>
+                        <height unit="cm"/>
+                        <width unit="cm"/>
+                        <depth unit="cm"/>
+                    </dimensions>
+                </support>
+            </supportDesc>
+        </body>
+    </text>
+</TEI>`;
+
+const XML_NO_MATERIAL_WITH_P = `<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISic004053</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <supportDesc>
+                <support>
+                    <p>Inscription on face II.</p>
+                    <p>On same support as ISic003963.</p>
+                    <dimensions/>
+                </support>
+            </supportDesc>
+        </body>
+    </text>
+</TEI>`;
+
 // ---------------------------------------------------------------------------
 // normalizeIsic
 // ---------------------------------------------------------------------------
@@ -66,6 +113,45 @@ describe("normalizeIsic", () => {
   it("accepts bare integer and pads to 6 digits", () => {
     expect(normalizeIsic("1")).toBe("ISic000001");
     expect(normalizeIsic("27")).toBe("ISic000027");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// ensureMaterialElement
+// ---------------------------------------------------------------------------
+describe("ensureMaterialElement", () => {
+  it("creates <material>marble</material> inside <support> when no material exists", () => {
+    const result = ensureMaterialElement(XML_NO_MATERIAL);
+    expect(result).toContain("<material>marble</material>");
+    const supportOpen = result.indexOf("<support>");
+    const supportClose = result.indexOf("</support>");
+    const materialPos = result.indexOf("<material>marble</material>");
+    expect(materialPos).toBeGreaterThan(supportOpen);
+    expect(materialPos).toBeLessThan(supportClose);
+  });
+
+  it("inserts material after the last <p> when <p> elements exist in <support>", () => {
+    const result = ensureMaterialElement(XML_NO_MATERIAL_WITH_P);
+    const materialPos = result.indexOf("<material>marble</material>");
+    const lastPClose = result.lastIndexOf("</p>");
+    const dimensionsPos = result.indexOf("<dimensions/>");
+    expect(materialPos).toBeGreaterThan(lastPClose);
+    expect(materialPos).toBeLessThan(dimensionsPos);
+  });
+
+  it("matches the indentation of existing children inside <support>", () => {
+    const result = ensureMaterialElement(XML_NO_MATERIAL);
+    const line = result.split("\n").find((l) => l.includes("<material>marble</material>"));
+    expect(line).toMatch(/^                    <material>marble<\/material>$/);
+  });
+
+  it("returns xml unchanged when <material> already exists", () => {
+    expect(ensureMaterialElement(MINIMAL_XML)).toBe(MINIMAL_XML);
+  });
+
+  it("returns xml unchanged when no <support> element exists", () => {
+    const xml = "<TEI><body>no support here</body></TEI>";
+    expect(ensureMaterialElement(xml)).toBe(xml);
   });
 });
 
@@ -276,5 +362,15 @@ describe("applyPetrographyImport", () => {
     const once = applyPetrographyImport(MINIMAL_XML, ENTRY_WITH_COCCATO);
     const twice = applyPetrographyImport(once, ENTRY_WITH_COCCATO);
     expect(twice).toBe(once);
+  });
+
+  it("creates and enriches material when no <material> element exists", () => {
+    const result = applyPetrographyImport(XML_NO_MATERIAL, ENTRY_WITH_COCCATO);
+    expect(result).toContain('type="stone.marble"');
+    expect(result).toContain('subtype="Proconnesian"');
+    expect(result).toContain('resp="#Coccato"');
+    expect(result).toContain('xml:id="Coccato"');
+    expect(result).toContain("fine-grained, banded, white marble, likely Proconnesian");
+    expect(result).not.toContain("<material>marble</material>");
   });
 });

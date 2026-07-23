@@ -29,7 +29,8 @@ export async function downloadInscriptionsCSV(summary, inscriptions, onProgress)
 		'Repository name',
 		'Inventory number',
 		'Edition (interpretive)',
-		'Edition (diplomatic)'
+		'Edition (diplomatic)',
+		'EDR',
 	].join(',');
 
 	// Fetch edition texts for all inscriptions
@@ -62,7 +63,8 @@ export async function downloadInscriptionsCSV(summary, inscriptions, onProgress)
 				`"${inscription.repository.at(-1)?.split(':::').at(-1) || ''}"`,
 				`"${inscription.idno?._ || ''}"`,
 				`"${escapeCSV(editions.interpretive)}"`,
-				`"${escapeCSV(editions.diplomatic)}"`
+				`"${escapeCSV(editions.diplomatic)}"`,
+				`"${getInscriptionEdition(inscription)}"`,
 			].join(',');
 		})
 		.join('\n');
@@ -156,6 +158,17 @@ export function downloadCSV(headers, rows, filename) {
 	a.remove();
 }
 
+/**
+ * @param {any} inscription
+ * @param {string} type
+ */
+export function getInscriptionEdition(inscription, type='EDR') {
+	// GN: get the EDR edition reference number or blank if absent
+	let ret = (inscription?.editions || []).filter(
+		e => e?._ && (e?.type === type)
+	).map(e => e._).join('')
+	return escapeCSV(ret)
+}
 
 /**
  * @param {any} inscription

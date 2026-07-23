@@ -53,12 +53,12 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "ci(frontend): update etl output and test results [skip ci]"
-          file_pattern: "frontend/src/data/*.json frontend/src/lib/prerender-errors.json frontend/test-results/*.json data/raw xslt/epidoc frontend/static/fonts/nau"
+          file_pattern: "data/processed/*.json data/processed/metadata/*.json data/processed/lemmas/*.json data/processed/html/*.json frontend/src/data/*.json frontend/src/lib/prerender-errors.json frontend/test-results/*.json data/raw xslt/epidoc frontend/static/fonts/nau"
 
   pages:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refers/heads/develop'
+    if: github.ref == 'refs/heads/develop'
 
     strategy:
       matrix:

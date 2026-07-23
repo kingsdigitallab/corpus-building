@@ -1,3 +1,5 @@
+[![Build and deploy](https://github.com/kingsdigitallab/corpus-building/actions/workflows/frontend.yml/badge.svg?branch=develop)](https://github.com/kingsdigitallab/corpus-building/actions/workflows/frontend.yml)
+
 # Corpus Building
 
 This project processes [EpiDoc](https://epidoc.stoa.org) [TEI](https://tei-c.org)

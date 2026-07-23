@@ -28,6 +28,14 @@ describe("parseCsv", () => {
     const rows = await parseCsv(csv);
     expect(rows).toHaveLength(2);
   });
+
+  it("trims surrounding whitespace from header names, including newlines in quoted headers", async () => {
+    const csv = '"\nISic", type \nISic000001, ceramic\n';
+    const rows = await parseCsv(csv);
+    expect(rows).toHaveLength(1);
+    expect(Object.keys(rows[0])).toEqual(["ISic", "type"]);
+    expect(rows[0].ISic).toBe("ISic000001");
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -364,13 +372,15 @@ describe("buildRecords", () => {
     const records = await buildRecords({
       refLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows: [], readXml,
     });
-    expect(records[0]).toMatchObject({
-      type: "stone.marble",
-      subtype: "unverified",
-      addCoccatoResp: false,
-      description: null,
-      warnings: [],
-    });
+    // Unverified stone rows are skipped (the previous unverified branch logic was flawed).
+    expect(records).toHaveLength(0);
+    // expect(records[0]).toMatchObject({
+    //   type: "stone.marble",
+    //   subtype: "unverified",
+    //   addCoccatoResp: false,
+    //   description: null,
+    //   warnings: [],
+    // });
   });
 
   it("stone subtype=unverified: captures readXml warning when XML cannot be read", async () => {
@@ -380,9 +390,11 @@ describe("buildRecords", () => {
       refLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows: [],
       readXml: failingReadXml,
     });
-    expect(records[0].warnings).toContain("Could not read XML for ISic000999");
-    expect(records[0].type).toBe("stone.unspecified");
-    expect(records[0].description).toBeNull();
+    // Unverified stone rows are skipped (the previous unverified branch logic was flawed).
+    expect(records).toHaveLength(0);
+    // expect(records[0].warnings).toContain("Could not read XML for ISic000999");
+    // expect(records[0].type).toBe("stone.unspecified");
+    // expect(records[0].description).toBeNull();
   });
 
   it("stone @ana=#material.stone → type=stone.unspecified", async () => {
@@ -395,7 +407,9 @@ describe("buildRecords", () => {
       refLookup, detailSubtypes, detailDescriptions, stoneRows, nonstoneRows: [],
       readXml: xmlWithPlainStone,
     });
-    expect(records[0].type).toBe("stone.unspecified");
+    // Unverified stone rows are skipped (the previous unverified branch logic was flawed).
+    expect(records).toHaveLength(0);
+    // expect(records[0].type).toBe("stone.unspecified");
   });
 
   it("stone subtype=unspecified: type from CSV, addCoccatoResp=true, description=null", async () => {

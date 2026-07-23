@@ -6,6 +6,7 @@
 	import InscriptionLink from './InscriptionLink.svelte';
 	import InscriptionMaterial from './InscriptionMaterial.svelte';
 	import InscriptionPlace from './InscriptionPlace.svelte';
+	import InscriptionType from './InscriptionType.svelte';
 
 	const { inscription, view = 'image', query, exactSearch = false } = $props();
 
@@ -94,12 +95,8 @@
 			<dt>Material</dt>
 			<dd><InscriptionMaterial material={inscription.material} /></dd>
 			<dt>Type</dt>
-			<dd class="badge strong">
-				{#if inscription.type?.ref}
-					<a href={inscription.type.ref}>{inscription.type?._}</a>
-				{:else}
-					{inscription.type?._ || 'N/A'}
-				{/if}
+			<dd class="">
+				<InscriptionType {inscription} />
 			</dd>
 		</dl>
 		<dl>
