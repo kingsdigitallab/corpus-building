@@ -1,5 +1,43 @@
 
 
+# [0.28.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.27.2...v0.28.0) (2026-07-28)
+
+
+### Bug Fixes
+
+* **ci:** git test job didn't commit the results of the ETL ([924ca07](https://github.com/kingsdigitallab/corpus-building/commit/924ca07077ea4d6fbf555f6c8459b2df1ab9dfeb))
+* **ci:** Typo in GH workflow was preventing deployment to GH pages ([58869c1](https://github.com/kingsdigitallab/corpus-building/commit/58869c137389cec2853f4d48bb9af223bd1226e4))
+* Commentary section is now omitted when empty ([bf64bc7](https://github.com/kingsdigitallab/corpus-building/commit/bf64bc7ef3a40d8d71ae090a12cd89e6b30159b2))
+* encoded {} in markdown link which was causing build errors ([926d769](https://github.com/kingsdigitallab/corpus-building/commit/926d7699a6c741ddcf19d7714f188268609a77ea))
+* Github action no longer release  branch onto GH pages as it caused confusion ([816e1e8](https://github.com/kingsdigitallab/corpus-building/commit/816e1e8e8c70f7117dc85feba87e4b2e55371b28))
+* Headings which are linked to now expressed in html with an id ([105acc7](https://github.com/kingsdigitallab/corpus-building/commit/105acc7bafb1113862869ef6613d3caf137273af))
+* inscription type facet now includes multi-values options from inscription.type ([97bcc81](https://github.com/kingsdigitallab/corpus-building/commit/97bcc8148875c65fdc0f57e3e95c72534edea317))
+* **inscription:** InscriptionMaterialDetail was triming non strings ([bc107d6](https://github.com/kingsdigitallab/corpus-building/commit/bc107d651675b47e4774dccc1e80f5e757358f5c))
+* **inscription:** Meterial subtypes now separated with comma and space ([eeeb4ce](https://github.com/kingsdigitallab/corpus-building/commit/eeeb4cebcb3e973b40ebce7d828dd25a9fcfdf07))
+* multiple values for text type now showing consistently in all places ([d80779f](https://github.com/kingsdigitallab/corpus-building/commit/d80779f16b5221b5e3b9902c68bc2bafa8fa7a1b))
+* Petro diagram on tech overview will now follow the light/dark mode set by user ([bf5797b](https://github.com/kingsdigitallab/corpus-building/commit/bf5797b2320dfc693982b1e056b7292b22b28f00))
+* **petro:** Change material element even if it has no attribute ([5dcc486](https://github.com/kingsdigitallab/corpus-building/commit/5dcc486ca7ed1bfb493f3e8e75dd8ff37bd34e77))
+* **petro:** Fixed wrong column name in metamorphic CSV and reran csv->json script ([ad55179](https://github.com/kingsdigitallab/corpus-building/commit/ad551792e2c83de3ad5e47eff33efd002594cdac))
+* **petro:** Multiple rows with same non-specific subtypes in reference sheet are acceptable ([2b64f0e](https://github.com/kingsdigitallab/corpus-building/commit/2b64f0e99a1e72f184137a6f1cff2664b2d6fcfc))
+* **petro:** Skipping the rows with subtype = unverified ([5f7ad58](https://github.com/kingsdigitallab/corpus-building/commit/5f7ad58c0bb2e9c4f7dbaaba8e6e2cd82f31a8a0))
+* **petro:** trim whitespace and newlines from CSV header names [opencode:big-pickle] ([ce04215](https://github.com/kingsdigitallab/corpus-building/commit/ce042158a453b5abc06c190696dc9dfe643de269))
+* **petro:** trim whitespace around CSV header names [opencode:big-pickle] ([f974977](https://github.com/kingsdigitallab/corpus-building/commit/f974977303c910b2541b79bf243f83e2befecb24))
+* search and inscription interfaces should show multiple text type values when present ([acb8f4f](https://github.com/kingsdigitallab/corpus-building/commit/acb8f4fe0c806af1704d796bb7652ee4e51135cd))
+* **search:** filtering by letter height had been accidentally disabled since April ([04fb033](https://github.com/kingsdigitallab/corpus-building/commit/04fb033af7a5c9646ba20b791be86bcecc01fe55))
+* **search:** Upgraded itemjs to fix bug where range filters were ignored when doing full text search with user query ([d035aa4](https://github.com/kingsdigitallab/corpus-building/commit/d035aa4e9bef1838a20d30dc91c247891c7f2941))
+* **search:** Using BCE/CE for dates instead of BC/AD ([938530b](https://github.com/kingsdigitallab/corpus-building/commit/938530b316fddd6b23698111dab8ea441da784f0))
+* tablewview overlapping issue ([ea36c1b](https://github.com/kingsdigitallab/corpus-building/commit/ea36c1b90197f8686b31e1d8beeb016c9df26b64))
+* Unit tests for date format now use (B)CE instead of BC and AD ([1a36367](https://github.com/kingsdigitallab/corpus-building/commit/1a3636705799d828edecb351b83821f21ba1086c))
+
+
+### Features
+
+* **csv:** Added new column for editions EDR ([8109385](https://github.com/kingsdigitallab/corpus-building/commit/8109385a5862c9f03561cbecd22168f3bb710e19))
+* **etl:** create <material> element when missing in XML [opencode:big-pickle] ([974490c](https://github.com/kingsdigitallab/corpus-building/commit/974490c0efca22426512bbf376fcd11201e54b79))
+* **map:** Add fullscreen toggle button to InscriptionMap [opencode:big-pickle] ([481ca95](https://github.com/kingsdigitallab/corpus-building/commit/481ca9596f22315a93fe575e8c4ab6c172c9d703))
+* **search:** New search mode to find inscriptions by their ISic numbers ([c7a292a](https://github.com/kingsdigitallab/corpus-building/commit/c7a292ab485370f2c5b491a652b8fd94021f72f1))
+* technical overview page diagram ([9fbe640](https://github.com/kingsdigitallab/corpus-building/commit/9fbe640b808b3bc564727c6efc5861a966c2a065))
+
 ## [0.27.2](https://github.com/kingsdigitallab/corpus-building/compare/v0.27.1...v0.27.2) (2026-05-22)
 
 
