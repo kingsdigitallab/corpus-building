@@ -33,6 +33,11 @@
 		text-align: justify;
 	}
 
+	:global(.md blockquote) {
+		width: 80%;
+		max-width: unset;
+	}
+
 	/* ZL added underline all links */
 	:global(.md a) {
 		text-decoration: underline;
