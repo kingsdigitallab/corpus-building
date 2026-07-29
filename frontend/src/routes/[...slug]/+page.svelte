@@ -33,6 +33,7 @@
 		text-align: justify;
 	}
 
+	/**ZL changed the width of citation blockquotes */
 	:global(.md blockquote) {
 		width: 80%;
 		max-width: unset;
