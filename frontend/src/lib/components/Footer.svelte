@@ -79,7 +79,7 @@
 			</li>
 		</ul>
 		{#if dev && debug}
-			<ul>
+			<ul class="qa-links">
 				<li><BaseLink href="/_qa">QA</BaseLink></li>
 				<li><BaseLink href="/_styleguide">Style Guide</BaseLink></li>
 			</ul>
