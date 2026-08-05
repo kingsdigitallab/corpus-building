@@ -8,7 +8,7 @@ Follow [the prerequisites and Getting Started sections in the main README.md](..
 
 Fork the [ISicily repository](https://github.com/ISicily/ISicily/fork) with your own account as the owner (leave all other fields in the web form untouched).
 
-Wire Corpus Building to your own ISicily fork: TODO
+Wire your local copy of Corpus Building to your own ISicily fork: TODO
 
 ## Get the latest `develop` branch
 
@@ -49,22 +49,26 @@ cd corpus-building/packages/etl
 npm run petrography:json
 ```
 
-```bash
-cd corpus-building
-git commit -m "chore(petro): converted CSVs to petrography.json" data/processed/petrography.json
-git push
-```
-
 ## Import the json file data into your ISicily fork
 
 ```bash
 cd corpus-building/packages/etl
-npm run petrography:import
+npm run petrography:import > ../../data/processed/petrography-import.log
 ```
 
-## Check and share the warning messages
+## Check intermediary outputs
 
-TODO
+1. The json conversion warnings: ...
+2. The import log: ...
+3. The TEI files: ...
+
+## Share the intermediary output
+
+```bash
+cd corpus-building
+git commit -m "chore(petro): converted CSVs to petrography.json; " data/processed/petrography.json data/processed/petrography-import.log
+git push
+```
 
 ## Create a pull request from your ISicily fork
 
@@ -73,3 +77,4 @@ TODO
 # Special situations
 
 TODO
+
