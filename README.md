@@ -124,3 +124,19 @@ may be needed to flush old, cached content.
 Small **hot fixes** to the code or content of the live site can be done 
 with a Pull Request directly on the `main` branch. 
 In that situation extra care should be taken when verifying the changes.
+
+## How to cite
+
+```bibtex
+@software{King_s_Digital_Lab_and_Vieira_Corpus_building_edition_2026,
+author = {{King's Digital Lab} and Vieira, Miguel and Lu, Zihao and Ciula, Arianna and Prag, Jonathan},
+license = {MIT},
+month = jun,
+title = {{Corpus building edition}},
+url = {https://github.com/kingsdigitallab/corpus-building},
+version = {v0.27.2},
+year = {2026}
+}
+```
+
+(Generated from codemeta.json)
