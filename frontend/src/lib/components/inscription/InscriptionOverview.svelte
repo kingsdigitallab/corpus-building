@@ -90,17 +90,15 @@
 		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
 
 		<dt>Object type</dt>
-		{#if metadata?.objectType}
-			<dd>
-				{#if metadata?.objectType?.ref}
-					<a class="badge strong" href={metadata.objectType.ref}
-						>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
-					>
-				{:else}
-					{metadata?.objectType?._ || config.EMPTY_PLACEHOLDER}
-				{/if}
-			</dd>
-		{/if}
+		<dd>
+			{#if metadata?.objectType?.ref}
+				<a class="badge strong" href={metadata.objectType.ref}
+					>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
+				>
+			{:else}
+				{metadata?.objectType?._ || config.EMPTY_PLACEHOLDER}
+			{/if}
+		</dd>
 
 		<dt>Text type</dt>
 		<dd class="inscription-type">
