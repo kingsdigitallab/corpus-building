@@ -58,9 +58,9 @@ npm run petrography:import > ../../data/processed/petrography-import.log
 
 ## Check intermediary outputs
 
-1. The json conversion warnings: ...
-2. The import log: ...
-3. The TEI files: ...
+1. The json conversion warnings: look for `"warnings": ` under each entry.
+2. The import log: look first at the last line of the log. For instance, if you see something like 'No XML: 19', then 19 files had no (valid) XML. Check occurences by searchings for "No XML".
+3. The TEI files: `cd corpus-building/data/raw/` then `git diff` to see which lines have changed in each TEI file. You can also use VSCode to compare more easily. Additionally you can also check on github after sharing your output.
 
 ## Share the intermediary output
 
