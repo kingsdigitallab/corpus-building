@@ -31,19 +31,18 @@
 	 */
 	function nullIfDivEmpty(div) {
 		// Example
-		// div.html = "<h2>commentary</h2>  <p>  </p>" => returns null 
-		let ret = div
+		// div.html = "<h2>commentary</h2>  <p>  </p>" => returns null
+		let ret = div;
 		if (ret && ret.html) {
-			let html = ret.html.trim()
-			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, "");
-			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
-			html = html.trim()
+			let html = ret.html.trim();
+			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, '');
+			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, '');
+			html = html.trim();
 			if (!html.length) {
-				ret = null
+				ret = null;
 			}
-
 		}
-		return ret
+		return ret;
 	}
 
 	const attribution = $derived(html?.editions?.[0]?.html);
@@ -73,9 +72,7 @@
 	let provenanceMapZoom = $state(7);
 
 	const commentary = $derived(
-		nullIfDivEmpty(
-			html?.divs?.find((div) => div.id === 'commentary') || null
-		)
+		nullIfDivEmpty(html?.divs?.find((div) => div.id === 'commentary') || null)
 	);
 	let activeTranslationTab = $state(0);
 

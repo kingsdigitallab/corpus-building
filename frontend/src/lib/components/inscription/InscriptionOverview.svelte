@@ -104,7 +104,7 @@
 
 		<dt>Text type</dt>
 		<dd class="inscription-type">
-			<InscriptionType inscription={metadata} showCertainty=true />
+			<InscriptionType inscription={metadata} showCertainty="true" />
 		</dd>
 	</dl>
 </section>
@@ -121,9 +121,11 @@
 		position: sticky;
 		top: 0;
 	}
-
+	/**ZL changed the inscription header horizontal line paddings*/
 	.overview-header {
 		border-bottom: var(--border-size-1) solid var(--border-color);
+		margin-inline: calc(var(--size-4) * -1);
+		padding-inline: var(--size-4);
 	}
 
 	#overview h1 {
@@ -144,12 +146,16 @@
 
 	#overview #facsimile-images figcaption {
 		border-top: var(--border-size-1) solid var(--border-color);
+
+		margin-inline: calc(var(--size-4) * -2);
+		padding-inline: calc(var(--size-4) * 2);
+
 		font-size: var(--font-size-0);
 		max-inline-size: none;
 		padding-block: var(--size-4);
 		text-align: center;
 		text-wrap: balance;
-		width: 100%;
+		width: calc(100% + (var(--size-4) * 4));
 	}
 
 	#overview .image-placeholder {
@@ -160,6 +166,11 @@
 
 	#overview dl {
 		border-top: var(--border-size-1) solid var(--border-color);
+
+		width: calc(100% + (var(--size-4) * 2));
+		margin-left: calc(var(--size-4) * -1);
+
+		padding-inline: var(--size-4);
 		padding-block: var(--size-4);
 
 		display: grid;
