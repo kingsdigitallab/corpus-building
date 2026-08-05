@@ -26,20 +26,22 @@
 	let { slug, metadata, images, html, xml, isIncomplete, missingFields } = data;
 
 	/**
-	 * @param {{ id: string; html: string; }} div
-	 * @returns {{ id: string; html: string; }}
+	 * @param {{ id: string, html: string }} div
+	 * @returns {{ id: string, html: string }|null}
 	 */
 	function nullIfDivEmpty(div) {
 		// Example
-		// div.html = "<h2>commentary</h2>  <p>  </p>" => returns null 
-		let ret = div
-		if (ret && ret.html) {
-			let html = ret.html.trim()
+		// {id: 'commentary', html: '<h2>commentary</h2>  <p>  </p>  '} => null 
+		let ret = null
+		if (div && div.html) {
+			let html = div.html.trim()
+			// removes heading from start
 			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, "");
+			// removes empty <p>
 			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
 			html = html.trim()
-			if (!html.length) {
-				ret = null
+			if (html.length) {
+				ret = div
 			}
 
 		}
@@ -48,7 +50,11 @@
 
 	const attribution = $derived(html?.editions?.[0]?.html);
 	const editions = $derived(html?.divs?.find((div) => div.id === 'editions'));
-	const apparatus = $derived(html?.divs?.find((div) => div.id === 'apparatus'));
+	const apparatus = $derived(
+		nullIfDivEmpty(
+			html?.divs?.find((div) => div.id === 'apparatus')
+		)
+	);
 	const translations = $derived(html?.divs?.filter((div) => div.id === 'translation') || []);
 
 	/**
@@ -89,7 +95,7 @@
 
 	/**
 	 * @param {{ html: string; }} translation
-	 * @returns {{ id: string; type: string; html: string; }}
+	 * @returns {{ id: string; type: string; html: string; }|null}
 	 */
 	function parseTranslation(translation) {
 		const parser = new DOMParser();
