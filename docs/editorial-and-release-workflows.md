@@ -3,6 +3,11 @@
 See the [frontend README](../frontend/README.md#adding-content) 
 for instructions on how to add static pages to the site via markdown files.
 
+## Importing the petrographic metadata
+
+See [the petrographic import documentation](./petrographic-import.md) 
+for details.
+
 ## Editorial and release workflow
 
 Changes to the content or code should normally happen on the `develop` branch. 
