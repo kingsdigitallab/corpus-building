@@ -153,16 +153,22 @@ by following those steps:
 3. select the relevant branch (`main` for live site, `develop` for staging site);
 4. confirm by clicking the "Run workflow" button
 
+<img width="932" height="544" alt="Screenshot_20260805_121747" src="https://github.com/user-attachments/assets/221f1737-18c7-40c0-8ab0-d2ef80a112ba" />
+
 You should be redirected to a new page for that release job 
 where you can see its running status in real time. 
 You'll notice a "Cancel workflow" button in the top right corner
 to interrupt the job. You can't resume a cancelled job; 
 instead you would run a new one.
 
+<img width="1139" height="736" alt="Screenshot_20260805_121201" src="https://github.com/user-attachments/assets/153dcc5e-3b27-4399-8f2a-25ba2d3e3555" />
+
 You can also see all the current and past jobs on the Build and deploy page.
 The color of the icon in fron of each row indicates the status of the job:
 animated orange is curently running; blue tick was successful; 
 red cross failed; and greyed was cancelled.
+
+<img width="932" height="757" alt="Screenshot_20260805_121318" src="https://github.com/user-attachments/assets/d4ca61e3-2814-4647-b20d-72f907de5b22" />
 
 ## How to cite
 
