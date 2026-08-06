@@ -18,6 +18,8 @@ const STYLESHEET_PATH = path.resolve(
   "start-edition.sef.json",
 );
 
+// added this comment to test GH workflow trigger
+
 let cachedStylesheet = null;
 
 /**
