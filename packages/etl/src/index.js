@@ -2,13 +2,47 @@ import * as cheerio from "cheerio";
 import fs from "fs/promises";
 import path from "path";
 import SaxonJS from "saxon-js";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { extractMetadata, parseXML } from "./metadata.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const STYLESHEET_PATH = path.resolve(
+  __dirname,
+  "../../../",
+  "xslt",
+  "epidoc",
+  "start-edition.sef.json",
+);
+
+let cachedStylesheet = null;
+
+/**
+ * Loads and caches the compiled XSLT stylesheet (SEF) once, returning the
+ * parsed internal representation and its base URI so that SaxonJS can reuse
+ * them across transforms without re-reading and re-parsing the SEF on every
+ * call.
+ *
+ * @async
+ * @function loadStylesheet
+ * @returns {Promise<{stylesheetInternal: Object, stylesheetBaseURI: string}>} A promise that resolves to the cached stylesheet descriptor.
+ * @throws {Error} If there's an error reading or parsing the stylesheet.
+ */
+async function loadStylesheet() {
+  let ret = cachedStylesheet;
+  if (!ret) {
+    const sefText = await fs.readFile(STYLESHEET_PATH, "utf-8");
+    ret = {
+      stylesheetInternal: JSON.parse(sefText),
+      stylesheetBaseURI: pathToFileURL(STYLESHEET_PATH).href,
+    };
+    cachedStylesheet = ret;
+  }
+  return ret;
+}
 
 /**
  * Transforms an XML string to HTML using an XSLT stylesheet.
@@ -20,16 +54,11 @@ const __dirname = path.dirname(__filename);
  * @throws {Error} If there's an error during the transformation process.
  */
 async function transformToHtml(filePath) {
-  const xsltPath = path.resolve(
-    __dirname,
-    "../../../",
-    "xslt",
-    "epidoc",
-    "start-edition.sef.json",
-  );
+  const { stylesheetInternal, stylesheetBaseURI } = await loadStylesheet();
 
   const result = await SaxonJS.transform({
-    stylesheetLocation: xsltPath,
+    stylesheetInternal,
+    stylesheetBaseURI,
     sourceFileName: filePath,
     destination: "serialized",
   });
@@ -144,32 +173,30 @@ async function processFile(filePath, outputPath, options = {}) {
   let result = {
     file: baseName,
   };
+  let htmlResult = null;
 
   if (shouldExtractMetadata) {
     const metadata = await extractMetadata(xmlString);
 
     result = { ...result, ...metadata };
 
-    await fs.mkdir(metaOutputPath, { recursive: true });
     await fs.writeFile(metaOutputFile, JSON.stringify(result, null, 2));
   }
 
   if (shouldTransformToHtml) {
-    const html = await transformToHtml(filePath, xmlString);
+    htmlResult = await transformToHtml(filePath, xmlString);
 
-    await fs.mkdir(htmlOutputPath, { recursive: true });
-    await fs.writeFile(htmlOutputFile, JSON.stringify(html, null, 2));
+    await fs.writeFile(htmlOutputFile, JSON.stringify(htmlResult, null, 2));
   }
 
   if (shouldExtractLemmas) {
-    const html = await fs.readFile(htmlOutputFile, "utf-8");
-    const json = JSON.parse(html);
+    const json =
+      htmlResult ?? JSON.parse(await fs.readFile(htmlOutputFile, "utf-8"));
 
     try {
       const words = await extractLemmas(json.editions[1].html);
       result = { ...result, ...words };
 
-      await fs.mkdir(lemmasOutputPath, { recursive: true });
       await fs.writeFile(lemmasOutputFile, JSON.stringify(words, null, 2));
     } catch (error) {
       console.error(
@@ -203,6 +230,16 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   const results = [];
   const lemmas = [];
   const bibliography = {};
+
+  if (options.extractMetadata !== false) {
+    await fs.mkdir(path.join(outputPath, "metadata"), { recursive: true });
+  }
+  if (options.transformToHtml !== false) {
+    await fs.mkdir(path.join(outputPath, "html"), { recursive: true });
+  }
+  if (options.extractLemmas !== false) {
+    await fs.mkdir(path.join(outputPath, "lemmas"), { recursive: true });
+  }
 
   for (const file of files) {
     if (file.includes('ISic09')) {
