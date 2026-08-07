@@ -7,6 +7,8 @@ export const subtitle = 'Inscriptions of Ancient Sicily';
 export const description = `${title} is dedicated to the inscribed texts from ancient Sicily, combining an open access digital corpus with news, blogs and other resources.`;
 export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
+export const googleAnalyticsId = dev ? '' : 'G-XXXXXXXXXX';
+
 export const heroImages = [
 	{
 		image: 'ISic000147_tiled.png',

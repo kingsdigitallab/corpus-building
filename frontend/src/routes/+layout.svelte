@@ -1,4 +1,5 @@
 <script>
+	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/PageHeader.svelte';
@@ -25,6 +26,12 @@
 	let { url } = $derived(data);
 
 	const children_render = $derived(children);
+
+	afterNavigate(() => {
+		if (config.googleAnalyticsId && typeof window.gtag === 'function') {
+			window.gtag('event', 'page_view', { page_path: $page.url.pathname });
+		}
+	});
 </script>
 
 <svelte:head>
@@ -43,6 +50,15 @@
 		content={$page.data.title ? `${$page.data.title} | ${config.title}` : config.title}
 	/>
 	<meta property="og:description" content={config.description} />
+	{#if config.googleAnalyticsId}
+		{@html `<script async src="https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsId}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '${config.googleAnalyticsId}');
+</script>`}
+	{/if}
 </svelte:head>
 
 <div class="layout">
