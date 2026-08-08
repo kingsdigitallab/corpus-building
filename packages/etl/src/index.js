@@ -1,4 +1,5 @@
 import * as cheerio from "cheerio";
+import crypto from "crypto";
 import fs from "fs/promises";
 import path from "path";
 import SaxonJS from "saxon-js";
@@ -18,6 +19,8 @@ const STYLESHEET_PATH = path.resolve(
   "start-edition.sef.json",
 );
 
+const CACHE_FILENAME = "etl-cache.json";
+
 // added this comment to test GH workflow trigger
 
 let cachedStylesheet = null;
@@ -30,7 +33,7 @@ let cachedStylesheet = null;
  *
  * @async
  * @function loadStylesheet
- * @returns {Promise<{stylesheetInternal: Object, stylesheetBaseURI: string}>} A promise that resolves to the cached stylesheet descriptor.
+ * @returns {Promise<{stylesheetInternal: Object, stylesheetBaseURI: string, stylesheetHash: string}>} A promise that resolves to the cached stylesheet descriptor.
  * @throws {Error} If there's an error reading or parsing the stylesheet.
  */
 async function loadStylesheet() {
@@ -40,10 +43,63 @@ async function loadStylesheet() {
     ret = {
       stylesheetInternal: JSON.parse(sefText),
       stylesheetBaseURI: pathToFileURL(STYLESHEET_PATH).href,
+      stylesheetHash: crypto.createHash("sha256").update(sefText).digest("hex"),
     };
     cachedStylesheet = ret;
   }
   return ret;
+}
+
+/**
+ * Computes a cache key for a single transform by hashing the stylesheet
+ * content together with the XML source, so the result is invalidated when
+ * either the XSLT or the input file changes.
+ *
+ * @function computeCacheKey
+ * @param {string} stylesheetHash - SHA-256 hex of the stylesheet content.
+ * @param {string} xmlString - The XML source of the inscription file.
+ * @returns {string} A SHA-256 hex digest used as the cache key.
+ */
+function computeCacheKey(stylesheetHash, xmlString) {
+  return crypto
+    .createHash("sha256")
+    .update(stylesheetHash)
+    .update(xmlString)
+    .digest("hex");
+}
+
+/**
+ * Loads the transform cache manifest from disk, returning an empty object
+ * when the manifest does not exist yet (first run).
+ *
+ * @async
+ * @function loadCache
+ * @param {string} outputPath - The base output directory path.
+ * @returns {Promise<Object>} A promise that resolves to the cache manifest (file base name -> cache key).
+ */
+async function loadCache(outputPath) {
+  let ret = {};
+  try {
+    const cacheFile = path.join(outputPath, CACHE_FILENAME);
+    ret = JSON.parse(await fs.readFile(cacheFile, "utf-8"));
+  } catch {
+    ret = {};
+  }
+  return ret;
+}
+
+/**
+ * Writes the transform cache manifest to disk.
+ *
+ * @async
+ * @function saveCache
+ * @param {string} outputPath - The base output directory path.
+ * @param {Object} cache - The cache manifest to persist.
+ * @returns {Promise<void>}
+ */
+async function saveCache(outputPath, cache) {
+  const cacheFile = path.join(outputPath, CACHE_FILENAME);
+  await fs.writeFile(cacheFile, JSON.stringify(cache, null, 2));
 }
 
 /**
@@ -148,6 +204,8 @@ async function extractLemmas(html) {
  * @param {Object} [options={}] - An object containing processing options.
  * @param {boolean} [options.extractMetadata=true] - Whether to extract metadata from the XML file.
  * @param {boolean} [options.transformToHtml=true] - Whether to transform the XML file to HTML.
+ * @param {boolean} [options.useCache=true] - Whether to reuse cached HTML transforms when the XML and XSLT are unchanged.
+ * @param {Object} [options.cache={}] - The transform cache manifest (file base name -> cache key).
  * @returns {Promise<Object>} A promise that resolves to an object containing the processing results.
  * @property {string} file - The base name of the processed file (without extension).
  * @property {Object} [metadata] - The extracted metadata (if extractMetadata option is true).
@@ -159,6 +217,8 @@ async function processFile(filePath, outputPath, options = {}) {
     extractMetadata: shouldExtractMetadata = true,
     transformToHtml: shouldTransformToHtml = true,
     extractLemmas: shouldExtractLemmas = true,
+    useCache = true,
+    cache = {},
   } = options;
   const baseName = path.basename(filePath, ".xml");
   const xmlString = await fs.readFile(filePath, "utf-8");
@@ -186,9 +246,25 @@ async function processFile(filePath, outputPath, options = {}) {
   }
 
   if (shouldTransformToHtml) {
-    htmlResult = await transformToHtml(filePath, xmlString);
+    const { stylesheetHash } = await loadStylesheet();
+    const cacheKey = computeCacheKey(stylesheetHash, xmlString);
 
-    await fs.writeFile(htmlOutputFile, JSON.stringify(htmlResult, null, 2));
+    if (useCache && cache[baseName] === cacheKey) {
+      try {
+        htmlResult = JSON.parse(await fs.readFile(htmlOutputFile, "utf-8"));
+      } catch {
+        htmlResult = null;
+      }
+    }
+
+    if (!htmlResult) {
+      htmlResult = await transformToHtml(filePath, xmlString);
+      await fs.writeFile(htmlOutputFile, JSON.stringify(htmlResult, null, 2));
+    }
+
+    if (useCache) {
+      cache[baseName] = cacheKey;
+    }
   }
 
   if (shouldExtractLemmas) {
@@ -223,6 +299,7 @@ async function processFile(filePath, outputPath, options = {}) {
  * @param {boolean} [options.transformToHtml] - Whether to transform the XML files to HTML.
  * @param {boolean} [options.extractLemmas] - Whether to extract lemmas from the XML files.
  * @param {boolean} [options.extractBibliography] - Whether to extract bibliography from the XML files.
+ * @param {boolean} [options.useCache] - Whether to reuse cached HTML transforms when the XML and XSLT are unchanged.
  * @param {string} [options.inscriptionFilter] - Process inscriptions matching that pattern.
  * @returns {Promise<Array>} A promise that resolves to an array of objects, each containing the processing results for a single file.
  * @throws {Error} If there's an error reading the directory or processing files.
@@ -232,6 +309,10 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
   const results = [];
   const lemmas = [];
   const bibliography = {};
+
+  if (options.useCache !== false) {
+    options.cache = await loadCache(outputPath);
+  }
 
   if (options.extractMetadata !== false) {
     await fs.mkdir(path.join(outputPath, "metadata"), { recursive: true });
@@ -342,6 +423,10 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
     );
   }
 
+  if (options.useCache !== false) {
+    await saveCache(outputPath, options.cache);
+  }
+
   return results;
 }
 
@@ -401,6 +486,11 @@ async function main() {
       description: "Pattern to filter which inscriptions to process",
       default: null,
     })
+    .option("cache", {
+      type: "boolean",
+      description: "Reuse cached HTML transforms when XML and XSLT are unchanged",
+      default: true,
+    })
     .help()
     .alias("help", "h")
     .parse();
@@ -414,6 +504,7 @@ async function main() {
     transformToHtml: argv.html,
     extractLemmas: argv.lemmas,
     extractBibliography: argv.bibliography,
+    useCache: argv.cache,
     inscriptionFilter: argv.filter,
   };
 
