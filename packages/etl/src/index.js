@@ -123,6 +123,8 @@ async function transformToHtml(filePath) {
 
   const $ = cheerio.load(result.principalResult);
 
+  // GN selector looks wrong, it should be 'body div:not(#facsimile-images):not(#handnote)'
+  // confirmed by inclusion of those two divs in the .json output
   const divs = $("body > div:not(#facsimile-images #handnote)")
     .map((i, div) => ({
       id: $(div).attr("id"),

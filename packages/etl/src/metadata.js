@@ -142,10 +142,11 @@ function getTitle(xml) {
 }
 
 function getStatus(xml) {
-  const status = xml.TEI.teiHeader.revisionDesc.status;
+  const revisionDesc = xml.TEI.teiHeader.revisionDesc
+  const status = revisionDesc.status;
 
   if (status?.toLowerCase() === "deprecated") {
-    const changeNote = getChangeNote(xml, status);
+    const changeNote = getPrimaryChange(revisionDesc);
     return {
       _: status,
       changeNote,
@@ -155,12 +156,13 @@ function getStatus(xml) {
   return { _: status };
 }
 
-function getChangeNote(xml, status) {
-  const changes = xml.TEI.teiHeader.revisionDesc.listChange.change;
+function getPrimaryChange(revisionDesc) {
+  const changes = revisionDesc.listChange.change;
 
   if (!changes) return null;
-
-  return changes.find((change) => change["xml:id"] === status);
+  
+  // let ret = changes.find((change) => change["xml:id"] === status);
+  return changes.find((change) => change["xml:id"] === (revisionDesc?.change ?? '').replace('#', ''));
 }
 
 function getEditions(xml) {
