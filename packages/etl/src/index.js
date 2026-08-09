@@ -21,8 +21,6 @@ const STYLESHEET_PATH = path.resolve(
 
 const CACHE_FILENAME = "etl-cache.json";
 
-// added this comment to test GH workflow trigger
-
 let cachedStylesheet = null;
 
 /**
@@ -398,7 +396,10 @@ async function processTeiFiles(inputPath, outputPath, options = {}) {
 
         console.log(`Processed ${filePath} successfully.`);
       } catch (error) {
-        console.error(`Error processing ${filePath}:`, error);
+        console.error(`ERROR processing ${filePath}`);
+        // GN: now throwing as not safe for ETL to have 0 status 
+        // when esceptions are raised
+        throw error
       }
     }
   }
@@ -510,13 +511,15 @@ async function main() {
     inscriptionFilter: argv.filter,
   };
 
-  try {
+  // GN: not safe for ETL to return 0 status code when an exception is raised
+  // exceptions bubbling here should not be ignored.
+  // try {
     const results = await processTeiFiles(teiPath, outputPath, options);
     console.log("ETL process completed");
     console.log(`Processed ${results.length} files`);
-  } catch (error) {
-    console.error("ETL process failed:", error);
-  }
+  // } catch (error) {
+  // console.error("ETL process failed:", error);
+  // }
 }
 
 // Only run if this file is being run directly

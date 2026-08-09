@@ -146,7 +146,7 @@ function getStatus(xml) {
   const status = revisionDesc.status;
 
   if (status?.toLowerCase() === "deprecated") {
-    const changeNote = getPrimaryChange(revisionDesc);
+    const changeNote = getPrimaryChange(revisionDesc, xml);
     return {
       _: status,
       changeNote,
@@ -156,13 +156,20 @@ function getStatus(xml) {
   return { _: status };
 }
 
-function getPrimaryChange(revisionDesc) {
-  const changes = revisionDesc.listChange.change;
+function getPrimaryChange(revisionDesc, xml) {
+  let ret = null
 
-  if (!changes) return null;
-  
+  const changes = revisionDesc.listChange.change ?? [];
+
   // let ret = changes.find((change) => change["xml:id"] === status);
-  return changes.find((change) => change["xml:id"] === (revisionDesc?.change ?? '').replace('#', ''));
+  const primaryChangeId = revisionDesc?.change ?? ''
+  ret = changes.find((change) => change["xml:id"] === primaryChangeId.replace('#', ''));
+
+  if (!ret) {
+    logWarning(`revisionDesc/@change="${primaryChangeId}" but no change with that @id`, xml)
+  }
+
+  return ret
 }
 
 function getEditions(xml) {
@@ -183,7 +190,7 @@ async function getEditionAuthor(xml) {
     source = source.replace(/^#/, "");
 
     const itemKey = source.split("/").at(-1);
-    const zoteroData = await getZoteroData(itemKey);
+    const zoteroData = await getZoteroData(itemKey, xml);
     if (zoteroData) {
       zoteroData.ref = source;
     }
@@ -550,6 +557,7 @@ async function getBibliography(xml, bibliographyType = "edition") {
         if (item.ptr?.target) {
           const zoteroData = await getZoteroData(
             sanitizeURL(item.ptr.target).split("/").at(-1),
+            xml
           );
 
           return {
@@ -566,15 +574,26 @@ async function getBibliography(xml, bibliographyType = "edition") {
   return items;
 }
 
-async function getZoteroData(itemKey) {
+async function getZoteroData(itemKey, xml) {
   if (!itemKey) return Promise.resolve("");
 
   if (zotero?.[itemKey]) {
     return Promise.resolve(zotero[itemKey]);
   }
 
-  console.warn(`Zotero data not found for key: ${itemKey}`);
+  logWarning(`Zotero data not found for key: ${itemKey}`, xml)
+  // console.warn(`Zotero data not found for key: ${itemKey}`);
   return Promise.resolve(null);
+}
+
+function logWarning(message, xml) {
+  console.warn(`WARNING: ${getISicId(xml)}, ${message}`)
+}
+
+function getISicId(xml) {
+  // returns ISic003409 from xml dict
+  const idno = xml.TEI.teiHeader.fileDesc.publicationStmt.idno.find(idno => idno.type === 'filename')
+  return idno?._ ?? 'Unspecified ISic'
 }
 
 async function getXML(xmlString) {
