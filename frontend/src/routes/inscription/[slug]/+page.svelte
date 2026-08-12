@@ -31,7 +31,7 @@
 	 */
 	function nullIfDivEmpty(div) {
 		// Example
-		// {id: 'commentary', html: '<h2>commentary</h2>  <p>  </p>  '} => null 
+		// {id: 'commentary', html: '<h2>commentary</h2>  <p>  </p>  '} => null
 		let ret = null;
 		if (div && div.html) {
 			let html = div.html.trim();
@@ -39,7 +39,7 @@
 			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, '');
 			// removes empty <p>
 			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, '');
-			html = html.trim()
+			html = html.trim();
 			if (html.length) {
 				ret = div;
 			}
@@ -49,11 +49,7 @@
 
 	const attribution = $derived(html?.editions?.[0]?.html);
 	const editions = $derived(html?.divs?.find((div) => div.id === 'editions'));
-	const apparatus = $derived(
-		nullIfDivEmpty(
-			html?.divs?.find((div) => div.id === 'apparatus')
-		)
-	);
+	const apparatus = $derived(nullIfDivEmpty(html?.divs?.find((div) => div.id === 'apparatus')));
 	const translations = $derived(html?.divs?.filter((div) => div.id === 'translation') || []);
 
 	/**
@@ -607,6 +603,42 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 	#content h3 {
 		font-family: var(--font-family);
 		padding-block: var(--size-2);
+	}
+
+	/* ZL: consistent spacing between section headings and their content */
+	#text-type h2 {
+		margin-bottom: var(--size-3);
+	}
+
+	#commentary :global(h2) {
+		padding-bottom: var(--size-3);
+	}
+
+	#physical-description h3 {
+		margin-top: var(--size-6);
+		margin-bottom: var(--size-2);
+	}
+
+	/* ZL: improve spacing and hierarchy in Physical description */
+	#physical-description dl {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		margin-block: var(--size-2) var(--size-6);
+	}
+
+	#physical-description dt {
+		font-weight: bold;
+		margin-top: var(--size-4);
+	}
+
+	#physical-description dt:first-child {
+		margin-top: 0;
+	}
+
+	#physical-description dd {
+		margin-inline-start: 0;
+		margin-top: var(--size-1);
 	}
 
 	#content > section {
