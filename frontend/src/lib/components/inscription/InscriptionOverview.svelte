@@ -138,9 +138,9 @@
 	#overview .image-placeholder {
 		grid-column: 1;
 		grid-row: 1;
-		margin: 0 auto;
-		padding-inline: var(--size-2);
-		width: 100%;
+		margin-inline: calc(var(--size-4) * -1);
+		padding-inline: 0;
+		width: calc(100% + (var(--size-4) * 2));
 	}
 
 	#overview #facsimile-images figcaption {
