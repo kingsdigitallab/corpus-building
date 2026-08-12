@@ -70,7 +70,7 @@
 				src="{config.imageServer}{slug}/{images[0]?.url || ''}/{config.imageThumbParams}"
 				alt={images[0]?.desc || 'Inscription image'}
 			/>
-			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
+			<section id="image-viewer" style="height: 44vh; width: 100%;"></section>
 			<figcaption>{curImageTitle}</figcaption>
 		</figure>
 	{:else}
@@ -113,6 +113,7 @@
 		border-right: var(--border-size-1) solid var(--border-color);
 		height: 100%;
 		overflow-y: auto;
+		overflow-x: hidden;
 		margin-top: 0;
 		padding-inline: var(--size-4);
 		padding-top: 0;
