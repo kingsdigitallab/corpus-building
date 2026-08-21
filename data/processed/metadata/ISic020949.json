@@ -71,7 +71,7 @@
     }
   },
   "handNote": {
-    "lettering": "Alpha has a horizontal crossbar and a right stroke approximately one third longer than the left one. The second character, damaged internally, is probably delta and is arranged symmetrically to alpha. One of its strokes continues beyond the horizontal stroke, while the meeting of the two apices produces a chi-shaped form.",
+    "lettering": "Alpha has a horizontal crossbar and a right stroke approximately one third longer than the left one. The second character, damaged internally, is probably delta and is arranged symmetrically to alpha. One of its strokes continues beyond the horizontal stroke, while the meeting of the two apices produces a chi-shaped form. The letters have a modular width of 7mm",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -79,7 +79,9 @@
         "from": "line1",
         "to": "line1",
         "h": "10",
-        "unit": "mm"
+        "unit": "mm",
+        "atLeast": "10",
+        "atMost": "10"
       }
     ]
   },
@@ -87,11 +89,30 @@
     "_": "500-480 BCE",
     "notBefore": -500,
     "notAfter": -480,
-    "evidence": "material-context, lettering",
-    "precision": "low"
+    "evidence": "material-context, lettering"
   },
-  "places": [],
-  "geo": [],
+  "places": [
+    {
+      "_": "Athenae",
+      "type": "ancient",
+      "ref": "http://pleiades.stoa.org/places/579885",
+      "region": "Grecia"
+    },
+    {
+      "_": "Athens",
+      "type": "modern",
+      "ref": "http://sws.geonames.org/264371",
+      "region": "Grecia"
+    }
+  ],
+  "geo": [
+    [
+      37.970793,
+      23.719536
+    ]
+  ],
+  "country": "Grecia",
+  "provenance": "Athenae",
   "provenanceFound": {
     "_": "Found in the urban sanctuary at Kasmenai, Monte Casale, near Chiaramonte Gulfi; the fragment was preserved among materials in boxes attributed to the temple, but its precise excavation context is not recorded.",
     "type": "found",
@@ -197,7 +218,12 @@
     }
   },
   "tmNumber": "",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 10,
+      "atMost": 10
+    }
+  ],
   "publications": [],
   "zotero": [],
   "keywords": [
@@ -209,6 +235,9 @@
     "unknown",
     "kylix",
     "ceramic",
+    "athenae",
+    "athens",
+    "grecia",
     "sicily",
     "siracusa",
     "museo archeologico regionale paolo orsi",

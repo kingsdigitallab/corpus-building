@@ -1,7 +1,7 @@
 {
   "file": "ISic030004",
   "uri": "ISic030004",
-  "title": "ISic030004",
+  "title": "Lead defixio",
   "status": {
     "_": "draft"
   },
@@ -47,7 +47,7 @@
     "ana": "#function.defixio",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Defixio"
   },
-  "support": "",
+  "support": "A rectangular lead sheet in three joining pieces, originally folded five times. Heavily corroded.",
   "objectType": {
     "_": "lamina",
     "ana": "#object.lamina",
@@ -62,7 +62,9 @@
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/108.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.complete.broken"
+  },
   "dimensions": [
     {
       "_": "3.7",
@@ -81,23 +83,35 @@
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Greek text inscribed on both sides, beginning on the recto in 9 lines, boustrophedon (first line l-to-r), and continuing on the verso in a further two lines, also boustrophedon (first line l-to-r).",
       "rs": {
         "_": "engraved",
         "ana": "#execution.engraved",
         "ref": "https://www.eagle-network.eu/voc/writing/lod/3.html"
       },
-      "p": "",
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete #text_condition.deteriorated"
+      }
     }
   },
   "handNote": {
+    "lettering": "presence of qoppa",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1-9",
+        "l": "Line 1-11",
         "from": "line1",
-        "to": "line9",
+        "to": "line11",
         "h": "3",
+        "unit": "mm",
+        "atLeast": "3",
+        "atMost": "3"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation",
+        "from": "line1",
+        "to": "line2",
         "unit": "mm"
       }
     ]
@@ -112,19 +126,20 @@
     {
       "_": "Selinus",
       "type": "ancient",
-      "ref": "https://pleiades.stoa.org/places/462489",
+      "ref": "http://pleiades.stoa.org/places/462489",
       "region": "Sicilia"
     },
     {
       "_": "Selinunte",
       "type": "modern",
+      "ref": "http://sws.geonames.org/2523164/",
       "region": "Sicilia"
     }
   ],
   "geo": [
     [
-      37.5853775,
-      12.8298666
+      37.58337,
+      12.82522
     ]
   ],
   "country": "Sicilia",
@@ -205,6 +220,24 @@
         "year": "1923"
       },
       {
+        "author": "Brugnone",
+        "date": "1976",
+        "citedRange": "73-79",
+        "ptr": {
+          "type": "zotero",
+          "target": "https://www.zotero.org/groups/382445/items/IEFIMGIK"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10002280",
+          "target": "https://biblio.inscriptiones.org/epig10002280"
+        },
+        "inscriptionDate": "1976",
+        "title": "Defixiones inedite da Selinunte",
+        "citation": "<span>Antonietta Brugnone, «Defixiones inedite da Selinunte», in <i>Studi di storia antica offerti dagli allievi a Eugenio Manni</i> (Rome, 1976), 67–90</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/IEFIMGIK",
+        "year": "1976"
+      },
+      {
         "type": "corpus",
         "n": "IGASM1",
         "author": "Arena",
@@ -265,6 +298,23 @@
         "year": "1991"
       },
       {
+        "author": "Arena",
+        "date": "1996",
+        "citedRange": "no. 60",
+        "ptr": {
+          "target": "https://www.zotero.org/groups/382445/items/BJUFRNS9"
+        },
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10001374",
+          "target": "https://biblio.inscriptiones.org/epig10001374"
+        },
+        "inscriptionDate": "1996",
+        "title": "Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
+        "citation": "<span>Renato Arena, <i>Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte</i>, 2nd ed., vol. 1, 5 voll. (Pisa: Nistri Lischi, 1996)</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/BJUFRNS9",
+        "year": "1996"
+      },
+      {
         "author": "Bettarini",
         "date": "2005",
         "citedRange": "16",
@@ -277,12 +327,7 @@
         "citation": "<span>L. Bettarini, <i>Corpus delle defixiones di Selinunte: edizione e commento</i>, Hellenica (Alessandria: Edizioni dell’Orso, 2005)</span>",
         "uri": "https://www.zotero.org/groups/isicily/items/SEW88NC7",
         "year": "2005"
-      }
-    ]
-  },
-  "bibliographyDiscussion": {
-    "type": "discussion",
-    "bibl": [
+      },
       {
         "author": "Jordan",
         "date": "1985",
@@ -317,6 +362,12 @@
         "uri": "https://www.zotero.org/groups/isicily/items/9DL74VZN",
         "year": "1999"
       }
+    ]
+  },
+  "bibliographyDiscussion": {
+    "type": "discussion",
+    "bibl": [
+      null
     ]
   },
   "citation": {
@@ -357,24 +408,37 @@
     }
   },
   "tmNumber": "696113",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 3,
+      "atMost": 3
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
+    "Brugnone, 1976, Defixiones inedite da Selinunte",
     "Arena, 1989, IGASM1",
     "Dubois, 1989, IGDS1",
     "López Jimeno, 1991, Las tabellae defixionis de la Sicilia griega",
-    "Bettarini, 2005, Corpus delle defixiones di Selinunte: edizione e commento"
+    "Arena, 1996, Iscrizioni Greche Archaiche di Sicilia e Magna Grecia. Iscrizioni di Sicilia. I. Iscrizioni di Megara Iblea e Selinunte",
+    "Bettarini, 2005, Corpus delle defixiones di Selinunte: edizione e commento",
+    "Jordan, 1985, A survey of Greek defixiones not included in the special corpora",
+    "Curbera, 1999, Defixiones"
   ],
   "zotero": [
     "F2GG87EQ",
+    "IEFIMGIK",
     "VC9IHZAR",
     "RWXNUFEX",
     "N5IF2DZR",
-    "SEW88NC7"
+    "BJUFRNS9",
+    "SEW88NC7",
+    "7UQBFBPB",
+    "9DL74VZN"
   ],
   "keywords": [
     "isic030004",
-    "isic030004",
+    "lead defixio",
     {
       "_": "draft"
     },
