@@ -2,30 +2,53 @@
 
 Document status: untested DRAFT. **Do not follow those instructions yet**.
 
-## Pre-requisites (one-off step)
+## One-off set up
 
 Follow [the prerequisites and Getting Started sections in the main README.md](../README.md#prerequisites).
 
+Clone the [Corpus Building repository](https://github.com/kingsdigitallab/corpus-building):
+
+```bash
+git clone https://github.com/kingsdigitallab/corpus-building.git
+cd corpus-building
+git checkout develop
+git submodule update --init --recursive
+# git pull --recurse-submodules
+```
+
 Fork the [ISicily repository](https://github.com/ISicily/ISicily/fork) with your own account as the owner (leave all other fields in the web form untouched).
 
-Wire your local copy of Corpus Building to your own ISicily fork: TODO
+Click the Code button on your repo home page and copy the address (something like https://github.com/XXX/ISicily.git).
 
-## Get the latest `develop` branch
+Ensure Corpus building is using your own fork of ISicily:
+
+```bash
+cd data/raw
+git remote add mysicily https://github.com/XXX/ISicily.git
+git fetch mysicily
+git reset --hard mysicily/master
+```
+
+## Preparation (each time)
+
+Go to your ISicily fork and check if it is "behind" the main repo. 
+If it is click "Sync fork", "Update branch".
 
 Change into the corpus-building folder then get the latest version of the `develop` branch.
+And verify there is no pending local change. 
 
 ```bash
 cd corpus-building
 git checkout develop
-git pull
+git status
 ```
 
-And verify there is no pending local change. 
-The following command should show no change at all.
+Same with the nested copy of your ISicily repo.
 
 ```bash
-cd corpus-building
-git diff
+cd data/raw
+git checkout master
+git status
 ```
 
 ## Download the Google sheets
