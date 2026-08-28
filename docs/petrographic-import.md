@@ -26,7 +26,9 @@ Ensure Corpus building is using your own fork of ISicily:
 cd data/raw
 git remote add mysicily https://github.com/XXX/ISicily.git
 git fetch mysicily
-git reset --hard mysicily/master
+# git reset --hard mysicily/master
+git branch --set-upstream-to=mysicily/master master
+git checkout
 ```
 
 ## Preparation (each time)
@@ -76,7 +78,7 @@ npm run petrography:json
 
 ```bash
 cd corpus-building/packages/etl
-npm run petrography:import > ../../data/processed/petrography-import.log
+npm run petrography:import &> ../../data/processed/petrography-import.log
 ```
 
 ## Check intermediary outputs
@@ -89,7 +91,7 @@ npm run petrography:import > ../../data/processed/petrography-import.log
 
 ```bash
 cd corpus-building
-git commit -m "chore(petro): converted CSVs to petrography.json; " data/processed/petrography.json data/processed/petrography-import.log
+git commit -m "chore(petro): updated petrography import log" data/processed/petrography.json data/processed/petrography-import.log
 git push
 ```
 
