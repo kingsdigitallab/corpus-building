@@ -7,6 +7,7 @@ import {
   addCoccatoRespStmt,
   buildProvenanceXml,
   applyPetrographyImport,
+  extractMaterialNotes,
 } from "./petrography-import.js";
 
 const MINIMAL_XML = `<?xml version="1.0" encoding="UTF-8"?>
@@ -93,6 +94,32 @@ const XML_NO_MATERIAL_WITH_P = `<?xml version="1.0" encoding="UTF-8"?>
         </body>
     </text>
 </TEI>`;
+
+const XML_WITH_MATERIAL_NOTE = `<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISic000004</title>
+            </titleStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">old description <note>Petrographic imagery at <ref target="https://iiif.csad.ox.ac.uk/viewer/isicily/ISic000004">https://iiif.csad.ox.ac.uk/viewer/isicily/ISic000004</ref></note></material>
+        </body>
+    </text>
+</TEI>`;
+
+const ENTRY_WITH_NOTE = {
+  isic: "ISic000004",
+  type: "stone.marble",
+  subtype: "Proconnesian",
+  ana: "#material.inorganic.stone.metamorphic_rock.marble.calcitic_marble.Proconnesian",
+  addCoccatoResp: true,
+  description: "fine-grained, white marble, likely Proconnesian",
+  provenance: null,
+};
 
 // ---------------------------------------------------------------------------
 // normalizeIsic
@@ -224,6 +251,41 @@ describe("updateMaterialContent", () => {
     const xml = `<TEI><material ana="#x" ref="y">marble\n            with extra whitespace\n            </material></TEI>`;
     const result = updateMaterialContent(xml, "new description");
     expect(result).toBe(`<TEI><material ana="#x" ref="y">new description</material></TEI>`);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// extractMaterialNotes
+// ---------------------------------------------------------------------------
+describe("extractMaterialNotes", () => {
+  it("extracts a <note> from inside <material>", () => {
+    const notes = extractMaterialNotes(XML_WITH_MATERIAL_NOTE);
+    expect(notes).toHaveLength(1);
+    expect(notes[0]).toContain("Petrographic imagery at");
+    expect(notes[0]).toContain('<ref target="https://iiif.csad.ox.ac.uk/viewer/isicily/ISic000004">');
+  });
+
+  it("returns an empty array when <material> has no <note>", () => {
+    expect(extractMaterialNotes(MINIMAL_XML)).toEqual([]);
+  });
+
+  it("returns an empty array when no <material> element exists", () => {
+    expect(extractMaterialNotes("<TEI><body>no material</body></TEI>")).toEqual([]);
+  });
+
+  it("works with a bare <material> tag (no attributes)", () => {
+    const xml = `<TEI><body><material>marble<note>test</note></material></body></TEI>`;
+    const notes = extractMaterialNotes(xml);
+    expect(notes).toHaveLength(1);
+    expect(notes[0]).toBe("<note>test</note>");
+  });
+
+  it("extracts multiple notes when present", () => {
+    const xml = `<TEI><body><material ana="#x">marble<note>first</note><note>second</note></material></body></TEI>`;
+    const notes = extractMaterialNotes(xml);
+    expect(notes).toHaveLength(2);
+    expect(notes[0]).toContain("first");
+    expect(notes[1]).toContain("second");
   });
 });
 
@@ -372,5 +434,43 @@ describe("applyPetrographyImport", () => {
     expect(result).toContain('xml:id="Coccato"');
     expect(result).toContain("fine-grained, banded, white marble, likely Proconnesian");
     expect(result).not.toContain("<material>marble</material>");
+  });
+
+  it("preserves <note> elements inside <material> when description is replaced", () => {
+    const result = applyPetrographyImport(XML_WITH_MATERIAL_NOTE, ENTRY_WITH_NOTE);
+    expect(result).toContain("fine-grained, white marble, likely Proconnesian");
+    expect(result).toContain("Petrographic imagery at");
+    expect(result).toContain('<ref target="https://iiif.csad.ox.ac.uk/viewer/isicily/ISic000004">');
+    // note must appear inside the material element
+    const matOpen = result.indexOf("<material");
+    const matClose = result.indexOf("</material>");
+    const notePos = result.indexOf("<note>");
+    expect(notePos).toBeGreaterThan(matOpen);
+    expect(notePos).toBeLessThan(matClose);
+  });
+
+  it("places <note> after provenance when both are present", () => {
+    const entry = {
+      ...ENTRY_WITH_NOTE,
+      provenance: {
+        placeName: "Marmara District",
+        coordinates: "40.61972,27.61694",
+        radius: null,
+        uri: "https://www.geonames.org/741729/marmara-adasi.html",
+      },
+    };
+    const result = applyPetrographyImport(XML_WITH_MATERIAL_NOTE, entry);
+    const notePos = result.indexOf("<note>");
+    const provPos = result.indexOf('<placeName type="provenance">');
+    const matClose = result.indexOf("</material>");
+    expect(provPos).toBeGreaterThan(result.indexOf("<material"));
+    expect(notePos).toBeGreaterThan(provPos);
+    expect(notePos).toBeLessThan(matClose);
+  });
+
+  it("is idempotent with notes: running twice produces the same result as once", () => {
+    const once = applyPetrographyImport(XML_WITH_MATERIAL_NOTE, ENTRY_WITH_NOTE);
+    const twice = applyPetrographyImport(once, ENTRY_WITH_NOTE);
+    expect(twice).toBe(once);
   });
 });
