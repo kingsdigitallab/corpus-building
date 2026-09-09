@@ -97,7 +97,21 @@ git push
 
 ## Create a pull request from your ISicily fork
 
-TODO
+```bash
+cd corpus-building/raw/data
+git commit -am "Imported latest petrographic metadata from google sheets into TEI files"
+git push
+```
+
+Go to your ISicily fork on github. And click "Contribute" button. Then "Open pull request".
+
+Add links to the intermediary files in the description.
+
+https://github.com/kingsdigitallab/corpus-building/blob/develop/data/processed/petrography.json
+
+https://github.com/kingsdigitallab/corpus-building/blob/develop/data/processed/petrography-import.log
+
+Then click "Create pull request".
 
 # Special situations
 
