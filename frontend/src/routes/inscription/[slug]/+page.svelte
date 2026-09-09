@@ -529,6 +529,10 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 							? new Date(metadata.citation.change.when).toLocaleDateString()
 							: config.EMPTY_PLACEHOLDER}
 					</dd>
+					<dt>License</dt>
+					<dd>
+						<a href="https://creativecommons.org/licenses/by/4.0/">Commons CC-BY 4.0</a>
+					</dd>
 				</dl>
 				<div class="citation-actions">
 					<Button.Root class="secondary" onclick={copyCitation}>Copy Citation</Button.Root>
