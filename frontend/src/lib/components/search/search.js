@@ -473,6 +473,7 @@ function getLetteringOptions(lettering) {
 			// Extract refs and flatten them (handles both array and single object refs)
 			.flatMap((item) => item.ref)
 			// Only keep the list of refs with a type format
+			// "_": "Α type1.3"
 			.filter((ref) => ref?._?.match(/ type[\d.]+$/))
 			.map((ref) => {
 				// Extract the script from the url and display it in the option

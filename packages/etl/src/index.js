@@ -145,7 +145,8 @@ async function transformToHtml(filePath) {
     }))
     .get();
 
-  const handnote = $("div#handnote p")
+  // Assumes the first <p> under handNote without a @source to annotator is the description of the lettering
+  const handnote = $('div#handnote p:not([source="https://kingsdigitallab.github.io/crossreads/annotator.html"])')
     .first()
     .map((_, div) => ({
       id: $(div).attr("id"),
