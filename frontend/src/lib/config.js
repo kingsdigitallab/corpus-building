@@ -131,3 +131,7 @@ export const citationTemplate = {
 	doiDate: '2020-12-17',
 	yearRange: '2017-2025'
 };
+
+// Inscription page will show the material/note/ref as link
+// for the first material/note which contains this keyword
+export const petrographicImageryKeyword = 'imagery'
