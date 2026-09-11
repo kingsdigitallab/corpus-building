@@ -55,6 +55,9 @@ export const tooltips = {
 	date: {
 		text: 'Use negative numbers for BCE dates. Century and half-century ranges are encoded e.g. -200 to -101 and 101 to 200.'
 	},
+	country: {
+		text: 'Set to ‘Sicilia’ by default (‘countries’ are project-defined, not modern).'
+	},
 	provenance: {
 		text: 'The ancient site (or modern location if ancient name unknown) where the inscription is believed to have originated or is best associated with.'
 	},
@@ -66,6 +69,9 @@ export const tooltips = {
 	},
 	material: {
 		text: 'Classification of the material of which the inscribed object is composed.'
+	},
+	lithotype: {
+		text: 'Classification of the specific rock-type based upon petrographic analysis where available.'
 	},
 	technique: {
 		text: 'Classification of the technique used to create the inscription.'
