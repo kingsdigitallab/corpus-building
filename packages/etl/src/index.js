@@ -129,6 +129,7 @@ function escapeHtml(text) {
  * converted to HTML in document order: text nodes are HTML-escaped and <ref>
  * elements are rendered as <a target="_blank"> links, matching the output of
  * the EpiDoc stylesheet. Any other element falls back to its escaped text.
+ * Whitespace runs are collapsed to single spaces, as the EpiDoc transform does.
  *
  * @function getHandnote
  * @param {string} xmlString - The XML source of the inscription file.
@@ -158,7 +159,7 @@ function getHandnote(xmlString) {
 				}
 			});
 
-		ret = [{ id: $(p).attr("id"), html: html.trim() }];
+		ret = [{ id: $(p).attr("id"), html: html.replace(/\s+/g, " ").trim() }];
 	});
 
 	return ret;
