@@ -132,6 +132,7 @@ export const citationTemplate = {
 	yearRange: '2017-2025'
 };
 
-// Inscription page will show the material/note/ref as link
-// for the first material/note which contains this keyword
+// Inscription > Material > Petrography Imagery 
+// will list the material/note/ref as hyperlinks
+// for the first material/note which contains the following keyword
 export const petrographicImageryKeyword = 'imagery'

@@ -50,7 +50,7 @@
 		</dd>
 	{/if}
 	{#if petroImageRefs.length}
-		<dt>Petrographic Imagery</dt>
+		<dt>Petrographic imagery</dt>
 		<dd>
 			<ul>
 				{#each petroImageRefs as ref}
