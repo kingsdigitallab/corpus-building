@@ -71,7 +71,9 @@ export const tooltips = {
 		text: 'Classification of the material of which the inscribed object is composed.'
 	},
 	lithotype: {
-		text: 'Classification of the specific rock-type based upon petrographic analysis where available.'
+		text: 'Classification of the specific rock-type based upon petrographic analysis where available.',
+		link: 'https://github.com/kingsdigitallab/crossreads-petrography/wiki',
+		linkLabel: 'See Crossreads Petrography wiki'
 	},
 	technique: {
 		text: 'Classification of the technique used to create the inscription.'
