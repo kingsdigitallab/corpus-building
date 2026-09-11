@@ -6,7 +6,9 @@
 	let letterTypeRefs = letteringPara.filter(p => (p?.source ?? '').includes("annotator"));
 	// console.log(letterTypeRefs)
 	if (letterTypeRefs.length) {
-		letterTypeRefs = letterTypeRefs[0]?.ref;
+		// a single <ref> parses as an object, not an array
+		const ref = letterTypeRefs[0]?.ref ?? [];
+		letterTypeRefs = Array.isArray(ref) ? ref : new Array(ref);
 	}
 
 </script>
