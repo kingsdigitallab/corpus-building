@@ -78,7 +78,7 @@ Petrographic analysis has been undertaken on hundreds of items across the corpus
 	loading="lazy" 
 />
 
-<!-- ![Flowchart showing the petrographic analysis workflow. An Inscribed Object yields a Sample and Digital Microscopy images. The Sample is divided into Powders and Fragments. Powders undergo pXRF spectral analysis and XRD diffractometry. Fragments are examined via Digital and Optical Microscopy. All four analytical results feed into a decision point: is the material Marble? If no, the workflow proceeds directly to Analysis and Interpretation. If yes, Isotopic Analysis and Maximum Grain Size comparisons are performed before reaching the final Analysis and Interpretation stage.](images/technical_overview/Flowchart01DarkMode.png) -->
+![Flowchart showing the petrographic analysis workflow. An Inscribed Object yields a Sample and Digital Microscopy images. The Sample is divided into Powders and Fragments. Powders undergo pXRF spectral analysis and XRD diffractometry. Fragments are examined via Digital and Optical Microscopy. All four analytical results feed into a decision point: is the material Marble? If no, the workflow proceeds directly to Analysis and Interpretation. If yes, Isotopic Analysis and Maximum Grain Size comparisons are performed before reaching the final Analysis and Interpretation stage.](images/technical_overview/Flowchart.png)
 
 _Figure 1: Petrographic analysis workflow, from sample preparation through multi-analytical characterisation to rock identification and provenance determination._
 

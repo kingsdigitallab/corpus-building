@@ -25,11 +25,11 @@ See [credits and acknowledgments](credits) for details on specific contributions
 
 For more details on design and software products designed and developed by King's Digital Lab for the CROSSREADS project and to feed the I.Sicily website and edition see: 
 
-- [Code](https://github.com/kingsdigitallab/crossreads) and associated [dynamic data repository](https://github.com/kingsdigitallab/crossreads/tree/main/app/data) for [Palaeographic annotator](https://kingsdigitallab.github.io/crossreads/annotator.html) 
+- [Code](https://github.com/kingsdigitallab/crossreads) (follow "cite this repository" on github) to and associated [dynamic data repository](https://github.com/kingsdigitallab/crossreads/tree/main/app/data) for [Palaeographic annotator](https://kingsdigitallab.github.io/crossreads/annotator.html) 
 
-- [Code](https://github.com/kingsdigitallab/crossreads-petrography) repository for Petrographic environment 
+- [Code](https://github.com/kingsdigitallab/crossreads-petrography) repository for Petrographic environment (follow "cite this repository" on github)
 
-- [Code](https://github.com/kingsdigitallab/corpus-building) and associated [dynamic](https://github.com/ISicily/ISicily) and [stable](https://doi.org/10.5281/zenodo.2556743) data repository for the overall Corpus building edition.
+- [Code](https://github.com/kingsdigitallab/corpus-building) (follow "cite this repository" on github) and associated [dynamic](https://github.com/ISicily/ISicily) and [stable](https://doi.org/10.5281/zenodo.2556743) data repository for the overall Corpus building edition.
 
 ## Citing individual inscription records
 

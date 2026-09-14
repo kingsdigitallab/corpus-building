@@ -70,7 +70,7 @@
 				src="{config.imageServer}{slug}/{images[0]?.url || ''}/{config.imageThumbParams}"
 				alt={images[0]?.desc || 'Inscription image'}
 			/>
-			<section id="image-viewer" style="height: 50vh; width: 100%;"></section>
+			<section id="image-viewer" style="height: 44vh; width: 100%;"></section>
 			<figcaption>{curImageTitle}</figcaption>
 		</figure>
 	{:else}
@@ -90,21 +90,19 @@
 		<dd>{metadata?.textLang?._ || config.EMPTY_PLACEHOLDER}</dd>
 
 		<dt>Object type</dt>
-		{#if metadata?.objectType}
-			<dd>
-				{#if metadata?.objectType?.ref}
-					<a class="badge strong" href={metadata.objectType.ref}
-						>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
-					>
-				{:else}
-					{metadata?.objectType?._ || config.EMPTY_PLACEHOLDER}
-				{/if}
-			</dd>
-		{/if}
+		<dd>
+			{#if metadata?.objectType?.ref}
+				<a class="badge strong" href={metadata.objectType.ref}
+					>{metadata.objectType?._ || config.EMPTY_PLACEHOLDER}</a
+				>
+			{:else}
+				{metadata?.objectType?._ || config.EMPTY_PLACEHOLDER}
+			{/if}
+		</dd>
 
 		<dt>Text type</dt>
 		<dd class="inscription-type">
-			<InscriptionType inscription={metadata} showCertainty=true />
+			<InscriptionType inscription={metadata} showCertainty="true" />
 		</dd>
 	</dl>
 </section>
@@ -115,15 +113,18 @@
 		border-right: var(--border-size-1) solid var(--border-color);
 		height: 100%;
 		overflow-y: auto;
+		overflow-x: hidden;
 		margin-top: 0;
 		padding-inline: var(--size-4);
 		padding-top: 0;
 		position: sticky;
 		top: 0;
 	}
-
+	/**ZL changed the inscription header horizontal line paddings*/
 	.overview-header {
 		border-bottom: var(--border-size-1) solid var(--border-color);
+		margin-inline: calc(var(--size-4) * -1);
+		padding-inline: var(--size-4);
 	}
 
 	#overview h1 {
@@ -137,19 +138,23 @@
 	#overview .image-placeholder {
 		grid-column: 1;
 		grid-row: 1;
-		margin: 0 auto;
-		padding-inline: var(--size-2);
-		width: 100%;
+		margin-inline: calc(var(--size-4) * -1);
+		padding-inline: 0;
+		width: calc(100% + (var(--size-4) * 2));
 	}
 
 	#overview #facsimile-images figcaption {
 		border-top: var(--border-size-1) solid var(--border-color);
+
+		margin-inline: calc(var(--size-4) * -2);
+		padding-inline: calc(var(--size-4) * 2);
+
 		font-size: var(--font-size-0);
 		max-inline-size: none;
 		padding-block: var(--size-4);
 		text-align: center;
 		text-wrap: balance;
-		width: 100%;
+		width: calc(100% + (var(--size-4) * 4));
 	}
 
 	#overview .image-placeholder {
@@ -160,6 +165,11 @@
 
 	#overview dl {
 		border-top: var(--border-size-1) solid var(--border-color);
+
+		width: calc(100% + (var(--size-4) * 2));
+		margin-left: calc(var(--size-4) * -1);
+
+		padding-inline: var(--size-4);
 		padding-block: var(--size-4);
 
 		display: grid;

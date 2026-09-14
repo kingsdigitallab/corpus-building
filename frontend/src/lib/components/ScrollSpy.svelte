@@ -164,10 +164,12 @@
 		width: var(--size-2);
 	}
 
-	.active.dot {
+	/* GN: 26Q3: disabled as the highlight is buggy. 
+	Compromise agreed with partners on 16 July 26 */
+	/* .active.dot {
 		height: var(--size-3);
 		width: var(--size-3);
-	}
+	} */
 
 	@media (max-width: 768px) {
 		nav {

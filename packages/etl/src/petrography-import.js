@@ -139,6 +139,21 @@ export function updateMaterialContent(xml, description) {
 }
 
 /**
+ * Extract all <note> child elements from inside <material>.
+ * @param {string} xml
+ * @returns {string[]}
+ */
+export function extractMaterialNotes(xml) {
+  let ret = [];
+  const materialMatch = xml.match(/<material\b[^>]*>([\s\S]*?)<\/material>/);
+  if (materialMatch) {
+    ret = [...materialMatch[1].matchAll(/<note\b[^>]*>[\s\S]*?<\/note>/g)]
+      .map((m) => m[0]);
+  }
+  return ret;
+}
+
+/**
  * Build the TEI XML fragment for a provenance <place> element.
  * The fragment is intended to appear inside <material>, after the text description.
  *
@@ -163,9 +178,13 @@ export function applyPetrographyImport(xml, entry) {
   let result = ensureMaterialElement(xml);
   result = updateMaterialElement(result, entry);
   if (entry.description != null) {
-    const content = entry.provenance
+    let content = entry.provenance
       ? entry.description + buildProvenanceXml(entry.provenance)
       : entry.description;
+    const notes = extractMaterialNotes(result);
+    if (notes.length > 0) {
+      content += notes.join("");
+    }
     result = updateMaterialContent(result, content);
   }
   if (entry.addCoccatoResp) {

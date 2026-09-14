@@ -51,7 +51,7 @@ jobs:
           npx playwright install --with-deps
 
       - name: Run ETL
-        run: npm run etl
+        run: ./etl.sh
 
       - name: Test
         run: npm test

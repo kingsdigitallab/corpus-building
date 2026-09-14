@@ -7,6 +7,8 @@ export const subtitle = 'Inscriptions of Ancient Sicily';
 export const description = `${title} is dedicated to the inscribed texts from ancient Sicily, combining an open access digital corpus with news, blogs and other resources.`;
 export const url = dev ? 'http://localhost:5173/' : publicUrl;
 
+export const googleAnalyticsId = dev ? '' : 'G-085Y3578JG';
+
 export const heroImages = [
 	{
 		image: 'ISic000147_tiled.png',
@@ -53,6 +55,9 @@ export const tooltips = {
 	date: {
 		text: 'Use negative numbers for BCE dates. Century and half-century ranges are encoded e.g. -200 to -101 and 101 to 200.'
 	},
+	country: {
+		text: 'Set to ‘Sicilia’ by default (‘countries’ are project-defined, not modern).'
+	},
 	provenance: {
 		text: 'The ancient site (or modern location if ancient name unknown) where the inscription is believed to have originated or is best associated with.'
 	},
@@ -64,6 +69,11 @@ export const tooltips = {
 	},
 	material: {
 		text: 'Classification of the material of which the inscribed object is composed.'
+	},
+	lithotype: {
+		text: 'Classification of the specific rock-type based upon petrographic analysis where available.',
+		link: 'https://github.com/kingsdigitallab/crossreads-petrography/wiki',
+		linkLabel: 'See Crossreads Petrography wiki'
 	},
 	technique: {
 		text: 'Classification of the technique used to create the inscription.'
@@ -123,3 +133,8 @@ export const citationTemplate = {
 	doiDate: '2020-12-17',
 	yearRange: '2017-2025'
 };
+
+// Inscription > Material > Petrography Imagery 
+// will list the material/note/ref as hyperlinks
+// for the first material/note which contains the following keyword
+export const petrographicImageryKeyword = 'imagery'

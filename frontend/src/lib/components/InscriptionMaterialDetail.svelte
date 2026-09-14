@@ -3,6 +3,27 @@
 	import { DefaultMarker, MapLibre, Marker, Popup } from 'svelte-maplibre';
 
 	let { material, mapZoom = 7 } = $props();
+
+	function getChildAsArray(parent, childName) {
+		let ret = parent?.[childName]
+		if (ret) {
+			if (typeof ret === 'string' || ret instanceof String) {
+				ret = [{"_": ret}]
+			}
+			if (Object.prototype.toString.call(ret) === '[object Object]') {
+				ret = [ret]
+			}
+		}
+		return ret ?? []
+	}
+
+	let petroImageRefs = []
+	for (let note of getChildAsArray(material, 'note')) {
+		if (note?._ && note._.toLowerCase().includes(config.petrographicImageryKeyword)) {
+			petroImageRefs = getChildAsArray(note, 'ref')
+			break
+		}
+	}
 </script>
 
 <dl>
@@ -16,16 +37,28 @@
 			{#if material?.ref}
 				<a class="badge strong" href={material.ref}>
 					{material.type}
-					{#if material.subtype && material.subtype.length }
+					{#if material.subtype && material.subtype.length}
 						> {material.subtype.join(', ')}
 					{/if}
 				</a>
 			{:else}
 				{material.type}
-				{#if material.subtype && material.subtype.length }
+				{#if material.subtype && material.subtype.length}
 					> {material.subtype.join(', ')}
 				{/if}
 			{/if}
+		</dd>
+	{/if}
+	{#if petroImageRefs.length}
+		<dt>Petrographic imagery</dt>
+		<dd>
+			<ul>
+				{#each petroImageRefs as ref}
+					<li>
+						<a href={ref.target}>{ref._}</a>
+					</li>
+				{/each}
+			</ul>
 		</dd>
 	{/if}
 	{#if material?.placeName?.location?.geo}
@@ -78,5 +111,9 @@
 		white-space: normal;
 		overflow: visible;
 		text-overflow: clip;
+	}
+
+	dt + dd {
+		margin-top: var(--size-2);
 	}
 </style>

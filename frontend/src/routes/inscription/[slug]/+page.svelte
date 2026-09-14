@@ -26,29 +26,30 @@
 	let { slug, metadata, images, html, xml, isIncomplete, missingFields } = data;
 
 	/**
-	 * @param {{ id: string; html: string; }} div
-	 * @returns {{ id: string; html: string; }}
+	 * @param {{ id: string, html: string }} div
+	 * @returns {{ id: string, html: string }|null}
 	 */
 	function nullIfDivEmpty(div) {
 		// Example
-		// div.html = "<h2>commentary</h2>  <p>  </p>" => returns null 
-		let ret = div
-		if (ret && ret.html) {
-			let html = ret.html.trim()
-			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, "");
-			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, "");
-			html = html.trim()
-			if (!html.length) {
-				ret = null
+		// {id: 'commentary', html: '<h2>commentary</h2>  <p>  </p>  '} => null
+		let ret = null;
+		if (div && div.html) {
+			let html = div.html.trim();
+			// removes heading from start
+			html = html.replace(/^<(h[1-6])>.*?<\/\1>/, '');
+			// removes empty <p>
+			html = html.replace(/<p(\s[^>]*)?>\s*(?:&nbsp;|\s)*<\/p>/gi, '');
+			html = html.trim();
+			if (html.length) {
+				ret = div;
 			}
-
 		}
-		return ret
+		return ret;
 	}
 
 	const attribution = $derived(html?.editions?.[0]?.html);
 	const editions = $derived(html?.divs?.find((div) => div.id === 'editions'));
-	const apparatus = $derived(html?.divs?.find((div) => div.id === 'apparatus'));
+	const apparatus = $derived(nullIfDivEmpty(html?.divs?.find((div) => div.id === 'apparatus')));
 	const translations = $derived(html?.divs?.filter((div) => div.id === 'translation') || []);
 
 	/**
@@ -73,9 +74,7 @@
 	let provenanceMapZoom = $state(7);
 
 	const commentary = $derived(
-		nullIfDivEmpty(
-			html?.divs?.find((div) => div.id === 'commentary') || null
-		)
+		nullIfDivEmpty(html?.divs?.find((div) => div.id === 'commentary') || null)
 	);
 	let activeTranslationTab = $state(0);
 
@@ -89,7 +88,7 @@
 
 	/**
 	 * @param {{ html: string; }} translation
-	 * @returns {{ id: string; type: string; html: string; }}
+	 * @returns {{ id: string; type: string; html: string; }|null}
 	 */
 	function parseTranslation(translation) {
 		const parser = new DOMParser();
@@ -530,6 +529,10 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 							? new Date(metadata.citation.change.when).toLocaleDateString()
 							: config.EMPTY_PLACEHOLDER}
 					</dd>
+					<dt>License</dt>
+					<dd>
+						<a href="https://creativecommons.org/licenses/by/4.0/">Commons CC-BY 4.0</a>
+					</dd>
 				</dl>
 				<div class="citation-actions">
 					<Button.Root class="secondary" onclick={copyCitation}>Copy Citation</Button.Root>
@@ -604,6 +607,42 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 	#content h3 {
 		font-family: var(--font-family);
 		padding-block: var(--size-2);
+	}
+
+	/* ZL: consistent spacing between section headings and their content */
+	#text-type h2 {
+		margin-bottom: var(--size-3);
+	}
+
+	#commentary :global(h2) {
+		padding-bottom: var(--size-3);
+	}
+
+	#physical-description h3 {
+		margin-top: var(--size-6);
+		margin-bottom: var(--size-2);
+	}
+
+	/* ZL: improve spacing and hierarchy in Physical description */
+	#physical-description dl {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		margin-block: var(--size-2) var(--size-6);
+	}
+
+	#physical-description dt {
+		font-weight: bold;
+		margin-top: var(--size-4);
+	}
+
+	#physical-description dt:first-child {
+		margin-top: 0;
+	}
+
+	#physical-description dd {
+		margin-inline-start: 0;
+		margin-top: var(--size-1);
 	}
 
 	#content > section {
