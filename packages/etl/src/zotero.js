@@ -6,16 +6,27 @@ import xml2js from "xml2js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const ZOTERO_API_BASE = "https://api.zotero.org/groups/382445/items";
+const ZOTERO_CITATION_STYLE = "chicago-fullnote-bibliography";
+const ZOTERO_CHUNK_SIZE = 50;
+const REQUEST_DELAY_MS = 100;
+const MAX_RETRIES = 3;
+const RETRY_AFTER_FALLBACK_MS = 5000;
+const DEFAULT_LANGUAGE = "english";
+const LOCALE_DEFAULT = "en-GB";
+const LOCALE_GERMAN = "de-DE";
+const LOCALE_ITALIAN = "it-IT";
+const LOCALE_FRENCH = "fr-FR";
+const LOCALE_SPANISH = "es-ES";
+
 /**
  * Extracts all Zotero data for inscriptions and saves it to a JSON file.
  * This script should be run before the main ETL process to avoid repeated API calls.
+ * Items are fetched in batches of up to ZOTERO_CHUNK_SIZE keys per API request.
  */
 async function extractAllZoteroData() {
   console.log("Starting Zotero data extraction...");
 
-  const zoteroDataMap = new Map();
-  const processedKeys = new Set();
-  let totalProcessed = 0;
   let totalErrors = 0;
 
   // Read all XML inscription files to find Zotero references
@@ -32,6 +43,10 @@ async function extractAllZoteroData() {
       `Found ${xmlFiles.length} XML files to process in ${inscriptionsDir}`,
     );
 
+    // Collect all Zotero keys, preserving first-encountered order
+    const zoteroKeys = [];
+    const processedKeys = new Set();
+
     for (const file of xmlFiles) {
       try {
         const filePath = path.join(inscriptionsDir, file);
@@ -42,21 +57,12 @@ async function extractAllZoteroData() {
         if (!xml) continue;
 
         // Extract Zotero keys from the XML
-        const zoteroKeys = extractZoteroKeysFromXML(xml);
+        const keys = extractZoteroKeysFromXML(xml);
 
-        for (const key of zoteroKeys) {
+        for (const key of keys) {
           if (key && !processedKeys.has(key)) {
             processedKeys.add(key);
-            const zoteroData = await fetchZoteroData(key);
-            if (zoteroData) {
-              zoteroDataMap.set(key, zoteroData);
-              totalProcessed++;
-            } else {
-              totalErrors++;
-            }
-
-            // Add a small delay to be respectful to the API
-            await new Promise((resolve) => setTimeout(resolve, 100));
+            zoteroKeys.push(key);
           }
         }
       } catch (error) {
@@ -65,8 +71,10 @@ async function extractAllZoteroData() {
       }
     }
 
-    // Convert Map to object for JSON serialization
-    const zoteroDataObject = Object.fromEntries(zoteroDataMap);
+    // Fetch all Zotero data in batches; unfetched keys are counted as errors
+    const zoteroDataObject = await fetchZoteroDataBatch(zoteroKeys);
+    const totalProcessed = Object.keys(zoteroDataObject).length;
+    totalErrors += zoteroKeys.length - totalProcessed;
 
     // Save to JSON file
     const outputPath = path.join(
@@ -145,79 +153,260 @@ function extractZoteroKeysFromXML(xml) {
 }
 
 /**
+ * Waits for the given number of milliseconds. Returns a promise that
+ * resolves once the delay has elapsed.
+ */
+function sleep(ms) {
+  const ret = new Promise((resolve) => setTimeout(resolve, ms));
+  return ret;
+}
+
+/**
+ * Reads the retry delay in milliseconds from a 429 response's Retry-After
+ * header (interpreted as seconds). Returns RETRY_AFTER_FALLBACK_MS when the
+ * header is missing or cannot be parsed.
+ */
+function getRetryAfterMs(response) {
+  let ret = RETRY_AFTER_FALLBACK_MS;
+  const retryAfterSeconds = Number.parseInt(
+    response.headers?.get?.("retry-after") ?? "",
+    10,
+  );
+  if (Number.isFinite(retryAfterSeconds)) {
+    ret = retryAfterSeconds * 1000;
+  }
+  return ret;
+}
+
+/**
+ * Fetches a URL and retries on HTTP 429, pausing for the delay requested via
+ * the Retry-After header. Returns the final response, which may still be a
+ * 429 once MAX_RETRIES attempts have been exhausted.
+ */
+async function fetchWithRetry(url) {
+  let ret;
+
+  for (let attempt = 0; ; attempt++) {
+    ret = await fetch(url);
+    if (ret.status !== 429 || attempt >= MAX_RETRIES) break;
+    const delayMs = getRetryAfterMs(ret);
+    console.warn(
+      `Rate limited by the Zotero API (429) for ${url}. Retrying in ${delayMs}ms...`,
+    );
+    await sleep(delayMs);
+  }
+
+  return ret;
+}
+
+/**
+ * Maps a Zotero item language to a citation locale, defaulting to en-GB.
+ */
+function getLocale(language) {
+  let ret = LOCALE_DEFAULT;
+  const normalizedLanguage = language?.toLowerCase() || DEFAULT_LANGUAGE;
+
+  if (
+    normalizedLanguage.indexOf("ge") === 0 ||
+    normalizedLanguage.indexOf("german") === 0
+  ) {
+    ret = LOCALE_GERMAN;
+  } else if (
+    normalizedLanguage.indexOf("it") === 0 ||
+    normalizedLanguage.indexOf("italian") === 0
+  ) {
+    ret = LOCALE_ITALIAN;
+  } else if (
+    normalizedLanguage.indexOf("fr") === 0 ||
+    normalizedLanguage.indexOf("french") === 0
+  ) {
+    ret = LOCALE_FRENCH;
+  } else if (
+    normalizedLanguage.indexOf("es") === 0 ||
+    normalizedLanguage.indexOf("spanish") === 0
+  ) {
+    ret = LOCALE_SPANISH;
+  }
+
+  return ret;
+}
+
+/**
+ * Maps a Zotero API item (with citation) to the record stored in zotero.json.
+ */
+function toZoteroRecord(item) {
+  const ret = {
+    title: item.data.title?.trim() || "",
+    author:
+      item.data?.creators
+        .filter((creator) => creator.creatorType === "author")
+        .map((creator) => creator?.lastName?.trim())
+        .filter(Boolean)
+        .join(", ") || "",
+    date: item.data.date?.trim() || null,
+    citation: item.citation.replace(".</span>", "</span>"),
+    uri: item.links.alternate.href,
+  };
+  return ret;
+}
+
+/**
  * Fetches data from Zotero API for a given item key
  */
 async function fetchZoteroData(itemKey) {
-  if (!itemKey) return null;
+  let ret = null;
+
+  if (!itemKey) return ret;
 
   try {
     // First, get the language to determine locale
-    let url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=data`;
+    let url = `${ZOTERO_API_BASE}/${itemKey}?format=json&include=data`;
 
-    const response = await fetch(url);
+    const response = await fetchWithRetry(url);
     if (!response.ok) {
       console.warn(
         `Failed to fetch Zotero item ${itemKey}: ${response.status}`,
       );
-      return null;
+    } else {
+      const json = await response.json();
+      const locale = getLocale(json.data.language);
+
+      // Get the full citation data
+      url = `${ZOTERO_API_BASE}/${itemKey}?format=json&include=citation,data&style=${ZOTERO_CITATION_STYLE}&linkwrap=1&locale=${locale}`;
+
+      const citationResponse = await fetchWithRetry(url);
+      if (!citationResponse.ok) {
+        console.warn(
+          `Failed to fetch citation for Zotero item ${itemKey}: ${citationResponse.status}`,
+        );
+      } else {
+        const citationJson = await citationResponse.json();
+
+        ret = toZoteroRecord(citationJson);
+
+        console.log(`✓ Fetched data for Zotero item: ${itemKey}`);
+      }
     }
-
-    const json = await response.json();
-    const language = json.data.language?.toLowerCase() || "english";
-
-    // Determine locale based on language
-    let locale = "en-GB";
-    if (language.indexOf("ge") === 0 || language.indexOf("german") === 0) {
-      locale = "de-DE";
-    } else if (
-      language.indexOf("it") === 0 ||
-      language.indexOf("italian") === 0
-    ) {
-      locale = "it-IT";
-    } else if (
-      language.indexOf("fr") === 0 ||
-      language.indexOf("french") === 0
-    ) {
-      locale = "fr-FR";
-    } else if (
-      language.indexOf("es") === 0 ||
-      language.indexOf("spanish") === 0
-    ) {
-      locale = "es-ES";
-    }
-
-    // Get the full citation data
-    url = `https://api.zotero.org/groups/382445/items/${itemKey}?format=json&include=citation,data&style=chicago-fullnote-bibliography&linkwrap=1&locale=${locale}`;
-
-    const citationResponse = await fetch(url);
-    if (!citationResponse.ok) {
-      console.warn(
-        `Failed to fetch citation for Zotero item ${itemKey}: ${citationResponse.status}`,
-      );
-      return null;
-    }
-
-    const citationJson = await citationResponse.json();
-
-    const data = {
-      title: citationJson.data.title?.trim() || "",
-      author:
-        citationJson.data?.creators
-          .filter((creator) => creator.creatorType === "author")
-          .map((creator) => creator?.lastName?.trim())
-          .filter(Boolean)
-          .join(", ") || "",
-      date: citationJson.data.date?.trim() || null,
-      citation: citationJson.citation.replace(".</span>", "</span>"),
-      uri: citationJson.links.alternate.href,
-    };
-
-    console.log(`✓ Fetched data for Zotero item: ${itemKey}`);
-    return data;
   } catch (error) {
     console.error(`Error fetching Zotero data for ${itemKey}:`, error.message);
-    return null;
   }
+
+  return ret;
+}
+
+/**
+ * Fetches Zotero records for a chunk of item keys (at most ZOTERO_CHUNK_SIZE),
+ * grouping the citation requests by locale. Keys that cannot be fetched at
+ * batch level are retried individually. Returns an object mapping item key to
+ * Zotero record.
+ */
+async function fetchZoteroDataChunk(chunk) {
+  const ret = {};
+  const fallbackKeys = [];
+
+  try {
+    const dataUrl = `${ZOTERO_API_BASE}?itemKey=${chunk.join(",")}&format=json&include=data`;
+    const dataResponse = await fetchWithRetry(dataUrl);
+    await sleep(REQUEST_DELAY_MS);
+    if (!dataResponse.ok) {
+      throw new Error(`status ${dataResponse.status}`);
+    }
+
+    const items = await dataResponse.json();
+    const keysByLocale = {};
+    const foundKeys = new Set(items.map((item) => item.key));
+
+    for (const item of items) {
+      const locale = getLocale(item.data.language);
+      (keysByLocale[locale] ??= []).push(item.key);
+    }
+
+    // Keys absent from the response no longer exist in the Zotero library;
+    // retry them individually to preserve the original per-item warnings
+    fallbackKeys.push(...chunk.filter((key) => !foundKeys.has(key)));
+
+    for (const [locale, localeKeys] of Object.entries(keysByLocale)) {
+      try {
+        const citationUrl = `${ZOTERO_API_BASE}?itemKey=${localeKeys.join(",")}&format=json&include=citation,data&style=${ZOTERO_CITATION_STYLE}&linkwrap=1&locale=${locale}`;
+        const citationResponse = await fetchWithRetry(citationUrl);
+        await sleep(REQUEST_DELAY_MS);
+        if (!citationResponse.ok) {
+          throw new Error(`status ${citationResponse.status}`);
+        }
+
+        const citationItems = await citationResponse.json();
+        const mappedKeys = new Set();
+
+        for (const item of citationItems) {
+          try {
+            ret[item.key] = toZoteroRecord(item);
+            mappedKeys.add(item.key);
+          } catch (error) {
+            console.error(
+              `Error mapping Zotero item ${item.key}:`,
+              error.message,
+            );
+          }
+        }
+
+        fallbackKeys.push(...localeKeys.filter((key) => !mappedKeys.has(key)));
+      } catch (error) {
+        console.warn(
+          `Failed to fetch Zotero citations for ${localeKeys.join(",")}:`,
+          error.message,
+        );
+        fallbackKeys.push(...localeKeys);
+      }
+    }
+  } catch (error) {
+    console.warn(
+      `Failed to fetch Zotero items ${chunk.join(",")}:`,
+      error.message,
+    );
+    fallbackKeys.push(...chunk.filter((key) => !(key in ret)));
+  }
+
+  // Retry the keys that failed at batch level one by one
+  for (const key of new Set(fallbackKeys)) {
+    const record = await fetchZoteroData(key);
+    if (record) {
+      ret[key] = record;
+    }
+    await sleep(REQUEST_DELAY_MS);
+  }
+
+  return ret;
+}
+
+/**
+ * Fetches Zotero data for many item keys, requesting up to ZOTERO_CHUNK_SIZE
+ * items per API call instead of one call per item. Keys whose data cannot be
+ * fetched are omitted. Returns an object mapping item key to Zotero record,
+ * in input key order.
+ */
+async function fetchZoteroDataBatch(keys) {
+  const ret = {};
+  const records = {};
+  const uniqueKeys = [...new Set(keys ?? [])];
+  const totalChunks = Math.ceil(uniqueKeys.length / ZOTERO_CHUNK_SIZE);
+
+  for (let i = 0; i < uniqueKeys.length; i += ZOTERO_CHUNK_SIZE) {
+    const chunk = uniqueKeys.slice(i, i + ZOTERO_CHUNK_SIZE);
+    const chunkRecords = await fetchZoteroDataChunk(chunk);
+    Object.assign(records, chunkRecords);
+    console.log(
+      `✓ Fetched Zotero items ${Object.keys(records).length}/${uniqueKeys.length} (chunk ${i / ZOTERO_CHUNK_SIZE + 1}/${totalChunks})`,
+    );
+  }
+
+  // Preserve the original key order in the resulting object
+  for (const key of uniqueKeys) {
+    if (records[key]) {
+      ret[key] = records[key];
+    }
+  }
+
+  return ret;
 }
 
 // Run the script if called directly
@@ -229,5 +418,8 @@ export {
   extractAllZoteroData,
   extractZoteroKeysFromXML,
   fetchZoteroData,
+  fetchZoteroDataBatch,
+  getLocale,
   parseXML,
+  toZoteroRecord,
 };
