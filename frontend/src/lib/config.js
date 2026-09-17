@@ -51,6 +51,12 @@ export const search = {
 	maxLetterHeight: 250
 };
 
+// Weighting of inscriptions with a date range across the time bins of the visualisation:
+// 'full' = 1 per overlapping bin (legacy behaviour),
+// 'even' = 1 / number of overlapping bins,
+// 'proportional' = share of the date range falling within each bin
+export const vizBinWeightType = 'proportional';
+
 export const tooltips = {
 	date: {
 		text: 'Use negative numbers for BCE dates. Century and half-century ranges are encoded e.g. -200 to -101 and 101 to 200.'

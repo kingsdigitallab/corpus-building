@@ -1,4 +1,16 @@
+import { vizBinWeightType } from '$lib/config';
 import { getLeaves, getLeafKeys, formatKey } from './utils.js';
+
+const BIN_WEIGHT_TYPES = ['full', 'even', 'proportional'];
+const ROUNDING_FACTOR = 100;
+
+/** Help text describing how inscriptions are weighted across date bins, per weight type */
+export const binWeightHelpTexts = {
+    full: 'Inscriptions with uncertain dates may appear in multiple bins.',
+    even: 'Inscriptions with uncertain dates are split evenly across the bins they overlap, so counts may be fractional.',
+    proportional:
+        'Inscriptions with uncertain dates are distributed proportionally across the bins they overlap, so counts may be fractional.'
+};
 
 /** @param {Record<string, unknown>} item @param {string} field @returns {unknown[]} */
 export const getValuesAsArray = (item, field) => {
@@ -104,12 +116,68 @@ export function computeCategoryData({
 }
 
 /**
+ * Computes the weight an inscription contributes to each date bin
+ * @param {{
+ *   notBefore: number,
+ *   notAfter: number,
+ *   binStart: number,
+ *   binEnd: number,
+ *   binSize: number,
+ *   binWeightType: string
+ * }} params
+ * @returns {Array<[number, number]>} [bin start year, weight] pairs, one per bin touched
+ */
+export function computeBinWeights({ notBefore, notAfter, binStart, binEnd, binSize, binWeightType }) {
+    /** @type {Array<[number, number]>} */
+    const ret = [];
+
+    /** @type {Array<[number, number]>} [bin start year, overlap in years] pairs */
+    const overlapping = [];
+
+    if (binWeightType === 'full') {
+        for (let start = binStart; start < binEnd; start += binSize) {
+            if (notBefore < start + binSize && notAfter >= start) {
+                ret.push([start, 1]);
+            }
+        }
+    } else if (notBefore === notAfter) {
+        // An exactly dated inscription counts once, in the single bin containing its date
+        const start = Math.floor(notBefore / binSize) * binSize;
+        if (start >= binStart && start < binEnd) {
+            ret.push([start, 1]);
+        }
+    } else {
+        for (let start = binStart; start < binEnd; start += binSize) {
+            const overlap = Math.min(notAfter, start + binSize) - Math.max(notBefore, start);
+            if (overlap > 0) {
+                overlapping.push([start, overlap]);
+            }
+        }
+
+        if (binWeightType === 'even') {
+            const weight = 1 / overlapping.length;
+            for (const [start] of overlapping) {
+                ret.push([start, weight]);
+            }
+        } else {
+            const span = notAfter - notBefore;
+            for (const [start, overlap] of overlapping) {
+                ret.push([start, overlap / span]);
+            }
+        }
+    }
+
+    return ret;
+}
+
+/**
  * Computes histogram data for Line and Histogram charts
  * @param {{
  *   inscriptions: any[],
  *   aggregations: Record<string, any>,
  *   binSize: number,
- *   selectedColourBy: string
+ *   selectedColourBy: string,
+ *   binWeightType?: string
  * }} params
  * @returns {Array<any>}
  */
@@ -117,8 +185,15 @@ export function computeHistogramData({
     inscriptions,
     aggregations,
     binSize,
-    selectedColourBy
+    selectedColourBy,
+    binWeightType = vizBinWeightType
 }) {
+    if (!BIN_WEIGHT_TYPES.includes(binWeightType)) {
+        throw new Error(
+            `Invalid binWeightType: ${binWeightType}. Must be one of ${BIN_WEIGHT_TYPES.join(', ')}.`
+        );
+    }
+
     if (!inscriptions?.length) return [];
 
     const size = Number(binSize);
@@ -154,35 +229,46 @@ export function computeHistogramData({
         const na = /** @type {number | undefined} */ (item.notAfter);
         if (nb === undefined || na === undefined || nb > na) continue;
 
-        for (let start = binStart; start < binEnd; start += size) {
-            const binEndDate = start + size;
-            if (nb < binEndDate && na >= start) {
-                const binObj = bins.get(start) || { value: 0 };
-                binObj.value += 1;
+        const weights = computeBinWeights({
+            notBefore: nb,
+            notAfter: na,
+            binStart,
+            binEnd,
+            binSize: size,
+            binWeightType: binWeightType
+        });
 
-                if (selectedColourBy) {
-                    const groupValues = getValuesAsArray(item, selectedColourBy);
-                    for (const gv of groupValues) {
-                        const k = String(gv);
-                        if (validColourByKeys.has(k)) {
-                            binObj[k] = (binObj[k] || 0) + 1;
-                        }
+        for (const [start, weight] of weights) {
+            const binObj = bins.get(start) || { value: 0 };
+            binObj.value += weight;
+
+            if (selectedColourBy) {
+                const groupValues = getValuesAsArray(item, selectedColourBy);
+                for (const gv of groupValues) {
+                    const k = String(gv);
+                    if (validColourByKeys.has(k)) {
+                        binObj[k] = (binObj[k] || 0) + weight;
                     }
                 }
-                bins.set(start, binObj);
             }
+            bins.set(start, binObj);
         }
     }
+
+    /** @param {number} n @returns {number} */
+    const round = (n) => Math.round(n * ROUNDING_FACTOR) / ROUNDING_FACTOR;
 
     /** @param {number} year @returns {string} */
     const formatYear = (year) => (year < 0 ? `${Math.abs(year)} BCE` : `${year} CE`);
 
     return [...bins.entries()]
-        .filter(([_, countsObj]) => countsObj.value > 0)
+        .filter(([, countsObj]) => countsObj.value > 0)
         .sort((a, b) => a[0] - b[0])
         .map(([start, countsObj]) => ({
             key: `${formatYear(start)} – ${formatYear(start + size)}`,
-            ...countsObj
+            ...Object.fromEntries(
+                Object.entries(countsObj).map(([k, v]) => [k, round(/** @type {number} */ (v))])
+            )
         }));
 }
 
