@@ -132,13 +132,13 @@ function escapeHtml(text) {
  * Whitespace runs are collapsed to single spaces, as the EpiDoc transform does.
  *
  * @function getHandnote
- * @param {string} xmlString - The XML source of the inscription file.
+ * @param {object} cheerioDocument - A cheerio document of the inscription TEI XML, as returned by cheerio.load(xmlString, { xmlMode: true }, false).
  * @returns {{id: string, html: string}[]} An array with at most one entry, the shape of the html JSON handnote key.
  */
 function getHandnotes(cheerioDocument) {
 	let ret = [];
 
-  const $ = cheerioDocument
+	const $ = cheerioDocument;
 
 	$("handNote > p").each((_, p) => {
 		if (ret.length) return;

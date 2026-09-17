@@ -16,9 +16,9 @@
 	);
 
 	let deprecationHtml = deprecation?.html;
-	// make hyperlinks relative
+	// make hyperlinks relative, whether they point to the inscription page (e.g. https://sicily.classics.ox.ac.uk/inscription/ISic000392) or to the TEI file (e.g. ISic003005.xml)
 	if (deprecationHtml) {
-		deprecationHtml = deprecationHtml.replace(/(href\s*=\s*")[^"]+inscription\/(ISic\d+)(")/g, '$1$2$3')
+		deprecationHtml = deprecationHtml.replace(/(href\s*=\s*")[^"]*?(ISic\d+)(?:\.xml)?(")/g, '$1$2$3')
 		deprecationHtml = deprecationHtml.replace(/target="_blank"/g, '')
 	}
 
