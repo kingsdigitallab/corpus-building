@@ -135,34 +135,74 @@ function escapeHtml(text) {
  * @param {string} xmlString - The XML source of the inscription file.
  * @returns {{id: string, html: string}[]} An array with at most one entry, the shape of the html JSON handnote key.
  */
-function getHandnote(xmlString) {
+function getHandnotes(cheerioDocument) {
 	let ret = [];
 
-	const $ = cheerio.load(xmlString, { xmlMode: true }, false);
+  const $ = cheerioDocument
 
 	$("handNote > p").each((_, p) => {
 		if (ret.length) return;
 		if (($(p).attr("source") || "").includes(ANNOTATOR_SOURCE_MARKER)) return;
-		if ($(p).text().trim() === "") return;
 
-		let html = "";
-		$(p)
-			.contents()
-			.each((_, node) => {
-				if (node.type === "text") {
-					html += escapeHtml(node.data);
-				} else if (node.name === "ref") {
-					const target = escapeHtml($(node).attr("target") || "");
-					html += `<a href="${target}" target="_blank">${escapeHtml($(node).text())}</a>`;
-				} else {
-					html += escapeHtml($(node).text());
-				}
-			});
+    ret = getHtmlFromCheerioElement($(p), cheerioDocument)
+    ret = ret ? [ret] : [];
 
-		ret = [{ id: $(p).attr("id"), html: html.replace(/\s+/g, " ").trim() }];
+    return ret
 	});
 
 	return ret;
+}
+
+function getDeprecationMessage(cheerioDocument) {
+  let ret = null;
+
+  const $ = cheerioDocument;
+
+	const revisionDesc = $("revisionDesc[status='deprecated'][change]");
+
+  if (!revisionDesc.length) return ret;
+  let changeId = revisionDesc.first().attr("change");
+
+  if (changeId && changeId.startsWith('#')) {
+    changeId = changeId.substring(1)
+    const change = revisionDesc.find(`change[xml\\:id="${changeId}"]`)
+    if (change.length) {
+      ret = getHtmlFromCheerioElement(change.first(), cheerioDocument)
+    }
+  }
+
+  return ret
+}
+
+
+function getHtmlFromCheerioElement(cheerioElement, cheerioDocument) {
+  let ret = null;
+
+  if (!cheerioElement) return ret;
+
+  if (cheerioElement.text().trim() === "") return ret;
+
+  let html = "";
+  cheerioElement
+    .contents()
+    .each((_, node) => {
+      const $node = cheerioDocument(node)
+      if (node.type === "text") {
+        html += escapeHtml(node.data);
+      } else if (node.name === "ref") {
+        const target = escapeHtml($node.attr("target") || "");
+        html += `<a href="${target}" target="_blank">${escapeHtml($node.text())}</a>`;
+      } else {
+        html += escapeHtml($node.text());
+      }
+    });
+
+  ret = { 
+    id: cheerioElement.attr("xml:id"), 
+    html: html.replace(/\s+/g, " ").trim() 
+  };
+
+  return ret
 }
 
 
@@ -226,7 +266,7 @@ async function transformToHtml(filePath, xmlString) {
   //   }))
   //   .get();
 
-  const handnote = getHandnote(xmlString);
+	const cheerioDocument = cheerio.load(xmlString, { xmlMode: true }, false);
 
   return {
     title: $("title").text(),
@@ -234,7 +274,8 @@ async function transformToHtml(filePath, xmlString) {
     divs,
     editions,
     images,
-    handnote,
+    handnote: getHandnotes(cheerioDocument),
+    deprecation: getDeprecationMessage(cheerioDocument)
   };
 }
 
@@ -600,4 +641,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { extractLemmas, getHandnote };
+export { extractLemmas, getHandnotes as getHandnote };

@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import InscriptionType from '../InscriptionType.svelte';
 
-	const { slug, metadata, images } = $props();
+	const { slug, metadata, images, deprecation } = $props();
 	let curImageTitle = $state(images[0]?.desc || '');
 
 	const tileSources = $derived(
@@ -15,11 +15,12 @@
 		)
 	);
 
-	const changeNoteTarget = $derived(
-		metadata.status.changeNote?.ref?.target.includes('ISic')
-			? metadata.status.changeNote.ref.target.split('/').pop()
-			: metadata.status.changeNote?.ref?.target
-	);
+	let deprecationHtml = deprecation?.html;
+	// make hyperlinks relative
+	if (deprecationHtml) {
+		deprecationHtml = deprecationHtml.replace(/(href\s*=\s*")[^"]+inscription\/(ISic\d+)(")/g, '$1$2$3')
+		deprecationHtml = deprecationHtml.replace(/target="_blank"/g, '')
+	}
 
 	onMount(async () => {
 		if (images && images.length > 0) {
@@ -46,17 +47,17 @@
 	<div class="overview-header">
 		<hgroup>
 			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
-			{#if metadata.status._ === 'deprecated'}
+			{#if metadata?.status?._ === 'deprecated'}
 				<p class="deprecated">
 					<strong>This inscription is deprecated.</strong>
-					{#if metadata.status.changeNote}
-						{@const changeNote = metadata.status.changeNote}
-						<small>{changeNote._.replace('  ', ` ${changeNote.ref._} `)}</small>
-						{#if changeNote.ref}
-							<a href={changeNoteTarget}>
-								View inscription {changeNote.ref._}
-							</a>
-						{/if}
+
+					{#if deprecationHtml}
+						<small>
+							{@html deprecationHtml}
+							{#if metadata?.status?.changeNote?.when}
+								({new Date(metadata.status.changeNote.when).toLocaleDateString()})
+							{/if}
+						</small>
 					{/if}
 				</p>
 			{/if}

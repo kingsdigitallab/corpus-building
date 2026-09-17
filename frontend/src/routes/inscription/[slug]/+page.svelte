@@ -25,6 +25,8 @@
 	let { data } = $props();
 	let { slug, metadata, images, html, xml, isIncomplete, missingFields } = data;
 
+	const deprecation = $derived(html?.deprecation ?? {})
+
 	/**
 	 * @param {{ id: string, html: string }} div
 	 * @returns {{ id: string, html: string }|null}
@@ -198,7 +200,7 @@ ${changeDate ? `Last revised: ${changeDate}.` : ''}
 			</ul>
 		</aside>
 	{:else}
-		<InscriptionOverview {slug} {metadata} {images} />
+		<InscriptionOverview {slug} {metadata} {images} {deprecation} />
 
 		<section id="content">
 			<InscriptionEdition {slug} {metadata} {xml} {editions} {attribution} />
