@@ -49,7 +49,7 @@
 			<h1 class="inscription-title">{metadata.file}: {metadata.title}</h1>
 			{#if metadata?.status?._ === 'deprecated'}
 				<p class="deprecated">
-					<strong>This inscription is deprecated.</strong>
+					<strong>This record is deprecated.</strong>
 
 					{#if deprecationHtml}
 						<small>
