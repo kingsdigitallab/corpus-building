@@ -1,7 +1,7 @@
 {
   "file": "ISic003008",
   "uri": "ISic003008",
-  "title": "I.Sicily inscription 003008",
+  "title": "Fragment of a monumental Greek inscription",
   "status": {
     "_": "draft"
   },
@@ -30,7 +30,7 @@
     "ana": "#function.dedication",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Dedication"
   },
-  "support": "Large fragmentary block, which Manganaro hypothesises as part of an altar.",
+  "support": "Large fragmentary block, damaged above, below and to the left, seemingly intact on the right, which Manganaro hypothesises as part of an altar.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -44,39 +44,51 @@
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "55.5",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "53",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "28",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Remains of three lines of very large, evenly spaced regular letters.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Widely spaced, large, wide letters, very neatly and regularly carved with a thin groove. Large omicron, Nu with diagonal fully descending, kappa with near full length arms, epsilon with short middle bar.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "120",
+        "unit": "mm",
+        "atLeast": "120",
+        "atMost": "120"
       },
       {
         "type": "interlinear",
@@ -88,9 +100,10 @@
     ]
   },
   "date": {
-    "_": "4th century BCE (?)\n                                ('I caratteri epigrafici possono riportasi almeno al IV sec., circa, se e vero che alla\n                                lin.2 non e segnato con l'omega l'aumento del verbo.' Manganaro (however, also observes\n                                possible Hieronic parallels)",
+    "_": "4th century BCE (?) ('I caratteri epigrafici possono riportasi almeno al IV sec., circa, se e vero che alla lin.2 non e segnato con l'omega l'aumento del verbo.' Manganaro (however, also observes possible Hieronic parallels)",
     "notBefore": -400,
-    "notAfter": -201
+    "notAfter": -251,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -115,12 +128,20 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Found in the area of the Altar of Hieron",
+    "_": "Found, before 1885, in the area of the Altar of Hieron; currently in storage in the archaeological park of Neapolis",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "notAfter": "1885",
+    "geo": [
+      37.0745769,
+      15.2768794
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.0745769,
+    15.2768794
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -243,13 +264,18 @@
       }
     ],
     "change": {
-      "_": "renumbered files, uris and references",
-      "when": "2021-01-19",
-      "who": "#SS"
+      "_": "Jonathan Prag revised metadata",
+      "when": "2026-09-25",
+      "who": "#JP"
     }
   },
   "tmNumber": "645357",
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 120,
+      "atMost": 120
+    }
+  ],
   "publications": [
     "Supplementum epigraphicum graecum, 1923-",
     "Manganaro, 1977, Per la storia dei culti nella Sicilia greca"
@@ -260,7 +286,7 @@
   ],
   "keywords": [
     "isic003008",
-    "i.sicily inscription 003008",
+    "fragment of a monumental greek inscription",
     {
       "_": "draft"
     },

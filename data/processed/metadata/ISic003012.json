@@ -31,6 +31,12 @@
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Dedication",
     "cert": "low"
   },
+  "support": "A large quadrangular slab of limestone, somewhat damaged around the edges.",
+  "objectType": {
+    "_": "plaque",
+    "ana": "#object.plaque",
+    "ref": "https://www.eagle-network.eu/voc/objtyp/lod/259.html"
+  },
   "material": {
     "_": "limestone",
     "type": "inorganic.stone",
@@ -39,32 +45,41 @@
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "49",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "46.5",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "20",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Large letters across the middle of the face of the slab, seemingly a complete text.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.complete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Roughly carved, with broken bar alpha, seemingly in ligature with rho; kappa with moderately short arms; smaller omicron; somewhat open four bar sigma.",
     "dimensions": [
       {
         "type": "letterHeight",
@@ -83,9 +98,10 @@
     ]
   },
   "date": {
-    "_": "5th century BCE (Manganaro,\n                                implies)",
-    "notBefore": -500,
-    "notAfter": -401
+    "_": "Fourth or third century BCE",
+    "notBefore": -400,
+    "notAfter": -201,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -110,16 +126,24 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Athenaion, Ortygia",
+    "_": "From excavations in Piazza Minerva, Ortygia, in March/February 1914, recovered from the foundations of the 'vecchio seminario'.. Now in storage in the archaeological park of Neapolis.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "geo": [
+      37.0598054,
+      15.2928024
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.0598054,
+    15.2928024
+  ],
   "provenanceObserved": {
-    "_": "None",
+    "_": "Observed by Prag 2026-09-17, without full study",
     "type": "observed",
     "subtype": "autopsied",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -244,9 +268,9 @@
       }
     ],
     "change": {
-      "_": "tagged names and persons",
-      "when": "2026-02-04",
-      "who": "#ZL"
+      "_": "Jonathan Prag revised on basis of preliminary autopsy",
+      "when": "2026-09-25",
+      "who": "#JP"
     }
   },
   "tmNumber": "645360",
@@ -266,6 +290,7 @@
       "_": "draft"
     },
     "dedication",
+    "plaque",
     "limestone",
     "syracusae",
     "siracusa",

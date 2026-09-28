@@ -1,9 +1,9 @@
 {
   "file": "ISic000722",
   "uri": "ISic000722",
-  "title": "I.Sicily inscription 000722",
+  "title": "Fragmentary Latin text",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -30,6 +30,7 @@
     "ana": "#function.dedication",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Dedication"
   },
+  "support": "A block of off-white limestone, subject to alveolar weathering on the face. Intact front, right, above, and below, damaged on the left. Possibly intact to the rear. The right side is roughly worked, with a rough moulding or cornice along the upper edge. The upper surface has a semicircular depression near the front left, with the left edge forming its edge. The front face is lightly concave, deeper towards the left edge, shallower towards the outer right edge. The rear face, if intact, is cut back from the right side towards the break on the left side. The block would seem therefore to form part of a larger monument, whether a statue base or something else.",
   "objectType": {
     "_": "statue base",
     "ana": "#object.statue_base",
@@ -37,60 +38,86 @@
     "cert": "low"
   },
   "material": {
-    "_": "limestone\n                                    ",
+    "_": "limestone",
     "type": "inorganic.stone",
     "subtype": [
       "unverified"
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "26",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "29 (maximum, at front)",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "49.5 (on right)",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Two lines of Latin letters across the face, with vacat below. The right margin may be preserved. Line 1 is larger.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Simply cut letters (no clear evidence of a v-cut), very regular, even width strokes, minimal trace of serifs. P is very open, D and S quite broad.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "65-75",
+        "unit": "mm",
+        "atLeast": "65",
+        "atMost": "75"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "46-48",
+        "unit": "mm",
+        "atLeast": "46",
+        "atMost": "48"
       },
       {
         "type": "interlinear",
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
-        "unit": "mm"
+        "h": "15",
+        "unit": "mm",
+        "atLeast": "15",
+        "atMost": "15"
       }
     ]
   },
   "date": {
     "_": "2nd or 1st century BCE",
     "notBefore": -200,
-    "notAfter": -1
+    "notAfter": -1,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -115,19 +142,77 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Original discovery not recorded.",
+    "_": "Found (according to the inventory) during the course of gardening work by the Comune in the SE corner of Piazza d'Armi (site of the agora/forum), Siracusa, c.November 1929",
     "type": "found",
-    "geo": null
+    "subtype": "discovered",
+    "geo": [
+      37.0660566,
+      15.2830242
+    ],
+    "geoCert": "high"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.0660566,
+    15.2830242
+  ],
   "provenanceObserved": {
-    "_": "None",
+    "_": "2026-09-17, Prag, in storage in the archaeological park of Neapolis",
     "type": "observed",
     "subtype": "autopsied",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [],
+  "graphics": [
+    {
+      "n": "screen",
+      "url": "ISic000722_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000722_scale_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+      "surfaceType": "front"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000722_top_tiled.tif",
+      "height": "3680px",
+      "width": "5520px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+      "surfaceType": "top"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000722_right_tiled.tif",
+      "height": "5520px",
+      "width": "3680px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+      "surfaceType": "right"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000722_left_tiled.tif",
+      "height": "2268px",
+      "width": "4032px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+      "surfaceType": "left"
+    },
+    {
+      "n": "screen",
+      "url": "ISic000722_rear_tiled.tif",
+      "height": "4032px",
+      "width": "2268px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+      "surfaceType": "rear"
+    }
+  ],
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -169,22 +254,15 @@
       {
         "type": "corpus",
         "n": "CIL",
-        "citedRange": {
-          "ref": {
-            "_": "01.3429",
-            "target": "http://arachne.uni-koeln.de/books/CILv10pII1883"
-          }
-        },
+        "citedRange": "01(2).3429",
         "ptr": {
-          "target": "https://www.zotero.org/groups/382445/items/GQN8UZSI"
+          "target": "https://www.zotero.org/groups/382445/items/628GQWAB"
         },
-        "ref": "https://www.zotero.org/groups/382445/items/GQN8UZSI",
-        "title": "Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae",
-        "author": "Mommsen",
-        "date": "1883",
-        "citation": "<span>T. Mommsen, <i>Inscriptiones Bruttiorum Lucaniae Campaniae Siciliae Sardiniae Latinae. Pars posterior. Inscriptiones Siciliae et Sardiniae</i>, Corpus Inscriptionum Latinarum, consilio et auctoritate Academiae Litterarum Regiae Borussicae editum, 10.2 (Berlin: G. Reimer, 1883)</span>",
-        "uri": "https://www.zotero.org/groups/isicily/items/GQN8UZSI",
-        "year": "1883"
+        "ref": {
+          "_": "https://biblio.inscriptiones.org/epig10000255",
+          "target": "https://biblio.inscriptiones.org/epig10000255"
+        },
+        "year": ""
       },
       {
         "author": "Manganaro",
@@ -279,30 +357,51 @@
       }
     ],
     "change": {
-      "_": "Robert Crellin provided lemmatizations",
-      "when": "2026-07-23",
-      "who": "#RC"
+      "_": "Jonathan Prag revised from autopsy",
+      "when": "2026-09-23",
+      "who": "#JP"
     }
   },
   "tmNumber": "491465",
-  "letterHeights": [],
+  "facsimile": {
+    "n": "screen",
+    "url": "ISic000722_tiled.tif",
+    "height": "3680px",
+    "width": "5520px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17",
+    "surfaceType": "front"
+  },
+  "letterHeights": [
+    {
+      "atLeast": 65,
+      "atMost": 75
+    },
+    {
+      "atLeast": 46,
+      "atMost": 48
+    },
+    {
+      "atLeast": 15,
+      "atMost": 15
+    }
+  ],
   "publications": [
-    "Mommsen, 1883, CIL",
+    "CIL",
     "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia",
     "Korhonen, 2011, Sicily. Language and identity in the Roman colonies of Sicily",
     "Tribulato, 2012, Siculi bilingues? Latin in the inscriptions of early Roman Sicily"
   ],
   "zotero": [
-    "GQN8UZSI",
+    "628GQWAB",
     "EZMBJ6GN",
     "BJES9RQV",
     "X5ZZ4GPT"
   ],
   "keywords": [
     "isic000722",
-    "i.sicily inscription 000722",
+    "fragmentary latin text",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "dedication",
     "statue base",
