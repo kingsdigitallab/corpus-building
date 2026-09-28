@@ -8,7 +8,7 @@ tags:
   - accessibility
 ---
 
-This accessibility statement applies to [https://isicily.classics.ox.ac.uk/](https://isicily.classics.ox.ac.uk/). 
+This accessibility statement applies to [https://sicily.classics.ox.ac.uk/](https://sicily.classics.ox.ac.uk/). 
 
 ## Using the website 
 

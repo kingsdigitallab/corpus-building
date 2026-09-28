@@ -30,7 +30,7 @@
     "ana": "#function.building",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Building_inscription"
   },
-  "support": "Large fragment of a cyrstalline white marble, intact along the upper edge, broken left and below, and upper right corner. Note that the right edge is a very clean edge, suggesting that this is the end of the slab in question, with a further slab adjoining. Finished on the reverse; the upper rear edge is chipped. ",
+  "support": "Large fragment of a cyrstalline white marble, intact along the upper edge, broken left and below, and upper right corner. Note that the right edge is a very clean edge, suggesting that this is the end of the slab in question, with a further slab adjoining. Finished on the reverse; the upper rear edge is chipped. and there is evidence of a drilled fixing hole in the top margin at the left hand end.",
   "objectType": {
     "_": "plaque",
     "ana": "#object.plaque",
@@ -56,7 +56,9 @@
       }
     }
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
       "_": "23",
@@ -87,7 +89,9 @@
           "ana": "#execution.rubrication.red"
         }
       ],
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
@@ -98,14 +102,20 @@
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "13",
+        "unit": "mm",
+        "atLeast": "130",
+        "atMost": "130"
       },
       {
         "type": "interlinear",
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
-        "unit": "mm"
+        "h": "50",
+        "unit": "mm",
+        "atLeast": "50",
+        "atMost": "50"
       }
     ]
   },
@@ -138,7 +148,7 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "Schubring in his autopsy notes of 1865 (no.144) states that the piece was found in the area of the great altar of Hieron; Mommsen in CIL states that it was found by Serradifaclo among the ruins of the great altar (but does not reference the source for this claim).",
+    "_": "Schubring in his autopsy notes of 1865 (no.144) states that the piece was found in the area of the great altar of Hieron; Mommsen in CIL states that it was found by Serradifalco among the ruins of the great altar (but does not reference the source for this claim).",
     "type": "found",
     "subtype": "discovered",
     "notAfter": "1865",
@@ -156,6 +166,7 @@
     "type": "observed",
     "subtype": "autopsied",
     "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -164,7 +175,7 @@
       "n": "screen",
       "url": "ISic000417_tiled.tif",
       "height": "3097px",
-      "width": "4929pxc",
+      "width": "4929px",
       "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10.",
       "surfaceType": "front"
     },
@@ -292,11 +303,20 @@
     "n": "screen",
     "url": "ISic000417_tiled.tif",
     "height": "3097px",
-    "width": "4929pxc",
+    "width": "4929px",
     "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-10.",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 130,
+      "atMost": 130
+    },
+    {
+      "atLeast": 50,
+      "atMost": 50
+    }
+  ],
   "publications": [
     "Mommsen, 1883, CIL"
   ],

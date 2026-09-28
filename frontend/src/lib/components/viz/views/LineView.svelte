@@ -1,8 +1,9 @@
 <script>
 	import VizWrapper from '../VizWrapper.svelte';
 	import LineChart from '../charts/LineChart.svelte';
+	import { vizBinWeightType } from '$lib/config';
 	import { formatKey } from '../utils.js';
-	import { computeHistogramData, computeActiveColourByKeys } from '../data.js';
+	import { computeHistogramData, computeActiveColourByKeys, binWeightHelpTexts } from '../data.js';
 
 	/** 
 	 * @type {{ 
@@ -39,7 +40,7 @@
 
 	const summary = $derived.by(() => {
 		const label = `${inscriptions?.length.toLocaleString() || 0} inscriptions by date in ${binSize}-year intervals.`;
-		const helpText = `<br/><small>Inscriptions with uncertain dates may appear in multiple bins.</small>`;
+		const helpText = `<br/><small>${binWeightHelpTexts[vizBinWeightType]}</small>`;
 
 		if (selectedColourBy) return `${label} Split by <strong>${selectedColourBy}</strong>.${helpText}`;
 		return `${label}${helpText}`;

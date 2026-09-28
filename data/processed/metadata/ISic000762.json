@@ -1,9 +1,9 @@
 {
   "file": "ISic000762",
   "uri": "ISic000762",
-  "title": "I.Sicily inscription 000762",
+  "title": "Part of a base for a dedication(?)",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -28,15 +28,17 @@
   "type": {
     "_": "dedication",
     "ana": "#function.dedication",
-    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Dedication"
+    "ref": "https://ontology.inscriptiones.org/type_of_inscription/Dedication",
+    "cert": "low"
   },
+  "support": "A large grey limestone block, the front face of which angles in towards the base. Broken at the left end, intact above, below and to the right. The rear right corner has been cut away, and there is a recessed clamp hole on the upper face towards the rear right corner. Roughly finished on all sides except the front face. ",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
     "ref": "http://www.eagle-network.eu/voc/objtyp/lod/189.html"
   },
   "material": {
-    "_": "limestone\n                                    ",
+    "_": "limestone",
     "ana": "#material.inorganic.stone.sedimentary_rock.limestone.calcite_limestone.grey",
     "type": "stone.limestone.polishable.grey",
     "subtype": [
@@ -45,86 +47,142 @@
     "resp": "#Coccato",
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.damaged"
+  },
   "dimensions": [
     {
+      "_": "28.2-28.8",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "64.5-72",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "33-37.3",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "The right end of three lines of Latin letters, seemingly originally cnetred on the stone, given the large vacats to the end of lines 1 and 3. The stone increasingly damaged to the left edge of the face. Hederae at the end of each line.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Deeply v-cut letters, tending to the tall and narrow, with basic wedge seerifs at the end of strokes; some letters lean to the left, R has an extended tail, A and M slightly extended upwards beyond the apex.",
     "dimensions": [
       {
         "type": "letterHeight",
         "l": "Line 1",
         "from": "line1",
         "to": "line1",
-        "unit": "mm"
+        "h": "53-60",
+        "unit": "mm",
+        "atLeast": "53",
+        "atMost": "60"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 2",
+        "from": "line2",
+        "to": "line2",
+        "h": "40-54",
+        "unit": "mm",
+        "atLeast": "40",
+        "atMost": "54"
+      },
+      {
+        "type": "letterHeight",
+        "l": "Line 3",
+        "from": "line3",
+        "to": "line3",
+        "h": "35-45",
+        "unit": "mm",
+        "atLeast": "35",
+        "atMost": "45"
       },
       {
         "type": "interlinear",
         "l": "Interlineation line 1 to 2",
         "from": "line1",
         "to": "line2",
-        "unit": "mm"
+        "h": "20-23",
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "23"
+      },
+      {
+        "type": "interlinear",
+        "l": "Interlineation line 2 to 3",
+        "from": "line2",
+        "to": "line3",
+        "h": "25",
+        "unit": "mm",
+        "atLeast": "25",
+        "atMost": "25"
       }
     ]
   },
   "date": {
-    "_": "Imperial; form of M implies 2nd century or later (?)",
-    "notBefore": 1,
-    "notAfter": 300
+    "_": "Imperial; form of M implies 2nd century or later",
+    "notBefore": 101,
+    "notAfter": 300,
+    "evidence": "lettering"
   },
   "places": [
     {
-      "_": "Agrigentum",
+      "_": "Cosconiana",
       "type": "ancient",
-      "ref": "http://pleiades.stoa.org/places/462086",
+      "ref": "https://pleiades.stoa.org/places/462166",
       "region": "Sicilia"
     },
     {
-      "_": "Agrigento",
+      "_": "Canicatti",
       "type": "modern",
-      "ref": "http://sws.geonames.org/6541860",
+      "ref": "https://www.geonames.org/2525405",
       "region": "Sicilia"
     }
   ],
   "geo": [
     [
-      37.32084,
-      13.58876
+      37.355098,
+      13.8056491
     ]
   ],
   "country": "Sicilia",
-  "provenance": "Agrigentum",
+  "provenance": "Cosconiana",
   "provenanceFound": {
-    "_": "Vito Soldano di Canicatti, 1972",
+    "_": "Found c.1972 in a late antique wall in contrada Vito Soldano, c.4km west of Canicatti, area of a late Roman settlement commonly identified with Cosconiana (not Agrigento, contra Manganaro 1989); now on display in Agrigento Archaeological Museum.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "geo": [
+      37.355098,
+      13.8056491
+    ],
+    "geoCert": "medium"
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.355098,
+    13.8056491
+  ],
   "provenanceObserved": {
-    "_": "On display.",
+    "_": "2018-07-17 Prag",
     "type": "observed",
+    "subtype": "autopsied",
+    "resp": "#JP",
+    "xml:id": "autopsy",
     "geo": null
   },
   "provenanceLost": null,
@@ -203,7 +261,7 @@
         "year": "1888"
       },
       {
-        "author": "De Miro and Fiorentini",
+        "author": "De Miro, Fiorentini",
         "date": "1972-1973",
         "citedRange": "247 tav.62 fig.4",
         "ptr": {
@@ -214,7 +272,10 @@
           "target": "https://biblio.inscriptiones.org/epig10002657"
         },
         "inscriptionDate": "1972-1973",
-        "year": ""
+        "title": "Attività della Soprintendenza alle antichità della Sicilia centro-meridionale negli anni 1968-72",
+        "citation": "<span>E. De Miro e G. Fiorentini, «Attività della Soprintendenza alle antichità della Sicilia centro-meridionale negli anni 1968-72», <i>Kokalos</i> 18–19 (1973 1972): 228–50</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/6KXR386U",
+        "year": "1972"
       },
       {
         "author": "Manganaro",
@@ -228,7 +289,10 @@
           "target": "https://biblio.inscriptiones.org/epig10001427"
         },
         "inscriptionDate": "1988",
-        "year": ""
+        "title": "La Sicilia da Sesto Pompeo a Diocleziano",
+        "citation": "<span>Giacomo Manganaro, «La Sicilia da Sesto Pompeo a Diocleziano», <i>Aufstieg und Niedergang der romischen Welt</i> 2.11.1 (1988): 3–89</span>",
+        "uri": "https://www.zotero.org/groups/isicily/items/RZSFKACR",
+        "year": "1988"
       },
       {
         "author": "Manganaro",
@@ -289,9 +353,9 @@
       }
     ],
     "change": {
-      "_": "Robert Crellin provided lemmatizations",
-      "when": "2026-07-23",
-      "who": "#RC"
+      "_": "Jonathan Prag revised on basis of autopsy notes",
+      "when": "2026-09-15",
+      "who": "#JP"
     }
   },
   "tmNumber": "175798",
@@ -303,11 +367,32 @@
     "desc": "Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento",
     "surfaceType": "front"
   },
-  "letterHeights": [],
+  "letterHeights": [
+    {
+      "atLeast": 53,
+      "atMost": 60
+    },
+    {
+      "atLeast": 40,
+      "atMost": 54
+    },
+    {
+      "atLeast": 35,
+      "atMost": 45
+    },
+    {
+      "atLeast": 20,
+      "atMost": 23
+    },
+    {
+      "atLeast": 25,
+      "atMost": 25
+    }
+  ],
   "publications": [
     "L'année épigraphique: revue des publications épigraphiques relatives a l'antiquité romaine., 1888-",
-    "De Miro and Fiorentini, 1972-1973",
-    "Manganaro, 1988",
+    "De Miro, Fiorentini, 1972-1973, Attività della Soprintendenza alle antichità della Sicilia centro-meridionale negli anni 1968-72",
+    "Manganaro, 1988, La Sicilia da Sesto Pompeo a Diocleziano",
     "Manganaro, 1989, Iscrizioni Latine nuove e vecchie della Sicilia"
   ],
   "zotero": [
@@ -318,15 +403,15 @@
   ],
   "keywords": [
     "isic000762",
-    "i.sicily inscription 000762",
+    "part of a base for a dedication(?)",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "dedication",
     "block",
     "limestone",
-    "agrigentum",
-    "agrigento",
+    "cosconiana",
+    "canicatti",
     "sicilia",
     "sicily",
     "agrigento",

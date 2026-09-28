@@ -112,8 +112,3 @@ https://github.com/kingsdigitallab/corpus-building/blob/develop/data/processed/p
 https://github.com/kingsdigitallab/corpus-building/blob/develop/data/processed/petrography-import.log
 
 Then click "Create pull request".
-
-# Special situations
-
-TODO
-

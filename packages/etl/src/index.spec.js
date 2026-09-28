@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import * as cheerio from "cheerio";
 import { extractLemmas, getHandnote } from "./index.js";
 
 describe("extractLemmas", () => {
@@ -72,33 +73,36 @@ describe("getHandnote", () => {
     const xml = (inner) =>
         `<TEI xmlns="http://www.tei-c.org/ns/1.0"><teiHeader><fileDesc><sourceDesc><msDesc><physDesc><handDesc><handNote>${inner}</handNote></handDesc></physDesc></msDesc></sourceDesc></fileDesc></teiHeader></TEI>`;
 
+    // getHandnote expects a cheerio document, as built by the ETL for each inscription.
+    const xmlDocument = (inner) => cheerio.load(xml(inner), { xmlMode: true }, false);
+
     it("should return a text-only lettering description", () => {
-        expect(getHandnote(xml("<p>Neatly and regularly cut letters.</p>"))).toEqual([
+        expect(getHandnote(xmlDocument("<p>Neatly and regularly cut letters.</p>"))).toEqual([
             { id: undefined, html: "Neatly and regularly cut letters." },
         ]);
     });
 
     it("should return the description that precedes the annotator Types list", () => {
         const source = `<p>The letters are regular.</p><p source="${ANNOTATOR_SOURCE}">Types list: <ref target="https://example.org/t1">Α type1</ref></p>`;
-        expect(getHandnote(xml(source))).toEqual([
+        expect(getHandnote(xmlDocument(source))).toEqual([
             { id: undefined, html: "The letters are regular." },
         ]);
     });
 
     it("should return an empty list when the handNote only has a Types list", () => {
         const source = `<p source="${ANNOTATOR_SOURCE}">Types list: <ref target="https://example.org/t1">Δ type2</ref></p>`;
-        expect(getHandnote(xml(source))).toEqual([]);
+        expect(getHandnote(xmlDocument(source))).toEqual([]);
     });
 
     it("should skip empty paragraphs before locus elements", () => {
         expect(
-            getHandnote(xml('<p/><locus from="line1" to="line1">Line 1</locus>'))
+            getHandnote(xmlDocument('<p/><locus from="line1" to="line1">Line 1</locus>'))
         ).toEqual([]);
     });
 
     it("should render refs as html links in document order", () => {
         const source = '<p>Less regular than <ref target="http://example.org/ISic000832">ISic000832</ref>. Omicron is full.</p>';
-        expect(getHandnote(xml(source))).toEqual([
+        expect(getHandnote(xmlDocument(source))).toEqual([
             {
                 id: undefined,
                 html: 'Less regular than <a href="http://example.org/ISic000832" target="_blank">ISic000832</a>. Omicron is full.',
@@ -107,17 +111,17 @@ describe("getHandnote", () => {
     });
 
     it("should escape html special characters", () => {
-        expect(getHandnote(xml("<p>Interpuncts similar to a '>'.</p>"))).toEqual([
+        expect(getHandnote(xmlDocument("<p>Interpuncts similar to a '>'.</p>"))).toEqual([
             { id: undefined, html: "Interpuncts similar to a '&gt;'." },
         ]);
-        expect(getHandnote(xml("<p>AT&amp;T style.</p>"))).toEqual([
+        expect(getHandnote(xmlDocument("<p>AT&amp;T style.</p>"))).toEqual([
             { id: undefined, html: "AT&amp;T style." },
         ]);
     });
 
     it("should collapse whitespace runs in source text", () => {
         const source = "<p>Deeply cut letters.\n                                    Y and T are tall;  possibly  twice.</p>";
-        expect(getHandnote(xml(source))).toEqual([
+        expect(getHandnote(xmlDocument(source))).toEqual([
             { id: undefined, html: "Deeply cut letters. Y and T are tall; possibly twice." },
         ]);
     });
