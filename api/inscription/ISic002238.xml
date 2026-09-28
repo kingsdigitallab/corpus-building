@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragmentary Greek funerary inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+               </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic002238</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002238</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">25107</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A rectangular cippus/stele of the local limestone, finished smooth on all sides. Intact left and part of front and base and lower right, but damaged across the upper right. The top is preserved at the upper left, but the top of the face is lost, and theoretically there is space for a first line of text, if it were inscribed right up to the top of the front face (unlikely).</p>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone" type="stone.limestone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions>
+                                        <height unit="cm">64</height>
+                                        <width unit="cm">37.5</width>
+                                        <depth unit="cm">29.5</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.damaged"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Two visible lines of Greek letters, decreasing in size, across the upper part of the front face. Line 1 more widely spaced than line 2 and slightly inset.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Elegant thinly carved letters. The trace of sigma on line 1 suggests a rather open four-bar sigma; Epsilon has short middle bar; Pi has short right hand hasta; omicron is sligthly smaller than other letters; Mu has vertical outer strokes, half-length inner strokes.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="42" atMost="50">42-50</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="30" atMost="42">30-42</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0301" evidence="lettering">fourth century BCE on palaeographic grounds</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="1905">Acquired by Orsi, 2 November 1905 (so the inventory), from Predio Tarantello, a continuation of the Tor di Conte early Hellenistic necropolis <geo cert="medium">37.0727, 15.2586</geo>; now in storage in the archaeological park of Neapolis</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP" xml:id="autopsy">Prag 2026-09-17, archaeological park of Neapolis</provenance>
+                        <acquisition/>
+                    </history>
+                    </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.funerary" ref="https://ontology.inscriptiones.org/type_of_inscription/Funerary">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="edited">
+            <listChange>
+                <change when="2026-09-25" who="#JP">Jonathan Prag created file from autopsy</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic002238_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17</desc>
+            </graphic>
+            <graphic n="print" url="ISic002238.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17</desc>
+            </graphic>
+            <graphic n="screen" url="ISic002238_front_tiled.tif" height="5520px" width="3680px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17</desc>
+            </graphic>
+            <graphic n="print" url="ISic002238_front.jpg" height="5520px" width="3680px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2026-09-17</desc>
+            </graphic>
+         </surface>
+     </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="#autopsy">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name>Μο<unclear>σ</unclear><gap reason="lost" quantity="19.5" unit="cm"/></name>
+                    <lb n="2"/><name>Εὐπολε<unclear>μ</unclear><gap reason="lost" quantity="11" unit="cm"/></name></persName>
+                </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                    <app loc="1"><note>Orsi: Μο[σ...]; 11 cm are missing from the right side at this point</note></app>
+                    <app loc="2"><note>Orsi: Εὐπολέ[μου]; 19.5cm are missing from the right side at this point</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Mos[--] son of Eupolem[--]</p>
+            </div>
+            <div type="commentary">
+                <p>Traces of the sigma and mu at the breaks are visible. Given the missing space (18 cm up to the sigma trace, c.19.5 cm missing), not more than three letters can be missing from line 1, so Μόσχος (attested at Syracuse and Akragas and Tauromenion) seems very likely, or just  possibly Μοσχίων. In line 2, given the missing space of c.11cm (26.5 preserved), only 2-3 letters can be missing, and so Orsi's suggestion of Εὐπόλεμος (attested at Syracuse and multiple other Sicilian locations in the Hellenistic period) is surely correct.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="NSA">
+                        <author>Orsi</author>
+                        <title>NSA</title>
+                        <date>1907</date>
+                        <citedRange>751 with fig. 10</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
