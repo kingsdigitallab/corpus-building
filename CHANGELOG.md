@@ -1,5 +1,50 @@
 
 
+# [0.29.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.28.0...v0.29.0) (2026-09-28)
+
+
+### Bug Fixes
+
+* adjusted the badge on how-to-cite page ([ac63007](https://github.com/kingsdigitallab/corpus-building/commit/ac63007867c1998c6bba0ac6d267716ad6380682))
+* changed width of blockquotes in how-to-cite page ([8d73f2c](https://github.com/kingsdigitallab/corpus-building/commit/8d73f2c77e48edd481bd995006d212152a346fe6))
+* changed width of blockquotes in how-to-cite page ([f8a9e8d](https://github.com/kingsdigitallab/corpus-building/commit/f8a9e8dce842b6bdf918d1e0c5f5ab0c744cd106))
+* Converted last left-over reference to isicily.classics into silicy.classics; including the image server ([445f65e](https://github.com/kingsdigitallab/corpus-building/commit/445f65ef6c24060c4873509aae3cbfbf261f68d4))
+* **etl:** any failure will interrupt the ETL and have status code = 1; also improved warning messages and redirected to log file ([6800037](https://github.com/kingsdigitallab/corpus-building/commit/6800037909cf2fd94607ef65e12c80372a490deb))
+* **etl:** collapse whitespace in handnote html and add getHandnote tests [opencode:e-research/arc:apex] ([aa71659](https://github.com/kingsdigitallab/corpus-building/commit/aa7165930276882481892776c6dfc3e68df090a3))
+* **etl:** div selectors was not excluding handnote and facsimile-images as intended ([1aa1da4](https://github.com/kingsdigitallab/corpus-building/commit/1aa1da4436ea1760be8b9bc322bbd43734f8b7d8))
+* **etl:** getHandnote tests now pass a cheerio document and deprecation links cope with xml refs [opencode:e-research/arc:apex] ([c176549](https://github.com/kingsdigitallab/corpus-building/commit/c176549cf664e0deca1e8d6e606014ed382a691a))
+* fixed merge conflict in technical-overview ([dca4e09](https://github.com/kingsdigitallab/corpus-building/commit/dca4e094fe051b63cd5afb02166c46fe7dbb269d))
+* **frontend:** lookup for deperaction message from the the change element with the ID machine change attribute ([4fb747d](https://github.com/kingsdigitallab/corpus-building/commit/4fb747d049a6bd29072ce475c43ad3dfafce0ac6))
+* inscription page epidoc colour clash under dark mode ([98b86cd](https://github.com/kingsdigitallab/corpus-building/commit/98b86cd9189c7bd8fcc55b2a3b70108b9846af71))
+* inscription page image spacing ([0bed642](https://github.com/kingsdigitallab/corpus-building/commit/0bed6428461a91e48d2553261b68a2e663fc30c1))
+* inscription page layout and spacing issues ([9a8f5ed](https://github.com/kingsdigitallab/corpus-building/commit/9a8f5edaddefbefbb2882531f01ed281a1897349))
+* **inscription:** corrected capitalisation of Petro imagery sub heading ([6e8c7c1](https://github.com/kingsdigitallab/corpus-building/commit/6e8c7c14c538a240e5c79b9099c70178c106c65b))
+* **inscription:** deprecation message in TEI is now rendered correctly in html can can cope with multiple links ([32e2620](https://github.com/kingsdigitallab/corpus-building/commit/32e26203272340992d21d2a513bce1d512fe67c9))
+* **inscription:** first part of a fix for the lettering section not dealing well with different cases of handNotes <p>s ([f9e3329](https://github.com/kingsdigitallab/corpus-building/commit/f9e33298caf25f2cc3d1de5ef6cf84f342098003))
+* **inscription:** hide critical apparatus when empty ([a18b22b](https://github.com/kingsdigitallab/corpus-building/commit/a18b22b9b78e5e380a00447b35ff7de8cc26153c))
+* **inscription:** Object Type appeared empty on the Inscription overview when the TEI had no data for it ([ba0c153](https://github.com/kingsdigitallab/corpus-building/commit/ba0c153a53569154578554d7568aa9ed0f652c5c))
+* **inscription:** removed enlargement of the dots on the custom navigation widget ([ecf4a37](https://github.com/kingsdigitallab/corpus-building/commit/ecf4a37ac367fc9bdf627d99a1d34f3b34f2464f))
+* **inscription:** the lettering section now renders the type links and the desc properly for all known cases ([99fe9ed](https://github.com/kingsdigitallab/corpus-building/commit/99fe9ede56b917e8a476c0c75451c0382459e099))
+* **inscription:** this 'inscription' -> 'record' is depracated ([0a24808](https://github.com/kingsdigitallab/corpus-building/commit/0a2480883e72174cdcf02cdc90c19994ad35111f))
+* small layout problems in inscription pages ([d83aa90](https://github.com/kingsdigitallab/corpus-building/commit/d83aa9039d2eca5f6de62c861629728d77e30bfd))
+* updated the flowchart on technical overview page ([80af373](https://github.com/kingsdigitallab/corpus-building/commit/80af373e9b90b4f090fe3113bb3b3bc56d0c5b4d))
+* **viz:** allocate inscriptions across date bins by configurable weight type [opencode:e-research/arc:apex] ([2bf15ea](https://github.com/kingsdigitallab/corpus-building/commit/2bf15ea7897524aad66d205d4b2d517d8642b4b5))
+
+
+### Features
+
+* add workflow to update CITATION.cff from codemeta.json ([8bb05be](https://github.com/kingsdigitallab/corpus-building/commit/8bb05bee56a9e99e3c9dc1d98776c43f53482204))
+* **frontend:** add Google Analytics snippet gated by dev mode [opencode:glm-5.2] ([95e283d](https://github.com/kingsdigitallab/corpus-building/commit/95e283d8d472e3c0179f11fd1f9eb1adb2ec6bbb))
+* **petro:** preserve <note> elements inside <material> during import [opencode:e-research/arc:apex] ([66a992d](https://github.com/kingsdigitallab/corpus-building/commit/66a992df7bc8fe7b98579d3d013f4b1911015e0a))
+* **ws1:** Added Material > Petrographic Imagery to the Inscription page ([1f83be8](https://github.com/kingsdigitallab/corpus-building/commit/1f83be86b0ed42c3563fec76051f8909238110f1))
+
+
+### Performance Improvements
+
+* **etl:** batch Zotero API requests and retry on 429 [opencode:e-research/arc:apex] ([95e96ce](https://github.com/kingsdigitallab/corpus-building/commit/95e96cea1700ec6bea7dba93b34aa7f0603dc1e9))
+* **etl:** cache HTML transforms with content hashing [opencode:glm-5.2] ([b76a3d5](https://github.com/kingsdigitallab/corpus-building/commit/b76a3d55c93c734a4c40e22ace551b0a661884c9))
+* **etl:** cache stylesheet and reduce per-file I/O [opencode:glm-5.2] ([30179d9](https://github.com/kingsdigitallab/corpus-building/commit/30179d9edd800b33f3328abaa42e34e5a56fbd00))
+
 # [0.28.0](https://github.com/kingsdigitallab/corpus-building/compare/v0.27.2...v0.28.0) (2026-07-28)
 
 
