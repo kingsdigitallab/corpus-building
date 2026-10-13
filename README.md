@@ -1,8 +1,10 @@
 [![Build and deploy](https://github.com/kingsdigitallab/corpus-building/actions/workflows/frontend.yml/badge.svg?branch=develop)](https://github.com/kingsdigitallab/corpus-building/actions/workflows/frontend.yml)
 
+This is the code base for [I.Sicily](https://sicily.classics.ox.ac.uk/), the new web application and data processing infrastructure, developed by King’s Digital Lab as [part of the Crossreads research project](https://sicily.classics.ox.ac.uk/credits) and funded by the University of Oxford John Fell Fund, Merton College Oxford, and the ERC Advanced Grant Crossreads (grant agreement no.885040).
+
 # Corpus Building
 
-This project processes [EpiDoc](https://epidoc.stoa.org) [TEI](https://tei-c.org)
+This project code base processes [EpiDoc](https://epidoc.stoa.org) [TEI](https://tei-c.org)
 XML files and presents them as a static website.
 
 It uses a monorepo structure with two main components: an [ETL](packages/etl)
@@ -11,7 +13,7 @@ It uses a monorepo structure with two main components: an [ETL](packages/etl)
 
 ## Project structure
 
-The main components of the project are:
+The main components of the code base are:
 
 - `packages/`
   - [`etl/`](packages/etl/README.md): ETL package for processing XML
