@@ -1,6 +1,6 @@
 [![Build and deploy](https://github.com/kingsdigitallab/corpus-building/actions/workflows/frontend.yml/badge.svg?branch=develop)](https://github.com/kingsdigitallab/corpus-building/actions/workflows/frontend.yml)
 
-This is the code base for [I.Sicily](https://sicily.classics.ox.ac.uk/), the new web application and data processing infrastructure, developed by [King’s Digital Lab](https://kdl.kcl.ac.uk/) as [part of the Crossreads research project](https://sicily.classics.ox.ac.uk/credits) and funded by the University of Oxford John Fell Fund, Merton College Oxford, and the ERC Advanced Grant Crossreads (grant agreement no.885040).
+This is the code base for [I.Sicily](https://sicily.classics.ox.ac.uk/), its new web application and data processing infrastructure, developed by [King’s Digital Lab](https://kdl.kcl.ac.uk/) as [part of the Crossreads research project](https://sicily.classics.ox.ac.uk/credits).
 
 # Corpus Building
 
@@ -114,3 +114,7 @@ year = {2026}
 ```
 
 (Generated from codemeta.json)
+
+# Aknowledgements
+
+This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 885040, “Crossreads”).
