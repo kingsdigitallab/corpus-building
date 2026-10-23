@@ -8,8 +8,6 @@ tags:
   - inscriptions
 ---
 
-This interface is currently under development in collaboration with [King's Digital Lab](https://kdl.kcl.ac.uk/projects/crossreads/). The old interface was taken offline in May 2026.
-
 I.Sicily is a long-term project to construct and maintain a digital corpus of
 the inscriptions of ancient Sicily, directed by Jonathan Prag. The project aims to provide free open access
 data, and to follow the principles of Linked Open Data wherever possible. The
