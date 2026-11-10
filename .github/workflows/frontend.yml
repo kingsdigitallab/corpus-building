@@ -14,11 +14,11 @@ on:
   workflow_dispatch:
 
 env:
-  UBUNTU_VERSION: ubuntu-24.04
+  UBUNTU_VERSION: &ubuntu ubuntu-24.04
 
 jobs:
   test:
-    runs-on: ${{ vars.UBUNTU_VERSION }}
+    runs-on: *ubuntu
 
     strategy:
       matrix:
@@ -39,7 +39,7 @@ jobs:
           ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -66,7 +66,7 @@ jobs:
 
   pages:
     needs: test
-    runs-on: ${{ vars.UBUNTU_VERSION }}
+    runs-on: *ubuntu
     if: github.ref == 'refs/heads/develop'
 
     strategy:
@@ -85,7 +85,7 @@ jobs:
           ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -102,14 +102,14 @@ jobs:
           npm run frontend:build
 
       - name: Deploy to GitHub pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: ./frontend/build
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
   prod:
     needs: test
-    runs-on: ${{ vars.UBUNTU_VERSION }}
+    runs-on: *ubuntu
     if: github.ref == 'refs/heads/main'
 
     strategy:
@@ -128,7 +128,7 @@ jobs:
           ln -s ../../../data/raw/inscriptions ./frontend/src/data/inscriptions
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
