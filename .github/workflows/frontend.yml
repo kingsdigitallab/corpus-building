@@ -13,9 +13,12 @@ on:
       - 'docs/**'
   workflow_dispatch:
 
+env:
+  UBUNTU_VERSION: ubuntu-24.04
+
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.UBUNTU_VERSION }}
 
     strategy:
       matrix:
@@ -63,7 +66,7 @@ jobs:
 
   pages:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.UBUNTU_VERSION }}
     if: github.ref == 'refs/heads/develop'
 
     strategy:
@@ -106,7 +109,7 @@ jobs:
 
   prod:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.UBUNTU_VERSION }}
     if: github.ref == 'refs/heads/main'
 
     strategy:
