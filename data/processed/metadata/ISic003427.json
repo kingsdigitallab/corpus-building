@@ -1,9 +1,9 @@
 {
   "file": "ISic003427",
   "uri": "ISic003427",
-  "title": "I.Sicily inscription 003427",
+  "title": "A dedication to Demeter and Kore",
   "status": {
-    "_": "draft"
+    "_": "edited"
   },
   "editions": [
     {
@@ -29,6 +29,7 @@
     "ana": "#function.dedication",
     "ref": "https://ontology.inscriptiones.org/type_of_inscription/Dedication"
   },
+  "support": "Described by Gentili as surviving in two large fragments (but the second is nowhere described, unless the photographed fragment is the two recomposed), damaged on the sides and below.",
   "objectType": {
     "_": "block",
     "ana": "#object.block",
@@ -43,39 +44,51 @@
     ],
     "ref": "http://www.eagle-network.eu/voc/material/lod/66.html"
   },
-  "condition": "",
+  "condition": {
+    "ana": "#condition.fragment"
+  },
   "dimensions": [
     {
+      "_": "25",
       "unit": "cm",
       "dimension": "height"
     },
     {
+      "_": "38",
       "unit": "cm",
       "dimension": "width"
     },
     {
+      "_": "27",
       "unit": "cm",
       "dimension": "depth"
     }
   ],
   "layoutDesc": {
     "layout": {
+      "p": "Four lines of Greek are preserved across the upper front face, seemingly centred on the stone with varying vacats at the line ends. It is impossible to know how many more lines might be lost below.",
       "rs": {
         "_": "chiselled",
         "ana": "#execution.chiselled",
         "ref": "http://www.eagle-network.eu/voc/writing/lod/1"
       },
-      "damage": ""
+      "damage": {
+        "ana": "#text_condition.incomplete"
+      }
     }
   },
   "handNote": {
+    "lettering": "Broad regular letters of high Hellenistic form with minimal terminal serifs. Alpha has straight bar; Epsilon a slighly shorter middle bar; Kappa has nearly full length arms (but slightly variable); Mu has vertical outer strokes, half length inner strokes; omicron is almost full size; Sigma has parallel outer strokes; Phi has slightly extended vertical; Omega is full size, slightly ovoid, and almost closed.",
     "dimensions": [
       {
         "type": "letterHeight",
-        "l": "Line 1",
+        "l": "Line 1-4",
         "from": "line1",
-        "to": "line1",
-        "unit": "mm"
+        "to": "line4",
+        "h": "20",
+        "unit": "mm",
+        "atLeast": "20",
+        "atMost": "20"
       },
       {
         "type": "interlinear",
@@ -87,9 +100,10 @@
     ]
   },
   "date": {
-    "_": "4th — 3rd century BCE",
-    "notBefore": -400,
-    "notAfter": -201
+    "_": "3rd century BCE",
+    "notBefore": -300,
+    "notAfter": -201,
+    "evidence": "lettering"
   },
   "places": [
     {
@@ -114,12 +128,18 @@
   "country": "Sicilia",
   "provenance": "Syracusae",
   "provenanceFound": {
-    "_": "From foundation works for the post office, between via Eumelo, via Archia, and via Carabelli",
+    "_": "From foundation works for the post office, c.1959, between via Eumelo, via Archia, and via Carabelli , together with ISic003009. Currently not located, last seen/photographed in 1965, but not recorded in the museum inventory.",
     "type": "found",
     "subtype": "discovered",
-    "geo": null
+    "geo": [
+      37.070881,
+      15.284686
+    ]
   },
-  "provenanceGeo": [],
+  "provenanceGeo": [
+    37.070881,
+    15.284686
+  ],
   "provenanceObserved": {
     "_": "None",
     "type": "observed",
@@ -127,7 +147,16 @@
     "geo": null
   },
   "provenanceLost": null,
-  "graphics": [],
+  "graphics": [
+    {
+      "n": "screen",
+      "url": "ISic003427_tiled.tif",
+      "height": "1098px",
+      "width": "1560px",
+      "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Archivio fotografico della Sopraintendenza alle antichita di Siracusa (19962.B, October 1965).",
+      "surfaceType": "front"
+    }
+  ],
   "region": "Sicily",
   "settlement": "Siracusa",
   "repository": {
@@ -242,13 +271,26 @@
       }
     ],
     "change": {
-      "_": "tagged names and persons",
-      "when": "2026-02-11",
-      "who": "#ZL"
+      "_": "Jonathan Prag revised from photograph and publications.",
+      "when": "2026-11-08",
+      "who": "#JP"
     }
   },
   "tmNumber": "644822",
-  "letterHeights": [],
+  "facsimile": {
+    "n": "screen",
+    "url": "ISic003427_tiled.tif",
+    "height": "1098px",
+    "width": "1560px",
+    "desc": "I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Archivio fotografico della Sopraintendenza alle antichita di Siracusa (19962.B, October 1965).",
+    "surfaceType": "front"
+  },
+  "letterHeights": [
+    {
+      "atLeast": 20,
+      "atMost": 20
+    }
+  ],
   "publications": [
     "Gentili, 1961, Nuovi elementi di epigrafia siracusana",
     "Manganaro, 1965, Ricerche di antichità e di epigrafia siceliote"
@@ -259,9 +301,9 @@
   ],
   "keywords": [
     "isic003427",
-    "i.sicily inscription 003427",
+    "a dedication to demeter and kore",
     {
-      "_": "draft"
+      "_": "edited"
     },
     "dedication",
     "block",
