@@ -82,4 +82,4 @@ red cross failed; and greyed was cancelled.
 <img width="932" height="757" alt="Screenshot_20260805_121318" src="https://github.com/user-attachments/assets/d4ca61e3-2814-4647-b20d-72f907de5b22" />
 
 The steps above will rebuild the site on the `develop` branch and deploy it to the staging site only.
-**If you want to release this version to the live website, see the above section "Public release"**.
+**If you want to release this version to the live website, see the section above called "Public release"**.
